@@ -1,0 +1,98 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,300italic,400italic,700italic);
+
+body {
+  position: relative; /* For scrollyspy */
+  padding-top: 50px; /* Account for fixed navbar */
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4c4c4c;
+}
+.navbar {
+  font-size: 15px;
+}
+
+h1, h2, h3 {
+  padding-top: 60px;
+  color: #1c1c1c;
+}
+
+p {
+  margin-bottom: 24px;
+}
+strong {
+  color: #000;
+}
+h1 + p, h2 + p, h3 + p {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+img {
+  max-width: 100%;
+  margin: 24px 0;
+}
+.jumbotron {
+  margin-top: 70px;
+  h1 {
+    padding-top: 0px;
+  }
+}
+/* Page headers */
+.bs-header {
+  background: #303c40;
+  padding: 30px 15px 40px; /* side padding builds on .container 15px, so 30px */
+  font-size: 16px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.25);
+  color: #fff;
+}
+.bs-header h1 {
+  color: #fff;
+  font-weight: 300;
+}
+.bs-header p {
+  font-weight: 300;
+  line-height: 1.5;
+  color: #fff;
+}
+.bs-header .container {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .bs-header {
+    font-size: 21px;
+    text-align: left;
+  }
+  .bs-header h1 {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .bs-header h1,
+  .bs-header p {
+    margin-right: 380px;
+  }
+}
+
+
+/* Inverted outline button (white on dark) */
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  font-weight: 300;
+}
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+  color: #3b83a8;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff;
+}
+
