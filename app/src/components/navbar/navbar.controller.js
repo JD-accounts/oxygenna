@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('materialAdmin')
+angular.module('triAngular')
   .controller('NavbarCtrl', function ($scope) {
     $scope.date = new Date();
   });

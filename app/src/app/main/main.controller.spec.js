@@ -3,7 +3,7 @@
 describe('controllers', function(){
   var scope;
 
-  beforeEach(module('materialAdmin'));
+  beforeEach(module('triAngular'));
 
   beforeEach(inject(function($rootScope) {
     scope = $rootScope.$new();

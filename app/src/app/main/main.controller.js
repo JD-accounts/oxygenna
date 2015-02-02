@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('materialAdmin')
+angular.module('triAngular')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       {

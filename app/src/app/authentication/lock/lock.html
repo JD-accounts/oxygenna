@@ -1,0 +1,24 @@
+<div class="jumbotron">
+    <div class="container">
+        <img gravatar-src="user.email" gravatar-size="100">
+        <h1>{{'LOCK.WELCOME' | translate}}, {{user.firstname}}</h1>
+        <p>{{'LOCK.LOGGED_OUT' | translate}}</p>
+
+        <form name="unlockForm">
+            <div class="row">
+                <div class="col-md-8">
+                    <input class="form-control input-lg" type="password" ng-model="loginUser.password" placeholder="{{'LOCK.FORM.PLACEHOLDER' | translate}}" required>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary btn-lg" ng-disabled="unlockForm.$invalid" ng-click="loginClick()">{{'LOCK.FORM.BUTTON' | translate}}</button>
+                </div>
+            </div>
+        </form>
+        <br>
+        <div ng-repeat="alert in alerts">
+            <div class="alert" ng-class="alert.type">
+                <strong>{{alert.title}}</strong> {{alert.body}}
+            </div>
+        </div>
+    </div>
+</div>

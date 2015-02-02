@@ -1,0 +1,52 @@
+{
+    "LOGIN": {
+        "TITLE": "Login",
+        "EMAIL": {
+            "LABEL": "email",
+            "PLEASE_ENTER": "Please enter your email address.",
+            "PLEASE_VALID": "Please enter a valid email address."
+        },
+        "PASSWORD": {
+            "LABEL": "password",
+            "PLEASE_ENTER": "Please enter your password."
+        },
+        "BUTTON": "Log in",
+        "ALT": {
+            "TITLE": "Or sign in with",
+            "FACEBOOK": "Facebook",
+            "TWITTER": "Twitter"
+        },
+        "SIGN_UP": {
+            "TITLE": "Sign Up",
+            "BUTTON": "Sign up now"
+        }
+    },
+    "SIGNUP": {
+        "TITLE": "Sign up",
+        "EMAIL": {
+            "LABEL": "email",
+            "PLEASE_ENTER": "Please enter your email address",
+            "PLEASE_VALID": "Please enter a valid email address"
+        },
+        "PASSWORD": {
+            "LABEL": "Password",
+            "PLEASE_ENTER": "Please enter a password",
+            "MIN_LENGTH": "Your password must be greater than 8 characters long",
+            "SAME_PASSWORD": "You need to enter the same password"
+        },
+        "PASSWORD_CONFIRM": {
+            "LABEL": "Confirm Password"
+
+
+        },
+        "BUTTON": "Sign Up"
+    },
+    "LOCK": {
+        "WELCOME": "Welcome back",
+        "LOGGED_OUT": "You have been logged out due to idleness",
+        "FORM": {
+            "PLACEHOLDER": "Enter password",
+            "BUTTON": "Log in"
+        }
+    }
+}
