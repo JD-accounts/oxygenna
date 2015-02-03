@@ -1,57 +1,113 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+// Material Design
 
-html {
-  font-family: 'Roboto Slab', serif;
+// - Extends
+body {
+  font-size: 14px;
+}
+md-input-container .md-input {
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
 }
 
-[layout=row] {
-  flex-direction: row;
+// - Buttons
+.md-button {
+  padding: 6px 16px;
+  &.md-button-sm {
+    padding: 4px 8px;
+  }
+  &.md-button-lg {
+    padding: 16px 24px;
+  }
+  &.md-fullwidth {
+    width: 100%;
+  }
+}
+// - Add-ons
+
+// -- Layout Stretch
+[layout-align="center stretch"] {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+[layout-align="start stretch"] {
+    -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+[layout-align="end stretch"] {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+[layout-align="space-between stretch"] {
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: space-between;
+          justify-content: space-between;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+[layout-align="space-around stretch"] {
+    -webkit-justify-content: space-between;
+      -ms-flex-pack: space-between;
+          justify-content: space-between;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+// -- Layout Fullheight
+[layout-fullheight] {
+  min-height: 100vh;
 }
 
-.thumbnail {
-  height: 200px;
+// -- Layout Inner padding
+[layout-padding-inner="normal"] > [flex] {
+  padding: 8px;
+}
+[layout-padding-inner="big"] > [flex] {
+  padding: 24px;
+}
 
-  img.pull-right {
-    width: 50px;
+// Utility Classes
+[circle] {
+  border-radius: 50%;
+}
+[block] {
+  display: block;
+}
+[inline-block] {
+  display: inline-block;
+}
+[center] {
+  &[inline-block] {
+    text-align: center;
+  }
+  &[block] {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-md-toolbar.md-default-theme {
-  background-color: black;
+[text-left] {
+  text-align: left;
 }
-
-section.jumbotron {
-  margin-bottom: 30px;
-  padding: 1px 30px;
-  background-color: #5aadbb;
+[text-center] {
   text-align: center;
-
-  color: white;
-
-  h1 {
-    font-size: 3em;
-  }
 }
-
-.techs {
-  display: flex;
-  flex-flow: row wrap;
-
-  md-card {
-    width: 30%;
-
-    img.pull-right {
-      float: right;
-      width: 50px;
-    }
-  }
+[text-right] {
+  text-align: right;
 }
 // injector
 // endinjector
