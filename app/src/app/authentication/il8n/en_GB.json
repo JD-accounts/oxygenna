@@ -48,5 +48,8 @@
             "PLACEHOLDER": "Enter password",
             "BUTTON": "Log in"
         }
+    },
+    "TOAST": {
+        "Access Denied": "Access denied"
     }
 }
