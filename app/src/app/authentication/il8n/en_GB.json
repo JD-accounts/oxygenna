@@ -1,5 +1,6 @@
 {
     "LOGIN": {
+        "HEADING": "Triangular",
         "TITLE": "Login",
         "EMAIL": {
             "LABEL": "email",

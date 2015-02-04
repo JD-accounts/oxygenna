@@ -1,11 +1,14 @@
 'use strict';
 
-angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'triAngularAuthentication'])
+angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'triAngularAuthentication'])
+.constant('API_CONFIG', {
+    'url':  'http://192.168.56.101/'
+})
 // register themes
 .config(function ($mdThemingProvider) {
-    $mdThemingProvider.theme('tri-default')
-    .primaryPalette('green')
-    .accentPalette('pink')
+    // $mdThemingProvider.theme('tri-default')
+    // .primaryPalette('green')
+    // .accentPalette('pink')
 })
 .config(function ($stateProvider, $urlRouterProvider, $translateProvider, localStorageServiceProvider, ACCESS) {
     // $stateProvider
@@ -88,4 +91,24 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     localStorageServiceProvider
     .setPrefix('triAngular')
     .setStorageType('sessionStorage');
-});
+})
+.run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
+    // $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
+    //     if(!('data' in toState) || !('access' in toState.data)) {
+    //         event.preventDefault();
+    //         $state.go('public.access-undefined', {
+    //             toState: toState.name
+    //         });
+    //     }
+    //     else if (!AuthService.authorise(toState.data.access)) {
+    //         event.preventDefault();
+    //         if(fromState.url === '^') {
+    //             if(AuthService.isLoggedIn()) {
+    //                 $state.go('private.admin.dashboard');
+    //             } else {
+    //                 $state.go('public.login');
+    //             }
+    //         }
+    //     }
+    // });
+}]);
