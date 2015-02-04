@@ -6,9 +6,6 @@
  * @description
  *
  * The `triangular.authentication` module handles all the login and signup pages
- *
- *
- *
  */
 angular.module('triAngularAuthentication', ['ui.gravatar'])
 .constant('ACCESS', {
