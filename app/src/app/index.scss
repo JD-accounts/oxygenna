@@ -11,18 +11,16 @@ md-input-container .md-input {
 }
 
 // - Buttons
-.md-button {
-  padding: 6px 16px;
-  &.md-button-sm {
-    padding: 4px 8px;
-  }
-  &.md-button-lg {
-    padding: 16px 24px;
-  }
-  &.md-fullwidth {
-    width: 100%;
-  }
+.tri-button-sm {
+  padding: 4px 8px;
 }
+.tri-button-lg {
+  padding: 16px 24px;
+}
+.tri-fullwidth {
+  width: 100%;
+}
+
 // - Add-ons
 
 // -- Layout Stretch
@@ -81,32 +79,32 @@ md-input-container .md-input {
 }
 
 // Utility Classes
-[circle] {
+.circle {
   border-radius: 50%;
 }
-[block] {
+.block {
   display: block;
 }
-[inline-block] {
+.inline-block {
   display: inline-block;
 }
-[center] {
-  &[inline-block] {
+.center {
+  &.inline-block {
     text-align: center;
   }
-  &[block] {
+  &.block {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-[text-left] {
+.text-left {
   text-align: left;
 }
-[text-center] {
+.text-center {
   text-align: center;
 }
-[text-right] {
+.text-right {
   text-align: right;
 }
 // injector

@@ -1,6 +1,12 @@
 'use strict';
 
 angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'triAngularAuthentication'])
+// register themes
+.config(function ($mdThemingProvider) {
+    $mdThemingProvider.theme('tri-default')
+    .primaryPalette('green')
+    .accentPalette('pink')
+})
 .config(function ($stateProvider, $urlRouterProvider, $translateProvider, localStorageServiceProvider, ACCESS) {
     // $stateProvider
     // .state('home', {
