@@ -12,7 +12,9 @@ angular.module('triAngular')
         templateUrl: 'components/sidebar/sidebar.html',
         restrict: 'E',
         link: function postLink(scope, element, attrs) {
-            scope.menuItems = MenuService.getMenuItems();
+            scope.menu = {
+                items: MenuService.getMenuItems()
+            };
         }
     };
 });

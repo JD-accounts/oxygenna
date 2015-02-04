@@ -5,12 +5,6 @@ angular.module('triAngular')
     return {
         getMenuItems: function() {
             var menuItems = [];
-            // home link
-            menuItems.push({
-                name: 'Home',
-                type: 'link',
-                url: '/'
-            });
             // dashboards
             menuItems.push({
                 name: 'Dashboards',

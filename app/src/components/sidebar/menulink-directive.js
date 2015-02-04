@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc directive
- * @name triAngular.directive:triSidebar
+ * @name triAngular.directive:triMenulink
  * @description
- * # sidebar
+ * # Simple Menu link
  */
 angular.module('triAngular')
-.directive('triMenuLink', function (MenuService) {
+.directive('triMenulink', function () {
     return {
         templateUrl: 'components/sidebar/menulink.html',
         restrict: 'E',

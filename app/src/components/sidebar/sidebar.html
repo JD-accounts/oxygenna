@@ -10,17 +10,9 @@
 
     <md-content>
         <ul>
-            <li ng-repeat="item in menuItems">
-                <!-- show menu link if simple link -->
-                <tri-menu-link item="item" ng-if="item.type === 'link'"></tri-menu-link>
-
-<!--                 <sub-menu section="section" ng-if="section.type === 'sub-menu'"></sub-menu>
-
-                <ul ng-if="section.children" class="menu-nested-list">
-                    <li ng-repeat="child in section.children" ng-class="{'childActive' : isSectionSelected(child)}">
-                        <sub-menu section="child"></sub-menu>
-                    </li>
-                </ul> -->
+            <li ng-repeat="item in menu.items">
+                <tri-menulink item="item" ng-if="item.type === 'link'"></tri-menulink>
+                <tri-dropdown item="item" ng-if="item.type === 'dropdown'"></tri-dropdown>
             </li>
         </ul>
     </md-content>

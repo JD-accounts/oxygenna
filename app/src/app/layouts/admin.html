@@ -2,5 +2,17 @@
     <!-- admin sidebar -->
     <tri-sidebar></tri-sidebar>
 
+    <div layout="column" layout-fill>
+        <md-toolbar class="md-default-theme">
+            <div class="md-toolbar-tools" ng-click="openMenu()" tabindex="0">
+                <button class="menu-icon" hide-gt-sm="" aria-label="Toggle Menu">
+                    <md-icon icon="img/icons/ic_menu_24px.svg"><object class="md-icon" data="img/icons/ic_menu_24px.svg"></object></md-icon>
+                </button>
+                Home
+            </div>
+        </md-toolbar>
+
+        <md-content ui-view md-scroll-y flex class="md-padding"></md-content>
+
+    </div>
 </div>
-<div ui-view></div>

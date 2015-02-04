@@ -36,7 +36,7 @@ angular.module('triAngularAuthentication')
     $scope.loginClick = function() {
         AuthService.login($scope.user, function(user) {
             // user logged in ok so goto the dashboard
-            $state.go('private.admin.dashboard');
+            $state.go('private.admin.dashboard1');
         }, function(error) {
             // username & password wrong so pop an error
             $scope.user.password = '';
