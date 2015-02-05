@@ -11,6 +11,7 @@ angular.module('triAngular')
     return {
         templateUrl: 'components/sidebar/sidebar.html',
         restrict: 'E',
+        replace: true,
         link: function postLink(scope, element, attrs) {
             scope.menu = {
                 items: MenuService.getMenuItems()

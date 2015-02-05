@@ -9,7 +9,7 @@
     </md-toolbar>
 
     <md-content>
-        <ul>
+        <ul class="tri-sidemenu">
             <li ng-repeat="item in menu.items">
                 <tri-menulink item="item" ng-if="item.type === 'link'"></tri-menulink>
                 <tri-dropdown item="item" ng-if="item.type === 'dropdown'"></tri-dropdown>

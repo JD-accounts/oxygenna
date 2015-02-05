@@ -11,6 +11,7 @@ angular.module('triAngular')
     return {
         templateUrl: 'components/sidebar/menulink.html',
         restrict: 'E',
+        replace: true,
         scope: {
             item: '='
         },
