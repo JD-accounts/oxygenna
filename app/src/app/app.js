@@ -1,11 +1,8 @@
 'use strict';
 
-angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'triAngularAuthentication'])
-// register themes
-.config(function ($mdThemingProvider) {
-    $mdThemingProvider.theme('tri-default')
-    .primaryPalette('green')
-    .accentPalette('pink')
+angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'triAngularAuthentication', 'triDashboards'])
+.constant('API_CONFIG', {
+    'url':  'http://triangular-api.oxygenna.com/'
 })
 .config(function ($stateProvider, $urlRouterProvider, $translateProvider, localStorageServiceProvider, ACCESS) {
     // $stateProvider
@@ -67,12 +64,6 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         template: '<ui-view/>',
     })
 
-    .state('private.admin.dashboard', {
-        url: '/dashboard',
-        templateUrl: 'app/dashboards/dashboard.html',
-        controller: 'DashboardController'
-    })
-
     .state('public.access-undefined', {
         url: '/access-undefined/:toState',
         templateUrl: 'app/misc/access-undefined.html',
@@ -88,4 +79,24 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     localStorageServiceProvider
     .setPrefix('triAngular')
     .setStorageType('sessionStorage');
-});
+})
+.run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
+    // $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
+    //     if(!('data' in toState) || !('access' in toState.data)) {
+    //         event.preventDefault();
+    //         $state.go('public.access-undefined', {
+    //             toState: toState.name
+    //         });
+    //     }
+    //     else if (!AuthService.authorise(toState.data.access)) {
+    //         event.preventDefault();
+    //         if(fromState.url === '^') {
+    //             if(AuthService.isLoggedIn()) {
+    //                 $state.go('private.admin.dashboard');
+    //             } else {
+    //                 $state.go('public.login');
+    //             }
+    //         }
+    //     }
+    // });
+}]);
