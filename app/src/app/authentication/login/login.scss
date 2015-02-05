@@ -1,78 +1,78 @@
 // Login frame
 .login-frame {
     width: 380px;
-}
 
-md-toolbar {
-    box-shadow: none;
-}
+    md-toolbar {
+        box-shadow: none;
+    }
 
-// Login Header
-.md-toolbar-tools {
-    height: 48px;
-    font-size: 16px;
-}
+    // Login Header
+    .md-toolbar-tools {
+        height: 48px;
+        font-size: 16px;
+    }
 
-.tri-toolbar-heading {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    width: 100%;
-    height: 48px;
-    padding: 0 16px;
-    margin: 0;
-    font-size: 34px;
-    font-weight: 500;
-}
+    .tri-toolbar-heading {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        width: 100%;
+        height: 48px;
+        padding: 0 16px;
+        margin: 0;
+        font-size: 34px;
+        font-weight: 500;
+    }
 
-// Login form
-form {
-  background-color: inherit;
-}
+    // Login form
+    form {
+      background-color: inherit;
+    }
 
-// Remember me
-md-checkbox {
-    margin-left: 0;
-}
+    // Remember me
+    md-checkbox {
+        margin-left: 0;
+    }
 
-// Forgot password
-.account-forget, .account-create {
-    padding: 2px 2px 26px;
-    margin: 15px 0;
-    line-height: 23px;
-}
-// Buttons
-.md-button {
-    margin: 15px 0;
-}
+    // Forgot password
+    .account-forget, .account-create {
+        padding: 2px 2px 26px;
+        margin: 15px 0;
+        line-height: 23px;
+    }
+    // Buttons
+    .md-button {
+        margin: 15px 0;
+    }
 
-// Social Login
-.social-login {
-    background-color: inherit;
-}
-md-divider {
-    background-color: inherit;
-    position: relative;
-    margin-bottom: 26px;
-    span {
-        display: block;
-        width: 5em;
-        height: 2em;
-        line-height: 2em;
+    // Social Login
+    .social-login {
         background-color: inherit;
-        position: absolute;
-        top: -1em;
-        left: 50%;
-        text-align: center;
-        -webkit-transform: translateX(-2.5em) ;
-        -ms-transform: translateX(-2.5em) ;
-        -o-transform: translateX(-2.5em) ;
-        transform: translateX(-2.5em) ;
+    }
+    md-divider {
+        background-color: inherit;
+        position: relative;
+        margin-bottom: 26px;
+        span {
+            display: block;
+            width: 5em;
+            height: 2em;
+            line-height: 2em;
+            background-color: inherit;
+            position: absolute;
+            top: -1em;
+            left: 50%;
+            text-align: center;
+            -webkit-transform: translateX(-2.5em) ;
+            -ms-transform: translateX(-2.5em) ;
+            -o-transform: translateX(-2.5em) ;
+            transform: translateX(-2.5em) ;
+        }
     }
 }
