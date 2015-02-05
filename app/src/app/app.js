@@ -4,12 +4,6 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 .constant('API_CONFIG', {
     'url':  'http://192.168.56.101/'
 })
-// register themes
-.config(function ($mdThemingProvider) {
-    // $mdThemingProvider.theme('tri-default')
-    // .primaryPalette('green')
-    // .accentPalette('pink')
-})
 .config(function ($stateProvider, $urlRouterProvider, $translateProvider, localStorageServiceProvider, ACCESS) {
     // $stateProvider
     // .state('home', {

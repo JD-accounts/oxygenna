@@ -1,0 +1,75 @@
+<div layout="row" md-theme="{{testSkin}}">
+    <div flex ng-repeat="intent in intentions">
+        <md-toolbar class="md-tall" layout-align="end stretch" ng-class="intent">
+            <h2 class="md-toolbar-tools">
+                <span>{{intent}}</span>
+            </h2>
+        </md-toolbar>
+        <md-content>
+            <section ng-repeat="hue in hues">
+                <md-subheader class="md-primary" ng-class="itemClass(intent, hue)">Buttons ({{hue}})</md-subheader>
+                <div layout="row" layout-align="center center">
+                    <md-button ng-class="itemClass(intent, hue)">Simple</md-button>
+                    <md-button class="md-raised" ng-class="itemClass(intent, hue)">Raised</md-button>
+                    <md-button class="md-fab" ng-class="itemClass(intent, hue)">Fab</md-button>
+                    <a class="md-button"  href="#/test" target="_blank" ng-class="itemClass(intent, hue)">Link</a>
+                </div>
+            </section>
+            <section ng-repeat="hue in hues">
+                <md-subheader class="md-primary" ng-class="itemClass(intent, hue)">Checkbox ({{hue}})</md-subheader>
+                <div layout="row" layout-align="center center">
+                    <md-checkbox ng-model="checkbox" aria-label="Checkbox 1" ng-class="itemClass(intent, hue)">
+                        Checkbox 1: {{checkbox}}
+                    </md-checkbox>
+                </div>
+            </section>
+            <section ng-repeat="hue in hues">
+                <md-subheader class="md-primary" ng-class="itemClass(intent, hue)">Progress Circular ({{hue}})</md-subheader>
+                <div layout="row" layout-align="center center">
+                    <md-progress-circular ng-class="itemClass(intent, hue)" md-mode="indeterminate"></md-progress-circular>
+                </div>
+            </section>
+            <section ng-repeat="hue in hues">
+                <md-subheader class="md-primary" ng-class="itemClass(intent, hue)">Progress Linear ({{hue}})</md-subheader>
+                <div layout="row">
+                    <md-progress-linear flex md-mode="indeterminate" ng-class="itemClass(intent, hue)"></md-progress-linear>
+                </div>
+            </section>
+            <section ng-repeat="hue in hues">
+                <md-subheader class="md-primary" ng-class="itemClass(intent, hue)">Radio ({{hue}})</md-subheader>
+                <div layout="row">
+                    <md-radio-group ng-model="radio">
+                        <md-radio-button value="Apple" aria-label="Label 1" ng-class="itemClass(intent, hue)">Apple</md-radio-button>
+                    </md-radio-group>
+                </div>
+            </section>
+            <section ng-repeat="hue in hues">
+                <md-subheader class="md-primary" ng-class="itemClass(intent, hue)">Radio ({{hue}})</md-subheader>
+                <div layout="row">
+                    <md-switch ng-model="switch" aria-label="Switch 1" ng-class="itemClass(intent, hue)">
+                        Switch 1: {{ switch }}
+                    </md-switch>
+                </div>
+            </section>
+            <section ng-repeat="hue in hues">
+                <md-subheader class="md-primary" ng-class="itemClass(intent, hue)">Radio ({{hue}})</md-subheader>
+                <div layout="row">
+                    <md-tabs ng-class="itemClass(intent, hue)">
+                      <md-tab label="Tab #1"></md-tab>
+                      <md-tab label="Tab #2"></md-tab>
+                      <md-tab label="Tab #3"></md-tab>
+                    </md-tabs>
+                </div>
+            </section>
+            <section ng-repeat="hue in hues">
+                <md-subheader class="md-primary" ng-class="itemClass(intent, hue)">Slider ({{hue}})</md-subheader>
+                <div layout="row" layout-align="center center">
+                    <md-slider md-discrete ng-model="slider" step="1" min="1" max="5" aria-label="rating" ng-class="itemClass(intent, hue)"></md-slider>
+                </div>
+            </section>
+        </md-content>
+    </div>
+</div>
+<div layout="row">
+    <select ng-model="testSkin" ng-options="skin for skin in skins"></select>
+</div>
