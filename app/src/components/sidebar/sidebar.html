@@ -8,11 +8,11 @@
         </h1>
     </md-toolbar>
 
-    <md-content>
-        <ul class="tri-sidemenu">
-            <li ng-repeat="item in menu.items">
-                <tri-menulink item="item" ng-if="item.type === 'link'"></tri-menulink>
-                <tri-dropdown item="item" ng-if="item.type === 'dropdown'"></tri-dropdown>
+    <md-content class="tri-sidemenu" md-theme="tri-purple">
+        <ul>
+            <li ng-repeat="menuItem in menuItems">
+                <tri-menulink item="menuItem" ng-if="menuItem.type === 'link'"></tri-menulink>
+                <tri-dropdown item="menuItem" ng-if="menuItem.type === 'dropdown'"></tri-dropdown>
             </li>
         </ul>
     </md-content>

@@ -13,9 +13,7 @@ angular.module('triAngular')
         restrict: 'E',
         replace: true,
         link: function postLink(scope, element, attrs) {
-            scope.menu = {
-                items: MenuService.getMenuItems()
-            };
+            scope.menuItems = MenuService.getMenuItems();
         }
     };
 });

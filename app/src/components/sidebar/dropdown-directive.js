@@ -22,7 +22,7 @@ angular.module('triAngular')
             }
 
             scope.iconClass = function() {
-                return scope.isOpen ? 'fa-caret-down' : 'fa-caret-right';
+                return scope.isOpen ? 'fa-chevron-down' : 'fa-chevron-right';
             }
         }
     };
