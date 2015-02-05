@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'triAngularAuthentication'])
+angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'triAngularAuthentication', 'triDashboards'])
 .constant('API_CONFIG', {
-    'url':  'http://192.168.56.101/'
+    'url':  'http://triangular-api.oxygenna.com/'
 })
 .config(function ($stateProvider, $urlRouterProvider, $translateProvider, localStorageServiceProvider, ACCESS) {
     // $stateProvider
@@ -62,12 +62,6 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .state('private.blank', {
         abstract: true,
         template: '<ui-view/>',
-    })
-
-    .state('private.admin.dashboard', {
-        url: '/dashboard',
-        templateUrl: 'app/dashboards/dashboard.html',
-        controller: 'DashboardController'
     })
 
     .state('public.access-undefined', {
