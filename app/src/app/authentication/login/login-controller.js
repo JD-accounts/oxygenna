@@ -14,6 +14,24 @@ angular.module('triAngularAuthentication')
         password: 'demo'
     };
 
+    $scope.socialLogins = [{
+        icon: 'fa-twitter',
+        color: '#5bc0de',
+        url: '#'
+    },{
+        icon: 'fa-facebook',
+        color: '#337ab7',
+        url: '#'
+    },{
+        icon: 'fa-google-plus',
+        color: '#e05d6f',
+        url: '#'
+    },{
+        icon: 'fa-linkedin',
+        color: '#337ab7',
+        url: '#'
+    }]
+
     // create array for alerts from form
     $scope.alerts = [];
 
