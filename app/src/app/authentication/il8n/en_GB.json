@@ -11,6 +11,7 @@
             "LABEL": "password",
             "PLEASE_ENTER": "Please enter your password."
         },
+        "REMEMBER": "Remember Me",
         "BUTTON": "Log in",
         "ALT": {
             "TITLE": "Or sign in with",
@@ -21,6 +22,9 @@
             "TITLE": "Sign Up",
             "BUTTON": "Sign up now"
         }
+    },
+    "SOCIAL": {
+        "OR": "or login with"
     },
     "SIGNUP": {
         "TITLE": "Sign up",
