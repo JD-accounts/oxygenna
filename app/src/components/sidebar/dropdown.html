@@ -1,6 +1,6 @@
 <md-button ng-click="openMenu()">
     {{item.name}}
-    <i class="fa" ng-class="iconClass()"></i>
+    <i class="menu-toggle-icon fa fa-chevron-right" ng-class="iconClass()"></i>
 </md-button>
 <ul ng-show="isOpen" class="menu-toggle-list">
     <li ng-repeat="subItem in item.children">

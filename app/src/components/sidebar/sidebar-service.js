@@ -27,6 +27,34 @@ angular.module('triAngular')
             type: 'link',
         }]
     });
+    // dashboards
+    menu.items.push({
+        name: 'Dashboards',
+        type: 'dropdown',
+        children: [{
+            name: 'Dashboard 1',
+            url: '/dashboard1',
+            type: 'link',
+        },{
+            name: 'Dashboard 2',
+            url: '/dashboard2',
+            type: 'link',
+        }]
+    });
+    // dashboards
+    menu.items.push({
+        name: 'Dashboards',
+        type: 'dropdown',
+        children: [{
+            name: 'Dashboard 1',
+            url: '/dashboard1',
+            type: 'link',
+        },{
+            name: 'Dashboard 2',
+            url: '/dashboard2',
+            type: 'link',
+        }]
+    });
 
     return {
         getMenuItems: function() {
