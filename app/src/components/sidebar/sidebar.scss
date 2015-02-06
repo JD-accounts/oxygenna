@@ -19,9 +19,7 @@
     padding: 0;
     margin: 0;
   }
-  .menu-toggle-list.ng-hide {
-    max-height: 0;
-  }
+
   .menu-toggle-list {
     max-height: 999px;
     overflow: hidden;
@@ -36,7 +34,7 @@
   }
 
   .menu-toggle-list.ng-hide {
-    height: 0;
+    max-height: 0;
     display: block;
   }
 
