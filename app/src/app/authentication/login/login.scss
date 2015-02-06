@@ -1,7 +1,8 @@
 // Login frame
 .login-frame {
-    width: 380px;
-
+    -webkit-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
     md-toolbar {
         box-shadow: none;
     }
