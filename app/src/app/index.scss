@@ -3,7 +3,7 @@
 
 // - Extends
 html, body  {
-  height: 100%;
+  min-height: 100%;
 }
 body {
   font-size: 14px;
@@ -34,7 +34,13 @@ md-input-container .md-input {
 .tri-fullwidth {
   width: 100%;
 }
-
+.tri-button-simple-link {
+  text-transform: lowercase;
+  font-weight: normal;
+  &:hover {
+    background-color: transparent !important;
+  }
+}
 // - Add-ons
 
 // -- Layout Stretch
@@ -116,6 +122,12 @@ md-input-container .md-input {
 }
 .text-right {
   text-align: right;
+}
+.text-caps {
+  text-transform: uppercase;
+}
+.text-nocaps {
+  text-transform: lowercase;
 }
 // injector
 // endinjector

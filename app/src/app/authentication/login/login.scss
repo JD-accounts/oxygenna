@@ -21,13 +21,11 @@
     // Remember me
     md-checkbox {
         margin-left: 0;
+        height: 28px;
     }
-
-    // Buttons
-    .md-button {
-        margin: 15px 0;
+    .login-create {
+      margin: 26px 0px;
     }
-
     // Social Login
     .social-login {
         i {
@@ -40,10 +38,10 @@
         }
     }
 
-    md-divider {
+    .social-divider {
         background-color: inherit;
         position: relative;
-        margin-bottom: 26px;
+        margin: 26px 0;
         span {
             display: block;
             width: auto;
