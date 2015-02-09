@@ -41,7 +41,7 @@ angular.module('triAngularAuthentication')
         error(function(data) {
             $mdToast.show(
                 $mdToast.simple()
-                .content($filter('translate')('SIGNUP.MESSAGES.NO_SIGNUP') + ' ' + data.email)
+                .content($filter('translate')('SIGNUP.MESSAGES.NO_SIGNUP'))
                 .position('bottom right')
                 .hideDelay(5000)
             );
