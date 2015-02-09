@@ -56,7 +56,7 @@
                 </md-divider>
 
                 <div layout="row social-login">
-                    <md-button ng-repeat="social in socialLogins" class="md-fab" ng-style="{ 'background-color': social.color }">
+                    <md-button ng-repeat="social in socialLogins" class="md-fab" ng-style="{ 'background-color': social.color }" aria-label="{{'LOGIN.SOCIAL.OR' | translate}} {{social.icon}}">
                         <i class="fa" ng-class="social.icon"></i>
                     </md-button>
                 </div>

@@ -12,9 +12,18 @@
     <md-content flex class="md-padding">
         <form name="signup">
             <md-input-container>
+                <label for="name">{{'SIGNUP.NAME.LABEL' | translate}}</label>
+                <input id="name" label="name" name="name" type="text" ng-model="user.name" required/>
+                <div ng-messages="signup.name.$error">
+                    <div ng-message when="required">
+                        {{'SIGNUP.NAME.PLEASE_ENTER' | translate}}
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container>
                 <label for="email">{{'SIGNUP.EMAIL.LABEL' | translate}}</label>
                 <input id="email" label="email" name="email" type="email" ng-model="user.email" required/>
-                <div ng-messages="login.email.$error">
+                <div ng-messages="signup.email.$error">
                     <div ng-message when="required">
                         {{'SIGNUP.EMAIL.PLEASE_ENTER' | translate}}
                     </div>
@@ -23,59 +32,22 @@
                     </div>
                 </div>
             </md-input-container>
+
             <md-input-container>
                 <label for="password">{{'SIGNUP.PASSWORD.LABEL' | translate}}</label>
                 <input id="password" label="password" name="password" type="password" ng-model="user.password" same-password="signup.confirm" ng-minlength="8" required/>
                 <ng-messages for="signup.password.$error" ng-include="'app/authentication/signup/password.messages.html'"></ng-messages>
             </md-input-container>
+
             <md-input-container>
                 <label for="password">{{'SIGNUP.PASSWORD_CONFIRM.LABEL' | translate}}</label>
                 <input id="confirm" label="confirm" name="confirm" type="password" ng-model="user.confirm" same-password="signup.password" ng-minlength="8" required/>
                 <ng-messages for="signup.password.$error" ng-include="'app/authentication/signup/password.messages.html'"></ng-messages>
             </md-input-container>
 
-
             <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth "  ng-click="signupClick()" ng-disabled="signup.$invalid">{{'SIGNUP.BUTTON' | translate}}</md-button>
 
-            <md-button class="text-center block" href="#/signup">Don't have an account? Create one now</md-button>
-
+            <md-button class="text-center block" href="#/">{{'SIGNUP.HAVE_LOGIN' | translate}}</md-button>
         </form>
     </md-content>
 </md-whiteframe>
-
-<!-- <h1>{{'SIGNUP.TITLE' | translate}}</h1>
-<form name="signup">
-    <div class="form-group has-feedback">
-        <label for="email">{{'SIGNUP.EMAIL.LABEL' | translate}}</label>
-        <input class="form-control input-lg" id="email" label="email" name="email" type="email" ng-model="user.email" placeholder="{{'SIGNUP.EMAIL.LABEL' | translate}}" required/>
-        <span class="fa fa-circle form-control-feedback" aria-hidden="true"></span>
-        <ng-messages for="signup.email.$error">
-            <span id="helpBlock" class="help-block" ng-message when="required">
-                {{'SIGNUP.EMAIL.PLEASE_ENTER' | translate}}
-            </span>
-            <span id="helpBlock" class="help-block" ng-message when="email">
-                {{'SIGNUP.EMAIL.PLEASE_VALID' | translate}}
-            </span>
-        </ng-messages>
-    </div>
-    <div class="form-group has-feedback">
-        <label for="password">{{'SIGNUP.PASSWORD.LABEL' | translate}}</label>
-        <input class="form-control input-lg" id="password" label="password" name="password" type="password" ng-model="user.password" same-password="signup.confirm" placeholder="{{'SIGNUP.PASSWORD.LABEL' | translate}}" ng-minlength="8" required/>
-        <span class="fa fa-circle form-control-feedback" aria-hidden="true"></span>
-        <ng-messages for="signup.password.$error" ng-include="'app/authentication/signup/password.messages.html'"></ng-messages>
-    </div>
-    <div class="form-group has-feedback">
-        <label for="confirm">{{'SIGNUP.PASSWORD_CONFIRM.LABEL' | translate}}</label>
-        <input class="form-control input-lg" id="confirm" label="confirm" name="confirm" type="password" ng-model="user.confirm" same-password="signup.password" placeholder="{{'SIGNUP.PASSWORD_CONFIRM.LABEL' | translate}}" ng-minlength="8" required/>
-        <span class="fa fa-circle form-control-feedback" aria-hidden="true"></span>
-        <ng-messages for="signup.confirm.$error" ng-include="'app/authentication/signup/password.messages.html'"></ng-messages>
-    </div>
-    <a class="btn btn-lg btn-success" ng-click="signupClick()" ng-disabled="signup.$invalid">{{'SIGNUP.BUTTON' | translate}}</a>
-</form>
-
-<div ng-repeat="alert in alerts">
-    <div class="alert" ng-class="alert.type">
-        <strong>{{alert.title}}</strong> {{alert.body}}
-    </div>
-</div>
- -->
