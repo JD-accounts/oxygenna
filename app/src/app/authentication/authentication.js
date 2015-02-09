@@ -30,9 +30,14 @@ angular.module('triAngularAuthentication', ['ui.gravatar'])
         templateUrl: 'app/authentication/signup/signup.html',
         controller: 'SignupController'
     })
-    .state('private.blank.user-lock', {
+    .state('public.auth.user-lock', {
         url: '/lock',
         templateUrl: 'app/authentication/lock/lock.html',
         controller: 'LockController'
+    })
+    .state('public.auth.forgot', {
+        url: '/forgot',
+        templateUrl: 'app/authentication/forgot/forgot.html',
+        controller: 'ForgotController'
     });
 });

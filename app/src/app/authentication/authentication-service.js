@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('triAngularAuthentication')
-.factory('AuthService', function($http, $state, $mdToast, localStorageService, SessionService, ACCESS, API_CONFIG) {
+.factory('AuthService', function($http, $state, $mdToast, localStorageService, ACCESS, API_CONFIG) {
     var localStoreKey = 'tri-user';
 
     function getUser() {

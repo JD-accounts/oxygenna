@@ -11,33 +11,42 @@
  * Handles sending of signup info to api and response
  */
 angular.module('triAngularAuthentication')
-.controller('SignupController', function ($scope, $http, $filter) {
+.controller('SignupController', function ($scope, $state, $mdToast, $http, $filter, API_CONFIG) {
     // create blank user variable for login form
     $scope.user = {
-        email: '',
-        password: '',
-        confirm: ''
+        name: 'john',
+        email: 'john.langan@oxygenna.com',
+        password: '123456789',
+        confirm: '123456789'
     };
 
-    // create array for alerts from form
-    $scope.alerts = [];
 
-    // controller to handle login check
+    console.log($mdToast);
     $scope.signupClick = function() {
-        $scope.showAlert({
-            title: 'Signup Sent',
-            body: 'Thanks for signing up with us.',
-            type: 'alert-success'
-        });
-    };
-
-    $scope.showAlert = function(alert) {
-        $scope.alerts = [];
-        $scope.alerts.push(alert);
-        $timeout(function() {
-            $scope.$apply(function() {
-                $scope.alerts = [];
+        $http({
+            method: 'POST',
+            url: API_CONFIG.url + 'signup',
+            data: $scope.user
+        }).
+        success(function(data) {
+            $mdToast.show(
+                $mdToast.simple()
+                .content($filter('translate')('SIGNUP.MESSAGES.CONFIRM_SENT') + ' ' + data.email)
+                .position('bottom right')
+                .action($filter('translate')('SIGNUP.MESSAGES.LOGIN_NOW'))
+                .highlightAction(true)
+                .hideDelay(0)
+            ).then(function() {
+                $state.go('public.auth.login');
             });
-        }, 4000);
+        }).
+        error(function(data) {
+            $mdToast.show(
+                $mdToast.simple()
+                .content($filter('translate')('SIGNUP.MESSAGES.NO_SIGNUP') + ' ' + data.email)
+                .position('bottom right')
+                .hideDelay(5000)
+            );
+        });
     };
 });

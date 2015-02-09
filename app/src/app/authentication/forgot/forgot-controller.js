@@ -2,20 +2,20 @@
 
 /**
  * @ngdoc function
- * @name LoginCtrl
+ * @name ForgotController
  * @module triAngularAuthentication
  * @kind function
  *
  * @description
  *
- * Handles login form submission and response
+ * Handles forgot password form submission and response
  */
 angular.module('triAngularAuthentication')
-.controller('LoginController', function ($scope, $state, $mdToast, $filter, AuthService) {
+.controller('ForgotController', function ($scope, $state, $mdToast, $filter, AuthService) {
     // create blank user variable for login form
     $scope.user = {
         email: 'info@oxygenna.com',
-        password: 'demo'
+        password: 'demo1243'
     };
 
     $scope.socialLogins = [{

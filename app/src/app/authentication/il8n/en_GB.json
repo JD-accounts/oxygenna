@@ -45,7 +45,13 @@
             "LABEL": "confirm password"
         },
         "BUTTON": "Sign Up",
-        "HAVE_LOGIN": "Already have an account? Login here."
+        "HAVE_LOGIN": "Already have an account? Login here.",
+        "MESSAGES": {
+            "CONFIRM_SENT": "Confirmation sent to",
+            "LOGIN_NOW": "Login",
+            "CONFIRM_SENT": "Confirmation sent to",
+            "NO_SIGNUP": "Could not sign user up"
+        }
     },
     "LOCK": {
         "WELCOME": "Welcome back",
