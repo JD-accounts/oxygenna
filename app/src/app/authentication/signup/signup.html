@@ -9,7 +9,7 @@
         </h2>
     </md-toolbar>
 
-    <md-content flex class="md-padding">
+    <md-card-content flex class="md-padding">
         <form name="signup">
             <md-input-container>
                 <label for="name">{{'SIGNUP.NAME.LABEL' | translate}}</label>
@@ -47,7 +47,7 @@
 
             <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth "  ng-click="signupClick()" ng-disabled="signup.$invalid">{{'SIGNUP.BUTTON' | translate}}</md-button>
 
-            <md-button class="login-create md-primary tri-button-simple-link block" href="#/">{{'SIGNUP.HAVE_LOGIN' | translate}}</md-button>
+            <md-button class="margin-element md-primary tri-button-simple-link block" href="#/">{{'SIGNUP.HAVE_LOGIN' | translate}}</md-button>
         </form>
-    </md-content>
+    </md-card-content>
 </md-card>

@@ -1,4 +1,4 @@
-<md-whiteframe class="login-frame md-whiteframe-z1" layout="column" flex-sm flex-md="50">
+<md-card class="login-frame" layout="column" flex-sm flex-md="50">
 
     <md-toolbar class="md-tall" layout-align="end stretch" >
         <h1 class="auth-heading">
@@ -9,8 +9,8 @@
         </h2>
     </md-toolbar>
 
-    <md-content flex class="md-padding">
-        <img gravatar-src="user.email" gravatar-size="100">
+    <md-card-content flex class="md-padding">
+        <img gravatar-src="user.email" gravatar-size="60" class="circle">
         <p>{{'LOCK.LOGGED_OUT' | translate}}</p>
         <form name="lock">
             <md-input-container>
@@ -24,7 +24,8 @@
             </md-input-container>
             <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth" ng-click="loginClick()" ng-disabled="lock.$invalid">{{'LOCK.LOGIN' | translate}}</md-button>
 
-            <md-button class="text-center block" ng-click="logoutClick()">{{'LOCK.LOGOUT' | translate}}</md-button>
+            <md-button class="block tri-fullwidth md-primary tri-button-simple-link margin-element" ng-click="logoutClick()">{{'LOCK.LOGOUT' | translate}}</md-button>
+
         </form>
-    </md-content>
-</md-whiteframe>
+    </md-card-content>
+</md-card>
