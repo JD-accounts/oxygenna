@@ -20,7 +20,6 @@ angular.module('triAngularAuthentication')
                 data: user
             }).
             success(function(data) {
-                console.log(data);
                 success(data);
                 // // this check should be done by your backend server
                 // // we make the check here of the static json to give an idea
@@ -41,12 +40,7 @@ angular.module('triAngularAuthentication')
                 // }
             }).
             error(function(data) {
-                $mdToast.show(
-                    $mdToast.simple()
-                    .content('Simple Toast!')
-                    // .position($scope.getToastPosition())
-                    .hideDelay(2000)
-                );
+                error(data);
             });
         },
         authorise: function(access) {

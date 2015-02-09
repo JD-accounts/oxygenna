@@ -7,11 +7,11 @@
  * @kind function
  */
 angular.module('triAngularAuthentication')
-.controller('LoginController', function ($scope, $http, $timeout, $state, $translate, AuthService) {
+.controller('LoginController', function ($scope, $http, $state, $mdToast, $filter, AuthService) {
     // create blank user variable for login form
     $scope.user = {
         email: 'info@oxygenna.com',
-        password: 'demo'
+        password: 'demo1243'
     };
 
     $scope.socialLogins = [{
@@ -38,7 +38,12 @@ angular.module('triAngularAuthentication')
             // user logged in ok so goto the dashboard
             $state.go('private.admin.dashboard1');
         }, function(error) {
-
+            $mdToast.show(
+                $mdToast.simple()
+                .content($filter('translate')('LOGIN.MESSAGES.ACCESS_DENIED'))
+                .position('bottom right')
+                .hideDelay(5000)
+            );
         });
     };
 });

@@ -19,6 +19,9 @@
         "SIGNUP_LINK": "Don't have an account? Create one now",
         "SOCIAL": {
             "OR": "or login with"
+        },
+        "MESSAGES": {
+            "ACCESS_DENIED": "Username / Password Incorrect"
         }
     },
     "SIGNUP": {
