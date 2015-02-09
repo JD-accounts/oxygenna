@@ -11,40 +11,35 @@
  * Handles forgot password form submission and response
  */
 angular.module('triAngularAuthentication')
-.controller('ForgotController', function ($scope, $state, $mdToast, $filter, AuthService) {
+.controller('ForgotController', function ($scope, $state, $mdToast, $filter, $http, API_CONFIG) {
     // create blank user variable for login form
     $scope.user = {
         email: 'info@oxygenna.com',
-        password: 'demo1243'
     };
 
-    $scope.socialLogins = [{
-        icon: 'fa-twitter',
-        color: '#5bc0de',
-        url: '#'
-    },{
-        icon: 'fa-facebook',
-        color: '#337ab7',
-        url: '#'
-    },{
-        icon: 'fa-google-plus',
-        color: '#e05d6f',
-        url: '#'
-    },{
-        icon: 'fa-linkedin',
-        color: '#337ab7',
-        url: '#'
-    }]
-
     // controller to handle login check
-    $scope.loginClick = function() {
-        AuthService.login($scope.user, function(user) {
-            // user logged in ok so goto the dashboard
-            $state.go('private.admin.dashboard1');
-        }, function(error) {
+    $scope.resetClick = function() {
+        $http({
+            method: 'POST',
+            url: API_CONFIG.url + 'reset',
+            data: $scope.user
+        }).
+        success(function(data) {
             $mdToast.show(
                 $mdToast.simple()
-                .content($filter('translate')('LOGIN.MESSAGES.ACCESS_DENIED'))
+                .content($filter('translate')('FORGOT.MESSAGES.RESET_SENT') + ' ' + data.email)
+                .position('bottom right')
+                .action($filter('translate')('FORGOT.MESSAGES.LOGIN_NOW'))
+                .highlightAction(true)
+                .hideDelay(0)
+            ).then(function() {
+                $state.go('public.auth.login');
+            });
+        }).
+        error(function(data) {
+            $mdToast.show(
+                $mdToast.simple()
+                .content($filter('translate')('FORGOT.MESSAGES.NO_RESET') + ' ' + data.email)
                 .position('bottom right')
                 .hideDelay(5000)
             );

@@ -20,8 +20,6 @@ angular.module('triAngularAuthentication')
         confirm: '123456789'
     };
 
-
-    console.log($mdToast);
     $scope.signupClick = function() {
         $http({
             method: 'POST',

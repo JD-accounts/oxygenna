@@ -66,7 +66,20 @@
             "ACCESS_DENIED": "Username / Password Incorrect"
         }
     },
-    "TOAST": {
-        "Access Denied": "Access denied"
-    }
+    "FORGOT": {
+        "TITLE": "Forgot your password?",
+        "ENTER_EMAIL": "Please enter your email below",
+        "EMAIL": {
+            "LABEL": "email",
+            "PLEASE_ENTER": "Please enter your email address.",
+            "PLEASE_VALID": "Please enter a valid email address."
+        },
+        "RESET": "Reset",
+        "LOGIN": "Remembered it? Login in here",
+        "MESSAGES": {
+            "RESET_SENT": "Your new password has been mailed",
+            "LOGIN_NOW": "Login",
+            "NO_RESET": "Could not reset users password"
+        }
+   }
 }

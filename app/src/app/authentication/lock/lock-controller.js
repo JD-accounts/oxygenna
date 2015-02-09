@@ -33,4 +33,12 @@ angular.module('triAngularAuthentication')
             );
         });
     };
+
+
+    $scope.logoutClick = function() {
+        // terminate session here
+
+        // go back to login screen
+        $state.go('public.auth.login');
+    };
 });
