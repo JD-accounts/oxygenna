@@ -54,11 +54,16 @@
         }
     },
     "LOCK": {
-        "WELCOME": "Welcome back",
-        "LOGGED_OUT": "You have been logged out due to idleness",
-        "FORM": {
-            "PLACEHOLDER": "Enter password",
-            "BUTTON": "Log in"
+        "TITLE": "Welcome back",
+        "LOGGED_OUT": "You have been logged out due to idleness. Enter your password to log back in.",
+        "PASSWORD": {
+            "LABEL": "password",
+            "PLEASE_ENTER": "Please enter your password."
+        },
+        "LOGIN": "Log in",
+        "LOGOUT": "Log out",
+        "MESSAGES": {
+            "ACCESS_DENIED": "Username / Password Incorrect"
         }
     },
     "TOAST": {

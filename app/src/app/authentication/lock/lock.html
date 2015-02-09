@@ -1,24 +1,30 @@
-<div class="jumbotron">
-    <div class="container">
-        <img gravatar-src="user.email" gravatar-size="100">
-        <h1>{{'LOCK.WELCOME' | translate}}, {{user.firstname}}</h1>
-        <p>{{'LOCK.LOGGED_OUT' | translate}}</p>
+<md-whiteframe class="login-frame md-whiteframe-z1" layout="column" flex-sm flex-md="50">
 
-        <form name="unlockForm">
-            <div class="row">
-                <div class="col-md-8">
-                    <input class="form-control input-lg" type="password" ng-model="loginUser.password" placeholder="{{'LOCK.FORM.PLACEHOLDER' | translate}}" required>
+    <md-toolbar class="md-tall" layout-align="end stretch" >
+        <h1 class="auth-heading">
+            {{'HEADER.HEADING' | translate}}
+        </h1>
+        <h2 class="md-toolbar-tools">
+            <span>{{'LOCK.TITLE' | translate}} {{user.name}}</span>
+        </h2>
+    </md-toolbar>
+
+    <md-content flex class="md-padding">
+        <img gravatar-src="user.email" gravatar-size="100">
+        <p>{{'LOCK.LOGGED_OUT' | translate}}</p>
+        <form name="lock">
+            <md-input-container>
+                <label for="password">{{'LOCK.PASSWORD.LABEL' | translate}}</label>
+                <input  id="password" label="password" name="password" type="password" ng-model="user.password" required/>
+                <div ng-messages for="login.password.$error">
+                    <div ng-message when="required">
+                        {{'LOCK.PASSWORD.PLEASE_ENTER' | translate}}
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <button class="btn btn-primary btn-lg" ng-disabled="unlockForm.$invalid" ng-click="loginClick()">{{'LOCK.FORM.BUTTON' | translate}}</button>
-                </div>
-            </div>
+            </md-input-container>
+            <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth" ng-click="loginClick()" ng-disabled="lock.$invalid">{{'LOCK.LOGIN' | translate}}</md-button>
+
+            <md-button class="text-center block" ng-click="logoutClick()" href="#/">{{'LOCK.LOGOUT' | translate}}</md-button>
         </form>
-        <br>
-        <div ng-repeat="alert in alerts">
-            <div class="alert" ng-class="alert.type">
-                <strong>{{alert.title}}</strong> {{alert.body}}
-            </div>
-        </div>
-    </div>
-</div>
+    </md-content>
+</md-whiteframe>
