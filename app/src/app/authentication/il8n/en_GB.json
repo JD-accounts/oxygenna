@@ -14,19 +14,12 @@
             "PLEASE_ENTER": "Please enter your password."
         },
         "REMEMBER": "Remember Me",
+        "FORGOT": "Forgot password?",
         "BUTTON": "Log in",
-        "ALT": {
-            "TITLE": "Or sign in with",
-            "FACEBOOK": "Facebook",
-            "TWITTER": "Twitter"
-        },
-        "SIGN_UP": {
-            "TITLE": "Sign Up",
-            "BUTTON": "Sign up now"
+        "SIGNUP_LINK": "Don't have an account? Create one now",
+        "SOCIAL": {
+            "OR": "or login with"
         }
-    },
-    "SOCIAL": {
-        "OR": "or login with"
     },
     "SIGNUP": {
         "TITLE": "Sign up",
