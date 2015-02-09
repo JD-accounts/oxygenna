@@ -1,4 +1,4 @@
-<md-whiteframe class="login-frame md-whiteframe-z1" layout="column" flex-sm flex-md="50">
+<md-whiteframe class="login-frame md-card" layout="column" flex-sm flex-md="50">
 
     <md-toolbar class="md-tall" layout-align="end stretch" >
         <h1 class="auth-heading">
@@ -47,7 +47,7 @@
 
             <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth "  ng-click="signupClick()" ng-disabled="signup.$invalid">{{'SIGNUP.BUTTON' | translate}}</md-button>
 
-            <md-button class="text-center block" href="#/">{{'SIGNUP.HAVE_LOGIN' | translate}}</md-button>
+            <md-button class="login-create md-primary tri-button-simple-link block" href="#/">{{'SIGNUP.HAVE_LOGIN' | translate}}</md-button>
         </form>
     </md-content>
 </md-whiteframe>
