@@ -3,11 +3,15 @@
 /**
  * @ngdoc function
  * @name LoginCtrl
- * @module triangular.authentication
+ * @module triAngularAuthentication
  * @kind function
+ *
+ * @description
+ *
+ * Handles login form submission and response
  */
 angular.module('triAngularAuthentication')
-.controller('LoginController', function ($scope, $http, $timeout, $state, $translate, AuthService) {
+.controller('LoginController', function ($scope, $state, $mdToast, $filter, AuthService) {
     // create blank user variable for login form
     $scope.user = {
         email: 'info@oxygenna.com',
@@ -32,36 +36,18 @@ angular.module('triAngularAuthentication')
         url: '#'
     }]
 
-    // create array for alerts from form
-    $scope.alerts = [];
-
     // controller to handle login check
     $scope.loginClick = function() {
         AuthService.login($scope.user, function(user) {
             // user logged in ok so goto the dashboard
             $state.go('private.admin.dashboard1');
         }, function(error) {
-            // username & password wrong so pop an error
-            $scope.user.password = '';
-            $scope.showAlert({
-                title: 'Access Denied',
-                body: 'Invalid username and password',
-                type: 'alert-danger'
-            });
+            $mdToast.show(
+                $mdToast.simple()
+                .content($filter('translate')('LOGIN.MESSAGES.ACCESS_DENIED'))
+                .position('bottom right')
+                .hideDelay(5000)
+            );
         });
-    };
-
-    $scope.showAlert = function(alert) {
-        $scope.alerts = [];
-        $scope.alerts.push(alert);
-        $timeout(function() {
-            $scope.$apply(function() {
-                $scope.alerts = [];
-            });
-        }, 4000);
-    };
-
-    $scope.changeLanguage = function (langKey) {
-        $translate.use(langKey);
     };
 });

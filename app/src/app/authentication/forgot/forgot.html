@@ -1,0 +1,33 @@
+<md-whiteframe class="login-frame md-whiteframe-z1" layout="column" flex-sm flex-md="50">
+
+    <md-toolbar class="md-tall" layout-align="end stretch" >
+        <h1 class="auth-heading">
+            {{'HEADER.HEADING' | translate}}
+        </h1>
+        <h2 class="md-toolbar-tools">
+            <span>{{'FORGOT.TITLE' | translate}} {{user.name}}</span>
+        </h2>
+    </md-toolbar>
+
+    <md-content flex class="md-padding">
+        <p>{{'FORGOT.ENTER_EMAIL' | translate}}</p>
+        <form name="forgot">
+            <md-input-container>
+                <label for="email">{{'FORGOT.EMAIL.LABEL' | translate}}</label>
+                <input id="email" label="email" name="email" type="email" ng-model="user.email" required/>
+                <div ng-messages="login.email.$error">
+                    <div ng-message when="required">
+                        {{'FORGOT.EMAIL.PLEASE_ENTER' | translate}}
+                    </div>
+                    <div ng-message when="email">
+                        {{'FORGOT.EMAIL.PLEASE_VALID' | translate}}
+                    </div>
+                </div>
+            </md-input-container>
+
+            <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth" ng-click="resetClick()" ng-disabled="lock.$invalid">{{'FORGOT.RESET' | translate}}</md-button>
+
+            <md-button class="text-center block" href="#/">{{'FORGOT.LOGIN' | translate}}</md-button>
+        </form>
+    </md-content>
+</md-whiteframe>
