@@ -16,12 +16,16 @@ angular.module('triAngularAuthentication', ['ui.gravatar'])
     $translatePartialLoaderProvider.addPart('app/authentication');
 
     $stateProvider
-    .state('public.login', {
+    .state('public.auth', {
+        abstract: true,
+        templateUrl: 'app/authentication/layouts/auth.html',
+    })
+    .state('public.auth.login', {
         url: '/',
         templateUrl: 'app/authentication/login/login.html',
         controller: 'LoginController'
     })
-    .state('public.signup', {
+    .state('public.auth.signup', {
         url: '/signup',
         templateUrl: 'app/authentication/signup/signup.html',
         controller: 'SignupController'
