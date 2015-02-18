@@ -42,7 +42,7 @@
             <md-input-container>
                 <label for="password">{{'SIGNUP.PASSWORD_CONFIRM.LABEL' | translate}}</label>
                 <input id="confirm" label="confirm" name="confirm" type="password" ng-model="user.confirm" same-password="signup.password" ng-minlength="8" required/>
-                <ng-messages for="signup.password.$error" ng-include="'app/authentication/signup/password.messages.html'"></ng-messages>
+                <ng-messages for="signup.confirm.$error" ng-include="'app/authentication/signup/password.messages.html'"></ng-messages>
             </md-input-container>
 
             <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth "  ng-click="signupClick()" ng-disabled="signup.$invalid">{{'SIGNUP.BUTTON' | translate}}</md-button>
