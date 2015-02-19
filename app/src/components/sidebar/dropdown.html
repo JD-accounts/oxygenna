@@ -1,9 +1,0 @@
-<md-button ng-click="openMenu()">
-    {{item.name}}
-    <span aria-hidden="true" class="menu-toggle-icon" ng-class="iconClass()"></span>
-</md-button>
-<ul ng-show="isOpen" class="menu-toggle-list">
-    <li ng-repeat="subItem in item.children">
-        <tri-menulink item="subItem" ng-if="subItem.type === 'link'"></tri-menulink>
-    </li>
-</ul>
