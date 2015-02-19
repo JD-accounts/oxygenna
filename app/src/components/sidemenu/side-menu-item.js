@@ -2,7 +2,7 @@
 
 /**
 * @ngdoc directive
-* @name sideMenuLink
+* @name sideMenuItem
 * @restrict E
 * @scope
 *
@@ -12,22 +12,23 @@
 *
 */
 angular.module('triAngular')
-.directive('sideMenuLink', function() {
+.directive('sideMenuItem', function() {
     return {
         restrict: 'E',
         require: '^sideMenu',
         scope: {
-            link: '='
+            item: '='
         },
-        templateUrl: 'components/sidemenu/side-menu-link.tmpl.html',
+        template: '<div ng-include="itemTemplate"></div>',
         link: function($scope, $element, attrs, $sideMenu) {
+            $scope.itemTemplate = 'components/sidemenu/side-menu-' + $scope.item.type + '.tmpl.html';
+
             $scope.toggleSelected = function() {
-                console.log($scope.link);
-                $sideMenu.toggleSelected($scope.link);
+                $sideMenu.toggleSelected($scope.item);
             };
 
             $scope.isActive = function() {
-                return $sideMenu.isActive($scope.link) ? 'active' : '';
+                return $sideMenu.isActive($scope.item);
             };
         }
     };

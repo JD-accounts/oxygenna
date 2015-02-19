@@ -27,14 +27,19 @@ angular.module('triAngular')
             menu: '='
         },
         controller: function() {
-            this.selectedElement = null;
+            this.selectedItem = null;
 
-            this.toggleSelected = function($element) {
-                this.selectedElement = $element;
+            this.toggleSelected = function(item) {
+                if(item.type === 'dropdown' && this.isActive(item)) {
+                    this.selectedItem = null;
+                }
+                else {
+                    this.selectedItem = item;
+                }
             };
 
-            this.isActive = function($element) {
-                return $element === this.selectedElement;
+            this.isActive = function(item) {
+                return item === this.selectedItem;
             };
         }
     };

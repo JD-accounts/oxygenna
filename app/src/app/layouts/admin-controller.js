@@ -19,11 +19,33 @@ controller('AdminController', function ($scope, $timeout, $mdSidenav) {
     },{
         name: 'Dashboard',
         icon: 'icon-stars',
-        type: 'link'
+        type: 'dropdown',
+        children: [{
+            name: 'Dashboard 1',
+            icon: 'icon-stars',
+            type: 'link',
+        },{
+            name: 'Dashboard 2',
+            icon: 'icon-stars',
+            type: 'link',
+        },{
+            name: 'Dashboard 3',
+            icon: 'icon-stars',
+            type: 'link',
+        },{
+            name: 'Dashboard 4',
+            icon: 'icon-stars',
+            type: 'link',
+        }]
     },{
         name: 'Elements',
         icon: 'icon-visibility',
-        type: 'link'
+        type: 'dropdown',
+        children: [{
+            name: 'Elements Level 1',
+            icon: 'icon-visibility',
+            type: 'link',
+        }]
     },{
         name: 'Components',
         icon: 'icon-subtitles',
