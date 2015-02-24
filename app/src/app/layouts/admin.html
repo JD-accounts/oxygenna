@@ -1,12 +1,19 @@
 <div layout="row" layout-fill ng-controller="AdminController">
     <!-- admin sidebar -->
-    <side-menu menu="sideMenu"></side-menu>
+    <md-sidenav layout="column" class="tri-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')">
+        <!-- home title link -->
+        <md-toolbar>
+            <h1 class="md-toolbar-tools" ng-include="'app/shared/app-logo.html'"></h1>
+        </md-toolbar>
+
+        <side-menu></side-menu>
+    </md-sidenav>
 
     <div layout="column" layout-fill>
         <md-toolbar>
             <div class="md-toolbar-tools" ng-click="openMenu()">
                 <button class="menu-icon" hide-gt-sm aria-label="Toggle Menu">
-                    <md-icon icon="assets/images/icons/ic_menu_24px.svg"></md-icon>
+                    <md-icon md-font-icon="icon-menu"></md-icon>
                 </button>
                 <div hide-gt-sm ng-include="'app/shared/app-logo.html'"></div>
             </div>

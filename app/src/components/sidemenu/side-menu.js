@@ -12,17 +12,14 @@
 *
 * @usage
 * ```html
-* <form name="signup">
-*     <input name="password" type="password" ng-model="user.password" same-password="signup.confirm" />
-*     <input name="confirm" type="password" ng-model="user.confirm" same-password="signup.confirm" />
-* </form>
+* <side-menu></side-menu>
 * ```
 */
 angular.module('triAngular')
-.directive('sideMenu', function($location, $rootScope, MenuService) {
+.directive('sideMenu', function(MenuService) {
     return {
         restrict: 'E',
-        templateUrl: 'components/sidemenu/side-menu.tmpl.html',
+        template: '<md-content flex><side-menu-item ng-repeat="item in menu" item="item"></side-menu-item></md-content>',
         scope: {},
         controller: function($scope) {
             // get the menu structure from the menu service
@@ -31,7 +28,7 @@ angular.module('triAngular')
             MenuService.updateLocationState();
 
             // add a watch for when the url location changes
-            $rootScope.$on('$locationChangeSuccess', function() {
+            $scope.$on('$locationChangeSuccess', function() {
                 // location has changed so update menu
                 MenuService.updateLocationState();
             });

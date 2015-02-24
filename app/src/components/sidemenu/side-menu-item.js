@@ -10,6 +10,10 @@
 *
 * Simple menu link item
 *
+* @usage
+* ```html
+* <side-menu-item ng-repeat="item in menu" item="item"></side-menu-item>
+* ```
 */
 angular.module('triAngular')
 .directive('sideMenuItem', function() {

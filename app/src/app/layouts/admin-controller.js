@@ -15,4 +15,10 @@ controller('AdminController', function ($scope, $timeout, $mdSidenav) {
     $scope.openMenu = function() {
         $timeout(function() { $mdSidenav('left').open(); });
     }
+
+    // add a watch for when the url location changes
+    $scope.$on('$locationChangeSuccess', function() {
+        // location has changed so update menu
+        $timeout(function() { $mdSidenav('left').close(); });
+    });
 });
