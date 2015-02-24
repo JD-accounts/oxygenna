@@ -23,12 +23,8 @@ angular.module('triAngular')
         link: function($scope, $element, attrs, $sideMenu) {
             $scope.itemTemplate = 'components/sidemenu/side-menu-' + $scope.item.type + '.tmpl.html';
 
-            $scope.toggleSelected = function() {
-                $sideMenu.toggleSelected($scope.item);
-            };
-
-            $scope.isActive = function() {
-                return $sideMenu.isActive($scope.item);
+            $scope.openMenu = function() {
+                $sideMenu.openMenu($scope.item);
             };
         }
     };

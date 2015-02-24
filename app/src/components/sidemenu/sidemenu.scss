@@ -19,12 +19,13 @@ side-menu {
   }
 
   .side-menu-link.active {
-    border: blue 2px solid;
+    background: teal;
   }
 
   ul {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
   md-icon {
@@ -46,8 +47,12 @@ side-menu {
     }
   }
 
+  .drop-down-list {
+    max-height: 1300px;
+  }
+
   .drop-down-list.ng-hide {
-    opacity: 0;
+    max-height: 0;
   }
 
   .drop-down-list.ng-hide-add, .drop-down-list.ng-hide-remove {
@@ -59,7 +64,14 @@ side-menu {
   .drop-down-list.ng-hide-add-active,
   .drop-down-list.ng-hide-remove-active {
     /* the transition is defined in the active class */
-    transition: 1s linear all;
+    // transition: 1s linear all;
+    -webkit-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+    -moz-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+    transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+
+    -moz-transition-property: max-height;
+    -webkit-transition-property: max-height;
+    transition-property: max-height;
   }
 
   .drop-down-list.ng-hide-add {  }

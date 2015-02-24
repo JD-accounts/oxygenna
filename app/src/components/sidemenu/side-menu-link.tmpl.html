@@ -1,4 +1,4 @@
-<md-button ng-click="toggleSelected()" class="side-menu-link" ng-class="{ active: isActive() }">
+<md-button ng-href="#{{item.url}}" class="side-menu-link" ng-class="{ active: item.active }">
     <md-icon class="side-menu-icon" md-font-icon="{{item.icon}}"></md-icon>
     {{item.name}}
 </md-button>
