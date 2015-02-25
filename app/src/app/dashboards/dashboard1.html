@@ -1,15 +1,11 @@
-<div class="dashboard1">
+<div ng-controller="DashboardController" class="dashboard1">
     <md-grid-list
         md-cols-sm="1" md-cols-md="8" md-cols-gt-md="12"
-        md-row-height="1:1"
+        md-row-height="1:2"
         md-gutter-gt-sm="30px">
 
         <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="8" md-rowspan="2">
-            <md-grid-tile-header>
-                <h3>
-                    Big Map
-                </h3>
-            </md-grid-tile-header>            
+            <div class="google-chart" google-chart chart="materialLine"/></div>
         </md-grid-tile>
         <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="4">
             <md-grid-tile-header>
