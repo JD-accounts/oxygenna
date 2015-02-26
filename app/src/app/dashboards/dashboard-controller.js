@@ -96,4 +96,11 @@ controller('DashboardController', function ($scope) {
         },
         formatters: {}
     };
+
+    $scope.counterData = {
+        growthIncome: 89,
+        newVisitors: 10323,
+        salesIncreases: 254,
+        conversionRate: 22
+    };
 });

@@ -2,17 +2,13 @@
     <md-grid-list
         md-cols-sm="1" md-cols-md="8" md-cols-gt-md="12"
         md-row-height="1:2"
+        md-row-height-sm="2:1"
         md-gutter-gt-sm="30px">
 
         <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="8" md-rowspan="2">
             <div class="google-chart" google-chart chart="materialLine"/></div>
         </md-grid-tile>
         <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="4">
-            <md-grid-tile-header>
-                <h3>
-                    Line Chart
-                </h3>
-            </md-grid-tile-header>
         </md-grid-tile>
         <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="4">
             <md-grid-tile-header>
@@ -27,6 +23,7 @@
                     Growth Income
                 </h3>
             </md-grid-tile-header>
+            <h1 countupto="counterData.growthIncome" from="0" duration="4" decimals="0" options="{suffix: '%', useGrouping : false }"></h1>
         </md-grid-tile>
         <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="3">
             <md-grid-tile-header>
@@ -34,6 +31,7 @@
                     New Visitors
                 </h3>
             </md-grid-tile-header>
+            <h1 countupto="counterData.newVisitors" from="0" duration="4" decimals="0"></h1>
         </md-grid-tile>
         <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="3">
             <md-grid-tile-header>
@@ -41,6 +39,7 @@
                     Sales Increases
                 </h3>
             </md-grid-tile-header>
+            <h1 countupto="counterData.salesIncreases" from="0" duration="4" decimals="0" options="{suffix: '%', useGrouping : false }"></h1>
         </md-grid-tile>
         <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="3">
             <md-grid-tile-header>
@@ -48,6 +47,7 @@
                     Conversion Rate
                 </h3>
             </md-grid-tile-header>
+            <h1 countupto="counterData.conversionRate" from="0" duration="4" decimals="0" options="{suffix: '%', useGrouping : false }"></h1>
         </md-grid-tile>
         <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="6">
             <md-grid-tile-header>
