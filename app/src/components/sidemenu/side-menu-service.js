@@ -25,6 +25,18 @@ angular.module('triAngular')
                 });
 
                 menu.push({
+                    name: 'Email',
+                    icon: 'icon-email',
+                    type: 'dropdown',
+                    children: [{
+                        name: 'Inbox',
+                        icon: 'icon-inbox',
+                        url: '/inbox',
+                        type: 'link',
+                    }]
+                });
+
+                menu.push({
                     name: 'Extras',
                     icon: 'icon-add-box',
                     type: 'dropdown',

@@ -1,0 +1,29 @@
+<!-- <md-subheader class="md-primary">Inbox</md-subheader> -->
+<div class="email-inbox" layout="row" layout-fill>
+    <div flex="40">
+        <md-content style="height: 600px;">
+            <section ng-repeat="group in emailGroups" ng-show="group.emails.length > 0">
+                <md-subheader class="md-primary">{{group.name}}</md-subheader>
+                <md-list layout="column">
+                    <md-item ng-repeat="email in group.emails | orderBy:'-date'">
+                        <md-item-content>
+                            <div class="md-tile-left">
+                                <img class="list-avatar" ng-src="assets/images/avatars/{{email.avatar}}" class="face" alt="{{email.name}}">
+                            </div>
+                            <div class="md-tile-content">
+                                <h3>{{email.name}}</h3>
+                                <h4>{{email.subject}}</h4>
+                                <p>
+                                    {{email.date | amCalendar}}
+                                </p>
+                            </div>
+                        </md-item-content>
+                    </md-item>
+                </md-list>
+            </section>
+        </md-content>
+    </div>
+
+    <div flex>
+    </div>
+</div>

@@ -7,7 +7,7 @@
  *
  * The `triangular.authentication` module handles all the login and signup pages
  */
-angular.module('triDashboards', [])
+angular.module('triAngularDashboards', [])
 .config(function ($translatePartialLoaderProvider, $stateProvider) {
     $translatePartialLoaderProvider.addPart('app/dashboards');
 

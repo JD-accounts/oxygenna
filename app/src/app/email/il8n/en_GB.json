@@ -1,0 +1,9 @@
+{
+    "INBOX": {
+        "GROUPS": {
+            "TODAY": "Today",
+            "YESTERDAY": "Yesterday",
+            "OLDER": "Older"
+        }
+    }
+}
