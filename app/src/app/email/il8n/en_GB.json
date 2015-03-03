@@ -12,7 +12,11 @@
         "SUBJECT": "Subject",
         "MESSAGE": "Message",
         "SEND": "Send",
-        "REPLY": {
+        "REPLY": "Reply",
+        "REPLY_ALL": "Reply All",
+        "FORWARD": "Forward",
+        "CLOSE": "Close",
+        "REPLY_BOTTOM_SHEET": {
             "TITLE": "Message Reply"
         }
     }
