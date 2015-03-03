@@ -1,81 +1,52 @@
-side-menu {
-  width: 350px;
-
-  .side-menu-link {
-    border-radius: 0;
-    color: inherit;
-    cursor: pointer;
-    font-weight: 400;
-    line-height: 40px;
-    margin: 0;
-    max-height: 40px;
-    overflow: hidden;
-    padding: 0px 16px;
-    text-align: left;
-    text-decoration: none;
-    white-space: normal;
-    display: block;
-    width: 100%;
-  }
-
-  .side-menu-link.active {
-    background: teal;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  md-icon {
-    height: 100%;
-
-    &.side-menu-icon {
-      font-size: 18px;
-    }
-
-    &.menu-toggle-icon span {
-      font-size: 24px;
-      transition: transform 0.5s ease-in-out;
-      -webkit-transition: -webkit-transform 0.5s ease-in-out;
-    }
-
-    &.menu-toggle-icon.open span {
-      transform: rotate(450deg);
-      -webkit-transform: rotate(450deg);
-    }
-  }
-
-  .drop-down-list {
-    max-height: 1300px;
-  }
-
-  .drop-down-list.ng-hide {
+.side-menu-link {
+  display: block;
+  text-align: left;
+  width: 100%;
+  height: 48px;
+  padding: 0px 16px;
+  text-transform: none;
+  border-radius: 0 !important;
+  white-space: normal;
+  line-height: 48px;
+  position: relative;
+  z-index: 2;
+}
+.drop-down-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 1300px;
+  transition-property: max-height;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+  &.ng-hide {
     max-height: 0;
   }
-
-  .drop-down-list.ng-hide-add, .drop-down-list.ng-hide-remove {
-    /* this is required as of 1.3x to properly
-       apply all styling in a show/hide animation */
-    transition: 0s linear all;
+}
+.side-menu-icon, .menu-toggle-icon {
+  height: 100%;
+  line-height: 48px;
+}
+.side-menu-icon {
+  font-size: 14px;
+}
+.menu-toggle-icon {
+  text-align: center;
+  float: right;
+  span {
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
   }
-
-  .drop-down-list.ng-hide-add-active,
-  .drop-down-list.ng-hide-remove-active {
-    /* the transition is defined in the active class */
-    // transition: 1s linear all;
-    -webkit-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
-    -moz-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
-    transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
-
-    -moz-transition-property: max-height;
-    -webkit-transition-property: max-height;
-    transition-property: max-height;
-  }
-
-  .drop-down-list.ng-hide-add {  }
-  .drop-down-list.ng-hide-add.ng-hide-add-active {  }
-  .drop-down-list.ng-hide-remove {  }
-  .drop-down-list.ng-hide-remove.ng-hide-remove-active {  }
+  &.open span {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    }
 }

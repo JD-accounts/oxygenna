@@ -19,7 +19,7 @@ angular.module('triAngular')
 .directive('sideMenu', function(MenuService) {
     return {
         restrict: 'E',
-        template: '<md-content flex><side-menu-item ng-repeat="item in menu" item="item"></side-menu-item></md-content>',
+        template: '<side-menu-item ng-repeat="item in menu" item="item"></side-menu-item>',
         scope: {},
         controller: function($scope) {
             // get the menu structure from the menu service
