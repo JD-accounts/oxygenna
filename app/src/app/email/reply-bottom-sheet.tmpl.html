@@ -1,0 +1,43 @@
+<md-bottom-sheet class="md-grid">
+    <md-toolbar>
+        <h2 class="md-toolbar-tools">
+            <span>{{'EMAIL.REPLY.TITLE' | translate}}</span>
+            <span flex></span>
+            <md-button ng-click="close()">
+                <md-icon md-font-icon="icon-close"></md-icon>
+            </md-button>
+        </h2>
+    </md-toolbar>
+    <md-input-container>
+        <label>{{'EMAIL.TO' | translate}}</label>
+        <input ng-model="reply.to">
+    </md-input-container>
+    <md-input-container>
+        <label>{{'EMAIL.SUBJECT' | translate}}</label>
+        <input ng-model="reply.subject">
+    </md-input-container>
+    <md-input-container flex>
+    <label>{{'EMAIL.MESSAGE' | translate}}</label>
+        <textarea ng-model="reply.content" columns="1" md-maxlength="150"></textarea>
+    </md-input-container>
+    <md-toolbar>
+        <h2 class="md-toolbar-tools">
+            <md-button ng-click="bold()">
+                <md-icon md-font-icon="icon-format-bold"></md-icon>
+            </md-button>
+            <md-button ng-click="italic()">
+                <md-icon md-font-icon="icon-format-italic"></md-icon>
+            </md-button>
+            <md-button ng-click="underline()">
+                <md-icon md-font-icon="icon-format-underline"></md-icon>
+            </md-button>
+            <md-button ng-click="attach()">
+                <md-icon md-font-icon="icon-attach-file"></md-icon>
+            </md-button>
+            <span flex></span>
+            <md-button ng-click="send()">
+                {{'EMAIL.SEND' | translate}}
+            </md-button>
+        </h2>
+    </md-toolbar>
+</md-bottom-sheet>

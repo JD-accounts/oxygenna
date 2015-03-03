@@ -14,7 +14,7 @@ angular.module('triAngularEmail', ['angularMoment'])
     $stateProvider
     .state('private.admin.inbox', {
         url: '/inbox',
-        templateUrl: 'app/email/inbox.html',
+        templateUrl: 'app/email/inbox.tmpl.html',
         controller: 'InboxController',
         resolve: {
             emails: function($http, API_CONFIG) {
@@ -24,5 +24,25 @@ angular.module('triAngularEmail', ['angularMoment'])
                 });
             }
         }
+    })
+
+    .state('private.admin.inbox.email', {
+        url: '/mail/:emailID',
+        templateUrl: 'app/email/email.tmpl.html',
+        controller: 'EmailController',
+        resolve: {
+            email: function($stateParams, emails) {
+                emails = emails.data;
+                var foundEmail = false;
+                for(var i = 0; i < emails.length; i++) {
+                    if(emails[i].id === $stateParams.emailID) {
+                        foundEmail = emails[i];
+                        break;
+                    }
+                }
+                return foundEmail;
+            }
+        }
     });
+
 });

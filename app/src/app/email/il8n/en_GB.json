@@ -5,5 +5,15 @@
             "YESTERDAY": "Yesterday",
             "OLDER": "Older"
         }
+    },
+    "EMAIL": {
+        "FROM": "From",
+        "TO": "To",
+        "SUBJECT": "Subject",
+        "MESSAGE": "Message",
+        "SEND": "Send",
+        "REPLY": {
+            "TITLE": "Message Reply"
+        }
     }
 }
