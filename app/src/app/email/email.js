@@ -73,4 +73,19 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
         return taTools;
     }]);
 
+})
+.run(function(SideMenu) {
+    SideMenu.addMenu({
+        name: 'Email',
+        icon: 'icon-email',
+        type: 'dropdown',
+        priority: 1,
+        children: [{
+            name: 'Inbox',
+            icon: 'icon-inbox',
+            url: '/inbox',
+            type: 'link',
+        }]
+    });
 });
+

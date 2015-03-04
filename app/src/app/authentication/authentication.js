@@ -21,7 +21,7 @@ angular.module('triAngularAuthentication', ['ui.gravatar'])
         templateUrl: 'app/authentication/layouts/auth.html',
     })
     .state('public.auth.login', {
-        url: '/',
+        url: '/login',
         templateUrl: 'app/authentication/login/login.html',
         controller: 'LoginController'
     })
@@ -40,4 +40,34 @@ angular.module('triAngularAuthentication', ['ui.gravatar'])
         templateUrl: 'app/authentication/forgot/forgot.html',
         controller: 'ForgotController'
     });
+})
+.run(function(SideMenu) {
+    SideMenu.addMenu({
+        name: 'Extras',
+        icon: 'icon-add-box',
+        type: 'dropdown',
+        priority: 2,
+        children: [{
+            name: 'Login',
+            icon: 'icon-person',
+            url: '/login',
+            type: 'link',
+        },{
+            name: 'Sign Up',
+            icon: 'icon-person-add',
+            url: '/signup',
+            type: 'link',
+        },{
+            name: 'Forgot Password',
+            icon: 'icon-live-help',
+            url: '/forgot',
+            type: 'link',
+        },{
+            name: 'Lock Page',
+            icon: 'icon-lock',
+            url: '/lock',
+            type: 'link',
+        }]
+    });
 });
+

@@ -20,4 +20,23 @@ angular.module('triAngularDashboards', [])
         url: '/dashboard2',
         templateUrl: 'app/dashboards/dashboard2.html',
     });
+})
+.run(function(SideMenu) {
+    SideMenu.addMenu({
+        name: 'Dashboards',
+        icon: 'icon-home',
+        type: 'dropdown',
+        priority: 1,
+        children: [{
+            name: 'Dashboard 1',
+            icon: 'icon-stars',
+            url: '/dashboard1',
+            type: 'link',
+        },{
+            name: 'Dashboard 2',
+            icon: 'icon-stars',
+            url: '/dashboard2',
+            type: 'link',
+        }]
+    });
 });
