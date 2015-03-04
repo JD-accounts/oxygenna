@@ -1,26 +1,26 @@
-<md-content id="email-view" class="md-padding">
-    <md-card>
-        <md-toolbar>
-            <div class="md-toolbar-tools">
-                <span>{{'EMAIL.FROM' | translate}}: {{email.from}}</span>
-                <!-- fill up the space between left and right area -->
-                <span flex></span>
-                <md-button ng-click="reply($event)">
-                    <md-icon md-font-icon="icon-reply" aria-label="{{'EMAIL.REPLY' | translate}}"></md-icon>
-                </md-button>
-                <md-button>
-                    <md-icon md-font-icon="icon-reply-all" aria-label="{{'EMAIL.REPLY_ALL' | translate}}"></md-icon>
-                </md-button>
-                <md-button>
-                    <md-icon md-font-icon="icon-forward" aria-label="{{'EMAIL.FORWARD' | translate}}"></md-icon>
-                </md-button>
-                <md-button ng-click="openlist()">
-                    <md-icon md-font-icon="icon-close" aria-label="{{'EMAIL.CLOSE' | translate}}"></md-icon>
-                </md-button>
-            </div>
-        </md-toolbar>
+<md-content id="email-view" class="md-padding" flex layout="column">
+    <md-card flex>
+        <div class="email-header">
+
+            <span>{{'EMAIL.FROM' | translate}}: {{email.from}}</span>
+            <!-- fill up the space between left and right area -->
+            <span flex></span>
+            <md-button ng-click="reply($event)">
+                <md-icon md-font-icon="icon-reply" aria-label="{{'EMAIL.REPLY' | translate}}"></md-icon>
+            </md-button>
+            <md-button>
+                <md-icon md-font-icon="icon-reply-all" aria-label="{{'EMAIL.REPLY_ALL' | translate}}"></md-icon>
+            </md-button>
+            <md-button>
+                <md-icon md-font-icon="icon-forward" aria-label="{{'EMAIL.FORWARD' | translate}}"></md-icon>
+            </md-button>
+            <md-button ng-click="openlist()">
+                <md-icon md-font-icon="icon-close" aria-label="{{'EMAIL.CLOSE' | translate}}"></md-icon>
+            </md-button>
+
+        </div>
         <md-subheader>
-            {{email.subject}}
+            <h2>{{email.subject}}</h2>
         </md-subheader>
         <md-card-content>
             <p ng-repeat="paragraph in email.content">{{paragraph}}</p>

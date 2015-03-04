@@ -1,5 +1,12 @@
-.email-inbox {
-  .list-avatar {
-    width: 48px;
+.email-inbox-list {
+  position: relative;
+  z-index: 1;
+}
+.md-tile-left {
+  margin-right: -16px;
+  img {
+      border-radius: 50%;
+      width: 48px;
+      margin: 16px;
   }
 }

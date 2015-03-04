@@ -13,7 +13,7 @@
     </md-sidenav>
 
     <div layout="column" flex>
-        <md-toolbar>
+        <md-toolbar class="toolbar-main">
             <div class="md-toolbar-tools" ng-click="openMenu()">
                 <button class="menu-icon" hide-gt-md aria-label="Toggle Menu">
                     <md-icon md-font-icon="icon-menu"></md-icon>
@@ -22,6 +22,6 @@
             </div>
         </md-toolbar>
 
-        <md-content ui-view md-scroll-y flex></md-content>
+        <md-content ui-view md-scroll-y layout flex></md-content>
     </div>
 </div>
