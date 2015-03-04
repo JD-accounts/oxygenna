@@ -2,7 +2,7 @@
 
 angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail'])
 .constant('API_CONFIG', {
-    'url':  'http://192.168.56.101/'
+    'url':  'http://triangular-api.oxygenna.com/'
 })
 .config(function ($stateProvider, $urlRouterProvider, $translateProvider, localStorageServiceProvider, ACCESS) {
     // $stateProvider
