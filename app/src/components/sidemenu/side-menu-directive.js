@@ -34,8 +34,8 @@ angular.module('triAngular')
             });
 
             // when user clicks to open a menu open it using menu service
-            this.openMenu = function(item) {
-                MenuService.openParentMenu(item);
+            this.toggleMenu = function(item) {
+                MenuService.toggleParentMenu(item);
             };
         }
     };

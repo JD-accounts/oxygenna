@@ -27,8 +27,8 @@ angular.module('triAngular')
         link: function($scope, $element, attrs, $sideMenu) {
             $scope.itemTemplate = 'components/sidemenu/side-menu-' + $scope.item.type + '.tmpl.html';
 
-            $scope.openMenu = function() {
-                $sideMenu.openMenu($scope.item);
+            $scope.toggleMenu = function() {
+                $sideMenu.toggleMenu($scope.item);
             };
         }
     };

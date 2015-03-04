@@ -65,15 +65,17 @@ angular.module('triAngular')
             }
             return menu;
         },
-        openParentMenu: function(item) {
+        toggleParentMenu: function(item, open) {
+            // if open not set toggle the menu if the item is currently open (activeParent === item)
+            var openMenu = open ? open : !(activeParent === item);
             // deactivate previously open menu if set
             if(null !== activeParent) {
                 activeParent.active = false;
             }
-            // open the menu
-            item.active = true;
-            // store this as the new active parent menu
-            activeParent = item;
+            // open / close the menu
+            item.active = openMenu;
+            // store this as the new active parent menu unless closed set to null
+            activeParent = openMenu ? item : null;
         },
         updateLocationState: function() {
             // check all menu items and set their active state
@@ -86,7 +88,7 @@ angular.module('triAngular')
                         childMenu.active = childMenu.url === $location.path();
                         // also make sure we activate (open) the parent menu
                         if(childMenu.active) {
-                            service.openParentMenu(parentMenu);
+                            service.toggleParentMenu(parentMenu, true);
                         }
                     });
                 }
