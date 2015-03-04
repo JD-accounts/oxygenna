@@ -7,7 +7,7 @@
  *
  * The `triangular.introduction` module adds an introduction page
  */
-angular.module('triAngular')
+angular.module('triAngularIntroduction', [])
 .config(function ($translatePartialLoaderProvider, $stateProvider) {
     $translatePartialLoaderProvider.addPart('app/introduction');
 

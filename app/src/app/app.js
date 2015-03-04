@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail'])
+angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail'])
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
 })
@@ -80,7 +80,28 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .setPrefix('triAngular')
     .setStorageType('sessionStorage');
 })
+.config(function ($mdThemingProvider) {
+    $mdThemingProvider.alwaysWatchTheme(true);
+
+    $mdThemingProvider.theme('tri-grass')
+    .primaryPalette('green')
+    .accentPalette('light-green')
+    .warnPalette('deep-orange')
+
+    $mdThemingProvider.theme('tri-purple')
+    .primaryPalette('purple')
+    .accentPalette('deep-purple')
+    .warnPalette('amber')
+})
 .run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
+    $rootScope.availableThemes = [{
+        name: 'Grass',
+        theme: 'tri-grass'
+    },{
+        name: 'Purple',
+        theme: 'tri-purple'
+    }]
+    $rootScope.currentTheme = $rootScope.availableThemes[0].theme;
     // $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
     //     if(!('data' in toState) || !('access' in toState.data)) {
     //         event.preventDefault();

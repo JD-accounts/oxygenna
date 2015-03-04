@@ -1,0 +1,23 @@
+{
+    "INBOX": {
+        "GROUPS": {
+            "TODAY": "Today",
+            "YESTERDAY": "Yesterday",
+            "OLDER": "Older"
+        }
+    },
+    "EMAIL": {
+        "FROM": "From",
+        "TO": "To",
+        "SUBJECT": "Subject",
+        "MESSAGE": "Message",
+        "SEND": "Send",
+        "REPLY": "Reply",
+        "REPLY_ALL": "Reply All",
+        "FORWARD": "Forward",
+        "CLOSE": "Close",
+        "REPLY_BOTTOM_SHEET": {
+            "TITLE": "Message Reply"
+        }
+    }
+}
