@@ -19,7 +19,7 @@ angular.module('triAngular')
 .config(function ($stateProvider) {
     $stateProvider
     .state('public.skins', {
-        url: '/skins',
+        url: '/skinstest',
         templateUrl: 'app/testing/skins.html',
         controller: 'TestingController'
     })

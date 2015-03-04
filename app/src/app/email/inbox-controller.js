@@ -8,9 +8,6 @@
  *
  *
  */
-
-
-
 angular.module('triAngularEmail')
 .controller('InboxController', function ($scope, $filter, $location, $mdMedia, $mdBottomSheet, emails) {
     // create email groups using the emails from the resolve

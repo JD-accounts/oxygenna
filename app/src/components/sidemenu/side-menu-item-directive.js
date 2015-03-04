@@ -30,6 +30,15 @@ angular.module('triAngular')
             $scope.toggleMenu = function() {
                 $sideMenu.toggleMenu($scope.item);
             };
+
+            $scope.linkCSSClass = function() {
+                var parent = $element.parent()[0];
+                return {
+                    'md-hue-1': $scope.item.active,
+                    'md-accent': parent.tagName === 'LI',
+                    'md-primary': parent.tagName === 'SIDE-MENU'
+                };
+            }
         }
     };
 });

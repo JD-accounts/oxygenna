@@ -1,0 +1,9 @@
+<div layout="column">
+    <md-content class="md-padding">
+        <h1>Skins</h1>
+
+        <md-select ng-model="selectedTheme" placeholder="Select a theme" ng-change="selectSkin()">
+            <md-option ng-value="theme.theme" ng-repeat="theme in availableThemes">{{theme.name}}</md-option>
+        </md-select>
+    </md-content>
+</div>
