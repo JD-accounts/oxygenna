@@ -8,12 +8,11 @@
                 <md-icon md-font-icon="icon-close"></md-icon>
             </md-button>
         </div>
-
     </div>
 
     <md-divider></md-divider>
 
-    <md-content class="md-padding">
+    <div class="email-reply-content">
         <md-input-container>
             <label>{{'EMAIL.TO' | translate}}</label>
             <input ng-model="reply.to">
@@ -25,18 +24,23 @@
         <md-input-container flex>
             <text-angular ng-model="reply.content" ta-target-toolbars="editor-toolbar"></text-angular>
         </md-input-container>
-        <md-toolbar>
-            <div class="md-toolbar-tools">
-                <text-angular-toolbar name="editor-toolbar"></text-angular-toolbar>
+    </div>
 
+    <md-divider></md-divider>
+
+    <div class="email-reply-footer">
+        <div class="md-toolbar-tools">
+            <text-angular-toolbar class="email-reply-footer-actions" name="editor-toolbar"></text-angular-toolbar>
+
+            <div class="email-reply-footer-actions">
                 <button ng-click="attach()">
                     <i class="icon-attach-file"></i>
                 </button>
-                <span flex></span>
-                <md-button ng-click="send()">
-                    {{'EMAIL.SEND' | translate}}
-                </md-button>
-            </h2>
-        </md-toolbar>
-    </md-content>
+            </div>
+            <span flex></span>
+            <md-button ng-click="send()">
+                {{'EMAIL.SEND' | translate}}
+            </md-button>
+        </h2>
+    </div>
 </md-bottom-sheet>

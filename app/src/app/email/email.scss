@@ -31,3 +31,33 @@
 .email md-card-content {
   overflow: auto;
 }
+.email-reply {
+  &.md-grid {
+    padding: 0 0 80px;
+  }
+  .email-header, .email-reply-footer {
+    padding: 0 40px;
+  }
+  .email-reply-content {
+    padding: 16px 40px;
+  }
+  text-angular {
+    border: 1px solid rgba(0,0,0,0.12);
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  .md-toolbar-tools {
+    padding-left: 0;
+    padding-right: 0;
+    .email-reply-footer-actions button {
+      background: none;
+      border: 0;
+      font-size: 18px;
+      height: 36px;
+      width: 36px;
+    }
+  }
+}
+
