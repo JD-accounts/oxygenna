@@ -39,6 +39,7 @@ angular.module('triAngularEmail')
     // opens an email
     $scope.openMail = function(email) {
         $location.url('/inbox/mail/' + email.id);
+        email.unread = false;
         $scope.selectedMail = email.id;
     };
 
