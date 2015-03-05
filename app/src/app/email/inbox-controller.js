@@ -9,7 +9,10 @@
  *
  */
 angular.module('triAngularEmail')
-.controller('InboxController', function ($scope, $filter, $location, $mdMedia, $mdBottomSheet, emails) {
+.controller('InboxController', function ($scope, $filter, $location, $mdMedia, $mdBottomSheet, $stateParams, emails) {
+    // store selected email if we have one
+    $scope.selectedMail = null;
+
     // create email groups using the emails from the resolve
     if(emails.status === 200) {
         $scope.emails = emails.data;
@@ -36,6 +39,7 @@ angular.module('triAngularEmail')
     // opens an email
     $scope.openMail = function(email) {
         $location.url('/inbox/mail/' + email.id);
+        $scope.selectedMail = email.id;
     };
 
     // returns back to email list

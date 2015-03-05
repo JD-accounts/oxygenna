@@ -4,6 +4,10 @@
 }
 .email-inbox-list-item {
   cursor: pointer;
+
+  &.active {
+    background: red;
+  }
 }
 .md-tile-left {
   margin-right: -16px;
