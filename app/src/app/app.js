@@ -73,7 +73,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     });
 
     // always goto 404 if route not found
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/introduction');
 
     // set prefix for local storage
     localStorageServiceProvider
