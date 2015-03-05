@@ -95,6 +95,9 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 })
 .run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
     $rootScope.availableThemes = [{
+        name: 'Default',
+        theme: 'default'
+    },{
         name: 'Grass',
         theme: 'tri-grass'
     },{
