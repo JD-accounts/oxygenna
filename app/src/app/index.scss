@@ -1,6 +1,13 @@
 html, body, #container, .container-inner {
   height: 100%;
 }
+body {
+  font-size: 14px;
+}
+
+.md-button .md-font {
+  line-height: 24px;
+}
 
 // // Material Design
 

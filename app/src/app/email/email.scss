@@ -2,6 +2,9 @@
   position: relative;
   z-index: 1;
 }
+.email-inbox-list-item {
+  cursor: pointer;
+}
 .md-tile-left {
   margin-right: -16px;
   img {
@@ -9,4 +12,22 @@
       width: 48px;
       margin: 16px;
   }
+}
+
+.email-header {
+  padding: 16px;
+  min-height: 84px;
+}
+.email-header-title {
+  h4 {
+    margin: 1.33em 0 0;
+  }
+}
+
+.email-header-actions {
+  font-size: 18px;
+}
+
+.email md-card-content {
+  overflow: auto;
 }
