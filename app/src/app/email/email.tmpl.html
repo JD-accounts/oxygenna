@@ -1,12 +1,12 @@
 <md-content id="email-view" class="email md-padding" flex layout="column">
     <md-card flex>
-        <div class="email-header" layout="row" layout-align="space-between center" >
+        <div class="email-header" layout="row" layout-align="space-between center">
             <div class="email-header-title">
                 <span flex>{{'EMAIL.FROM' | translate}}: {{email.from}}</span>
                 <h4>{{email.subject}}</h4>
             </div>
 
-            <div class="email-header-actions">
+            <div class="email-header-actions" layout="row" layout-align="space-between center">
                 <md-button ng-click="reply($event)">
                     <md-icon md-font-icon="icon-reply" aria-label="{{'EMAIL.REPLY' | translate}}"></md-icon>
                     <md-tooltip> {{'EMAIL.REPLY' | translate}} </md-tooltip>
