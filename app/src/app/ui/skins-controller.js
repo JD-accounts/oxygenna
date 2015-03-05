@@ -2,18 +2,21 @@
 
 /**
  * @ngdoc function
- * @name AdminController
+ * @name SkinsController
  * @module triAngular
  * @kind function
  *
  * @description
  *
- * Handles the admin view
+ * Handles the skins ui page
  */
 angular.module('triAngularUI').
 controller('SkinsController', function ($scope, $rootScope) {
-    $scope.selectedTheme = $rootScope.currentTheme;
-    $scope.selectSkin = function() {
-        $rootScope.currentTheme = $scope.selectedTheme;
+    $scope.selectedMainTheme = $rootScope.currentTheme;
+    $scope.selectedSidebarTheme = $rootScope.sidebarTheme;
+
+    $scope.updateThemes = function() {
+        $rootScope.currentTheme = $scope.selectedMainTheme;
+        $rootScope.sidebarTheme = $scope.selectedSidebarTheme;
     }
 });

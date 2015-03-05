@@ -105,6 +105,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         theme: 'tri-purple'
     }]
     $rootScope.currentTheme = $rootScope.availableThemes[0].theme;
+    $rootScope.sidebarTheme = $rootScope.availableThemes[1].theme;
     // $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
     //     if(!('data' in toState) || !('access' in toState.data)) {
     //         event.preventDefault();
