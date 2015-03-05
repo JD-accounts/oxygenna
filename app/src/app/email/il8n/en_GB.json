@@ -16,7 +16,8 @@
         "REPLY_ALL": "Reply All",
         "FORWARD": "Forward",
         "CLOSE": "Close",
-        "TEXT": "You message here..",
+        "NO_EMAILS_FOUND": "No emails found",
+        "NO_EMAIL_SELECTED": "No email selected",
         "REPLY_BOTTOM_SHEET": {
             "TITLE": "Message Reply"
         }

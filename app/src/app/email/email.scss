@@ -4,6 +4,9 @@
 }
 .email-inbox-list-item {
   cursor: pointer;
+  &.active {
+
+  }
 }
 .md-tile-left {
   margin-right: -16px;
@@ -61,3 +64,10 @@
   }
 }
 
+.no-email-selected {
+  text-align: center;
+  opacity: 0.5;
+  h2 {
+    font-weight: lighter;
+  }
+}

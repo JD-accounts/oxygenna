@@ -42,7 +42,12 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
                 }
                 return foundEmail;
             }
-        }
+        },
+        onEnter: function($state, email){
+            if (false === email) {
+                $state.go('private.admin.inbox');
+            }
+        },
     });
 
 
