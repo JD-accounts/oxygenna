@@ -8,6 +8,12 @@
 
   }
 }
+.email-inbox-list .md-subheader {
+  margin-right: 0;
+  &:after {
+    display: none;
+  }
+}
 .email-inbox-list-item-unread {
   opacity: 0.5;
   font-size: 12px;
