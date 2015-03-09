@@ -25,6 +25,13 @@
   }
 }
 
+// Compose button {
+.email-compose-button {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+
 // Email panel
 .email-header {
   padding: 16px;
@@ -77,11 +84,4 @@
   h2 {
     font-weight: lighter;
   }
-}
-
-// Compose button {
-.email-compose-button {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
 }
