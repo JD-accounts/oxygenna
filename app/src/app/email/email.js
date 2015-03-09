@@ -9,14 +9,17 @@
  */
 angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 .constant('EMAIL_ROUTES', [{
+    state: 'inbox',
     name: 'INBOX',
     url: '/inbox',
     icon: 'icon-inbox'
 },{
+    state: 'trash',
     name: 'TRASH',
     url: '/trash',
     icon: 'icon-remove-circle'
 },{
+    state: 'sent',
     name: 'SENT',
     url: '/sent',
     icon: 'icon-mail'
@@ -26,7 +29,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 
     angular.forEach(EMAIL_ROUTES, function(route) {
         $stateProvider
-        .state('private.admin.toolbar.' + route.url, {
+        .state('private.admin.toolbar.' + route.state, {
             url: route.url,
             views: {
                 toolbar: {
@@ -51,7 +54,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 
     angular.forEach(EMAIL_ROUTES, function(route) {
         $stateProvider
-        .state('private.admin.toolbar.' + route.url + '.email', {
+        .state('private.admin.toolbar.' + route.state + '.email', {
             url: '/mail/:emailID',
             templateUrl: 'app/email/email.tmpl.html',
             controller: 'EmailController',
@@ -74,6 +77,12 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
                 }
             },
         });
+    });
+
+    $stateProvider
+    .state('private.admin.toolbar.inbox.compose', {
+        url: '/compose',
+        templateUrl: 'app/email/compose.tmpl.html',
     });
 
     /***
