@@ -4,7 +4,11 @@ angular.module('triAngular')
 .service('SideMenu', function($location, $filter) {
     var menu = [];
     var activeParent = null;
+    var activeItem = null;
     var service = {
+        currentMenu: function() {
+            return activeItem;
+        },
         addMenu: function(item) {
             menu.push(item);
         },
@@ -34,6 +38,7 @@ angular.module('triAngular')
                         childMenu.active = service.urlOpen(childMenu.url);
                         // also make sure we activate (open) the parent menu
                         if(childMenu.active) {
+                            activeItem = childMenu;
                             service.toggleParentMenu(parentMenu, true);
                         }
                     });

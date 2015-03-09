@@ -14,7 +14,6 @@ angular.module('triAngularIntroduction', [])
     $stateProvider
     .state('private.admin.introduction', {
         url: '/introduction',
-        controller: 'IntroductionController',
         templateUrl: 'app/introduction/introduction.tmpl.html',
     });
 })

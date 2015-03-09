@@ -10,6 +10,7 @@
  */
 angular.module('triAngularEmail')
 .controller('InboxController', function ($scope, $filter, $location, $mdMedia, $mdBottomSheet, $stateParams, emails) {
+    $scope.inboxBasePath = $location.path();
     // store selected email if we have one
     $scope.selectedMail = null;
 
@@ -18,15 +19,15 @@ angular.module('triAngularEmail')
         $scope.emails = emails.data;
 
         $scope.emailGroups = [{
-            name: $filter('translate')('INBOX.GROUPS.TODAY'),
+            name: $filter('translate')('EMAIL.INBOX.GROUPS.TODAY'),
             from: moment().startOf('day'),
             to: moment().endOf('day')
         },{
-            name: $filter('translate')('INBOX.GROUPS.YESTERDAY'),
+            name: $filter('translate')('EMAIL.INBOX.GROUPS.YESTERDAY'),
             from: moment().subtract(1, 'days').startOf('day'),
             to: moment().subtract(1, 'days').endOf('day')
         },{
-            name: $filter('translate')('INBOX.GROUPS.OLDER'),
+            name: $filter('translate')('EMAIL.INBOX.GROUPS.OLDER'),
             from: moment().subtract(100, 'years').endOf('day'),
             to: moment().subtract(2, 'days').startOf('day')
         }];
@@ -38,19 +39,19 @@ angular.module('triAngularEmail')
 
     // opens an email
     $scope.openMail = function(email) {
-        $location.url('/inbox/mail/' + email.id);
+        $location.url($scope.inboxBasePath + '/mail/' + email.id);
         email.unread = false;
         $scope.selectedMail = email.id;
     };
 
     // returns back to email list
     $scope.openlist = function() {
-        $location.url('/inbox');
+        $location.url($scope.inboxBasePath);
     };
 
     // keep a watch for changes to size of page
     $scope.$watch(function() {
-        // if not a small mobile view don't show the list - unless we are on the /inbox/mail list page
-        $scope.showEmailList = !$mdMedia('sm') || $location.path().indexOf('/inbox/mail/') === -1;
+        // if not a small mobile view don't show the list - unless we are on the$scope.inboxBasePath + /mail list page
+        $scope.showEmailList = !$mdMedia('sm') || $location.path().indexOf($scope.inboxBasePath + '/mail/') === -1;
     });
 });

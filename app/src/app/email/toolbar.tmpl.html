@@ -1,0 +1,19 @@
+<md-toolbar class="toolbar-email">
+    <div class="md-toolbar-tools">
+        <md-button hide-gt-md aria-label="{{'ADMIN.TOOLBAR.SIDEBAR_TOGGLE' | translate}}" ng-click="openMenu()">
+            <md-icon md-font-icon="icon-menu"></md-icon>
+        </md-button>
+
+        <h2>{{currentMenu.name}}</h2>
+        <md-button ng-click="toggleSearch()" aria-label="{{'ADMIN.TOOLBAR.SIDEBAR_TOGGLE' | translate}}">
+            <md-icon md-font-icon="icon-search"></md-icon>
+        </md-button>
+        <input ng-show="showSearch" type="text" placeholder="{{'EMAIL.TOOLBAR.SEARCH' | translate}}">
+
+        <div flex></div>
+        <md-button ng-repeat="menu in toolbarMenu" ng-href="#{{menu.url}}" aria-label="{{menu.name}}">
+            <md-icon md-font-icon="{{menu.icon}}"></md-icon>
+            <md-tooltip>{{menu.name}}</md-tooltip>
+        </md-button>
+    </div>
+</md-toolbar>

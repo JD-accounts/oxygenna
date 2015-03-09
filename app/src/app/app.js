@@ -4,7 +4,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
 })
-.config(function ($stateProvider, $urlRouterProvider, $translateProvider, localStorageServiceProvider, ACCESS) {
+.config(function ($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider, ACCESS) {
     // $stateProvider
     // .state('home', {
     //     url: '/',
@@ -22,6 +22,8 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     $translateProvider.useLoader('$translatePartialLoader', {
         urlTemplate: '{part}/il8n/{lang}.json'
     });
+
+    $translatePartialLoaderProvider.addPart('app');
 
     // cache translation files to save load on server
     $translateProvider.useLoaderCache(true);
@@ -56,7 +58,12 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 
     .state('private.admin', {
         abstract: true,
-        templateUrl: 'app/layouts/admin.html',
+        templateUrl: 'app/layouts/admin.tmpl.html',
+    })
+
+    .state('private.admin.toolbar', {
+        abstract: true,
+        template: '<div ui-view="toolbar"></div><md-content ui-view="content" md-scroll-y layout flex></md-content>',
     })
 
     .state('private.blank', {

@@ -1,12 +1,21 @@
 {
-    "INBOX": {
-        "GROUPS": {
-            "TODAY": "Today",
-            "YESTERDAY": "Yesterday",
-            "OLDER": "Older"
-        }
-    },
     "EMAIL": {
+        "ROUTES": {
+            "INBOX": "Inbox",
+            "TRASH": "Trash",
+            "SENT": "Sent"
+        },
+        "TOOLBAR": {
+            "SEARCH": "Search"
+        },
+        "INBOX": {
+            "TITLE": "Inbox",
+            "GROUPS": {
+                "TODAY": "Today",
+                "YESTERDAY": "Yesterday",
+                "OLDER": "Older"
+            }
+        },
         "FROM": "From",
         "TO": "To",
         "SUBJECT": "Subject",
