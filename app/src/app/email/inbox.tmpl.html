@@ -1,5 +1,5 @@
 <div class="email-inbox" layout="row" flex>
-    <md-button class="md-fab email-compose-button" aria-label="{{'EMAIL.COMPOSE_EMAIL' | translate}}">
+    <md-button ng-click="composeClick()" class="md-fab email-compose-button" aria-label="{{'EMAIL.COMPOSE_EMAIL' | translate}}">
         <md-icon md-font-icon="icon-create"></md-icon>
     </md-button>
     <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-sm="50" flex-gt-md="50" flex-gt-lg="40"  ng-show="showEmailList" layout="column">

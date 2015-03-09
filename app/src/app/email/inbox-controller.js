@@ -9,7 +9,7 @@
  *
  */
 angular.module('triAngularEmail')
-.controller('InboxController', function ($scope, $filter, $location, $mdMedia, $mdBottomSheet, $stateParams, emails) {
+.controller('InboxController', function ($scope, $filter, $location, $mdMedia, $mdBottomSheet, $stateParams, $mdDialog, emails) {
     $scope.inboxBasePath = $location.path();
     // store selected email if we have one
     $scope.selectedMail = null;
@@ -47,6 +47,18 @@ angular.module('triAngularEmail')
     // returns back to email list
     $scope.openlist = function() {
         $location.url($scope.inboxBasePath);
+    };
+
+    // opens the compose dialog
+    $scope.composeClick = function(ev) {
+        $mdDialog.show({
+            controller: 'ComposeController',
+            templateUrl: 'app/email/compose.tmpl.html',
+            targetEvent: ev,
+        })
+        .then(function(email) {
+            console.log('send email', email);
+        });
     };
 
     // keep a watch for changes to size of page

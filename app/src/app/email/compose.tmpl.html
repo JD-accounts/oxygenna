@@ -1,1 +1,34 @@
-<h1>composer</h1>
+<md-dialog class="compose-dialog" aria-label="Mango (Fruit)">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>{{'EMAIL.COMPOSE.TITLE' | translate}}</h2>
+        </div>
+    </md-toolbar>
+
+    <md-content>
+        <md-input-container>
+            <label>{{'EMAIL.COMPOSE.TO' | translate}}</label>
+            <input type="email" ng-model="email.to">
+        </md-input-container>
+
+        <md-input-container>
+            <label>{{'EMAIL.COMPOSE.SUBJECT' | translate}}</label>
+            <input ng-model="email.subject">
+        </md-input-container>
+
+        <md-input-container flex>
+            <text-angular ng-model="email.content" ta-target-toolbars="editor-toolbar"></text-angular>
+        </md-input-container>
+    </md-content>
+
+    <div class="md-actions" layout="row">
+        <text-angular-toolbar name="editor-toolbar"></text-angular-toolbar>
+        <span flex></span>
+        <md-button ng-click="cancel()">
+            {{'EMAIL.COMPOSE.CLOSE' | translate}}
+        </md-button>
+        <md-button ng-click="send()" class="md-primary">
+            {{'EMAIL.COMPOSE.SEND' | translate}}
+        </md-button>
+    </div>
+</md-dialog>

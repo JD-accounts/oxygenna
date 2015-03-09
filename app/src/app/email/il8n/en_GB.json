@@ -17,15 +17,20 @@
                 "OLDER": "Older"
             }
         },
-        "FROM": "From",
-        "TO": "To",
-        "SUBJECT": "Subject",
+        "COMPOSE": {
+            "TITLE": "New Email",
+            "FROM": "From",
+            "TO": "To",
+            "SUBJECT": "Subject",
+            "SEND": "Send",
+            "CLOSE": "Close"
+        },
         "MESSAGE": "Message",
-        "SEND": "Send",
+
         "REPLY": "Reply",
         "REPLY_ALL": "Reply All",
         "FORWARD": "Forward",
-        "CLOSE": "Close",
+
         "NO_EMAILS_FOUND": "No emails found",
         "NO_EMAIL_SELECTED": "No email selected",
         "REPLY_BOTTOM_SHEET": {
