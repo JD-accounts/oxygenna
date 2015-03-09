@@ -7,7 +7,7 @@
             <section ng-repeat="group in emailGroups" ng-show="group.emails.length > 0">
                 <md-subheader class="md-primary">{{group.name}}</md-subheader>
                 <md-list layout="column">
-                    <md-item class="email-inbox-list-item" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id }">
+                    <md-item class="email-inbox-list-item" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
                         <md-item-content>
                             <div class="md-tile-left">
                                 <img class="list-avatar" ng-src="assets/images/avatars/{{email.avatar}}" class="face" alt="{{email.name}}">
@@ -19,7 +19,7 @@
                                     {{email.date | amCalendar}}
                                 </p>
                             </div>
-                            <md-icon class="email-inbox-list-item-unread" md-font-icon="icon-brightness-1" ng-show="email.unread"></md-icon>
+                            <md-icon class="email-inbox-list-item-unread-indicator" md-font-icon="icon-brightness-1" ng-show="email.unread"></md-icon>
                         </md-item-content>
                         <md-divider md-inset ng-hide="$index + 1 === group.emails.length"></md-divider>
                     </md-item>
