@@ -1,11 +1,30 @@
 'use strict';
 
 angular.module('triAngular')
-.service('SideMenu', function($location, $filter) {
+.service('SideMenu', function($location, $filter, $translate) {
     var menu = [];
     var activeParent = null;
     var activeItem = null;
     var service = {
+        translate: function() {
+            // gather all the names used in all menus
+            var names = [];
+            angular.forEach(menu, function(parentMenu) {
+                names.push(parentMenu.name);
+                angular.forEach(parentMenu.children, function(menu) {
+                    names.push(menu.name);
+                });
+            });
+            // translate all nanes and replace them with translations
+            $translate(names).then(function(translations) {
+                angular.forEach(menu, function(parentMenu) {
+                    parentMenu.name = translations[parentMenu.name];
+                    angular.forEach(parentMenu.children, function(menu) {
+                        menu.name = translations[menu.name];
+                    });
+                });
+            });
+        },
         currentMenu: function() {
             return activeItem;
         },
