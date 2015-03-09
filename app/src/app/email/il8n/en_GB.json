@@ -23,7 +23,12 @@
             "TO": "To",
             "SUBJECT": "Subject",
             "SEND": "Send",
-            "CLOSE": "Close"
+            "CLOSE": "Close",
+            "VALIDATION": {
+                "EMAIL_REQUIRED": "Please enter an address to send to.",
+                "EMAIL_VALID": "Please enter a valid email address.",
+                "SUBJECT_REQUIRED": "Please enter a subject for the email."
+            }
         },
         "MESSAGE": "Message",
 
