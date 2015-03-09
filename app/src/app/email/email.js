@@ -10,17 +10,17 @@
 angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 .constant('EMAIL_ROUTES', [{
     state: 'inbox',
-    name: 'INBOX',
+    name: 'EMAIL.MENU.INBOX',
     url: '/inbox',
     icon: 'icon-inbox'
 },{
     state: 'trash',
-    name: 'TRASH',
+    name: 'EMAIL.MENU.TRASH',
     url: '/trash',
     icon: 'icon-remove-circle'
 },{
     state: 'sent',
-    name: 'SENT',
+    name: 'EMAIL.MENU.SENT',
     url: '/sent',
     icon: 'icon-mail'
 }])
@@ -73,16 +73,10 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
             },
             onEnter: function($state, email){
                 if (false === email) {
-                    $state.go('private.admin.toolbar.' + route.url);
+                    $state.go('private.admin.toolbar.' + route.state);
                 }
             },
         });
-    });
-
-    $stateProvider
-    .state('private.admin.toolbar.inbox.compose', {
-        url: '/compose',
-        templateUrl: 'app/email/compose.tmpl.html',
     });
 
     /***
@@ -115,7 +109,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 })
 .run(function(SideMenu, $translate, EMAIL_ROUTES) {
     var emailMenu = {
-        name: 'Email',
+        name: 'EMAIL.MENU.EMAIL',
         icon: 'icon-email',
         type: 'dropdown',
         priority: 1,
@@ -123,14 +117,12 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
     };
 
     angular.forEach(EMAIL_ROUTES, function(route) {
-        $translate(['EMAIL.ROUTES.' + route.name]).then(function(translatedName) {
-            emailMenu.children.push({
-                name: translatedName['EMAIL.ROUTES.' + route.name],
-                icon: route.icon,
-                url: route.url,
-                type: 'link',
-            });
-        })
+        emailMenu.children.push({
+            name: route.name,
+            icon: route.icon,
+            url: route.url,
+            type: 'link',
+        });
     });
 
     SideMenu.addMenu(emailMenu);

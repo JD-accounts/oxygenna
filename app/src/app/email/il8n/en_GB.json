@@ -1,6 +1,7 @@
 {
     "EMAIL": {
-        "ROUTES": {
+        "MENU": {
+            "EMAIL": "Email",
             "INBOX": "Inbox",
             "TRASH": "Trash",
             "SENT": "Sent"
