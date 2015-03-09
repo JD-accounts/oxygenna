@@ -1,3 +1,4 @@
+// Side menu
 .side-menu-link {
   display: block;
   text-align: left;
@@ -15,6 +16,28 @@
     transform: translate3d(0, 0, 0) !important;
   }
 }
+.side-menu-icon, .menu-toggle-icon {
+  height: 100%;
+  line-height: 48px;
+}
+.menu-toggle-icon {
+  text-align: center;
+  float: right;
+  span {
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+  }
+  &.open span {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+// Side menu 2nd level
 .drop-down-list {
   list-style-type: none;
   padding: 0;
@@ -38,24 +61,4 @@
   &.ng-hide {
     max-height: 0;
   }
-}
-.side-menu-icon, .menu-toggle-icon {
-  height: 100%;
-  line-height: 48px;
-}
-.menu-toggle-icon {
-  text-align: center;
-  float: right;
-  span {
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-  }
-  &.open span {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-    }
 }
