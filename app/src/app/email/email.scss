@@ -1,12 +1,10 @@
+// Email list
 .email-inbox-list {
   position: relative;
   z-index: 1;
 }
 .email-inbox-list-item {
   cursor: pointer;
-  &.active {
-
-  }
 }
 .email-inbox-list .md-subheader {
   margin-right: 0;
@@ -27,6 +25,7 @@
   }
 }
 
+// Email panel
 .email-header {
   padding: 16px;
   min-height: 84px;
@@ -36,11 +35,9 @@
     margin: 1.33em 0 0;
   }
 }
-
 .email-header-actions {
   font-size: 18px;
 }
-
 .email md-card-content {
   overflow: auto;
 }
@@ -73,7 +70,7 @@
     }
   }
 }
-
+// No email selected
 .no-email-selected {
   text-align: center;
   opacity: 0.5;
