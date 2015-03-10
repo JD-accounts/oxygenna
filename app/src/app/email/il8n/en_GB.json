@@ -30,8 +30,10 @@
                 "SUBJECT_REQUIRED": "Please enter a subject for the email."
             }
         },
-        "MESSAGE": "Message",
+        "SENT": "Email to {{to}} sent.",
+        "CANCELED": "Email canceled",
 
+        "MESSAGE": "Message",
         "REPLY": "Reply",
         "REPLY_ALL": "Reply All",
         "FORWARD": "Forward",

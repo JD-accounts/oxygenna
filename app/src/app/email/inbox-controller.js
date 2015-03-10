@@ -9,7 +9,7 @@
  *
  */
 angular.module('triAngularEmail')
-.controller('InboxController', function ($scope, $filter, $location, $mdMedia, $mdBottomSheet, $stateParams, $mdDialog, emails) {
+.controller('InboxController', function ($scope, $filter, $location, $mdMedia, $mdBottomSheet, $stateParams, $mdDialog, $mdToast, emails) {
     $scope.inboxBasePath = $location.path();
     // store selected email if we have one
     $scope.selectedMail = null;
@@ -57,7 +57,19 @@ angular.module('triAngularEmail')
             targetEvent: ev,
         })
         .then(function(email) {
-            console.log('send email', email);
+            $mdToast.show(
+                $mdToast.simple()
+                .content($filter('translate')('EMAIL.SENT', {to: email.to}))
+                .position('bottom right')
+                .hideDelay(3000)
+            );
+        }, function() {
+            $mdToast.show(
+                $mdToast.simple()
+                .content($filter('translate')('EMAIL.CANCELED'))
+                .position('bottom right')
+                .hideDelay(3000)
+            );
         });
     };
 
