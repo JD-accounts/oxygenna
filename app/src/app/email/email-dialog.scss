@@ -1,11 +1,12 @@
 // Email panel
 .email-header {
   padding: 16px;
-  min-height: 84px;
+  min-height: 56px;
 }
 .email-header-title {
   h4 {
     margin: 1.33em 0 0;
+    font-weight: 500;
   }
 }
 .email-header-actions {
@@ -14,32 +15,25 @@
 .email md-card-content {
   overflow: auto;
 }
-.email-reply {
-  &.md-grid {
-    padding: 0 0 80px;
-  }
-  .email-header, .email-reply-footer {
-    padding: 0 40px;
-  }
-  .email-reply-content {
-    padding: 16px 40px;
-  }
-  text-angular {
+text-angular {
+  border: 1px solid rgba(0,0,0,0.12);
+  &.focused, &:focus {
+    outline: none;
+    box-shadow: none;
     border: 1px solid rgba(0,0,0,0.12);
-    &:focus {
-      outline: none;
-      box-shadow: none;
-    }
   }
-  .md-toolbar-tools {
-    padding-left: 0;
-    padding-right: 0;
-    .email-reply-footer-actions button {
-      background: none;
-      border: 0;
-      font-size: 18px;
-      height: 36px;
-      width: 36px;
-    }
+
+}
+
+.editor-toolbar {
+  button {
+    border: 0;
+    box-shadow: none;
+    background: none;
+    font-size: 18px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    padding: 0;
   }
 }
