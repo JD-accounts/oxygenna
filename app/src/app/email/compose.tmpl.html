@@ -13,19 +13,34 @@
     <md-divider></md-divider>
 
     <md-content>
-        <md-input-container>
-            <label>{{'EMAIL.COMPOSE.TO' | translate}}</label>
-            <input type="email" ng-model="email.to">
-        </md-input-container>
+        <form name="emailForm">
+            <md-input-container>
+                <label for="to">{{'EMAIL.COMPOSE.TO' | translate}}</label>
+                <input type="email" name="to" ng-model="email.to" required>
+                <div ng-messages="emailForm.to.$error">
+                    <div ng-message when="required">
+                        {{'EMAIL.COMPOSE.VALIDATION.EMAIL_REQUIRED' | translate}}
+                    </div>
+                    <div ng-message when="email">
+                        {{'EMAIL.COMPOSE.VALIDATION.EMAIL_VALID' | translate}}
+                    </div>
+                </div>
+            </md-input-container>
 
-        <md-input-container>
-            <label>{{'EMAIL.COMPOSE.SUBJECT' | translate}}</label>
-            <input ng-model="email.subject">
-        </md-input-container>
+            <md-input-container>
+                <label for="subject">{{'EMAIL.COMPOSE.SUBJECT' | translate}}</label>
+                <input ng-model="email.subject" name="subject" required>
+                <div ng-messages="emailForm.subject.$error">
+                    <div ng-message when="required">
+                        {{'EMAIL.COMPOSE.VALIDATION.SUBJECT_REQUIRED' | translate}}
+                    </div>
+                </div>
+            </md-input-container>
 
-        <md-input-container flex>
-            <text-angular ng-model="email.content" ta-target-toolbars="editor-toolbar"></text-angular>
-        </md-input-container>
+            <md-input-container flex>
+                <text-angular ng-model="email.content" ta-target-toolbars="editor-toolbar"></text-angular>
+            </md-input-container>
+        </form>
     </md-content>
 
     <div class="md-actions" layout="row">
@@ -34,7 +49,7 @@
         <md-button ng-click="cancel()">
             {{'EMAIL.COMPOSE.CLOSE' | translate}}
         </md-button>
-        <md-button ng-click="send()" class="md-primary">
+        <md-button ng-click="send()" class="md-primary" ng-disabled="emailForm.$invalid">
             {{'EMAIL.COMPOSE.SEND' | translate}}
         </md-button>
     </div>
