@@ -1,9 +1,4 @@
-text-angular blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
-  font-size: 17.5px;
-  border-left: 5px solid #eee;
-}// Email panel
+// Email panel
 .email-header {
   padding: 16px;
   min-height: 56px;
@@ -27,7 +22,6 @@ text-angular {
     box-shadow: none;
     border: 1px solid rgba(0,0,0,0.12);
   }
-
 }
 // Editor toolbar
 .editor-toolbar {
@@ -68,4 +62,18 @@ $i: 1;
     }
   }
   $i: $i + 1;
+}
+
+// Reply dialog
+.email.compose-dialog {
+  max-width: 540px;
+  min-width: 50%;
+}
+
+// Old message
+text-angular blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-style: italic;
+  border-left: 5px solid #eee;
 }
