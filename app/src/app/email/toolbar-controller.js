@@ -12,7 +12,7 @@
  */
 
 angular.module('triAngularEmail')
-.controller('EmailToolbarController', function ($scope, $filter, SideMenu, EMAIL_ROUTES) {
+.controller('EmailToolbarController', function ($scope, $rootScope, $filter, SideMenu, EMAIL_ROUTES) {
     $scope.showSearch = false;
     $scope.toolbarMenu = [];
     $scope.currentMenu = SideMenu.currentMenu();
@@ -23,6 +23,10 @@ angular.module('triAngularEmail')
             icon: EMAIL_ROUTES[i].icon,
         });
     }
+
+    $scope.filterEmailList = function() {
+        $rootScope.$broadcast('emailSearch', $scope.emailSearch);
+    };
 
     $scope.toggleSearch = function() {
         $scope.showSearch = !$scope.showSearch;
