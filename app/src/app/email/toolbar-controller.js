@@ -18,7 +18,7 @@ angular.module('triAngularEmail')
     $scope.currentMenu = SideMenu.currentMenu();
     for(var i = 0; i < EMAIL_ROUTES.length; i++) {
         $scope.toolbarMenu.push({
-            name: $filter('translate')('EMAIL.ROUTES.' + EMAIL_ROUTES[i].name),
+            name: $filter('translate')(EMAIL_ROUTES[i].name),
             url: EMAIL_ROUTES[i].url,
             icon: EMAIL_ROUTES[i].icon,
         });

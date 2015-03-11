@@ -50,11 +50,19 @@ angular.module('triAngularEmail')
     };
 
     // opens the compose dialog
-    $scope.composeClick = function(ev) {
+    $scope.composeClick = function($event) {
         $mdDialog.show({
             controller: 'ComposeController',
             templateUrl: 'app/email/compose.tmpl.html',
-            targetEvent: ev,
+            targetEvent: $event,
+            locals: {
+                title: $filter('translate')('EMAIL.NEW'),
+                email: {
+                    to: '',
+                    subject: '',
+                    content: ''
+                }
+            }
         })
         .then(function(email) {
             $mdToast.show(

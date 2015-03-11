@@ -9,18 +9,33 @@
  */
 
 angular.module('triAngularEmail')
-.controller('EmailController', function ($scope, $stateParams, $location, $mdBottomSheet, emails, email) {
+.controller('EmailController', function ($scope, $stateParams, $mdDialog, $mdToast, $filter, emails, email) {
     $scope.email = email;
 
-    $scope.reply = function($event) {
-        $mdBottomSheet.show({
-            templateUrl: 'app/email/reply-bottom-sheet.tmpl.html',
-            controller: 'ReplyController',
-            parent: angular.element(document.getElementById('email-view')),
+    $scope.reply = function($event, title) {
+        $mdDialog.show({
+            controller: 'ComposeController',
+            templateUrl: 'app/email/compose.tmpl.html',
             targetEvent: $event,
             locals: {
+                title: $filter('translate')(title),
                 email: $scope.email
             }
+        })
+        .then(function(email) {
+            $mdToast.show(
+                $mdToast.simple()
+                .content($filter('translate')('EMAIL.SENT', {to: email.to}))
+                .position('bottom right')
+                .hideDelay(3000)
+            );
+        }, function() {
+            $mdToast.show(
+                $mdToast.simple()
+                .content($filter('translate')('EMAIL.CANCELED'))
+                .position('bottom right')
+                .hideDelay(3000)
+            );
         });
     };
 

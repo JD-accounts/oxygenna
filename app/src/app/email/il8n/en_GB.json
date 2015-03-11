@@ -18,7 +18,6 @@
             }
         },
         "COMPOSE": {
-            "TITLE": "New Email",
             "FROM": "From",
             "TO": "To",
             "SUBJECT": "Subject",
@@ -30,14 +29,14 @@
                 "SUBJECT_REQUIRED": "Please enter a subject for the email."
             }
         },
+        "NEW": "New Email",
         "SENT": "Email to {{to}} sent.",
         "CANCELED": "Email canceled",
-
-        "MESSAGE": "Message",
         "REPLY": "Reply",
         "REPLY_ALL": "Reply All",
         "FORWARD": "Forward",
-
+        "RE": "R.e: ",
+        "MESSAGE": "Message",
         "NO_EMAILS_FOUND": "No emails found",
         "NO_EMAIL_SELECTED": "No email selected",
         "REPLY_BOTTOM_SHEET": {
