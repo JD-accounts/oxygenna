@@ -13,6 +13,8 @@ angular.module('triAngularEmail')
     $scope.inboxBasePath = $location.path();
     // store selected email if we have one
     $scope.selectedMail = null;
+    // variable to store backup of emailGroups for search filtering
+    var emailGroupsBackup = null;
 
     // create email groups using the emails from the resolve
     if(emails.status === 200) {
@@ -35,6 +37,9 @@ angular.module('triAngularEmail')
         angular.forEach($scope.emailGroups, function(group) {
             group.emails = $filter('emailGroup')($scope.emails, group);
         });
+
+        // create backup of emailGroups for search filtering
+        emailGroupsBackup = angular.copy($scope.emailGroups);
     }
 
     // opens an email
@@ -80,6 +85,12 @@ angular.module('triAngularEmail')
             );
         });
     };
+
+    $scope.$on('emailSearch', function(event, emailSearch) {
+        for(var g in emailGroupsBackup) {
+            $scope.emailGroups[g].emails = $filter('emailSearchFilter')(emailGroupsBackup[g].emails, emailSearch);
+        }
+    });
 
     // keep a watch for changes to size of page
     $scope.$watch(function() {

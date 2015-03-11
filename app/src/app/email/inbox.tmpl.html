@@ -4,10 +4,10 @@
     </md-button>
     <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-sm="50" flex-gt-md="50" flex-gt-lg="40"  ng-show="showEmailList" layout="column">
         <md-content flex>
-            <section ng-repeat="group in emailGroups" ng-show="group.emails.length > 0">
+            <section class="email-inbox-list-animate-repeat" ng-repeat="group in emailGroups" ng-show="group.emails.length > 0">
                 <md-subheader class="md-primary">{{group.name}}</md-subheader>
                 <md-list layout="column">
-                    <md-item class="email-inbox-list-item" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
+                    <md-item class="email-inbox-list-item email-inbox-list-animate-repeat" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
                         <md-item-content>
                             <div class="md-tile-left">
                                 <img class="list-avatar" ng-src="assets/images/avatars/{{email.avatar}}" class="face" alt="{{email.name}}">
@@ -15,9 +15,7 @@
                             <div class="md-tile-content">
                                 <h3>{{email.name}}</h3>
                                 <h4>{{email.subject}}</h4>
-                                <p>
-                                    {{email.date | amCalendar}}
-                                </p>
+                                <p am-time-ago="email.date"></p>
                             </div>
                             <md-icon class="email-inbox-list-item-unread-indicator" md-font-icon="icon-brightness-1" ng-show="email.unread"></md-icon>
                         </md-item-content>
