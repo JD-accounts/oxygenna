@@ -15,9 +15,7 @@
                             <div class="md-tile-content">
                                 <h3>{{email.name}}</h3>
                                 <h4>{{email.subject}}</h4>
-                                <p>
-                                    {{email.date | amCalendar}}
-                                </p>
+                                <p am-time-ago="email.date"></p>
                             </div>
                             <md-icon class="email-inbox-list-item-unread-indicator" md-font-icon="icon-brightness-1" ng-show="email.unread"></md-icon>
                         </md-item-content>
