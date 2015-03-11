@@ -3,4 +3,69 @@ text-angular blockquote {
   margin: 0 0 20px;
   font-size: 17.5px;
   border-left: 5px solid #eee;
+}// Email panel
+.email-header {
+  padding: 16px;
+  min-height: 56px;
+}
+.email-header-title {
+  h4 {
+    margin: 1.33em 0 0;
+    font-weight: 500;
+  }
+}
+.email-header-actions {
+  font-size: 18px;
+}
+.email md-card-content {
+  overflow: auto;
+}
+text-angular {
+  border: 1px solid rgba(0,0,0,0.12);
+  &.focused, &:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,0.12);
+  }
+
+}
+// Editor toolbar
+.editor-toolbar {
+  button {
+    border: 0;
+    box-shadow: none;
+    background: none;
+    font-size: 18px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    padding: 0;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px);
+    .transition-in & {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0);
+    }
+
+  }
+}
+$i: 1;
+@while $i <= 5 {
+  .transition-in .editor-toolbar {
+    button:nth-child(#{$i}) {
+        -webkit-transition-delay:(#{0.3 + 0.1 * $i}s);
+        -o-transition-delay:(#{0.3 + 0.1 * $i}s);
+        transition-delay:(#{0.3 + 0.1 * $i}s);
+    }
+  }
+  $i: $i + 1;
 }

@@ -1,9 +1,16 @@
-<md-dialog class="compose-dialog" aria-label="Mango (Fruit)">
-    <md-toolbar>
-        <div class="md-toolbar-tools">
-            <h2>{{title}}</h2>
+<md-dialog class="compose-dialog email">
+    <div class="email-header" layout="row" layout-align="space-between center" >
+        <div class="email-header-title">
+            <span>{{title}}</span>
         </div>
-    </md-toolbar>
+        <div class="email-header-actions">
+            <md-button ng-click="cancel()">
+                <md-icon md-font-icon="icon-close"></md-icon>
+            </md-button>
+        </div>
+    </div>
+
+    <md-divider></md-divider>
 
     <md-content>
         <form name="emailForm">
