@@ -22,8 +22,12 @@ angular.module('triAngular')
         template: '<side-menu-item ng-repeat="item in menu" item="item"></side-menu-item>',
         scope: {},
         controller: function($scope) {
+            // make sure all menu names are translated
+            SideMenu.translate();
+
             // get the menu structure from the menu service
             $scope.menu = SideMenu.getMenu();
+
             // update the menu statuses based on current location
             SideMenu.updateLocationState();
 

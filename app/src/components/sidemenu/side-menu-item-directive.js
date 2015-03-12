@@ -28,8 +28,20 @@ angular.module('triAngular')
             $scope.itemTemplate = 'components/sidemenu/side-menu-' + $scope.item.type + '.tmpl.html';
 
             $scope.toggleMenu = function() {
-                $sideMenu.toggleMenu($scope.item);
+                // send message down the menu from the parent, item is toggled
+                $scope.$parent.$parent.$broadcast('toggleMenu', $scope.item, !$scope.item.open);
+                // this will close any sibling menus
             };
+
+            $scope.$on('toggleMenu', function(event, item, open) {
+                // if this is the item we are looking for
+                if($scope.item === item) {
+                    $scope.item.open = open;
+                }
+                else {
+                    $scope.item.open = false;
+                }
+            });
 
             $scope.linkCSSClass = function() {
                 var parent = $element.parent()[0];

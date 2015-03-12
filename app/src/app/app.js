@@ -100,10 +100,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .accentPalette('deep-purple')
     .warnPalette('amber')
 })
-.run(['$rootScope', '$state', 'AuthService', 'SideMenu', function ($rootScope, $state, AuthService, SideMenu) {
-    // make sure all menu names are translated
-    SideMenu.translate();
-
+.run(['$rootScope', '$state', 'AuthService', 'SideMenu', function ($rootScope, $state, AuthService) {
     $rootScope.availableThemes = [{
         name: 'Default',
         theme: 'default'
