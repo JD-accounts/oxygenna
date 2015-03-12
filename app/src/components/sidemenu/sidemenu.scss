@@ -62,3 +62,24 @@
     max-height: 0;
   }
 }
+// Multiple levels
+.drop-down-list {
+  .side-menu-link {
+    padding-left: 32px;
+  }
+  .drop-down-list {
+    .side-menu-link {
+      padding-left: 48px;
+    }
+    .drop-down-list {
+      .side-menu-link {
+        padding-left: 64px;
+      }
+      .drop-down-list {
+        .side-menu-link {
+          padding-left: 80px;
+        }
+      }
+    }
+  }
+}
