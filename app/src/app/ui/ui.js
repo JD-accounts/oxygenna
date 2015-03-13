@@ -12,7 +12,7 @@ angular.module('triAngularUI', [])
     $translatePartialLoaderProvider.addPart('app/ui');
 
     $stateProvider
-    .state('private.admin.skins', {
+    .state('private.admin.toolbar.default.skins', {
         url: '/ui/skins',
         controller: 'SkinsController',
         templateUrl: 'app/ui/skins.tmpl.html',

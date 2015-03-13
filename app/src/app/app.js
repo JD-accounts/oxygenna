@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail'])
+angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels'])
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
 })
@@ -64,6 +64,19 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .state('private.admin.toolbar', {
         abstract: true,
         template: '<div ui-view="toolbar"></div><md-content ui-view="content" md-scroll-y layout flex></md-content>',
+    })
+
+    .state('private.admin.toolbar.default', {
+        abstract: true,
+        views: {
+            toolbar: {
+                templateUrl: 'components/toolbars/default.tmpl.html',
+                controller: 'DefaultToolbarController'
+            },
+            content: {
+                template: '<ui-view/>',
+            }
+        },
     })
 
     .state('private.blank', {

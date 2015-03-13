@@ -16,10 +16,10 @@
 * ```
 */
 angular.module('triAngular')
-.directive('sideMenu', function(SideMenu) {
+.directive('sideMenu', function($location, SideMenu) {
     return {
         restrict: 'E',
-        template: '<side-menu-item ng-repeat="item in menu" item="item"></side-menu-item>',
+        template: '<side-menu-item ng-repeat="item in menu | orderBy:\'priority\'" item="item"></side-menu-item>',
         scope: {},
         controller: function($scope) {
             // make sure all menu names are translated
@@ -28,19 +28,11 @@ angular.module('triAngular')
             // get the menu structure from the menu service
             $scope.menu = SideMenu.getMenu();
 
-            // update the menu statuses based on current location
-            SideMenu.updateLocationState();
-
             // add a watch for when the url location changes
             $scope.$on('$locationChangeSuccess', function() {
-                // location has changed so update menu
-                SideMenu.updateLocationState();
+                // location has changed so update the menu
+                $scope.$broadcast('openMenu', $location.path());
             });
-
-            // when user clicks to open a menu open it using menu service
-            this.toggleMenu = function(item) {
-                SideMenu.toggleParentMenu(item);
-            };
         }
     };
 });

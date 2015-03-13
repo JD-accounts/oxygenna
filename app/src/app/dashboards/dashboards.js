@@ -12,11 +12,11 @@ angular.module('triAngularDashboards', [])
     $translatePartialLoaderProvider.addPart('app/dashboards');
 
     $stateProvider
-    .state('private.admin.dashboard1', {
+    .state('private.admin.toolbar.default.dashboard1', {
         url: '/dashboard1',
         templateUrl: 'app/dashboards/dashboard1.html',
     })
-    .state('private.admin.dashboard2', {
+    .state('private.admin.toolbar.default.dashboard2', {
         url: '/dashboard2',
         templateUrl: 'app/dashboards/dashboard2.html',
     });

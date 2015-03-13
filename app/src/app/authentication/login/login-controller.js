@@ -40,7 +40,7 @@ angular.module('triAngularAuthentication')
     $scope.loginClick = function() {
         AuthService.login($scope.user, function(user) {
             // user logged in ok so goto the dashboard
-            $state.go('private.admin.dashboard1');
+            $state.go('private.admin.toolbar.default.introduction');
         }, function(error) {
             $mdToast.show(
                 $mdToast.simple()
