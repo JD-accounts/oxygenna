@@ -1,6 +1,9 @@
 'use strict';
 
 angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels'])
+.constant('APP', {
+    name: 'Triangular'
+})
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
 })
@@ -113,7 +116,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .accentPalette('deep-purple')
     .warnPalette('amber')
 })
-.run(['$rootScope', '$state', 'AuthService', 'SideMenu', function ($rootScope, $state, AuthService) {
+.run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
     $rootScope.availableThemes = [{
         name: 'Default',
         theme: 'default'

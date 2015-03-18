@@ -1,9 +1,12 @@
 <div layout="row" ng-controller="AdminController" class="container-inner">
-
     <md-sidenav md-theme="{{sidebarTheme}}" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" >
 
         <md-toolbar>
-            <h1 class="md-toolbar-tools" ng-include="'app/shared/app-logo.html'"></h1>
+            <h1 class="md-toolbar-tools">
+                <a class="app-logo" ng-href="/" layout="row" >
+                    {{appName}}
+                </a>
+            </h1>
         </md-toolbar>
 
         <md-content flex>
@@ -12,5 +15,8 @@
 
     </md-sidenav>
 
-    <div layout="column" flex ui-view></div>
+    <div id="ui-admin-content" layout="column" flex>
+        <tri-loader></tri-loader>
+        <div flex ui-view>
+    </div>
 </div>

@@ -11,7 +11,9 @@
  * Handles the admin view
  */
 angular.module('triAngular').
-controller('AdminController', function ($scope, $timeout, $mdSidenav) {
+controller('AdminController', function ($scope, $timeout, $mdSidenav, APP) {
+    $scope.appName = APP.name;
+
     $scope.openMenu = function() {
         $timeout(function() { $mdSidenav('left').open(); });
     }
