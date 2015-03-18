@@ -5,7 +5,7 @@
   height: 100%;
 }
 
-.login-frame {
+#ui-login {
   position: absolute;
   top: 0;
   left: 0;
@@ -15,6 +15,15 @@
   }
   &.ng-leave {
     @include slideOutDown();
+  }
+}
+
+#ui-admin-content {
+  &.ng-enter {
+    @include fadeIn($delay: 2s);
+  }
+  &.ng-leave {
+    @include fadeOut();
   }
 }
 
