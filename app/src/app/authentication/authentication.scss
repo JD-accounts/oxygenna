@@ -1,15 +1,9 @@
 .authentication-page {
   background-image: url(http://ingledow-staging.s3.amazonaws.com/media/blog/2014/12/05/material-design.jpg);
   background-size: cover;
-  width: 100%;
-  height: 100%;
 }
 
 #ui-login {
-  position: absolute;
-  top: 0;
-  left: 0;
-
   &.ng-enter {
     @include slideInUp($delay: 0.5s);
   }
@@ -18,12 +12,12 @@
   }
 }
 
-#ui-admin-content {
+#ui-admin-email {
   &.ng-enter {
-    @include fadeIn($delay: 2s);
+    @include slideInRight();
   }
   &.ng-leave {
-    @include fadeOut();
+    @include slideOutRight();
   }
 }
 

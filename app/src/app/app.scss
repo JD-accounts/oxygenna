@@ -8,6 +8,10 @@ body {
   font-size: 14px;
 }
 
+.ng-enter, .ng-leave {
+  position: absolute;
+}
+
 .md-button .md-font {
   line-height: 24px;
 }
