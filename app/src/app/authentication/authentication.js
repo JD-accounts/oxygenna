@@ -18,7 +18,7 @@ angular.module('triAngularAuthentication', ['ui.gravatar'])
     $stateProvider
     .state('public.auth', {
         abstract: true,
-        templateUrl: 'app/authentication/layouts/auth.html',
+        templateUrl: 'app/authentication/layouts/authentication.html',
     })
     .state('public.auth.login', {
         url: '/login',

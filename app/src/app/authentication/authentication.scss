@@ -1,0 +1,55 @@
+.authentication-page {
+  background-image: url(http://ingledow-staging.s3.amazonaws.com/media/blog/2014/12/05/material-design.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.login-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.ng-enter {
+    @include slideInUp($delay: 0.5s);
+  }
+  &.ng-leave {
+    @include slideOutDown();
+  }
+}
+
+.auth-heading {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    margin: 0;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.auth-heading {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    margin: 0;
+    font-size: 34px;
+    font-weight: 500;
+}
