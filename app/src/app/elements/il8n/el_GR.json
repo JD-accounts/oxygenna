@@ -1,0 +1,23 @@
+{
+    "LOGIN": {
+        "TITLE": "σύνδεση",
+        "EMAIL": {
+            "LABEL": "email",
+            "PLEASE_ENTER": "Παρακαλώ εισάγετε τη διεύθυνση email σας.",
+            "PLEASE_VALID": "Παρακαλώ εισάγετε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου."
+        },
+        "PASSWORD": {
+            "LABEL": "password",
+            "PLEASE_ENTER": "Παρακαλώ εισάγετε τον κωδικό πρόσβασης σας."
+        },
+        "ALT": {
+            "TITLE": "Ή συνδεθείτε με",
+            "FACEBOOK": "Facebook",
+            "TWITTER": "Twitter"
+        },
+        "SIGN_UP": {
+            "TITLE": "Εγγραφή",
+            "BUTTON": "Εγγραφείτε τώρα"
+        }
+    }
+}

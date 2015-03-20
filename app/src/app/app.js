@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels'])
+angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements'])
 .constant('APP', {
     name: 'Triangular'
 })
@@ -66,7 +66,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 
     .state('private.admin.toolbar', {
         abstract: true,
-        template: '<div ui-view="toolbar"></div><md-content ui-view="content" md-scroll-y layout flex></md-content>',
+        template: '<tri-loader></tri-loader><div ui-view="toolbar"></div><md-content ui-view="content" md-scroll-y layout flex></md-content>',
     })
 
     .state('private.admin.toolbar.default', {
