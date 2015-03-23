@@ -1,3 +1,12 @@
+// Logo
+.app-logo {
+  display: block;
+  height: 100%;
+  img {
+    max-height: 100%;
+    vertical-align: middle;
+  }
+}
 // Side menu
 .side-menu-link {
   display: block;
@@ -63,27 +72,27 @@
   }
   .side-menu-link {
     padding-left: 16px;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    transition: all 1s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
   }
 }
 // Multiple levels
 .drop-down-list:not(.ng-hide) {
   .side-menu-link {
-    padding-left: 32px;
+    padding-left: 44px;
   }
   .drop-down-list:not(.ng-hide) {
     .side-menu-link {
-      padding-left: 48px;
+      padding-left: 60px;
     }
     .drop-down-list:not(.ng-hide) {
       .side-menu-link {
-        padding-left: 64px;
+        padding-left: 76px;
       }
       .drop-down-list:not(.ng-hide) {
         .side-menu-link {
-          padding-left: 80px;
+          padding-left: 92px;
         }
       }
     }
