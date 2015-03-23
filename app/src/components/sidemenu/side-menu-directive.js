@@ -41,6 +41,7 @@ angular.module('triAngular')
             attrs.$observe('mdTheme', function() {
                 var menuColor = triThemeColors.get($mdTheme.$mdTheme, 'primary');
                 $element.css({ 'background-color': menuColor.default });
+                $element.children('md-content').css({ 'background-color': menuColor.default });
             });
         }
     };
