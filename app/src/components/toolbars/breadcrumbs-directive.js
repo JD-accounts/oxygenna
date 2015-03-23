@@ -19,10 +19,11 @@ angular.module('triAngular')
 .directive('breadcrumbs', function () {
     return {
         restrict: 'A',
+        require: '^toolbar',
         replace: true,
         scope: {
             breadcrumbs: '='
         },
-        template: '<span ng-repeat="breadcrumb in breadcrumbs" ng-show="breadcrumb.active" breadcrumb="breadcrumb"></span>',
+        template: '<span class="breadcrumb" ng-repeat="breadcrumb in breadcrumbs" ng-show="breadcrumb.active" breadcrumb="breadcrumb"></span>',
     };
 });
