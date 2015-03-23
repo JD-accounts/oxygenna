@@ -1,11 +1,12 @@
 // Logo
+.logo-toolbar {
+  z-index: 10;
+}
 .app-logo {
   display: block;
-  height: 100%;
-  line-height: 24px;
   img {
-    max-height: 100%;
     vertical-align: middle;
+    max-height: 64px;
   }
 }
 // Side menu
