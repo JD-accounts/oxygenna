@@ -79,9 +79,9 @@
       container: ".bs-docs-navbar .nav"
     })
 
-    if( 'help.oxygenna.com' == document.domain ) {
+    // if( 'help.oxygenna.com' == document.domain ) {
       $('#online-docs-warning').hide();
-    }
+    // }
 
     $('table').each(function() {
       $(this).addClass('table table-bordered table-striped');

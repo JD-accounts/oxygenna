@@ -1,15 +1,14 @@
 theme:
     name: triangular
-    slogan: Responsive Bootstrap AngularJS Admin Template
-
+    slogan: Material Design AngularJS Admin Template
 links:
     item: http://themeforest.net/item/
     contact: http://www.oxygenna.com/contact
     tfportfolio: http://themeforest.net/user/oxygenna/portfolio
-    onlinedocs: http://help.oxygenna.com/angularjs/ngadmin
+    onlinedocs: http://help.oxygenna.com/html/triangular
     changelog: changelog.html
     support: &support http://oxygenna.ticksy.com
-    youtube: &youtube https://www.youtube.com/playlist?list=PLjEWC37YdOvvC8P-Xrq-7ntPJucGP5Non
+    youtube:
     doclibrary: http://www.oxygenna.com/documentation-library
 topmenu:
     -
@@ -17,17 +16,11 @@ topmenu:
         slug: getting-started
         children:
             -
-                name: General
-                slug: general
+                name: Introduction
+                slug: introduction
             -
-                name: Installation
-                slug: install
-            -
-                name: Demo Content
-                slug: demo-content
-            -
-                name: Updating
-                slug: updating
+                name: Setup
+                slug: setup
     -
         name: Video Tutorials
         slug: videos

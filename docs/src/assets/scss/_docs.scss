@@ -1,9 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,300italic,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic);
 
 body {
   position: relative; /* For scrollyspy */
   padding-top: 50px; /* Account for fixed navbar */
-  font-family: 'Lato', sans-serif;
+  font-family: 'RobotoDraft', sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #4c4c4c;
@@ -23,25 +23,20 @@ p {
 strong {
   color: #000;
 }
-h1 + p, h2 + p, h3 + p {
-  margin-bottom: 20px;
-  font-size: 21px;
-  font-weight: 300;
-  line-height: 1.4;
-}
+
 img {
   max-width: 100%;
   margin: 24px 0;
 }
 .jumbotron {
-  margin-top: 70px;
+  margin-top: 30px;
   h1 {
     padding-top: 0px;
   }
 }
 /* Page headers */
 .bs-header {
-  background: #303c40;
+  background: rgb(63,81,181);
   padding: 30px 15px 40px; /* side padding builds on .container 15px, so 30px */
   font-size: 16px;
   text-align: center;
@@ -49,6 +44,7 @@ img {
   color: #fff;
 }
 .bs-header h1 {
+  margin-top: 0px;
   color: #fff;
   font-weight: 300;
 }
@@ -96,3 +92,7 @@ img {
   border-color: #fff;
 }
 
+
+#online-docs-warning {
+  margin-bottom: 0px;
+}
