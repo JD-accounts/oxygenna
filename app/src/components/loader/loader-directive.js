@@ -21,7 +21,7 @@ angular.module('triAngular')
         restrict: 'E',
         replace: true,
         scope: {},
-        template: '<div flex ng-show="active" class="loader" layout="column" layout-fill layout-align="center center"><md-progress-circular class="md-hue-2" md-mode="indeterminate"></md-progress-circular><h2>{{appName}}</h2></div>',
+        template: '<md-content flex class="loader" ng-show="active" layout="column" layout-fill layout-align="center center"><md-progress-circular md-mode="indeterminate"></md-progress-circular><h3>{{appName}}</h3></md-content>',
         link: function($scope) {
             $scope.appName = APP.name;
             $scope.active = false;
