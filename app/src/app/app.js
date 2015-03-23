@@ -104,6 +104,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .setStorageType('sessionStorage');
 })
 .config(function ($mdThemingProvider) {
+    // demo only, comment out this line for better performance
     $mdThemingProvider.alwaysWatchTheme(true);
 
     $mdThemingProvider.theme('tri-grass')
@@ -115,6 +116,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .primaryPalette('purple')
     .accentPalette('deep-purple')
     .warnPalette('amber')
+
 })
 .run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
     $rootScope.availableThemes = [{

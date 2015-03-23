@@ -90,7 +90,7 @@ angular.module('triAngular')
                 return {
                     'md-hue-1': $scope.item.active,
                     'md-accent': parent.tagName === 'LI',
-                    'md-primary': parent.tagName === 'SIDE-MENU'
+                    'md-primary': parent.tagName !== 'LI'
                 };
             }
         }

@@ -25,4 +25,8 @@ angular.module('triAngularIntroduction', [])
         icon: 'icon-info-outline',
         priority: 0
     });
+    SideMenu.addMenu({
+        type: 'divider',
+        priority: 0
+    });
 });

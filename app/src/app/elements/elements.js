@@ -20,6 +20,10 @@ angular.module('triAngularElements', [])
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
+        type: 'divider',
+        priority: 1,
+    });
+    SideMenu.addMenu({
         name: 'ELEMENTS.MENU.ELEMENTS',
         icon: 'icon-school',
         type: 'dropdown',
