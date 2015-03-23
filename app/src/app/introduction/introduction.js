@@ -20,7 +20,6 @@ angular.module('triAngularIntroduction', [])
 .run(function(SideMenu) {
     SideMenu.addMenu({
         name: 'Introduction',
-        icon: 'icon-info-outline',
         url: '/introduction',
         type: 'link',
         priority: 0

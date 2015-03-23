@@ -29,12 +29,10 @@ angular.module('triAngularDashboards', [])
         priority: 1,
         children: [{
             name: 'Dashboard 1',
-            icon: 'icon-stars',
             url: '/dashboard1',
             type: 'link',
         },{
             name: 'Dashboard 2',
-            icon: 'icon-stars',
             url: '/dashboard2',
             type: 'link',
         }]

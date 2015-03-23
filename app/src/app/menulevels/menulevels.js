@@ -26,29 +26,23 @@ angular.module('triAngularMenuLevels', [])
         priority: 2,
         children: [{
             name: 'Level 1-1',
-            icon: 'icon-receipt',
             type: 'dropdown',
             children: [{
                 name: 'Level 2-1',
-                icon: 'icon-receipt',
                 type: 'dropdown',
                 children: [{
                     name: 'Level 3-1',
-                    icon: 'icon-receipt',
                     type: 'dropdown',
                     children: [{
                         name: 'Level 4-1',
-                        icon: 'icon-receipt',
                         type: 'link',
                         url: '/menu-levels/Item1-1-1-1'
                     },{
                         name: 'Level 4-2',
-                        icon: 'icon-receipt',
                         type: 'link',
                         url: '/menu-levels/Item1-1-1-2'
                     },{
                         name: 'Level 4-3',
-                        icon: 'icon-receipt',
                         type: 'link',
                         url: '/menu-levels/Item1-1-1-3'
                     }]

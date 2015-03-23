@@ -26,7 +26,6 @@ angular.module('triAngularUI', [])
         priority: 2,
         children: [{
             name: 'Skins',
-            icon: 'icon-looks',
             url: '/ui/skins',
             type: 'link',
         }]

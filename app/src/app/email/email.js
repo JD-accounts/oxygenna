@@ -119,7 +119,6 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
     angular.forEach(EMAIL_ROUTES, function(route) {
         emailMenu.children.push({
             name: route.name,
-            icon: route.icon,
             url: route.url,
             type: 'link',
         });
