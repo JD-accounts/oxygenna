@@ -19,7 +19,7 @@ angular.module('triAngular')
 .directive('breadcrumbs', function () {
     return {
         restrict: 'A',
-        require: '^breadcrumbs',
+        require: '^toolbar',
         replace: true,
         scope: {
             breadcrumbs: '='
