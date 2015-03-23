@@ -1,4 +1,4 @@
 <md-button ng-href="#{{item.url}}" class="md-raised side-menu-link" ng-class="linkCSSClass()">
-    <md-icon ng-hide="item.icon == undefined" class="side-menu-icon" md-font-icon="{{item.icon}}"></md-icon>
+    <md-icon ng-if="item.icon !== undefined" class="side-menu-icon" md-font-icon="{{item.icon}}"></md-icon>
     {{item.name}}
 </md-button>
