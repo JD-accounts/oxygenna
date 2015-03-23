@@ -22,6 +22,7 @@ angular.module('triAngularIntroduction', [])
         name: 'Introduction',
         url: '/introduction',
         type: 'link',
+        icon: 'icon-info-outline',
         priority: 0
     });
 });
