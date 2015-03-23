@@ -24,6 +24,15 @@
   &:hover, &:focus {
     transform: translate3d(0, 0, 0) !important;
   }
+  .uppercase-all & {
+    text-transform: uppercase;
+  }
+  .uppercase-top-level & {
+    text-transform: uppercase;
+  }
+  .uppercase-top-level .drop-down-list & {
+      text-transform: none;
+  }
 }
 .side-menu-icon, .menu-toggle-icon {
   height: 100%;
