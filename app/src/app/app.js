@@ -108,7 +108,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     $mdThemingProvider.alwaysWatchTheme(true);
 
     $mdThemingProvider.theme('tri-grass')
-    .primaryPalette('green')
+    .primaryPalette('blue-grey')
     .accentPalette('light-green')
     .warnPalette('deep-orange')
 

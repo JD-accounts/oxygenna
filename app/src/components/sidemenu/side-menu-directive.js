@@ -19,7 +19,7 @@ angular.module('triAngular')
 .directive('sideMenu', function($location, $mdTheming, triThemeColors, SideMenu) {
     return {
         restrict: 'E',
-        template: '<md-content><side-menu-item ng-repeat="item in menu | orderBy:\'priority\'" item="item"></side-menu-item></md-content>',
+        template: '<md-content><md-divider></md-divider><side-menu-item ng-repeat="item in menu | orderBy:\'priority\'" item="item"></side-menu-item></md-content>',
         scope: {},
         controller: function($scope, $element) {
             // make sure all menu names are translated
