@@ -23,12 +23,15 @@ angular.module('triAngular')
         scope: {
             breadcrumb: '='
         },
-        template: '<span>{{breadcrumb.name}}<md-icon md-font-icon="icon-chevron-right" ng-show="breadcrumb.children.length > 0"></md-icon></span>',
-        link: function (scope, element) {
+        template: '<span><span>{{breadcrumb.name}}<md-icon md-font-icon="icon-chevron-right" ng-show="breadcrumb.children.length > 0"></md-icon></span></span>',
+        link: function ($scope, $element, attrs) {
+            if($scope.breadcrumb.children !== undefined) {
+                $element.find('span').attr('hide-sm', '');
+            }
             var collectionSt = '<span breadcrumbs="breadcrumb.children"></span>';
-            if (angular.isArray(scope.breadcrumb.children)) {
-                $compile(collectionSt)(scope, function(cloned) {
-                    element.append(cloned);
+            if (angular.isArray($scope.breadcrumb.children)) {
+                $compile(collectionSt)($scope, function(cloned) {
+                    $element.append(cloned);
                 });
             }
         }
