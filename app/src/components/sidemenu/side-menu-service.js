@@ -7,15 +7,18 @@ angular.module('triAngular')
     var activeParent = null;
     var activeItem = null;
 
-    function traverse(obj, callback) {
+    function traverse(obj, callback, depth) {
+        depth = depth === undefined ? -1 : depth;
+
         if (obj instanceof Array) {
+            depth++;
             for (var i = 0; i < obj.length; i++) {
-                traverse(obj[i], callback);
+                traverse(obj[i], callback, depth);
             }
         } else {
-            callback(obj);
+            callback(obj, depth);
             if(obj.children !== undefined) {
-                traverse(obj.children, callback);
+                traverse(obj.children, callback, depth);
             }
         }
     }
@@ -29,8 +32,10 @@ angular.module('triAngular')
         },
         translate: function() {
             // gather all the names used in all menus
+            // also add depth attribute
             var names = [];
-            service.traverseMenu(function(item) {
+            service.traverseMenu(function(item, depth) {
+                item.depth = depth;
                 names.push(item.name);
             });
             // translate all nanes and replace them with translations
