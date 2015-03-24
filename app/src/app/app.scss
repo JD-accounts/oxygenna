@@ -12,6 +12,10 @@ body {
   overflow-y: auto;
 }
 
+#content {
+  position: relative;
+}
+
 .ng-enter, .ng-leave {
   position: absolute;
 }
