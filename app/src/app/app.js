@@ -66,7 +66,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 
     .state('private.admin.toolbar', {
         abstract: true,
-        template: '<tri-loader></tri-loader><div ui-view="toolbar"></div><md-content ui-view="content" md-scroll-y layout flex></md-content>',
+        template: '<tri-loader></tri-loader><div id="ui-admin-toolbar" ui-view="toolbar"></div><div id="ui-admin-content" flex ui-view="content"></div>',
     })
 
     .state('private.admin.toolbar.default', {
