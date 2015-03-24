@@ -1,11 +1,15 @@
 @import "../../bower_components/animate.css-scss/animate.scss";
 
-html, body, #container, .container-inner {
+html, body, #container, .container-inner, #ui-admin-content {
   height: 100%;
 }
 
 body {
   font-size: 14px;
+}
+
+#ui-admin-content {
+  overflow-y: auto;
 }
 
 .ng-enter, .ng-leave {
@@ -21,8 +25,5 @@ body {
   font-size: 1.75em;
 }
 
-#ui-admin-content {
-  position: relative;
-}
 // injector
 // endinjector
