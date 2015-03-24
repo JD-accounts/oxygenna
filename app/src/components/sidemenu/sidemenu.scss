@@ -1,6 +1,6 @@
 // Logo
 .logo-toolbar {
-  z-index: 10;
+  box-shadow: none;
 }
 .app-logo {
   display: block;
@@ -57,7 +57,7 @@
   }
 }
 
-// Side menu 2nd level
+// Side menu levels
 .drop-down-list {
   list-style-type: none;
   padding: 0;
@@ -70,6 +70,7 @@
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   transition: all 1s;
+
   &:before, &:after {
     content: "";
     position: absolute;
@@ -86,24 +87,53 @@
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
+    position: relative;
+    &:after {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    span {
+      position: relative;
+      z-index: 2;
+    }
   }
 }
 // Multiple levels
+$submenu-overlay: #000000;
+
 .drop-down-list:not(.ng-hide) {
   .side-menu-link {
     padding-left: 44px;
+    position: relative;
+    &:after {
+      background: rgba($submenu-overlay, .15);
+    }
   }
   .drop-down-list:not(.ng-hide) {
     .side-menu-link {
       padding-left: 60px;
+      &:after {
+        background: rgba($submenu-overlay, .2);
+      }
     }
     .drop-down-list:not(.ng-hide) {
       .side-menu-link {
         padding-left: 76px;
+        &:after {
+          background: rgba($submenu-overlay, .3);
+        }
       }
       .drop-down-list:not(.ng-hide) {
         .side-menu-link {
           padding-left: 92px;
+          &:after {
+            background: rgba($submenu-overlay, .4);
+          }
         }
       }
     }
