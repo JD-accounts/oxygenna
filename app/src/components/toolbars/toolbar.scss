@@ -5,7 +5,11 @@
 
 // Breadcrumbs
 .breadcrumb {
-  md-icon span {
-    line-height: 24px;
+  md-icon {
+    font-size: 24px;
+    width: 36px;
+    text-align: center;
+    height: 18px;
+    vertical-align: top;
   }
 }
