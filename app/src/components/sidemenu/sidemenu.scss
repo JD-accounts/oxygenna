@@ -1,6 +1,7 @@
 // Logo
 .logo-toolbar {
-  box-shadow: none;
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.12);
+  z-index: 10;
 }
 .app-logo {
   display: block;
@@ -10,6 +11,9 @@
   }
 }
 // Side menu
+side-menu {
+  overflow-y: auto;
+}
 .side-menu-link {
   display: block;
   text-align: left;
