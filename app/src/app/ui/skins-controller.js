@@ -3,7 +3,7 @@
 /**
  * @ngdoc function
  * @name SkinsController
- * @module triAngular
+ * @module triAngularUI
  * @kind function
  *
  * @description

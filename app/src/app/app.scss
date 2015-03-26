@@ -4,10 +4,6 @@ html, body, #container, .container-inner, #ui-admin-content {
   height: 100%;
 }
 
-body {
-  font-size: 14px;
-}
-
 #ui-admin-content {
   overflow-y: auto;
 }
@@ -27,6 +23,15 @@ body {
 // fab button font icon
 .md-fab .md-font {
   font-size: 1.75em;
+}
+
+/**
+* Docs Pages
+**/
+
+.padded-docs-page {
+  max-width: 864px;
+  margin: auto;
 }
 
 // injector
