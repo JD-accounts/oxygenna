@@ -1,4 +1,19 @@
 /**
+* Colors Page
+**/
+
+.ui-color-grid md-grid-tile {
+  cursor: pointer;
+}
+
+.ui-color-dialog-content {
+  padding: 0px;
+  & md-item-content {
+    width: 500px;
+  }
+}
+
+/**
 * Typography Page
 **/
 

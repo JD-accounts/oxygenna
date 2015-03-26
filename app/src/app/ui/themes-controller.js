@@ -2,21 +2,21 @@
 
 /**
  * @ngdoc function
- * @name SkinsController
+ * @name ThemesController
  * @module triAngularUI
  * @kind function
  *
  * @description
  *
- * Handles the skins ui page
+ * Handles the themes ui page
  */
 angular.module('triAngularUI').
-controller('SkinsController', function ($scope, $rootScope) {
+controller('ThemesController', function ($scope, $rootScope, triThemeColors) {
     $scope.selectedMainTheme = $rootScope.currentTheme;
-    $scope.selectedSidebarTheme = $rootScope.sidebarTheme;
+
+    $scope.themes = triThemeColors.themes();
 
     $scope.updateThemes = function() {
         $rootScope.currentTheme = $scope.selectedMainTheme;
-        $rootScope.sidebarTheme = $scope.selectedSidebarTheme;
     }
 });

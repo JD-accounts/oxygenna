@@ -107,16 +107,20 @@ angular.module('triAngular', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngMessages'
     // demo only, comment out this line for better performance
     $mdThemingProvider.alwaysWatchTheme(true);
 
-    $mdThemingProvider.theme('tri-grass')
+    // Extend the red theme with a few different colors
+    // var neonRedMap = $mdThemingProvider.extendPalette('red', {
+    //     '500': 'ff0000',
+    //     'default': 'ff0000'
+    // });
+
+    // // Register the new color palette map with the name <code>neonRed</code>
+    // $mdThemingProvider.definePalette('neonRed', neonRedMap);
+
+    // Use that theme for the primary intentions
+    $mdThemingProvider.theme('default')
     .primaryPalette('blue-grey')
-    .accentPalette('light-green')
+    .accentPalette('teal')
     .warnPalette('deep-orange')
-
-    $mdThemingProvider.theme('tri-purple')
-    .primaryPalette('purple')
-    .accentPalette('deep-purple')
-    .warnPalette('amber')
-
 })
 .run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
     $rootScope.availableThemes = [{
@@ -129,8 +133,10 @@ angular.module('triAngular', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngMessages'
         name: 'Purple',
         theme: 'tri-purple'
     }]
-    $rootScope.currentTheme = $rootScope.availableThemes[1].theme;
-    $rootScope.sidebarTheme = $rootScope.availableThemes[1].theme;
+
+    $rootScope.currentTheme = $rootScope.availableThemes[0].theme;
+    $rootScope.sidebarTheme = $rootScope.availableThemes[0].theme;
+
     // $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
     //     if(!('data' in toState) || !('access' in toState.data)) {
     //         event.preventDefault();

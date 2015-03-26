@@ -7,7 +7,7 @@
  *
  * The `triAngularUI` module adds an UI pages
  */
-angular.module('triAngularUI', ['ngCookies', 'webfont-loader'])
+angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
 .constant('UI_FONTS', [{
     name: 'Roboto Draft',
     family: 'RobotoDraft',
@@ -42,10 +42,15 @@ angular.module('triAngularUI', ['ngCookies', 'webfont-loader'])
         controller: 'TypographyController',
         templateUrl: 'app/ui/typography.tmpl.html',
     })
-    .state('private.admin.toolbar.default.skins', {
-        url: '/ui/skins',
-        controller: 'SkinsController',
-        templateUrl: 'app/ui/skins.tmpl.html',
+    .state('private.admin.toolbar.default.colors', {
+        url: '/ui/colors',
+        controller: 'ColorsController',
+        templateUrl: 'app/ui/colors.tmpl.html',
+    })
+    .state('private.admin.toolbar.default.themes', {
+        url: '/ui/themes',
+        controller: 'ThemesController',
+        templateUrl: 'app/ui/themes.tmpl.html',
     });
 })
 .run(function(SideMenu, TypographySwitcher) {
@@ -67,12 +72,16 @@ angular.module('triAngularUI', ['ngCookies', 'webfont-loader'])
         type: 'dropdown',
         priority: 2,
         children: [{
+            name: 'Colors',
+            url: '/ui/colors',
+            type: 'link',
+        },{
             name: 'Typography',
             url: '/ui/typography',
             type: 'link',
         },{
-            name: 'Skins',
-            url: '/ui/skins',
+            name: 'Themes',
+            url: '/ui/themes',
             type: 'link',
         }]
     });

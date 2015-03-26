@@ -34,6 +34,15 @@ angular.module('triAngular')
     $provide.factory('triThemeColors', [
         function() {
             return {
+                rgba: function(rgbArray, opacity) {
+                    return $mdThemingProvider._rgba(rgbArray, opacity);
+                },
+                themes: function() {
+                    return $mdThemingProvider._THEMES;
+                },
+                palettes: function() {
+                    return $mdThemingProvider._PALETTES;
+                },
                 get: function(theme, intent) {
                     var colors = $mdThemingProvider._THEMES[theme].colors[intent];
                     var name = colors.name
