@@ -22,6 +22,13 @@ topmenu:
                 name: Setup
                 slug: setup
     -
+        name: Customisation
+        slug: customisation
+        children:
+            -
+                name: Typography
+                slug: typography
+    -
         name: Video Tutorials
         slug: videos
     -
