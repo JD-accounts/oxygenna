@@ -31,3 +31,26 @@
     padding: 20px;
   }
 }
+
+
+/**
+* Themes Page
+**/
+.ui-theme-card {
+  md-card-content {
+    padding: 0px;
+  }
+
+  .md-toolbar-tools {
+    position: relative;
+
+    .md-fab {
+      top: 25px;
+      right: 25px;
+    }
+  }
+}
+
+.ui-theme-card-colorname {
+  text-align: right;
+}

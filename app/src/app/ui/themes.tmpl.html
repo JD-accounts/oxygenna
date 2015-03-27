@@ -2,107 +2,75 @@
     <p class="md-subhead">Triangular allows you to change the look of the admin colours using themes.  The template comes with its own pre-made themes available, or if you like you can create your own!</p>
 
     <p>We have made triangular as flexible as possible by allowing you to choose themes for different parts of the admin template.  </p>
-    <div layout="row" layout-sm="column" layout-align="space-between start">
-        <md-whiteframe class="md-whiteframe-z1" layout="column" layout-align="space-between center">
+
+    <h2 class="md-headline">Available Themes</h2>
+    <md-card class="ui-theme-card" ng-repeat="theme in themes">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>{{theme.name}}</h2>
+                <span flex></span>
+                <md-button class="md-fab md-accent" ng-click="switchTheme(theme)">
+                    <md-icon md-font-icon="icon-remove-red-eye"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-card-content>
+            <md-grid-list flex md-cols="4" md-row-height-gt-md="1:1" md-row-height="1:1" md-gutter="0px">
+                <md-grid-tile md-rowspan="1" md-colspan="1" ng-repeat="color in theme.colors" ng-style="setBackgroundColor(color)">
+                    <md-grid-tile-footer>
+                        <h3>
+                            <strong>{{color.intention}}</strong>
+                            <span hide-sm>: {{color.name}} - {{color.hues.default}}</span>
+                        </h3>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+            </md-grid-list>
+        </md-card-content>
+    </md-card>
+
+    <h2 class="md-headline">Theme Combinations</h2>
+    <p>You can combine themes together to set the theme for various parts of the template</p>
+
+    <div layout="row">
+        <md-card flex layout="column" layout-align="center center">
             <md-toolbar>
-                <h2 class="md-toolbar-tools">
-                    <span>Default Theme</span>
-                </h2>
+                <div class="md-toolbar-tools">
+                    <h2>Content Theme</h2>
+                </div>
             </md-toolbar>
-            <md-select ng-model="selectedMainTheme" ng-change="updateThemes()">
-                <md-option value="{{theme.theme}}" ng-repeat="theme in availableThemes">{{theme.name}}</md-option>
-            </md-select>
-            <p>Default theme to use for the whole template.</p>
-        </md-whiteframe>
-    </div>
-
-    <code>{{themes | json}}</code>
-    <div hljs>{{themes | json}}</div>
-</md-content>
-<div layout="row" class="skin-screen" flex>
-    <div flex="40">
-        <h2>Skins</h2>
-
-        <p>With Triangular you can set the skin of your material design.</p>
-
-        <div layout="column">
-            <div class="skin-options" layout="row" layout-align="space-around start">
-                <strong>Main Theme</strong>
-                <md-select ng-model="selectedMainTheme" ng-change="updateThemes()">
-                    <md-option value="{{theme.theme}}" ng-repeat="theme in availableThemes">{{theme.name}}</md-option>
+            <md-card-content layout="column" layout-align="center center">
+                <md-select placeholder="Choose a theme" ng-model="currentTheme" ng-change="changeTheme('currentTheme', currentTheme)">
+                    <md-option ng-repeat="theme in themes" ng-value="theme.name">{{theme.name}}</md-option>
                 </md-select>
-            </div>
-            <div class="skin-options" layout="row" layout-align="space-around start">
-                <strong>Sidebar Theme</strong>
-                <md-select ng-model="selectedSidebarTheme" ng-change="updateThemes()">
-                    <md-option value="{{theme.theme}}" ng-repeat="theme in availableThemes">{{theme.name}}</md-option>
+                <p>Theme of the main content area.</p>
+            </md-card-content>
+        </md-card>
+        <md-card flex layout="column" layout-align="center center">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Sidebar Theme</h2>
+                </div>
+            </md-toolbar>
+            <md-card-content layout="column" layout-align="center center">
+                <md-select placeholder="Choose a theme" ng-model="sidebarTheme" ng-change="changeTheme('sidebarTheme', sidebarTheme)">
+                    <md-option ng-repeat="theme in themes" ng-value="theme.name">{{theme.name}}</md-option>
                 </md-select>
-            </div>
-        </div>
+                <p>Theme of the sidebar menu.</p>
+            </md-card-content>
+        </md-card>
+        <md-card flex layout="column" layout-align="center center">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Toolbar Theme</h2>
+                </div>
+            </md-toolbar>
+            <md-card-content layout="column" layout-align="center center">
+                <md-select placeholder="Choose a theme" ng-model="toolbarTheme" ng-change="changeTheme('toolbarTheme', toolbarTheme)">
+                    <md-option ng-repeat="theme in themes" ng-value="theme.name">{{theme.name}}</md-option>
+                </md-select>
+                <p>Theme of the top toolbar</p>
+            </md-card-content>
+        </md-card>
+    </div>
 
-    </div>
-    <div flex="60">
-        <h2>Preview</h2>
-        <md-tabs class="md-primary" md-selected="data.selectedIndex" flex>
-            <md-tab id="buttons" aria-controls="buttons-content">
-                Buttons
-            </md-tab>
-            <md-tab id="forms" aria-controls="forms-content">
-                Forms
-            </md-tab>
-        </md-tabs>
-        <ng-switch on="data.selectedIndex" class="tabpanel-container">
-            <div role="tabpanel"
-                id="buttons-content"
-                aria-labelledby="buttons"
-                ng-switch-when="0">
-                <p>Check out some of these buttons</p>
-                <h3>Standard</h3>
-                <section layout="row" layout-sm="column" layout-align="space-around center">
-                    <md-button class="md-primary">Primary</md-button>
-                    <md-button class="md-accent">Accent</md-button>
-                    <md-button class="md-warn">Warn</md-button>
-                </section>
-                <h3>Raised</h3>
-                <section layout="row" layout-sm="column" layout-align="space-around center">
-                    <md-button class="md-raised md-primary">Primary</md-button>
-                    <md-button class="md-raised md-accent">Accent</md-button>
-                    <md-button class="md-raised md-warn">Warn</md-button>
-                </section>
-                <h3>Fab</h3>
-                <section layout="row" layout-sm="column" layout-align="space-around center">
-                    <md-button class="md-fab md-primary">
-                        <md-icon md-font-icon="icon-star"></md-icon>
-                    </md-button>
-                    <md-button class="md-fab md-accent">
-                        <md-icon md-font-icon="icon-tag-faces"></md-icon>
-                    </md-button>
-                    <md-button class="md-fab md-warn">
-                        <md-icon md-font-icon="icon-photo-camera"></md-icon>
-                    </md-button>
-                </section>
-            </div>
-            <div role="tabpanel"
-                id="forms-content"
-                aria-labelledby="forms"
-                ng-switch-when="1">
-                <form name="userForm">
-                    <div layout="column">
-                        <md-input-container flex>
-                            <label>Company (Disabled)</label>
-                            <input ng-model="user.company">
-                        </md-input-container>
-                        <md-input-container flex>
-                            <label>Submission Date</label>
-                            <input type="date" ng-model="user.submissionDate">
-                        </md-input-container>
-                        <md-input-container flex>
-                            <label>Biography</label>
-                            <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea>
-                        </md-input-container>
-                    </div>
-                </form>
-            </div>
-        </ng-switch>
-    </div>
 </div>

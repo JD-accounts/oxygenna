@@ -118,41 +118,28 @@ angular.module('triAngular', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngMessages'
 
     // Use that theme for the primary intentions
     $mdThemingProvider.theme('default')
-    .primaryPalette('blue-grey')
-    .accentPalette('teal')
+    .primaryPalette('indigo')
+    .accentPalette('pink')
+    .warnPalette('orange')
+
+    $mdThemingProvider.theme('blue')
+    .primaryPalette('blue')
+    .accentPalette('pink')
+    .warnPalette('amber')
+
+    $mdThemingProvider.theme('green')
+    .primaryPalette('green')
+    .accentPalette('blue')
     .warnPalette('deep-orange')
+
+    $mdThemingProvider.theme('red')
+    .primaryPalette('red')
+    .accentPalette('amber')
+    .warnPalette('yellow')
+
 })
 .run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
-    $rootScope.availableThemes = [{
-        name: 'Default',
-        theme: 'default'
-    },{
-        name: 'Grass',
-        theme: 'tri-grass'
-    },{
-        name: 'Purple',
-        theme: 'tri-purple'
-    }]
-
-    $rootScope.currentTheme = $rootScope.availableThemes[0].theme;
-    $rootScope.sidebarTheme = $rootScope.availableThemes[0].theme;
-
-    // $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState) {
-    //     if(!('data' in toState) || !('access' in toState.data)) {
-    //         event.preventDefault();
-    //         $state.go('public.access-undefined', {
-    //             toState: toState.name
-    //         });
-    //     }
-    //     else if (!AuthService.authorise(toState.data.access)) {
-    //         event.preventDefault();
-    //         if(fromState.url === '^') {
-    //             if(AuthService.isLoggedIn()) {
-    //                 $state.go('private.admin.dashboard');
-    //             } else {
-    //                 $state.go('public.login');
-    //             }
-    //         }
-    //     }
-    // });
+    $rootScope.currentTheme = 'default';
+    $rootScope.sidebarTheme = 'default';
+    $rootScope.toolbarTheme = 'default';
 }]);
