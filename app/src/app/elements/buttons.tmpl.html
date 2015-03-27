@@ -1,40 +1,60 @@
-<div class="elements-page">
-    <h1>Buttons</h1>
+<md-content class="padded-docs-page elements-page-buttons md-padding" md-scroll-y flex>
+    <p class="md-subhead">A button consists of text and/or an image that clearly communicates what action will occur when the user touches it.  Triangular provides all the button types recommended in the <a href="http://www.google.com/design/spec/components/buttons.html">material design specification</a></p>
 
-    <h2>Introduction</h2>
-    <div class="elements-page-intro">
-        <p>A button consists of text and/or an image that clearly communicates what action will occur when the user touches it.</p>
-        <p>There are three types of main buttons: </p>
-        <ul>
-            <li><span>Floating action button: a circular button made of paper that lifts and emits ink reactions on press.</span></li>
-            <li><span>Raised button: a typically rectangular button made of paper that lifts and emits ink reactions on press.</span></li>
-            <li><span>Flat button: a button made of ink that emits ink reactions on press but does not lift.</span></li>
-        </ul>
+    <h2 class="md-headline">Button Types</h2>
+    <p>There are three types of main buttons: </p>
+    <ul>
+        <li><span>Floating action button: a circular button made of paper that lifts and emits ink reactions on press.</span></li>
+        <li><span>Raised button: a typically rectangular button made of paper that lifts and emits ink reactions on press.</span></li>
+        <li><span>Flat button: a button made of ink that emits ink reactions on press but does not lift.</span></li>
+    </ul>
 
-        <p>In addition, fully saturated icons in your design generally always denote affordances.</p>
-    </div>
-
-    <h2>Examples</h2>
     <div class="elements-button-examples" layout="row" layout-align="space-around center">
-        <div layout="column" layout-align="center center">
-            <md-button class="md-raised md-primary">Button</md-button>
-            <h3>Raised Button</h3>
-        </div>
-        <div layout="column" layout-align="center center">
-            <md-button class="md-primary">Button</md-button>
-            <h3>Flat Button</h3>
-        </div>
-        <div layout="column" layout-align="center center">
-            <md-button class="md-fab md-primary">
-                <md-icon md-font-icon="icon-add"></md-icon>
-            </md-button>
-            <h3>Floating Action Button</h3>
-        </div>
+        <md-card flex layout="column" layout-align="center center">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Raised Button</h2>
+                </div>
+            </md-toolbar>
+            <md-card-content layout="column" layout-align="center center">
+                <md-button class="md-raised md-primary">Button</md-button>
+            </md-card-content>
+        </md-card>
+        <md-card flex layout="column" layout-align="center center">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Flat Button</h2>
+                </div>
+            </md-toolbar>
+            <md-card-content layout="column" layout-align="center center">
+                <md-button class="md-primary">Button</md-button>
+            </md-card-content>
+        </md-card>
+        <md-card flex layout="column" layout-align="center center">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Floating Action Button</h2>
+                </div>
+            </md-toolbar>
+            <md-card-content layout="column" layout-align="center center">
+                <md-button class="md-fab md-primary">
+                    <md-icon md-font-icon="icon-add"></md-icon>
+                </md-button>
+            </md-card-content>
+        </md-card>
     </div>
 
-    <div layout="row" layout-sm="column" layout-align="space-around center">
+    <h2 class="md-headline">Example Usage</h2>
+
+    <p>Choosing a button style depends on the primacy of the button, the number of containers on screen, and the overall layout of the screen.</p>
+    <p>First, look at the button’s function: is it important and ubiquitous enough to be a floating action button?</p>
+    <p>Next, choose raised or flat dimensionality depending on the container it will be in and how many z-space layers you have on screen. There should not be layers upon layers upon layers of objects on the screen.</p>
+    <p>Finally, look at your specific layout. You should primarily use one type of button per container. Only mix button types when you have a good reason to, such as emphasizing an important function.</p>
+
+
+    <div layout="row" layout-sm="column" layout-align="space-around start">
         <div flex="40" flex-sm="100" layout="column">
-            <h3>Raised Button</h3>
+            <h3 class="md-title">Raised Button Example</h3>
             <p>Raised buttons emphasize functions that would otherwise get lost on a busy or wide space. They add dimension to mostly flat layouts.</p>
             <p class="elements-try-out"><strong>Thats not an image, try it out <md-icon hide-sm md-font-icon="icon-chevron-right"></md-icon></strong></p>
         </div>
@@ -56,9 +76,9 @@
         </md-whiteframe>
     </div>
     <br>
-    <div layout="row" layout-sm="column" layout-align="space-around center">
+    <div layout="row" layout-sm="column" layout-align="space-around start">
         <div flex="40" flex-sm="100" layout="column">
-            <h3>Floating Action Button (FAB)</h3>
+            <h3 class="md-title">Floating Action Button (FAB)</h3>
             <p>Floating action buttons are used for a special type of promoted action. They are distinguished by a circled icon floating above the UI and have special motion behaviors related to morphing, launching, and the transferring anchor point.</p>
             <p class="elements-try-out"><strong>Thats not an image, try it out <md-icon hide-sm md-font-icon="icon-chevron-right"></md-icon></strong></p>
         </div>
@@ -75,9 +95,9 @@
         </md-whiteframe>
     </div>
     <br>
-    <div layout="row" layout-sm="column" layout-align="space-around center">
+    <div layout="row" layout-sm="column" layout-align="space-around start">
         <div flex="40" flex-sm="100" layout="column">
-            <h3>Flat button</h3>
+            <h3 class="md-title">Flat button</h3>
             <p>Use flat buttons for contexts such as toolbars and dialogs to avoid gratuitous layering.</p>
             <p class="elements-try-out"><strong>Thats not an image, try it out <md-icon hide-sm md-font-icon="icon-chevron-right"></md-icon></strong></p>
         </div>
@@ -91,7 +111,7 @@
         </md-whiteframe>
     </div>
 
-    <h2>Button Colors</h2>
+    <h2 class="md-headline">Button Colors</h2>
     <p>The classes to apply the color intention for a given component are as follows: <code>md-primary, md-accent, md-warn</code>.</p>
     <div class="elements-button-colors" layout="row" layout-sm="column" layout-align="space-around center">
         <div layout="column" layout-align="center center">
@@ -127,7 +147,7 @@
             <h3>Warn</h3>
         </div>
     </div>
-    <h2>Button Hues</h2>
+    <h2 class="md-headline">Button Hues</h2>
     <p>If you need to slightly differentiate an element, you can specify an additional class of <code>md-hue-1, md-hue-2, or md-hue-3</code>.</p>
     <div class="elements-button-colors" layout="row" layout-sm="column" layout-align="space-around center">
         <div layout="column" layout-align="center center">
@@ -172,7 +192,7 @@
         </div>
     </div>
 
-    <h2>Button Ripple Options</h2>
+    <h2 class="md-headline">Button Ripple Options</h2>
     <p>You can also change the style of ripple effects using the <code>md-ripple-size</code> and <code>md-no-ink</code> attribute</p>
     <div class="elements-button-colors" layout="row" layout-sm="column" layout-align="space-around center">
         <div layout="column" layout-align="center center">
@@ -197,14 +217,14 @@
     <p>You can also change the style of ripple effects using the <code>md-ripple-size</code> attribute</p>
     <div class="elements-button-colors" layout="row" layout-sm="column" layout-align="space-around center">
         <div layout="column" layout-align="center center">
-            <md-button class="md-primary md-raised" ng-disabled="buttonDisabled">Disabled</md-button>
-            <h3>Disabled: {{buttonDisabled}}</h3>
-        </div>
-        <div layout="column" layout-align="center center">
             <md-switch ng-model="buttonDisabled" aria-label="Switch 2" class="md-primary">
                 Toggle Button Disabled
             </md-switch>
         </div>
+        <div layout="column" layout-align="center center">
+            <md-button class="md-primary md-raised" ng-disabled="buttonDisabled">Disabled</md-button>
+            <h3>Disabled: {{buttonDisabled}}</h3>
+        </div>
     </div>
 
-</div>
+</md-content>

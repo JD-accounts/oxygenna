@@ -1,17 +1,14 @@
-code:not(.hljs) {
-  color: #4285f4;
-  margin-left: 1px;
-  margin-right: 1px;
-  -webkit-font-smoothing: auto;
-  font-weight: bold;
-}
 
-.elements-page {
-  padding: 16px;
+
+.elements-page-buttons {
   .md-button:not(.md-fab) {
     min-width: 10em;
     line-height: 25px;
   }
+}
+
+.elements-button-examples md-card-content {
+  min-height: 100px;
 }
 
 .elements-page-intro {

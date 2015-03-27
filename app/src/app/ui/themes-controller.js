@@ -49,6 +49,9 @@ controller('ThemesController', function ($scope, $rootScope, triThemeColors) {
         $rootScope.currentTheme = theme.name;
         $rootScope.sidebarTheme = theme.name;
         $rootScope.toolbarTheme = theme.name;
+        $scope.currentTheme = theme.name;
+        $scope.sidebarTheme = theme.name;
+        $scope.toolbarTheme = theme.name;
     }
 
     $scope.changeTheme = function(themeElement, theme) {
