@@ -32,45 +32,18 @@
     <p>You can combine themes together to set the theme for various parts of the template</p>
 
     <div layout="row">
-        <md-card flex layout="column" layout-align="center center">
+        <md-card flex layout="column" layout-align="center center" ng-repeat="themeableElement in themeableElements">
             <md-toolbar>
                 <div class="md-toolbar-tools">
-                    <h2>Content Theme</h2>
+                    <h2>{{themeableElement.title}}</h2>
                 </div>
             </md-toolbar>
             <md-card-content layout="column" layout-align="center center">
-                <md-select placeholder="Choose a theme" ng-model="currentTheme" ng-change="changeTheme('currentTheme', currentTheme)">
+                <md-select placeholder="Choose a theme" ng-model="themeableElement.value" ng-change="changeTheme(themeableElement.elementName, themeableElement.value)">
                     <md-option ng-repeat="theme in themes" ng-value="theme.name">{{theme.name}}</md-option>
                 </md-select>
-                <p>Theme of the main content area.</p>
-            </md-card-content>
-        </md-card>
-        <md-card flex layout="column" layout-align="center center">
-            <md-toolbar>
-                <div class="md-toolbar-tools">
-                    <h2>Sidebar Theme</h2>
-                </div>
-            </md-toolbar>
-            <md-card-content layout="column" layout-align="center center">
-                <md-select placeholder="Choose a theme" ng-model="sidebarTheme" ng-change="changeTheme('sidebarTheme', sidebarTheme)">
-                    <md-option ng-repeat="theme in themes" ng-value="theme.name">{{theme.name}}</md-option>
-                </md-select>
-                <p>Theme of the sidebar menu.</p>
-            </md-card-content>
-        </md-card>
-        <md-card flex layout="column" layout-align="center center">
-            <md-toolbar>
-                <div class="md-toolbar-tools">
-                    <h2>Toolbar Theme</h2>
-                </div>
-            </md-toolbar>
-            <md-card-content layout="column" layout-align="center center">
-                <md-select placeholder="Choose a theme" ng-model="toolbarTheme" ng-change="changeTheme('toolbarTheme', toolbarTheme)">
-                    <md-option ng-repeat="theme in themes" ng-value="theme.name">{{theme.name}}</md-option>
-                </md-select>
-                <p>Theme of the top toolbar</p>
+                <p>{{themeableElement.desc}}</p>
             </md-card-content>
         </md-card>
     </div>
-
 </div>

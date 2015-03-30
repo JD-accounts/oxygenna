@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('triAngular', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements'])
+angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements'])
 .constant('APP', {
     name: 'Triangular'
 })
@@ -103,9 +103,20 @@ angular.module('triAngular', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngMessages'
     .setPrefix('triAngular')
     .setStorageType('sessionStorage');
 })
-.config(function ($mdThemingProvider) {
+.config(function ($mdThemingProvider, triThemeProvider) {
     // demo only, comment out this line for better performance
     $mdThemingProvider.alwaysWatchTheme(true);
+
+    // set the default themes for each of the themeable elements
+    triThemeProvider.setThemeableElements({
+        mainTheme: 'default',
+        logoTheme: 'default',
+        toolbarTheme: 'default',
+        sidebarTheme: 'default'
+    });
+
+    // store the selected theme data in a cookie
+    triThemeProvider.useThemeCookie(true);
 
     // Extend the red theme with a few different colors
     // var neonRedMap = $mdThemingProvider.extendPalette('red', {
@@ -137,9 +148,8 @@ angular.module('triAngular', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngMessages'
     .accentPalette('amber')
     .warnPalette('yellow')
 
-})
-.run(['$rootScope', '$state', 'AuthService', function ($rootScope, $state, AuthService) {
-    $rootScope.currentTheme = 'default';
-    $rootScope.sidebarTheme = 'default';
-    $rootScope.toolbarTheme = 'default';
-}]);
+    $mdThemingProvider.theme('shit')
+    .primaryPalette('brown')
+    .accentPalette('amber')
+    .warnPalette('yellow')
+});

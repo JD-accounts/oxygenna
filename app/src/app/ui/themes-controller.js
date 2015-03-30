@@ -11,9 +11,32 @@
  * Handles the themes ui page
  */
 angular.module('triAngularUI').
-controller('ThemesController', function ($scope, $rootScope, triThemeColors) {
+controller('ThemesController', function ($scope, $rootScope, triTheme) {
+    $scope.themeableElements = [{
+        title: 'Main Theme',
+        elementName: 'mainTheme',
+        desc: 'Theme of the main content area.'
+    },{
+        title: 'Sidebar Theme',
+        elementName: 'sidebarTheme',
+        desc: 'Theme of the left sidebar menu.'
+    },{
+        title: 'Toolbar Theme',
+        elementName: 'toolbarTheme',
+        desc: 'Theme of the top content toolbar.'
+    },{
+        title: 'Logo Theme',
+        elementName: 'logoTheme',
+        desc: 'Theme of the logo above the left sidebar.'
+    }];
     $scope.themes = [];
-    $scope.palettes = triThemeColors.palettes();
+    $scope.palettes = triTheme.palettes();
+
+    function getElementThemes() {
+        for(var element in $scope.themeableElements) {
+            $scope.themeableElements[element].value = triTheme.getElementTheme($scope.themeableElements[element].elementName);
+        }
+    }
 
     function createColor(intention, color) {
         return {
@@ -23,7 +46,10 @@ controller('ThemesController', function ($scope, $rootScope, triThemeColors) {
         };
     }
 
-    angular.forEach(triThemeColors.themes(), function(theme) {
+    // get the current set element themes and add them to the themableElements object
+    getElementThemes();
+
+    angular.forEach(triTheme.themes(), function(theme) {
         // parse the themes so we get colors in nice order (primary, accent, warn, background)
         var newTheme = {
             name: theme.name,
@@ -34,11 +60,11 @@ controller('ThemesController', function ($scope, $rootScope, triThemeColors) {
         newTheme.colors.push(createColor('Warn', theme.colors.warn));
         newTheme.colors.push(createColor('Background', theme.colors.background));
         $scope.themes.push(newTheme);
-    })
+    });
 
     $scope.setBackgroundColor = function(color) {
         if($scope.palettes.hasOwnProperty(color.name) && $scope.palettes[color.name].hasOwnProperty(color.hues.default)) {
-            var rgba = triThemeColors.rgba($scope.palettes[color.name][color.hues.default].value);
+            var rgba = triTheme.rgba($scope.palettes[color.name][color.hues.default].value);
             return {
                 'background-color': rgba
             };
@@ -46,15 +72,11 @@ controller('ThemesController', function ($scope, $rootScope, triThemeColors) {
     };
 
     $scope.switchTheme = function(theme) {
-        $rootScope.currentTheme = theme.name;
-        $rootScope.sidebarTheme = theme.name;
-        $rootScope.toolbarTheme = theme.name;
-        $scope.currentTheme = theme.name;
-        $scope.sidebarTheme = theme.name;
-        $scope.toolbarTheme = theme.name;
-    }
+        triTheme.setTheme(theme.name);
+        getElementThemes();
+    };
 
-    $scope.changeTheme = function(themeElement, theme) {
-        $rootScope[themeElement] = theme;
-    }
+    $scope.changeTheme = function(elementName, themeName) {
+        triTheme.setElementTheme(elementName, themeName);
+    };
 });

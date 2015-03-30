@@ -12,7 +12,8 @@
  */
 
 angular.module('triAngular')
-.controller('DefaultToolbarController', function ($scope, SideMenu, APP) {
+.controller('DefaultToolbarController', function ($scope, SideMenu, triTheme, APP) {
     $scope.appName = APP.name;
     $scope.menu = SideMenu.getMenu();
+    $scope.triTheme = triTheme;
 });

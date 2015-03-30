@@ -1,39 +1,38 @@
 'use strict';
 
 angular.module('triAngular')
-.config(function($provide, $mdThemingProvider) {
-    var colorStore = {};
-
-    //fetch the colors out of the themeing provider
-    Object.keys($mdThemingProvider._PALETTES).forEach(function(palleteName) {
-        var pallete = $mdThemingProvider._PALETTES[palleteName];
-
-        var colors  = [];
-        colorStore[palleteName]=colors;
-        Object.keys(pallete).forEach(function(colorName) {
-            // use an regex to look for hex colors, ignore the rest
-            if (/#[0-9A-Fa-f]{6}|0-9A-Fa-f]{8}\b/.exec(pallete[colorName])) {
-                colors[colorName] = pallete[colorName];
+.provider('triTheme', function($mdThemingProvider) {
+    var themeableElements = {};
+    var useCookie = false;
+    return {
+        setThemeableElements: function(elements) {
+            themeableElements = elements;
+        },
+        useThemeCookie: function(useThemeCookie) {
+            useCookie = useThemeCookie;
+        },
+        $get: function($cookies) {
+            if(useCookie && undefined !== $cookies['tri-themes']) {
+                themeableElements = angular.fromJson($cookies['tri-themes']);
             }
-        });
-    });
 
-
-    /**
-     * triThemeColors service
-     *
-     * The triThemeColors service will provide easy, programmatic access to the themes that have been configured
-     * So that the colors can be used according to intent instead of hard coding color values.
-     *
-     * e.g.
-     *
-     * <span ng-style="{background: triThemeColors.primary['50']}">Hello World!</span>
-     *
-     * So the theme can change but the code doesn't need to.
-     */
-    $provide.factory('triThemeColors', [
-        function() {
-            return {
+            var service = {
+                getElementTheme: function(elementName) {
+                    // always return default theme if no theme is set for this element
+                    return undefined === themeableElements[elementName] ? 'default' : themeableElements[elementName];
+                },
+                setElementTheme: function(elementName, themeName) {
+                    themeableElements[elementName] = themeName;
+                    if(useCookie) {
+                        $cookies['tri-themes'] = angular.toJson(themeableElements);
+                    }
+                },
+                setTheme: function(themeName) {
+                    // set all elements to the same theme
+                    for(var elementName in themeableElements) {
+                        service.setElementTheme(elementName, themeName);
+                    }
+                },
                 rgba: function(rgbArray, opacity) {
                     return $mdThemingProvider._rgba(rgbArray, opacity);
                 },
@@ -43,17 +42,17 @@ angular.module('triAngular')
                 palettes: function() {
                     return $mdThemingProvider._PALETTES;
                 },
-                get: function(theme, intent) {
-                    var colors = $mdThemingProvider._THEMES[theme].colors[intent];
-                    var name = colors.name
-                    // Append the colors with links like hue-1, etc
-                    colorStore[name].default = colorStore[name][colors.hues['default']]
-                    colorStore[name].hue1 = colorStore[name][colors.hues['hue-1']]
-                    colorStore[name].hue2 = colorStore[name][colors.hues['hue-2']]
-                    colorStore[name].hue3 = colorStore[name][colors.hues['hue-3']]
-                    return colorStore[name];
+                getThemeColor: function(themeName, intentName) {
+                    if(undefined !== $mdThemingProvider._THEMES[themeName] && undefined !== $mdThemingProvider._THEMES[themeName].colors[intentName]) {
+                        var color = $mdThemingProvider._THEMES[themeName].colors[intentName];
+                        if(undefined !== $mdThemingProvider._PALETTES[color.name] && undefined !== $mdThemingProvider._PALETTES[color.name][color.hues.default]) {
+                            return $mdThemingProvider._PALETTES[color.name][color.hues.default].value;
+                        }
+                    }
                 }
             };
+
+            return service;
         }
-    ]);
+    };
 });

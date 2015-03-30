@@ -11,11 +11,11 @@
  * Handles the colors ui page
  */
 angular.module('triAngularUI').
-controller('ColorsController', function ($scope, $mdDialog, triThemeColors) {
-    $scope.palettes = triThemeColors.palettes();
+controller('ColorsController', function ($scope, $mdDialog, triTheme) {
+    $scope.palettes = triTheme.palettes();
 
     $scope.colourRGBA = function(value) {
-        var rgba = triThemeColors.rgba(value);
+        var rgba = triTheme.rgba(value);
         return {
             'background-color': rgba
         };

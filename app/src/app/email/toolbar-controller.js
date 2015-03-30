@@ -12,10 +12,11 @@
  */
 
 angular.module('triAngularEmail')
-.controller('EmailToolbarController', function ($scope, $rootScope, $filter, SideMenu, EMAIL_ROUTES) {
+.controller('EmailToolbarController', function ($scope, $rootScope, $filter, SideMenu, triTheme, EMAIL_ROUTES) {
     $scope.showSearch = false;
     $scope.toolbarMenu = [];
     $scope.menu = SideMenu.getMenu();
+    $scope.triTheme = triTheme;
 
     for(var i = 0; i < EMAIL_ROUTES.length; i++) {
         $scope.toolbarMenu.push({
