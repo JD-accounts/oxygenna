@@ -2,7 +2,8 @@
     "ELEMENTS": {
         "MENU": {
             "ELEMENTS": "Elements",
-            "BUTTONS": "Buttons"
+            "BUTTONS": "Buttons",
+            "CARDS": "Cards"
         }
     }
 }

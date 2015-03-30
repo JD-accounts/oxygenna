@@ -16,7 +16,12 @@ angular.module('triAngularElements', [])
         url: '/elements/buttons',
         templateUrl: 'app/elements/buttons.tmpl.html',
         controller: 'ButtonsController'
+    })
+    .state('private.admin.toolbar.default.cards', {
+        url: '/elements/cards',
+        templateUrl: 'app/elements/cards.tmpl.html'
     });
+
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
@@ -32,6 +37,10 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.BUTTONS',
             type: 'link',
             url: 'elements/buttons'
+        },{
+            name: 'ELEMENTS.MENU.CARDS',
+            type: 'link',
+            url: 'elements/cards'
         }]
     });
 });
