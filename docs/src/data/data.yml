@@ -26,6 +26,9 @@ topmenu:
         slug: customisation
         children:
             -
+                name: Colors & Themes
+                slug: themes
+            -
                 name: Typography
                 slug: typography
     -

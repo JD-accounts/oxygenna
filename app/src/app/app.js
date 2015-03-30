@@ -127,7 +127,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     // // Register the new color palette map with the name <code>neonRed</code>
     // $mdThemingProvider.definePalette('neonRed', neonRedMap);
 
-    // Use that theme for the primary intentions
+    // Create some themes for the template
     $mdThemingProvider.theme('default')
     .primaryPalette('indigo')
     .accentPalette('pink')
