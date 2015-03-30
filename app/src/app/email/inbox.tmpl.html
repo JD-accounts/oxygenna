@@ -18,8 +18,9 @@
                                     <p am-time-ago="email.date"></p>
                                 </div>
 
-                                <h4>{{email.subject}}</h4>
-
+                                <div  layout="row" layout-align="space-between center">
+                                    <h4 flex>{{email.subject}}</h4>
+                                </div>
                             </div>
                             <!-- <md-icon class="email-inbox-list-item-unread-indicator" md-font-icon="icon-brightness-1" ng-show="email.unread"></md-icon> -->
                         </md-item-content>
@@ -32,7 +33,7 @@
     </div>
 
     <div flex id="ui-admin-email" layout="column" layout-align="top center" ui-view>
-        <div class="no-email-selected">
+        <div flex class="no-email-selected" layout="column" layout-align="center">
             <h2>{{'EMAIL.NO_EMAIL_SELECTED' | translate}}</h2>
         </div>
     </div>
