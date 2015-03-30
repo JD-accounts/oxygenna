@@ -4,9 +4,14 @@
   min-height: 56px;
 }
 .email-header-title {
+  h3 {
+    margin-top: 0.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   h4 {
-    margin: 1.33em 0 0;
-    font-weight: 500;
+    margin: 0;
   }
 }
 .email-header-actions {

@@ -1,29 +1,33 @@
 <md-content id="email-view" class="email md-padding" layout="column">
     <md-card flex>
-        <div class="email-header" layout="row" layout-sm="column" layout-align="space-between center">
-            <div class="email-header-title">
-                <span flex>{{'EMAIL.FROM' | translate}}: {{email.from}}</span>
+        <div class="email-header" layout="row" >
+            <div class="email-header-title" layout-sm="column" flex>
+                <div layout="row" layout-align="space-between start">
+                    <h3 flex>{{'EMAIL.FROM' | translate}}: {{email.from}}</h3>
+                    <div class="email-header-actions" layout="row" layout-align="space-between center">
+                        <md-button ng-click="reply($event, 'EMAIL.REPLY')">
+                            <md-icon md-font-icon="icon-reply" aria-label="{{'EMAIL.REPLY' | translate}}"></md-icon>
+                            <md-tooltip>{{'EMAIL.REPLY' | translate}}</md-tooltip>
+                        </md-button>
+                        <md-button ng-click="reply($event, 'EMAIL.REPLY_ALL')">
+                            <md-icon md-font-icon="icon-reply-all" aria-label="{{'EMAIL.REPLY_ALL' | translate}}"></md-icon>
+                            <md-tooltip>{{'EMAIL.REPLY_ALL' | translate}}</md-tooltip>
+                        </md-button>
+                        <md-button ng-click="reply($event, 'EMAIL.FORWARD')">
+                            <md-icon md-font-icon="icon-forward" aria-label="{{'EMAIL.FORWARD' | translate}}"></md-icon>
+                            <md-tooltip>{{'EMAIL.FORWARD' | translate}}</md-tooltip>
+                        </md-button>
+                        <md-button ng-click="openlist()">
+                            <md-icon md-font-icon="icon-close" aria-label="{{'EMAIL.CLOSE' | translate}}"></md-icon>
+                            <md-tooltip>{{'EMAIL.CLOSE' | translate}}</md-tooltip>
+                        </md-button>
+                    </div>
+                </div>
+
                 <h4>{{email.subject}}</h4>
             </div>
 
-            <div class="email-header-actions" layout="row" layout-align="space-between center">
-                <md-button ng-click="reply($event, 'EMAIL.REPLY')">
-                    <md-icon md-font-icon="icon-reply" aria-label="{{'EMAIL.REPLY' | translate}}"></md-icon>
-                    <md-tooltip>{{'EMAIL.REPLY' | translate}}</md-tooltip>
-                </md-button>
-                <md-button ng-click="reply($event, 'EMAIL.REPLY_ALL')">
-                    <md-icon md-font-icon="icon-reply-all" aria-label="{{'EMAIL.REPLY_ALL' | translate}}"></md-icon>
-                    <md-tooltip>{{'EMAIL.REPLY_ALL' | translate}}</md-tooltip>
-                </md-button>
-                <md-button ng-click="reply($event, 'EMAIL.FORWARD')">
-                    <md-icon md-font-icon="icon-forward" aria-label="{{'EMAIL.FORWARD' | translate}}"></md-icon>
-                    <md-tooltip>{{'EMAIL.FORWARD' | translate}}</md-tooltip>
-                </md-button>
-                <md-button ng-click="openlist()">
-                    <md-icon md-font-icon="icon-close" aria-label="{{'EMAIL.CLOSE' | translate}}"></md-icon>
-                    <md-tooltip>{{'EMAIL.CLOSE' | translate}}</md-tooltip>
-                </md-button>
-            </div>
+
         </div>
 
         <md-divider></md-divider>

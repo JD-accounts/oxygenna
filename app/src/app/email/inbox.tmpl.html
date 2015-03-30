@@ -13,11 +13,15 @@
                                 <img class="list-avatar" ng-src="assets/images/avatars/{{email.avatar}}" class="face" alt="{{email.name}}">
                             </div>
                             <div class="md-tile-content">
-                                <h3>{{email.name}}</h3>
+                                <div layout="row" layout-align="space-between center">
+                                    <h3>{{email.name}}</h3>
+                                    <p am-time-ago="email.date"></p>
+                                </div>
+
                                 <h4>{{email.subject}}</h4>
-                                <p am-time-ago="email.date"></p>
+
                             </div>
-                            <md-icon class="email-inbox-list-item-unread-indicator" md-font-icon="icon-brightness-1" ng-show="email.unread"></md-icon>
+                            <!-- <md-icon class="email-inbox-list-item-unread-indicator" md-font-icon="icon-brightness-1" ng-show="email.unread"></md-icon> -->
                         </md-item-content>
                         <md-divider md-inset ng-hide="$index + 1 === group.emails.length"></md-divider>
                     </md-item>
