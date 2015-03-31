@@ -1,4 +1,7 @@
 // Email list
+.email-inbox {
+  background: #f0f0f0;
+}
 .email-inbox-list {
   position: relative;
   z-index: 1;
@@ -37,6 +40,15 @@
   }
 }
 
+// Single Email
+.email-single {
+  .email {
+    background: transparent;
+    md-card {
+      background: #ffffff;
+    }
+  }
+}
 // No email selected
 .no-email-selected {
   text-align: center;
@@ -68,4 +80,62 @@
 .email-inbox-list-animate-repeat.ng-enter.ng-enter-active {
   opacity:1;
   max-height: 500px;
+}
+
+
+
+.md-sticky-clone[sticky-state="active"] {
+  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.md-sticky-clone[sticky-state="active"]:not(.md-sticky-no-effect):after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background: rgba(0,0,0,0.035);
+  -webkit-animation: subheaderStickyHoverIn 0.3s ease-out both;
+          animation: subheaderStickyHoverIn 0.3s ease-out both;
+}
+
+@-webkit-keyframes subheaderStickyHoverIn {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+
+  100% {
+    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+
+@keyframes subheaderStickyHoverIn {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+
+  100% {
+    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16);
+  }
+}
+
+@-webkit-keyframes subheaderStickyHoverOut {
+  0% {
+    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@keyframes subheaderStickyHoverOut {
+  0% {
+    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16);
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
 }
