@@ -11,11 +11,18 @@
     text-overflow: ellipsis;
   }
   h4 {
-    margin: 0;
+    margin: 0 0 0.5em;
+    line-height: 24px;
+  }
+  p {
+    margin: 0 0.75em;
   }
 }
 .email-header-actions {
   font-size: 18px;
+  .md-button {
+    border-radius: 50%;
+  }
 }
 .email md-card-content {
   overflow: auto;

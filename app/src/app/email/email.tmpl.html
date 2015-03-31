@@ -24,7 +24,11 @@
                     </div>
                 </div>
 
-                <h4>{{email.subject}}</h4>
+                <div layout="row" layout-align="space-between start">
+                    <h4>{{email.subject}}</h4>
+                    <p am-time-ago="email.date"></p>
+                </div>
+
             </div>
 
 
