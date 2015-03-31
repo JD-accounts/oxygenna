@@ -1,0 +1,27 @@
+.forms-example-box {
+  background: rgb(242, 242, 242);
+  .example {
+    padding: 24px;
+    width: 450px;
+    md-card {
+      background: white;
+    }
+  }
+}
+
+.md-select-form {
+    display: inline-block;
+    margin-top: 2px;
+    width: 100%;
+    span {
+      width: 100%;
+    }
+}
+
+
+md-input-container > md-icon span {
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  font-size: 24px !important;
+}

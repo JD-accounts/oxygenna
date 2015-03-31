@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements'])
+angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms'])
 .constant('APP', {
     name: 'Triangular'
 })
@@ -131,12 +131,12 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     $mdThemingProvider.theme('default')
     .primaryPalette('indigo')
     .accentPalette('pink')
-    .warnPalette('orange')
+    .warnPalette('red')
 
     $mdThemingProvider.theme('blue')
     .primaryPalette('blue')
     .accentPalette('pink')
-    .warnPalette('amber')
+    .warnPalette('red')
 
     $mdThemingProvider.theme('green')
     .primaryPalette('green')
@@ -146,10 +146,10 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     $mdThemingProvider.theme('red')
     .primaryPalette('red')
     .accentPalette('amber')
-    .warnPalette('yellow')
+    .warnPalette('red')
 
     $mdThemingProvider.theme('shit')
     .primaryPalette('brown')
     .accentPalette('amber')
-    .warnPalette('yellow')
+    .warnPalette('red')
 });

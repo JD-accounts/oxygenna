@@ -1,0 +1,10 @@
+{
+    "FORMS": {
+        "MENU": {
+            "FORMS": "Forms",
+            "INPUTS": "Inputs",
+            "BINDING": "Data Binding",
+            "VALIDATION": "Validation"
+        }
+    }
+}
