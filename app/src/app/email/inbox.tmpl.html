@@ -14,13 +14,12 @@
                             </div>
                             <div class="md-tile-content">
                                 <div layout="row" layout-align="space-between center">
-                                    <h3>{{email.name}}</h3>
-                                    <p am-time-ago="email.date"></p>
+                                    <h3 class="md-subhead">{{email.name}}</h3>
+                                    <p class="md-caption" am-time-ago="email.date"></p>
                                 </div>
 
-                                <div  layout="row" layout-align="space-between center">
-                                    <h4 flex>{{email.subject}}</h4>
-                                </div>
+                                <p class="md-body-2">{{email.subject}}</p>
+                                <p class="md-body-1">{{email.content[0] | cut:true:150:' ...'}}</p>
                             </div>
                             <!-- <md-icon class="email-inbox-list-item-unread-indicator" md-font-icon="icon-brightness-1" ng-show="email.unread"></md-icon> -->
                         </md-item-content>
