@@ -62,14 +62,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .md-body-2 {
-  font-size: 0.875rem;          /* 14 / 16 */
+  font-size: 0.875rem !important;          /* 14 / 16 */
   font-weight: 500;
   letter-spacing: 0.010em;
   line-height: 1.5rem;          /* 24 / 16 */
 }
 
 body, .md-body-1 {
-  font-size: 0.875rem;          /* 14 / 16 */
+  font-size: 0.875rem !important ;          /* 14 / 16 */
   letter-spacing: 0.010em;
   line-height: 1.25rem;         /* 20 / 16 */
 }
