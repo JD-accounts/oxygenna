@@ -125,4 +125,28 @@
         <textarea ng-model="tweet" md-maxlength="140"></textarea>
     </md-input-container></div>
 
+    <h2 class="md-headline">Input state</h2>
+    <p>You can also toggle the state of inputs by setting <code>ng-disabled</code></p>
+
+    <div class="forms-example-box" layout="row" layout-align="center center">
+        <div class="example" layout="column">
+            <md-card flex>
+                <md-card-content>
+                    <md-switch ng-model="inputDisabled">
+                        Disable Input
+                    </md-switch>
+                </md-card-content>
+            </md-card>
+        </div>
+        <div class="example" layout="column">
+            <md-card flex>
+                <md-card-content>
+                    <md-input-container>
+                        <label>Enable or Disable me</label>
+                        <input type="text" ng-model="username" ng-disabled="inputDisabled">
+                    </md-input-container>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
 </md-content>
