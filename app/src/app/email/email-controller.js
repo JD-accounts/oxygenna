@@ -14,8 +14,8 @@ angular.module('triAngularEmail')
 
     $scope.reply = function($event, title) {
         $mdDialog.show({
-            controller: 'ComposeController',
-            templateUrl: 'app/email/compose.tmpl.html',
+            controller: 'EmailDialogController',
+            templateUrl: 'app/email/email-dialog.tmpl.html',
             targetEvent: $event,
             locals: {
                 title: $filter('translate')(title),
