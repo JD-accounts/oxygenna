@@ -10,7 +10,7 @@
                     <md-item class="email-inbox-list-item email-inbox-list-animate-repeat" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
                         <md-item-content>
                             <div class="md-tile-left">
-                                <img class="list-avatar" ng-src="assets/images/avatars/{{email.avatar}}" class="face" alt="{{email.name}}">
+                                <img class="list-avatar animate" ng-src="assets/images/avatars/{{email.avatar}}" class="face" alt="{{email.name}}">
                             </div>
                             <div class="md-tile-content">
                                 <div layout="row" layout-align="space-between center">

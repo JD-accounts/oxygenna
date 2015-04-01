@@ -15,8 +15,18 @@
   &.active, &:hover {
     background: rgba(0,0,0, .05);
   }
+  &.active {
+    .list-avatar {
+      display: block;
+      -webkit-animation: swing 1s;
+            animation: swing 1s;
+    }
+  }
   h3 {
     font-weight: 400;
+  }
+  .list-avatar {
+    display: block;
   }
 }
 .email-inbox-list .md-subheader {
@@ -29,6 +39,7 @@
   h3 {
     font-weight: 500;
   }
+
 }
 .email-inbox-list-item-unread-indicator {
   opacity: 0.5;
