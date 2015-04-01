@@ -3,7 +3,8 @@
         "MENU": {
             "ELEMENTS": "Elements",
             "BUTTONS": "Buttons",
-            "CARDS": "Cards"
+            "CARDS": "Cards",
+            "ICONS": "Icons"
         }
     }
 }
