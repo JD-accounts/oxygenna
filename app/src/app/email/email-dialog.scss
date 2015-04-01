@@ -84,7 +84,12 @@ $i: 1;
   max-width: 540px;
   min-width: 50%;
 }
-
+@media screen and (max-width: 600px) {
+  .email.compose-dialog {
+    min-width: 92%;
+    max-width: 92%;
+  }
+}
 // Old message
 text-angular blockquote {
   padding: 10px 20px;

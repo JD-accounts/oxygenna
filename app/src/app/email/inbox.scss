@@ -95,7 +95,7 @@
 .md-sticky-clone[sticky-state="active"]:not(.md-sticky-no-effect):after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
   left: 0;
   right: 0;
   display: block;
