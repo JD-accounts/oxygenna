@@ -30,9 +30,11 @@
         </md-content>
     </div>
 
-    <div flex id="ui-admin-email" class="email-single" layout="column" layout-align="top center" ui-view>
-        <div flex class="no-email-selected" layout="column" layout-align="center">
-            <h2>{{'EMAIL.NO_EMAIL_SELECTED' | translate}}</h2>
+    <div class="animate-wrapper" layout="column" layout-align="top center" flex>
+        <div flex id="ui-admin-email" class="email-single"  ui-view layout="column" layout-align="top center">
+            <div flex class="no-email-selected" layout="column" layout-align="center">
+                <h2>{{'EMAIL.NO_EMAIL_SELECTED' | translate}}</h2>
+            </div>
         </div>
     </div>
 </div>
