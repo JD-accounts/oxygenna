@@ -14,7 +14,8 @@ gulp.task('styles', function () {
 
   var injectFiles = gulp.src([
     paths.src + '/{app,components}/**/*.scss',
-    '!' + paths.src + '/app/app.scss'
+    '!' + paths.src + '/app/app.scss',
+    '!' + paths.src + '/app/**/_*.scss'
   ], { read: false });
 
   var injectOptions = {
