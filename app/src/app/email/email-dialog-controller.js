@@ -12,7 +12,7 @@
  */
 
 angular.module('triAngularEmail')
-.controller('ComposeController', function ($scope, $mdDialog, $filter, title, email) {
+.controller('EmailDialogController', function ($scope, $mdDialog, $filter, title, email) {
     $scope.title = title;
     $scope.email = angular.copy(email);
 

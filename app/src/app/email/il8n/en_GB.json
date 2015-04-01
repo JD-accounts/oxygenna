@@ -35,6 +35,8 @@
         "REPLY": "Reply",
         "REPLY_ALL": "Reply All",
         "FORWARD": "Forward",
+        "DELETE": "Delete",
+        "DELETED": "Email Deleted",
         "RE": "R.e: ",
         "MESSAGE": "Message",
         "NO_EMAILS_FOUND": "No emails found",

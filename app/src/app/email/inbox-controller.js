@@ -54,11 +54,34 @@ angular.module('triAngularEmail')
         $location.url($scope.inboxBasePath);
     };
 
+    // returns back to email list
+    $scope.delete = function(deleteEmail) {
+        angular.forEach($scope.emailGroups, function(group) {
+            var removeEmailIndex = null;
+            angular.forEach(group.emails, function(email, index) {
+                if(deleteEmail.id === email.id) {
+                    removeEmailIndex = index;
+                }
+            });
+            if(null !== removeEmailIndex) {
+                group.emails.splice(removeEmailIndex, 1);
+                $mdToast.show(
+                    $mdToast.simple()
+                    .content($filter('translate')('EMAIL.DELETED'))
+                    .position('bottom right')
+                    .hideDelay(3000)
+                );
+            }
+        });
+
+        $location.url($scope.inboxBasePath);
+    };
+
     // opens the compose dialog
     $scope.composeClick = function($event) {
         $mdDialog.show({
-            controller: 'ComposeController',
-            templateUrl: 'app/email/compose.tmpl.html',
+            controller: 'EmailDialogController',
+            templateUrl: 'app/email/email-dialog.tmpl.html',
             targetEvent: $event,
             locals: {
                 title: $filter('translate')('EMAIL.NEW'),

@@ -1,5 +1,5 @@
 <div class="email-inbox" layout="row" flex>
-    <md-button ng-click="composeClick($event)" class="md-fab md-fab-bottom-right" aria-label="{{'EMAIL.COMPOSE_EMAIL' | translate}}">
+    <md-button ng-click="composeClick($event)" class="md-fab md-accent md-fab-bottom-right" aria-label="{{'EMAIL.COMPOSE_EMAIL' | translate}}">
         <md-icon md-font-icon="icon-create"></md-icon>
     </md-button>
     <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-sm="50" flex-gt-md="50" flex-gt-lg="40"  ng-show="showEmailList" layout="column">
@@ -21,7 +21,6 @@
                                 <p class="md-body-2">{{email.subject}}</p>
                                 <p class="md-body-1">{{email.content[0] | cut:true:150:' ...'}}</p>
                             </div>
-                            <!-- <md-icon class="email-inbox-list-item-unread-indicator" md-font-icon="icon-brightness-1" ng-show="email.unread"></md-icon> -->
                         </md-item-content>
                         <md-divider ng-hide="$index + 1 === group.emails.length"></md-divider>
                     </md-item>
