@@ -5,7 +5,9 @@
             "BUTTONS": "Buttons",
             "CARDS": "Cards",
             "ICONS": "Icons",
-            "CHECKBOXES": "Checkboxes"
+            "CHECKBOXES": "Checkboxes",
+            "SWITCHES": "Switches",
+            "RADIOS": "Radios"
         }
     }
 }
