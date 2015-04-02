@@ -2,12 +2,10 @@
   md-toolbar {
     img {
       max-height: 100px;
+      width: auto;
     }
-    h1 {
+    .md-headline {
       margin: 0;
     }
   }
-}
-md-card {
-  width: 500px;
 }

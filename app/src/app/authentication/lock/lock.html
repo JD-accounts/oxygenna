@@ -1,28 +1,36 @@
-<md-toolbar class="md-tall" layout-align="end stretch" >
-    <h1 class="auth-heading">
-        {{'HEADER.HEADING' | translate}}
-    </h1>
-    <h2 class="md-toolbar-tools">
-        <span>{{'LOCK.TITLE' | translate}} {{user.name}}</span>
-    </h2>
-</md-toolbar>
-
-<md-card-content flex class="md-padding">
-    <img gravatar-src="user.email" gravatar-size="100" class="margin-element block circle center" >
-    <p>{{'LOCK.LOGGED_OUT' | translate}}</p>
-    <form name="lock">
-        <md-input-container>
-            <label for="password">{{'LOCK.PASSWORD.LABEL' | translate}}</label>
-            <input  id="password" label="password" name="password" type="password" ng-model="user.password" required/>
-            <div ng-messages for="login.password.$error">
-                <div ng-message when="required">
-                    {{'LOCK.PASSWORD.PLEASE_ENTER' | translate}}
+<div layout="column" flex layout-padding layout-align="center center">
+    <div flex="40" flex-lg="50" flex-md="70" flex-sm="100">
+        <md-card>
+            <md-toolbar>
+                <div layout="column" flex layout-padding layout-align="center center">
+                    <div><img src="assets/images/logo.png" alt="{{appName}}"></div>
+                    <h1 class="md-headline">
+                        {{'LOCK.TITLE' | translate}} {{user.name}}
+                    </h1>
                 </div>
-            </div>
-        </md-input-container>
-        <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth" ng-click="loginClick()" ng-disabled="lock.$invalid">{{'LOCK.LOGIN' | translate}}</md-button>
+            </md-toolbar>
 
-        <md-button class="block tri-fullwidth md-primary tri-button-simple-link margin-element" ng-click="logoutClick()">{{'LOCK.LOGOUT' | translate}}</md-button>
+            <md-content class="md-padding">
+                <img gravatar-src="user.email" gravatar-size="100" class="margin-element block circle center" >
+                <p>{{'LOCK.LOGGED_OUT' | translate}}</p>
+                <form name="lock">
+                    <md-input-container>
+                        <label for="password">{{'LOCK.PASSWORD.LABEL' | translate}}</label>
+                        <input  id="password" label="password" name="password" type="password" ng-model="user.password" required/>
+                        <div ng-messages for="login.password.$error">
+                            <div ng-message when="required">
+                                {{'LOCK.PASSWORD.PLEASE_ENTER' | translate}}
+                            </div>
+                        </div>
+                    </md-input-container>
+                    <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth" ng-click="loginClick()" ng-disabled="lock.$invalid">{{'LOCK.LOGIN' | translate}}</md-button>
 
-    </form>
-</md-card-content>
+                    <md-button class="block tri-fullwidth md-primary tri-button-simple-link margin-element" ng-click="logoutClick()">{{'LOCK.LOGOUT' | translate}}</md-button>
+
+                </form>
+
+            </md-content>
+
+        </md-card>
+    </div>
+</div>
