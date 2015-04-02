@@ -30,6 +30,10 @@ angular.module('triAngularElements', [])
             }
         }
     })
+    .state('private.admin.toolbar.default.checkboxes', {
+        url: '/elements/checkboxes',
+        templateUrl: 'app/elements/checkboxes.tmpl.html'
+    })
     .state('private.admin.toolbar.default.cards', {
         url: '/elements/cards',
         templateUrl: 'app/elements/cards.tmpl.html'
@@ -58,6 +62,10 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.ICONS',
             type: 'link',
             url: 'elements/icons'
+        },{
+            name: 'ELEMENTS.MENU.CHECKBOXES',
+            type: 'link',
+            url: 'elements/checkboxes'
         }]
     });
 });

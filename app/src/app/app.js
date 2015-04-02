@@ -36,7 +36,13 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     // navigator.browserLanguage
     // navigator.systemLanguage
     // navigator.userLanguage
-    $translateProvider.determinePreferredLanguage();
+    $translateProvider
+    .registerAvailableLanguageKeys(['en', 'el'], {
+        'en_US': 'en',
+        'en_UK': 'en',
+        'el_GR': 'el',
+    })
+    .determinePreferredLanguage();
 
     // store the users language preference in a cookie
     $translateProvider.useLocalStorage();
@@ -131,25 +137,32 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     $mdThemingProvider.theme('default')
     .primaryPalette('indigo')
     .accentPalette('pink')
-    .warnPalette('red')
+    .warnPalette('red');
 
     $mdThemingProvider.theme('blue')
     .primaryPalette('blue')
     .accentPalette('pink')
-    .warnPalette('red')
+    .warnPalette('red');
 
     $mdThemingProvider.theme('green')
     .primaryPalette('green')
     .accentPalette('blue')
-    .warnPalette('deep-orange')
+    .warnPalette('deep-orange');
 
     $mdThemingProvider.theme('red')
     .primaryPalette('red')
     .accentPalette('amber')
-    .warnPalette('red')
+    .warnPalette('red');
 
     $mdThemingProvider.theme('shit')
     .primaryPalette('brown')
     .accentPalette('amber')
+    .warnPalette('red');
+
+    $mdThemingProvider.theme('dark')
+    .primaryPalette('yellow')
+    .accentPalette('amber')
     .warnPalette('red')
+    .dark();
+
 });

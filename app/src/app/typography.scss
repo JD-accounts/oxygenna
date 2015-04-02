@@ -101,3 +101,7 @@ code:not(.hljs) {
   -webkit-font-smoothing: auto;
   font-weight: bold;
 }
+
+code.hljs.html {
+  padding: 16px;
+}
