@@ -4,38 +4,9 @@
     <p>Cards have a constant width and variable height. The maximum height is limited to what can fit within a single view on a platform, but it can temporarily expand as needed (for example, to display a comment field).  Cards do not flip to reveal information on their back.</p>
 
     <div class="elements-cards-example1" layout="column" layout-align="center center">
-        <div class="example-area">
-            <md-card flex>
-                <img src="http://lorempixel.com/400/200/" alt="">
-                <md-card-content>
-                    <div class="content-padded">
-                        <h2 class="md-title">Card Title</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, distinctio minus nostrum aut magni ipsam, eius ipsa eos voluptate natus excepturi qui numquam velit non explicabo molestias quasi sunt veniam.</p>
-                    </div>
-                    <md-divider></md-divider>
-                    <div class="button-toolbar" layout="row" layout-align="start center">
-                        <md-button class="md-accent">Share</md-button>
-                        <md-button class="md-primary">Explore</md-button>
-                    </div>
-                </md-card-content>
-            </md-card>
-        </div>
+        <div class="example-area" ng-include="'app/elements/examples/cards-1.tmpl.html'"></div>
     </div>
 
     <h3 class="md-subhead">Example Code</h3>
-    <div hljs language="html">
-    <md-card flex>
-        <img src="http://lorempixel.com/400/200/" alt="">
-        <md-card-content>
-            <div class="content-padded">
-                <h2 class="md-title">Card Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, distinctio minus nostrum aut magni ipsam, eius ipsa eos voluptate natus excepturi qui numquam velit non explicabo molestias quasi sunt veniam.</p>
-            </div>
-            <md-divider></md-divider>
-            <div class="button-toolbar" layout="row" layout-align="start center">
-                <md-button class="md-accent">Share</md-button>
-                <md-button class="md-primary">Explore</md-button>
-            </div>
-        </md-card-content>
-    </md-card></div>
+    <div hljs language="html" include="'app/elements/examples/cards-1.tmpl.html'"></div>
 </md-content>
