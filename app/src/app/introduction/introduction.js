@@ -23,10 +23,10 @@ angular.module('triAngularIntroduction', [])
         url: '/introduction',
         type: 'link',
         icon: 'icon-info-outline',
-        priority: 0
+        priority: 1.1
     });
     SideMenu.addMenu({
         type: 'divider',
-        priority: 0
+        priority: 1.2
     });
 });

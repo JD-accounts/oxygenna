@@ -26,7 +26,7 @@ angular.module('triAngularDashboards', [])
         name: 'Dashboards',
         icon: 'icon-home',
         type: 'dropdown',
-        priority: 1,
+        priority: 2.1,
         children: [{
             name: 'Dashboard 1',
             url: '/dashboard1',

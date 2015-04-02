@@ -34,6 +34,14 @@ angular.module('triAngularElements', [])
         url: '/elements/checkboxes',
         templateUrl: 'app/elements/checkboxes.tmpl.html'
     })
+    .state('private.admin.toolbar.default.radios', {
+        url: '/elements/radios',
+        templateUrl: 'app/elements/radios.tmpl.html'
+    })
+    .state('private.admin.toolbar.default.switches', {
+        url: '/elements/switches',
+        templateUrl: 'app/elements/switches.tmpl.html'
+    })
     .state('private.admin.toolbar.default.cards', {
         url: '/elements/cards',
         templateUrl: 'app/elements/cards.tmpl.html'
@@ -42,14 +50,10 @@ angular.module('triAngularElements', [])
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
-        type: 'divider',
-        priority: 1,
-    });
-    SideMenu.addMenu({
         name: 'ELEMENTS.MENU.ELEMENTS',
         icon: 'icon-school',
         type: 'dropdown',
-        priority: 1,
+        priority: 3.1,
         children: [{
             name: 'ELEMENTS.MENU.BUTTONS',
             type: 'link',
@@ -59,13 +63,21 @@ angular.module('triAngularElements', [])
             type: 'link',
             url: 'elements/cards'
         },{
+            name: 'ELEMENTS.MENU.CHECKBOXES',
+            type: 'link',
+            url: 'elements/checkboxes'
+        },{
             name: 'ELEMENTS.MENU.ICONS',
             type: 'link',
             url: 'elements/icons'
         },{
-            name: 'ELEMENTS.MENU.CHECKBOXES',
+            name: 'ELEMENTS.MENU.RADIOS',
             type: 'link',
-            url: 'elements/checkboxes'
+            url: 'elements/radios'
+        },{
+            name: 'ELEMENTS.MENU.SWITCHES',
+            type: 'link',
+            url: 'elements/switchs'
         }]
     });
 });
