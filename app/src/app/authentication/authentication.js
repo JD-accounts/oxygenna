@@ -43,10 +43,10 @@ angular.module('triAngularAuthentication', ['ui.gravatar'])
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
-        name: 'Extras',
-        icon: 'icon-add-box',
+        name: 'Authentication',
+        icon: 'icon-person',
         type: 'dropdown',
-        priority: 2,
+        priority: 4.1,
         children: [{
             name: 'Login',
             url: '/login',

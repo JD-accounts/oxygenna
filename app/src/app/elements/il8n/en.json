@@ -4,7 +4,8 @@
             "ELEMENTS": "Elements",
             "BUTTONS": "Buttons",
             "CARDS": "Cards",
-            "ICONS": "Icons"
+            "ICONS": "Icons",
+            "CHECKBOXES": "Checkboxes"
         }
     }
 }

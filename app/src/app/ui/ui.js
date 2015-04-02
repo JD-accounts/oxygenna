@@ -70,7 +70,7 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
         name: 'UI',
         icon: 'icon-straighten',
         type: 'dropdown',
-        priority: 2,
+        priority: 3.2,
         children: [{
             name: 'Colors',
             url: '/ui/colors',

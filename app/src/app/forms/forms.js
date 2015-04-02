@@ -30,14 +30,10 @@ angular.module('triAngularForms', [])
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
-        type: 'divider',
-        priority: 1,
-    });
-    SideMenu.addMenu({
         name: 'FORMS.MENU.FORMS',
         icon: 'icon-event-available',
         type: 'dropdown',
-        priority: 1,
+        priority: 3.3,
         children: [{
             name: 'FORMS.MENU.INPUTS',
             type: 'link',
@@ -51,6 +47,10 @@ angular.module('triAngularForms', [])
             type: 'link',
             url: 'forms/validation'
         }]
+    });
+    SideMenu.addMenu({
+        type: 'divider',
+        priority: 3.4
     });
 });
 

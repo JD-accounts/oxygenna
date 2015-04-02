@@ -112,7 +112,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
         name: 'EMAIL.MENU.EMAIL',
         icon: 'icon-email',
         type: 'dropdown',
-        priority: 1,
+        priority: 2.2,
         children: []
     };
 
@@ -125,5 +125,11 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
     });
 
     SideMenu.addMenu(emailMenu);
+
+    SideMenu.addMenu({
+        type: 'divider',
+        priority: 2.3
+    });
+
 });
 
