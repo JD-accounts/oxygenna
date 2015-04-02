@@ -13,7 +13,6 @@
 angular.module('triAngularElements').
 controller('SwitchesController', function ($scope) {
     $scope.toggleAll = function(data, value) {
-        console.log(data);
         for(var x in data) {
             data[x] = value;
         }
