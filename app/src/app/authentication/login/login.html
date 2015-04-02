@@ -43,22 +43,28 @@
                         </md-input-container>
 
                         <md-input-container>
-                            <md-button flex class="login-forgot md-primary tri-button-simple-link" href="#/forgot">{{'LOGIN.FORGOT' | translate}}</md-button>
+                            <md-button flex class="md-primary" href="#/forgot">{{'LOGIN.FORGOT' | translate}}</md-button>
                         </md-input-container>
 
                     </div>
 
-                    <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth "  ng-click="loginClick()" ng-disabled="login.$invalid">{{'LOGIN.BUTTON' | translate}}</md-button>
+                    <div layout="column">
+                        <md-button class="md-raised md-primary"  ng-click="loginClick()" ng-disabled="login.$invalid">{{'LOGIN.BUTTON' | translate}}</md-button>
+                    </div>
 
-                    <md-button class="block md-primary tri-button-simple-link margin-element" href="#/signup">{{'LOGIN.SIGNUP_LINK' | translate}}</md-button>
+                    <div layout="column" layout-align="center center" layout-margin>
+                        <md-button flex class="md-primary" href="#/signup">{{'LOGIN.SIGNUP_LINK' |     translate}}</md-button>
+                    </div>
+
 
                     <div class="social-login">
-                        <md-divider class="social-divider">
-                            <span>{{'LOGIN.SOCIAL.OR' | translate}}</span>
-                        </md-divider>
+                        <md-divider></md-divider>
+                            <div layout="column" layout-align="center center" layout-margin>
+                                {{'LOGIN.SOCIAL.OR' | translate}}
+                            </div>
 
-                        <div layout="row social-login" layout-margin  layout-align="space-between center">
-                            <md-button ng-repeat="social in socialLogins" flex class="md-button" ng-style="{ 'background-color': social.color }" aria-label="{{'LOGIN.SOCIAL.OR' | translate}} {{social.icon}}">
+                        <div layout="row" layout-align="space-between center">
+                            <md-button ng-repeat="social in socialLogins" class="md-button" ng-style="{ 'background-color': social.color }" aria-label="{{'LOGIN.SOCIAL.OR' | translate}} {{social.icon}}">
                                 <i class="fa" ng-class="social.icon"></i>
                             </md-button>
                         </div>

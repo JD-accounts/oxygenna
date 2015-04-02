@@ -27,9 +27,13 @@
                         </div>
                     </md-input-container>
 
-                    <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth" ng-click="resetClick()" ng-disabled="lock.$invalid">{{'FORGOT.RESET' | translate}}</md-button>
+                    <div layout="column">
+                        <md-button flex class="md-raised md-primary" ng-click="resetClick()" ng-disabled="lock.$invalid">{{'FORGOT.RESET' | translate}}</md-button>
+                    </div>
 
-                    <md-button class="text-center block" href="#/login">{{'FORGOT.LOGIN' | translate}}</md-button>
+                    <div layout="column" layout-align="center center" layout-margin>
+                        <md-button class="md-primary" href="#/login">{{'FORGOT.LOGIN' | translate}}</md-button>
+                    </div>
                 </form>
             </md-content>
         </md-card>

@@ -46,9 +46,13 @@
                         <ng-messages for="signup.confirm.$error" ng-include="'app/authentication/signup/password.messages.html'"></ng-messages>
                     </md-input-container>
 
-                    <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth "  ng-click="signupClick()" ng-disabled="signup.$invalid">{{'SIGNUP.BUTTON' | translate}}</md-button>
+                    <div layout="column">
+                        <md-button flex class="md-raised md-primary "  ng-click="signupClick()" ng-disabled="signup.$invalid">{{'SIGNUP.BUTTON' | translate}}</md-button>
+                    </div>
 
-                    <md-button class="margin-element md-primary tri-button-simple-link block" href="#/login">{{'SIGNUP.HAVE_LOGIN' | translate}}</md-button>
+                    <div layout="column" layout-align="center center" layout-margin>
+                        <md-button class="margin-element md-primary" href="#/login">{{'SIGNUP.HAVE_LOGIN' | translate}}</md-button>
+                    </div>
                 </form>
             </md-content>
 

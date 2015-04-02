@@ -11,8 +11,10 @@
             </md-toolbar>
 
             <md-content class="md-padding">
-                <img gravatar-src="user.email" gravatar-size="100" class="margin-element block circle center" >
-                <p>{{'LOCK.LOGGED_OUT' | translate}}</p>
+                <div layout="column" flex layout-padding layout-align="center center">
+                    <img gravatar-src="user.email" gravatar-size="100" class="img-circle" >
+                    <p>{{'LOCK.LOGGED_OUT' | translate}}</p>
+                </div>
                 <form name="lock">
                     <md-input-container>
                         <label for="password">{{'LOCK.PASSWORD.LABEL' | translate}}</label>
@@ -23,9 +25,12 @@
                             </div>
                         </div>
                     </md-input-container>
-                    <md-button block class="md-raised tri-button-lg md-primary tri-fullwidth" ng-click="loginClick()" ng-disabled="lock.$invalid">{{'LOCK.LOGIN' | translate}}</md-button>
-
-                    <md-button class="block tri-fullwidth md-primary tri-button-simple-link margin-element" ng-click="logoutClick()">{{'LOCK.LOGOUT' | translate}}</md-button>
+                    <div layout="column">
+                        <md-button flex class="md-raised md-primary " ng-click="loginClick()" ng-disabled="lock.$invalid">{{'LOCK.LOGIN' | translate}}</md-button>
+                    </div>
+                    <div layout="column" layout-margin>
+                        <md-button class="md-primary " ng-click="logoutClick()">{{'LOCK.LOGOUT' | translate}}</md-button>
+                    </div>
 
                 </form>
 

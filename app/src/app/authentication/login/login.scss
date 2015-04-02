@@ -1,11 +1,17 @@
 .login-frame {
+  img {
+    max-height: 100px;
+    width: auto;
+  }
   md-toolbar {
-    img {
-      max-height: 100px;
-      width: auto;
-    }
     .md-headline {
       margin: 0;
     }
+  }
+  .md-button {
+    min-width: 80px;
+  }
+  .md-primary:not(.md-raised) {
+    text-transform: none;
   }
 }
