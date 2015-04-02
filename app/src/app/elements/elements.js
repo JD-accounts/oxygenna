@@ -40,7 +40,8 @@ angular.module('triAngularElements', [])
     })
     .state('private.admin.toolbar.default.switches', {
         url: '/elements/switches',
-        templateUrl: 'app/elements/switches.tmpl.html'
+        templateUrl: 'app/elements/switches.tmpl.html',
+        controller: 'SwitchesController'
     })
     .state('private.admin.toolbar.default.cards', {
         url: '/elements/cards',
@@ -77,7 +78,7 @@ angular.module('triAngularElements', [])
         },{
             name: 'ELEMENTS.MENU.SWITCHES',
             type: 'link',
-            url: 'elements/switchs'
+            url: 'elements/switches'
         }]
     });
 });

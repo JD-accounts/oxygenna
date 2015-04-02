@@ -95,11 +95,22 @@
 /**
 * Icons Pages
 **/
+
 .elements-icons-box {
   md-select {
     margin-top: 0px;
   }
   .md-font {
     font-size: 24px;
+  }
+}
+
+/**
+* Radios Pages
+**/
+
+.elements-radio-avatar {
+  img {
+    width: 150px;
   }
 }
