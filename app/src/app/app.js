@@ -131,25 +131,32 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     $mdThemingProvider.theme('default')
     .primaryPalette('indigo')
     .accentPalette('pink')
-    .warnPalette('red')
+    .warnPalette('red');
 
     $mdThemingProvider.theme('blue')
     .primaryPalette('blue')
     .accentPalette('pink')
-    .warnPalette('red')
+    .warnPalette('red');
 
     $mdThemingProvider.theme('green')
     .primaryPalette('green')
     .accentPalette('blue')
-    .warnPalette('deep-orange')
+    .warnPalette('deep-orange');
 
     $mdThemingProvider.theme('red')
     .primaryPalette('red')
     .accentPalette('amber')
-    .warnPalette('red')
+    .warnPalette('red');
 
     $mdThemingProvider.theme('shit')
     .primaryPalette('brown')
     .accentPalette('amber')
+    .warnPalette('red');
+
+    $mdThemingProvider.theme('dark')
+    .primaryPalette('yellow')
+    .accentPalette('amber')
     .warnPalette('red')
+    .dark();
+
 });
