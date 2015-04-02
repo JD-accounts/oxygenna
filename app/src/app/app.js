@@ -36,7 +36,13 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     // navigator.browserLanguage
     // navigator.systemLanguage
     // navigator.userLanguage
-    $translateProvider.determinePreferredLanguage();
+    $translateProvider
+    .registerAvailableLanguageKeys(['en', 'el'], {
+        'en_US': 'en',
+        'en_UK': 'en',
+        'el_GR': 'el',
+    })
+    .determinePreferredLanguage();
 
     // store the users language preference in a cookie
     $translateProvider.useLocalStorage();
