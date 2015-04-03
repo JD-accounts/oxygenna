@@ -1,0 +1,7 @@
+<md-grid-list md-cols-gt-md="3" md-cols-sm="3" md-cols-md="4" md-row-height="1:1" md-gutter="6px">
+    <md-grid-tile md-colspan="1" md-rowspan="1" ng-repeat="album in albums" ng-style="{ 'background-image': 'url(' + album.cover + ')' }">
+        <md-grid-tile-footer>
+            <h3>{{album.title}}</h3>
+        </md-grid-tile-footer>
+    </md-grid-tile>
+</md-grid-list>

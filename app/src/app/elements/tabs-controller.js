@@ -49,6 +49,4 @@ controller('TabsController', function ($scope) {
             cover: 'assets/images/elements/albums/rakim.jpg'
         }]
     }];
-
-    $scope.alignTabs = 'bottom';
 });

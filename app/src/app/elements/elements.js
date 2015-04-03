@@ -53,6 +53,11 @@ angular.module('triAngularElements', [])
         templateUrl: 'app/elements/tabs.tmpl.html',
         controller: 'TabsController'
     })
+    .state('private.admin.toolbar.default.grids', {
+        url: '/elements/grids',
+        templateUrl: 'app/elements/grids.tmpl.html',
+        controller: 'GridsController'
+    })
     .state('private.admin.toolbar.default.cards', {
         url: '/elements/cards',
         templateUrl: 'app/elements/cards.tmpl.html'
@@ -81,6 +86,10 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.DIALOGS',
             type: 'link',
             url: 'elements/dialogs'
+        },{
+            name: 'ELEMENTS.MENU.GRIDS',
+            type: 'link',
+            url: 'elements/grids'
         },{
             name: 'ELEMENTS.MENU.ICONS',
             type: 'link',

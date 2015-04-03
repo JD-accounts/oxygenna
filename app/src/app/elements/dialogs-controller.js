@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc function
- * @name DialogController
+ * @name DialogsController
  * @module triAngularElements
  * @kind function
  *
