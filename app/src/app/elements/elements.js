@@ -67,6 +67,11 @@ angular.module('triAngularElements', [])
         templateUrl: 'app/elements/tabs.tmpl.html',
         controller: 'TabsController'
     })
+    .state('private.admin.toolbar.default.sidebars', {
+        url: '/elements/sidebars',
+        templateUrl: 'app/elements/sidebars.tmpl.html',
+        controller: 'SidebarsController'
+    })
     .state('private.admin.toolbar.default.grids', {
         url: '/elements/grids',
         templateUrl: 'app/elements/grids.tmpl.html',
@@ -124,6 +129,10 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.SELECTS',
             type: 'link',
             url: 'elements/selects'
+        },{
+            name: 'ELEMENTS.MENU.SIDEBARS',
+            type: 'link',
+            url: 'elements/sidebars'
         },{
             name: 'ELEMENTS.MENU.SLIDERS',
             type: 'link',
