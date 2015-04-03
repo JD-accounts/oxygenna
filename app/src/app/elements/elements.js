@@ -43,6 +43,15 @@ angular.module('triAngularElements', [])
         templateUrl: 'app/elements/switches.tmpl.html',
         controller: 'SwitchesController'
     })
+    .state('private.admin.toolbar.default.dialogs', {
+        url: '/elements/dialogs',
+        templateUrl: 'app/elements/dialogs.tmpl.html',
+    })
+    .state('private.admin.toolbar.default.tabs', {
+        url: '/elements/tabs',
+        templateUrl: 'app/elements/tabs.tmpl.html',
+        controller: 'TabsController'
+    })
     .state('private.admin.toolbar.default.cards', {
         url: '/elements/cards',
         templateUrl: 'app/elements/cards.tmpl.html'
@@ -68,6 +77,10 @@ angular.module('triAngularElements', [])
             type: 'link',
             url: 'elements/checkboxes'
         },{
+            name: 'ELEMENTS.MENU.DIALOGS',
+            type: 'link',
+            url: 'elements/dialogs'
+        },{
             name: 'ELEMENTS.MENU.ICONS',
             type: 'link',
             url: 'elements/icons'
@@ -79,6 +92,10 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.SWITCHES',
             type: 'link',
             url: 'elements/switches'
+        },{
+            name: 'ELEMENTS.MENU.TABS',
+            type: 'link',
+            url: 'elements/tabs'
         }]
     });
 });
