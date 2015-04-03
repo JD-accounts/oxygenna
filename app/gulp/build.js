@@ -49,6 +49,7 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe($.csso())
     .pipe(cssFilter.restore())
     .pipe(assets.restore())
+    .pipe($.replace('../bower_components/material-design-iconic-font/fonts', '../fonts'))
     .pipe($.useref())
     .pipe($.revReplace())
     .pipe(htmlFilter)
