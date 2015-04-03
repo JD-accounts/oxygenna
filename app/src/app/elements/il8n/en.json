@@ -15,6 +15,9 @@
             "SELECTS": "Selects",
             "PROGRESS": "Progress",
             "SIDEBARS": "Sidebars",
+            "TOOLBARS": "Toolbars",
+            "TOOLTIPS": "Tooltips",
+            "WHITEFRAMES": "Whiteframes",
             "TOASTS": "Toasts"
         }
     }

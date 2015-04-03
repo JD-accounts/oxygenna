@@ -38,6 +38,18 @@ angular.module('triAngularElements', [])
         url: '/elements/radios',
         templateUrl: 'app/elements/radios.tmpl.html'
     })
+    .state('private.admin.toolbar.default.toolbars', {
+        url: '/elements/toolbars',
+        templateUrl: 'app/elements/toolbars.tmpl.html'
+    })
+    .state('private.admin.toolbar.default.tooltips', {
+        url: '/elements/tooltips',
+        templateUrl: 'app/elements/tooltips.tmpl.html'
+    })
+    .state('private.admin.toolbar.default.whiteframes', {
+        url: '/elements/whiteframes',
+        templateUrl: 'app/elements/whiteframes.tmpl.html'
+    })
     .state('private.admin.toolbar.default.sliders', {
         url: '/elements/sliders',
         templateUrl: 'app/elements/sliders.tmpl.html'
@@ -149,6 +161,18 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.TOASTS',
             type: 'link',
             url: 'elements/toasts'
+        },{
+            name: 'ELEMENTS.MENU.TOOLBARS',
+            type: 'link',
+            url: 'elements/toolbars'
+        },{
+            name: 'ELEMENTS.MENU.TOOLTIPS',
+            type: 'link',
+            url: 'elements/tooltips'
+        },{
+            name: 'ELEMENTS.MENU.WHITEFRAMES',
+            type: 'link',
+            url: 'elements/whiteframes'
         }]
     });
 });
