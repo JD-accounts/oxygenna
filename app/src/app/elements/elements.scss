@@ -133,3 +133,20 @@
   }
 }
 
+/**
+* Selects Pages
+**/
+.elements-select-example1 {
+  background: rgb(242, 242, 242);
+  .example-area {
+    padding: 24px;
+    width: 450px;
+    md-card-content {
+      padding: 16px;
+      background: white;
+    }
+    md-select {
+      margin-top: 0px;
+    }
+  }
+}

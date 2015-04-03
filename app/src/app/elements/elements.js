@@ -63,6 +63,10 @@ angular.module('triAngularElements', [])
         templateUrl: 'app/elements/grids.tmpl.html',
         controller: 'GridsController'
     })
+    .state('private.admin.toolbar.default.selects', {
+        url: '/elements/selects',
+        templateUrl: 'app/elements/selects.tmpl.html'
+    })
     .state('private.admin.toolbar.default.cards', {
         url: '/elements/cards',
         templateUrl: 'app/elements/cards.tmpl.html'
@@ -107,6 +111,10 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.RADIOS',
             type: 'link',
             url: 'elements/radios'
+        },{
+            name: 'ELEMENTS.MENU.SELECTS',
+            type: 'link',
+            url: 'elements/selects'
         },{
             name: 'ELEMENTS.MENU.SWITCHES',
             type: 'link',
