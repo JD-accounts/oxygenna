@@ -97,7 +97,7 @@
 }
 
 
-
+// Sticky subheader
 .md-sticky-clone[sticky-state="active"] {
   position: relative;
   -webkit-transform: translate3d(0, 0, 0);
@@ -151,5 +151,36 @@
   }
   100% {
     box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+// Toolbar Search
+.toolbar-search {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font-size: 0.8em;
+  transition: all .5s;
+  display: block !important;
+  max-width: 200px;
+  &::-webkit-input-placeholder {
+    color: inherit;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: inherit;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: inherit;
+  }
+  &:-ms-input-placeholder {
+    color: inherit;
+  }
+  &.ng-show {
+    @include fadeIn();
+  }
+  &.ng-hide {
+    display: block !important;
+    max-width: 0px;
   }
 }
