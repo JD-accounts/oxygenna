@@ -38,6 +38,11 @@ angular.module('triAngularElements', [])
         url: '/elements/radios',
         templateUrl: 'app/elements/radios.tmpl.html'
     })
+    .state('private.admin.toolbar.default.progress', {
+        url: '/elements/progress',
+        templateUrl: 'app/elements/progress.tmpl.html',
+        controller: 'ProgressController'
+    })
     .state('private.admin.toolbar.default.switches', {
         url: '/elements/switches',
         templateUrl: 'app/elements/switches.tmpl.html',
@@ -94,6 +99,10 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.ICONS',
             type: 'link',
             url: 'elements/icons'
+        },{
+            name: 'ELEMENTS.MENU.PROGRESS',
+            type: 'link',
+            url: 'elements/progress'
         },{
             name: 'ELEMENTS.MENU.RADIOS',
             type: 'link',
