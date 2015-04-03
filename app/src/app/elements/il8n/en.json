@@ -11,7 +11,11 @@
             "DIALOGS": "Dialogs",
             "GRIDS": "Grids",
             "TABS": "Tabs",
-            "PROGRESS": "Progress"
+            "SLIDERS": "Sliders",
+            "SELECTS": "Selects",
+            "PROGRESS": "Progress",
+            "SIDEBARS": "Sidebars",
+            "TOASTS": "Toasts"
         }
     }
 }
