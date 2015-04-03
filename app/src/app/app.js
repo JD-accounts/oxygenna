@@ -154,10 +154,11 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .accentPalette('amber')
     .warnPalette('red');
 
-    $mdThemingProvider.theme('shit')
-    .primaryPalette('brown')
-    .accentPalette('amber')
-    .warnPalette('red');
+    $mdThemingProvider.theme('blue-gray')
+    .primaryPalette('blue-grey')
+    .accentPalette('teal')
+    .warnPalette('amber')
+    .backgroundPalette('grey');
 
     $mdThemingProvider.theme('dark')
     .primaryPalette('grey')
