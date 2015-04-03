@@ -46,6 +46,7 @@ angular.module('triAngularElements', [])
     .state('private.admin.toolbar.default.dialogs', {
         url: '/elements/dialogs',
         templateUrl: 'app/elements/dialogs.tmpl.html',
+        controller: 'DialogsController'
     })
     .state('private.admin.toolbar.default.tabs', {
         url: '/elements/tabs',
