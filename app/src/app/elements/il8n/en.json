@@ -13,7 +13,8 @@
             "TABS": "Tabs",
             "SLIDERS": "Sliders",
             "SELECTS": "Selects",
-            "PROGRESS": "Progress"
+            "PROGRESS": "Progress",
+            "TOASTS": "Toasts"
         }
     }
 }

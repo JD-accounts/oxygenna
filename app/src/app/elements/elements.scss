@@ -118,6 +118,7 @@
 /**
 * Tabs Pages
 **/
+
 .elements-tabs-example {
   md-grid-tile {
     background-size: 100%;
@@ -127,6 +128,7 @@
 /**
 * Grids Pages
 **/
+
 .elements-grids-example {
   md-grid-tile {
     background-size: 100%;
@@ -136,6 +138,7 @@
 /**
 * Selects Pages
 **/
+
 .elements-select-example1 {
   background: rgb(242, 242, 242);
   .example-area {
@@ -149,4 +152,12 @@
       margin-top: 0px;
     }
   }
+}
+
+/**
+* Toasts Pages
+**/
+
+.elements-toast-example {
+  height: 500px;
 }

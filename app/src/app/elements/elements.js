@@ -42,6 +42,11 @@ angular.module('triAngularElements', [])
         url: '/elements/sliders',
         templateUrl: 'app/elements/sliders.tmpl.html'
     })
+    .state('private.admin.toolbar.default.toasts', {
+        url: '/elements/toasts',
+        templateUrl: 'app/elements/toasts.tmpl.html',
+        controller: 'ToastsController'
+    })
     .state('private.admin.toolbar.default.progress', {
         url: '/elements/progress',
         templateUrl: 'app/elements/progress.tmpl.html',
@@ -131,6 +136,10 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.TABS',
             type: 'link',
             url: 'elements/tabs'
+        },{
+            name: 'ELEMENTS.MENU.TOASTS',
+            type: 'link',
+            url: 'elements/toasts'
         }]
     });
 });
