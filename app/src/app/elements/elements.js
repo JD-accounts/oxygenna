@@ -38,6 +38,10 @@ angular.module('triAngularElements', [])
         url: '/elements/radios',
         templateUrl: 'app/elements/radios.tmpl.html'
     })
+    .state('private.admin.toolbar.default.sliders', {
+        url: '/elements/sliders',
+        templateUrl: 'app/elements/sliders.tmpl.html'
+    })
     .state('private.admin.toolbar.default.progress', {
         url: '/elements/progress',
         templateUrl: 'app/elements/progress.tmpl.html',
@@ -115,6 +119,10 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.SELECTS',
             type: 'link',
             url: 'elements/selects'
+        },{
+            name: 'ELEMENTS.MENU.SLIDERS',
+            type: 'link',
+            url: 'elements/sliders'
         },{
             name: 'ELEMENTS.MENU.SWITCHES',
             type: 'link',

@@ -11,6 +11,7 @@
             "DIALOGS": "Dialogs",
             "GRIDS": "Grids",
             "TABS": "Tabs",
+            "SLIDERS": "Sliders",
             "SELECTS": "Selects",
             "PROGRESS": "Progress"
         }
