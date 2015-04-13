@@ -1,74 +1,11 @@
-<div ng-controller="DashboardController" class="dashboard1">
-    <md-grid-list
-        md-cols-sm="1" md-cols-md="8" md-cols-gt-md="12"
-        md-row-height="1:2"
-        md-row-height-sm="2:1"
-        md-gutter-gt-sm="30px">
-
-        <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="8" md-rowspan="2">
-            <div class="google-chart" google-chart chart="materialLine"/></div>
-        </md-grid-tile>
-        <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="4">
-        </md-grid-tile>
-        <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="4">
-            <md-grid-tile-header>
-                <h3>
-                    Round Progress
-                </h3>
-            </md-grid-tile-header>
-        </md-grid-tile>
-        <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="3">
-            <md-grid-tile-header>
-                <h3>
-                    Growth Income
-                </h3>
-            </md-grid-tile-header>
-            <h1 countupto="counterData.growthIncome" from="0" duration="4" decimals="0" options="{suffix: '%', useGrouping : false }"></h1>
-        </md-grid-tile>
-        <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="3">
-            <md-grid-tile-header>
-                <h3>
-                    New Visitors
-                </h3>
-            </md-grid-tile-header>
-            <h1 countupto="counterData.newVisitors" from="0" duration="4" decimals="0"></h1>
-        </md-grid-tile>
-        <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="3">
-            <md-grid-tile-header>
-                <h3>
-                    Sales Increases
-                </h3>
-            </md-grid-tile-header>
-            <h1 countupto="counterData.salesIncreases" from="0" duration="4" decimals="0" options="{suffix: '%', useGrouping : false }"></h1>
-        </md-grid-tile>
-        <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="3">
-            <md-grid-tile-header>
-                <h3>
-                    Conversion Rate
-                </h3>
-            </md-grid-tile-header>
-            <h1 countupto="counterData.conversionRate" from="0" duration="4" decimals="0" options="{suffix: '%', useGrouping : false }"></h1>
-        </md-grid-tile>
-        <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="6">
-            <md-grid-tile-header>
-                <h3>
-                    Big Post
-                </h3>
-            </md-grid-tile-header>
-        </md-grid-tile>
-        <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="3">
-            <md-grid-tile-header>
-                <h3>
-                    Weather
-                </h3>
-            </md-grid-tile-header>
-        </md-grid-tile>
-        <md-grid-tile class="md-whiteframe-z1" md-colspan-sm="1" md-colspan="3">
-            <md-grid-tile-header>
-                <h3>
-                    Calendar
-                </h3>
-            </md-grid-tile-header>
-        </md-grid-tile>
-    </md-grid-list>
-</div>
+<md-grid-list md-cols="12" md-row-height="1:1" md-gutter-gt-sm="30px">
+    <md-grid-tile md-colspan="4">
+        <div ng-include="'app/dashboards/widgets/default-text.tmpl.html'"></div>
+    </md-grid-tile>
+    <md-grid-tile md-colspan="4">
+        <div ng-include="'app/dashboards/widgets/default-text.tmpl.html'"></div>
+    </md-grid-tile>
+    <md-grid-tile md-colspan="4">
+        <div ng-include="'app/dashboards/widgets/default-text.tmpl.html'"></div>
+    </md-grid-tile>
+</md-grid-list>
