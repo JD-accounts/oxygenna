@@ -1,11 +1,70 @@
-<md-grid-list md-cols="12" md-row-height="1:1" md-gutter-gt-sm="30px">
-    <md-grid-tile md-colspan="4">
-        <div ng-include="'app/dashboards/widgets/default-text.tmpl.html'"></div>
-    </md-grid-tile>
-    <md-grid-tile md-colspan="4">
-        <div ng-include="'app/dashboards/widgets/default-text.tmpl.html'"></div>
-    </md-grid-tile>
-    <md-grid-tile md-colspan="4">
-        <div ng-include="'app/dashboards/widgets/default-text.tmpl.html'"></div>
-    </md-grid-tile>
-</md-grid-list>
+<md-content class="md-padding" md-scroll-y flex>
+    <md-grid-list
+            md-cols-sm="1" md-cols-md="2" md-cols-gt-md="12"
+            md-row-height-gt-md="1:1" md-row-height="2:2"
+            md-gutter="12px" md-gutter-gt-sm="8px">
+        <!-- row 1 -->
+        <md-grid-tile class="dash-tile"
+            md-rowspan="2" md-colspan="4" md-colspan-sm="1">
+            <md-grid-tile-header>
+                <h3>Income Growth</h3>
+            </md-grid-tile-header>
+        </md-grid-tile>
+        <md-grid-tile class="dash-tile"
+            md-rowspan="4" md-colspan="8" md-colspan-sm="1">
+            <md-grid-tile-header>
+                <h3>Location Distribution</h3>
+            </md-grid-tile-header>
+        </md-grid-tile>
+        <md-grid-tile class="dash-tile"
+            md-rowspan="2" md-colspan="4" md-colspan-sm="1">
+            <md-grid-tile-header>
+                <h3>New Visitors</h3>
+            </md-grid-tile-header>
+        </md-grid-tile>
+        <!-- row 2 -->
+        <md-grid-tile class="dash-tile"
+            md-rowspan="1" md-colspan="3">
+            <md-grid-tile-header>
+                <h3>Stats Here</h3>
+            </md-grid-tile-header>
+        </md-grid-tile>
+        <md-grid-tile class="dash-tile"
+            md-rowspan="1" md-colspan="3">
+            <md-grid-tile-header>
+                <h3>Stats Here</h3>
+            </md-grid-tile-header>
+        </md-grid-tile>
+        <md-grid-tile class="dash-tile"
+            md-rowspan="1" md-colspan="3">
+            <md-grid-tile-header>
+                <h3>Stats Here</h3>
+            </md-grid-tile-header>
+        </md-grid-tile>
+        <md-grid-tile class="dash-tile"
+            md-rowspan="1" md-colspan="3">
+            <md-grid-tile-header>
+                <h3>Stats Here</h3>
+            </md-grid-tile-header>
+        </md-grid-tile>
+        <!-- row 3 -->
+        <md-grid-tile class="dash-tile"
+            md-rowspan="2" md-colspan="6">
+            <md-grid-tile-header>
+                <h3>Kangeroo Valley Safari</h3>
+            </md-grid-tile-header>
+        </md-grid-tile>
+        <md-grid-tile class="dash-tile"
+            md-rowspan="2" md-colspan="3">
+            <md-grid-tile-header>
+                <h3>Weather</h3>
+            </md-grid-tile-header>
+        </md-grid-tile>
+        <md-grid-tile class="dash-tile"
+            md-rowspan="2" md-colspan="3">
+            <md-grid-tile-header>
+                <h3>Calendar</h3>
+            </md-grid-tile-header>
+        </md-grid-tile>
+    </md-grid-list>
+</md-content>
