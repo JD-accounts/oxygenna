@@ -13,11 +13,11 @@ gulp.task('partials', function () {
     paths.src + '/{app,components}/**/*.html',
     paths.tmp + '/{app,components}/**/*.html'
   ])
-    .pipe($.minifyHtml({
-      empty: true,
-      spare: true,
-      quotes: true
-    }))
+    // .pipe($.minifyHtml({
+    //   empty: true,
+    //   spare: true,
+    //   quotes: true
+    // }))
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
       module: 'triAngular'
     }))
@@ -32,7 +32,7 @@ gulp.task('html', ['inject', 'partials'], function () {
     addRootSlash: false
   };
 
-  var htmlFilter = $.filter('*.html');
+  var htmlFilter = $.filter(['*.html', '!/src/app/elements/examples/*.html']);
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
   var assets;
