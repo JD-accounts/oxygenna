@@ -166,4 +166,12 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .warnPalette('red')
     .dark();
 
+})
+// setup google charts to use material charts
+.value('googleChartApiConfig', {
+    version: '1.1',
+    optionalSettings: {
+        packages: ['line', 'bar', 'geochart'],
+        language: 'en'
+    }
 });

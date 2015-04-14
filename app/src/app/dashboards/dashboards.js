@@ -15,10 +15,12 @@ angular.module('triAngularDashboards', [])
     .state('private.admin.toolbar.default.dashboard1', {
         url: '/dashboard1',
         templateUrl: 'app/dashboards/dashboard1.html',
+        controller: 'DashboardController'
     })
     .state('private.admin.toolbar.default.dashboard2', {
         url: '/dashboard2',
         templateUrl: 'app/dashboards/dashboard2.html',
+        controller: 'DashboardController'
     });
 })
 .run(function(SideMenu) {
