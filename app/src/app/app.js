@@ -160,6 +160,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .warnPalette('amber')
     .backgroundPalette('grey');
 
+
     $mdThemingProvider.theme('dark')
     .primaryPalette('grey')
     .accentPalette('amber')
