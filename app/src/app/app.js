@@ -83,7 +83,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
                 controller: 'DefaultToolbarController'
             },
             content: {
-                template: '<div flex ui-view></div>',
+                template: '<div flex ui-view layout></div>',
             }
         },
     })
@@ -159,6 +159,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .accentPalette('teal')
     .warnPalette('amber')
     .backgroundPalette('grey');
+
 
     $mdThemingProvider.theme('dark')
     .primaryPalette('grey')
