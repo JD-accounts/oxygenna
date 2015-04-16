@@ -28,8 +28,11 @@ side-menu {
   position: relative;
   z-index: 2;
   box-shadow: none !important;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
   &:hover, &:focus {
-    transform: translate3d(0, 0, 0) !important;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
   }
   .uppercase-all & {
     text-transform: uppercase;
