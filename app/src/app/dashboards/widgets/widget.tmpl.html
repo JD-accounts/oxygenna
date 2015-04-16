@@ -1,10 +1,12 @@
 <div class="widget md-whiteframe-z1" flex layout="column">
-    <span class="md-subhead" ng-if="title">
-        {{title}}
+    <div class="widget-title" layout="row" layout-align="space-between start">
+        <div layout="column" flex>
+            <span class="md-subhead" ng-if="title">{{title}}</span>
+            <span class="md-body" ng-if="subtitle">{{subtitle}}</span>
+        </div>
         <md-button class="widget-button md-icon-button" aria-label="More">
             <md-icon md-font-icon="icon-more-vert"></md-icon>
         </md-button>
-    </span>
-    <span class="md-body" ng-if="subtitle">{{subtitle}}</span>
+    </div>
     <div class="widget-content" flex layout layout-align="center center" ng-transclude></div>
 </div>

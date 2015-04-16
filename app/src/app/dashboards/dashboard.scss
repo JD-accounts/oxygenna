@@ -1,21 +1,18 @@
 .widget {
-  padding: 16px;
-  .md-subhead {
-    color: rgb(117, 117, 117);
-  }
-  .md-body {
-    color: rgb(189, 189, 189);
-  }
-  .widget-button {
-    float: right;
-    padding: 0;
-    .md-font {
-      font-size: 18px;
+  .widget-title {
+    margin-top: 16px;
+    margin-left: 16px;
+    .md-subhead {
+      color: rgb(117, 117, 117);
+    }
+    .md-body {
+      color: rgb(189, 189, 189);
     }
   }
-
   .google-chart {
     padding: 0;
-    margin-top: 16px;
+  }
+  .widget-content {
+    padding: 16px;
   }
 }
