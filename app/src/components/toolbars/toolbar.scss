@@ -1,10 +1,15 @@
-// Breadcrumbs
-.breadcrumb {
+.toolbar-default {
   md-icon {
-    font-size: 24px;
-    width: 36px;
-    text-align: center;
-    height: 18px;
-    vertical-align: top;
+    color: inherit;
+    .md-font {
+      font-size: 2.400rem;
+      display: block;
+      color: inherit;
+    }
+  }
+  .breadcrumb {
+    md-icon {
+      height: 28px;
+    }
   }
 }
