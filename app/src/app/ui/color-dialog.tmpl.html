@@ -1,4 +1,4 @@
-<md-dialog aria-label="Mango (Fruit)">
+<md-dialog>
     <md-toolbar>
         <h2 class="md-toolbar-tools">
             {{name}}
@@ -7,13 +7,11 @@
     <md-content class="ui-color-dialog-content">
         <div class="dialog-content">
             <md-list>
-                <md-item ng-repeat="color in palette" ng-style="colourRGBA(color.value)">
-                    <md-item-content ng-style="colourRGBA(color.value)">
-                        <div class="md-tile-content">
-                            <h3>{{color.name}}</h3>
-                        </div>
-                    </md-item-content>
-                </md-item>
+                <md-list-item ng-repeat="color in palette" ng-style="itemStyle(color.palette)">
+                    <div class="md-list-item-text">
+                        <h3>{{color.code}}</h3>
+                    </div>
+                </md-list-item>
             </md-list>
         </div>
     </md-content>

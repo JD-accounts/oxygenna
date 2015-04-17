@@ -28,9 +28,9 @@ controller('ColorsController', function ($scope, $mdDialog, triTheme) {
             targetEvent: $event,
             locals: {
                 name: name,
-                palette: palette,
-                colourRGBA: $scope.colourRGBA
+                palette: palette
             },
+            clickOutsideToClose: true
         })
         .then(function(answer) {
             $scope.alert = 'You said the information was "' + answer + '".';
