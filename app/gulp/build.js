@@ -53,11 +53,11 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe($.useref())
     .pipe($.revReplace())
     .pipe(htmlFilter)
-    .pipe($.minifyHtml({
-      empty: true,
-      spare: true,
-      quotes: true
-    }))
+    // .pipe($.minifyHtml({
+    //   empty: true,
+    //   spare: true,
+    //   quotes: true
+    // }))
     .pipe(htmlFilter.restore())
     .pipe(gulp.dest(paths.dist + '/'))
     .pipe($.size({ title: paths.dist + '/', showFiles: true }));
