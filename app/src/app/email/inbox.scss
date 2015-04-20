@@ -16,14 +16,20 @@
     background: rgba(0,0,0, .05);
   }
   &.active {
-    .list-avatar {
+    .md-avatar {
       display: block;
       -webkit-animation: swing 1s;
             animation: swing 1s;
     }
   }
-  h3 {
-    font-weight: 400;
+  .md-list-item-text {
+    padding: 16px;
+  }
+  h3, .md-body-2 {
+    font-weight: 400 !important;
+  }
+  p {
+    margin: 0;
   }
   .list-avatar {
     display: block;
@@ -36,23 +42,12 @@
   }
 }
 .email-inbox-list-item-unread {
-  h3 {
-    font-weight: 500;
+  h3, .md-body-2 {
+    font-weight: 500 !important;
   }
 
 }
-.email-inbox-list-item-unread-indicator {
-  opacity: 0.5;
-  font-size: 12px;
-}
-.md-tile-left {
-  margin-right: -16px;
-  img {
-      border-radius: 50%;
-      width: 48px;
-      margin: 16px;
-  }
-}
+
 
 // Single Email
 .email-single {

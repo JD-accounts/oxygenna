@@ -3,17 +3,17 @@
         <md-icon md-font-icon="icon-create"></md-icon>
     </md-button>
     <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-sm="50" flex-gt-md="50" flex-gt-lg="40"  ng-show="showEmailList" layout="column">
-        <md-content flex>
+        <md-content flex >
             <section class="email-inbox-list-animate-repeat" ng-repeat="group in emailGroups" ng-show="group.emails.length > 0">
                 <md-subheader class="md-primary">{{group.name}}</md-subheader>
                 <md-list layout="column">
-                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
+                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat md-2-line" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
 
                         <img class="md-avatar animate" ng-src="assets/images/avatars/{{email.avatar}}" alt="{{email.name}}">
 
                         <div class="md-list-item-text">
                             <div layout="row" layout-align="space-between center">
-                                <h3 class="md-subhead">{{email.name}}</h3>
+                                <h3>{{email.name}}</h3>
                                 <p class="md-caption" am-time-ago="email.date"></p>
                             </div>
 
