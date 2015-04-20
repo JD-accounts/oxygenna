@@ -40,7 +40,7 @@ angular.module('triAngular')
 
             attrs.$observe('mdTheme', function() {
                 var menuColor = triTheme.getThemeColor($mdTheme.$mdTheme, 'primary');
-                var menuColorRGBA = triTheme.rgba(menuColor);
+                var menuColorRGBA = triTheme.rgba(menuColor.value);
                 $element.css({ 'background-color': menuColorRGBA });
                 $element.children('md-content').css({ 'background-color': menuColorRGBA });
             });

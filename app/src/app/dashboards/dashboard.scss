@@ -16,3 +16,17 @@
     padding: 16px;
   }
 }
+
+.widget[background] {
+  .widget-title {
+    .md-subhead, md-icon {
+      color: inherit;
+    }
+  }
+}
+
+.widget-counter-text {
+  font-weight: 300;
+  margin: 0px 10px;
+  text-align: left;
+}

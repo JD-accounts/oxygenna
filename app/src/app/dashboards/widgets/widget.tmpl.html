@@ -4,7 +4,7 @@
             <span class="md-subhead" ng-if="title">{{title}}</span>
             <span class="md-body" ng-if="subtitle">{{subtitle}}</span>
         </div>
-        <md-button class="widget-button md-icon-button" aria-label="More">
+        <md-button ng-if="menu" class="widget-button md-icon-button" aria-label="More">
             <md-icon md-font-icon="icon-more-vert"></md-icon>
         </md-button>
     </div>

@@ -46,7 +46,7 @@ angular.module('triAngular')
                     if(undefined !== $mdThemingProvider._THEMES[themeName] && undefined !== $mdThemingProvider._THEMES[themeName].colors[intentName]) {
                         var color = $mdThemingProvider._THEMES[themeName].colors[intentName];
                         if(undefined !== $mdThemingProvider._PALETTES[color.name] && undefined !== $mdThemingProvider._PALETTES[color.name][color.hues.default]) {
-                            return $mdThemingProvider._PALETTES[color.name][color.hues.default].value;
+                            return $mdThemingProvider._PALETTES[color.name][color.hues.default];
                         }
                     }
                 }

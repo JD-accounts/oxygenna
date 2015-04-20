@@ -16,7 +16,7 @@
 * ```
 */
 angular.module('triAngularDashboards')
-.directive('widget', function() {
+.directive('widget', function(triTheme, $mdTheming) {
     return {
         restrict: 'E',
         templateUrl: 'app/dashboards/widgets/widget.tmpl.html',
@@ -24,9 +24,21 @@ angular.module('triAngularDashboards')
         replace: true,
         scope: {
             title: '=',
-            subtitle: '='
+            subtitle: '=',
+            menu: '='
         },
         link: function($scope, $element, attrs) {
+            $mdTheming($element);
+
+            var $mdTheme = $element.controller('mdTheme');
+
+            if(attrs.background !== undefined) {
+                var background = triTheme.getThemeColor($mdTheme.$mdTheme, attrs.background);
+                $element.css({
+                    'background-color': triTheme.rgba(background.value),
+                    'color': triTheme.rgba(background.contrast)
+                });
+            }
         }
     };
 });

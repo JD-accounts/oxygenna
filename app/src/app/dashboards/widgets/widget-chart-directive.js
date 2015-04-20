@@ -23,11 +23,12 @@ angular.module('triAngularDashboards')
         scope: {
             title: '=',
             subtitle: '=',
+            menu: '=',
             data: '='
         },
         replace: true,
         link: function($scope, $element, attrs) {
-            var chart = $compile('<widget title="title" subtitle="subtitle"><div class="google-chart" google-chart chart="data"/></div></widget>')($scope);
+            var chart = $compile('<widget title="title" subtitle="subtitle" menu="menu"><div class="google-chart" google-chart chart="data"/></div></widget>')($scope);
             $element.replaceWith(chart);
         }
     };
