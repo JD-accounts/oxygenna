@@ -5,23 +5,23 @@
                 <div layout="row" layout-align="space-between start">
                     <h3 flex>{{'EMAIL.FROM' | translate}}: {{email.from}}</h3>
                     <div class="email-header-actions" layout="row" layout-align="space-between center">
-                        <md-button ng-click="reply($event, 'EMAIL.REPLY')">
+                        <md-button class="md-icon-button" ng-click="reply($event, 'EMAIL.REPLY')">
                             <md-icon md-font-icon="icon-reply" aria-label="{{'EMAIL.REPLY' | translate}}"></md-icon>
                             <md-tooltip>{{'EMAIL.REPLY' | translate}}</md-tooltip>
                         </md-button>
-                        <md-button ng-click="reply($event, 'EMAIL.REPLY_ALL')">
+                        <md-button class="md-icon-button" ng-click="reply($event, 'EMAIL.REPLY_ALL')">
                             <md-icon md-font-icon="icon-reply-all" aria-label="{{'EMAIL.REPLY_ALL' | translate}}"></md-icon>
                             <md-tooltip>{{'EMAIL.REPLY_ALL' | translate}}</md-tooltip>
                         </md-button>
-                        <md-button ng-click="reply($event, 'EMAIL.FORWARD')">
+                        <md-button class="md-icon-button" ng-click="reply($event, 'EMAIL.FORWARD')">
                             <md-icon md-font-icon="icon-forward" aria-label="{{'EMAIL.FORWARD' | translate}}"></md-icon>
                             <md-tooltip>{{'EMAIL.FORWARD' | translate}}</md-tooltip>
                         </md-button>
-                        <md-button ng-click="delete(email)">
+                        <md-button class="md-icon-button" ng-click="delete(email)">
                             <md-icon md-font-icon="icon-delete" aria-label="{{'EMAIL.DELETE' | translate}}"></md-icon>
                             <md-tooltip>{{'EMAIL.DELETE' | translate}}</md-tooltip>
                         </md-button>
-                        <md-button ng-click="openlist()">
+                        <md-button class="md-icon-button" ng-click="openlist()">
                             <md-icon md-font-icon="icon-close" aria-label="{{'EMAIL.CLOSE' | translate}}"></md-icon>
                             <md-tooltip>{{'EMAIL.CLOSE' | translate}}</md-tooltip>
                         </md-button>
