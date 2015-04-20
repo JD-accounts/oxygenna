@@ -32,6 +32,10 @@ angular.module('triAngularDashboards')
 
             var $mdTheme = $element.controller('mdTheme');
 
+            if(attrs.class !== undefined) {
+                $element.addClass(attrs.class);
+            }
+
             if(attrs.background !== undefined) {
                 var background = triTheme.getThemeColor($mdTheme.$mdTheme, attrs.background);
                 $element.css({
