@@ -13,13 +13,8 @@ angular.module('triAngularDashboards', [])
 
     $stateProvider
     .state('private.admin.toolbar.default.dashboard1', {
-        url: '/dashboard1',
+        url: '/dashboard',
         templateUrl: 'app/dashboards/dashboard1.html',
-        controller: 'DashboardController'
-    })
-    .state('private.admin.toolbar.default.dashboard2', {
-        url: '/dashboard2',
-        templateUrl: 'app/dashboards/dashboard2.html',
         controller: 'DashboardController'
     });
 })
@@ -30,12 +25,8 @@ angular.module('triAngularDashboards', [])
         type: 'dropdown',
         priority: 2.1,
         children: [{
-            name: 'Dashboard 1',
-            url: '/dashboard1',
-            type: 'link',
-        },{
-            name: 'Dashboard 2',
-            url: '/dashboard2',
+            name: 'Dashboard',
+            url: '/dashboard',
             type: 'link',
         }]
     });
