@@ -1,0 +1,14 @@
+<widget class="widget-weather" menu="menu">
+    <div flex layout="column" layout-align="end center">
+        <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
+        <p class="md-display-4">{{weather.temp}}&deg;</p>
+        <p class="md-title">{{weather.text}}</p>
+        <md-toolbar class="md-primary">
+            <div class="md-toolbar-tools">
+                <h2>
+                  <span>{{location}}</span>
+                </h2>
+            </div>
+        </md-toolbar>
+    </div>
+</widget>
