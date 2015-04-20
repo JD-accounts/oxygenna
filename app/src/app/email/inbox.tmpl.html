@@ -7,23 +7,22 @@
             <section class="email-inbox-list-animate-repeat" ng-repeat="group in emailGroups" ng-show="group.emails.length > 0">
                 <md-subheader class="md-primary">{{group.name}}</md-subheader>
                 <md-list layout="column">
-                    <md-item class="email-inbox-list-item email-inbox-list-animate-repeat" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
-                        <md-item-content>
-                            <div class="md-tile-left">
-                                <img class="list-avatar animate" ng-src="assets/images/avatars/{{email.avatar}}" class="face" alt="{{email.name}}">
-                            </div>
-                            <div class="md-tile-content">
-                                <div layout="row" layout-align="space-between center">
-                                    <h3 class="md-subhead">{{email.name}}</h3>
-                                    <p class="md-caption" am-time-ago="email.date"></p>
-                                </div>
+                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
 
-                                <p class="md-body-2">{{email.subject}}</p>
-                                <p class="md-body-1">{{email.content[0] | cut:true:150:' ...'}}</p>
+                        <img class="md-avatar animate" ng-src="assets/images/avatars/{{email.avatar}}" alt="{{email.name}}">
+
+                        <div class="md-list-item-text">
+                            <div layout="row" layout-align="space-between center">
+                                <h3 class="md-subhead">{{email.name}}</h3>
+                                <p class="md-caption" am-time-ago="email.date"></p>
                             </div>
-                        </md-item-content>
+
+                            <p class="md-body-2">{{email.subject}}</p>
+                            <p class="md-body-1">{{email.content[0] | cut:true:150:' ...'}}</p>
+                        </div>
+
                         <md-divider ng-hide="$index + 1 === group.emails.length"></md-divider>
-                    </md-item>
+                    </md-list-item>
                 </md-list>
             </section>
             <h2 ng-show="emails.length === 0">{{'EMAIL.NO_EMAILS_FOUND' | translate}}</h2>
