@@ -13,10 +13,7 @@ angular.module('triAngularEmail')
 .filter('emailSearchFilter', function() {
     return function(emails, emailSearch) {
         return emails.filter(function(email) {
-            if(email.name.indexOf(emailSearch) > -1) {
-                return email;
-            }
-            if(email.from.indexOf(emailSearch) > -1) {
+            if(email.from.name.indexOf(emailSearch) > -1) {
                 return email;
             }
             if(email.subject.indexOf(emailSearch) > -1) {
