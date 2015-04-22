@@ -93,11 +93,23 @@ angular.module('triAngularElements', [])
         url: '/elements/selects',
         templateUrl: 'app/elements/selects.tmpl.html'
     })
+    .state('private.admin.toolbar.default.lists', {
+        url: '/elements/lists',
+        templateUrl: 'app/elements/lists.tmpl.html',
+        controller: 'ListsController',
+        resolve: {
+            emails: function($http, API_CONFIG) {
+                return $http({
+                    method: 'GET',
+                    url: API_CONFIG.url + 'email/inbox',
+                });
+            },
+        }
+    })
     .state('private.admin.toolbar.default.cards', {
         url: '/elements/cards',
         templateUrl: 'app/elements/cards.tmpl.html'
     });
-
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
@@ -129,6 +141,10 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.ICONS',
             type: 'link',
             url: 'elements/icons'
+        },{
+            name: 'ELEMENTS.MENU.LISTS',
+            type: 'link',
+            url: 'elements/lists'
         },{
             name: 'ELEMENTS.MENU.PROGRESS',
             type: 'link',

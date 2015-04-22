@@ -18,7 +18,8 @@
             "TOOLBARS": "Toolbars",
             "TOOLTIPS": "Tooltips",
             "WHITEFRAMES": "Whiteframes",
-            "TOASTS": "Toasts"
+            "TOASTS": "Toasts",
+            "LISTS": "Lists"
         }
     }
 }
