@@ -19,7 +19,8 @@
             "TOOLTIPS": "Tooltips",
             "WHITEFRAMES": "Whiteframes",
             "TOASTS": "Toasts",
-            "LISTS": "Lists"
+            "LISTS": "Lists",
+            "CHIPS": "Chips"
         }
     }
 }

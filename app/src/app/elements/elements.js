@@ -106,6 +106,19 @@ angular.module('triAngularElements', [])
             },
         }
     })
+    .state('private.admin.toolbar.default.chips', {
+        url: '/elements/chips',
+        templateUrl: 'app/elements/chips.tmpl.html',
+        controller: 'ChipsController',
+        resolve: {
+            contacts: function($http, API_CONFIG) {
+                return $http({
+                    method: 'GET',
+                    url: API_CONFIG.url + 'email/contacts',
+                });
+            }
+        }
+    })
     .state('private.admin.toolbar.default.cards', {
         url: '/elements/cards',
         templateUrl: 'app/elements/cards.tmpl.html'
@@ -129,6 +142,10 @@ angular.module('triAngularElements', [])
             name: 'ELEMENTS.MENU.CHECKBOXES',
             type: 'link',
             url: 'elements/checkboxes'
+        },{
+            name: 'ELEMENTS.MENU.CHIPS',
+            type: 'link',
+            url: 'elements/chips'
         },{
             name: 'ELEMENTS.MENU.DIALOGS',
             type: 'link',
