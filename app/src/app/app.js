@@ -124,6 +124,24 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     // store the selected theme data in a cookie
     triThemeProvider.useThemeCookie(true);
 
+    $mdThemingProvider.definePalette('white', {
+        '50': 'ffffff',
+        '100': 'ffffff',
+        '200': 'ffffff',
+        '300': 'ffffff',
+        '400': 'ffffff',
+        '500': 'ffffff',
+        '600': 'ffffff',
+        '700': 'ffffff',
+        '800': 'ffffff',
+        '900': 'ffffff',
+        'A100': 'ffffff',
+        'A200': 'ffffff',
+        'A400': 'ffffff',
+        'A700': 'ffffff',
+        'contrastDefaultColor': 'dark',    // whether, by default, text (contrast)
+    });
+
     // Extend the red theme with a few different colors
     // var neonRedMap = $mdThemingProvider.extendPalette('red', {
     //     '500': 'ff0000',
@@ -160,12 +178,16 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .warnPalette('amber')
     .backgroundPalette('grey');
 
-
     $mdThemingProvider.theme('dark')
     .primaryPalette('grey')
     .accentPalette('amber')
     .warnPalette('red')
     .dark();
+
+    $mdThemingProvider.theme('white')
+    .primaryPalette('white')
+    .accentPalette('pink')
+    .warnPalette('red');
 
 })
 // setup google charts to use material charts
