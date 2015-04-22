@@ -1,10 +1,27 @@
-<md-content id="email-view" class="email md-padding" layout="column">
+<md-content class="email-single md-padding" layout="column">
     <md-card flex>
-        <div class="email-header" layout="row" >
-            <div class="email-header-title" layout-sm="column" flex>
-                <div layout="row" layout-align="space-between start">
-                    <h3 flex>{{'EMAIL.FROM' | translate}}: {{email.from}}</h3>
-                    <div class="email-header-actions" layout="row" layout-align="space-between center">
+        <md-toolbar class="toolbar-default" md-theme="white">
+            <div flex layout="row" layout-align="space-between start">
+                <div layout="column" layout-align="space-between start">
+                    <h3 class="md-title" flex>{{email.from.name}}</h3>
+                    <span class="md-subhead">
+                        {{'EMAIL.TO' | translate}}
+                        <span ng-repeat="to in email.to">
+                            {{to.name}}<span ng-if="!$last">,</span>
+                        </span>
+                    </span>
+                    <span class="md-body-2">{{email.subject}}</span>
+                </div>
+                <div layout="row" layout-align="space-between center">
+                    <span class="md-caption" am-time-ago="email.date"></span>
+                    <md-button class="md-icon-button" ng-click="reply($event)">
+                        <md-icon md-font-icon="icon-more-vert"></md-icon>
+                    </md-button>
+                </div>
+            </div>
+        </md-toolbar>
+
+<!--                     <div class="email-header-actions" layout="row" layout-align="space-between center">
                         <md-button class="md-icon-button" ng-click="reply($event, 'EMAIL.REPLY')">
                             <md-icon md-font-icon="icon-reply" aria-label="{{'EMAIL.REPLY' | translate}}"></md-icon>
                             <md-tooltip>{{'EMAIL.REPLY' | translate}}</md-tooltip>
@@ -27,10 +44,10 @@
                         </md-button>
                     </div>
                 </div>
-
+ -->
                 <div layout="row" layout-align="space-between start">
-                    <h4>{{email.subject}}</h4>
-                    <p am-time-ago="email.date"></p>
+
+
                 </div>
 
             </div>

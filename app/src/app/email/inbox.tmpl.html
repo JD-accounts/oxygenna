@@ -2,26 +2,25 @@
     <md-button ng-click="composeClick($event)" class="md-fab md-accent md-fab-bottom-right" aria-label="{{'EMAIL.COMPOSE_EMAIL' | translate}}">
         <md-icon md-font-icon="icon-create"></md-icon>
     </md-button>
-    <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-sm="50" flex-gt-md="50" flex-gt-lg="40"  ng-show="showEmailList" layout="column">
-        <md-content flex >
+    <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-sm="50" flex-gt-md="50" flex-gt-lg="40" ng-show="showEmailList" layout="column">
+        <md-content>
             <section class="email-inbox-list-animate-repeat" ng-repeat="group in emailGroups" ng-show="group.emails.length > 0">
                 <md-subheader class="md-primary">{{group.name}}</md-subheader>
-                <md-list layout="column">
-                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat md-2-line" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
+                <md-list>
+                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat md-3-line" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
 
-                        <img class="md-avatar animate" ng-src="assets/images/avatars/{{email.avatar}}" alt="{{email.name}}">
+                        <img class="md-avatar animate" ng-src="{{email.from.image}}" alt="{{email.from.name}}">
 
                         <div class="md-list-item-text">
-                            <div layout="row" layout-align="space-between center">
-                                <h3>{{email.name}}</h3>
+                            <div class="email-inbox-list-item-name-time" layout="row" layout-align="space-between start">
+                                <h3>{{email.from.name}}</h3>
                                 <p class="md-caption" am-time-ago="email.date"></p>
                             </div>
-
-                            <p class="md-body-2">{{email.subject}}</p>
-                            <p class="md-body-1">{{email.content[0] | cut:true:150:' ...'}}</p>
+                            <h4>{{email.subject}}</h4>
+                            <p>{{email.content[0] | cut:true:150:' ...'}}</p>
                         </div>
 
-                        <md-divider ng-hide="$index + 1 === group.emails.length"></md-divider>
+                        <md-divider ng-hide="$last"></md-divider>
                     </md-list-item>
                 </md-list>
             </section>
@@ -30,8 +29,8 @@
     </div>
 
     <div class="animate-wrapper" layout="column" layout-align="top center" flex>
-        <div flex id="ui-admin-email" class="email-single"  ui-view layout="column" layout-align="top center">
-            <div flex class="no-email-selected" layout="column" layout-align="center">
+        <div flex id="ui-admin-email" ui-view layout="column" layout-align="top center">
+            <div flex class="email-inbox-no-email-selected" layout="column" layout-align="center">
                 <h2>{{'EMAIL.NO_EMAIL_SELECTED' | translate}}</h2>
             </div>
         </div>

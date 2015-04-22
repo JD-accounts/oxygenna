@@ -1,0 +1,40 @@
+.toolbar-default {
+  md-icon {
+    color: inherit;
+    .md-font {
+      font-size: 2.400rem;
+      display: block;
+      color: inherit;
+    }
+  }
+  .breadcrumb {
+    md-icon {
+      height: 28px;
+    }
+  }
+}
+
+
+// Toolbar Search
+.toolbar-search {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font-size: 0.8em;
+  transition: max-width .5s, opacity 0.3s .3s;
+  display: block !important;
+  max-width: 200px;
+  opacity: 1;
+  text-indent: 1em;
+  &::placeholder {
+    color: inherit;
+  }
+  &.ng-show {
+    @include fadeIn();
+  }
+  &.ng-hide {
+    transition: max-width .3s .3s, opacity 0.5s;
+    max-width: 0px;
+    opacity: 0;
+  }
+}

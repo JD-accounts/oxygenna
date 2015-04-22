@@ -9,7 +9,7 @@
  *
  */
 angular.module('triAngularEmail')
-.controller('InboxController', function ($scope, $filter, $location, $mdMedia, $mdBottomSheet, $stateParams, $mdDialog, $mdToast, emails) {
+.controller('InboxController', function ($scope, $filter, $location, $mdMedia, $mdBottomSheet, $stateParams, $mdDialog, $mdToast, emails, contacts) {
     $scope.inboxBasePath = $location.path();
     // store selected email if we have one
     $scope.selectedMail = null;
@@ -86,19 +86,18 @@ angular.module('triAngularEmail')
             locals: {
                 title: $filter('translate')('EMAIL.NEW'),
                 email: {
-                    to: '',
+                    to: [],
+                    cc: [],
+                    bcc:[],
                     subject: '',
                     content: ''
-                }
+                },
+                contacts: contacts,
+                getFocus: false
             }
         })
         .then(function(email) {
-            $mdToast.show(
-                $mdToast.simple()
-                .content($filter('translate')('EMAIL.SENT', {to: email.to}))
-                .position('bottom right')
-                .hideDelay(3000)
-            );
+            $scope.sendEmail(email);
         }, function() {
             $mdToast.show(
                 $mdToast.simple()
@@ -107,6 +106,20 @@ angular.module('triAngularEmail')
                 .hideDelay(3000)
             );
         });
+    };
+
+    $scope.sendEmail = function(email) {
+        // make list of users that have been sent to
+        var sentTo = [];
+        angular.forEach(email.to, function(to) {
+            sentTo.push(to.name);
+        });
+        $mdToast.show(
+            $mdToast.simple()
+            .content($filter('translate')('EMAIL.SENT', {to: sentTo.join(', ')}))
+            .position('bottom right')
+            .hideDelay(3000)
+        );
     };
 
     $scope.$on('emailSearch', function(event, emailSearch) {

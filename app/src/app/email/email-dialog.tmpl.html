@@ -1,31 +1,62 @@
-<md-dialog class="compose-dialog email">
-    <div class="email-header" layout="row" layout-align="space-between center" >
-        <div class="email-header-title">
-            <span>{{title}}</span>
-        </div>
-        <div class="email-header-actions">
-            <md-button ng-click="cancel()">
+<md-dialog class="email-dialog" flex="80" flex-sm="100">
+    <md-toolbar class="toolbar-default">
+        <div class="md-toolbar-tools">
+            <h2>
+              <span>{{title}}</span>
+            </h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
                 <md-icon md-font-icon="icon-close"></md-icon>
             </md-button>
         </div>
-    </div>
+    </md-toolbar>
 
     <md-divider></md-divider>
 
     <md-content>
-        <form name="emailForm">
-            <md-input-container>
-                <label for="to">{{'EMAIL.COMPOSE.TO' | translate}}</label>
-                <input type="email" name="to" ng-model="email.to" required>
-                <div ng-messages="emailForm.to.$error">
-                    <div ng-message when="required">
-                        {{'EMAIL.COMPOSE.VALIDATION.EMAIL_REQUIRED' | translate}}
-                    </div>
-                    <div ng-message when="email">
-                        {{'EMAIL.COMPOSE.VALIDATION.EMAIL_VALID' | translate}}
-                    </div>
-                </div>
-            </md-input-container>
+        <form name="emailForm" novalidate>
+            <div class="email-dialog-to-row" layout="row">
+                <md-contact-chips
+                    flex
+                    ng-model="email.to"
+                    md-contacts="queryContacts($query)"
+                    md-contact-name="name"
+                    md-contact-image="image"
+                    md-contact-email="email"
+                    md-require-match
+                    filter-selected="true"
+                    placeholder="{{'EMAIL.COMPOSE.TO' | translate}}"
+                    secondary-placeholder="{{'EMAIL.COMPOSE.TO' | translate}}">
+                </md-contact-chips>
+                <md-button class="email-dialog-toggle-ccs md-icon-button" ng-click="toggleCCS($event)">
+                    <md-icon md-font-icon="{{showCCSIcon}}"></md-icon>
+                </md-button>
+            </div>
+
+            <div class="email-dialog-ccs" layout="column" ng-show="showCCS">
+                <md-contact-chips
+                    ng-model="email.cc"
+                    md-contacts="queryContacts($query)"
+                    md-contact-name="name"
+                    md-contact-image="image"
+                    md-contact-email="email"
+                    md-require-match
+                    filter-selected="true"
+                    placeholder="{{'EMAIL.COMPOSE.CC' | translate}}"
+                    secondary-placeholder="{{'EMAIL.COMPOSE.CC' | translate}}">
+                </md-contact-chips>
+                <md-contact-chips
+                    ng-model="email.bcc"
+                    md-contacts="queryContacts($query)"
+                    md-contact-name="name"
+                    md-contact-image="image"
+                    md-contact-email="email"
+                    md-require-match
+                    filter-selected="true"
+                    placeholder="{{'EMAIL.COMPOSE.BCC' | translate}}"
+                    secondary-placeholder="{{'EMAIL.COMPOSE.BCC' | translate}}">
+                </md-contact-chips>
+            </div>
 
             <md-input-container>
                 <label for="subject">{{'EMAIL.COMPOSE.SUBJECT' | translate}}</label>
@@ -38,13 +69,13 @@
             </md-input-container>
 
             <md-input-container flex>
-                <text-angular ng-model="email.content" ta-target-toolbars="editor-toolbar"></text-angular>
+                <text-angular name="emailBody" ng-model="email.content" ta-target-toolbars="editor-toolbar"></text-angular>
             </md-input-container>
         </form>
     </md-content>
 
     <div class="md-actions" layout="row">
-        <text-angular-toolbar name="editor-toolbar" ta-toolbar-active-button-class="active"></text-angular-toolbar>
+        <text-angular-toolbar name="editor-toolbar" class="email-dialog-editor-toolbar" ta-toolbar-active-button-class="active"></text-angular-toolbar>
         <span flex></span>
         <md-button ng-click="send()" class="md-primary" ng-disabled="emailForm.$invalid">
             {{'EMAIL.COMPOSE.SEND' | translate}}

@@ -20,6 +20,8 @@
         "COMPOSE": {
             "FROM": "From",
             "TO": "To",
+            "CC": "CC",
+            "BCC": "BCC",
             "SUBJECT": "Subject",
             "SEND": "Send",
             "CLOSE": "Close",
@@ -29,7 +31,7 @@
                 "SUBJECT_REQUIRED": "Please enter a subject for the email."
             }
         },
-        "NEW": "New Email",
+        "NEW": "Compose",
         "SENT": "Email to {{to}} sent.",
         "CANCELED": "Email canceled",
         "REPLY": "Reply",
