@@ -1,19 +1,50 @@
 .widget {
+  position: relative;
   .widget-title {
-    margin-top: 16px;
-    margin-left: 16px;
-    .md-subhead {
-      color: rgb(117, 117, 117);
-    }
-    .md-body {
-      color: rgb(189, 189, 189);
+    .md-subhead, .md-body-1, .md-body-2 {
+      margin: 0;
     }
   }
-  .google-chart {
-    padding: 0;
+  .widget-content {
+    overflow: hidden;
+    >img {
+      display: block;
+    }
   }
-  &.widget-padded .widget-content {
-    padding: 16px;
+  &[layout="row"] {
+    .widget-title {
+      flex: 0 0 50%;
+
+    }
+  }
+  &.widget-alt {
+    .widget-title {
+      position: absolute;
+      background: rgba(255, 255, 255, .75);
+    }
+    &[layout="column"] {
+      .widget-title {
+        width: 100%;
+        left: 0;
+        top: 0;
+        &[flex-order="2"] {
+          top: auto;
+          bottom: 0;
+        }
+      }
+    }
+    &[layout="row"] {
+      .widget-title {
+        width: 50%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        &[flex-order="2"] {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
   }
 }
 
