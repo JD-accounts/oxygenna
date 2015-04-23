@@ -109,4 +109,8 @@ controller('DashboardController', function ($scope) {
         salesIncreases: 254,
         conversionRate: 22
     };
+
+    $scope.onClickFn = function() {
+        console.log('Clicked!');
+    }
 });

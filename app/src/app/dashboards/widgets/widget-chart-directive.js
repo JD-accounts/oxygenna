@@ -28,7 +28,7 @@ angular.module('triAngularDashboards')
         },
         replace: true,
         link: function($scope, $element, attrs) {
-            var chart = $compile('<widget class="widget-padded" title="title" subtitle="subtitle" menu="menu"><div class="google-chart" google-chart chart="data"/></div></widget>')($scope);
+            var chart = $compile('<widget class="widget-padded" title="title" subtitle="subtitle" menu="menu" title-position="\'top\'"><div class="google-chart" google-chart chart="data"/></div></widget>')($scope);
             $element.replaceWith(chart);
         }
     };
