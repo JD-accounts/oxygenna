@@ -47,6 +47,32 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
         controller: 'ColorsController',
         templateUrl: 'app/ui/colors.tmpl.html',
     })
+    .state('private.admin.toolbar.default.material-icons', {
+        url: '/ui/material-icons',
+        controller: 'MaterialIconsController',
+        templateUrl: 'app/ui/material-icons.tmpl.html',
+        resolve: {
+            icons: function($http, API_CONFIG) {
+                return $http({
+                    method: 'GET',
+                    url: API_CONFIG.url + 'elements/icons',
+                });
+            }
+        }
+    })
+    .state('private.admin.toolbar.default.fa-icons', {
+        url: '/ui/fa-icons',
+        controller: 'FaIconsController',
+        templateUrl: 'app/ui/fa-icons.tmpl.html',
+        resolve: {
+            icons: function($http, API_CONFIG) {
+                return $http({
+                    method: 'GET',
+                    url: API_CONFIG.url + 'elements/icons-fa',
+                });
+            }
+        }
+    })
     .state('private.admin.toolbar.default.themes', {
         url: '/ui/themes',
         controller: 'ThemesController',
@@ -76,12 +102,20 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
             url: '/ui/colors',
             type: 'link',
         },{
-            name: 'Typography',
-            url: '/ui/typography',
+            name: 'Font Awesome',
+            url: '/ui/fa-icons',
+            type: 'link',
+        },{
+            name: 'Material Icons',
+            url: '/ui/material-icons',
             type: 'link',
         },{
             name: 'Themes',
             url: '/ui/themes',
+            type: 'link',
+        },{
+            name: 'Typography',
+            url: '/ui/typography',
             type: 'link',
         }]
     });

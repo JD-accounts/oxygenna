@@ -11,31 +11,25 @@
  * Handles icons element page
  */
 angular.module('triAngularElements').
-controller('IconsController', function ($scope, icons, fa) {
+controller('MaterialIconsController', function ($scope, icons) {
     $scope.icons = [];
-    $scope.families = ['Material Icon Font', 'Font Awesome']
-    $scope.selectedIcon = null;
+    $scope.groups = [];
 
+    $scope.iconSource = 'Select icon below to see HTML';
     // create filterable data structure for icons
     angular.forEach(icons.data, function(iconGroup, groupName) {
         angular.forEach(iconGroup, function(icon, iconName) {
             $scope.icons.push({
                 name: iconName,
-                family: 'Material Icon Font',
+                group: groupName,
                 className: icon
             });
         });
-    });
-
-    angular.forEach(fa.data, function(name, className) {
-        $scope.icons.push({
-            name: name,
-            family: 'Font Awesome',
-            className: className
-        });
+        $scope.groups.push(groupName);
     });
 
     $scope.selectIcon = function(icon) {
-        $scope.selectedIcon = icon;
-    }
+        $scope.iconSource = '<md-icon md-font-icon="' + icon.className + '"></md-icon>';
+    };
+
 });

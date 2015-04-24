@@ -95,12 +95,34 @@
 * Icons Pages
 **/
 
-.elements-icons-box {
-  md-select {
-    margin-top: 0px;
+.elements-icons {
+  md-content {
+    min-width: 400px;
+
+    height: 500px;
+    .md-font {
+      font-size: 24px;
+    }
   }
-  .md-font {
-    font-size: 24px;
+}
+
+$size-list: 16px 24px 32px 48px;
+@each $size in $size-list {
+    $i: index($size-list, $size);
+    .elements-icon-size-#{$i} {
+        width: $size;
+        height: $size;
+        span {
+          font-size: $size;
+        }
+    }
+}
+
+.elements-icons-preview {
+  .elements-icon-small {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
   }
 }
 

@@ -27,6 +27,12 @@ angular.module('triAngularElements', [])
                     method: 'GET',
                     url: API_CONFIG.url + 'elements/icons',
                 });
+            },
+            fa: function($http, API_CONFIG) {
+                return $http({
+                    method: 'GET',
+                    url: API_CONFIG.url + 'elements/icons-fa',
+                });
             }
         }
     })
