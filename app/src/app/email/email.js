@@ -75,12 +75,6 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
                         }
                     }
                     return foundEmail;
-                },
-                contacts: function($http, API_CONFIG) {
-                    return $http({
-                        method: 'GET',
-                        url: API_CONFIG.url + 'email/contacts',
-                    });
                 }
             },
             onEnter: function($state, email){
