@@ -21,10 +21,15 @@ angular.module('triAngularForms', [])
         templateUrl: 'app/forms/binding.tmpl.html',
         controller: 'BindingController'
     })
+    .state('private.admin.toolbar.default.autocomplete', {
+        url: '/forms/autocomplete',
+        templateUrl: 'app/forms/autocomplete.tmpl.html',
+        controller: 'AutocompleteController',
+        controllerAs: 'ctrl',
+    })
     .state('private.admin.toolbar.default.validation', {
         url: '/forms/validation',
-        templateUrl: 'app/forms/validation.tmpl.html',
-        // controller: 'FormsController'
+        templateUrl: 'app/forms/validation.tmpl.html'
     });
 
 })
@@ -35,13 +40,17 @@ angular.module('triAngularForms', [])
         type: 'dropdown',
         priority: 3.3,
         children: [{
-            name: 'FORMS.MENU.INPUTS',
+            name: 'FORMS.MENU.AUTOCOMPLETE',
             type: 'link',
-            url: 'forms/inputs'
+            url: 'forms/autocomplete'
         },{
             name: 'FORMS.MENU.BINDING',
             type: 'link',
             url: 'forms/binding'
+        },{
+            name: 'FORMS.MENU.INPUTS',
+            type: 'link',
+            url: 'forms/inputs'
         },{
             name: 'FORMS.MENU.VALIDATION',
             type: 'link',
