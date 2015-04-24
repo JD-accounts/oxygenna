@@ -25,7 +25,8 @@ angular.module('triAngularDashboards')
         scope: {
             title: '=',
             subtitle: '=',
-            menu: '='
+            menu: '=',
+            titlePosition: '='
         },
         link: function($scope, $element, attrs) {
             $mdTheming($element);
