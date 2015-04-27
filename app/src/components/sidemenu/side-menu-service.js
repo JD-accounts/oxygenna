@@ -30,21 +30,6 @@ angular.module('triAngular')
         getMenu: function() {
             return menu;
         },
-        translate: function() {
-            // gather all the names used in all menus
-            // also add depth attribute
-            var names = [];
-            service.traverseMenu(function(item, depth) {
-                item.depth = depth;
-                names.push(item.name);
-            });
-            // translate all nanes and replace them with translations
-            $translate(names).then(function(translations) {
-                service.traverseMenu(function(item) {
-                    item.name = translations[item.name];
-                });
-            });
-        },
         traverseMenu: function(callback) {
             traverse(menu, callback);
         },

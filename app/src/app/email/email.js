@@ -10,17 +10,17 @@
 angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 .constant('EMAIL_ROUTES', [{
     state: 'inbox',
-    name: 'EMAIL.MENU.INBOX',
+    name: 'MENU.EMAIL.INBOX',
     url: '/inbox',
     icon: 'icon-inbox'
 },{
     state: 'trash',
-    name: 'EMAIL.MENU.TRASH',
+    name: 'MENU.EMAIL.TRASH',
     url: '/trash',
     icon: 'icon-remove-circle'
 },{
     state: 'sent',
-    name: 'EMAIL.MENU.SENT',
+    name: 'MENU.EMAIL.SENT',
     url: '/sent',
     icon: 'icon-mail'
 }])
@@ -115,7 +115,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 })
 .run(function(SideMenu, $translate, EMAIL_ROUTES) {
     var emailMenu = {
-        name: 'EMAIL.MENU.EMAIL',
+        name: 'MENU.EMAIL.EMAIL',
         icon: 'icon-email',
         type: 'dropdown',
         priority: 2.2,

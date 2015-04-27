@@ -93,28 +93,28 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
 
     // setup ui
     SideMenu.addMenu({
-        name: 'UI',
+        name: 'MENU.UI.UI',
         icon: 'icon-straighten',
         type: 'dropdown',
         priority: 3.2,
         children: [{
-            name: 'Colors',
+            name: 'MENU.UI.COLORS',
             url: '/ui/colors',
             type: 'link',
         },{
-            name: 'Font Awesome',
+            name: 'MENU.UI.FONT_AWESOME',
             url: '/ui/fa-icons',
             type: 'link',
         },{
-            name: 'Material Icons',
+            name: 'MENU.UI.MATERIAL_ICONS',
             url: '/ui/material-icons',
             type: 'link',
         },{
-            name: 'Themes',
+            name: 'MENU.UI.THEMES',
             url: '/ui/themes',
             type: 'link',
         },{
-            name: 'Typography',
+            name: 'MENU.UI.TYPOGRAPHY',
             url: '/ui/typography',
             type: 'link',
         }]

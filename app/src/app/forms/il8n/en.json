@@ -1,11 +1,2 @@
 {
-    "FORMS": {
-        "MENU": {
-            "FORMS": "Forms",
-            "INPUTS": "Inputs",
-            "BINDING": "Data Binding",
-            "AUTOCOMPLETE": "Autocomplete",
-            "VALIDATION": "Validation"
-        }
-    }
 }

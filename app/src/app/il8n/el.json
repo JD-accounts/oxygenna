@@ -1,23 +1,58 @@
 {
-    "LOGIN": {
-        "TITLE": "σύνδεση",
+    "MENU": {
+        "AUTH": {
+            "AUTH": "Authentication GR",
+            "LOGIN": "Login GR",
+            "SIGN_UP": "Sign Up GR",
+            "FORGOT": "Forgot Password GR",
+            "LOCK": "Lock Page GR"
+        },
+        "DASHBOARDS": {
+            "DASHBOARDS": "Dashboards GR",
+            "DASHBOARD": "Dashboard GR"
+        },
         "EMAIL": {
-            "LABEL": "email",
-            "PLEASE_ENTER": "Παρακαλώ εισάγετε τη διεύθυνση email σας.",
-            "PLEASE_VALID": "Παρακαλώ εισάγετε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου."
+            "EMAIL": "Email GR",
+            "INBOX": "Inbox GR",
+            "TRASH": "Trash GR",
+            "SENT": "Sent GR"
         },
-        "PASSWORD": {
-            "LABEL": "password",
-            "PLEASE_ENTER": "Παρακαλώ εισάγετε τον κωδικό πρόσβασης σας."
+        "ELEMENTS": {
+            "ELEMENTS": "Elements GR",
+            "BUTTONS": "Buttons GR",
+            "CARDS": "Cards GR",
+            "ICONS": "Icons GR",
+            "CHECKBOXES": "Checkboxes GR",
+            "SWITCHES": "Switches GR",
+            "RADIOS": "Radios GR",
+            "DIALOGS": "Dialogs GR",
+            "GRIDS": "Grids GR",
+            "TABS": "Tabs GR",
+            "SLIDERS": "Sliders GR",
+            "SELECTS": "Selects GR",
+            "PROGRESS": "Progress GR",
+            "SIDEBARS": "Sidebars GR",
+            "TOOLBARS": "Toolbars GR",
+            "TOOLTIPS": "Tooltips GR",
+            "WHITEFRAMES": "Whiteframes GR",
+            "TOASTS": "Toasts GR",
+            "LISTS": "Lists GR",
+            "CHIPS": "Chips GR"
         },
-        "ALT": {
-            "TITLE": "Ή συνδεθείτε με",
-            "FACEBOOK": "Facebook",
-            "TWITTER": "Twitter"
+        "FORMS": {
+            "FORMS": "Forms GR",
+            "INPUTS": "Inputs GR",
+            "BINDING": "Data Binding GR",
+            "AUTOCOMPLETE": "Autocomplete GR",
+            "VALIDATION": "Validation GR"
         },
-        "SIGN_UP": {
-            "TITLE": "Εγγραφή",
-            "BUTTON": "Εγγραφείτε τώρα"
+        "INTRODUCTION": {
+            "INTRODUCTION": "Introduction GR"
+        }
+    },
+    "ADMIN": {
+        "TOOLBAR": {
+            "SIDEBAR_TOGGLE": "Toggle Menu"
         }
     }
 }

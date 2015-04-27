@@ -43,24 +43,24 @@ angular.module('triAngularAuthentication', ['ui.gravatar'])
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
-        name: 'Authentication',
+        name: 'MENU.AUTH.AUTH',
         icon: 'icon-person',
         type: 'dropdown',
         priority: 4.1,
         children: [{
-            name: 'Login',
+            name: 'MENU.AUTH.LOGIN',
             url: '/login',
             type: 'link',
         },{
-            name: 'Sign Up',
+            name: 'MENU.AUTH.SIGN_UP',
             url: '/signup',
             type: 'link',
         },{
-            name: 'Forgot Password',
+            name: 'MENU.AUTH.FORGOT',
             url: '/forgot',
             type: 'link',
         },{
-            name: 'Lock Page',
+            name: 'MENU.AUTH.LOCK',
             url: '/lock',
             type: 'link',
         }]

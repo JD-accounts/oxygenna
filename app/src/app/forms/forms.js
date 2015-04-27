@@ -35,24 +35,24 @@ angular.module('triAngularForms', [])
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
-        name: 'FORMS.MENU.FORMS',
+        name: 'MENU.FORMS.FORMS',
         icon: 'icon-event-available',
         type: 'dropdown',
         priority: 3.3,
         children: [{
-            name: 'FORMS.MENU.AUTOCOMPLETE',
+            name: 'MENU.FORMS.AUTOCOMPLETE',
             type: 'link',
             url: 'forms/autocomplete'
         },{
-            name: 'FORMS.MENU.BINDING',
+            name: 'MENU.FORMS.BINDING',
             type: 'link',
             url: 'forms/binding'
         },{
-            name: 'FORMS.MENU.INPUTS',
+            name: 'MENU.FORMS.INPUTS',
             type: 'link',
             url: 'forms/inputs'
         },{
-            name: 'FORMS.MENU.VALIDATION',
+            name: 'MENU.FORMS.VALIDATION',
             type: 'link',
             url: 'forms/validation'
         }]

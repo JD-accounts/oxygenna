@@ -16,10 +16,12 @@ angular.module('triAngularIntroduction', [])
         url: '/introduction',
         templateUrl: 'app/introduction/introduction.tmpl.html',
     });
+
+
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
-        name: 'Introduction',
+        name: 'MENU.INTRODUCTION.INTRODUCTION',
         url: '/introduction',
         type: 'link',
         icon: 'icon-info-outline',

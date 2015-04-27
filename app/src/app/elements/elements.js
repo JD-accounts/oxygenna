@@ -132,84 +132,84 @@ angular.module('triAngularElements', [])
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
-        name: 'ELEMENTS.MENU.ELEMENTS',
+        name: 'MENU.ELEMENTS.ELEMENTS',
         icon: 'icon-school',
         type: 'dropdown',
         priority: 3.1,
         children: [{
-            name: 'ELEMENTS.MENU.BUTTONS',
+            name: 'MENU.ELEMENTS.BUTTONS',
             type: 'link',
             url: 'elements/buttons'
         },{
-            name: 'ELEMENTS.MENU.CARDS',
+            name: 'MENU.ELEMENTS.CARDS',
             type: 'link',
             url: 'elements/cards'
         },{
-            name: 'ELEMENTS.MENU.CHECKBOXES',
+            name: 'MENU.ELEMENTS.CHECKBOXES',
             type: 'link',
             url: 'elements/checkboxes'
         },{
-            name: 'ELEMENTS.MENU.CHIPS',
+            name: 'MENU.ELEMENTS.CHIPS',
             type: 'link',
             url: 'elements/chips'
         },{
-            name: 'ELEMENTS.MENU.DIALOGS',
+            name: 'MENU.ELEMENTS.DIALOGS',
             type: 'link',
             url: 'elements/dialogs'
         },{
-            name: 'ELEMENTS.MENU.GRIDS',
+            name: 'MENU.ELEMENTS.GRIDS',
             type: 'link',
             url: 'elements/grids'
         },{
-            name: 'ELEMENTS.MENU.ICONS',
+            name: 'MENU.ELEMENTS.ICONS',
             type: 'link',
             url: 'elements/icons'
         },{
-            name: 'ELEMENTS.MENU.LISTS',
+            name: 'MENU.ELEMENTS.LISTS',
             type: 'link',
             url: 'elements/lists'
         },{
-            name: 'ELEMENTS.MENU.PROGRESS',
+            name: 'MENU.ELEMENTS.PROGRESS',
             type: 'link',
             url: 'elements/progress'
         },{
-            name: 'ELEMENTS.MENU.RADIOS',
+            name: 'MENU.ELEMENTS.RADIOS',
             type: 'link',
             url: 'elements/radios'
         },{
-            name: 'ELEMENTS.MENU.SELECTS',
+            name: 'MENU.ELEMENTS.SELECTS',
             type: 'link',
             url: 'elements/selects'
         },{
-            name: 'ELEMENTS.MENU.SIDEBARS',
+            name: 'MENU.ELEMENTS.SIDEBARS',
             type: 'link',
             url: 'elements/sidebars'
         },{
-            name: 'ELEMENTS.MENU.SLIDERS',
+            name: 'MENU.ELEMENTS.SLIDERS',
             type: 'link',
             url: 'elements/sliders'
         },{
-            name: 'ELEMENTS.MENU.SWITCHES',
+            name: 'MENU.ELEMENTS.SWITCHES',
             type: 'link',
             url: 'elements/switches'
         },{
-            name: 'ELEMENTS.MENU.TABS',
+            name: 'MENU.ELEMENTS.TABS',
             type: 'link',
             url: 'elements/tabs'
         },{
-            name: 'ELEMENTS.MENU.TOASTS',
+            name: 'MENU.ELEMENTS.TOASTS',
             type: 'link',
             url: 'elements/toasts'
         },{
-            name: 'ELEMENTS.MENU.TOOLBARS',
+            name: 'MENU.ELEMENTS.TOOLBARS',
             type: 'link',
             url: 'elements/toolbars'
         },{
-            name: 'ELEMENTS.MENU.TOOLTIPS',
+            name: 'MENU.ELEMENTS.TOOLTIPS',
             type: 'link',
             url: 'elements/tooltips'
         },{
-            name: 'ELEMENTS.MENU.WHITEFRAMES',
+            name: 'MENU.ELEMENTS.WHITEFRAMES',
             type: 'link',
             url: 'elements/whiteframes'
         }]

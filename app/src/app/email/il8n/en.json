@@ -1,11 +1,5 @@
 {
     "EMAIL": {
-        "MENU": {
-            "EMAIL": "Email",
-            "INBOX": "Inbox",
-            "TRASH": "Trash",
-            "SENT": "Sent"
-        },
         "TOOLBAR": {
             "SEARCH": "Search"
         },

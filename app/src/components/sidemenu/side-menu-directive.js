@@ -22,9 +22,6 @@ angular.module('triAngular')
         template: '<md-content><side-menu-item ng-repeat="item in menu | orderBy:\'priority\'" item="item"></side-menu-item></md-content>',
         scope: {},
         controller: function($scope, $element) {
-            // make sure all menu names are translated
-            SideMenu.translate();
-
             // get the menu structure from the menu service
             $scope.menu = SideMenu.getMenu();
 
