@@ -1,58 +1,75 @@
 {
     "MENU": {
         "AUTH": {
-            "AUTH": "Authentication GR",
-            "LOGIN": "Login GR",
-            "SIGN_UP": "Sign Up GR",
-            "FORGOT": "Forgot Password GR",
-            "LOCK": "Lock Page GR"
+            "AUTH": "Έλεγχος ταυτότητας",
+            "LOGIN": "Σύνδεση",
+            "SIGN_UP": "Εγγραφείτε",
+            "FORGOT": "Ξέχασα Τον Κωδικό Μου",
+            "LOCK": "Σελίδα Κλείδωμα"
         },
         "DASHBOARDS": {
-            "DASHBOARDS": "Dashboards GR",
-            "DASHBOARD": "Dashboard GR"
+            "DASHBOARDS": "Πίνακες εργαλείων",
+            "DASHBOARD": "Ταμπλό"
         },
         "EMAIL": {
-            "EMAIL": "Email GR",
-            "INBOX": "Inbox GR",
-            "TRASH": "Trash GR",
-            "SENT": "Sent GR"
+            "EMAIL": "Ηλεκτρονικού ταχυδρομείου",
+            "INBOX": "Εισερχόμενα",
+            "TRASH": "Σκουπίδια",
+            "SENT": "Έστειλε"
         },
         "ELEMENTS": {
-            "ELEMENTS": "Elements GR",
-            "BUTTONS": "Buttons GR",
-            "CARDS": "Cards GR",
-            "ICONS": "Icons GR",
-            "CHECKBOXES": "Checkboxes GR",
-            "SWITCHES": "Switches GR",
-            "RADIOS": "Radios GR",
-            "DIALOGS": "Dialogs GR",
-            "GRIDS": "Grids GR",
-            "TABS": "Tabs GR",
-            "SLIDERS": "Sliders GR",
-            "SELECTS": "Selects GR",
-            "PROGRESS": "Progress GR",
-            "SIDEBARS": "Sidebars GR",
-            "TOOLBARS": "Toolbars GR",
-            "TOOLTIPS": "Tooltips GR",
-            "WHITEFRAMES": "Whiteframes GR",
-            "TOASTS": "Toasts GR",
-            "LISTS": "Lists GR",
-            "CHIPS": "Chips GR"
+            "ELEMENTS": "Στοιχεία",
+            "BUTTONS": "Κουμπιά",
+            "CARDS": "Κάρτες",
+            "ICONS": "Εικόνες",
+            "CHECKBOXES": "Πλαίσια ελέγχου",
+            "SWITCHES": "Διακόπτες",
+            "RADIOS": "Ραδιόφωνα",
+            "DIALOGS": "Διάλογοι",
+            "GRIDS": "Δίκτυα",
+            "TABS": "Καρτέλες",
+            "SLIDERS": "Ρυθμιστικά",
+            "SELECTS": "Επιλέγει",
+            "PROGRESS": "Πρόοδος",
+            "SIDEBARS": "Πλαϊνές μπάρες",
+            "TOOLBARS": "Γραμμές εργαλείων",
+            "TOOLTIPS": "Επεξηγήσεις",
+            "WHITEFRAMES": "Whiteframes",
+            "TOASTS": "Τοστ",
+            "LISTS": "Λίστες",
+            "CHIPS": "Μάρκες"
         },
         "FORMS": {
-            "FORMS": "Forms GR",
-            "INPUTS": "Inputs GR",
-            "BINDING": "Data Binding GR",
-            "AUTOCOMPLETE": "Autocomplete GR",
-            "VALIDATION": "Validation GR"
+            "FORMS": "Μορφές",
+            "INPUTS": "Είσοδοι",
+            "BINDING": "Σύνδεση Δεδομένων",
+            "AUTOCOMPLETE": "Αυτόματη συμπλήρωση",
+            "VALIDATION": "Επικύρωση"
         },
         "INTRODUCTION": {
-            "INTRODUCTION": "Introduction GR"
+            "INTRODUCTION": "Εισαγωγή"
+        },
+        "LEVELS": {
+            "LEVELS": "Τα επίπεδα",
+            "1-1": "Επίπεδο 1-1",
+            "2-1": "Επίπεδο 2-1",
+            "3-1": "Επίπεδο 3-1",
+            "4-1": "Επίπεδο 4-1",
+            "4-2": "Επίπεδο 4-2",
+            "4-3": "Επίπεδο 4-3"
+        },
+        "UI": {
+            "UI": "UI",
+            "COLORS": "Χρώματα",
+            "FONT_AWESOME": "Φοβερό Γραμματοσειράς",
+            "MATERIAL_ICONS": "Υλικό Εικονίδια",
+            "THEMES": "Θέματα",
+            "TYPOGRAPHY": "Τυπογραφία"
         }
     },
     "ADMIN": {
         "TOOLBAR": {
-            "SIDEBAR_TOGGLE": "Toggle Menu"
+            "SIDEBAR_TOGGLE": "Εναλλαγή Μενού"
         }
     }
 }
