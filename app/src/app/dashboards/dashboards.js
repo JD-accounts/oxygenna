@@ -20,12 +20,12 @@ angular.module('triAngularDashboards', [])
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
-        name: 'Dashboards',
+        name: 'MENU.DASHBOARDS.DASHBOARDS',
         icon: 'icon-home',
         type: 'dropdown',
         priority: 2.1,
         children: [{
-            name: 'Dashboard',
+            name: 'MENU.DASHBOARDS.DASHBOARD',
             url: '/dashboard',
             type: 'link',
         }]

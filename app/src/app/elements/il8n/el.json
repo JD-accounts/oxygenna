@@ -1,23 +1,26 @@
 {
-    "LOGIN": {
-        "TITLE": "σύνδεση",
-        "EMAIL": {
-            "LABEL": "email",
-            "PLEASE_ENTER": "Παρακαλώ εισάγετε τη διεύθυνση email σας.",
-            "PLEASE_VALID": "Παρακαλώ εισάγετε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου."
-        },
-        "PASSWORD": {
-            "LABEL": "password",
-            "PLEASE_ENTER": "Παρακαλώ εισάγετε τον κωδικό πρόσβασης σας."
-        },
-        "ALT": {
-            "TITLE": "Ή συνδεθείτε με",
-            "FACEBOOK": "Facebook",
-            "TWITTER": "Twitter"
-        },
-        "SIGN_UP": {
-            "TITLE": "Εγγραφή",
-            "BUTTON": "Εγγραφείτε τώρα"
+    "ELEMENTS": {
+        "MENU": {
+            "ELEMENTS": "Στοιχεία",
+            "BUTTONS": "Κουμπιά",
+            "CARDS": "Cards",
+            "ICONS": "Icons",
+            "CHECKBOXES": "Checkboxes",
+            "SWITCHES": "Switches",
+            "RADIOS": "Radios",
+            "DIALOGS": "Dialogs",
+            "GRIDS": "Grids",
+            "TABS": "Tabs",
+            "SLIDERS": "Sliders",
+            "SELECTS": "Selects",
+            "PROGRESS": "Progress",
+            "SIDEBARS": "Sidebars",
+            "TOOLBARS": "Toolbars",
+            "TOOLTIPS": "Tooltips",
+            "WHITEFRAMES": "Whiteframes",
+            "TOASTS": "Toasts",
+            "LISTS": "Lists",
+            "CHIPS": "Chips"
         }
     }
 }
