@@ -8,7 +8,6 @@
 }
 .email-inbox-list-item {
   transition: all .2s;
-
   &.active {
     background: rgba(0,0,0, .05);
   }
@@ -17,6 +16,9 @@
       display: block;
       animation: swing 1s;
     }
+  }
+  .md-list-item-text {
+    white-space: normal;
   }
 }
 
