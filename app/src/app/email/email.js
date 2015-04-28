@@ -95,7 +95,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
             focussed: 'focussed',
             toolbar: 'editor-toolbar',
             toolbarGroup: 'editor-group',
-            toolbarButton: '',
+            toolbarButton: 'md-button',
             toolbarButtonActive: '',
             disabled: '',
             textEditor: 'form-control',
