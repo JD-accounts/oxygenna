@@ -1,9 +1,29 @@
 
-.email-dialog-to-row {
+.email-dialog-to {
   box-shadow: 0 1px rgb(224,224,224);
   .md-icon-button {
     margin: 0px;
   }
+  .md-chips {
+    box-shadow: none;
+  }
+}
+.email-dialog-ccs {
+  max-height: 400px;
+  opacity: 1;
+  overflow: hidden;
+  transition: all .5s;
+  md-contact-chips {
+    box-shadow: 0 -1px rgb(224,224,224) inset;
+  }
+  .md-chips {
+    box-shadow: none;
+  }
+}
+.email-dialog-ccs.ng-hide {
+  display: block !important;
+  max-height: 0;
+  opacity: 0;
 }
 
 .email-dialog text-angular {

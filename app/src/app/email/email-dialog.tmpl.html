@@ -1,5 +1,5 @@
 <md-dialog class="email-dialog" flex="80" flex-sm="100">
-    <md-toolbar class="toolbar-default" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}">
+    <md-toolbar class="toolbar-default" md-theme="white">
         <div class="md-toolbar-tools">
             <h2>
               <span>{{title}}</span>
@@ -15,7 +15,7 @@
 
     <md-content>
         <form name="emailForm" novalidate>
-            <div class="email-dialog-to-row" layout="row">
+            <div class="email-dialog-to" layout="row">
                 <md-contact-chips
                     flex
                     ng-model="email.to"
@@ -33,7 +33,7 @@
                 </md-button>
             </div>
 
-            <div class="email-dialog-ccs" layout="column" ng-show="showCCS">
+            <div class="email-dialog-ccs ng-hide" layout="column" ng-show="showCCS" >
                 <md-contact-chips
                     ng-model="email.cc"
                     md-contacts="queryContacts($query)"
