@@ -1,10 +1,22 @@
 <md-toolbar class="toolbar-default" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}">
     <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" hide-gt-md aria-label="Toggle Menu" ng-click="openMenu()">
+        <md-button class="md-icon-button" hide-gt-md aria-label="Toggle Menu" ng-click="openSideNav('left')">
             <md-icon md-font-icon="icon-menu"></md-icon>
         </md-button>
         <h2 flex breadcrumbs="menu"></h2>
 
+        <md-button class="md-icon-button" ng-click="toggleNotificationsTab(0)" aria-label="Open Notifications">
+            <md-icon md-font-icon="icon-email"></md-icon>
+            <span class="icon-badge">4</span>
+        </md-button>
+        <md-button class="md-icon-button" ng-click="toggleNotificationsTab(1)" aria-label="Open Notifications">
+            <md-icon md-font-icon="fa fa-bell-o"></md-icon>
+            <span class="icon-badge">2</span>
+        </md-button>
+        <md-button>
+            <img class="toolbar-user-avatar" src="assets/images/avatars/avatar-5.png">
+            Christos
+        </md-button>
         <md-button class="md-icon-button" ng-click="switchLanguage('en')" aria-label="Change Language EN">
             en
         </md-button>
