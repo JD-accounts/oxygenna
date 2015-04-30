@@ -7,6 +7,17 @@
   }
 }
 
+.toolbar-default-icon-badge {
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: red;
+  left: 0;
+  top: 0;
+  line-height: 2.5rem;
+  border-radius: 50%;
+  transform: translate(-1.5rem, -1rem);
+}
 
 // Toolbar Search
 .toolbar-search {
