@@ -17,7 +17,7 @@
                                 <p class="md-caption" am-time-ago="email.date"></p>
                             </div>
                             <h4>{{email.subject}}</h4>
-                            <p>{{email.content[0] | cut:true:150:' ...'}}</p>
+                            <p>{{email.content[0] | cut:true:80:' ...'}}</p>
                         </div>
 
                         <md-divider ng-hide="$last"></md-divider>
