@@ -4,7 +4,7 @@
             {{name}}
         </h2>
     </md-toolbar>
-    <md-content class="ui-color-dialog-content">
+    <md-dialog-content class="sticky-container ui-color-dialog-content">
         <div class="dialog-content">
             <md-list>
                 <md-list-item ng-repeat="color in palette" ng-style="itemStyle(color.palette)">
@@ -14,5 +14,5 @@
                 </md-list-item>
             </md-list>
         </div>
-    </md-content>
+    </md-dialog-content>
 </md-dialog>
