@@ -9,7 +9,8 @@
         },
         "DASHBOARDS": {
             "DASHBOARDS": "Πίνακες εργαλείων",
-            "DASHBOARD": "Ταμπλό"
+            "DASHBOARD": "Ταμπλό",
+            "WIDGETS": "Μαραφέτια"
         },
         "EMAIL": {
             "EMAIL": "Ηλεκτρονικού ταχυδρομείου",
