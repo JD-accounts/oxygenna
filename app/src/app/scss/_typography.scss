@@ -83,15 +83,13 @@ code.hljs.html, code.hljs.javascript {
   font-size: 1.400rem;
 }
 
+// Font Icons
+md-icon[md-font-icon] {
+  height: auto;
+  font-size: 2rem;
+}
 
 // Text align classes
 .text-center {
   text-align: center;
-}
-
-.md-fab, .md-icon-button {
-  md-icon .md-font {
-    font-size: 2.400rem;
-    display: block;
-  }
 }
