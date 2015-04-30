@@ -13,7 +13,7 @@
   opacity: 1;
   overflow: hidden;
   transition: all .5s;
-  md-contact-chips {
+  md-contact-chips:last-child {
     box-shadow: 0 -1px rgb(224,224,224) inset;
   }
   .md-chips {
