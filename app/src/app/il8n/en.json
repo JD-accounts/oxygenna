@@ -9,7 +9,8 @@
         },
         "DASHBOARDS": {
             "DASHBOARDS": "Dashboards",
-            "DASHBOARD": "Dashboard"
+            "DASHBOARD": "Dashboard",
+            "WIDGETS": "Widgets"
         },
         "EMAIL": {
             "EMAIL": "Email",
