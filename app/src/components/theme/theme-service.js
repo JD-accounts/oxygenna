@@ -17,6 +17,22 @@ angular.module('triAngular')
             }
 
             var service = {
+                getMdClasses: function($element) {
+                    return $.grep($element[0].className.split(' '), function(v, i){
+                       return v.indexOf('md-') === 0;
+                    });
+                },
+                filterIntentClass: function(mdClasses) {
+                    var intentClass = '';
+                    var intentClasses = ['md-primary', 'md-accent', 'md-warn'];
+                    for (var i = 0; i < intentClasses.length; i++) {
+                        if(mdClasses.indexOf(intentClasses[i]) === 0) {
+                            intentClass = intentClasses[i].replace('md-', '');
+                            break;
+                        }
+                    };
+                    return intentClass;
+                },
                 getElementTheme: function(elementName) {
                     // always return default theme if no theme is set for this element
                     return undefined === themeableElements[elementName] ? 'default' : themeableElements[elementName];

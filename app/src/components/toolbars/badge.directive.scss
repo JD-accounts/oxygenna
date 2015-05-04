@@ -1,0 +1,13 @@
+$tri-badge-size: 2.2rem;
+
+.tri-badge {
+  display: inline-block;
+  height: $tri-badge-size;
+  width: $tri-badge-size;
+  background: red;
+  left: 0;
+  top: 0;
+  line-height: $tri-badge-size;
+  border-radius: 50%;
+  transform: translate(-1.5rem, -1rem);
+}
