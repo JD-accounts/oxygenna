@@ -1,0 +1,11 @@
+{
+    "MENU": {
+        "CHARTS": {
+            "CHARTS": "Charts",
+            "GOOGLE": "Google",
+            "BAR": "Material Bar",
+            "LINE": "Material Line",
+            "SCATTER": "Material Scatter"
+        }
+    }
+}

@@ -23,7 +23,7 @@ angular.module('triAngularMenuLevels', [])
         name: 'MENU.LEVELS.LEVELS',
         icon: 'icon-receipt',
         type: 'dropdown',
-        priority: 5.1,
+        priority: 6.1,
         children: [{
             name: 'MENU.LEVELS.1-1',
             type: 'dropdown',
