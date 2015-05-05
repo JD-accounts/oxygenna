@@ -28,10 +28,10 @@
             </md-tab-label>
             <md-tab-body>
                 <md-content>
-                    <md-list class="admin-notifications-alerts">
+                    <md-list>
                         <div ng-repeat="group in notificationGroups">
-                            <md-subheader class="md-no-sticky">{{group.name}}</md-subheader>
-                            <md-list-item ng-repeat="notification in group.notifications">
+                            <md-subheader class="md-accent">{{group.name}}</md-subheader>
+                            <md-list-item ng-repeat="notification in group.notifications" layout="row" layout-align="space-between center">
                                 <md-icon md-font-icon="{{notification.icon}}"></md-icon>
                                 <p>{{notification.title}}</p>
                                 <span class="md-caption" am-time-ago="notification.date"></span>
@@ -49,15 +49,15 @@
                 <md-content>
                     <md-list>
                         <div ng-repeat="group in settingsGroups">
-                            <md-subheader class="md-no-sticky">{{group.name | translate}}</md-subheader>
-                            <md-list-item ng-repeat="setting in group.settings">
+                            <md-subheader class="md-accent">{{group.name | translate}}</md-subheader>
+                            <md-list-item ng-repeat="setting in group.settings" layout="row" layout-align="space-around center">
                                 <md-icon md-font-icon="{{setting.icon}}"></md-icon>
                                 <p>{{setting.title | translate}}</p>
                                 <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch>
                             </md-list-item>
                         </div>
                         <div ng-repeat="group in statisticsGroups">
-                            <md-subheader class="md-no-sticky">{{group.name | translate}}</md-subheader>
+                            <md-subheader class="md-accent">{{group.name | translate}}</md-subheader>
                             <md-list-item ng-repeat="stat in group.stats" layout="column" layout-align="space-around start">
                                 <p>{{stat.title | translate}}</p>
                                 <md-progress-linear md-mode="determinate" ng-value="stat.value"></md-progress-linear>
