@@ -14,12 +14,17 @@
     line-height: 4rem;
   }
   // List item font size
-  md-list-item p {
-    font-size: 1.3rem;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    margin-right: 2rem;
+  md-list-item {
+    p {
+      font-size: 1.3rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin-right: 2rem;
+    }
+    md-icon, .md-list-item-inner md-icon {
+      margin-right: 12px;
+    }
   }
   // List items in column layout
   md-list-item[layout="column"] {
