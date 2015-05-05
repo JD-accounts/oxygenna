@@ -1,5 +1,16 @@
+
+.admin-notifications {
+  md-tabs-canvas, md-pagination-wrapper {
+    height: 64px;
+  }
+  md-tabs-content-wrapper {
+    top: 64px;
+  }
+}
 .admin-notifications .md-tab .md-font {
   font-size: 2.0rem;
+  vertical-align: middle;
+  line-height: 4rem;
 }
 
 .admin-notifications-alerts .md-font {
