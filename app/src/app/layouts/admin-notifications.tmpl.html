@@ -32,7 +32,7 @@
                         <div ng-repeat="group in notificationGroups">
                             <md-subheader class="md-accent">{{group.name}}</md-subheader>
                             <md-list-item ng-repeat="notification in group.notifications" layout="row" layout-align="space-between center">
-                                <md-icon md-font-icon="{{notification.icon}}"></md-icon>
+                                <md-icon md-font-icon="{{notification.icon}}" ng-style="{ color: notification.iconColor }"></md-icon>
                                 <p>{{notification.title}}</p>
                                 <span class="md-caption" am-time-ago="notification.date"></span>
                             </md-list-item>
@@ -60,7 +60,7 @@
                             <md-subheader class="md-accent">{{group.name | translate}}</md-subheader>
                             <md-list-item ng-repeat="stat in group.stats" layout="column" layout-align="space-around start">
                                 <p>{{stat.title | translate}}</p>
-                                <md-progress-linear md-mode="determinate" ng-value="stat.value"></md-progress-linear>
+                                <md-progress-linear ng-class="stat.mdClass" md-mode="determinate" ng-value="stat.value"></md-progress-linear>
                             </md-list-item>
                         </div>
                     </md-list>

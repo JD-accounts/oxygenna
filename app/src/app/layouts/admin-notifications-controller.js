@@ -37,18 +37,22 @@ controller('AdminNotificationsController', function ($scope, $http, $mdSidenav, 
         notifications: [{
             title: 'Mention from oxygenna',
             icon: 'fa fa-twitter',
+            iconColor: '#55acee',
             date: moment().startOf('hour'),
         },{
             title: 'Oxygenna',
             icon: 'fa fa-twitter',
+            iconColor: '#55acee',
             date: moment().startOf('hour'),
         },{
             title: 'Oxygenna',
             icon: 'fa fa-twitter',
+            iconColor: '#55acee',
             date: moment().startOf('hour'),
         },{
             title: 'Followed by Oxygenna',
             icon: 'fa fa-twitter',
+            iconColor: '#55acee',
             date: moment().startOf('hour'),
         }]
     },{
@@ -56,14 +60,17 @@ controller('AdminNotificationsController', function ($scope, $http, $mdSidenav, 
         notifications: [{
             title: 'Server Down',
             icon: 'icon-error',
+            iconColor: 'rgb(244, 67, 54)',
             date: moment().startOf('hour'),
         },{
             title: 'Slow Response Time',
             icon: 'icon-warning',
+            iconColor: 'rgb(255, 152, 0)',
             date: moment().startOf('hour'),
         },{
             title: 'Server Down',
             icon: 'icon-error',
+            iconColor: 'rgb(244, 67, 54)',
             date: moment().startOf('hour'),
         }]
     },{
@@ -71,26 +78,32 @@ controller('AdminNotificationsController', function ($scope, $http, $mdSidenav, 
         notifications: [{
             title: 'Triangular Admin $21',
             icon: 'icon-shopping-cart',
+            iconColor: 'rgb(76, 175, 80)',
             date: moment().startOf('hour'),
         },{
             title: 'Lambda WordPress $60',
             icon: 'icon-shopping-cart',
+            iconColor: 'rgb(76, 175, 80)',
             date: moment().startOf('hour'),
         },{
             title: 'Triangular Admin $21',
             icon: 'icon-shopping-cart',
+            iconColor: 'rgb(76, 175, 80)',
             date: moment().startOf('hour'),
         },{
             title: 'Triangular Admin $21',
             icon: 'icon-shopping-cart',
+            iconColor: 'rgb(76, 175, 80)',
             date: moment().startOf('hour'),
         },{
             title: 'Lambda WordPress $60',
             icon: 'icon-shopping-cart',
+            iconColor: 'rgb(76, 175, 80)',
             date: moment().startOf('hour'),
         },{
             title: 'Triangular Admin $21',
             icon: 'icon-shopping-cart',
+            iconColor: 'rgb(76, 175, 80)',
             date: moment().startOf('hour'),
         }]
     }];
@@ -133,10 +146,31 @@ controller('AdminNotificationsController', function ($scope, $http, $mdSidenav, 
         name: 'ADMIN.NOTIFICATIONS.USER_STATS',
         stats: [{
             title: 'ADMIN.NOTIFICATIONS.STORAGE_SPACE',
+            mdClass: 'md-primary',
             value: 60
         },{
             title: 'ADMIN.NOTIFICATIONS.BANDWIDTH_USAGAE',
+            mdClass: 'md-accent',
             value: 10
+        },{
+            title: 'ADMIN.NOTIFICATIONS.MEMORY_USAGAE',
+            mdClass: 'md-warn',
+            value: 100
+        }]
+    },{
+        name: 'ADMIN.NOTIFICATIONS.SERVER_STATS',
+        stats: [{
+            title: 'ADMIN.NOTIFICATIONS.STORAGE_SPACE',
+            mdClass: 'md-primary',
+            value: 60
+        },{
+            title: 'ADMIN.NOTIFICATIONS.BANDWIDTH_USAGAE',
+            mdClass: 'md-accent',
+            value: 10
+        },{
+            title: 'ADMIN.NOTIFICATIONS.MEMORY_USAGAE',
+            mdClass: 'md-warn',
+            value: 100
         }]
     }];
 
