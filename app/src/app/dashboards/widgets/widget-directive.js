@@ -46,6 +46,10 @@ angular.module('triAngularDashboards')
                     'color': triTheme.rgba(background.contrast)
                 });
             }
+
+            if(attrs.backgroundImage !== undefined) {                
+                $element.css('background-image', 'url('+attrs.backgroundImage+')');
+            }
         }
     };
 });
