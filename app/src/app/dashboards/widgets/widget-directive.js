@@ -27,7 +27,8 @@ angular.module('triAngularDashboards')
             subtitle: '=',
             menu: '=',
             titlePosition: '=',
-            titleAsOverlay: '='
+            titleAsOverlay: '=',
+            paddedLayout: '='
         },
         link: function($scope, $element, attrs) { 
             $mdTheming($element);
