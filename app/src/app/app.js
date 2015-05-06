@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts'])
+angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts'])
 .constant('APP', {
     name: 'Triangular'
 })
@@ -190,6 +190,23 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .warnPalette('red');
 
 })
+.config(['ChartJsProvider', function (ChartJsProvider) {
+    // Configure all charts to use material design colors
+    ChartJsProvider.setOptions({
+        colours: [
+            '#4285F4',    // blue
+            '#DB4437',     // red
+            '#F4B400',     // yellow
+            '#0F9D58',     // green
+            '#AB47BC',    // purple
+            '#00ACC1',     // light blue
+            '#FF7043',    // orange
+            '#9E9D24',    // browny yellow
+            '#5C6BC0'     // dark blue
+        ],
+        responsive: true
+    });
+}])
 // setup google charts to use material charts
 .value('googleChartApiConfig', {
     version: '1.1',

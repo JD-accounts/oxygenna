@@ -3,9 +3,12 @@
         "CHARTS": {
             "CHARTS": "Charts",
             "GOOGLE": "Google",
-            "BAR": "Material Bar",
-            "LINE": "Material Line",
-            "SCATTER": "Material Scatter"
+            "CHARTJS": "Chart.js",
+            "BAR": "Bar",
+            "LINE": "Line",
+            "SCATTER": "Scatter",
+            "PIE": "Pie",
+            "TICKER": "Ticker"
         }
     }
 }
