@@ -23,18 +23,17 @@ angular.module('triAngularDashboards')
         transclude: true,
         replace: true,
         scope: {
-            title: '=',
-            subtitle: '=',
-            menu: '='
+            title: '@',
+            subtitle: '@'
         },
         link: function($scope, $element, attrs) {
             // set the value of the widget layout attribute
-            $scope.widgetLayout = attrs.titlePosition === 'bottom' || attrs.titlePosition === 'top' ? 'column' : 'row';
+            $scope.widgetLayout = attrs.titlePosition === 'left' || attrs.titlePosition === 'right' ? 'row' : 'column';
             // set if the layout-padding attribute will be added
             $scope.widgetLayoutPadding = attrs.contentPadding === undefined ? undefined : true;
             // set the order of the title and content based on title position
-            $scope.titleOrder = attrs.titlePosition === 'left' || attrs.titlePosition === 'top' ? 1 : 2;
-            $scope.contentOrder = attrs.titlePosition === 'left' || attrs.titlePosition === 'top' ? 2 : 1;
+            $scope.titleOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 2 : 1;
+            $scope.contentOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 1 : 2;
             // set if we overlay the title on top of the widget content
             $scope.overlayTitle = attrs.overlayTitle === undefined ? undefined : true;
 
