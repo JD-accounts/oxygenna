@@ -1,15 +1,17 @@
-<div layout="row" layout-margin>
-    <div layout="column" flex="30">
-        <widget title="Growth Income" subtitle="in millions of dollars (USD)" class="widget-padded" title-position="top" content-padding>
+<div layout="row">
+    <div layout="column" flex="30" layout-margin>
+        <widget title="Growth Income" subtitle="in millions of dollars (USD)" title-position="top" content-padding>
             <div class="google-chart" google-chart chart="lineChart"></div>
         </widget>
-        <widget title="Top Channels" subtitle="Social network referrals" class="widget-padded" title-position="top" content-padding>
+        <widget title="Top Channels" subtitle="Social network referrals" title-position="top" content-padding>
             <div class="google-chart" google-chart chart="pieChart"></div>
         </widget>
     </div>
-    <widget title="Location Distribution" subtitle="Websearch Sales Analysis" class="widget-padded" title-position="top" content-padding>
-        <div class="google-chart" google-chart chart="geoChart"></div>
-    </widget>
+    <div layout="column" flex layout-margin>
+        <widget title="Location Distribution" subtitle="Websearch Sales Analysis" title-position="top" content-padding>
+            <div class="google-chart" google-chart chart="geoChart"></div>
+        </widget>
+    </div>
 </div>
 <div layout="row" layout-margin>
     <widget title="Growth Income" md-theme="red" background="primary" title-position="top" content-padding>
