@@ -5,8 +5,11 @@
             <p class="md-body-1" ng-if="subtitle">{{subtitle}}</p>
         </div>
         <md-button ng-if="menu" class="widget-button md-icon-button" aria-label="More">
-            <md-icon md-font-icon="icon-more-vert"></md-icon>
+            <md-icon md-font-icon="{{menu.icon}}"></md-icon>
         </md-button>
     </div>
     <div class="widget-content" flex layout layout-align="center center" ng-attr-layout-padding="{{ widgetLayoutPadding }}" ng-transclude ng-attr-flex-order="{{ contentOrder }}"></div>
+    <div class="widget-loading" ng-show="loading" layout="column" layout-align="center center">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
 </div>

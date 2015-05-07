@@ -26,6 +26,18 @@ angular.module('triAngularDashboards')
             title: '@',
             subtitle: '@'
         },
+        controller: function($scope) {
+            $scope.menu = null;
+            $scope.loading = false;
+
+            this.setMenu = function(menu) {
+                $scope.menu = menu;
+            };
+
+            this.setLoading = function(loading) {
+                $scope.loading = loading;
+            };
+        },
         link: function($scope, $element, attrs) {
             // set the value of the widget layout attribute
             $scope.widgetLayout = attrs.titlePosition === 'left' || attrs.titlePosition === 'right' ? 'row' : 'column';

@@ -2,8 +2,8 @@
 
 /**
  * @ngdoc function
- * @name LoginCtrl
- * @module triangular.authentication
+ * @name DashboardController
+ * @module triAngularDashboards
  * @kind function
  *
  *
