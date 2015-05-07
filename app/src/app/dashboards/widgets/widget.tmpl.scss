@@ -1,5 +1,7 @@
 .widget {
   position: relative;
+  background-size: cover;
+  background-color: #fff;
   .widget-title {
     .md-subhead, .md-body-1, .md-body-2 {
       margin: 0;
@@ -23,16 +25,20 @@
   &.widget-overlay-title {
     .widget-title {
       position: absolute;
-      background: rgba(255, 255, 255, .75);
+      .md-body-1, .md-body-2 {
+        opacity: 1;
+      }
     }
     &[layout="column"] {
       .widget-title {
         width: 100%;
         left: 0;
         top: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%);
         &[flex-order="2"] {
           top: auto;
           bottom: 0;
+          background: linear-gradient(to top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%);
         }
       }
     }
@@ -42,9 +48,11 @@
         top: 0;
         left: 0;
         height: 100%;
+        background: linear-gradient(to right, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%);
         &[flex-order="2"] {
           left: auto;
           right: 0;
+          background: linear-gradient(from left, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%);
         }
       }
     }
