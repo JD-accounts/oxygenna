@@ -1,5 +1,5 @@
-<div class="widget md-whiteframe-z1" ng-class="{'widget-alt': titleAsOverlay === 'true'}" flex ng-attr-layout="{{ titlePosition === 'bottom' || titlePosition === 'top' ? 'column' : 'row' }}" ng-attr-layout-padding="{{ paddedLayout === 'true' ? 'true': undefined }}">
-    <div class="widget-title" ng-if="title || subtitle" layout="row" layout-align="space-between center" ng-attr-flex-order="{{ titlePosition === 'left' || titlePosition === 'top' ? '1' : '2' }}">
+<div class="widget md-whiteframe-z1" ng-class="{'widget-overlay-title': overlayTitle}" flex ng-attr-layout="{{ widgetLayout }}">
+    <div class="widget-title" ng-if="title || subtitle" layout="row" layout-padding layout-align="space-between center" ng-attr-flex-order="{{ titleOrder }}">
         <div layout="column">
             <h3 class="md-subhead" ng-if="title">{{title}}</h3>
             <p class="md-body-1" ng-if="subtitle">{{subtitle}}</p>
@@ -8,5 +8,5 @@
             <md-icon md-font-icon="icon-more-vert"></md-icon>
         </md-button>
     </div>
-    <div class="widget-content" flex layout layout-align="center center" ng-transclude ng-attr-flex-order="{{ titlePosition === 'left' || titlePosition === 'top' ? '2' : '1'}}"></div>
+    <div class="widget-content" flex layout layout-align="center center" ng-attr-layout-padding="{{ widgetLayoutPadding }}" ng-transclude ng-attr-flex-order="{{ contentOrder }}"></div>
 </div>

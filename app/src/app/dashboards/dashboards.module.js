@@ -17,9 +17,13 @@ angular.module('triAngularDashboards', [])
         templateUrl: 'app/dashboards/dashboard1.html',
         controller: 'DashboardController'
     })
+    .state('private.admin.toolbar.default.dashboard2', {
+        url: '/dashboard2',
+        templateUrl: 'app/dashboards/dashboard2.tmpl.html',
+    })
     .state('private.admin.toolbar.default.widgets', {
         url: '/widgets',
-        templateUrl: 'app/dashboards/widgets.tmpl.html',        
+        templateUrl: 'app/dashboards/widgets.tmpl.html',
     });
 })
 .run(function(SideMenu) {
@@ -31,6 +35,10 @@ angular.module('triAngularDashboards', [])
         children: [{
             name: 'MENU.DASHBOARDS.DASHBOARD',
             url: '/dashboard',
+            type: 'link',
+        },{
+            name: 'MENU.DASHBOARDS.DASHBOARD2',
+            url: '/dashboard2',
             type: 'link',
         },{
             name: 'MENU.DASHBOARDS.WIDGETS',
