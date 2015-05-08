@@ -1,3 +1,4 @@
+// Imports
 @import "../../bower_components/animate.css-scss/animate.scss";
 
 @import "scss/reset";
@@ -9,11 +10,11 @@ html, body, #container, .container-inner, #ui-admin-content {
   height: 100%;
 }
 
+// Admin Content Area
 #ui-admin-content {
   overflow-y: auto;
   background-color: #f3f3f3;
 }
-
 #content {
   position: relative;
 }
@@ -32,18 +33,12 @@ html, body, #container, .container-inner, #ui-admin-content {
   min-width: 260px;
   max-width: 260px;
 }
-// /**
-// * Docs Pages
-// **/
 
+// Doc Pages
 .padded-docs-page {
   max-width: 864px;
   margin: auto;
 }
-
-// .img-circle {
-//   border-radius: 50%;
-// }
 
 // injector
 // endinjector

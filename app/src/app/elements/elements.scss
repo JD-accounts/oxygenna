@@ -1,6 +1,4 @@
-/**
-* All Elements Pages
-**/
+// Elements Page
 
 .example-whiteframe-row {
   md-whiteframe {
@@ -8,9 +6,7 @@
   }
 }
 
-/**
-* Buttons Pages
-**/
+// - Buttons
 .elements-page-buttons {
   .md-button:not(.md-fab) {
     min-width: 10em;
@@ -65,10 +61,7 @@
   }
 }
 
-/**
-* Cards Pages
-**/
-
+// - Cards
 .elements-cards-example1 {
   background: rgb(242, 242, 242);
   .example-area {
@@ -91,10 +84,7 @@
   }
 }
 
-/**
-* Icons Pages
-**/
-
+// - Icons
 .elements-icons {
   md-content {
     min-width: 400px;
@@ -126,40 +116,28 @@ $size-list: 16px 24px 32px 48px;
   }
 }
 
-/**
-* Radios Pages
-**/
-
+// - Radios Pages
 .elements-radio-avatar {
   img {
     width: 150px;
   }
 }
 
-/**
-* Tabs Pages
-**/
-
+// - Tabs Pages
 .elements-tabs-example {
   md-grid-tile {
     background-size: 100%;
   }
 }
 
-/**
-* Grids Pages
-**/
-
+// - Grids Pages
 .elements-grids-example {
   md-grid-tile {
     background-size: 100%;
   }
 }
 
-/**
-* Selects Pages
-**/
-
+// - Selects Pages
 .elements-select-example1 {
   background: rgb(242, 242, 242);
   .example-area {
@@ -176,18 +154,12 @@ $size-list: 16px 24px 32px 48px;
   }
 }
 
-/**
-* Toasts Pages
-**/
-
+// - Toasts Pages
 .elements-toast-example {
   height: 500px;
 }
 
-/**
-* Sidebar Pages
-**/
-
+// - Sidebar Pages
 .elements-sidebar-example {
   height: 500px;
   .md-button {
@@ -195,30 +167,21 @@ $size-list: 16px 24px 32px 48px;
   }
 }
 
-/**
-* Toolbars Pages
-**/
-
+// - Toolbars Pages
 .elements-toolbars-example {
   md-toolbar {
     margin: 12px 0px;
   }
 }
 
-/**
-* Tooltips Pages
-**/
-
+// - Tooltips Pages
 .elements-tooltips-example {
   .md-button {
     margin: 50px 12px;
   }
 }
 
-/**
-* Whiteframes Pages
-**/
-
+// - Whiteframes Pages
 .elements-whiteframes-example {
   md-whiteframe {
     margin: 20px;
@@ -226,10 +189,7 @@ $size-list: 16px 24px 32px 48px;
   }
 }
 
-/**
-* Chips Pages
-**/
-
+// - Chips Pages
 .elements-chips-example {
   md-card-content {
     padding: 0px;
