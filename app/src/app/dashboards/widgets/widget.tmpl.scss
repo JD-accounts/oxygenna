@@ -71,7 +71,7 @@
       transform: scale(0.5);
     }
     &.ng-hide {
-      @include zoomOut(0.5);
+      @include fadeOut();
     }
   }
 }
