@@ -9,6 +9,15 @@
   text-align: right;
 }
 
+// - Chart Container
+.dashboard-fullwidth-chart {
+  .chart-container {
+    position: relative;
+    left: -5px;
+    bottom: -5px;
+    width: calc(100% + 10px);
+  }
+}
 .google-chart {
   height: 100%;
   width: 100%;
