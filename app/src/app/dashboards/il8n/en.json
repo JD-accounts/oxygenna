@@ -3,7 +3,15 @@
         "DASHBOARDS": {
             "DASHBOARDS": "Dashboards",
             "DASHBOARD": "Dashboard",
+            "DASHBOARD2": "Dashboard 2",
             "WIDGETS": "Widgets"
+        }
+    },
+    "DASHBOARD": {
+        "WIDGETS": {
+            "SALES": "Sales",
+            "COMMENTS": "Comments",
+            "SERVER_UPTIME": "Server Uptime"
         }
     }
 }
