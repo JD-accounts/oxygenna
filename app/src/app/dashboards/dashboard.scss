@@ -9,6 +9,13 @@
     width: calc(100% + 10px);
   }
 }
+
+.dashboard-todo-widget {
+  md-list {
+    padding: 0px !important;
+  }
+}
+
 .google-chart {
   height: 100%;
   width: 100%;
