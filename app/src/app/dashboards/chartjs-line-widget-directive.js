@@ -2,17 +2,17 @@
 
 /**
 * @ngdoc directive
-* @name breadcrumb
+* @name chartjsLineWidget
 * @restrict A
 * @scope
 *
 * @description
 *
-* Handles the default toolbar breadcrumbs - works together with the breadcrumb directive recusively
+* Adds chartjs line chart data to widget
 *
 * @usage
 * ```html
-* <span breadcrumb="breadcrumb">
+* <widget chartjs-line-widget>
 * ```
 */
 angular.module('triAngularDashboards')
@@ -32,21 +32,22 @@ angular.module('triAngularDashboards')
                 icon: 'icon-more-vert'
             });
 
-            $scope.labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-            $scope.series = ['Series A', 'Series B'];
-            $scope.options = {
-                datasetFill: true,
-                legendTemplate: ''
+            $scope.lineChart = {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                series: ['Series A', 'Series B'],
+                options: {
+                    datasetFill: true
+                },
+                data: []
             };
 
             function randomData() {
-                $scope.data = [];
-                for(var series = 0; series < $scope.series.length; series++) {
+                for(var series = 0; series < $scope.lineChart.series.length; series++) {
                     var row = [];
-                    for(var label = 0; label < $scope.labels.length; label++) {
+                    for(var label = 0; label < $scope.lineChart.labels.length; label++) {
                         row.push(Math.floor((Math.random() * 100) + 1));
                     }
-                    $scope.data.push(row);
+                    $scope.lineChart.data.push(row);
                 }
             }
 

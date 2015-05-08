@@ -29,9 +29,19 @@
         </widget>
     </div>
     <div layout="column" flex layout-margin>
-        <widget chartjs-line-widget title="Growth Income" subtitle="in millions of dollars (USD)" menu="lineWidget" content-padding>
+        <widget chartjs-line-widget title="Growth Income" subtitle="in millions of dollars (USD)" content-padding>
             <div flex>
-                <canvas class="chart-line" data="data" labels="labels" legend="true" series="series" options="options"></canvas>
+                <canvas class="chart-line" data="lineChart.data" labels="lineChart.labels" legend="false" series="lineChart.series" options="lineChart.options"></canvas>
+            </div>
+        </widget>
+    </div>
+</div>
+
+<div layout="row">
+    <div layout="column" flex="50" layout-margin>
+        <widget chartjs-ticker-widget title="Growth Income" subtitle="in millions of dollars (USD)">
+            <div flex>
+                <canvas class="chart-line" data="tickerChart.data" labels="tickerChart.labels" legend="false" options="tickerChart.options"></canvas>
             </div>
         </widget>
     </div>

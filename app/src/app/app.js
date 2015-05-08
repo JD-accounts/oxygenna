@@ -204,7 +204,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
             '#9E9D24',    // browny yellow
             '#5C6BC0'     // dark blue
         ],
-        responsive: true
+        responsive: true,
     });
 }])
 // setup google charts to use material charts
