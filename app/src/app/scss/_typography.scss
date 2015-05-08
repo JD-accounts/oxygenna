@@ -92,6 +92,13 @@ md-icon[md-font-icon] {
   font-size: 2rem;
 }
 
+// - Text Ellipsis
+.text-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 // - Text align classes
 .text-center {
   text-align: center !important;
