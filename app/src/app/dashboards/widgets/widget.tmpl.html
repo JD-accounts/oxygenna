@@ -12,8 +12,8 @@
 
     <div class="widget-content" flex layout layout-align="center center" ng-attr-layout-padding="{{ widgetLayoutPadding }}" ng-transclude ng-attr-flex-order="{{ contentOrder }}"></div>
 
-    <div class="widget-loading" ng-show="loading" layout layout-fill layout-align="center center">
-        <div class="widget-loading-inner" >
+    <div class="widget-loading ng-hide" ng-show="loading" layout layout-fill layout-align="center center">
+        <div class="widget-loading-inner" ng-show="loading">
             <md-progress-circular md-mode="indeterminate"></md-progress-circular>
         </div>
     </div>
