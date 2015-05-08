@@ -65,8 +65,9 @@ angular.module('triAngularDashboards')
                 });
             }
 
+            console.log(attrs.backgroundImage);
             if(attrs.backgroundImage !== undefined) {
-                $element.css('background-image', 'url('+attrs.backgroundImage+')');
+                $element.css('background-image', 'url(' + attrs.backgroundImage + ')');
             }
         }
     };

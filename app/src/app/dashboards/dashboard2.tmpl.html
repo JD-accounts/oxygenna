@@ -38,6 +38,25 @@
 </div>
 
 <div layout="row">
+    <div layout="column" flex layout-margin>
+        <widget chartjs-ticker-widget title="Growth Income" subtitle="in millions of dollars (USD)">
+            <div flex>
+                <canvas class="chart-line" data="tickerChart.data" labels="tickerChart.labels" legend="false" options="tickerChart.options"></canvas>
+            </div>
+        </widget>
+    </div>
+</div>
+<div layout="row">
+    <div layout="column" flex="50" layout-margin>
+        <widget weather-widget="Sitia" background-image="assets/images/dashboards/weather.jpg">
+            <div flex layout="column" layout-align="end center">
+                <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
+                <p class="md-display-4">{{weather.temp}}&deg;</p>
+                <p class="md-title">{{weather.text}}</p>
+                <p class="md-title">{{weather.location}}</p>
+            </div>
+        </widget>
+    </div>
     <div layout="column" flex="50" layout-margin>
         <widget chartjs-ticker-widget title="Growth Income" subtitle="in millions of dollars (USD)">
             <div flex>

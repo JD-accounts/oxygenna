@@ -30,14 +30,15 @@ angular.module('triAngularDashboards')
                     showScale: false,
                     showTooltips: false,
                     pointDot: false,
-                    datasetStrokeWidth: 0.5
+                    datasetStrokeWidth: 0.5,
+                    maintainAspectRatio: false,
                 }
             };
 
             // Update the dataset at 25FPS for a smoothly-animating chart
             $interval(function () {
                 getLiveChartData();
-            }, 40);
+            }, 1000);
 
             function getLiveChartData () {
                 if ($scope.tickerChart.data[0].length) {
