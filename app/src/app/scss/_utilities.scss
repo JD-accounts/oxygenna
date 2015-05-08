@@ -4,16 +4,34 @@
 $i : 0;
 @while $i <= 200 {
   .margin-top-#{$i} {
-    margin-top: $i;
+    margin-top: $i !important;
   }
   .margin-left-#{$i} {
-    margin-left: $i;
+    margin-left: $i !important;
   }
   .margin-bottom-#{$i} {
-    margin-bottom: $i;
+    margin-bottom: $i !important;
   }
   .margin-right-#{$i} {
-    margin-right: $i;
+    margin-right: $i !important;
+  }
+  $i : $i + 10;
+}
+
+// - Padding Classes
+$i : 0;
+@while $i <= 200 {
+  .padding-top-#{$i} {
+    padding-top: $i !important;
+  }
+  .padding-left-#{$i} {
+    padding-left: $i !important;
+  }
+  .padding-bottom-#{$i} {
+    padding-bottom: $i !important;
+  }
+  .padding-right-#{$i} {
+    padding-right: $i !important;
   }
   $i : $i + 10;
 }
@@ -21,8 +39,34 @@ $i : 0;
 // - Opacity Classes
 $i : 0;
 @while $i <= 1 {
-  .opacity-#{$i * 10} {
-    opacity: $i;
+  .opacity-#{$i * 100} {
+    opacity: $i !important;
   }
   $i : $i + 0.1;
+}
+
+// - Positioning Classes
+.position-absolute {
+  position: absolute;
+}
+.position-relative {
+  position: relative;
+}
+
+// - Translate Classes
+$i : 0;
+@while $i <= 100 {
+  .move-from-top-#{$i} {
+    transform: translateY(#{$i}px);
+  }
+  .move-from-left-#{$i} {
+    transform: translateX(#{$i}px);
+  }
+  .move-from-bottom-#{$i} {
+    transform: translateY(-#{$i}px);
+  }
+  .move-from-right-#{$i} {
+    transform: translateX(-#{$i}px);
+  }
+  $i : $i + 10;
 }

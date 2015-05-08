@@ -39,7 +39,7 @@
     </div>
     <div layout="column" flex layout-margin>
         <widget todo-widget class="dashboard-todo-widget" title="Todo List" subtitle="Your current todo list" md-theme="blue" background="primary" title-position="top" content-align="center start" content-padding>
-            <md-list flex>
+            <md-list flex class="padding-left-0">
                 <md-list-item ng-repeat="todo in todos">
                     <md-checkbox ng-model="todo.done"></md-checkbox>
                     <p>{{ todo.name }}</p>

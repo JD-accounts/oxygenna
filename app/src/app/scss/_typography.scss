@@ -71,16 +71,17 @@ code.hljs.html, code.hljs.javascript {
 $i : 100;
 @while $i <= 900 {
   .font-weight-#{$i} {
-    font-weight: $i;
+    font-weight: $i !important;
   }
   $i : $i + 100;
 }
 
 // - Font Size Classes
 $i : 1;
-@while $i <= 10 {
+@while $i <= 20 {
   .font-size-#{$i} {
-    font-size: $i rem;
+    font-size: #{$i}rem !important;
+    min-width: 1em;
   }
   $i : $i + 1;
 }
