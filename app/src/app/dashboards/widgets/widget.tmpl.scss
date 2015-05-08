@@ -18,6 +18,9 @@
     >img {
       display: block;
     }
+    md-icon[md-font-icon] {
+      color: inherit;
+    }
   }
   &[layout="row"] {
     .widget-title {

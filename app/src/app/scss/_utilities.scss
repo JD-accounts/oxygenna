@@ -1,0 +1,28 @@
+// Utilities
+
+// - Margin Classes
+$i : 0;
+@while $i <= 200 {
+  .margin-top-#{$i} {
+    margin-top: $i;
+  }
+  .margin-left-#{$i} {
+    margin-left: $i;
+  }
+  .margin-bottom-#{$i} {
+    margin-bottom: $i;
+  }
+  .margin-right-#{$i} {
+    margin-right: $i;
+  }
+  $i : $i + 10;
+}
+
+// - Opacity Classes
+$i : 0;
+@while $i <= 1 {
+  .opacity-#{$i * 10} {
+    opacity: $i;
+  }
+  $i : $i + 0.1;
+}

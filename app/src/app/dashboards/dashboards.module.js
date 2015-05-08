@@ -21,6 +21,10 @@ angular.module('triAngularDashboards', [])
         url: '/dashboard2',
         templateUrl: 'app/dashboards/dashboard2.tmpl.html',
     })
+    .state('private.admin.toolbar.default.dashboard3', {
+        url: '/dashboard3',
+        templateUrl: 'app/dashboards/dashboard3.tmpl.html',
+    })
     .state('private.admin.toolbar.default.widgets', {
         url: '/widgets',
         templateUrl: 'app/dashboards/widgets.tmpl.html',
