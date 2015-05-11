@@ -3,6 +3,9 @@
 // - Margin Classes
 $i : 0;
 @while $i <= 200 {
+  .margin-#{$i} {
+    margin: $i !important;
+  }
   .margin-top-#{$i} {
     margin-top: $i !important;
   }
@@ -21,6 +24,9 @@ $i : 0;
 // - Padding Classes
 $i : 0;
 @while $i <= 200 {
+  .padding-#{$i} {
+    padding: $i !important;
+  }
   .padding-top-#{$i} {
     padding-top: $i !important;
   }
