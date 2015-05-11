@@ -12,6 +12,19 @@ angular.module('triAngularDashboards', [])
     $translatePartialLoaderProvider.addPart('app/dashboards');
 
     $stateProvider
+    .state('private.admin.toolbar.default.dashboard-general', {
+        url: '/dashboards/general',
+        templateUrl: 'app/dashboards/dashboard-general.tmpl.html',
+    })
+    .state('private.admin.toolbar.default.dashboard-social', {
+        url: '/dashboards/social',
+        templateUrl: 'app/dashboards/dashboard-social.tmpl.html',
+    })
+    .state('private.admin.toolbar.default.dashboard-server', {
+        url: '/dashboards/server',
+        templateUrl: 'app/dashboards/dashboard-server.tmpl.html',
+    })
+
     .state('private.admin.toolbar.default.dashboard1', {
         url: '/dashboard',
         templateUrl: 'app/dashboards/dashboard1.html',
@@ -37,16 +50,20 @@ angular.module('triAngularDashboards', [])
         type: 'dropdown',
         priority: 2.1,
         children: [{
-            name: 'MENU.DASHBOARDS.DASHBOARD',
-            url: '/dashboard',
+            name: 'MENU.DASHBOARDS.GENERAL',
+            url: '/dashboards/general',
             type: 'link',
         },{
-            name: 'MENU.DASHBOARDS.DASHBOARD2',
-            url: '/dashboard2',
+            name: 'MENU.DASHBOARDS.SOCIAL',
+            url: '/dashboards/social',
+            type: 'link',
+        },{
+            name: 'MENU.DASHBOARDS.SERVER',
+            url: '/dashboards/server',
             type: 'link',
         },{
             name: 'MENU.DASHBOARDS.WIDGETS',
-            url: '/widgets',
+            url: '/dashboards/widgets',
             type: 'link',
         }]
     });

@@ -9,6 +9,12 @@
     width: calc(100% + 10px);
   }
 }
+
+.dashboard-no-bar-tabs {
+  md-tabs-wrapper {
+    display: none;
+  }
+}
 .google-chart {
   height: 100%;
   width: 100%;

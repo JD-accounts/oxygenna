@@ -87,3 +87,26 @@
     }
   }
 }
+
+// Calendar widget
+.widget-calendar {
+  .fc-month-view {
+    tbody .fc-row {
+      min-height: 1em;
+    }
+
+    td, th {
+      border: none;
+    }
+  }
+}
+
+// Chat widget
+.widget-chat {
+  .user-left {
+
+  }
+  .user-right {
+    float: right;
+  }
+}

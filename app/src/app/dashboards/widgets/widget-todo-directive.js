@@ -2,21 +2,21 @@
 
 /**
 * @ngdoc directive
-* @name widget
+* @name todoWidget
 * @restrict E
 * @scope
 *
 * @description
 *
-* Creates a dashboard weather widget
+* Adds some todo data
 *
 * @usage
 * ```html
-* <widget weather-todo></widget>
+* <widget todo-widget></widget>
 * ```
 */
 angular.module('triAngularDashboards')
-.directive('todoWidget', function($http, $compile, $templateCache) {
+.directive('todoWidget', function() {
     return {
         require: 'widget',
         restrict: 'A',
