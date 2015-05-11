@@ -1,22 +1,6 @@
-<div layout="row">
-    <div layout="column" flex="30" layout-margin>
-        <widget md-theme="green" background="primary" content-layout="column">
-            <div flex layout="row" layout-align="start center" layout-padding>
-                <h2 class="md-display-3 font-weight-100">Call Sue</h2>
-            </div>
-            <md-divider></md-divider>
-            <div flex layout="row" layout-align="space-between center" layout-padding>
-                <span>Monday 1st March</span>
-                <md-button class="md-icon-button">
-                    <md-icon md-font-icon="icon-call"></md-icon>
-                </md-button>
-            </div>
-        </widget>
-    </div>
-</div>
-<div layout="row">
-    <div layout="column" flex="50" layout-margin>
-        <widget calendar-widget class="widget-calendar" md-theme="blue-gray" background="primary" content-padding>
+<div class="dashboard-container" layout="column">
+    <div layout="row" layout-margin>
+        <widget calendar-widget flex class="widget-calendar" md-theme="blue-gray" background="primary" content-padding>
             <div layout="row">
                 <h3 flex>{{currentDay | amDateFormat:'MMMM YYYY'}}</h3>
                 <md-button class="md-icon-button" ng-click="changeMonth('prev')">
@@ -33,9 +17,47 @@
                 <div ui-calendar="calendarOptions" ng-model="calendarEvents" calendar="calendarWidget"></div>
             </div>
         </widget>
+        <div layout="column" flex layout-margin>
+            <widget md-theme="green" background="primary" content-layout="column">
+                <div flex layout="row" layout-align="start center" layout-padding>
+                    <h2 class="md-display-3 font-weight-100">Call Sue</h2>
+                </div>
+                <md-divider></md-divider>
+                <div flex layout="row" layout-align="space-between center" layout-padding>
+                    <span>Monday 1st March</span>
+                    <md-button class="md-icon-button">
+                        <md-icon md-font-icon="icon-call"></md-icon>
+                    </md-button>
+                </div>
+            </widget>
+            <widget md-theme="default" background="primary" content-layout="column">
+                <div flex layout="row" layout-align="start center" layout-padding>
+                    <h2 class="md-display-2 font-weight-100">Clean Desk</h2>
+                </div>
+            </widget>
+        </div>
+        <widget todo-widget class="dashboard-todo-widget" title="Todo List" subtitle="Your current todo list" md-theme="blue" background="primary" title-position="top" content-align="center start" content-padding>
+            <md-list flex class="padding-left-0">
+                <md-list-item ng-repeat="todo in todos">
+                    <md-checkbox ng-model="todo.done"></md-checkbox>
+                    <p>{{todo.name}}</p>
+                </md-list-item>
+            </md-list>
+        </widget>
     </div>
-    <div layout="column" flex layout-margin>
-        <widget chat-widget class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" md-theme="blue" background="primary">
+
+    <div layout="row" layout-margin>
+        <div layout="column" flex="50">
+            <md-card>
+                <img src="http://lorempixel.com/800/300/" class="md-card-image" alt="Card Image">
+                <md-card-content>
+                    <h2 class="md-title">Kangaroo Valley Safari</h2>
+                    <p>The titles of Washed Out's breakthrough song and the first single from Paracosm share</p>
+                </md-card-content>
+            </md-card>
+        </div>
+
+        <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" md-theme="blue" background="primary">
             <md-list flex>
                 <md-list-item ng-repeat="chat in conversation" class="md-2-line" ng-class="chat.userClass">
                     <img class="md-avatar" ng-src="{{chat.image}}" alt="{{chat.name}}">
@@ -51,9 +73,35 @@
             </md-button>
         </widget>
     </div>
-</div>
-<div layout="row">
-    <div layout="column" flex="50" layout-margin>
+
+    <div layout="row" layout-margin>
+       <widget weather-widget="Sitia" flex="50" background-image="assets/images/dashboards/weather.jpg">
+            <div flex layout="column" layout-align="end center">
+                <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
+                <p class="md-display-4">{{weather.temp}}&deg;</p>
+                <i class="wi" ng-class="weather.iconClass"></i>
+                <p class="md-title">{{weather.text}}</p>
+                <p class="md-title">{{weather.location}}</p>
+            </div>
+        </widget>
+
+        <div layout="column">
+            <widget title="Twitter Feed" md-theme="blue" background="primary" twitter-widget content-padding>
+                <div layout="column">
+                    <md-tabs md-selected="selectedTab" class="dashboard-no-bar-tabs" md-no-pagination md-no-bar md-dynamic-height>
+                        <md-tab ng-repeat="tweet in tweets" label="tweet.id">
+                            <div ng-bind="tweet.body" linkify="twitter"></div>
+                        </md-tab>
+                    </md-tabs>
+                    <div layout="row" layout-align="center center">
+                        <md-button ng-click="prevTweet()"><md-icon md-font-icon="icon-keyboard-arrow-left"></md-icon></md-button>
+                        <md-button ng-click="nextTweet()"><md-icon md-font-icon="icon-keyboard-arrow-right"></md-icon></md-button>
+                    </div>
+                </div>
+            </widget>
+
+        </div>
+
         <widget title="{{'DASHBOARDS.GENERAL.CONTACTS' | translate}}" contacts-widget>
             <md-list>
                 <md-list-item ng-repeat="contact in contacts">
@@ -63,54 +111,7 @@
                 </md-list-item>
             </md-list>
         </widget>
-    </div>
-</div>
-<div layout="row">
-    <div layout="column" flex="50" layout-margin>
-        <widget weather-widget="Sitia" background-image="assets/images/dashboards/weather.jpg">
-            <div flex layout="column" layout-align="end center">
-                <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
-                <p class="md-display-4">{{weather.temp}}&deg;</p>
-                <i class="wi" ng-class="weather.iconClass"></i>
-                <p class="md-title">{{weather.text}}</p>
-                <p class="md-title">{{weather.location}}</p>
-            </div>
-        </widget>
-    </div>
-    <div layout="column" flex layout-margin>
-        <widget todo-widget class="dashboard-todo-widget" title="Todo List" subtitle="Your current todo list" md-theme="blue" background="primary" title-position="top" content-align="center start" content-padding>
-            <md-list flex class="padding-left-0">
-                <md-list-item ng-repeat="todo in todos">
-                    <md-checkbox ng-model="todo.done"></md-checkbox>
-                    <p>{{todo.name}}</p>
-                </md-list-item>
-            </md-list>
-        </widget>
-    </div>
-</div>
-<div layout="row">
-    <div layout="column" flex="50" layout-margin>
-        <md-card>
-            <img src="http://lorempixel.com/800/300/" class="md-card-image" alt="Card Image">
-            <md-card-content>
-                <h2 class="md-title">Kangaroo Valley Safari</h2>
-                <p>The titles of Washed Out's breakthrough song and the first single from Paracosm share</p>
-            </md-card-content>
-        </md-card>
-    </div>
-    <div layout="column" flex="50" layout-margin>
-        <widget title="Twitter Feed" md-theme="blue" background="primary" twitter-widget content-padding>
-            <div layout="column">
-                <md-tabs md-selected="selectedTab" class="dashboard-no-bar-tabs" md-no-pagination md-no-bar md-dynamic-height>
-                    <md-tab ng-repeat="tweet in tweets" label="tweet.id">
-                        <div ng-bind="tweet.body" linkify="twitter"></div>
-                    </md-tab>
-                </md-tabs>
-                <div layout="row" layout-align="center center">
-                    <md-button ng-click="prevTweet()"><md-icon md-font-icon="icon-keyboard-arrow-left"></md-icon></md-button>
-                    <md-button ng-click="nextTweet()"><md-icon md-font-icon="icon-keyboard-arrow-right"></md-icon></md-button>
-                </div>
-            </div>
-        </widget>
+
+
     </div>
 </div>

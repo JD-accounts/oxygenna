@@ -1,0 +1,83 @@
+<div class="dashboard-container" layout="column">
+    <div layout="row" layout-sm="column" layout-margin>
+        <widget md-theme="green" background="primary" content-padding>
+            <div flex layout="row" layout-align="space-between center">
+                <div>
+                    <md-icon class="font-size-5 opacity-50" md-font-icon="fa fa-comments"></md-icon>
+                </div>
+                <div class="text-right">
+                    <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis" countupto="54" decimals="0"></p>
+                    <p class="md-body-2 opacity-30 margin-top-0 margin-bottom-0">{{'DASHBOARDS.ANALYTICS.COMMENTS' | translate}}</p>
+                </div>
+            </div>
+        </widget>
+        <widget class="social-background-twitter" md-theme="blue" background="primary" content-padding>
+            <div flex layout="row" layout-align="space-between center">
+                <div>
+                    <md-icon class="font-size-5 opacity-50" md-font-icon="fa fa-twitter"></md-icon>
+                </div>
+                <div class="text-right">
+                    <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis" countupto="101" decimals="0"></p>
+                    <p class="md-body-2 opacity-30 margin-top-0 margin-bottom-0">{{'DASHBOARDS.ANALYTICS.TWEETS' | translate}}</p>
+                </div>
+            </div>
+        </widget>
+        <widget class="social-background-facebook" md-theme="default" background="primary" content-padding>
+            <div flex layout="row" layout-align="space-between center">
+                <div>
+                    <md-icon class="font-size-5 opacity-30" md-font-icon="fa fa-facebook"></md-icon>
+                </div>
+                <div class="text-right">
+                    <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0" countupto="943" decimals="0"></p>
+                    <p class="md-body-2 opacity-30 margin-top-0 margin-bottom-0">{{'DASHBOARDS.ANALYTICS.LIKES' | translate}}</p>
+                </div>
+            </div>
+        </widget>
+        <widget md-theme="blue-gray" background="primary" content-padding>
+            <div flex layout="row" layout-align="space-between center">
+                <div>
+                    <md-icon class="font-size-5 opacity-50" md-font-icon="fa fa-eye"></md-icon>
+                </div>
+                <div class="text-right">
+                    <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0" countupto="1144" decimals="0"></p>
+                    <p class="md-body-2 opacity-50 margin-top-0 margin-bottom-0">{{'DASHBOARDS.ANALYTICS.REACH' | translate}}</p>
+                </div>
+            </div>
+        </widget>
+    </div>
+
+    <div layout="row">
+        <div layout="column" flex="60" layout-margin>
+            <widget chartjs-line-widget title="{{'DASHBOARDS.ANALYTICS.PAGEVIEWS' | translate}}" subtitle="11/03/15 - 11/4/15" content-padding>
+                <div flex>
+                    <canvas class="chart-line" data="lineChart.data" labels="lineChart.labels" legend="false" series="lineChart.series" options="lineChart.options"></canvas>
+                </div>
+            </widget>
+        </div>
+        <div layout="column" flex layout-margin>
+            <widget title="{{'DASHBOARDS.ANALYTICS.REFERRALS' | translate}}" subtitle="11/03/15 - 11/4/15" content-padding>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Sessions</th>
+                            <th>Bounce Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>google.com</td>
+                            <td>{{4252 | number}}</td>
+                            <td>{{4252 | number}}</td>
+                        </tr>
+                        <tr>
+                            <td>yahoo.com</td>
+                            <td>{{2541 | number}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </widget>
+        </div>
+    </div>
+
+</div>
