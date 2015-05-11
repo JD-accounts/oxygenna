@@ -71,6 +71,7 @@
             <div flex layout="column" layout-align="end center">
                 <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
                 <p class="md-display-4">{{weather.temp}}&deg;</p>
+                <i class="wi" ng-class="weather.iconClass"></i>
                 <p class="md-title">{{weather.text}}</p>
                 <p class="md-title">{{weather.location}}</p>
             </div>
