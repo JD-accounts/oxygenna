@@ -41,10 +41,12 @@ angular.module('triAngularDashboards')
         link: function($scope, $element, attrs) {
             // set the value of the widget layout attribute
             $scope.widgetLayout = attrs.titlePosition === 'left' || attrs.titlePosition === 'right' ? 'row' : 'column';
+            // set the layout attribute for the widget content
+            $scope.contentLayout = attrs.contentLayout === undefined ? undefined : attrs.contentLayout;
             // set if the layout-padding attribute will be added
-            $scope.widgetLayoutPadding = attrs.contentPadding === undefined ? undefined : true;
+            $scope.contentPadding = attrs.contentPadding === undefined ? undefined : true;
             // set the content align
-            $scope.widgetLayoutAlign = attrs.contentAlign === undefined ? 'center center' : attrs.contentAlign;
+            $scope.contentLayoutAlign = attrs.contentAlign === undefined ? 'center center' : attrs.contentAlign;
             // set the order of the title and content based on title position
             $scope.titleOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 2 : 1;
             $scope.contentOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 1 : 2;
@@ -67,7 +69,6 @@ angular.module('triAngularDashboards')
                 });
             }
 
-            console.log(attrs.backgroundImage);
             if(attrs.backgroundImage !== undefined) {
                 $element.css('background-image', 'url(' + attrs.backgroundImage + ')');
             }
