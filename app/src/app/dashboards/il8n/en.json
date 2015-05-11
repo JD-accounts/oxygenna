@@ -1,13 +1,17 @@
 {
     "MENU": {
         "DASHBOARDS": {
-            "DASHBOARDS": "Dashboards",
-            "DASHBOARD": "Dashboard",
-            "DASHBOARD2": "Dashboard 2",
+            "GENERAL": "General",
+            "SOCIAL": "Social",
+            "SERVER": "Server",
             "WIDGETS": "Widgets"
         }
     },
-    "DASHBOARD": {
+    "DASHBOARDS": {
+        "GENERAL": {
+            "CONTACTS": "Contacts",
+            "CHAT": "Chat"
+        },
         "WIDGETS": {
             "SALES": "Sales",
             "COMMENTS": "Comments",
