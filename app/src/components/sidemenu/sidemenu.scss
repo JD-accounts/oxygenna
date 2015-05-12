@@ -12,6 +12,9 @@
 }
 .app-logo {
   display: block;
+  &:hover {
+    text-decoration: none;
+  }
   img {
     vertical-align: middle;
     max-height: 64px;
