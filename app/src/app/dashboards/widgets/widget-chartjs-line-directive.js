@@ -26,7 +26,7 @@ angular.module('triAngularDashboards')
             $timeout(function() {
                 widgetCtrl.setLoading(false);
                 randomData();
-            }, 3000);
+            }, 1500);
 
             widgetCtrl.setMenu({
                 icon: 'icon-more-vert'
@@ -34,7 +34,7 @@ angular.module('triAngularDashboards')
 
             $scope.lineChart = {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                series: ['Series A', 'Series B'],
+                series: ['Pageviews', 'Visits'],
                 options: {
                     datasetFill: true
                 },
@@ -42,6 +42,7 @@ angular.module('triAngularDashboards')
             };
 
             function randomData() {
+                $scope.lineChart.data = [];
                 for(var series = 0; series < $scope.lineChart.series.length; series++) {
                     var row = [];
                     for(var label = 0; label < $scope.lineChart.labels.length; label++) {
@@ -52,7 +53,7 @@ angular.module('triAngularDashboards')
             }
 
             // Simulate async data update
-            // $interval(randomData, 5000);
+            $interval(randomData, 5000);
         }
     };
 });

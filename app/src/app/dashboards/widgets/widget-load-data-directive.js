@@ -1,0 +1,67 @@
+'use strict';
+
+/**
+* @ngdoc directive
+* @name loadDataWidget
+* @restrict E
+* @scope
+*
+* @description
+*
+* Loads some data
+*
+* @usage
+* ```html
+* <widget load-data-widget="{ variableName: urlOfJSONData }"></widget>
+* ```
+*/
+angular.module('triAngularDashboards')
+.directive('loadDataWidget', function($parse, $http, $mdDialog) {
+    return {
+        require: 'widget',
+        restrict: 'A',
+        link: function($scope, $element, attrs, widgetCtrl) {
+            widgetCtrl.setLoading(true);
+            var loadData = $parse(attrs.loadDataWidget)($scope);
+
+            widgetCtrl.setMenu({
+                icon: 'icon-search',
+                menuClick: function($event) {
+                    var data = [];
+                    angular.forEach(loadData, function(url, variable) {
+                        data = $scope[variable];
+                    });
+                    $mdDialog.show({
+                        controller: 'WidgetLoadDataDialogController',
+                        templateUrl: 'app/dashboards/widgets/widget-load-data-dialog.tmpl.html',
+                        targetEvent: $event,
+                        locals: {
+                            data: data
+                        },
+                        clickOutsideToClose: true
+                    })
+                    .then(function(answer) {
+                        $scope.alert = 'You said the information was "' + answer + '".';
+                    }, function() {
+                        $scope.alert = 'You cancelled the dialog.';
+                    });
+                }
+            });
+
+            angular.forEach(loadData, function(url, variable) {
+                $http.get(url).
+                success(function(data) {
+                    var header = data.shift();
+                    widgetCtrl.setLoading(false);
+                    $scope[variable] = {
+                        header: header,
+                        data: data
+                    };
+                }).
+                error(function() {
+                    console.error('Could not load ' + url );
+                });
+            });
+        }
+    };
+});

@@ -18,12 +18,16 @@
             "LIKES": "Likes",
             "REACH": "Reach",
             "PAGEVIEWS": "Pageviews & Visits",
-            "REFERRALS": "Referral Traffic"
+            "REFERRALS": "Referral Traffic",
+            "SOCIAL": "Network Referrals",
+            "LOCATION": "Location",
+            "DATE": "11/03/15 - 11/4/15"
         },
         "WIDGETS": {
             "SALES": "Sales",
             "COMMENTS": "Comments",
-            "SERVER_UPTIME": "Server Uptime"
+            "SERVER_UPTIME": "Server Uptime",
+            "FULLDATA": "Full Data"
         }
     }
 }
