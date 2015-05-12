@@ -11,6 +11,9 @@
 html, body, #container, .container-inner, #ui-admin-content {
   height: 100%;
 }
+a {
+  color: #00BCD4;
+}
 
 // Admin Content Area
 #ui-admin-content {
@@ -27,13 +30,6 @@ html, body, #container, .container-inner, #ui-admin-content {
     width: 100%;
     height: 100%;
   }
-}
-
-// Main Navigation
-.main-navigation.md-locked-open {
-  width: 260px;
-  min-width: 260px;
-  max-width: 260px;
 }
 
 // Doc Pages
