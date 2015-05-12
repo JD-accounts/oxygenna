@@ -16,9 +16,9 @@ angular.module('triAngularDashboards', [])
         url: '/dashboards/general',
         templateUrl: 'app/dashboards/dashboard-general.tmpl.html',
     })
-    .state('private.admin.toolbar.default.dashboard-social', {
-        url: '/dashboards/social',
-        templateUrl: 'app/dashboards/dashboard-social.tmpl.html',
+    .state('private.admin.toolbar.default.dashboard-analytics', {
+        url: '/dashboards/analytics',
+        templateUrl: 'app/dashboards/dashboard-analytics.tmpl.html',
     })
     .state('private.admin.toolbar.default.dashboard-server', {
         url: '/dashboards/server',
@@ -54,8 +54,8 @@ angular.module('triAngularDashboards', [])
             url: '/dashboards/general',
             type: 'link',
         },{
-            name: 'MENU.DASHBOARDS.SOCIAL',
-            url: '/dashboards/social',
+            name: 'MENU.DASHBOARDS.ANALYTICS',
+            url: '/dashboards/analytics',
             type: 'link',
         },{
             name: 'MENU.DASHBOARDS.SERVER',

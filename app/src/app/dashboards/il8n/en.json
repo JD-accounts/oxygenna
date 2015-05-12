@@ -2,7 +2,7 @@
     "MENU": {
         "DASHBOARDS": {
             "GENERAL": "General",
-            "SOCIAL": "Social",
+            "ANALYTICS": "Analytics",
             "SERVER": "Server",
             "WIDGETS": "Widgets"
         }
@@ -11,6 +11,14 @@
         "GENERAL": {
             "CONTACTS": "Contacts",
             "CHAT": "Chat"
+        },
+        "ANALYTICS": {
+            "COMMENTS": "Comments",
+            "TWEETS": "Tweets",
+            "LIKES": "Likes",
+            "REACH": "Reach",
+            "PAGEVIEWS": "Pageviews & Visits",
+            "REFERRALS": "Referral Traffic"
         },
         "WIDGETS": {
             "SALES": "Sales",
