@@ -1,6 +1,6 @@
-<div class="widget md-whiteframe-z1" ng-class="{'widget-overlay-title': overlayTitle}" flex ng-attr-layout="{{ widgetLayout }}">
+<div class="widget md-whiteframe-z1" ng-class="{'widget-overlay-title': overlayTitle}" flex ng-attr-layout="{{widgetLayout}}">
 
-    <div class="widget-title" ng-if="title || subtitle" layout="row" layout-padding layout-align="space-between center" ng-attr-flex-order="{{ titleOrder }}">
+    <div class="widget-title" ng-if="title || subtitle" layout="row" layout-padding layout-align="space-between center" ng-attr-flex-order="{{titleOrder}}">
         <div flex layout="column">
             <h3 class="md-subhead" ng-if="title">{{title}}</h3>
             <p class="md-body-1" ng-if="subtitle">{{subtitle}}</p>
@@ -10,7 +10,7 @@
         </md-button>
     </div>
 
-    <div class="widget-content" flex ng-attr-layout-align="{{ contentLayoutAlign }}" ng-attr-layout-padding="{{ contentPadding }}" ng-transclude ng-attr-flex-order="{{ contentOrder }}"></div>
+    <div class="widget-content" flex ng-attr-layout="{{contentLayout}}" ng-attr-layout-align="{{contentLayoutAlign}}" ng-attr-layout-padding="{{contentPadding}}" ng-transclude ng-attr-flex-order="{{contentOrder}}"></div>
 
     <div class="widget-loading ng-hide" ng-show="loading" layout layout-fill layout-align="center center">
         <div class="widget-loading-inner" ng-show="loading">
