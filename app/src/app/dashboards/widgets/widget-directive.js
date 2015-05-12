@@ -72,6 +72,12 @@ angular.module('triAngularDashboards')
             if(attrs.backgroundImage !== undefined) {
                 $element.css('background-image', 'url(' + attrs.backgroundImage + ')');
             }
+
+            $scope.menuClick = function($event) {
+                if(undefined !== $scope.menu.menuClick) {
+                    $scope.menu.menuClick($event);
+                }
+            }
         }
     };
 });

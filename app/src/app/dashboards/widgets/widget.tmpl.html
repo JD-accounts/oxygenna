@@ -5,7 +5,7 @@
             <h3 class="md-subhead" ng-if="title">{{title}}</h3>
             <p class="md-body-1" ng-if="subtitle">{{subtitle}}</p>
         </div>
-        <md-button ng-if="menu" class="widget-button md-icon-button" aria-label="More">
+        <md-button ng-if="menu" class="widget-button md-icon-button" ng-click="menuClick($event)">
             <md-icon md-font-icon="{{menu.icon}}"></md-icon>
         </md-button>
     </div>

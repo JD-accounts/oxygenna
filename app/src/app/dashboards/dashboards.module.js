@@ -39,7 +39,7 @@ angular.module('triAngularDashboards', [])
         templateUrl: 'app/dashboards/dashboard3.tmpl.html',
     })
     .state('private.admin.toolbar.default.widgets', {
-        url: '/widgets',
+        url: '/dashboards/widgets',
         templateUrl: 'app/dashboards/widgets.tmpl.html',
     });
 })
