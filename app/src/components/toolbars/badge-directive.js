@@ -21,7 +21,7 @@ angular.module('triAngular')
         restrict: 'E',
         replace: true,
         transclude: true,
-        template: '<span class="tri-badge" ng-style="badgeStyle" ng-transclude></span>',
+        template: '<span class="tri-button-badge" ng-style="badgeStyle" ng-transclude></span>',
         link: function ($scope, $element, attrs) {
             var mdClasses = triTheme.getMdClasses($element);
             var intentClass = triTheme.filterIntentClass(mdClasses);

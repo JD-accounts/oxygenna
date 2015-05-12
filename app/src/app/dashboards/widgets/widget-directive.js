@@ -46,7 +46,7 @@ angular.module('triAngularDashboards')
             // set if the layout-padding attribute will be added
             $scope.contentPadding = attrs.contentPadding === undefined ? undefined : true;
             // set the content align
-            $scope.contentLayoutAlign = attrs.contentAlign === undefined ? 'center center' : attrs.contentAlign;
+            $scope.contentLayoutAlign = attrs.contentLayoutAlign === undefined ? 'center center' : attrs.contentLayoutAlign;
             // set the order of the title and content based on title position
             $scope.titleOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 2 : 1;
             $scope.contentOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 1 : 2;
