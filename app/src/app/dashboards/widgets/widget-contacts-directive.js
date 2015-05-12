@@ -39,18 +39,6 @@ angular.module('triAngularDashboards')
             },{
                 name: 'Roberto Grimes',
                 image: 'assets/images/avatars/avatar-4.png',
-            },{
-                name: 'Arch Sporer IV',
-                image: 'assets/images/avatars/avatar-5.png',
-            },{
-                name: 'Bethel Howell',
-                image: 'assets/images/avatars/avatar-1.png',
-            },{
-                name: 'Prof. Ezekiel Mann',
-                image: 'assets/images/avatars/avatar-3.png',
-            },{
-                name: 'Dr. Elva Olson III',
-                image: 'assets/images/avatars/avatar-2.png',
             }];
         }
     };
