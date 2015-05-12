@@ -33,7 +33,16 @@
             "7DAYS": "7 Days",
             "365DAYS": "365 Days",
             "CPU": "CPU",
-            "BANDWIDTH": "Bandwidth"
+            "BANDWIDTH": "Bandwidth",
+            "DISKS": "Disks",
+            "JOB": "Host Job Queue",
+            "STATUS": "Server Status",
+            "CURRENTLY": "Your server is currently",
+            "RUNNING": "Running",
+            "RESTART": "Restart",
+            "SHUTDOWN": "Shut Down",
+            "USAGE": "Monthly Usage",
+            "LIMIT": "of monthly limit"
         },
         "WIDGETS": {
             "SALES": "Sales",

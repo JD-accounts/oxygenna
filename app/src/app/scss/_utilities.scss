@@ -4,19 +4,19 @@
 $i : 0;
 @while $i <= 200 {
   .margin-#{$i} {
-    margin: $i !important;
+    margin: #{$i}px !important;
   }
   .margin-top-#{$i} {
-    margin-top: $i !important;
+    margin-top: #{$i}px !important;
   }
   .margin-left-#{$i} {
-    margin-left: $i !important;
+    margin-left: #{$i}px !important;
   }
   .margin-bottom-#{$i} {
-    margin-bottom: $i !important;
+    margin-bottom: #{$i}px !important;
   }
   .margin-right-#{$i} {
-    margin-right: $i !important;
+    margin-right: #{$i}px !important;
   }
   $i : $i + 10;
 }
@@ -25,19 +25,19 @@ $i : 0;
 $i : 0;
 @while $i <= 200 {
   .padding-#{$i} {
-    padding: $i !important;
+    padding: #{$i}px !important;
   }
   .padding-top-#{$i} {
-    padding-top: $i !important;
+    padding-top: #{$i}px !important;
   }
   .padding-left-#{$i} {
-    padding-left: $i !important;
+    padding-left: #{$i}px !important;
   }
   .padding-bottom-#{$i} {
-    padding-bottom: $i !important;
+    padding-bottom: #{$i}px !important;
   }
   .padding-right-#{$i} {
-    padding-right: $i !important;
+    padding-right: #{$i}px !important;
   }
   $i : $i + 10;
 }

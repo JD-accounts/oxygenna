@@ -22,6 +22,7 @@ angular.module('triAngularDashboards', [])
     })
     .state('private.admin.toolbar.default.dashboard-server', {
         url: '/dashboards/server',
+        controller: 'DashboardServerController',
         templateUrl: 'app/dashboards/dashboard-server.tmpl.html',
     })
 
