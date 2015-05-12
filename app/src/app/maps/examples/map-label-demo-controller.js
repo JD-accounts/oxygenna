@@ -33,6 +33,6 @@ controller('MapLabelDemoController', function ($scope, uiGmapGoogleMapApi) {
             }
         };
 
-        $scope.labelTitle = "Hello from Arizona!";
+        $scope.labelTitle = 'Hello from Arizona!';
     });   
 });
