@@ -7,7 +7,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
 })
-.config(function ($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider, ACCESS) {
+.config(function ($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider) {
     // $stateProvider
     // .state('home', {
     //     url: '/',
@@ -49,33 +49,18 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 
     // setup public states & routes
     $stateProvider
-    .state('public', {
-        abstract: true,
-        template: '<ui-view/>',
-        data: {
-            access: ACCESS.public
-        }
-    })
 
-    .state('private', {
-        abstract: true,
-        template: '<ui-view/>',
-        data: {
-            access: ACCESS.private
-        }
-    })
-
-    .state('private.admin', {
+    .state('admin', {
         abstract: true,
         templateUrl: 'app/layouts/admin.tmpl.html',
     })
 
-    .state('private.admin.toolbar', {
+    .state('admin.toolbar', {
         abstract: true,
         template: '<tri-loader></tri-loader><div id="ui-admin-toolbar" ui-view="toolbar"></div><div id="ui-admin-content" flex layout ui-view="content"></div>',
     })
 
-    .state('private.admin.toolbar.default', {
+    .state('admin.toolbar.default', {
         abstract: true,
         views: {
             toolbar: {
@@ -88,12 +73,12 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         },
     })
 
-    .state('private.blank', {
+    .state('blank', {
         abstract: true,
         template: '<ui-view/>',
     })
 
-    .state('public.access-undefined', {
+    .state('access-undefined', {
         url: '/access-undefined/:toState',
         templateUrl: 'app/misc/access-undefined.html',
         controller: function($scope, $stateParams) {

@@ -12,17 +12,17 @@ angular.module('triAngularMaps', ['uiGmapgoogle-maps'])
     $translatePartialLoaderProvider.addPart('app/maps');
 
     $stateProvider
-    .state('private.admin.toolbar.default.fullwidth', {
+    .state('admin.toolbar.default.fullwidth', {
         url: '/fullwidth',
         templateUrl: 'app/maps/maps-fullwidth.tmpl.html',
         controller: 'MapController'
-    })    
-    .state('private.admin.toolbar.default.demos', {
+    })
+    .state('admin.toolbar.default.demos', {
         url: '/demos',
         templateUrl: 'app/maps/maps-demo.tmpl.html',
     });
 
-    uiGmapGoogleMapApiProvider.configure({        
+    uiGmapGoogleMapApiProvider.configure({
         v: '3.17',
         libraries: 'weather,geometry,visualization'
     });

@@ -8,36 +8,32 @@
  * The `triangular.authentication` module handles all the login and signup pages
  */
 angular.module('triAngularAuthentication', ['ui.gravatar'])
-.constant('ACCESS', {
-    'public':  0x01,
-    'private': 0x02,
-})
 .config(function ($translatePartialLoaderProvider, $stateProvider) {
     $translatePartialLoaderProvider.addPart('app/authentication');
 
     $stateProvider
-    .state('public.auth', {
+    .state('authentication', {
         abstract: true,
-        templateUrl: 'app/authentication/layouts/authentication.html',
+        templateUrl: 'app/authentication/layouts/authentication.tmpl.html',
     })
-    .state('public.auth.login', {
+    .state('authentication.login', {
         url: '/login',
-        templateUrl: 'app/authentication/login/login.html',
+        templateUrl: 'app/authentication/login/login.tmpl.html',
         controller: 'LoginController'
     })
-    .state('public.auth.signup', {
+    .state('authentication.signup', {
         url: '/signup',
-        templateUrl: 'app/authentication/signup/signup.html',
+        templateUrl: 'app/authentication/signup/signup.tmpl.html',
         controller: 'SignupController'
     })
-    .state('public.auth.user-lock', {
+    .state('authentication.user-lock', {
         url: '/lock',
-        templateUrl: 'app/authentication/lock/lock.html',
+        templateUrl: 'app/authentication/lock/lock.tmpl.html',
         controller: 'LockController'
     })
-    .state('public.auth.forgot', {
+    .state('authentication.forgot', {
         url: '/forgot',
-        templateUrl: 'app/authentication/forgot/forgot.html',
+        templateUrl: 'app/authentication/forgot/forgot.tmpl.html',
         controller: 'ForgotController'
     });
 })
