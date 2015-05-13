@@ -1,0 +1,7 @@
+<md-grid-list md-cols-gt-md="3" md-cols-sm="2" md-cols-md="3" md-row-height="4:3" md-gutter="6px">
+    <md-grid-tile md-colspan="{{item.span.col}}" md-rowspan="{{item.span.row}}" ng-repeat="item in items" ng-style="{ 'background-image': 'url(' + item.image + ')' }">
+        <md-grid-tile-footer>
+            <h3>{{item.title}}</h3>
+        </md-grid-tile-footer>
+    </md-grid-tile>
+</md-grid-list>
