@@ -159,18 +159,43 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 
     $mdThemingProvider.theme('green')
     .primaryPalette('green')
-    .accentPalette('deep-orange')
-    .warnPalette('red');
+    .accentPalette('amber')
+    .warnPalette('deep-orange');
 
     $mdThemingProvider.theme('red')
     .primaryPalette('red')
     .accentPalette('amber')
-    .warnPalette('red');
+    .warnPalette('purple');
+
+    $mdThemingProvider.theme('pink')
+    .primaryPalette('pink')
+    .accentPalette('deep-purple')
+    .warnPalette('amber');
+
+    $mdThemingProvider.theme('purple')
+    .primaryPalette('purple')
+    .accentPalette('deep-orange')
+    .warnPalette('amber');
+
+    $mdThemingProvider.theme('cyan')
+    .primaryPalette('cyan')
+    .accentPalette('amber')
+    .warnPalette('deep-orange');
+
+    $mdThemingProvider.theme('teal')
+    .primaryPalette('teal')
+    .accentPalette('red')
+    .warnPalette('orange');
+
+    $mdThemingProvider.theme('deep-orange')
+    .primaryPalette('deep-orange')
+    .accentPalette('lime')
+    .warnPalette('amber')
 
     $mdThemingProvider.theme('blue-grey')
     .primaryPalette('blue-grey')
-    .accentPalette('deep-orange')
-    .warnPalette('red')
+    .accentPalette('red')
+    .warnPalette('orange')
     .backgroundPalette('grey');
 
     $mdThemingProvider.theme('dark')
@@ -188,6 +213,11 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     $mdThemingProvider.theme('white-blue')
     .primaryPalette('white')
     .accentPalette('blue')
+    .warnPalette('deep-orange');
+
+    $mdThemingProvider.theme('white-cyan')
+    .primaryPalette('white')
+    .accentPalette('cyan')
     .warnPalette('deep-orange');
 
     $mdThemingProvider.theme('white-green')
