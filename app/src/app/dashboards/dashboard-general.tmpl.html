@@ -99,19 +99,15 @@
                     </div>
                 </div>
             </widget>
-
+             <widget title="{{'DASHBOARDS.GENERAL.CONTACTS' | translate}}" contacts-widget>
+                <md-list>
+                    <md-list-item ng-repeat="contact in contacts">
+                        <img class="md-avatar" ng-src="{{contact.image}}" alt="{{contact.name}}">
+                        <p>{{contact.name}}</p>
+                        <md-divider ng-hide="$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+            </widget>
         </div>
-
-        <widget title="{{'DASHBOARDS.GENERAL.CONTACTS' | translate}}" contacts-widget>
-            <md-list>
-                <md-list-item ng-repeat="contact in contacts">
-                    <img class="md-avatar" ng-src="{{contact.image}}" alt="{{contact.name}}">
-                    <p>{{contact.name}}</p>
-                    <md-divider ng-hide="$last"></md-divider>
-                </md-list-item>
-            </md-list>
-        </widget>
-
-
     </div>
 </div>
