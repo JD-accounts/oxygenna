@@ -21,7 +21,7 @@ angular.module('triAngularExtras', [])
 .run(function(SideMenu) {
     SideMenu.addMenu({
         name: 'MENU.EXTRAS.EXTRAS',
-        icon: 'icon-place',
+        icon: 'icon-list',
         type: 'dropdown',
         priority: 8.1,
         children: [{
