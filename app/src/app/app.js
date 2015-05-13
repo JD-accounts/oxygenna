@@ -127,14 +127,24 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         'contrastDefaultColor': 'dark',    // whether, by default, text (contrast)
     });
 
-    // Extend the red theme with a few different colors
-    // var neonRedMap = $mdThemingProvider.extendPalette('red', {
-    //     '500': 'ff0000',
-    //     'default': 'ff0000'
-    // });
+    $mdThemingProvider.definePalette('black', {
+        '50': 'e1e1e1',
+        '100': 'b6b6b6',
+        '200': '8c8c8c',
+        '300': '646464',
+        '400': '4d4d4d',
+        '500': '3a3a3a',
+        '600': '2f2f2f',
+        '700': '232323',
+        '800': '1a1a1a',
+        '900': '121212',
+        'A100': 'ffffff',
+        'A200': 'ffffff',
+        'A400': 'ffffff',
+        'A700': 'ffffff',
+        'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
+    });
 
-    // // Register the new color palette map with the name <code>neonRed</code>
-    // $mdThemingProvider.definePalette('neonRed', neonRedMap);
 
     // Create some themes for the template
     $mdThemingProvider.theme('default')
@@ -144,35 +154,46 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 
     $mdThemingProvider.theme('blue')
     .primaryPalette('blue')
-    .accentPalette('pink')
-    .warnPalette('red');
+    .accentPalette('red')
+    .warnPalette('orange');
 
     $mdThemingProvider.theme('green')
     .primaryPalette('green')
-    .accentPalette('blue')
-    .warnPalette('deep-orange');
+    .accentPalette('deep-orange')
+    .warnPalette('red');
 
     $mdThemingProvider.theme('red')
     .primaryPalette('red')
     .accentPalette('amber')
     .warnPalette('red');
 
-    $mdThemingProvider.theme('blue-gray')
+    $mdThemingProvider.theme('blue-grey')
     .primaryPalette('blue-grey')
-    .accentPalette('teal')
-    .warnPalette('amber')
+    .accentPalette('deep-orange')
+    .warnPalette('red')
     .backgroundPalette('grey');
 
     $mdThemingProvider.theme('dark')
-    .primaryPalette('grey')
+    .primaryPalette('black')
     .accentPalette('amber')
-    .warnPalette('red')
+    .warnPalette('deep-orange')
+    .backgroundPalette('black')
     .dark();
 
-    $mdThemingProvider.theme('white')
+    $mdThemingProvider.theme('white-red')
     .primaryPalette('white')
-    .accentPalette('pink')
-    .warnPalette('red');
+    .accentPalette('red')
+    .warnPalette('orange');
+
+    $mdThemingProvider.theme('white-blue')
+    .primaryPalette('white')
+    .accentPalette('blue')
+    .warnPalette('deep-orange');
+
+    $mdThemingProvider.theme('white-green')
+    .primaryPalette('white')
+    .accentPalette('green')
+    .warnPalette('deep-orange');
 
 })
 .config(['ChartJsProvider', function (ChartJsProvider) {
