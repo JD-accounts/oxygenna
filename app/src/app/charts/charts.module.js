@@ -12,31 +12,31 @@ angular.module('triAngularCharts', [])
     $translatePartialLoaderProvider.addPart('app/charts');
 
     $stateProvider
-    .state('private.admin.toolbar.default.google-bar', {
+    .state('admin.toolbar.default.google-bar', {
         url: '/charts/google/bar',
         templateUrl: 'app/charts/google-bar.tmpl.html'
     })
-    .state('private.admin.toolbar.default.google-scatter', {
+    .state('admin.toolbar.default.google-scatter', {
         url: '/charts/google/scatter',
         templateUrl: 'app/charts/google-scatter.tmpl.html'
     })
-    .state('private.admin.toolbar.default.google-line', {
+    .state('admin.toolbar.default.google-line', {
         url: '/charts/google/line',
         templateUrl: 'app/charts/google-line.tmpl.html'
     })
-    .state('private.admin.toolbar.default.chartjs-bar', {
+    .state('admin.toolbar.default.chartjs-bar', {
         url: '/charts/chartjs/bar',
         templateUrl: 'app/charts/chartjs-bar.tmpl.html'
     })
-    .state('private.admin.toolbar.default.chartjs-pie', {
+    .state('admin.toolbar.default.chartjs-pie', {
         url: '/charts/chartjs/pie',
         templateUrl: 'app/charts/chartjs-pie.tmpl.html'
     })
-    .state('private.admin.toolbar.default.chartjs-ticker', {
+    .state('admin.toolbar.default.chartjs-ticker', {
         url: '/charts/chartjs/ticker',
         templateUrl: 'app/charts/chartjs-ticker.tmpl.html'
     })
-    .state('private.admin.toolbar.default.chartjs-line', {
+    .state('admin.toolbar.default.chartjs-line', {
         url: '/charts/chartjs/line',
         templateUrl: 'app/charts/chartjs-line.tmpl.html'
     });

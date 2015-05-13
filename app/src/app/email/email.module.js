@@ -29,7 +29,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 
     angular.forEach(EMAIL_ROUTES, function(route) {
         $stateProvider
-        .state('private.admin.toolbar.' + route.state, {
+        .state('admin.toolbar.' + route.state, {
             url: route.url,
             views: {
                 toolbar: {
@@ -60,7 +60,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 
     angular.forEach(EMAIL_ROUTES, function(route) {
         $stateProvider
-        .state('private.admin.toolbar.' + route.state + '.email', {
+        .state('admin.toolbar.' + route.state + '.email', {
             url: '/mail/:emailID',
             templateUrl: 'app/email/email.tmpl.html',
             controller: 'EmailController',
@@ -79,7 +79,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
             },
             onEnter: function($state, email){
                 if (false === email) {
-                    $state.go('private.admin.toolbar.' + route.state);
+                    $state.go('admin.toolbar.' + route.state);
                 }
             },
         });

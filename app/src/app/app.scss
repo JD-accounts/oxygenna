@@ -4,6 +4,7 @@
 @import "scss/reset";
 @import "scss/tables";
 @import "scss/material-icons";
+@import "scss/material-overrides";
 @import "scss/typography";
 @import "scss/utilities";
 @import "scss/social";
@@ -11,14 +12,10 @@
 html, body, #container, .container-inner, #ui-admin-content {
   height: 100%;
 }
-a {
-  color: #00BCD4;
-}
 
 // Admin Content Area
 #ui-admin-content {
   overflow-y: auto;
-  background-color: #f3f3f3;
 }
 #content {
   position: relative;
@@ -34,8 +31,10 @@ a {
 
 // Doc Pages
 .padded-docs-page {
-  max-width: 864px;
-  margin: auto;
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 // injector
 // endinjector

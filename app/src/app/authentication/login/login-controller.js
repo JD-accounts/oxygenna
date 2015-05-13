@@ -11,7 +11,7 @@
  * Handles login form submission and response
  */
 angular.module('triAngularAuthentication')
-.controller('LoginController', function ($scope, $state, $mdToast, $filter, AuthService) {
+.controller('LoginController', function ($scope, $state) {
     // create blank user variable for login form
     $scope.user = {
         email: 'info@oxygenna.com',
@@ -38,16 +38,6 @@ angular.module('triAngularAuthentication')
 
     // controller to handle login check
     $scope.loginClick = function() {
-        AuthService.login($scope.user, function(user) {
-            // user logged in ok so goto the dashboard
-            $state.go('private.admin.toolbar.default.introduction');
-        }, function(error) {
-            $mdToast.show(
-                $mdToast.simple()
-                .content($filter('translate')('LOGIN.MESSAGES.ACCESS_DENIED'))
-                .position('bottom right')
-                .hideDelay(5000)
-            );
-        });
+        $state.go('admin.toolbar.default.introduction');
     };
 });
