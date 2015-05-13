@@ -2,7 +2,8 @@
     "MENU": {
         "EXTRAS": {
         	"EXTRAS": "Extras",
-            "GALLERY": "Gallery"            
+            "GALLERY": "Gallery" ,
+            "AVATARS": "Avatars"           
         }
     }
 }

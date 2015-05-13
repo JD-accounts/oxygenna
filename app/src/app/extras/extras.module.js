@@ -16,6 +16,10 @@ angular.module('triAngularExtras', [])
         url: '/gallery',
         templateUrl: 'app/extras/gallery.tmpl.html',
         controller: 'GalleryController'
+    })
+    .state('admin.toolbar.default.avatars', {
+        url: '/avatars',
+        templateUrl: 'app/extras/avatars.tmpl.html'        
     });    
 })
 .run(function(SideMenu) {
@@ -27,6 +31,10 @@ angular.module('triAngularExtras', [])
         children: [{
             name: 'MENU.EXTRAS.GALLERY',
             url: '/gallery',
+            type: 'link',
+        },{
+            name: 'MENU.EXTRAS.AVATARS',
+            url: '/avatars',
             type: 'link',
         }]
     });
