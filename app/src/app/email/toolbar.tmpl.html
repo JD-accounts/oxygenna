@@ -1,19 +1,18 @@
-<md-toolbar class="toolbar-default" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}">
-    <div class="md-toolbar-tools">
-        <md-button hide-gt-md aria-label="{{'ADMIN.TOOLBAR.SIDEBAR_TOGGLE' | translate}}" ng-click="openMenu()" class="md-icon-button">
-            <md-icon md-font-icon="icon-menu"></md-icon>
-        </md-button>
+<div class="md-toolbar-tools">
+    <md-button hide-gt-md aria-label="{{'ADMIN.TOOLBAR.SIDEBAR_TOGGLE' | translate}}" ng-click="openMenu()" class="md-icon-button">
+        <md-icon md-font-icon="icon-menu"></md-icon>
+    </md-button>
 
-        <h2 breadcrumbs="menu" flex></h2>
-        <md-button class="md-icon-button" ng-click="toggleSearch()" aria-label="{{'ADMIN.TOOLBAR.SIDEBAR_TOGGLE' | translate}}">
-            <md-icon md-font-icon="icon-search"></md-icon>
-        </md-button>
+    <h2 breadcrumbs="menu" flex></h2>
+    <md-button class="md-icon-button" ng-click="toggleSearch()" aria-label="{{'ADMIN.TOOLBAR.SIDEBAR_TOGGLE' | translate}}">
+        <md-icon md-font-icon="icon-search"></md-icon>
+    </md-button>
 
-        <input class="toolbar-search" ng-show="showSearch" ng-model="emailSearch" ng-change="filterEmailList(emailSearch)" type="text" placeholder="{{'EMAIL.TOOLBAR.SEARCH' | translate}}">
+    <input class="toolbar-search" ng-show="showSearch" ng-model="emailSearch" ng-change="filterEmailList(emailSearch)" type="text" placeholder="{{'EMAIL.TOOLBAR.SEARCH' | translate}}">
 
-        <md-button class="md-icon-button" ng-repeat="menu in toolbarMenu" ng-href="#{{menu.url}}" aria-label="{{menu.name}}">
-            <md-icon md-font-icon="{{menu.icon}}"></md-icon>
-            <md-tooltip>{{menu.name}}</md-tooltip>
-        </md-button>
-    </div>
-</md-toolbar>
+    <md-button class="md-icon-button" ng-repeat="menu in toolbarMenu" ng-href="#{{menu.url}}" aria-label="{{menu.name}}">
+        <md-icon md-font-icon="{{menu.icon}}"></md-icon>
+        <md-tooltip>{{menu.name}}</md-tooltip>
+    </md-button>
+</div>
+
