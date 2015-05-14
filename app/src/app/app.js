@@ -8,15 +8,6 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     'url':  'http://triangular-api.oxygenna.com/'
 })
 .config(function ($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider) {
-    // $stateProvider
-    // .state('home', {
-    //     url: '/',
-    //     templateUrl: 'app/main/main.html',
-    //     controller: 'MainCtrl'
-    // });
-
-    // $urlRouterProvider.otherwise('/');
-
     // SETUP TRANSLATIONS
 
     // each module loads its own translation file - making it easier to create translations
@@ -50,32 +41,40 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     // setup public states & routes
     $stateProvider
 
-    .state('admin', {
+    .state('admin-panel', {
         abstract: true,
-        templateUrl: 'app/layouts/admin.tmpl.html',
+        templateUrl: 'app/layouts/admin-panel/admin-panel.tmpl.html',
+        data: {
+            toolbar: {
+                tall: false,
+                background: false,
+                shrink: true
+            }
+        }
     })
 
-    .state('admin.toolbar', {
-        abstract: true,
-        template: '<tri-loader></tri-loader><div id="ui-admin-toolbar" ui-view="toolbar"></div><div id="ui-admin-content" flex layout ui-view="content"></div>',
-    })
-
-    .state('admin.toolbar.default', {
+    .state('admin-panel.default', {
         abstract: true,
         views: {
+            sidebarLeft: {
+                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html'
+            },
             toolbar: {
                 templateUrl: 'components/toolbars/default.tmpl.html',
                 controller: 'DefaultToolbarController'
             },
+            footer: {
+                templateUrl: 'components/footer/footer.tmpl.html',
+            },
             content: {
-                template: '<div flex ui-view></div>',
+                template: '<div flex ui-view></div>'
             }
         },
     })
 
-    .state('blank', {
+    .state('admin', {
         abstract: true,
-        template: '<ui-view/>',
+        templateUrl: 'app/layouts/admin.tmpl.html',
     })
 
     .state('access-undefined', {

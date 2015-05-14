@@ -12,22 +12,22 @@ angular.module('triAngularForms', [])
     $translatePartialLoaderProvider.addPart('app/forms');
 
     $stateProvider
-    .state('admin.toolbar.default.forms', {
+    .state('admin-panel.default.forms', {
         url: '/forms/inputs',
         templateUrl: 'app/forms/inputs.tmpl.html'
     })
-    .state('admin.toolbar.default.binding', {
+    .state('admin-panel.default.binding', {
         url: '/forms/binding',
         templateUrl: 'app/forms/binding.tmpl.html',
         controller: 'BindingController'
     })
-    .state('admin.toolbar.default.autocomplete', {
+    .state('admin-panel.default.autocomplete', {
         url: '/forms/autocomplete',
         templateUrl: 'app/forms/autocomplete.tmpl.html',
         controller: 'AutocompleteController',
         controllerAs: 'ctrl',
     })
-    .state('admin.toolbar.default.validation', {
+    .state('admin-panel.default.validation', {
         url: '/forms/validation',
         templateUrl: 'app/forms/validation.tmpl.html'
     });

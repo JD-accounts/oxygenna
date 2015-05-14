@@ -12,39 +12,34 @@ angular.module('triAngularDashboards', [])
     $translatePartialLoaderProvider.addPart('app/dashboards');
 
     $stateProvider
-    .state('admin.toolbar.default.dashboard-general', {
+    .state('admin-panel.default.dashboard-general', {
         url: '/dashboards/general',
         templateUrl: 'app/dashboards/dashboard-general.tmpl.html',
     })
-    .state('admin.toolbar.default.dashboard-analytics', {
+    .state('admin-panel.default.dashboard-analytics', {
         url: '/dashboards/analytics',
         templateUrl: 'app/dashboards/dashboard-analytics.tmpl.html',
     })
-    .state('admin.toolbar.default.dashboard-server', {
+    .state('admin-panel.default.dashboard-server', {
         url: '/dashboards/server',
         controller: 'DashboardServerController',
         templateUrl: 'app/dashboards/dashboard-server.tmpl.html',
     })
 
-    .state('admin.test-toolbar', {
-        url: '/toolbars',
-        templateUrl: 'app/dashboards/toolbars.tmpl.html'
-    })
-
-    .state('admin.toolbar.default.dashboard1', {
+    .state('admin-panel.default.dashboard1', {
         url: '/dashboard',
         templateUrl: 'app/dashboards/dashboard1.html',
         controller: 'DashboardController'
     })
-    .state('admin.toolbar.default.dashboard2', {
+    .state('admin-panel.default.dashboard2', {
         url: '/dashboard2',
         templateUrl: 'app/dashboards/dashboard2.tmpl.html',
     })
-    .state('admin.toolbar.default.dashboard3', {
+    .state('admin-panel.default.dashboard3', {
         url: '/dashboard3',
         templateUrl: 'app/dashboards/dashboard3.tmpl.html',
     })
-    .state('admin.toolbar.default.widgets', {
+    .state('admin-panel.default.widgets', {
         url: '/dashboards/widgets',
         templateUrl: 'app/dashboards/widgets.tmpl.html',
     });

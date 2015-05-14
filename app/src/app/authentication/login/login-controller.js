@@ -38,6 +38,6 @@ angular.module('triAngularAuthentication')
 
     // controller to handle login check
     $scope.loginClick = function() {
-        $state.go('admin.toolbar.default.introduction');
+        $state.go('admin-panel.default.introduction');
     };
 });

@@ -37,17 +37,17 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
     $translatePartialLoaderProvider.addPart('app/ui');
 
     $stateProvider
-    .state('admin.toolbar.default.typography', {
+    .state('admin-panel.default.typography', {
         url: '/ui/typography',
         controller: 'TypographyController',
         templateUrl: 'app/ui/typography.tmpl.html',
     })
-    .state('admin.toolbar.default.colors', {
+    .state('admin-panel.default.colors', {
         url: '/ui/colors',
         controller: 'ColorsController',
         templateUrl: 'app/ui/colors.tmpl.html',
     })
-    .state('admin.toolbar.default.material-icons', {
+    .state('admin-panel.default.material-icons', {
         url: '/ui/material-icons',
         controller: 'MaterialIconsController',
         templateUrl: 'app/ui/material-icons.tmpl.html',
@@ -60,7 +60,7 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
             }
         }
     })
-    .state('admin.toolbar.default.fa-icons', {
+    .state('admin-panel.default.fa-icons', {
         url: '/ui/fa-icons',
         controller: 'FaIconsController',
         templateUrl: 'app/ui/fa-icons.tmpl.html',
@@ -73,7 +73,7 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
             }
         }
     })
-    .state('admin.toolbar.default.themes', {
+    .state('admin-panel.default.themes', {
         url: '/ui/themes',
         controller: 'ThemesController',
         templateUrl: 'app/ui/themes.tmpl.html',

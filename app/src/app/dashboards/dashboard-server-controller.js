@@ -9,7 +9,7 @@
  *
  */
 angular.module('triAngularDashboards').
-controller('DashboardServerController', function ($scope) {
+controller('DashboardServerController', function ($scope, $timeout) {
     $scope.disks = [{
         icon: 'icon-storage',
         name: 'Ubuntu 10.04 LTS Disk Image (10000 MB, ext3)',
@@ -24,7 +24,6 @@ controller('DashboardServerController', function ($scope) {
         enabled: true
     }];
 
-
     $scope.jobs = [{
         job: 'Host initiated restart',
         time: 'Took: 10 seconds',
@@ -34,4 +33,8 @@ controller('DashboardServerController', function ($scope) {
         time: 'Took: 6minutes 26 seconds',
         complete: false
     }];
+
+    $timeout(function() {
+        console.log('timout')
+    }, 5000)
 });

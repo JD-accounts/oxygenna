@@ -11,9 +11,28 @@
  * Handles the admin view
  */
 angular.module('triAngular').
-controller('AdminController', function ($scope, $timeout, $mdSidenav, $mdUtil, triTheme, APP) {
+controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, $mdUtil, $state, triTheme, APP) {
     $scope.appName = APP.name;
     $scope.triTheme = triTheme;
+    $scope.toolbarShrink = false;
+
+    $scope.$on('$stateChangeSuccess', function() {
+        $scope.toolbarShrink = false;
+        // set content padding class
+        if($state.current.data !== undefined) {
+            if($state.current.data.content !== undefined) {
+                if($state.current.data.content.padding !== undefined) {
+                    $scope.contentPadingClass = $state.current.data.content.padding;
+                }
+            }
+
+            if($state.current.data.toolbar !== undefined) {
+                if($state.current.data.toolbar.shrink === true) {
+                    $scope.toolbarShrink = true;
+                }
+            }
+        }
+    });
 
     $scope.toggleNotificationsTab = function(tab) {
         $scope.$broadcast('triSwitchNotificationTab', tab);

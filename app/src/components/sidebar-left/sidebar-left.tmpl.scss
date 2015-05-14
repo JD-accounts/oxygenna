@@ -1,0 +1,15 @@
+// Logo
+.logo-toolbar {
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.12);
+  z-index: 10;
+}
+.app-logo {
+  display: block;
+  &:hover {
+    text-decoration: none;
+  }
+  img {
+    vertical-align: middle;
+    max-height: 64px;
+  }
+}
