@@ -1,5 +1,10 @@
 // Utilities
 
+// - Full height
+.fullheight {
+  height: 100%;
+}
+
 // - Margin Classes
 $i : 0;
 @while $i <= 200 {
@@ -47,6 +52,24 @@ $i : 0;
 @while $i <= 1 {
   .opacity-#{$i * 100} {
     opacity: $i !important;
+  }
+  $i : $i + 0.1;
+}
+
+// - Overlay Classes
+$i : 0;
+@while $i <= 1 {
+  .overlay-#{$i * 100} {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(100,100,100, $i);
+    }
   }
   $i : $i + 0.1;
 }
