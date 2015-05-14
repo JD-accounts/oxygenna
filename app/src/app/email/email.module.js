@@ -49,28 +49,6 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
         },
     })
 
-
-
-    // .state('email-panel.default', {
-    //     abstract: true,
-    //     views: {
-    //         sidebarLeft: {
-    //             templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html'
-    //         },
-    //         toolbar: {
-    //             templateUrl: 'components/toolbars/default.tmpl.html',
-    //             controller: 'DefaultToolbarController'
-    //         },
-    //         footer: {
-    //             templateUrl: 'components/footer/footer.tmpl.html',
-    //         },
-    //         content: {
-    //             template: '<div flex ui-view></div>'
-    //         }
-    //     },
-    // })
-
-
     angular.forEach(EMAIL_ROUTES, function(route) {
         $stateProvider
         .state('email-panel.default.' + route.state, {
