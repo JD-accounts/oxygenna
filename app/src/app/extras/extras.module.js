@@ -12,15 +12,15 @@ angular.module('triAngularExtras', [])
     $translatePartialLoaderProvider.addPart('app/extras');
 
     $stateProvider
-    .state('admin.toolbar.default.gallery', {
+    .state('admin-panel.default.gallery', {
         url: '/gallery',
         templateUrl: 'app/extras/gallery.tmpl.html',
         controller: 'GalleryController'
     })
-    .state('admin.toolbar.default.avatars', {
+    .state('admin-panel.default.avatars', {
         url: '/avatars',
-        templateUrl: 'app/extras/avatars.tmpl.html'        
-    });    
+        templateUrl: 'app/extras/avatars.tmpl.html'
+    });
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({

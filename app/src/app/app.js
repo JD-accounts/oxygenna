@@ -44,6 +44,11 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .state('admin-panel', {
         abstract: true,
         templateUrl: 'app/layouts/admin-panel/admin-panel.tmpl.html',
+        data: {
+            toolbar: {
+                tall: true
+            }
+        }
     })
 
     .state('admin-panel.default', {
@@ -65,40 +70,9 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         },
     })
 
-    .state('admin-panel.default.toolbar', {
-        url: '/toolbars',
-        templateUrl: 'app/dashboards/toolbars.tmpl.html',
-    })
-
-
-
-
     .state('admin', {
         abstract: true,
         templateUrl: 'app/layouts/admin.tmpl.html',
-    })
-
-    .state('admin.toolbar', {
-        abstract: true,
-        template: '<tri-loader></tri-loader><div id="ui-admin-toolbar" ui-view="toolbar"></div><div id="ui-admin-content" flex layout ui-view="content"></div>',
-    })
-
-    .state('admin.toolbar.default', {
-        abstract: true,
-        views: {
-            toolbar: {
-                templateUrl: 'components/toolbars/default.tmpl.html',
-                controller: 'DefaultToolbarController'
-            },
-            content: {
-                template: '<div flex ui-view></div>',
-            }
-        },
-    })
-
-    .state('blank', {
-        abstract: true,
-        template: '<ui-view/>',
     })
 
     .state('access-undefined', {

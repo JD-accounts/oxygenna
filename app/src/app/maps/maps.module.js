@@ -12,12 +12,12 @@ angular.module('triAngularMaps', ['uiGmapgoogle-maps'])
     $translatePartialLoaderProvider.addPart('app/maps');
 
     $stateProvider
-    .state('admin.toolbar.default.fullwidth', {
+    .state('admin-panel.default.fullwidth', {
         url: '/fullwidth',
         templateUrl: 'app/maps/maps-fullwidth.tmpl.html',
         controller: 'MapController'
     })
-    .state('admin.toolbar.default.demos', {
+    .state('admin-panel.default.demos', {
         url: '/demos',
         templateUrl: 'app/maps/maps-demo.tmpl.html',
     });

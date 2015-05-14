@@ -12,7 +12,7 @@ angular.module('triAngularMenuLevels', [])
     $translatePartialLoaderProvider.addPart('app/ui');
 
     $stateProvider
-    .state('admin.toolbar.default.menulevels', {
+    .state('admin-panel.default.menulevels', {
         url: '/menu-levels/:level',
         controller: 'LevelController',
         templateUrl: 'app/menulevels/level.tmpl.html',
