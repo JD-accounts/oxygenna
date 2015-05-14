@@ -17,13 +17,22 @@ angular.module('triAngular')
     $scope.menu = SideMenu.getMenu();
     $scope.triTheme = triTheme;
 
-    if($state.current.data !== undefined) {
-        if($state.current.data.toolbar !== undefined) {
-            if($state.current.data.toolbar.tall === true) {
-                $element.addClass('md-tall');
+    $scope.$on('$stateChangeSuccess', function() {
+        $element.removeClass('md-tall');
+        $element.css('background-image', '');
+
+        if($state.current.data !== undefined) {
+            if($state.current.data.toolbar !== undefined) {
+                if($state.current.data.toolbar.tall === true) {
+                    $element.addClass('md-tall');
+                }
+                console.log($state.current.data.toolbar)
+                if($state.current.data.toolbar.background) {
+                    $element.css('background-image', 'url(' + $state.current.data.toolbar.background + ')');
+                }
             }
         }
-    }
+    })
 
     $scope.switchLanguage = function(languageCode) {
         $translate.use(languageCode).then(function(data) {
