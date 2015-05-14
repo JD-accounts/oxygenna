@@ -42,7 +42,7 @@ angular.module('triAngularElements', [])
     })
     .state('admin-panel.default.radios', {
         url: '/elements/radios',
-        templateUrl: 'app/elements/radios.tmpl.html'
+        templateUrl: 'app/elements/radios.tmpl.html',
     })
     .state('admin-panel.default.toolbars', {
         url: '/elements/toolbars',

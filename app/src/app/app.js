@@ -63,11 +63,6 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
                 template: '<div flex ui-view></div>'
             }
         },
-        data: {
-            toolbar: {
-                tall: true
-            }
-        }
     })
 
     .state('admin-panel.default.toolbar', {

@@ -11,9 +11,18 @@
  * Handles the admin view
  */
 angular.module('triAngular').
-controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, $mdUtil, triTheme, APP) {
+controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, $mdUtil, $state, triTheme, APP) {
     $scope.appName = APP.name;
     $scope.triTheme = triTheme;
+
+    // set content padding class
+    if($state.current.data !== undefined) {
+        if($state.current.data.content !== undefined) {
+            if($state.current.data.content.padding !== undefined) {
+                $scope.contentPadingClass = $state.current.data.content.padding;
+            }
+        }
+    }
 
     $scope.toggleNotificationsTab = function(tab) {
         $scope.$broadcast('triSwitchNotificationTab', tab);
@@ -30,7 +39,7 @@ controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, 
      * Build handler to open/close a SideNav;
      */
     $scope.openSideNav = function(navID) {
-        $mdUtil.debounce(function(){
+        $mdUtil, $state.debounce(function(){
             $mdSidenav(navID).toggle();
         }, 300)();
     };
