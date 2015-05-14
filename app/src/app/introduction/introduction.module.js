@@ -12,12 +12,10 @@ angular.module('triAngularIntroduction', [])
     $translatePartialLoaderProvider.addPart('app/introduction');
 
     $stateProvider
-    .state('admin-panel.default.introduction', {
+    .state('admin-panel.default.padded.introduction', {
         url: '/introduction',
         templateUrl: 'app/introduction/introduction.tmpl.html',
     });
-
-
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({

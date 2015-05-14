@@ -21,8 +21,8 @@ controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, 
         // set content padding class
         if($state.current.data !== undefined) {
             if($state.current.data.content !== undefined) {
-                if($state.current.data.content.padding !== undefined) {
-                    $scope.contentPadingClass = $state.current.data.content.padding;
+                if($state.current.data.content.paddingClass !== undefined) {
+                    $scope.contentPadingClass = $state.current.data.content.paddingClass;
                 }
             }
 

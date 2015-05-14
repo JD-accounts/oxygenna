@@ -49,7 +49,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
                 tall: false,
                 background: false,
                 shrink: true
-            }
+            },
         }
     })
 
@@ -72,9 +72,14 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         },
     })
 
-    .state('admin', {
+    .state('admin-panel.default.padded', {
         abstract: true,
-        templateUrl: 'app/layouts/admin.tmpl.html',
+        template: '<div flex ui-view></div>',
+        data: {
+            content: {
+                paddingClass: 'padded-content-page'
+            }
+        }
     })
 
     .state('access-undefined', {

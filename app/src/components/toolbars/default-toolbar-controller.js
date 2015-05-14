@@ -26,7 +26,7 @@ angular.module('triAngular')
                 if($state.current.data.toolbar.tall === true) {
                     $element.addClass('md-tall');
                 }
-                console.log($state.current.data.toolbar)
+
                 if($state.current.data.toolbar.background) {
                     $element.css('background-image', 'url(' + $state.current.data.toolbar.background + ')');
                 }
