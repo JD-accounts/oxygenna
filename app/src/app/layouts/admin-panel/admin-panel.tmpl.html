@@ -3,7 +3,7 @@
     <md-sidenav layout class="admin-sidebar-left md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ui-view="sidebarLeft"></md-sidenav>
 
     <!-- main content -->
-    <div layout="column" layout-fill id="admin-content">
+    <div layout="column" layout-fill id="admin-panel">
         <!-- loading animation -->
         <tri-loader></tri-loader>
 
@@ -13,10 +13,10 @@
         <!-- scrollable content -->
         <md-content flex>
             <!-- main view content  -->
-            <div ng-class="contentPadingClass" ui-view="content"></div>
+            <div id="admin-panel-content" ng-class="contentPadingClass" ui-view="content"></div>
 
             <!-- footer -->
-            <md-toolbar class="md-accent" ui-view="footer"></md-toolbar>
+            <md-toolbar id="admin-panel-footer" class="md-accent" ui-view="footer"></md-toolbar>
         </md-content>
     </div>
 

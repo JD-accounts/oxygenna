@@ -13,13 +13,6 @@ html, body, .full-height{
   height: 100%;
 }
 
-// Admin Content Area
-#ui-admin-content {
-  overflow-y: auto;
-}
-#content {
-  position: relative;
-}
 .animate-wrapper {
   position: relative;
   > .ng-enter, > .ng-leave {
