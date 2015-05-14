@@ -11,9 +11,22 @@
  * Handles the admin view
  */
 angular.module('triAngular').
-controller('AdminController', function ($scope, $timeout, $mdSidenav, $mdUtil, triTheme, APP) {
+controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, $mdUtil, triTheme, APP) {
     $scope.appName = APP.name;
     $scope.triTheme = triTheme;
+
+    var mdContent = $element.find('md-content');
+
+    $scope.loaded = function() {
+        console.log('$mdContentLoaded', mdContent);
+        $scope.$broadcast('$mdContentLoaded', mdContent);
+    }
+
+    $scope.$on('$viewContentLoaded', function($event, test) {
+        // console.log($event);
+        // console.log(angular.element($event.targetScope), test);
+
+    })
 
     $scope.toggleNotificationsTab = function(tab) {
         $scope.$broadcast('triSwitchNotificationTab', tab);

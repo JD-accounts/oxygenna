@@ -26,11 +26,6 @@ angular.module('triAngularDashboards', [])
         templateUrl: 'app/dashboards/dashboard-server.tmpl.html',
     })
 
-    .state('admin.test-toolbar', {
-        url: '/toolbars',
-        templateUrl: 'app/dashboards/toolbars.tmpl.html'
-    })
-
     .state('admin.toolbar.default.dashboard1', {
         url: '/dashboard',
         templateUrl: 'app/dashboards/dashboard1.html',

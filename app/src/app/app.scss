@@ -9,7 +9,7 @@
 @import "scss/utilities";
 @import "scss/social";
 
-html, body, #container, .container-inner, #ui-admin-content {
+html, body, .full-height{
   height: 100%;
 }
 
@@ -36,5 +36,11 @@ html, body, #container, .container-inner, #ui-admin-content {
   margin-left: auto;
   margin-right: auto;
 }
+
+.header-1 {
+  background-image: url(images/backgrounds/bg-1.jpg);
+  background-size: cover;
+}
+
 // injector
 // endinjector

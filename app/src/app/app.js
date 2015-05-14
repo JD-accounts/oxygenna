@@ -8,15 +8,6 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     'url':  'http://triangular-api.oxygenna.com/'
 })
 .config(function ($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider) {
-    // $stateProvider
-    // .state('home', {
-    //     url: '/',
-    //     templateUrl: 'app/main/main.html',
-    //     controller: 'MainCtrl'
-    // });
-
-    // $urlRouterProvider.otherwise('/');
-
     // SETUP TRANSLATIONS
 
     // each module loads its own translation file - making it easier to create translations
@@ -49,6 +40,43 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 
     // setup public states & routes
     $stateProvider
+
+    .state('admin-panel', {
+        abstract: true,
+        templateUrl: 'app/layouts/admin-panel/admin-panel.tmpl.html',
+    })
+
+    .state('admin-panel.default', {
+        abstract: true,
+        views: {
+            sidebarLeft: {
+                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html'
+            },
+            toolbar: {
+                templateUrl: 'components/toolbars/default.tmpl.html',
+                controller: 'DefaultToolbarController'
+            },
+            footer: {
+                templateUrl: 'components/footer/footer.tmpl.html',
+            },
+            content: {
+                template: '<div flex ui-view></div>'
+            }
+        },
+        data: {
+            toolbar: {
+                tall: true
+            }
+        }
+    })
+
+    .state('admin-panel.default.toolbar', {
+        url: '/toolbars',
+        templateUrl: 'app/dashboards/toolbars.tmpl.html',
+    })
+
+
+
 
     .state('admin', {
         abstract: true,

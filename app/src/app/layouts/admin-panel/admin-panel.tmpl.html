@@ -1,0 +1,22 @@
+<div layout="row" ng-controller="AdminController" class="full-height">
+    <!-- left sidebar -->
+    <md-sidenav layout class="admin-sidebar-left md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ui-view="sidebarLeft"></md-sidenav>
+
+    <!-- main content -->
+    <div layout="column">
+
+        <!-- top toolbar -->
+        <md-toolbar md-scroll-shrink class="admin-toolbar" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="toolbar"></md-toolbar>
+
+        <!-- scrollable content -->
+        <md-content flex class="md-padding">
+            <div ui-view="content"></div>
+        </md-content>
+
+        <!-- loading animation -->
+        <tri-loader></tri-loader>
+    </div>
+
+    <!-- right sidebar -->
+    <md-sidenav layout layout-fill class="md-sidenav-right md-whiteframe-z2" md-component-id="notifications" ng-include="'components/sidebar-right/sidebar-right.tmpl.html'"></md-sidenav>
+</div>

@@ -12,12 +12,12 @@ angular.module('triAngularElements', [])
     $translatePartialLoaderProvider.addPart('app/elements');
 
     $stateProvider
-    .state('admin.toolbar.default.buttons', {
+    .state('admin-panel.default.buttons', {
         url: '/elements/buttons',
         templateUrl: 'app/elements/buttons.tmpl.html',
         controller: 'ButtonsController'
     })
-    .state('admin.toolbar.default.icons', {
+    .state('admin-panel.default.icons', {
         url: '/elements/icons',
         templateUrl: 'app/elements/icons.tmpl.html',
         controller: 'IconsController',
@@ -36,70 +36,70 @@ angular.module('triAngularElements', [])
             }
         }
     })
-    .state('admin.toolbar.default.checkboxes', {
+    .state('admin-panel.default.checkboxes', {
         url: '/elements/checkboxes',
         templateUrl: 'app/elements/checkboxes.tmpl.html'
     })
-    .state('admin.toolbar.default.radios', {
+    .state('admin-panel.default.radios', {
         url: '/elements/radios',
         templateUrl: 'app/elements/radios.tmpl.html'
     })
-    .state('admin.toolbar.default.toolbars', {
+    .state('admin-panel.default.toolbars', {
         url: '/elements/toolbars',
         templateUrl: 'app/elements/toolbars.tmpl.html'
     })
-    .state('admin.toolbar.default.tooltips', {
+    .state('admin-panel.default.tooltips', {
         url: '/elements/tooltips',
         templateUrl: 'app/elements/tooltips.tmpl.html'
     })
-    .state('admin.toolbar.default.whiteframes', {
+    .state('admin-panel.default.whiteframes', {
         url: '/elements/whiteframes',
         templateUrl: 'app/elements/whiteframes.tmpl.html'
     })
-    .state('admin.toolbar.default.sliders', {
+    .state('admin-panel.default.sliders', {
         url: '/elements/sliders',
         templateUrl: 'app/elements/sliders.tmpl.html'
     })
-    .state('admin.toolbar.default.toasts', {
+    .state('admin-panel.default.toasts', {
         url: '/elements/toasts',
         templateUrl: 'app/elements/toasts.tmpl.html',
         controller: 'ToastsController'
     })
-    .state('admin.toolbar.default.progress', {
+    .state('admin-panel.default.progress', {
         url: '/elements/progress',
         templateUrl: 'app/elements/progress.tmpl.html',
         controller: 'ProgressController'
     })
-    .state('admin.toolbar.default.switches', {
+    .state('admin-panel.default.switches', {
         url: '/elements/switches',
         templateUrl: 'app/elements/switches.tmpl.html',
         controller: 'SwitchesController'
     })
-    .state('admin.toolbar.default.dialogs', {
+    .state('admin-panel.default.dialogs', {
         url: '/elements/dialogs',
         templateUrl: 'app/elements/dialogs.tmpl.html',
         controller: 'DialogsController'
     })
-    .state('admin.toolbar.default.tabs', {
+    .state('admin-panel.default.tabs', {
         url: '/elements/tabs',
         templateUrl: 'app/elements/tabs.tmpl.html',
         controller: 'TabsController'
     })
-    .state('admin.toolbar.default.sidebars', {
+    .state('admin-panel.default.sidebars', {
         url: '/elements/sidebars',
         templateUrl: 'app/elements/sidebars.tmpl.html',
         controller: 'SidebarsController'
     })
-    .state('admin.toolbar.default.grids', {
+    .state('admin-panel.default.grids', {
         url: '/elements/grids',
         templateUrl: 'app/elements/grids.tmpl.html',
         controller: 'GridsController'
     })
-    .state('admin.toolbar.default.selects', {
+    .state('admin-panel.default.selects', {
         url: '/elements/selects',
         templateUrl: 'app/elements/selects.tmpl.html'
     })
-    .state('admin.toolbar.default.lists', {
+    .state('admin-panel.default.lists', {
         url: '/elements/lists',
         templateUrl: 'app/elements/lists.tmpl.html',
         controller: 'ListsController',
@@ -112,7 +112,7 @@ angular.module('triAngularElements', [])
             },
         }
     })
-    .state('admin.toolbar.default.chips', {
+    .state('admin-panel.default.chips', {
         url: '/elements/chips',
         templateUrl: 'app/elements/chips.tmpl.html',
         controller: 'ChipsController',
@@ -125,7 +125,7 @@ angular.module('triAngularElements', [])
             }
         }
     })
-    .state('admin.toolbar.default.cards', {
+    .state('admin-panel.default.cards', {
         url: '/elements/cards',
         templateUrl: 'app/elements/cards.tmpl.html'
     });

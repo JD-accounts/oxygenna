@@ -26,7 +26,7 @@ angular.module('triAngular')
         template: '<div ng-include="itemTemplate"></div>',
         link: function($scope, $element, attrs, $sideMenu) {
             // load a template for this directive based on the type ( link | dropdown )
-            $scope.itemTemplate = 'components/sidemenu/side-menu-' + $scope.item.type + '.tmpl.html';
+            $scope.itemTemplate = 'components/side-menu/side-menu-' + $scope.item.type + '.tmpl.html';
 
             /***
             * Menu Click Handlers
