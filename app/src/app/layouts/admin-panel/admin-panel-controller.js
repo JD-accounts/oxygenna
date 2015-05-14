@@ -39,7 +39,7 @@ controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, 
      * Build handler to open/close a SideNav;
      */
     $scope.openSideNav = function(navID) {
-        $mdUtil, $state.debounce(function(){
+        $mdUtil.debounce(function(){
             $mdSidenav(navID).toggle();
         }, 300)();
     };
