@@ -37,7 +37,8 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
         abstract: true,
         views: {
             sidebarLeft: {
-                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html'
+                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html',
+                controller: 'SidebarLeftController'
             },
             toolbar: {
                 templateUrl: 'app/email/toolbar.tmpl.html',

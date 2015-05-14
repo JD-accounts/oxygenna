@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc function
- * @name AdminNotificationsController
+ * @name SidebarRightController
  * @module triAngular
  * @kind function
  *
@@ -11,7 +11,7 @@
  * Handles the admin view
  */
 angular.module('triAngular').
-controller('AdminNotificationsController', function ($scope, $http, $mdSidenav, $state, API_CONFIG) {
+controller('SidebarRightController', function ($scope, $http, $mdSidenav, $state, API_CONFIG) {
     // sets the current active tab
     $scope.notificationsTab = 0;
 

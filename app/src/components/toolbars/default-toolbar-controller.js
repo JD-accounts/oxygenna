@@ -12,7 +12,7 @@
  */
 
 angular.module('triAngular')
-.controller('DefaultToolbarController', function ($scope, $translate, $state, $element, SideMenu, triTheme, APP) {
+.controller('DefaultToolbarController', function ($scope, $translate, $state, $element, $mdUtil, $mdSidenav, SideMenu, triTheme, APP) {
     $scope.appName = APP.name;
     $scope.menu = SideMenu.getMenu();
     $scope.triTheme = triTheme;
@@ -37,5 +37,16 @@ angular.module('triAngular')
     $scope.switchLanguage = function(languageCode) {
         $translate.use(languageCode).then(function(data) {
         })
+    };
+
+    $scope.openSideNav = function(navID) {
+        $mdUtil.debounce(function(){
+            $mdSidenav(navID).toggle();
+        }, 300)();
+    };
+
+    $scope.toggleNotificationsTab = function(tab) {
+        $scope.$parent.$broadcast('triSwitchNotificationTab', tab);
+        $scope.openSideNav('notifications');
     };
 });

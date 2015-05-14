@@ -12,7 +12,7 @@
  */
 
 angular.module('triAngularEmail')
-.controller('EmailToolbarController', function ($scope, $rootScope, $filter, SideMenu, triTheme, EMAIL_ROUTES) {
+.controller('EmailToolbarController', function ($scope, $rootScope, $filter, $mdUtil, $mdSidenav, SideMenu, triTheme, EMAIL_ROUTES) {
     $scope.showSearch = false;
     $scope.toolbarMenu = [];
     $scope.menu = SideMenu.getMenu();
@@ -32,5 +32,14 @@ angular.module('triAngularEmail')
 
     $scope.toggleSearch = function() {
         $scope.showSearch = !$scope.showSearch;
+    };
+
+    /**
+     * Build handler to open/close a SideNav;
+     */
+    $scope.openSideNav = function(navID) {
+        $mdUtil.debounce(function(){
+            $mdSidenav(navID).toggle();
+        }, 300)();
     };
 });

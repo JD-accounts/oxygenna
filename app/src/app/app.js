@@ -3,7 +3,8 @@
 angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras'])
 .constant('APP', {
     name: 'triangular',
-    version: '1.0'
+    logo: 'assets/images/logo.png',
+    version: '1.1'
 })
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
@@ -59,10 +60,11 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         views: {
             sidebarLeft: {
                 templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html',
+                controller: 'SidebarLeftController'
             },
             sidebarRight: {
                 templateUrl: 'components/sidebar-right/sidebar-right.tmpl.html',
-                controller: "AdminNotificationsController"
+                controller: 'SidebarRightController'
             },
             toolbar: {
                 templateUrl: 'components/toolbars/default.tmpl.html',
@@ -70,6 +72,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
             },
             footer: {
                 templateUrl: 'components/footer/footer.tmpl.html',
+                controller: 'FooterController'
             },
             content: {
                 template: '<div flex ui-view></div>'
