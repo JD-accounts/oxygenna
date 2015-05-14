@@ -2,7 +2,8 @@
 
 angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras'])
 .constant('APP', {
-    name: 'Triangular'
+    name: 'triangular',
+    version: '1.0'
 })
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
