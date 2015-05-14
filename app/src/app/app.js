@@ -58,7 +58,11 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         abstract: true,
         views: {
             sidebarLeft: {
-                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html'
+                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html',
+            },
+            sidebarRight: {
+                templateUrl: 'components/sidebar-right/sidebar-right.tmpl.html',
+                controller: "AdminNotificationsController"
             },
             toolbar: {
                 templateUrl: 'components/toolbars/default.tmpl.html',
