@@ -8,7 +8,7 @@
         <tri-loader></tri-loader>
 
         <!-- top toolbar -->
-        <md-toolbar id="ui-toolbar" ng-attr-md-scroll-shrink="{{toolbarShrink}}" class="admin-toolbar" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="toolbar"></md-toolbar>
+        <md-toolbar ng-attr-md-scroll-shrink="{{toolbarShrink}}" class="admin-toolbar" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="toolbar"></md-toolbar>
 
         <!-- scrollable content -->
         <md-content flex>
@@ -21,5 +21,5 @@
     </div>
 
     <!-- right sidebar -->
-    <md-sidenav layout layout-fill class="md-sidenav-right md-whiteframe-z2" md-component-id="notifications" ng-include="'components/sidebar-right/sidebar-right.tmpl.html'"></md-sidenav>
+    <md-sidenav layout layout-fill class="md-sidenav-right md-whiteframe-z2" md-component-id="notifications" ui-view="sidebarRight"></md-sidenav>
 </div>
