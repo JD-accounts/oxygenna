@@ -8,7 +8,7 @@
         <tri-loader></tri-loader>
 
         <!-- top toolbar -->
-        <md-toolbar md-scroll-shrink class="admin-toolbar" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="toolbar"></md-toolbar>
+        <md-toolbar ng-attr-md-scroll-shrink="{{toolbarShrink}}" class="admin-toolbar" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="toolbar"></md-toolbar>
 
         <!-- scrollable content -->
         <md-content flex>

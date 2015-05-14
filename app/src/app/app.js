@@ -48,6 +48,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
             toolbar: {
                 tall: false,
                 background: false,
+                shrink: true
             }
         }
     })
