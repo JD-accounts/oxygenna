@@ -15,19 +15,6 @@ controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, 
     $scope.appName = APP.name;
     $scope.triTheme = triTheme;
 
-    var mdContent = $element.find('md-content');
-
-    $scope.loaded = function() {
-        console.log('$mdContentLoaded', mdContent);
-        $scope.$broadcast('$mdContentLoaded', mdContent);
-    }
-
-    $scope.$on('$viewContentLoaded', function($event, test) {
-        // console.log($event);
-        // console.log(angular.element($event.targetScope), test);
-
-    })
-
     $scope.toggleNotificationsTab = function(tab) {
         $scope.$broadcast('triSwitchNotificationTab', tab);
         $scope.openSideNav('notifications');

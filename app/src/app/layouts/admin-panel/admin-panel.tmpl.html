@@ -4,17 +4,16 @@
 
     <!-- main content -->
     <div layout="column" id="admin-content">
-
         <!-- top toolbar -->
         <md-toolbar md-scroll-shrink class="admin-toolbar" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="toolbar"></md-toolbar>
 
         <!-- scrollable content -->
-        <md-content flex class="md-padding">
-            <div ui-view="content"></div>
+        <md-content flex style="position: relative;'">
+            <div class="md-padding" ui-view="content"></div>
+            <md-toolbar class="md-accent" ui-view="footer"></md-toolbar>
+            <!-- loading animation -->
+            <tri-loader></tri-loader>
         </md-content>
-
-        <!-- loading animation -->
-        <tri-loader></tri-loader>
     </div>
 
     <!-- right sidebar -->
