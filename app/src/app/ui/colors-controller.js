@@ -12,7 +12,7 @@
  */
 angular.module('triAngularUI').
 controller('ColorsController', function ($scope, $mdDialog, triTheme) {
-    $scope.palettes = triTheme.palettes();
+    $scope.palettes = triTheme.palettes;
 
     $scope.colourRGBA = function(value) {
         var rgba = triTheme.rgba(value);

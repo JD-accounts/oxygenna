@@ -30,7 +30,7 @@ controller('ThemesController', function ($scope, $rootScope, triTheme) {
         desc: 'Theme of the logo above the left sidebar.'
     }];
     $scope.themes = [];
-    $scope.palettes = triTheme.palettes();
+    $scope.palettes = triTheme.palettes;
 
     function getElementThemes() {
         for(var element in $scope.themeableElements) {
@@ -49,7 +49,7 @@ controller('ThemesController', function ($scope, $rootScope, triTheme) {
     // get the current set element themes and add them to the themableElements object
     getElementThemes();
 
-    angular.forEach(triTheme.themes(), function(theme) {
+    angular.forEach(triTheme.themes, function(theme) {
         // parse the themes so we get colors in nice order (primary, accent, warn, background)
         var newTheme = {
             name: theme.name,
