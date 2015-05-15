@@ -45,7 +45,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
                 controller: 'EmailToolbarController'
             },
             content: {
-                template: '<div flex ui-view></div>'
+                template: '<div flex ui-view class="full-height"></div>'
             }
         },
     })

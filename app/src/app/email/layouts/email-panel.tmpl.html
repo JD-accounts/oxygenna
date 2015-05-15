@@ -3,16 +3,16 @@
     <md-sidenav layout class="admin-sidebar-left md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ui-view="sidebarLeft"></md-sidenav>
 
     <!-- main content -->
-    <div layout="column" layout-fill id="admin-panel">
+    <div layout="column" layout-fill id="admin-panel" class="full-height">
         <!-- loading animation -->
         <tri-loader></tri-loader>
 
         <!-- top toolbar -->
         <md-toolbar ng-attr-md-scroll-shrink="{{toolbarShrink}}" class="admin-toolbar" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="toolbar"></md-toolbar>
 
-        <div ui-view="content"></div>
+        <div ui-view="content" class="full-height"></div>
     </div>
 
     <!-- right sidebar -->
-    <md-sidenav layout layout-fill class="md-sidenav-right md-whiteframe-z2" md-component-id="notifications" ng-include="'components/sidebar-right/sidebar-right.tmpl.html'"></md-sidenav>
+    <md-sidenav layout layout-fill class="md-sidenav-right md-whiteframe-z2 full-height"  md-component-id="notifications" ng-include="'components/sidebar-right/sidebar-right.tmpl.html'"></md-sidenav>
 </div>
