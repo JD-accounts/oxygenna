@@ -27,20 +27,35 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 .config(function ($translatePartialLoaderProvider, $stateProvider, $provide, EMAIL_ROUTES) {
     $translatePartialLoaderProvider.addPart('app/email');
 
+    $stateProvider
+    .state('email-panel', {
+        abstract: true,
+        templateUrl: 'app/email/layouts/email-panel.tmpl.html',
+    })
+
+    .state('email-panel.default', {
+        abstract: true,
+        views: {
+            sidebarLeft: {
+                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html',
+                controller: 'SidebarLeftController'
+            },
+            toolbar: {
+                templateUrl: 'app/email/toolbar.tmpl.html',
+                controller: 'EmailToolbarController'
+            },
+            content: {
+                template: '<div flex ui-view></div>'
+            }
+        },
+    })
+
     angular.forEach(EMAIL_ROUTES, function(route) {
         $stateProvider
-        .state('admin-panel.default.' + route.state, {
+        .state('email-panel.default.' + route.state, {
             url: route.url,
-            views: {
-                toolbar: {
-                    templateUrl: 'app/email/toolbar.tmpl.html',
-                    controller: 'EmailToolbarController'
-                },
-                content: {
-                    templateUrl: 'app/email/inbox.tmpl.html',
-                    controller: 'InboxController',
-                }
-            },
+            templateUrl: 'app/email/inbox.tmpl.html',
+            controller: 'InboxController',
             resolve: {
                 emails: function($http, API_CONFIG) {
                     return $http({
@@ -60,7 +75,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 
     angular.forEach(EMAIL_ROUTES, function(route) {
         $stateProvider
-        .state('admin-panel.default.' + route.state + '.email', {
+        .state('email-panel.default.' + route.state + '.email', {
             url: '/mail/:emailID',
             templateUrl: 'app/email/email.tmpl.html',
             controller: 'EmailController',
@@ -79,7 +94,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
             },
             onEnter: function($state, email){
                 if (false === email) {
-                    $state.go('admin-panel.default.' + route.state);
+                    $state.go('email-panel.default.' + route.state);
                 }
             },
         });

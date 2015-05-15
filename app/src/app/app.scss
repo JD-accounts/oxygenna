@@ -23,17 +23,11 @@ html, body, .full-height{
   }
 }
 
-// Doc Pages
-.padded-docs-page {
-  width: 90%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.header-1 {
-  background-image: url(images/backgrounds/bg-1.jpg);
-  background-size: cover;
+.padded-content-page {
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 16px;
 }
 
 // injector

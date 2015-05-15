@@ -1,10 +1,8 @@
-<md-toolbar class="logo-toolbar" md-theme="{{triTheme.getElementTheme('logoTheme')}}">
-    <h1 class="md-toolbar-tools">
-        <a class="app-logo" ng-href="/" layout="row" >
-            <img src="assets/images/logo.png" alt="{{appName}}">
-            {{appName}}
-        </a>
-    </h1>
+<md-toolbar class="sidebar-left-toolbar" md-theme="{{triTheme.getElementTheme('logoTheme')}}">
+    <div class="md-toolbar-tools" layout="row" layout-align="start center">
+        <img class="sidebar-left-logo" ng-src="{{sidebarInfo.appLogo}}" alt="{{sidebarInfo.appName}}">
+        <h2>{{sidebarInfo.appName}}</h2>
+    </div>
 </md-toolbar>
 
 <side-menu md-theme="{{triTheme.getElementTheme('sidebarTheme')}}" flex></side-menu>

@@ -10,16 +10,9 @@
         <!-- top toolbar -->
         <md-toolbar ng-attr-md-scroll-shrink="{{toolbarShrink}}" class="admin-toolbar" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="toolbar"></md-toolbar>
 
-        <!-- scrollable content -->
-        <md-content flex>
-            <!-- main view content  -->
-            <div id="admin-panel-content" ng-class="contentPadingClass" ui-view="content"></div>
-
-            <!-- footer -->
-            <md-toolbar id="admin-panel-footer" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="footer"></md-toolbar>
-        </md-content>
+        <div ui-view="content"></div>
     </div>
 
     <!-- right sidebar -->
-    <md-sidenav layout layout-fill class="md-sidenav-right md-whiteframe-z2" md-component-id="notifications" ui-view="sidebarRight"></md-sidenav>
+    <md-sidenav layout layout-fill class="md-sidenav-right md-whiteframe-z2" md-component-id="notifications" ng-include="'components/sidebar-right/sidebar-right.tmpl.html'"></md-sidenav>
 </div>

@@ -2,7 +2,9 @@
 
 angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras'])
 .constant('APP', {
-    name: 'Triangular'
+    name: 'triangular',
+    logo: 'assets/images/logo.png',
+    version: '1.1'
 })
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
@@ -49,7 +51,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
                 tall: false,
                 background: false,
                 shrink: true
-            }
+            },
         }
     })
 
@@ -57,7 +59,12 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         abstract: true,
         views: {
             sidebarLeft: {
-                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html'
+                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html',
+                controller: 'SidebarLeftController'
+            },
+            sidebarRight: {
+                templateUrl: 'components/sidebar-right/sidebar-right.tmpl.html',
+                controller: 'SidebarRightController'
             },
             toolbar: {
                 templateUrl: 'components/toolbars/default.tmpl.html',
@@ -65,6 +72,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
             },
             footer: {
                 templateUrl: 'components/footer/footer.tmpl.html',
+                controller: 'FooterController'
             },
             content: {
                 template: '<div flex ui-view></div>'
@@ -72,9 +80,14 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         },
     })
 
-    .state('admin', {
+    .state('admin-panel.default.padded', {
         abstract: true,
-        templateUrl: 'app/layouts/admin.tmpl.html',
+        template: '<div flex ui-view></div>',
+        data: {
+            content: {
+                paddingClass: 'padded-content-page'
+            }
+        }
     })
 
     .state('access-undefined', {

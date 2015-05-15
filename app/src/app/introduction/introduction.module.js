@@ -16,8 +16,6 @@ angular.module('triAngularIntroduction', [])
         url: '/introduction',
         templateUrl: 'app/introduction/introduction.tmpl.html',
     });
-
-
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({

@@ -20,7 +20,12 @@ angular.module('triAngularExtras', [])
     .state('admin-panel.default.avatars', {
         url: '/avatars',
         templateUrl: 'app/extras/avatars.tmpl.html'
-    });
+    })
+    .state('not-found', {
+        url: '/404',
+        templateUrl: 'app/extras/404.tmpl.html',
+        controller: 'NotFoundController'
+    })
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
@@ -35,6 +40,11 @@ angular.module('triAngularExtras', [])
         },{
             name: 'MENU.EXTRAS.AVATARS',
             url: '/avatars',
+            type: 'link',
+        },
+        {
+            name: 'MENU.EXTRAS.404.TITLE',
+            url: '/404',
             type: 'link',
         }]
     });
