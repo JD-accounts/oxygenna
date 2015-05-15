@@ -151,6 +151,11 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .accentPalette('pink')
     .warnPalette('red');
 
+    $mdThemingProvider.theme('amber')
+    .primaryPalette('amber')
+    .accentPalette('red')
+    .warnPalette('orange');
+
     $mdThemingProvider.theme('blue')
     .primaryPalette('blue')
     .accentPalette('red')
@@ -185,6 +190,11 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .primaryPalette('teal')
     .accentPalette('red')
     .warnPalette('orange');
+
+    $mdThemingProvider.theme('orange')
+    .primaryPalette('orange')
+    .accentPalette('lime')
+    .warnPalette('amber')
 
     $mdThemingProvider.theme('deep-orange')
     .primaryPalette('deep-orange')

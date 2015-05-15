@@ -6,6 +6,9 @@
 }
 
 // - Margin Classes
+.margin-normal {
+  margin: 16px;
+}
 $i : 0;
 @while $i <= 200 {
   .margin-#{$i} {
@@ -27,6 +30,9 @@ $i : 0;
 }
 
 // - Padding Classes
+.padding-normal {
+  padding: 16px;
+}
 $i : 0;
 @while $i <= 200 {
   .padding-#{$i} {
@@ -71,7 +77,24 @@ $i : 0;
       background: rgba(100,100,100, $i);
     }
   }
-  $i : $i + 0.1;
+  $i : $i + 0.05;
+}
+
+$i : 0;
+@while $i <= 1 {
+  .overlay-gradient-#{$i * 100} {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(100,100,100, $i) 0%,rgba(0,0,0,0) 100%);
+    }
+  }
+  $i : $i + 0.05;
 }
 
 // - Positioning Classes

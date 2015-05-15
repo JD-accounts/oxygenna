@@ -1,4 +1,4 @@
-<div class="dashboard-container" layout="column">
+<div class="dashboard-container padding-10 overlay-10" layout="column">
     <div layout="row" layout-margin>
         <widget server-widget flex="70">
             <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="">
@@ -28,7 +28,7 @@
             </md-tabs>
         </widget>
         <div flex layout="column" layout-margin>
-            <widget md-theme="default" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
+            <widget md-theme="cyan" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
                 <div>
                     <md-icon class="font-size-5 opacity-50" md-font-icon="icon-gps-fixed"></md-icon>
                 </div>
@@ -37,7 +37,7 @@
                     <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.IP' | translate}}</p>
                 </div>
             </widget>
-            <widget md-theme="blue" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
+            <widget md-theme="cyan" background="primary" content-layout="row" content-layout-align="space-between center" content-padding class="overlay-5">
                 <div>
                     <md-icon class="font-size-5 opacity-50" md-font-icon="icon-memory"></md-icon>
                 </div>
@@ -46,7 +46,7 @@
                     <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.MEMORY' | translate}}</p>
                 </div>
             </widget>
-            <widget md-theme="green" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
+            <widget md-theme="cyan" background="primary" content-layout="row" content-layout-align="space-between center" content-padding class="overlay-10">
                 <div>
                     <md-icon class="font-size-5 opacity-50" md-font-icon="icon-storage"></md-icon>
                 </div>
@@ -55,7 +55,7 @@
                     <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.DISK' | translate}}</p>
                 </div>
             </widget>
-            <widget md-theme="blue-gray" background="primary" content-layout="row" content-layout-align="space-between center" content-padding class="overlay-30">
+            <widget md-theme="cyan" background="primary" content-layout="row" content-layout-align="space-between center" content-padding class="overlay-15">
                 <div>
                     <md-icon class="font-size-5 opacity-50" md-font-icon="icon-location-on"></md-icon>
                 </div>
@@ -68,63 +68,54 @@
     </div>
 
     <div layout="row" layout-margin>
-        <widget flex="30" title="{{'DASHBOARDS.SERVER.DISKS' | translate}}" md-theme="blue" background="primary">
-            <md-list class="margin-bottom-30">
+        <widget flex title="{{'DASHBOARDS.SERVER.DISKS' | translate}}" md-theme="white-cyan" background="primary">
+            <md-list>
                 <md-list-item ng-repeat="disk in disks">
                     <md-icon md-font-icon="{{disk.icon}}"></md-icon>
-                    <p>{{disk.name}}</p>
+                    <p class="text-ellipsis">{{disk.name}}</p>
                     <md-switch class="md-secondary" ng-model="disk.enabled"></md-switch>
                     <md-divider ng-hide="$last"></md-divider>
                 </md-list-item>
             </md-list>
         </widget>
-        <widget flex="30" title="{{'DASHBOARDS.SERVER.JOB' | translate}}" md-theme="blue-gray" background="primary" content-padding>
-            <md-list ng-repeat="job in jobs">
-                <md-list-item class="md-2-line">
+        <widget flex title="{{'DASHBOARDS.SERVER.JOB' | translate}}" md-theme="white-cyan" background="primary">
+            <md-list>
+                <md-list-item class="md-2-line" ng-repeat="job in jobs">
                     <div class="md-list-item-text">
                         <h3>{{job.job}}</h3>
                         <p>{{job.time}}</p>
                     </div>
-                    <md-icon md-font-icon="icon-check" ng-show="job.complete" class="md-secondary"></md-icon>
-                    <md-icon md-font-icon="icon-close" ng-hide="job.complete" class="md-secondary"></md-icon>
+                    <md-icon md-font-icon="icon-check alert-success" ng-show="job.complete" class="md-secondary"></md-icon>
+                    <md-icon md-font-icon="icon-close alert-error" ng-hide="job.complete" class="md
+                    -secondary"></md-icon>
+                    <md-divider ng-hide="$last"></md-divider>
                 </md-list-item>
             </md-list>
         </widget>
-        <widget flex title="{{'DASHBOARDS.SERVER.STATUS' | translate}}" subtitle="{{'DASHBOARDS.SERVER.CURRENTLY' | translate}}" content-layout="column" content-padding>
-            <p flex class="md-display-2 font-weight-100 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.RUNNING' | translate}}</p>
-            <div layout="row" layout-align="end end" layout-fill>
-                <md-divider></md-divider>
-                <md-button class="md-primary">{{'DASHBOARDS.SERVER.SHUTDOWN' | translate}}</md-button>
-                <md-button class="md-primary">{{'DASHBOARDS.SERVER.RESTART' | translate}}</md-button>
-            </div>
-        </widget>
+
     </div>
 
     <div layout="row" layout-margin>
-        <widget flex="30" title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" content-padding>
-            <table class="table">
-<!--                 <thead>
-                    <tr>
-                        <th ng-repeat="header in referrals.header | limitTo:3">{{header}}</th>
-                    </tr>
-                </thead> -->
-                <tbody>
-                    <tr>
-                        <td>{{'DASHBOARDS.SERVER.DISK' | translate}}</td>
-                        <td width="70%">
-                            <md-progress-linear class="md-primary" md-mode="determinate" value="60"></md-progress-linear>
-                            <span class="md-caption">(60% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>{{'DASHBOARDS.SERVER.BANDWIDTH' | translate}}</td>
-                        <td width="70%">
-                            <md-progress-linear class="md-accent" md-mode="determinate" value="30"></md-progress-linear>
-                            <span class="md-caption">(30% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <widget flex title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" md-theme="cyan" background="primary" content-layout="column" content-padding layut-fill>
+            <div flex layout="row" layout-fill layout-align"center center">
+                <h4 class="opacity-80 margin-0 margin-right-20">
+                    {{'DASHBOARDS.SERVER.DISK' | translate}}
+                </h4>
+                <div flex>
+                    <md-progress-linear class="md-accent" md-mode="determinate" value="60"></md-progress-linear>
+                    <span class="md-caption">(60% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
+                </div>
+            </div>
+            <md-divider flex></md-divider>
+            <div flex layout="row" layout-fill>
+                <h4 class="opacity-80 margin-0 margin-right-20">
+                    {{'DASHBOARDS.SERVER.BANDWIDTH' | translate}}
+                </h4>
+                <div flex>
+                    <md-progress-linear class="md-accent" md-mode="determinate" value="30"></md-progress-linear>
+                    <span class="md-caption">(30% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
+                </div>
+            </div>
         </widget>
     </div>
 </div>
