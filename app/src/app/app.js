@@ -4,7 +4,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 .constant('APP', {
     name: 'triangular',
     logo: 'assets/images/logo.png',
-    version: '1.1'
+    version: '1.0'
 })
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
