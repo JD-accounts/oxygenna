@@ -22,7 +22,6 @@ angular.module('triAngular')
         link: function ($scope, $element, attrs) {
             var splitColor = attrs.paletteBackground.split(':');
             var color = triTheme.getPaletteColor(splitColor[0], splitColor[1]);
-            console.log('hello there', color);
 
             if(color !== undefined) {
                 $element.css({
