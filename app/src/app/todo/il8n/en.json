@@ -1,0 +1,16 @@
+{
+    "MENU": {
+        "TODO": {
+            "TITLE": "To do",
+            "HEADER": "To do list",
+            "DIALOG":{
+            	"NEW": "Add Task",
+            	"DESC": "Task Description",
+            	"HIGH": "High",
+            	"MEDIUM": "Medium",
+            	"LOW": "Low",
+            	"PRIORITY": "Priority"
+            }         
+        }
+    }
+}
