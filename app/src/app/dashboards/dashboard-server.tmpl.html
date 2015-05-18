@@ -96,9 +96,9 @@
     </div>
 
     <div layout="row" layout-margin>
-        <widget flex title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" md-theme="cyan" background="primary" content-layout="column" content-padding layut-fill>
-            <div flex layout="row" layout-fill layout-align"center center">
-                <h4 class="opacity-80 margin-0 margin-right-20">
+        <widget flex title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" md-theme="cyan" background="primary" content-layout="column" content-layout-align="start">
+            <div flex layout="row" layout-fill layout-padding>
+                <h4 flex=10 class="opacity-80 margin-0 margin-right-20">
                     {{'DASHBOARDS.SERVER.DISK' | translate}}
                 </h4>
                 <div flex>
@@ -107,8 +107,8 @@
                 </div>
             </div>
             <md-divider flex></md-divider>
-            <div flex layout="row" layout-fill>
-                <h4 class="opacity-80 margin-0 margin-right-20">
+            <div flex layout="row" layout-fill layout-padding>
+                <h4 flex=10 class="opacity-80 margin-0 margin-right-20">
                     {{'DASHBOARDS.SERVER.BANDWIDTH' | translate}}
                 </h4>
                 <div flex>
