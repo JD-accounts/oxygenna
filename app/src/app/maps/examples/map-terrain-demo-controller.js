@@ -10,7 +10,7 @@
  */
 angular.module('triAngularMaps').
 controller('MapTerrainDemoController', function ($scope, uiGmapGoogleMapApi) {
-    uiGmapGoogleMapApi.then(function(maps) { console.log(maps);
+    uiGmapGoogleMapApi.then(function(maps) {
         $scope.terrainMap = {
             center: {
                 latitude: 51.219053,
