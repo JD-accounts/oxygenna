@@ -19,12 +19,6 @@ controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, 
         $scope.toolbarShrink = false;
         // set content padding class
         if($state.current.data !== undefined) {
-            if($state.current.data.content !== undefined) {
-                if($state.current.data.content.paddingClass !== undefined) {
-                    $scope.contentPadingClass = $state.current.data.content.paddingClass;
-                }
-            }
-
             if($state.current.data.toolbar !== undefined) {
                 if($state.current.data.toolbar.shrink === true) {
                     $scope.toolbarShrink = true;
