@@ -8,17 +8,19 @@
         <tri-loader></tri-loader>
 
         <!-- top toolbar -->
-        <md-toolbar ng-attr-md-scroll-shrink="{{toolbarShrink}}" class="admin-toolbar" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="toolbar"></md-toolbar>
+        <md-toolbar flex-100 ng-attr-md-scroll-shrink="{{toolbarShrink}}" class="admin-toolbar" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="toolbar"></md-toolbar>
 
         <!-- scrollable content -->
         <md-content flex layout="column">
             <!-- main view content  -->
             <div id="admin-panel-content" ui-view="content" autoscroll="false"></div>
 
+            <md-toolbar id="admin-panel-footer" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="footer"></md-toolbar>
+
         </md-content>
 
         <!-- footer -->
-        <md-toolbar id="admin-panel-footer" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ui-view="footer"></md-toolbar style="position: absolute; bottom: 0;">
+
     </div>
 
 
