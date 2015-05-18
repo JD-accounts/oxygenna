@@ -10,20 +10,22 @@
 
     <md-divider></md-divider>
   	
-  	<md-dialog-content class="sticky-container">		    		   
-  		<form name="taskForm" novalidate>
-	 		<md-input-container>     
-	 			<label>{{'MENU.TODO.DIALOG.DESC' | translate}}</label> 
-	     		<input ng-model="item.description" class="dialog-close"></input>   
-	     	</md-input-container>
-	     	<md-input-container> 
-	     	     <md-select placeholder="{{'MENU.TODO.DIALOG.PRIORITY' | translate}}" ng-model="item.priority">
-	    			<md-option value="high">{{'MENU.TODO.DIALOG.HIGH' | translate}}</md-option>
-	    			<md-option value="medium">{{'MENU.TODO.DIALOG.MEDIUM' | translate}}</md-option>
-	    			<md-option value="low">{{'MENU.TODO.DIALOG.LOW' | translate}}</md-option>
-	  			</md-select>
-	     	</md-input-container>		    
-     	</form>
+  	<md-dialog-content class="sticky-container">	
+        <div>	    		       
+      		<form name="taskForm" novalidate>
+    	 		<md-input-container>     
+    	 			<label>{{'MENU.TODO.DIALOG.DESC' | translate}}</label> 
+    	     		<input ng-model="item.description" class="dialog-close"></input>   
+    	     	</md-input-container>
+    	     	<md-input-container> 
+    	     	     <md-select placeholder="{{'MENU.TODO.DIALOG.PRIORITY' | translate}}" ng-model="item.priority">
+    	    			<md-option value="high">{{'MENU.TODO.DIALOG.HIGH' | translate}}</md-option>
+    	    			<md-option value="medium">{{'MENU.TODO.DIALOG.MEDIUM' | translate}}</md-option>
+    	    			<md-option value="low">{{'MENU.TODO.DIALOG.LOW' | translate}}</md-option>
+    	  			</md-select>
+    	     	</md-input-container>		    
+         	</form>
+        </div>
   	</md-dialog-content>
   	<div class="md-actions" layout="row">    
     	<span flex></span>
