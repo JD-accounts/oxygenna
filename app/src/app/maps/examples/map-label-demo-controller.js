@@ -30,6 +30,9 @@ controller('MapLabelDemoController', function ($scope, uiGmapGoogleMapApi) {
                         url: 'assets/images/maps/blue_marker.png'
                     }
                 }
+            },
+            options:{
+                scrollwheel:false,             
             }
         };
 

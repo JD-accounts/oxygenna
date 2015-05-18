@@ -48,7 +48,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         templateUrl: 'app/layouts/admin-panel/admin-panel.tmpl.html',
         data: {
             toolbar: {
-                tall: false,
+                extraClass: false,
                 background: false,
                 shrink: true
             },

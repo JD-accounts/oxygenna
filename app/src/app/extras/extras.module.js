@@ -26,6 +26,9 @@ angular.module('triAngularExtras', [])
         templateUrl: 'app/extras/404.tmpl.html',
         controller: 'NotFoundController'
     })
+    .state('admin-panel.default.blank', {
+        url: '/blank'        
+    })
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
@@ -45,6 +48,11 @@ angular.module('triAngularExtras', [])
         {
             name: 'MENU.EXTRAS.404.TITLE',
             url: '/404',
+            type: 'link',
+        },
+        {
+            name: 'MENU.EXTRAS.BLANK',
+            url: '/blank',
             type: 'link',
         }]
     });
