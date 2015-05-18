@@ -9,7 +9,8 @@
             	"HOME": "Go back home",
             	"NOT_FOUND": "Page not found",
                 "DESCRIPTION": "Sorry, the page you are looking for cannot be found here. Head back to the home page and start from there.."
-            }           
+            },
+            "BLANK": "Blank Page"           
         }
     }
 }
