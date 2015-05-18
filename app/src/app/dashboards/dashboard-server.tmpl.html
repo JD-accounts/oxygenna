@@ -98,7 +98,7 @@
     <div layout="row" layout-margin>
         <widget flex title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" md-theme="cyan" background="primary" content-layout="column" content-layout-align="start">
             <div flex layout="row" layout-fill layout-padding>
-                <h4 flex=10 class="opacity-80 margin-0 margin-right-20">
+                <h4 flex=20 class="opacity-80 margin-0 margin-right-20">
                     {{'DASHBOARDS.SERVER.DISK' | translate}}
                 </h4>
                 <div flex>
@@ -108,12 +108,22 @@
             </div>
             <md-divider flex></md-divider>
             <div flex layout="row" layout-fill layout-padding>
-                <h4 flex=10 class="opacity-80 margin-0 margin-right-20">
+                <h4 flex=20 class="opacity-80 margin-0 margin-right-20">
                     {{'DASHBOARDS.SERVER.BANDWIDTH' | translate}}
                 </h4>
                 <div flex>
                     <md-progress-linear class="md-accent" md-mode="determinate" value="30"></md-progress-linear>
                     <span class="md-caption">(30% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
+                </div>
+            </div>
+            <md-divider flex></md-divider>
+            <div flex layout="row" layout-fill layout-padding>
+                <h4 flex=20 class="opacity-80 margin-0 margin-right-20">
+                    {{'DASHBOARDS.SERVER.USAGE' | translate}}
+                </h4>
+                <div flex>
+                    <md-progress-linear class="md-accent" md-mode="determinate" value="83"></md-progress-linear>
+                    <span class="md-caption">(83% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
                 </div>
             </div>
         </widget>
