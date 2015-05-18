@@ -23,8 +23,8 @@ angular.module('triAngular')
 
         if($state.current.data !== undefined) {
             if($state.current.data.toolbar !== undefined) {
-                if($state.current.data.toolbar.tall === true) {
-                    $element.addClass('md-tall');
+                if($state.current.data.toolbar.extraClass !== false) {
+                    $element.addClass($state.current.data.toolbar.extraClass);
                 }
 
                 if($state.current.data.toolbar.background) {
