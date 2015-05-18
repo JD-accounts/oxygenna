@@ -1,27 +1,28 @@
+<div class="padded-content-page">
+    <p class="md-subhead">On/off switches toggle the state of a single settings option. The option that the switch controls, as well as the state it’s in, should be made clear from the corresponding inline label. Switches take on the same visual properties of the radio button.</p>
 
-<p class="md-subhead">On/off switches toggle the state of a single settings option. The option that the switch controls, as well as the state it’s in, should be made clear from the corresponding inline label. Switches take on the same visual properties of the radio button.</p>
+    <p>Switches use animation to communicate focused and pressed states.</p>
 
-<p>Switches use animation to communicate focused and pressed states.</p>
-
-<div layout="row">
-    <div flex>
-        <h3>Light Theme</h3>
+    <div layout="row">
+        <div flex>
+            <h3>Light Theme</h3>
+        </div>
+        <div flex>
+            <h3>Dark Theme</h3>
+        </div>
     </div>
-    <div flex>
-        <h3>Dark Theme</h3>
+
+    <div class="example-whiteframe-row" layout="row">
+        <md-whiteframe class="md-whiteframe-z1" flex>
+            <md-content class="md-padding" ng-include="'app/elements/examples/switches-1.tmpl.html'"></md-content>
+        </md-whiteframe>
+        <md-whiteframe class="md-whiteframe-z1" flex>
+            <md-content class="md-padding" md-theme="dark">
+                <md-content ng-include="'app/elements/examples/switches-1.tmpl.html'"></md-content>
+            </md-content>
+        </md-whiteframe>
     </div>
-</div>
 
-<div class="example-whiteframe-row" layout="row">
-    <md-whiteframe class="md-whiteframe-z1" flex>
-        <md-content class="md-padding" ng-include="'app/elements/examples/switches-1.tmpl.html'"></md-content>
-    </md-whiteframe>
-    <md-whiteframe class="md-whiteframe-z1" flex>
-        <md-content class="md-padding" md-theme="dark">
-            <md-content ng-include="'app/elements/examples/switches-1.tmpl.html'"></md-content>
-        </md-content>
-    </md-whiteframe>
+    <h3 class="md-subhead">Example Code</h3>
+    <div hljs language="html" include="'app/elements/examples/switches-1.tmpl.html'"></div>
 </div>
-
-<h3 class="md-subhead">Example Code</h3>
-<div hljs language="html" include="'app/elements/examples/switches-1.tmpl.html'"></div>
