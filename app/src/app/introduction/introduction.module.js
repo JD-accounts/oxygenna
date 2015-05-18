@@ -15,6 +15,7 @@ angular.module('triAngularIntroduction', [])
     .state('admin-panel.default.introduction', {
         url: '/introduction',
         templateUrl: 'app/introduction/introduction.tmpl.html',
+        controller: 'IntroductionController'
     });
 })
 .run(function(SideMenu) {

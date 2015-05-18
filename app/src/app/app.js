@@ -4,7 +4,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 .constant('APP', {
     name: 'triangular',
     logo: 'assets/images/logo.png',
-    version: '1.1'
+    version: '1.0'
 })
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
@@ -78,16 +78,6 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
                 template: '<div flex ui-view></div>'
             }
         },
-    })
-
-    .state('admin-panel.default.padded', {
-        abstract: true,
-        template: '<div flex ui-view></div>',
-        data: {
-            content: {
-                paddingClass: 'padded-content-page'
-            }
-        }
     })
 
     .state('access-undefined', {
@@ -164,6 +154,11 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .accentPalette('pink')
     .warnPalette('red');
 
+    $mdThemingProvider.theme('amber')
+    .primaryPalette('amber')
+    .accentPalette('red')
+    .warnPalette('orange');
+
     $mdThemingProvider.theme('blue')
     .primaryPalette('blue')
     .accentPalette('red')
@@ -198,6 +193,11 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .primaryPalette('teal')
     .accentPalette('red')
     .warnPalette('orange');
+
+    $mdThemingProvider.theme('orange')
+    .primaryPalette('orange')
+    .accentPalette('lime')
+    .warnPalette('amber')
 
     $mdThemingProvider.theme('deep-orange')
     .primaryPalette('deep-orange')

@@ -1,6 +1,6 @@
 <div class="dashboard-container" layout="column">
     <div layout="row" layout-margin>
-        <widget calendar-widget flex class="widget-calendar" md-theme="blue-gray" background="primary" content-padding>
+        <widget calendar-widget flex class="widget-calendar" md-theme="blue-gray" content-padding>
             <div layout="row">
                 <h3 flex>{{currentDay | amDateFormat:'MMMM YYYY'}}</h3>
                 <md-button class="md-icon-button" ng-click="changeMonth('prev')">
@@ -18,7 +18,7 @@
             </div>
         </widget>
         <div layout="column" flex layout-margin>
-            <widget md-theme="green" background="primary" content-layout="column">
+            <widget md-theme="green" content-layout="column">
                 <div flex layout="row" layout-align="start center" layout-padding>
                     <h2 class="md-display-3 font-weight-100">Call Sue</h2>
                 </div>
@@ -30,13 +30,13 @@
                     </md-button>
                 </div>
             </widget>
-            <widget md-theme="default" background="primary" content-layout="column">
+            <widget md-theme="default" content-layout="column">
                 <div flex layout="row" layout-align="start center" layout-padding>
                     <h2 class="md-display-2 font-weight-100">Clean Desk</h2>
                 </div>
             </widget>
         </div>
-        <widget todo-widget class="dashboard-todo-widget" title="Todo List" subtitle="Your current todo list" md-theme="blue" background="primary" title-position="top" content-align="center start" content-padding>
+        <widget todo-widget class="dashboard-todo-widget" title="Todo List" subtitle="Your current todo list" md-theme="blue" title-position="top" content-align="center start" content-padding>
             <md-list flex class="padding-left-0">
                 <md-list-item ng-repeat="todo in todos">
                     <md-checkbox ng-model="todo.done"></md-checkbox>
@@ -57,7 +57,7 @@
             </md-card>
         </div>
 
-        <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" md-theme="blue" background="primary">
+        <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" md-theme="blue"
             <md-list flex>
                 <md-list-item ng-repeat="chat in conversation" class="md-2-line" ng-class="chat.userClass">
                     <img class="md-avatar" ng-src="{{chat.image}}" alt="{{chat.name}}">
@@ -86,7 +86,7 @@
         </widget>
 
         <div layout="column">
-            <widget title="Twitter Feed" md-theme="blue" background="primary" twitter-widget content-padding>
+            <widget title="Twitter Feed" md-theme="blue" twitter-widget content-padding>
                 <div layout="column">
                     <md-tabs md-selected="selectedTab" class="dashboard-no-bar-tabs" md-no-pagination md-no-bar md-dynamic-height>
                         <md-tab ng-repeat="tweet in tweets" label="tweet.id">

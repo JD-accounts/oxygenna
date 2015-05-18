@@ -73,6 +73,12 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
             }
         }
     })
+    .state('admin-panel.default.theme-test', {
+        url: '/ui/theme-test',
+        controller: 'ThemeTestController',
+        templateUrl: 'app/ui/theme-test.tmpl.html',
+    })
+
     .state('admin-panel.default.themes', {
         url: '/ui/themes',
         controller: 'ThemesController',
@@ -112,6 +118,10 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
         },{
             name: 'MENU.UI.THEMES',
             url: '/ui/themes',
+            type: 'link',
+        },{
+            name: 'MENU.UI.THEME-TEST',
+            url: '/ui/theme-test',
             type: 'link',
         },{
             name: 'MENU.UI.TYPOGRAPHY',

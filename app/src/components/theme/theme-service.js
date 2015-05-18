@@ -2,6 +2,7 @@
 
 angular.module('triAngular')
 .provider('triTheme', function($mdThemingProvider) {
+
     var themeableElements = {};
     var useCookie = false;
     return {
@@ -49,14 +50,17 @@ angular.module('triAngular')
                         service.setElementTheme(elementName, themeName);
                     }
                 },
-                rgba: function(rgbArray, opacity) {
-                    return $mdThemingProvider._rgba(rgbArray, opacity);
+                rgba: $mdThemingProvider._rgba,
+                themes: $mdThemingProvider._THEMES,
+                palettes: $mdThemingProvider._PALETTES,
+                parseRules: $mdThemingProvider._parseRules,
+                getPalette: function(name) {
+                    return $mdThemingProvider._PALETTES[name];
                 },
-                themes: function() {
-                    return $mdThemingProvider._THEMES;
-                },
-                palettes: function() {
-                    return $mdThemingProvider._PALETTES;
+                getPaletteColor: function(paletteName, hue) {
+                    if(undefined !== $mdThemingProvider._PALETTES[paletteName] && undefined !== $mdThemingProvider._PALETTES[paletteName][hue]) {
+                        return $mdThemingProvider._PALETTES[paletteName][hue];
+                    }
                 },
                 getThemeColor: function(themeName, intentName) {
                     if(undefined !== $mdThemingProvider._THEMES[themeName] && undefined !== $mdThemingProvider._THEMES[themeName].colors[intentName]) {

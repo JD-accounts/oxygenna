@@ -1,23 +1,15 @@
 {
-    "INBOX": {
-        "GROUPS": {
-            "TODAY": "Today",
-            "YESTERDAY": "Yesterday",
-            "OLDER": "Older"
+    "MENU": {
+        "UI": {
+            "UI": "UI",
+            "COLORS": "Colors",
+            "FONT_AWESOME": "Font Awesome",
+            "MATERIAL_ICONS": "Material Icons",
+            "THEMES": "Themes",
+            "TYPOGRAPHY": "Typography",
+            "THEME-TEST": "Sandbox"
         }
     },
-    "EMAIL": {
-        "FROM": "From",
-        "TO": "To",
-        "SUBJECT": "Subject",
-        "MESSAGE": "Message",
-        "SEND": "Send",
-        "REPLY": "Reply",
-        "REPLY_ALL": "Reply All",
-        "FORWARD": "Forward",
-        "CLOSE": "Close",
-        "REPLY_BOTTOM_SHEET": {
-            "TITLE": "Message Reply"
-        }
+    "UI": {
     }
 }
