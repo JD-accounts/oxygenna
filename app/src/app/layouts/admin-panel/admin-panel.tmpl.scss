@@ -2,6 +2,9 @@
 #admin-panel {
   overflow: hidden;
   position: relative;
+  > md-content {
+    z-index: 3;
+  }
 }
 
 // Side menu Bar
@@ -14,7 +17,14 @@
 // Toolbar
 .admin-toolbar {
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.14);
+  z-index: 4;
   .md-button {
     height: 48px;
   }
+}
+
+// Footer
+#admin-panel-footer {
+  position: absolute;
+  bottom: 0;
 }

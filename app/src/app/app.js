@@ -229,22 +229,30 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 
     $mdThemingProvider.theme('white-red')
     .primaryPalette('white')
-    .accentPalette('red')
+    .accentPalette('red', {
+      'default': '500'
+    })
     .warnPalette('orange');
 
     $mdThemingProvider.theme('white-blue')
     .primaryPalette('white')
-    .accentPalette('blue')
+    .accentPalette('blue', {
+      'default': '500'
+    })
     .warnPalette('deep-orange');
 
     $mdThemingProvider.theme('white-cyan')
     .primaryPalette('white')
-    .accentPalette('cyan')
+    .accentPalette('cyan', {
+      'default': '500'
+    })
     .warnPalette('deep-orange');
 
     $mdThemingProvider.theme('white-green')
     .primaryPalette('white')
-    .accentPalette('green')
+    .accentPalette('green', {
+      'default': '500'
+    })
     .warnPalette('deep-orange');
 
 })
@@ -253,11 +261,11 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     ChartJsProvider.setOptions({
         colours: [
             '#4285F4',    // blue
-            '#DB4437',     // red
-            '#F4B400',     // yellow
-            '#0F9D58',     // green
+            '#DB4437',    // red
+            '#F4B400',    // yellow
+            '#0F9D58',    // green
             '#AB47BC',    // purple
-            '#00ACC1',     // light blue
+            '#00ACC1',    // light blue
             '#FF7043',    // orange
             '#9E9D24',    // browny yellow
             '#5C6BC0'     // dark blue
