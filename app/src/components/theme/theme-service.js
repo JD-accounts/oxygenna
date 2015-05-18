@@ -2,7 +2,7 @@
 
 angular.module('triAngular')
 .provider('triTheme', function($mdThemingProvider) {
-    console.log($mdThemingProvider);
+
     var themeableElements = {};
     var useCookie = false;
     return {
@@ -56,6 +56,11 @@ angular.module('triAngular')
                 parseRules: $mdThemingProvider._parseRules,
                 getPalette: function(name) {
                     return $mdThemingProvider._PALETTES[name];
+                },
+                getPaletteColor: function(paletteName, hue) {
+                    if(undefined !== $mdThemingProvider._PALETTES[paletteName] && undefined !== $mdThemingProvider._PALETTES[paletteName][hue]) {
+                        return $mdThemingProvider._PALETTES[paletteName][hue];
+                    }
                 },
                 getThemeColor: function(themeName, intentName) {
                     if(undefined !== $mdThemingProvider._THEMES[themeName] && undefined !== $mdThemingProvider._THEMES[themeName].colors[intentName]) {
