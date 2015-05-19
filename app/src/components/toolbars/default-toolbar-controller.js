@@ -17,14 +17,19 @@ angular.module('triAngular')
     $scope.menu = SideMenu.getMenu();
     $scope.triTheme = triTheme;
 
-    $scope.$on('$stateChangeSuccess', function() {
-        $element.removeClass('md-tall');
+    $scope.toolbarTypeClass = function() {
+        return $scope.extraClass;
+    }
+
+    $scope.$on('$stateChangeStart', initToolbar);
+
+    function initToolbar() {
         $element.css('background-image', '');
 
         if($state.current.data !== undefined) {
             if($state.current.data.toolbar !== undefined) {
                 if($state.current.data.toolbar.extraClass !== false) {
-                    $element.addClass($state.current.data.toolbar.extraClass);
+                    $scope.extraClass = $state.current.data.toolbar.extraClass;
                 }
 
                 if($state.current.data.toolbar.background) {
@@ -32,7 +37,9 @@ angular.module('triAngular')
                 }
             }
         }
-    })
+    }
+
+    initToolbar();
 
     $scope.switchLanguage = function(languageCode) {
         $translate.use(languageCode).then(function(data) {

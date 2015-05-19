@@ -79,7 +79,7 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
         templateUrl: 'app/ui/theme-test.tmpl.html',
     })
 
-    .state('admin-panel.default.ui-toolbars', {
+    .state('admin-panel.default.ui-toolbar', {
         url: '/ui/toolbars/:extraClass/:background/:shrink',
         controller: 'ToolbarsUIController',
         templateUrl: 'app/ui/toolbars.tmpl.html'
@@ -92,10 +92,28 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
     });
 })
 .run(function(SideMenu, TypographySwitcher, $rootScope) {
-    // $rootScope.$on('$stateChangeStart',
-    // function(event, toState, toParams, fromState, fromParams){
-    //     toState.data.toolbar.extraClass = toParams.extraClass;
-    // })
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState) {
+        if(toState.name === 'admin-panel.default.ui-toolbar') {
+            // override data in route to change the toolbar
+            if(undefined !== toParams.extraClass) {
+                toState.data.toolbar.extraClass = toParams.extraClass === 'default' ? '' : toParams.extraClass;
+            }
+
+            if(undefined !== toParams.background) {
+                toState.data.toolbar.background = toParams.background === 'off' ? false : 'assets/images/backgrounds/bg-1.jpg';
+            }
+
+            if(undefined !== toParams.shrink) {
+                toState.data.toolbar.shrink = toParams.shrink === 'off' ? false : true;
+            }
+        }
+
+        if(fromState.name === 'admin-panel.default.ui-toolbar' && toState.name !== 'admin-panel.default.ui-toolbar') {
+            toState.data.toolbar.extraClass = '';
+            toState.data.toolbar.background = false;
+            toState.data.toolbar.shrink = true;
+        }
+    });
 
 
     // load up the webfont loader to allow loading google fonts in the demo
@@ -136,12 +154,12 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
             state: 'admin-panel.default.ui-sandbox',
             type: 'link',
         },{
-            name: 'MENU.UI.TOOLBARS',
-            state: 'admin-panel.default.ui-toolbars',
+            name: 'MENU.UI.TOOLBAR',
+            state: 'admin-panel.default.ui-toolbar',
             params: {
                 extraClass: 'default',
-                background: 'false',
-                shrink: 'false'
+                background: 'off',
+                shrink: 'on'
             },
             type: 'link',
         },{
