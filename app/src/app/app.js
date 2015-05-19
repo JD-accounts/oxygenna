@@ -70,10 +70,6 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
                 templateUrl: 'components/toolbars/default.tmpl.html',
                 controller: 'DefaultToolbarController'
             },
-            footer: {
-                templateUrl: 'components/footer/footer.tmpl.html',
-                controller: 'FooterController'
-            },
             content: {
                 template: '<div flex ui-view></div>'
             }
