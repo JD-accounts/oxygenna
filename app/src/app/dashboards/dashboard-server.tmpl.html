@@ -1,4 +1,4 @@
-<div class="dashboard-container " layout="column">
+<div class="dashboard-container overlay-10" layout="column">
     <div layout="row" layout-margin>
         <widget server-widget flex="70">
             <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="">
@@ -28,7 +28,7 @@
             </md-tabs>
         </widget>
         <div flex layout="column" layout-margin>
-            <widget md-theme="cyan" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
+            <widget palette-background="cyan:500" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
                 <div>
                     <md-icon class="font-size-5 opacity-50" md-font-icon="icon-gps-fixed"></md-icon>
                 </div>
@@ -37,7 +37,7 @@
                     <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.IP' | translate}}</p>
                 </div>
             </widget>
-            <widget md-theme="cyan" background="primary" content-layout="row" content-layout-align="space-between center" content-padding class="overlay-5">
+            <widget palette-background="cyan:600" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
                 <div>
                     <md-icon class="font-size-5 opacity-50" md-font-icon="icon-memory"></md-icon>
                 </div>
@@ -46,7 +46,7 @@
                     <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.MEMORY' | translate}}</p>
                 </div>
             </widget>
-            <widget md-theme="cyan" background="primary" content-layout="row" content-layout-align="space-between center" content-padding class="overlay-10">
+            <widget palette-background="cyan:700" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
                 <div>
                     <md-icon class="font-size-5 opacity-50" md-font-icon="icon-storage"></md-icon>
                 </div>
@@ -55,7 +55,7 @@
                     <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.DISK' | translate}}</p>
                 </div>
             </widget>
-            <widget md-theme="cyan" background="primary" content-layout="row" content-layout-align="space-between center" content-padding class="overlay-15">
+            <widget palette-background="cyan:800" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
                 <div>
                     <md-icon class="font-size-5 opacity-50" md-font-icon="icon-location-on"></md-icon>
                 </div>
@@ -68,10 +68,10 @@
     </div>
 
     <div layout="row" layout-margin>
-        <widget flex title="{{'DASHBOARDS.SERVER.DISKS' | translate}}" md-theme="white-cyan" background="primary">
+        <widget flex title="{{'DASHBOARDS.SERVER.DISKS' | translate}}" md-theme="cyan">
             <md-list>
                 <md-list-item ng-repeat="disk in disks">
-                    <md-icon md-font-icon="{{disk.icon}}"></md-icon>
+                    <md-icon md-font-icon="{{disk.icon}}" class="md-primary"></md-icon>
                     <p class="text-ellipsis">{{disk.name}}</p>
                     <md-switch class="md-secondary" ng-model="disk.enabled"></md-switch>
                     <md-divider ng-hide="$last"></md-divider>
@@ -96,7 +96,7 @@
     </div>
 
     <div layout="row" layout-margin>
-        <widget flex title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" md-theme="cyan" background="primary" content-layout="column" content-layout-align="start">
+        <widget flex title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" md-theme="cyan" palette-background="cyan:800" content-layout="column" content-layout-align="start">
             <div flex layout="row" layout-fill layout-padding>
                 <h4 flex=20 class="opacity-80 margin-0 margin-right-20">
                     {{'DASHBOARDS.SERVER.DISK' | translate}}
