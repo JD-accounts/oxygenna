@@ -98,12 +98,9 @@
     </div>
 
     <div layout="row" layout-margin>
-        <widget flex title="{{'DASHBOARDS.SERVER.STATUS' | translate}}" md-theme="cyan"  subtitle="{{'DASHBOARDS.SERVER.CURRENTLY' | translate}}" content-layout="column" content-padding>
-            <p flex class="md-display-2 font-weight-100 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.RUNNING' | translate}}</p>
-            <div layout="row" layout-align="end end" layout-fill>
-                <md-divider></md-divider>
-                <md-button class="md-primary">{{'DASHBOARDS.SERVER.SHUTDOWN' | translate}}</md-button>
-                <md-button class="md-primary">{{'DASHBOARDS.SERVER.RESTART' | translate}}</md-button>
+        <widget chartjs-pie-widget flex title="{{'DASHBOARDS.SERVER.TASKS' | translate}}" subtitle="{{'DASHBOARDS.SERVER.DATE' | translate}}" content-padding >
+            <div flex>
+                <canvas class="chart-doughnut" data="pieChart.data" legend="false" labels="pieChart.labels"></canvas>
             </div>
         </widget>
         <widget flex="70" title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" md-theme="cyan" palette-background="cyan:600" content-layout="column" content-layout-align="start">
