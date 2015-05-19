@@ -71,7 +71,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
                 controller: 'DefaultToolbarController'
             },
             content: {
-                template: '<div flex ui-view></div>'
+                template: '<div id="admin-panel-content-view" flex ui-view></div>'
             }
         },
     })
