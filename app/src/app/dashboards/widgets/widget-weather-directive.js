@@ -16,7 +16,7 @@
 * ```
 */
 angular.module('triAngularDashboards')
-.directive('weatherWidget', function($http, $compile, $templateCache) {
+.directive('weatherWidget', function($http) {
     return {
         require: 'widget',
         restrict: 'A',

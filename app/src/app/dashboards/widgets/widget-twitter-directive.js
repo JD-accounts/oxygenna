@@ -16,7 +16,7 @@
 * ```
 */
 angular.module('triAngularDashboards')
-.directive('twitterWidget', function($http, $compile, $templateCache) {
+.directive('twitterWidget', function() {
     return {
         require: 'widget',
         restrict: 'A',
