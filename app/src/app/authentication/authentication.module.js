@@ -26,7 +26,7 @@ angular.module('triAngularAuthentication', ['ui.gravatar'])
         templateUrl: 'app/authentication/signup/signup.tmpl.html',
         controller: 'SignupController'
     })
-    .state('authentication.user-lock', {
+    .state('authentication.lock', {
         url: '/lock',
         templateUrl: 'app/authentication/lock/lock.tmpl.html',
         controller: 'LockController'
@@ -45,19 +45,19 @@ angular.module('triAngularAuthentication', ['ui.gravatar'])
         priority: 4.1,
         children: [{
             name: 'MENU.AUTH.LOGIN',
-            url: '/login',
+            state: 'authentication.login',
             type: 'link',
         },{
             name: 'MENU.AUTH.SIGN_UP',
-            url: '/signup',
+            state: 'authentication.signup',
             type: 'link',
         },{
             name: 'MENU.AUTH.FORGOT',
-            url: '/forgot',
+            state: 'authentication.forgot',
             type: 'link',
         },{
             name: 'MENU.AUTH.LOCK',
-            url: '/lock',
+            state: 'authentication.lock',
             type: 'link',
         }]
     });

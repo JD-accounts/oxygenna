@@ -12,13 +12,13 @@ angular.module('triAngularExtras', [])
     $translatePartialLoaderProvider.addPart('app/extras');
 
     $stateProvider
-    .state('admin-panel.default.gallery', {
-        url: '/gallery',
+    .state('admin-panel.default.extra-gallery', {
+        url: '/extras/gallery',
         templateUrl: 'app/extras/gallery.tmpl.html',
         controller: 'GalleryController'
     })
-    .state('admin-panel.default.avatars', {
-        url: '/avatars',
+    .state('admin-panel.default.extra-avatars', {
+        url: '/extras/avatars',
         templateUrl: 'app/extras/avatars.tmpl.html'
     })
     .state('not-found', {
@@ -26,8 +26,8 @@ angular.module('triAngularExtras', [])
         templateUrl: 'app/extras/404.tmpl.html',
         controller: 'NotFoundController'
     })
-    .state('admin-panel.default.blank', {
-        url: '/blank'        
+    .state('admin-panel.default.extra-blank', {
+        url: '/extras/blank'
     })
 })
 .run(function(SideMenu) {
@@ -38,21 +38,21 @@ angular.module('triAngularExtras', [])
         priority: 8.1,
         children: [{
             name: 'MENU.EXTRAS.GALLERY',
-            url: '/gallery',
+            state: 'admin-panel.default.extra-gallery',
             type: 'link',
         },{
             name: 'MENU.EXTRAS.AVATARS',
-            url: '/avatars',
+            state: 'admin-panel.default.extra-avatars',
             type: 'link',
         },
         {
             name: 'MENU.EXTRAS.404.TITLE',
-            url: '/404',
+            state: 'not-found',
             type: 'link',
         },
         {
             name: 'MENU.EXTRAS.BLANK',
-            url: '/blank',
+            state: 'admin-panel.default.extra-blank',
             type: 'link',
         }]
     });

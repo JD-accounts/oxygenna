@@ -12,7 +12,7 @@ angular.module('triAngularMenuLevels', [])
     $translatePartialLoaderProvider.addPart('app/ui');
 
     $stateProvider
-    .state('admin-panel.default.menulevels', {
+    .state('admin-panel.default.menu-levels', {
         url: '/menu-levels/:level',
         controller: 'LevelController',
         templateUrl: 'app/menulevels/level.tmpl.html',
@@ -36,15 +36,24 @@ angular.module('triAngularMenuLevels', [])
                     children: [{
                         name: 'MENU.LEVELS.4-1',
                         type: 'link',
-                        url: '/menu-levels/Item1-1-1-1'
+                        state: 'admin-panel.default.menu-levels',
+                        params: {
+                            level: 'Item1-1-1-1'
+                        }
                     },{
                         name: 'MENU.LEVELS.4-2',
                         type: 'link',
-                        url: '/menu-levels/Item1-1-1-2'
+                        state: 'admin-panel.default.menu-levels',
+                        params: {
+                            level: 'Item1-1-1-2'
+                        }
                     },{
                         name: 'MENU.LEVELS.4-3',
                         type: 'link',
-                        url: '/menu-levels/Item1-1-1-3'
+                        state: 'admin-panel.default.menu-levels',
+                        params: {
+                            level: 'Item1-1-1-3'
+                        }
                     }]
                 }]
             }]

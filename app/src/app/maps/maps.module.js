@@ -12,13 +12,13 @@ angular.module('triAngularMaps', ['uiGmapgoogle-maps'])
     $translatePartialLoaderProvider.addPart('app/maps');
 
     $stateProvider
-    .state('admin-panel.default.fullwidth', {
-        url: '/fullwidth',
+    .state('admin-panel.default.maps-fullwidth', {
+        url: '/maps/fullwidth',
         templateUrl: 'app/maps/maps-fullwidth.tmpl.html',
         controller: 'MapController'
     })
-    .state('admin-panel.default.demos', {
-        url: '/demos',
+    .state('admin-panel.default.maps-demos', {
+        url: '/maps/demos',
         templateUrl: 'app/maps/maps-demo.tmpl.html',
     });
 
@@ -35,11 +35,11 @@ angular.module('triAngularMaps', ['uiGmapgoogle-maps'])
         priority: 7.1,
         children: [{
             name: 'MENU.MAPS.FULLWIDTH',
-            url: '/fullwidth',
+            state: 'admin-panel.default.maps-fullwidth',
             type: 'link',
         },{
             name: 'MENU.MAPS.DEMOS',
-            url: '/demos',
+            state: 'admin-panel.default.maps-demos',
             type: 'link',
         }]
     });

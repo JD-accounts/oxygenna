@@ -12,12 +12,12 @@ angular.module('triAngularElements', [])
     $translatePartialLoaderProvider.addPart('app/elements');
 
     $stateProvider
-    .state('admin-panel.default.buttons', {
+    .state('admin-panel.default.elements-buttons', {
         url: '/elements/buttons',
         templateUrl: 'app/elements/buttons.tmpl.html',
         controller: 'ButtonsController'
     })
-    .state('admin-panel.default.icons', {
+    .state('admin-panel.default.elements-icons', {
         url: '/elements/icons',
         templateUrl: 'app/elements/icons.tmpl.html',
         controller: 'IconsController',
@@ -36,70 +36,70 @@ angular.module('triAngularElements', [])
             }
         }
     })
-    .state('admin-panel.default.checkboxes', {
+    .state('admin-panel.default.elements-checkboxes', {
         url: '/elements/checkboxes',
         templateUrl: 'app/elements/checkboxes.tmpl.html'
     })
-    .state('admin-panel.default.radios', {
+    .state('admin-panel.default.elements-radios', {
         url: '/elements/radios',
         templateUrl: 'app/elements/radios.tmpl.html',
     })
-    .state('admin-panel.default.toolbars', {
+    .state('admin-panel.default.elements-toolbars', {
         url: '/elements/toolbars',
         templateUrl: 'app/elements/toolbars.tmpl.html'
     })
-    .state('admin-panel.default.tooltips', {
+    .state('admin-panel.default.elements-tooltips', {
         url: '/elements/tooltips',
         templateUrl: 'app/elements/tooltips.tmpl.html'
     })
-    .state('admin-panel.default.whiteframes', {
+    .state('admin-panel.default.elements-whiteframes', {
         url: '/elements/whiteframes',
         templateUrl: 'app/elements/whiteframes.tmpl.html'
     })
-    .state('admin-panel.default.sliders', {
+    .state('admin-panel.default.elements-sliders', {
         url: '/elements/sliders',
         templateUrl: 'app/elements/sliders.tmpl.html'
     })
-    .state('admin-panel.default.toasts', {
+    .state('admin-panel.default.elements-toasts', {
         url: '/elements/toasts',
         templateUrl: 'app/elements/toasts.tmpl.html',
         controller: 'ToastsController'
     })
-    .state('admin-panel.default.progress', {
+    .state('admin-panel.default.elements-progress', {
         url: '/elements/progress',
         templateUrl: 'app/elements/progress.tmpl.html',
         controller: 'ProgressController'
     })
-    .state('admin-panel.default.switches', {
+    .state('admin-panel.default.elements-switches', {
         url: '/elements/switches',
         templateUrl: 'app/elements/switches.tmpl.html',
         controller: 'SwitchesController'
     })
-    .state('admin-panel.default.dialogs', {
+    .state('admin-panel.default.elements-dialogs', {
         url: '/elements/dialogs',
         templateUrl: 'app/elements/dialogs.tmpl.html',
         controller: 'DialogsController'
     })
-    .state('admin-panel.default.tabs', {
+    .state('admin-panel.default.elements-tabs', {
         url: '/elements/tabs',
         templateUrl: 'app/elements/tabs.tmpl.html',
         controller: 'TabsController'
     })
-    .state('admin-panel.default.sidebars', {
+    .state('admin-panel.default.elements-sidebars', {
         url: '/elements/sidebars',
         templateUrl: 'app/elements/sidebars.tmpl.html',
         controller: 'SidebarsController'
     })
-    .state('admin-panel.default.grids', {
+    .state('admin-panel.default.elements-grids', {
         url: '/elements/grids',
         templateUrl: 'app/elements/grids.tmpl.html',
         controller: 'GridsController'
     })
-    .state('admin-panel.default.selects', {
+    .state('admin-panel.default.elements-selects', {
         url: '/elements/selects',
         templateUrl: 'app/elements/selects.tmpl.html'
     })
-    .state('admin-panel.default.lists', {
+    .state('admin-panel.default.elements-lists', {
         url: '/elements/lists',
         templateUrl: 'app/elements/lists.tmpl.html',
         controller: 'ListsController',
@@ -112,7 +112,7 @@ angular.module('triAngularElements', [])
             },
         }
     })
-    .state('admin-panel.default.chips', {
+    .state('admin-panel.default.elements-chips', {
         url: '/elements/chips',
         templateUrl: 'app/elements/chips.tmpl.html',
         controller: 'ChipsController',
@@ -125,7 +125,7 @@ angular.module('triAngularElements', [])
             }
         }
     })
-    .state('admin-panel.default.cards', {
+    .state('admin-panel.default.elements-cards', {
         url: '/elements/cards',
         templateUrl: 'app/elements/cards.tmpl.html'
     });
@@ -139,79 +139,79 @@ angular.module('triAngularElements', [])
         children: [{
             name: 'MENU.ELEMENTS.BUTTONS',
             type: 'link',
-            url: 'elements/buttons'
+            state: 'admin-panel.default.elements-buttons'
         },{
             name: 'MENU.ELEMENTS.CARDS',
             type: 'link',
-            url: 'elements/cards'
+            state: 'admin-panel.default.elements-cards'
         },{
             name: 'MENU.ELEMENTS.CHECKBOXES',
             type: 'link',
-            url: 'elements/checkboxes'
+            state: 'admin-panel.default.elements-checkboxes'
         },{
             name: 'MENU.ELEMENTS.CHIPS',
             type: 'link',
-            url: 'elements/chips'
+            state: 'admin-panel.default.elements-chips'
         },{
             name: 'MENU.ELEMENTS.DIALOGS',
             type: 'link',
-            url: 'elements/dialogs'
+            state: 'admin-panel.default.elements-dialogs'
         },{
             name: 'MENU.ELEMENTS.GRIDS',
             type: 'link',
-            url: 'elements/grids'
+            state: 'admin-panel.default.elements-grids'
         },{
             name: 'MENU.ELEMENTS.ICONS',
             type: 'link',
-            url: 'elements/icons'
+            state: 'admin-panel.default.elements-icons'
         },{
             name: 'MENU.ELEMENTS.LISTS',
             type: 'link',
-            url: 'elements/lists'
+            state: 'admin-panel.default.elements-lists'
         },{
             name: 'MENU.ELEMENTS.PROGRESS',
             type: 'link',
-            url: 'elements/progress'
+            state: 'admin-panel.default.elements-progress'
         },{
             name: 'MENU.ELEMENTS.RADIOS',
             type: 'link',
-            url: 'elements/radios'
+            state: 'admin-panel.default.elements-radios'
         },{
             name: 'MENU.ELEMENTS.SELECTS',
             type: 'link',
-            url: 'elements/selects'
+            state: 'admin-panel.default.elements-selects'
         },{
             name: 'MENU.ELEMENTS.SIDEBARS',
             type: 'link',
-            url: 'elements/sidebars'
+            state: 'admin-panel.default.elements-sidebars'
         },{
             name: 'MENU.ELEMENTS.SLIDERS',
             type: 'link',
-            url: 'elements/sliders'
+            state: 'admin-panel.default.elements-sliders'
         },{
             name: 'MENU.ELEMENTS.SWITCHES',
             type: 'link',
-            url: 'elements/switches'
+            state: 'admin-panel.default.elements-switches'
         },{
             name: 'MENU.ELEMENTS.TABS',
             type: 'link',
-            url: 'elements/tabs'
+            state: 'admin-panel.default.elements-tabs'
         },{
             name: 'MENU.ELEMENTS.TOASTS',
             type: 'link',
-            url: 'elements/toasts'
+            state: 'admin-panel.default.elements-toasts'
         },{
             name: 'MENU.ELEMENTS.TOOLBARS',
             type: 'link',
-            url: 'elements/toolbars'
+            state: 'admin-panel.default.elements-toolbars'
         },{
             name: 'MENU.ELEMENTS.TOOLTIPS',
             type: 'link',
-            url: 'elements/tooltips'
+            state: 'admin-panel.default.elements-tooltips'
         },{
             name: 'MENU.ELEMENTS.WHITEFRAMES',
             type: 'link',
-            url: 'elements/whiteframes'
+            state: 'admin-panel.default.elements-whiteframes'
         }]
     });
 });

@@ -21,7 +21,7 @@ angular.module('triAngularIntroduction', [])
 .run(function(SideMenu) {
     SideMenu.addMenu({
         name: 'MENU.INTRODUCTION.INTRODUCTION',
-        url: '/introduction',
+        state: 'admin-panel.default.introduction',
         type: 'link',
         icon: 'icon-info-outline',
         priority: 1.1

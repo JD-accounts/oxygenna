@@ -25,7 +25,12 @@ angular.module('triAngularDashboards', [])
         controller: 'DashboardServerController',
         templateUrl: 'app/dashboards/dashboard-server.tmpl.html',
     })
+    .state('admin-panel.default.dashboard-widgets', {
+        url: '/dashboards/widgets',
+        templateUrl: 'app/dashboards/widgets.tmpl.html',
+    })
 
+    // remove these
     .state('admin-panel.default.dashboard1', {
         url: '/dashboard',
         templateUrl: 'app/dashboards/dashboard1.html',
@@ -39,10 +44,6 @@ angular.module('triAngularDashboards', [])
         url: '/dashboard3',
         templateUrl: 'app/dashboards/dashboard3.tmpl.html',
     })
-    .state('admin-panel.default.widgets', {
-        url: '/dashboards/widgets',
-        templateUrl: 'app/dashboards/widgets.tmpl.html',
-    });
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
@@ -52,19 +53,19 @@ angular.module('triAngularDashboards', [])
         priority: 2.1,
         children: [{
             name: 'MENU.DASHBOARDS.GENERAL',
-            url: '/dashboards/general',
+            state: 'admin-panel.default.dashboard-general',
             type: 'link',
         },{
             name: 'MENU.DASHBOARDS.ANALYTICS',
-            url: '/dashboards/analytics',
+            state: 'admin-panel.default.dashboard-analytics',
             type: 'link',
         },{
             name: 'MENU.DASHBOARDS.SERVER',
-            url: '/dashboards/server',
+            state: 'admin-panel.default.dashboard-server',
             type: 'link',
         },{
             name: 'MENU.DASHBOARDS.WIDGETS',
-            url: '/dashboards/widgets',
+            state: 'admin-panel.default.dashboard-widgets',
             type: 'link',
         }]
     });

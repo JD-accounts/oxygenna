@@ -16,7 +16,7 @@
 * ```
 */
 angular.module('triAngular')
-.directive('sideMenuItem', function($location) {
+.directive('sideMenuItem', function($state) {
     return {
         restrict: 'E',
         require: '^sideMenu',
@@ -53,7 +53,7 @@ angular.module('triAngular')
             ***/
 
             // on first init check if we are the current menu item
-            if(urlCheck($location.path())) {
+            if($state.includes($scope.item.state)) {
                 openMenu();
             }
 
@@ -64,19 +64,27 @@ angular.module('triAngular')
                 $scope.$emit('openParents');
             }
 
-            // checks if a item url is the same as param
-            function urlCheck(url) {
-                return url.indexOf($scope.item.url) !== -1;
-            }
-
-            // url update event close all menus and open only the url menu
-            $scope.$on('openMenu', function(event, url) {
+            // add a watch for when the url location changes
+            $scope.$on('$stateChangeSuccess', function(event, toState, toParams) {
+                // location has changed so update the menu
                 $scope.item.active = false;
                 $scope.item.open = false;
-                if(urlCheck(url)) {
+                if($state.includes($scope.item.state)) {
                     openMenu();
                 }
             });
+
+            // adds an extra hue class if the item is active
+            $scope.activeClass = function() {
+                return $scope.item.active ? 'md-hue-3' : '';
+            };
+
+            $scope.openLink = function() {
+                // if we dont have any default params for this state just use empty object
+                var params = $scope.item.params === undefined ? {} : $scope.item.params;
+
+                $state.go($scope.item.state, params);
+            };
 
             // this event is emitted up the tree to open parent menus
             $scope.$on('openParents', function(event) {
@@ -84,15 +92,6 @@ angular.module('triAngular')
                 $scope.item.active = true;
                 $scope.item.open = true;
             });
-
-            $scope.linkCSSClass = function() {
-                var parent = $element.parent()[0];
-                return {
-                    'md-hue-1': $scope.item.active,
-                    'md-accent': parent.tagName === 'LI',
-                    'md-primary': parent.tagName !== 'LI'
-                };
-            }
         }
     };
 });

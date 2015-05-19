@@ -9,19 +9,19 @@
  */
 angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 .constant('EMAIL_ROUTES', [{
-    state: 'inbox',
+    state: 'email-panel.default.inbox',
     name: 'MENU.EMAIL.INBOX',
-    url: '/inbox',
+    url: '/email/inbox',
     icon: 'icon-inbox'
 },{
-    state: 'trash',
+    state: 'email-panel.default.trash',
     name: 'MENU.EMAIL.TRASH',
-    url: '/trash',
+    url: '/email/trash',
     icon: 'icon-remove-circle'
 },{
-    state: 'sent',
+    state: 'email-panel.default.sent',
     name: 'MENU.EMAIL.SENT',
-    url: '/sent',
+    url: '/email/sent',
     icon: 'icon-mail'
 }])
 .config(function ($translatePartialLoaderProvider, $stateProvider, $provide, EMAIL_ROUTES) {
@@ -52,7 +52,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 
     angular.forEach(EMAIL_ROUTES, function(route) {
         $stateProvider
-        .state('email-panel.default.' + route.state, {
+        .state(route.state, {
             url: route.url,
             templateUrl: 'app/email/inbox.tmpl.html',
             controller: 'InboxController',
@@ -75,7 +75,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 
     angular.forEach(EMAIL_ROUTES, function(route) {
         $stateProvider
-        .state('email-panel.default.' + route.state + '.email', {
+        .state(route.state + '.email', {
             url: '/mail/:emailID',
             templateUrl: 'app/email/email.tmpl.html',
             controller: 'EmailController',
@@ -94,7 +94,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
             },
             onEnter: function($state, email){
                 if (false === email) {
-                    $state.go('email-panel.default.' + route.state);
+                    $state.go(route.state);
                 }
             },
         });
@@ -140,7 +140,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
     angular.forEach(EMAIL_ROUTES, function(route) {
         emailMenu.children.push({
             name: route.name,
-            url: route.url,
+            state: route.state,
             type: 'link',
         });
     });

@@ -24,12 +24,6 @@ angular.module('triAngular')
         controller: function($scope, $element) {
             // get the menu structure from the menu service
             $scope.menu = SideMenu.getMenu();
-
-            // add a watch for when the url location changes
-            $scope.$on('$locationChangeSuccess', function() {
-                // location has changed so update the menu
-                $scope.$broadcast('openMenu', $location.path());
-            });
         },
         link: function($scope, $element, attrs) {
             $mdTheming($element);

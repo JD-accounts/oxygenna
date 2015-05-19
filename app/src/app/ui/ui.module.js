@@ -37,17 +37,17 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
     $translatePartialLoaderProvider.addPart('app/ui');
 
     $stateProvider
-    .state('admin-panel.default.typography', {
+    .state('admin-panel.default.ui-typography', {
         url: '/ui/typography',
         controller: 'TypographyController',
         templateUrl: 'app/ui/typography.tmpl.html',
     })
-    .state('admin-panel.default.colors', {
+    .state('admin-panel.default.ui-colors', {
         url: '/ui/colors',
         controller: 'ColorsController',
         templateUrl: 'app/ui/colors.tmpl.html',
     })
-    .state('admin-panel.default.material-icons', {
+    .state('admin-panel.default.ui-material-icons', {
         url: '/ui/material-icons',
         controller: 'MaterialIconsController',
         templateUrl: 'app/ui/material-icons.tmpl.html',
@@ -60,7 +60,7 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
             }
         }
     })
-    .state('admin-panel.default.fa-icons', {
+    .state('admin-panel.default.ui-fa-icons', {
         url: '/ui/fa-icons',
         controller: 'FaIconsController',
         templateUrl: 'app/ui/fa-icons.tmpl.html',
@@ -73,19 +73,31 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
             }
         }
     })
-    .state('admin-panel.default.theme-test', {
-        url: '/ui/theme-test',
+    .state('admin-panel.default.ui-sandbox', {
+        url: '/ui/sandbox',
         controller: 'ThemeTestController',
         templateUrl: 'app/ui/theme-test.tmpl.html',
     })
 
-    .state('admin-panel.default.themes', {
+    .state('admin-panel.default.ui-toolbars', {
+        url: '/ui/toolbars/:extraClass/:background/:shrink',
+        controller: 'ToolbarsUIController',
+        templateUrl: 'app/ui/toolbars.tmpl.html'
+    })
+
+    .state('admin-panel.default.ui-themes', {
         url: '/ui/themes',
         controller: 'ThemesController',
         templateUrl: 'app/ui/themes.tmpl.html',
     });
 })
-.run(function(SideMenu, TypographySwitcher) {
+.run(function(SideMenu, TypographySwitcher, $rootScope) {
+    // $rootScope.$on('$stateChangeStart',
+    // function(event, toState, toParams, fromState, fromParams){
+    //     toState.data.toolbar.extraClass = toParams.extraClass;
+    // })
+
+
     // load up the webfont loader to allow loading google fonts in the demo
     jQuery.ajax({
         url: '//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js',
@@ -105,27 +117,36 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
         priority: 3.2,
         children: [{
             name: 'MENU.UI.COLORS',
-            url: '/ui/colors',
+            state: 'admin-panel.default.ui-colors',
             type: 'link',
         },{
             name: 'MENU.UI.FONT_AWESOME',
-            url: '/ui/fa-icons',
+            state: 'admin-panel.default.ui-fa-icons',
             type: 'link',
         },{
             name: 'MENU.UI.MATERIAL_ICONS',
-            url: '/ui/material-icons',
+            state: 'admin-panel.default.ui-material-icons',
             type: 'link',
         },{
             name: 'MENU.UI.THEMES',
-            url: '/ui/themes',
+            state: 'admin-panel.default.ui-themes',
             type: 'link',
         },{
             name: 'MENU.UI.THEME-TEST',
-            url: '/ui/theme-test',
+            state: 'admin-panel.default.ui-sandbox',
+            type: 'link',
+        },{
+            name: 'MENU.UI.TOOLBARS',
+            state: 'admin-panel.default.ui-toolbars',
+            params: {
+                extraClass: 'default',
+                background: 'false',
+                shrink: 'false'
+            },
             type: 'link',
         },{
             name: 'MENU.UI.TYPOGRAPHY',
-            url: '/ui/typography',
+            state: 'admin-panel.default.ui-typography',
             type: 'link',
         }]
     });

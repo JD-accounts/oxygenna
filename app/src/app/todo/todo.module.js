@@ -16,14 +16,14 @@ angular.module('triAngularTodo', [])
         url: '/todo',
         templateUrl: 'app/todo/todo.tmpl.html',
         controller: 'TodoController'
-    });    
+    });
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
         name: 'MENU.TODO.TITLE',
         icon: 'icon-done',
-        url: '/todo',
+        state: 'admin-panel.default.todo',
         type: 'link',
-        priority: 9.1,       
+        priority: 9.1,
     });
 });

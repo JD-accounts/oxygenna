@@ -12,22 +12,22 @@ angular.module('triAngularForms', [])
     $translatePartialLoaderProvider.addPart('app/forms');
 
     $stateProvider
-    .state('admin-panel.default.forms', {
+    .state('admin-panel.default.forms-inputs', {
         url: '/forms/inputs',
         templateUrl: 'app/forms/inputs.tmpl.html'
     })
-    .state('admin-panel.default.binding', {
+    .state('admin-panel.default.forms-binding', {
         url: '/forms/binding',
         templateUrl: 'app/forms/binding.tmpl.html',
         controller: 'BindingController'
     })
-    .state('admin-panel.default.autocomplete', {
+    .state('admin-panel.default.forms-autocomplete', {
         url: '/forms/autocomplete',
         templateUrl: 'app/forms/autocomplete.tmpl.html',
         controller: 'AutocompleteController',
         controllerAs: 'ctrl',
     })
-    .state('admin-panel.default.validation', {
+    .state('admin-panel.default.forms-validation', {
         url: '/forms/validation',
         templateUrl: 'app/forms/validation.tmpl.html'
     });
@@ -42,19 +42,19 @@ angular.module('triAngularForms', [])
         children: [{
             name: 'MENU.FORMS.AUTOCOMPLETE',
             type: 'link',
-            url: 'forms/autocomplete'
+            state: 'admin-panel.default.forms-autocomplete'
         },{
             name: 'MENU.FORMS.BINDING',
             type: 'link',
-            url: 'forms/binding'
+            state: 'admin-panel.default.forms-binding'
         },{
             name: 'MENU.FORMS.INPUTS',
             type: 'link',
-            url: 'forms/inputs'
+            state: 'admin-panel.default.forms-inputs'
         },{
             name: 'MENU.FORMS.VALIDATION',
             type: 'link',
-            url: 'forms/validation'
+            state: 'admin-panel.default.forms-validation'
         }]
     });
     SideMenu.addMenu({
