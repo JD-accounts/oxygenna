@@ -19,7 +19,8 @@ angular.module('triAngularExtras', [])
     })
     .state('admin-panel.default.extra-avatars', {
         url: '/extras/avatars',
-        templateUrl: 'app/extras/avatars.tmpl.html'
+        templateUrl: 'app/extras/avatars.tmpl.html',
+        controller: 'AvatarsController'
     })
     .state('not-found', {
         url: '/404',

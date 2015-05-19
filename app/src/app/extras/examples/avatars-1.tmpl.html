@@ -1,22 +1,5 @@
-<div layout="row" layout-margin>
-    <widget title="Carl Barnes" subtitle="Designer" md-theme="red" background="primary" title-position="bottom" overlay-title class="text-center">
-    	<img src="assets/images/avatars/avatar-1.png" />
-   	</widget>
-     <widget title="Dorothy Lewis" subtitle="Designer" md-theme="red" background="primary" title-position="bottom" overlay-title class="text-center">
-      	<img src="assets/images/avatars/avatar-2.png" />
-    </widget>
-</div>
-<div layout="row" layout-margin>
-    <widget title="Harris Kwnst" subtitle="Developer" md-theme="red" background="primary" title-position="bottom" overlay-title class="text-center">
-    	<img src="assets/images/avatars/avatar-3.png" />
-   	</widget>
-     <widget title="Sue Ross" subtitle="Marketing" md-theme="red" background="primary" title-position="bottom" overlay-title class="text-center">
-      	<img src="assets/images/avatars/avatar-4.png" />
-    </widget>
-    <widget title="Joe Ross" subtitle="Designer" md-theme="red" background="primary" title-position="bottom" overlay-title class="text-center">
-    	<img src="assets/images/avatars/avatar-5.png" />
-    </widget>
-    <widget title="Shirley King" subtitle="Finance" md-theme="red" background="primary" title-position="bottom" overlay-title class="text-center">
-    	<img src="assets/images/avatars/avatar-6.png" />
-    </widget>
+<div layout="row" class="intro-feature-row" layout-wrap ng-repeat="avatars in avatarRows">
+    <widget title="{{avatar.title}}" subtitle="{{avatar.subtitle}}" md-theme="red" background="primary" title-position="bottom" overlay-title class="text-center" palette-background="{{avatar.color}}:{{avatar.hue}}" ng-repeat="avatar in avatars">
+    	<img src="{{avatar.image}}" />
+   	</widget>     
 </div>
