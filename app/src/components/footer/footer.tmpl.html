@@ -1,6 +1,7 @@
-<div class="md-toolbar-tools" layout="row" layout-align="space-between center">
-    <h2>{{footerInfo.appName}}</h2>
-    <h2>&copy; {{footerInfo.date | amDateFormat:'YYYY'}} oxygenna.com</h2>
-    <h2>v{{footerInfo.version}}</h2>
-</div>
-
+<md-toolbar id="footer" md-theme="{{triTheme.getElementTheme('toolbarTheme')}}" ng-controller="FooterController">
+    <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+        <h2>{{footerInfo.appName}}</h2>
+        <h2>&copy; {{footerInfo.date | amDateFormat:'YYYY'}} oxygenna.com</h2>
+        <h2>v{{footerInfo.version}}</h2>
+    </div>
+</md-toolbar>
