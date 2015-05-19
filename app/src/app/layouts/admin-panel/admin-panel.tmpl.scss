@@ -6,6 +6,13 @@
     z-index: 3;
   }
 }
+#admin-panel-content-view {
+  display: block;
+  position: relative;
+  padding-bottom: 65px;
+  min-height: 100%;
+}
+
 
 // Side menu Bar
 .admin-sidebar-left.md-locked-open {
@@ -24,6 +31,8 @@
 }
 
 // Footer
-#admin-panel-footer {
-
+#footer {
+  box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.10);
+  position: absolute;
+  bottom: 0;
 }

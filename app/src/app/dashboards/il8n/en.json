@@ -42,7 +42,9 @@
             "RESTART": "Restart",
             "SHUTDOWN": "Shut Down",
             "USAGE": "Monthly Usage",
-            "LIMIT": "of monthly limit"
+            "LIMIT": "of monthly limit",
+            "TASKS": "Current tasks",
+            "DATE": "11/03/15 - 11/4/15"
         },
         "WIDGETS": {
             "SALES": "Sales",
