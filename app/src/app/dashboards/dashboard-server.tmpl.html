@@ -87,9 +87,8 @@
                         <h3>{{job.job}}</h3>
                         <p>{{job.time}}</p>
                     </div>
-                    <md-icon md-font-icon="icon-check alert-success" ng-show="job.complete" class="md-secondary"></md-icon>
-                    <md-icon md-font-icon="icon-close alert-error" ng-hide="job.complete" class="md
-                    -secondary"></md-icon>
+                    <md-icon md-font-icon="icon-check alert-success" ng-show="job.complete"></md-icon>
+                    <md-icon md-font-icon="icon-close alert-error" ng-hide="job.complete"></md-icon>
                     <md-divider ng-hide="$last"></md-divider>
                 </md-list-item>
             </md-list>
@@ -109,7 +108,7 @@
                     {{'DASHBOARDS.SERVER.DISK' | translate}}
                 </h4>
                 <div flex>
-                    <md-progress-linear class="md-primary" md-mode="determinate" value="60"></md-progress-linear>
+                    <md-progress-linear class="md-accent" md-mode="determinate" value="60"></md-progress-linear>
                     <span class="md-caption">(60% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
                 </div>
             </div>
@@ -119,7 +118,7 @@
                     {{'DASHBOARDS.SERVER.BANDWIDTH' | translate}}
                 </h4>
                 <div flex>
-                    <md-progress-linear class="md-primary" md-mode="determinate" value="30"></md-progress-linear>
+                    <md-progress-linear class="md-accent" md-mode="determinate" value="30"></md-progress-linear>
                     <span class="md-caption">(30% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
                 </div>
             </div>
@@ -129,7 +128,7 @@
                     {{'DASHBOARDS.SERVER.USAGE' | translate}}
                 </h4>
                 <div flex>
-                    <md-progress-linear class="md-primary" md-mode="determinate" value="83"></md-progress-linear>
+                    <md-progress-linear class="md-accent" md-mode="determinate" value="83"></md-progress-linear>
                     <span class="md-caption">(83% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
                 </div>
             </div>
@@ -139,7 +138,7 @@
                     {{'DASHBOARDS.SERVER.MEMORY' | translate}}
                 </h4>
                 <div flex>
-                    <md-progress-linear class="md-primary" md-mode="determinate" value="65"></md-progress-linear>
+                    <md-progress-linear class="md-accent" md-mode="determinate" value="65"></md-progress-linear>
                     <span class="md-caption">(65% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
                 </div>
             </div>
