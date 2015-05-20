@@ -33,6 +33,9 @@ $i : 0;
 .padding-normal {
   padding: 16px;
 }
+.padded-content-page {
+  padding: 16px 24px;
+}
 $i : 0;
 @while $i <= 200 {
   .padding-#{$i} {

@@ -28,22 +28,7 @@ angular.module('triAngularDashboards', [])
     .state('admin-panel.default.dashboard-widgets', {
         url: '/dashboards/widgets',
         templateUrl: 'app/dashboards/widgets.tmpl.html',
-    })
-
-    // remove these
-    .state('admin-panel.default.dashboard1', {
-        url: '/dashboard',
-        templateUrl: 'app/dashboards/dashboard1.html',
-        controller: 'DashboardController'
-    })
-    .state('admin-panel.default.dashboard2', {
-        url: '/dashboard2',
-        templateUrl: 'app/dashboards/dashboard2.tmpl.html',
-    })
-    .state('admin-panel.default.dashboard3', {
-        url: '/dashboard3',
-        templateUrl: 'app/dashboards/dashboard3.tmpl.html',
-    })
+    });
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({
