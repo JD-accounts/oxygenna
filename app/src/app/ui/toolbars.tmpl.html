@@ -1,0 +1,41 @@
+<div class="padded-content-page">
+    <p class="md-subhead">Triangular has many options to configure the look / feel of the top toolbar used in the admin panel pages.</p>
+
+    <p>These options can be configured differently for each route, that way different pages in your admin panel can have different toobars.</p>
+
+    <p>For example this current view is using the default toolbar, this requires no additional code adding to your route because it is the default</p>
+
+    <div layout="row">
+        <div flex layout="column">
+            <h3>{{'UI.TOOLBARS.SIZE' | translate}}</h3>
+            <md-select placeholder="{{'UI.TOOLBARS.SIZE_CHOOSE' | translate}}" ng-model="toolbarSize" ng-change="tryIt()">
+                <md-option ng-repeat="size in toolbarSizes" ng-value="size">{{size.name}}</md-option>
+            </md-select>
+        </div>
+        <div flex layout="column">
+            <h3>{{'UI.TOOLBARS.BACKGROUND' | translate}}</h3>
+            <md-switch ng-model="toolbarBackground" ng-true-value="'on'" ng-false-value="'off'" ng-change="tryIt()">
+                {{'UI.TOOLBARS.BACKGROUND_SHOW' | translate}}: {{toolbarBackground}}
+            </md-switch>
+        </div>
+        <div flex layout="column">
+            <h3>{{'UI.TOOLBARS.SHRINK' | translate}}</h3>
+            <md-switch ng-model="toolbarShrink" ng-true-value="'on'" ng-false-value="'off'" ng-change="tryIt(true)">
+                {{'UI.TOOLBARS.SHRINK_SHOW' | translate}}: {{toolbarShrink}}
+            </md-switch>
+        </div>
+    </div>
+
+    <p class="md-caption">Example Route Code</p>
+    <code class="ui-toolbar-code"><pre>
+    .state('admin-panel.default.toolbars-default', {
+        url: '/ui/toolbars/default',
+        templateUrl: 'app/ui/toolbar-default.tmpl.html',
+        data {
+            extraClass: '{{codeVariables.extraClass}}',
+            background: '{{codeVariables.background}}',
+            shrink: {{codeVariables.shrink}}
+        }
+    })</pre>
+    </code>
+</div>

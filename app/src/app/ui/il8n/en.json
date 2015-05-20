@@ -7,9 +7,18 @@
             "MATERIAL_ICONS": "Material Icons",
             "THEMES": "Themes",
             "TYPOGRAPHY": "Typography",
+            "TOOLBAR": "Toolbar",
             "THEME-TEST": "Sandbox"
         }
     },
     "UI": {
+        "TOOLBARS": {
+            "SIZE": "Size",
+            "SIZE_CHOOSE": "Choose a size",
+            "BACKGROUND": "Background",
+            "BACKGROUND_SHOW": "Show Background",
+            "SHRINK": "Scroll Shrink",
+            "SHRINK_SHOW": "Hide Toolbar On Scroll"
+        }
     }
 }

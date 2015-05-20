@@ -13,17 +13,13 @@
 angular.module('triAngular').
 controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, $mdUtil, $state, triTheme, APP) {
     $scope.triTheme = triTheme;
-    $scope.toolbarShrink = false;
+    $scope.toolbarShrink = undefined;
 
-    $scope.$on('$stateChangeSuccess', function() {
-        $scope.toolbarShrink = false;
-        // set content padding class
-        if($state.current.data !== undefined) {
-            if($state.current.data.toolbar !== undefined) {
-                if($state.current.data.toolbar.shrink === true) {
-                    $scope.toolbarShrink = true;
-                }
+    if($state.current.data !== undefined) {
+        if($state.current.data.toolbar !== undefined) {
+            if($state.current.data.toolbar.shrink === true) {
+                $scope.toolbarShrink = true;
             }
         }
-    });
+    }
 });
