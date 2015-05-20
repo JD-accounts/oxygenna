@@ -2,7 +2,7 @@
     <div layout="row" layout-margin>
         <widget calendar-widget flex class="widget-calendar" md-theme="blue-gray" content-padding>
             <div layout="row">
-                <h3 flex>{{currentDay | amDateFormat:'MMMM YYYY'}}</h3>
+                <h3 class="md-subhead" flex>{{currentDay | amDateFormat:'MMMM YYYY'}}</h3>
                 <md-button class="md-icon-button" ng-click="changeMonth('prev')">
                     <md-icon md-font-icon="icon-chevron-left"></md-icon>
                 </md-button>
