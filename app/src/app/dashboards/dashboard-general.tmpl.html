@@ -66,11 +66,13 @@
 
         <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" md-theme="blue">
             <md-list flex>
-                <md-list-item ng-repeat="chat in conversation" class="md-2-line" ng-class="chat.userClass">
+                <md-list-item ng-repeat="chat in conversation" class="md-2-line" ng-class="userClass($even)" ng-init="userColor = $even ? 'red' : 'blue'">
                     <img class="md-avatar" ng-src="{{chat.image}}" alt="{{chat.name}}">
                     <div class="md-list-item-text">
                         <h3>{{chat.name}}</h3>
-                        <p>{{chat.message}}</p>
+                        <p palette-background="{{userColor}}:300" ng-repeat="message in chat.messages">
+                           {{message}}
+                        </p>
                     </div>
                 </md-list-item>
             </md-list>
