@@ -119,6 +119,9 @@
 
 // Chat widget
 .widget-chat {
+  .user-left, .user-right {
+    max-width: 70%;
+  }
   .user-left {
     clear: both;
   }
