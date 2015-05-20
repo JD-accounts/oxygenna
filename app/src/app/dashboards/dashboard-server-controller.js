@@ -9,7 +9,7 @@
  *
  */
 angular.module('triAngularDashboards').
-controller('DashboardServerController', function ($scope, $timeout) {
+controller('DashboardServerController', function ($scope, $timeout, $mdToast) {
     $scope.disks = [{
         icon: 'icon-storage',
         name: 'Ubuntu 10.04 LTS Disk Image (10000 MB, ext3)',
@@ -35,6 +35,11 @@ controller('DashboardServerController', function ($scope, $timeout) {
     }];
 
     $timeout(function() {
-        console.log('timout')
+        $mdToast.show(
+            $mdToast.simple()
+            .content('Server CPU at 100%!')
+            .position('bottom right')
+            .hideDelay(3000)
+        );
     }, 5000)
 });
