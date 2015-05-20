@@ -27,7 +27,7 @@ angular.module('triAngular')
         link: function($scope, $element, attrs, $sideMenu) {
             // load a template for this directive based on the type ( link | dropdown )
             $scope.itemTemplate = 'components/side-menu/side-menu-' + $scope.item.type + '.tmpl.html';
-
+            $scope.item.url = $state.href($scope.item.state);
             /***
             * Menu Click Handlers
             ***/
@@ -52,8 +52,12 @@ angular.module('triAngular')
             * URL Change Handlers
             ***/
 
+            function isActive() {
+               return $state.includes($scope.item.state);
+            }
+
             // on first init check if we are the current menu item
-            if($state.includes($scope.item.state)) {
+            if(isActive()) {
                 openMenu();
             }
 
@@ -65,18 +69,18 @@ angular.module('triAngular')
             }
 
             // add a watch for when the url location changes
-            $scope.$on('$stateChangeSuccess', function(event, toState, toParams) {
+            $scope.$on('$locationChangeSuccess', function() {
                 // location has changed so update the menu
                 $scope.item.active = false;
                 $scope.item.open = false;
-                if($state.includes($scope.item.state)) {
+                if(isActive()) {
                     openMenu();
                 }
             });
 
             // adds an extra hue class if the item is active
             $scope.activeClass = function() {
-                return $scope.item.active ? 'md-hue-3' : '';
+                return isActive() ? 'md-hue-3' : '';
             };
 
             $scope.openLink = function() {

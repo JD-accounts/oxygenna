@@ -14,6 +14,7 @@ angular.module('triAngularUI').
 controller('ColorDialogController', function ($scope, name, palette, triTheme) {
     $scope.name = name;
     $scope.palette = [];
+    $scope.triTheme = triTheme;
 
     $scope.itemStyle = function(palette) {
         return {

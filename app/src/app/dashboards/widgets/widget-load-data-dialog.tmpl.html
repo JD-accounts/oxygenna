@@ -1,5 +1,5 @@
 <md-dialog>
-    <md-toolbar>
+    <md-toolbar md-theme="{{triTheme.getElementTheme('toolbarTheme')}}">
         <div class="md-toolbar-tools">
             <h2 flex>
                 <span>{{'DASHBOARDS.WIDGETS.FULLDATA' | translate}}</span>
@@ -9,7 +9,7 @@
             </md-button>
         </div>
     </md-toolbar>
-    <md-dialog-content class="sticky-container">
+    <md-dialog-content class="padding-default">
         <table class="table">
             <thead>
                 <tr>

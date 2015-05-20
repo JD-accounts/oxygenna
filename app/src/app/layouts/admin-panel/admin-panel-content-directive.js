@@ -20,8 +20,15 @@ angular.module('triAngular')
     return {
         restrict: 'A',
         link: function($scope, $element, attrs) {
+            $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState) {
+                var mdContentElement = $element.parent();
+                // scroll page to the top when content is loaded (stops pages keeping scroll position even when they have changed url)
+                mdContentElement.scrollTop(0);
+            });
+
             $scope.$on('$viewContentLoaded', function($event) {
                 var contentView = $element.find('#admin-panel-content-view');
+
                 // add footer to the content view
                 $templateRequest('components/footer/footer.tmpl.html')
                 .then(function(template) {
