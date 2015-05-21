@@ -28,6 +28,10 @@
   md-icon[md-font-icon] {
     color: inherit !important;
   }
+  a {
+    color: inherit;
+    border-bottom: 1px dashed;
+  }
   &.widget-overlay-title {
     .widget-title {
       position: absolute;
@@ -135,6 +139,7 @@
       p {
         padding: 5px 10px;
         position: relative;
+        font-weight: normal;
         &:not(:first-of-type) {
           margin-top: 8px;
           &:before {
@@ -144,8 +149,7 @@
         &:before {
           content: "";
           position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
+          top: 0;
           width: 0;
           height: 0;
           border-style: solid;
@@ -158,8 +162,8 @@
     clear: both;
     .md-list-item-text {
       p:before {
-        left: -5px;
-        border-width: 5px 5px 5px 0;
+        left: -8px;
+        border-width: 0px 8px 8px 0;
         border-right-color: inherit;
       }
     }
@@ -176,9 +180,9 @@
         text-align: right;
       }
       p:before {
-        right: -5px;
-        border-width: 5px 0 5px 5px;
-        border-left-color: inherit;
+        right: -8px;
+        border-width: 8px 8px 0px 0px;
+        border-top-color: inherit;
       }
     }
   }
