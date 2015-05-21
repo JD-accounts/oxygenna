@@ -54,36 +54,28 @@
     </div>
 
     <div layout="row" layout-margin>
-        <div layout="column" flex="50">
-            <md-card>
-                <img src="http://lorempixel.com/800/300/" class="md-card-image" alt="Card Image">
-                <md-card-content>
-                    <h2 class="md-title">Kangaroo Valley Safari</h2>
-                    <p>The titles of Washed Out's breakthrough song and the first single from Paracosm share</p>
-                </md-card-content>
-            </md-card>
-        </div>
+        <widget flex="60" title="It's all about Material" subtitle="We challenged ourselves to create a visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design."  title-position="bottom" >
+            <img src="http://4.bp.blogspot.com/-ci8zjNrp50I/U_yCxyehuzI/AAAAAAAADX4/uiAIDRcpUB4/s1600/ahagzjsozh.jpg" alt="">
 
-        <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" md-theme="blue">
-            <md-list flex>
-                <md-list-item ng-repeat="chat in conversation" class="md-2-line" ng-class="userClass($even)" ng-init="userColor = $even ? 'red' : 'blue'">
+        </widget>
+
+        <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" md-theme="blue" content-layout="column" content-layout-align="start">
+            <md-list flex class="overlay-5">
+                <md-list-item ng-repeat="chat in conversation" class="md-2-line" ng-class="userClass($even)" ng-init="userColor = $even ? 'cyan' : 'light-green'">
                     <img class="md-avatar" ng-src="{{chat.image}}" alt="{{chat.name}}">
                     <div class="md-list-item-text">
                         <h3>{{chat.name}}</h3>
-                        <p palette-background="{{userColor}}:300" ng-repeat="message in chat.messages">
+                        <p palette-background="{{userColor}}:200" ng-repeat="message in chat.messages">
                            {{message}}
                         </p>
                     </div>
                 </md-list-item>
             </md-list>
-            <md-button class="md-accent md-fab md-fab-bottom-right">
-                <md-icon md-font-icon="icon-reply"></md-icon>
-            </md-button>
         </widget>
     </div>
 
     <div layout="row" layout-margin>
-       <widget weather-widget="Sitia" flex="50" background-image="assets/images/dashboards/weather.jpg">
+       <widget weather-widget="Sitia" flex="40" background-image="assets/images/dashboards/weather.jpg">
             <div flex layout="column" layout-align="end center">
                 <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
                 <p class="md-display-4">{{weather.temp}}&deg;</p>
@@ -93,18 +85,25 @@
             </div>
         </widget>
 
-        <div layout="column">
-            <widget title="Twitter Feed" md-theme="blue" twitter-widget content-padding>
-                <div layout="column">
-                    <md-tabs md-selected="selectedTab" class="dashboard-no-bar-tabs" md-no-pagination md-no-bar md-dynamic-height>
+        <div layout="column" layout-margin>
+            <widget palette-background="cyan:500" twitter-widget>
+
+                <div layout="row" layout-align="space-between center" class="padding-normal">
+                    <i class="fa fa-twitter font-size-4 opacity-50"></i>
+                    <h3 flex class="md-subhead">Oxygenna's feed</h3>
+                    <div class="widget-buttons">
+                        <md-button class="md-icon-button" ng-click="prevTweet()"><md-icon md-font-icon="icon-keyboard-arrow-left"></md-icon></md-button>
+                        <md-button class="md-icon-button" ng-click="nextTweet()"><md-icon md-font-icon="icon-keyboard-arrow-right"></md-icon></md-button>
+                    </div>
+                </div>
+
+                <md-divider></md-divider>
+                <div layout="column" class="padding-normal">
+                    <md-tabs md-selected="selectedTab" class="dashboard-no-bar-tabs text-center" md-no-pagination md-no-bar md-dynamic-height>
                         <md-tab ng-repeat="tweet in tweets" label="tweet.id">
-                            <div ng-bind="tweet.body" linkify="twitter"></div>
+                            <div ng-bind="tweet.body" linkify="twitter" class="font-weight-300 font-size-2"></div>
                         </md-tab>
                     </md-tabs>
-                    <div layout="row" layout-align="center center">
-                        <md-button ng-click="prevTweet()"><md-icon md-font-icon="icon-keyboard-arrow-left"></md-icon></md-button>
-                        <md-button ng-click="nextTweet()"><md-icon md-font-icon="icon-keyboard-arrow-right"></md-icon></md-button>
-                    </div>
                 </div>
             </widget>
              <widget title="{{'DASHBOARDS.GENERAL.CONTACTS' | translate}}" contacts-widget>
