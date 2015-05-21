@@ -42,17 +42,19 @@ function SkinsProvider($mdThemingProvider, triThemingProvider) {
 
             // override the skin if cookie is enabled and has been set
             if(useSkinCookie) {
+                // we need to check cookies to see if skin has been saved so inject it
                 var $cookies;
                 angular.injector(['ngCookies']).invoke(['$cookies', function(cookies) {
                     $cookies = cookies;
                 }]);
+                // if we have a cookie set then override the currentSkin
                 if($cookies['triangular-skin'] !== undefined) {
                     var cookieTheme = angular.fromJson($cookies['triangular-skin']);
-
                     currentSkin = skins[cookieTheme.skin];
                 }
             }
-            console.log(currentSkin);
+
+            // make material load the themes needed for the skin
             currentSkin.loadThemes();
 
             return currentSkin;
@@ -74,7 +76,7 @@ function SkinsProvider($mdThemingProvider, triThemingProvider) {
 }
 
 function Skin(id, name, $mdThemingProvider, triThemingProvider) {
-    var THEMABLE_ELEMENTS = ['sidebar'];
+    var THEMABLE_ELEMENTS = ['sidebar', 'logo', 'toolbar', 'content'];
     var self = this;
     self.id = id;
     self.name = name;
@@ -83,22 +85,24 @@ function Skin(id, name, $mdThemingProvider, triThemingProvider) {
     THEMABLE_ELEMENTS.forEach(function(element) {
         self[element + 'Theme'] = function setElementTheme(themeName) {
             self.elements[element] = themeName;
-            return self
+            return self;
         };
     });
 
     self.loadThemes = function() {
+        // go through each element
         for (var element in self.elements) {
+            // register theme with mdThemingProvider (will load css in the header)
             var theme = triThemingProvider.theme(self.elements[element]);
 
             $mdThemingProvider.theme(theme.name)
-            .primaryPalette(theme.colors.primary.name)
-            .accentPalette(theme.colors.accent.name)
-            .warnPalette(theme.colors.warn.name);
-
+            .primaryPalette(theme.colors.primary.name, theme.colors.primary.hues)
+            .accentPalette(theme.colors.accent.name, theme.colors.accent.hues)
+            .warnPalette(theme.colors.warn.name), theme.colors.warn.hues;
         }
 
-    }
+        $mdThemingProvider.setDefaultTheme(self.elements.content);
+    };
 }
 
 function addSkinToScope($rootScope, triSkins) {

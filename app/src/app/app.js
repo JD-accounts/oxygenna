@@ -9,37 +9,15 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
 })
-.config(function (triThemingProvider, triSkinsProvider) {
-
-    triThemingProvider.theme('cyan')
-    .primaryPalette('cyan')
-    .accentPalette('pink')
-    .warnPalette('red');
-
-    triThemingProvider.theme('blue')
-    .primaryPalette('blue')
-    .accentPalette('pink')
-    .warnPalette('red');
-
-    triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
-    .sidebarTheme('cyan');
-
-    triSkinsProvider.skin('blue-bollocks', 'Blue Bollocks')
-    .sidebarTheme('blue');
-
-    // FOR DEMO PURPOSES ALLOW SKIN TO BE SAVED IN A COOKIE
-    // This overrides any skin set in a call to triSkinsProvider.setSkin if there is a cookie
-    // REMOVE LINE BELOW FOR PRODUCTION SITE
-    triSkinsProvider.useSkinCookie(true);
-
-    triSkinsProvider.setSkin('cyan-cloud');
-})
+/**
+ *  SETUP TRANSLATIONS
+ */
 .config(function ($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider) {
-    // SETUP TRANSLATIONS
-
-    // each module loads its own translation file - making it easier to create translations
-    // also translations are not loaded when they aren't needed
-    // each module will have a il8n folder that will contain its translations
+    /**
+     *  each module loads its own translation file - making it easier to create translations
+     *  also translations are not loaded when they aren't needed
+     *  each module will have a il8n folder that will contain its translations
+     */
     $translateProvider.useLoader('$translatePartialLoader', {
         urlTemplate: '{part}/il8n/{lang}.json'
     });
@@ -49,11 +27,13 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     // cache translation files to save load on server
     $translateProvider.useLoaderCache(true);
 
-    // try to detect the users language by checking the following
-    // navigator.language
-    // navigator.browserLanguage
-    // navigator.systemLanguage
-    // navigator.userLanguage
+    /**
+     *  try to detect the users language by checking the following
+     *      navigator.language
+     *      navigator.browserLanguage
+     *      navigator.systemLanguage
+     *      navigator.userLanguage
+     */
     $translateProvider
     .registerAvailableLanguageKeys(['en', 'el'], {
         'en_US': 'en',
@@ -67,7 +47,6 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 
     // setup public states & routes
     $stateProvider
-
     .state('admin-panel', {
         abstract: true,
         templateUrl: 'app/layouts/admin-panel/admin-panel.tmpl.html',
@@ -117,21 +96,13 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .setPrefix('triAngular')
     .setStorageType('sessionStorage');
 })
-.config(function ($mdThemingProvider, triThemeProvider) {
-    // demo only, comment out this line for better performance
-    $mdThemingProvider.alwaysWatchTheme(true);
-
-    // set the default themes for each of the themeable elements
-    triThemeProvider.setThemeableElements({
-        mainTheme: 'default',
-        logoTheme: 'default',
-        toolbarTheme: 'default',
-        sidebarTheme: 'default'
-    });
-
-    // store the selected theme data in a cookie
-    triThemeProvider.useThemeCookie(true);
-
+/**
+ *  PALETTES & THEMES & SKINS oh my.....
+ */
+.config(function ($mdThemingProvider, triThemingProvider, triSkinsProvider) {
+    /**
+     *  PALETTES
+     */
     $mdThemingProvider.definePalette('white', {
         '50': 'ffffff',
         '100': 'ffffff',
@@ -167,6 +138,61 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         'A700': 'ffffff',
         'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
     });
+
+    /**
+     *  SKINS
+     */
+
+    // CYAN SKIN
+    triThemingProvider.theme('cyan')
+    .primaryPalette('cyan')
+    .accentPalette('pink')
+    .warnPalette('red');
+
+    triThemingProvider.theme('white-cyan')
+    .primaryPalette('white')
+    .accentPalette('cyan', {
+      'default': '500'
+    })
+    .warnPalette('deep-orange');
+
+    triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
+    .sidebarTheme('cyan')
+    .toolbarTheme('white-cyan')
+    .logoTheme('white-cyan')
+    .contentTheme('cyan');
+
+    // BLUE SKIN
+    triThemingProvider.theme('blue')
+    .primaryPalette('blue')
+    .accentPalette('red')
+    .warnPalette('orange');
+
+    triThemingProvider.theme('white-blue')
+    .primaryPalette('white')
+    .accentPalette('blue', {
+      'default': '500'
+    })
+    .warnPalette('deep-orange');
+
+    triSkinsProvider.skin('blue-bollocks', 'Blue Bollocks')
+    .sidebarTheme('blue')
+    .toolbarTheme('white-blue')
+    .logoTheme('white-blue')
+    .contentTheme('blue');
+
+    /**
+     *  FOR DEMO PURPOSES ALLOW SKIN TO BE SAVED IN A COOKIE
+     *  This overrides any skin set in a call to triSkinsProvider.setSkin if there is a cookie
+     *  REMOVE LINE BELOW FOR PRODUCTION SITE
+     */
+    triSkinsProvider.useSkinCookie(true);
+
+    /**
+     *  SET DEFAULT SKIN
+     */
+    triSkinsProvider.setSkin('cyan-cloud');
+
 
 
     // Create some themes for the template
@@ -265,7 +291,6 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     //   'default': '500'
     // })
     // .warnPalette('deep-orange');
-
 })
 .config(['ChartJsProvider', function (ChartJsProvider) {
     // Configure all charts to use material design colors

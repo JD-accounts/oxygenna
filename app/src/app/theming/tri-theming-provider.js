@@ -49,7 +49,8 @@ function Theme(name) {
     THEME_COLOR_TYPES.forEach(function(colorType) {
         self[colorType + 'Palette'] = function setPaletteType(paletteName, hues) {
             self.colors[colorType] = {
-                name: paletteName
+                name: paletteName,
+                hues: {}
             };
             if(undefined !== hues) {
                 self.colors[colorType].hues = hues;
