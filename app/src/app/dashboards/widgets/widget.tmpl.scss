@@ -23,8 +23,10 @@
   &[layout="row"] {
     .widget-title {
       flex: 0 0 50%;
-
     }
+  }
+  md-icon[md-font-icon] {
+    color: inherit !important;
   }
   &.widget-overlay-title {
     .widget-title {
@@ -121,11 +123,63 @@
 .widget-chat {
   .user-left, .user-right {
     max-width: 70%;
+    .md-avatar {
+      margin-top: 16px !important;
+    }
+    .md-list-item-text {
+      padding-top: 0;
+      position: relative;
+      h3 {
+        font-size: 1.4rem;
+      }
+      p {
+        padding: 5px 10px;
+        position: relative;
+        &:not(:first-of-type) {
+          margin-top: 8px;
+          &:before {
+            display: none;
+          }
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-color: transparent;
+        }
+      }
+    }
   }
   .user-left {
     clear: both;
+    .md-list-item-text {
+      p:before {
+        left: -5px;
+        border-width: 5px 5px 5px 0;
+        border-right-color: inherit;
+      }
+    }
   }
   .user-right {
     float: right;
+    .md-avatar {
+      order: 2;
+      margin-right: 0;
+      margin-left: 16px;
+    }
+    .md-list-item-text {
+      h3 {
+        text-align: right;
+      }
+      p:before {
+        right: -5px;
+        border-width: 5px 0 5px 5px;
+        border-left-color: inherit;
+      }
+    }
   }
 }

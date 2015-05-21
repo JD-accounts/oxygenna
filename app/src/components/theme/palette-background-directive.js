@@ -26,6 +26,7 @@ angular.module('triAngular')
             if(color !== undefined) {
                 $element.css({
                     'background-color': triTheme.rgba(color.value),
+                    'border-color': triTheme.rgba(color.value),
                     'color': triTheme.rgba(color.contrast)
                 });
             }
