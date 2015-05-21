@@ -11,7 +11,7 @@
  * Handles icons element page
  */
 angular.module('triAngularElements').
-controller('MaterialIconsController', function ($scope, icons) {
+controller('MaterialIconsController', function ($scope, $mdDialog, icons) {
     $scope.icons = [];
     $scope.groups = [];
 
@@ -28,8 +28,15 @@ controller('MaterialIconsController', function ($scope, icons) {
         $scope.groups.push(groupName);
     });
 
-    $scope.selectIcon = function(icon) {
-        $scope.iconSource = '<md-icon md-font-icon="' + icon.className + '"></md-icon>';
+    $scope.selectIcon = function($event, icon) {
+        $mdDialog.show(
+            $mdDialog.alert()
+            .parent(angular.element(document.body))
+            .title("Here's the code for that icon")
+            .content('<md-icon md-font-icon="' + icon.className + '"></md-icon>')
+            .ok('Thanks')
+            .targetEvent($event)
+        );
     };
 
 });

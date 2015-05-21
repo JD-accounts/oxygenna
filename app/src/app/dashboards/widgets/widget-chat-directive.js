@@ -24,24 +24,24 @@ angular.module('triAngularDashboards')
             $scope.conversation = [{
                 name: 'Morris Onions',
                 image: 'assets/images/avatars/avatar-3.png',
-                message: 'Hi there how are you?',
-                userClass: 'user-left'
+                messages: ['Hi there how are you?', 'Hello?'],
             },{
                 name: 'Danny Ings',
                 image: 'assets/images/avatars/avatar-5.png',
-                message: 'Howsitgowin?',
-                userClass: 'user-right'
+                messages: ['Howsitgowin?'],
             },{
                 name: 'Morris Onions',
                 image: 'assets/images/avatars/avatar-3.png',
-                message: 'We need thos images ASAP!',
-                userClass: 'user-left'
+                messages: ['We need those images ASAP!', 'Client asked about them.'],
             },{
                 name: 'Danny Ings',
                 image: 'assets/images/avatars/avatar-5.png',
-                message: 'Me John big tree.',
-                userClass: 'user-right'
+                messages: ['OK, will send them over'],
             }];
+
+            $scope.userClass = function($even) {
+                return $even ? 'user-left' : 'user-right';
+            };
         }
     };
 });

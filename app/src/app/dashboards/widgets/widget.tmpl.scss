@@ -88,6 +88,9 @@
 
 // Calendar widget
 .widget-calendar {
+  .fc-ltr .fc-basic-view .fc-day-number {
+    text-align: center;
+  }
   .fc-month-view {
     tbody .fc-row {
       min-height: 1em;
@@ -96,13 +99,31 @@
     td, th {
       border: none;
     }
+    th {
+      font-weight: 500;
+    }
+  }
+  .fc-day-number.fc-other-month {
+    opacity: 0.5;
+  }
+  .fc-widget-header {
+    margin-bottom: 20px;
+  }
+  .fc-widget-content td {
+    font-size: 1.3rem;
+  }
+  .fc-today {
+    background: rgba(100, 100, 100, .07);
   }
 }
 
 // Chat widget
 .widget-chat {
+  .user-left, .user-right {
+    max-width: 70%;
+  }
   .user-left {
-
+    clear: both;
   }
   .user-right {
     float: right;
