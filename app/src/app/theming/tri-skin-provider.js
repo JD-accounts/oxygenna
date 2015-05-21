@@ -16,6 +16,32 @@ angular.module('triAngular')
     var currentSkin = null;
     var useSkinCookie = false;
 
+    function Skin(id, name, $mdThemingProvider, triThemingProvider) {
+        var THEMABLE_ELEMENTS = ['sidebar'];
+        var self = this;
+        self.id = id;
+        self.name = name;
+        self.elements = {};
+
+        THEMABLE_ELEMENTS.forEach(function(element) {
+            self[element + 'Theme'] = function setElementTheme(themeName) {
+                self.elements[element] = themeName;
+                return self
+            };
+        });
+
+        self.loadThemes = function() {
+            for (var element in self.elements) {
+                var theme = triThemingProvider.theme(self.elements[element]);
+
+                $mdThemingProvider.theme(theme.name)
+                .primaryPalette(theme.colors.primary.name)
+                .accentPalette(theme.colors.accent.name)
+                .warnPalette(theme.colors.warn.name);
+            }
+        }
+    }
+
     return {
         skin: function(id, name) {
             if(skins[id] !== undefined ) {
@@ -73,28 +99,3 @@ angular.module('triAngular')
     $rootScope.triSkin = triSkins.getCurrent();
 });
 
-function Skin(id, name, $mdThemingProvider, triThemingProvider) {
-    var THEMABLE_ELEMENTS = ['sidebar'];
-    var self = this;
-    self.id = id;
-    self.name = name;
-    self.elements = {};
-
-    THEMABLE_ELEMENTS.forEach(function(element) {
-        self[element + 'Theme'] = function setElementTheme(themeName) {
-            self.elements[element] = themeName;
-            return self
-        };
-    });
-
-    self.loadThemes = function() {
-        for (var element in self.elements) {
-            var theme = triThemingProvider.theme(self.elements[element]);
-
-            $mdThemingProvider.theme(theme.name)
-            .primaryPalette(theme.colors.primary.name)
-            .accentPalette(theme.colors.accent.name)
-            .warnPalette(theme.colors.warn.name);
-        }
-    }
-}
