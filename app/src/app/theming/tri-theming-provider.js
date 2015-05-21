@@ -58,4 +58,9 @@ function Theme(name) {
             return self;
         };
     });
+
+    self.dark = function(isDark) {
+        // default setting when dark() is called is true
+        self.isDark = isDark === undefined ? true : isDark;
+    };
 }
