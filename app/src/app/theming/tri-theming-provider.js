@@ -11,28 +11,10 @@
  * Wrapper for material themes
  */
 angular.module('triAngular')
-.provider('triTheming', function() {
+.provider('triTheming', ThemingProvider);
+
+function ThemingProvider() {
     var themes = {};
-
-    function Theme(name) {
-        var THEME_COLOR_TYPES = ['primary', 'accent', 'warn', 'background'];
-        var self = this;
-        self.name = name;
-        self.colors = {};
-        self.isDark = false;
-
-        THEME_COLOR_TYPES.forEach(function(colorType) {
-            self[colorType + 'Palette'] = function setPaletteType(paletteName, hues) {
-                self.colors[colorType] = {
-                    name: paletteName
-                };
-                if(undefined !== hues) {
-                    self.colors[colorType].hues = hues;
-                }
-                return self;
-            };
-        });
-    }
 
     return {
         theme: function(name) {
@@ -55,4 +37,24 @@ angular.module('triAngular')
             };
         }
     };
-});
+}
+
+function Theme(name) {
+    var THEME_COLOR_TYPES = ['primary', 'accent', 'warn', 'background'];
+    var self = this;
+    self.name = name;
+    self.colors = {};
+    self.isDark = false;
+
+    THEME_COLOR_TYPES.forEach(function(colorType) {
+        self[colorType + 'Palette'] = function setPaletteType(paletteName, hues) {
+            self.colors[colorType] = {
+                name: paletteName
+            };
+            if(undefined !== hues) {
+                self.colors[colorType].hues = hues;
+            }
+            return self;
+        };
+    });
+}

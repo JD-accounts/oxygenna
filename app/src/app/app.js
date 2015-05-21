@@ -9,7 +9,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
 })
-.config(function(triThemingProvider, triSkinsProvider) {
+.config(function (triThemingProvider, triSkinsProvider) {
 
     triThemingProvider.theme('cyan')
     .primaryPalette('cyan')

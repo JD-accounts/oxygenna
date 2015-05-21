@@ -11,36 +11,13 @@
  * Wrapper for material themes
  */
 angular.module('triAngular')
-.provider('triSkins', function($mdThemingProvider, triThemingProvider) {
+.provider('triSkins', SkinsProvider)
+.run(addSkinToScope);
+
+function SkinsProvider($mdThemingProvider, triThemingProvider) {
     var skins = {};
     var currentSkin = null;
     var useSkinCookie = false;
-
-    function Skin(id, name, $mdThemingProvider, triThemingProvider) {
-        var THEMABLE_ELEMENTS = ['sidebar'];
-        var self = this;
-        self.id = id;
-        self.name = name;
-        self.elements = {};
-
-        THEMABLE_ELEMENTS.forEach(function(element) {
-            self[element + 'Theme'] = function setElementTheme(themeName) {
-                self.elements[element] = themeName;
-                return self
-            };
-        });
-
-        self.loadThemes = function() {
-            for (var element in self.elements) {
-                var theme = triThemingProvider.theme(self.elements[element]);
-
-                $mdThemingProvider.theme(theme.name)
-                .primaryPalette(theme.colors.primary.name)
-                .accentPalette(theme.colors.accent.name)
-                .warnPalette(theme.colors.warn.name);
-            }
-        }
-    }
 
     return {
         skin: function(id, name) {
@@ -66,9 +43,9 @@ angular.module('triAngular')
             // override the skin if cookie is enabled and has been set
             if(useSkinCookie) {
                 var $cookies;
-                angular.injector(['ngCookies']).invoke(function(_$cookies_) {
-                    $cookies = _$cookies_;
-                });
+                angular.injector(['ngCookies']).invoke(['$cookies', function(cookies) {
+                    $cookies = cookies;
+                }]);
                 if($cookies['triangular-skin'] !== undefined) {
                     var cookieTheme = angular.fromJson($cookies['triangular-skin']);
 
@@ -94,8 +71,36 @@ angular.module('triAngular')
             };
         }
     };
-})
-.run(function($rootScope, triSkins) {
-    $rootScope.triSkin = triSkins.getCurrent();
-});
+}
 
+function Skin(id, name, $mdThemingProvider, triThemingProvider) {
+    var THEMABLE_ELEMENTS = ['sidebar'];
+    var self = this;
+    self.id = id;
+    self.name = name;
+    self.elements = {};
+
+    THEMABLE_ELEMENTS.forEach(function(element) {
+        self[element + 'Theme'] = function setElementTheme(themeName) {
+            self.elements[element] = themeName;
+            return self
+        };
+    });
+
+    self.loadThemes = function() {
+        for (var element in self.elements) {
+            var theme = triThemingProvider.theme(self.elements[element]);
+
+            $mdThemingProvider.theme(theme.name)
+            .primaryPalette(theme.colors.primary.name)
+            .accentPalette(theme.colors.accent.name)
+            .warnPalette(theme.colors.warn.name);
+
+        }
+
+    }
+}
+
+function addSkinToScope($rootScope, triSkins) {
+    $rootScope.triSkin = triSkins.getCurrent();
+}
