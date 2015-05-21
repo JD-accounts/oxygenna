@@ -33,6 +33,9 @@ angular.module('triAngularDashboards')
             },{
                 name: 'Upload files',
                 done: false
+            },{
+                name: 'Call Mike',
+                done: false
             }]
         }
     };

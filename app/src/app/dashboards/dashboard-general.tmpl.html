@@ -25,10 +25,8 @@
             </div>
         </widget>
         <div layout="column" flex layout-margin>
-            <widget md-theme="green" content-layout="column">
-                <div flex layout="row" layout-align="start center" layout-padding>
-                    <h2 class="md-display-3 font-weight-100">Call Sue</h2>
-                </div>
+            <widget palette-background="deep-orange:500" md-theme="cyan" content-layout="column" content-layout-align="start space-between">
+                <h2 class="md-display-2 font-weight-100 margin-0" flex layout-padding>Call Sue</h2>
                 <md-divider></md-divider>
                 <div flex layout="row" layout-align="space-between center" layout-padding>
                     <span>Monday 1st March</span>
@@ -37,13 +35,18 @@
                     </md-button>
                 </div>
             </widget>
-            <widget md-theme="default" content-layout="column">
-                <div flex layout="row" layout-align="start center" layout-padding>
-                    <h2 class="md-display-2 font-weight-100">Clean Desk</h2>
+            <widget palette-background="purple:300" md-theme="cyan" content-layout="column" content-layout-align="start space-between">
+                <h2 class="md-display-2 font-weight-100 margin-0" flex layout-padding>Clean Desk</h2>
+                <md-divider></md-divider>
+                <div flex layout="row" layout-align="space-between center" layout-padding>
+                    <span>Tuesday 2st March</span>
+                    <md-button class="md-icon-button">
+                        <md-icon md-font-icon="icon-event"></md-icon>
+                    </md-button>
                 </div>
             </widget>
         </div>
-        <widget todo-widget class="dashboard-todo-widget" title="Todo List" subtitle="Your current todo list" md-theme="blue" title-position="top" content-align="center start" content-padding>
+        <widget todo-widget class="dashboard-todo-widget" palette-background="light-blue:600" title="Todo List" subtitle="Your current todo list" md-theme="cyan" title-position="top" content-align="center start" content-padding>
             <md-list flex class="padding-left-0">
                 <md-list-item ng-repeat="todo in todos">
                     <md-checkbox ng-model="todo.done"></md-checkbox>
@@ -98,10 +101,10 @@
                 </div>
 
                 <md-divider></md-divider>
-                <div layout="column" class="padding-normal">
+                <div layout="column" class="padding-40">
                     <md-tabs md-selected="selectedTab" class="dashboard-no-bar-tabs text-center" md-no-pagination md-no-bar md-dynamic-height>
                         <md-tab ng-repeat="tweet in tweets" label="tweet.id">
-                            <div ng-bind="tweet.body" linkify="twitter" class="font-weight-300 font-size-2"></div>
+                            <div ng-bind="tweet.body" linkify="twitter" class="font-weight-300 font-size-2 font-style-italic"></div>
                         </md-tab>
                     </md-tabs>
                 </div>
