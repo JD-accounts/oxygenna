@@ -86,7 +86,7 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
     })
 
     .state('admin-panel.default.ui-skins', {
-        url: '/ui/skins/:skin',
+        url: '/ui/skins',
         controller: 'SkinsUIController',
         templateUrl: 'app/ui/skins.tmpl.html'
     })
@@ -155,9 +155,6 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
             name: 'MENU.UI.SKINS',
             state: 'admin-panel.default.ui-skins',
             type: 'link',
-            params: {
-                skin: 'current'
-            }
         },{
             name: 'MENU.UI.THEMES',
             state: 'admin-panel.default.ui-themes',
