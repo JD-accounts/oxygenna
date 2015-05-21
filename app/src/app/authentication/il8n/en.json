@@ -81,5 +81,40 @@
             "LOGIN_NOW": "Login",
             "NO_RESET": "Could not reset users password"
         }
-   }
+    },
+    "PROFILE": {
+        "TITLE": "Profile",
+        "NAME": {
+            "LABEL": "name",
+            "PLEASE_ENTER": "Please enter your name"
+        },
+        "EMAIL": {
+            "LABEL": "email",
+            "PLEASE_ENTER": "Please enter your email address",
+            "PLEASE_VALID": "Please enter a valid email address"
+        },
+        "LOCATION": {
+            "LABEL": "location"
+        },
+        "WEBSITE": {
+            "LABEL": "website"
+        },
+        "BIO": {
+            "LABEL": "bio"
+        },
+        "TWITTER": {
+            "LABEL": "twitter"
+        },
+        "PASSWORD": {
+            "LABEL": "new password",
+            "CURRENT": "current",
+            "PLEASE_ENTER": "Please enter a password",
+            "MIN_LENGTH": "Your password must be greater than 8 characters long",
+            "SAME_PASSWORD": "You need to enter the same password"
+        },
+        "PASSWORD_CONFIRM": {
+            "LABEL": "confirm password"
+        },
+        "BUTTON": "Update Settings"
+    }
 }

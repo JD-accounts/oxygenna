@@ -8,17 +8,29 @@
             "THEMES": "Themes",
             "TYPOGRAPHY": "Typography",
             "TOOLBAR": "Toolbar",
-            "THEME-TEST": "Sandbox"
+            "THEME-TEST": "Sandbox",
+            "SKINS": "Skins"
         }
     },
     "UI": {
         "TOOLBARS": {
             "SIZE": "Size",
             "SIZE_CHOOSE": "Choose a size",
+            "SIZE_SHOW": "Change the size of the admin panel top toolbar",
             "BACKGROUND": "Background",
-            "BACKGROUND_SHOW": "Show Background",
+            "BACKGROUND_SHOW": "Use image background on toolbar",
             "SHRINK": "Scroll Shrink",
-            "SHRINK_SHOW": "Hide Toolbar On Scroll"
+            "SHRINK_SHOW": "Hide toolbar on scroll"
+        },
+        "SKINS": {
+            "ELEMENTS": {
+                "LOGO": "Logo",
+                "SIDEBAR": "Sidebar",
+                "CONTENT": "Content",
+                "TOOLBAR": "Toolbar"
+            },
+            "SKIN_CHOOSE": "Choose a skin",
+            "SKIN_TRY": "Try It"
         }
     }
 }

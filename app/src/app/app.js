@@ -9,6 +9,31 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
 })
+.config(function(triThemingProvider, triSkinsProvider) {
+
+    triThemingProvider.theme('cyan')
+    .primaryPalette('cyan')
+    .accentPalette('pink')
+    .warnPalette('red');
+
+    triThemingProvider.theme('blue')
+    .primaryPalette('blue')
+    .accentPalette('pink')
+    .warnPalette('red');
+
+    triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
+    .sidebarTheme('cyan');
+
+    triSkinsProvider.skin('blue-bollocks', 'Blue Bollocks')
+    .sidebarTheme('blue');
+
+    // FOR DEMO PURPOSES ALLOW SKIN TO BE SAVED IN A COOKIE
+    // This overrides any skin set in a call to triSkinsProvider.setSkin if there is a cookie
+    // REMOVE LINE BELOW FOR PRODUCTION SITE
+    triSkinsProvider.useSkinCookie(true);
+
+    triSkinsProvider.setSkin('cyan-cloud');
+})
 .config(function ($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider) {
     // SETUP TRANSLATIONS
 
@@ -145,101 +170,101 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 
 
     // Create some themes for the template
-    $mdThemingProvider.theme('default')
-    .primaryPalette('indigo')
-    .accentPalette('pink')
-    .warnPalette('red');
+    // $mdThemingProvider.theme('default')
+    // .primaryPalette('indigo')
+    // .accentPalette('pink')
+    // .warnPalette('red');
 
-    $mdThemingProvider.theme('amber')
-    .primaryPalette('amber')
-    .accentPalette('red')
-    .warnPalette('orange');
+    // $mdThemingProvider.theme('amber')
+    // .primaryPalette('amber')
+    // .accentPalette('red')
+    // .warnPalette('orange');
 
-    $mdThemingProvider.theme('blue')
-    .primaryPalette('blue')
-    .accentPalette('red')
-    .warnPalette('orange');
+    // $mdThemingProvider.theme('blue')
+    // .primaryPalette('blue')
+    // .accentPalette('red')
+    // .warnPalette('orange');
 
-    $mdThemingProvider.theme('green')
-    .primaryPalette('green')
-    .accentPalette('amber')
-    .warnPalette('deep-orange');
+    // $mdThemingProvider.theme('green')
+    // .primaryPalette('green')
+    // .accentPalette('amber')
+    // .warnPalette('deep-orange');
 
-    $mdThemingProvider.theme('red')
-    .primaryPalette('red')
-    .accentPalette('amber')
-    .warnPalette('purple');
+    // $mdThemingProvider.theme('red')
+    // .primaryPalette('red')
+    // .accentPalette('amber')
+    // .warnPalette('purple');
 
-    $mdThemingProvider.theme('pink')
-    .primaryPalette('pink')
-    .accentPalette('deep-purple')
-    .warnPalette('amber');
+    // $mdThemingProvider.theme('pink')
+    // .primaryPalette('pink')
+    // .accentPalette('deep-purple')
+    // .warnPalette('amber');
 
-    $mdThemingProvider.theme('purple')
-    .primaryPalette('purple')
-    .accentPalette('deep-orange')
-    .warnPalette('amber');
+    // $mdThemingProvider.theme('purple')
+    // .primaryPalette('purple')
+    // .accentPalette('deep-orange')
+    // .warnPalette('amber');
 
-    $mdThemingProvider.theme('cyan')
-    .primaryPalette('cyan')
-    .accentPalette('amber')
-    .warnPalette('deep-orange');
+    // $mdThemingProvider.theme('cyan')
+    // .primaryPalette('cyan')
+    // .accentPalette('amber')
+    // .warnPalette('deep-orange');
 
-    $mdThemingProvider.theme('teal')
-    .primaryPalette('teal')
-    .accentPalette('red')
-    .warnPalette('orange');
+    // $mdThemingProvider.theme('teal')
+    // .primaryPalette('teal')
+    // .accentPalette('red')
+    // .warnPalette('orange');
 
-    $mdThemingProvider.theme('orange')
-    .primaryPalette('orange')
-    .accentPalette('lime')
-    .warnPalette('amber')
+    // $mdThemingProvider.theme('orange')
+    // .primaryPalette('orange')
+    // .accentPalette('lime')
+    // .warnPalette('amber')
 
-    $mdThemingProvider.theme('deep-orange')
-    .primaryPalette('deep-orange')
-    .accentPalette('lime')
-    .warnPalette('amber')
+    // $mdThemingProvider.theme('deep-orange')
+    // .primaryPalette('deep-orange')
+    // .accentPalette('lime')
+    // .warnPalette('amber')
 
-    $mdThemingProvider.theme('blue-grey')
-    .primaryPalette('blue-grey')
-    .accentPalette('red')
-    .warnPalette('orange')
-    .backgroundPalette('grey');
+    // $mdThemingProvider.theme('blue-grey')
+    // .primaryPalette('blue-grey')
+    // .accentPalette('red')
+    // .warnPalette('orange')
+    // .backgroundPalette('grey');
 
-    $mdThemingProvider.theme('dark')
-    .primaryPalette('black')
-    .accentPalette('amber')
-    .warnPalette('deep-orange')
-    .backgroundPalette('black')
-    .dark();
+    // $mdThemingProvider.theme('dark')
+    // .primaryPalette('black')
+    // .accentPalette('amber')
+    // .warnPalette('deep-orange')
+    // .backgroundPalette('black')
+    // .dark();
 
-    $mdThemingProvider.theme('white-red')
-    .primaryPalette('white')
-    .accentPalette('red', {
-      'default': '500'
-    })
-    .warnPalette('orange');
+    // $mdThemingProvider.theme('white-red')
+    // .primaryPalette('white')
+    // .accentPalette('red', {
+    //   'default': '500'
+    // })
+    // .warnPalette('orange');
 
-    $mdThemingProvider.theme('white-blue')
-    .primaryPalette('white')
-    .accentPalette('blue', {
-      'default': '500'
-    })
-    .warnPalette('deep-orange');
+    // $mdThemingProvider.theme('white-blue')
+    // .primaryPalette('white')
+    // .accentPalette('blue', {
+    //   'default': '500'
+    // })
+    // .warnPalette('deep-orange');
 
-    $mdThemingProvider.theme('white-cyan')
-    .primaryPalette('white')
-    .accentPalette('cyan', {
-      'default': '500'
-    })
-    .warnPalette('deep-orange');
+    // $mdThemingProvider.theme('white-cyan')
+    // .primaryPalette('white')
+    // .accentPalette('cyan', {
+    //   'default': '500'
+    // })
+    // .warnPalette('deep-orange');
 
-    $mdThemingProvider.theme('white-green')
-    .primaryPalette('white')
-    .accentPalette('green', {
-      'default': '500'
-    })
-    .warnPalette('deep-orange');
+    // $mdThemingProvider.theme('white-green')
+    // .primaryPalette('white')
+    // .accentPalette('green', {
+    //   'default': '500'
+    // })
+    // .warnPalette('deep-orange');
 
 })
 .config(['ChartJsProvider', function (ChartJsProvider) {
