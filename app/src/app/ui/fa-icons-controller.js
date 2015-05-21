@@ -11,7 +11,7 @@
  * Handles icons element page
  */
 angular.module('triAngularElements').
-controller('FaIconsController', function ($scope, icons) {
+controller('FaIconsController', function ($scope, $mdDialog, icons) {
     $scope.icons = loadIcons();
 
     function loadIcons() {
@@ -27,7 +27,14 @@ controller('FaIconsController', function ($scope, icons) {
 
     $scope.iconSource = 'Select icon below to see HTML';
 
-    $scope.selectIcon = function(icon) {
-        $scope.iconSource = '<md-icon md-font-icon="' + icon.className + '"></md-icon>';
+    $scope.selectIcon = function($event, icon) {
+        $mdDialog.show(
+            $mdDialog.alert()
+            .parent(angular.element(document.body))
+            .title("Here's the code for that icon")
+            .content('<md-icon md-font-icon="' + icon.className + '"></md-icon>')
+            .ok('Thanks')
+            .targetEvent($event)
+        );
     };
 });
