@@ -1,0 +1,31 @@
+<div class="padded-content-page">
+    <p>Triangular allows you to change the look of various parts of the template themes.</p>
+
+    <p>We have created several cool looking skins for you to use.  But of course you can always <strong>roll your own!</strong></p>
+
+    <div layout="column">
+        <div layout="row">
+            <div flex="30">
+                {{'UI.SKINS.ELEMENTS.LOGO' | translate}}
+            </div>
+            <div flex="70">
+                {{'UI.SKINS.ELEMENTS.TOOLBAR' | translate}}
+            </div>
+        </div>
+        <div layout="row">
+            <div flex="30">
+                {{'UI.SKINS.ELEMENTS.SIDEBAR' | translate}}
+            </div>
+            <div flex="70">
+                {{'UI.SKINS.ELEMENTS.CONTENT' | translate}}
+            </div>
+        </div>
+    </div>
+
+    <div layout="row" layout="center center">
+        <md-select placeholder="{{'UI.SKINS.SKIN_CHOOSE' | translate}}" ng-model="selectedSkin" ng-change="updatePreview()">
+            <md-option ng-repeat="skin in skins" ng-value="skin">{{skin.name}}</md-option>
+        </md-select>
+        <md-button class="md-primary md-raised" ng-click="trySkin()">{{'UI.SKINS.SKIN_TRY' | translate}}</md-button>
+    </div>
+</div>
