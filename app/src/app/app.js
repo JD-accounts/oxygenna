@@ -9,31 +9,31 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
 })
-// .config(function(triThemingProvider, triSkinsProvider) {
+.config(function(triThemingProvider, triSkinsProvider) {
 
-//     triThemingProvider.theme('cyan')
-//     .primaryPalette('cyan')
-//     .accentPalette('pink')
-//     .warnPalette('red');
+    triThemingProvider.theme('cyan')
+    .primaryPalette('cyan')
+    .accentPalette('pink')
+    .warnPalette('red');
 
-//     triThemingProvider.theme('blue')
-//     .primaryPalette('blue')
-//     .accentPalette('pink')
-//     .warnPalette('red');
+    triThemingProvider.theme('blue')
+    .primaryPalette('blue')
+    .accentPalette('pink')
+    .warnPalette('red');
 
-//     triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
-//     .sidebarTheme('cyan');
+    triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
+    .sidebarTheme('cyan');
 
-//     triSkinsProvider.skin('blue-bollocks', 'Blue Bollocks')
-//     .sidebarTheme('blue');
+    triSkinsProvider.skin('blue-bollocks', 'Blue Bollocks')
+    .sidebarTheme('blue');
 
-//     // FOR DEMO PURPOSES ALLOW SKIN TO BE SAVED IN A COOKIE
-//     // This overrides any skin set in a call to triSkinsProvider.setSkin if there is a cookie
-//     // REMOVE LINE BELOW FOR PRODUCTION SITE
-//     triSkinsProvider.useSkinCookie(true);
+    // FOR DEMO PURPOSES ALLOW SKIN TO BE SAVED IN A COOKIE
+    // This overrides any skin set in a call to triSkinsProvider.setSkin if there is a cookie
+    // REMOVE LINE BELOW FOR PRODUCTION SITE
+    triSkinsProvider.useSkinCookie(true);
 
-//     triSkinsProvider.setSkin('cyan-cloud');
-// })
+    triSkinsProvider.setSkin('cyan-cloud');
+})
 .config(function ($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider) {
     // SETUP TRANSLATIONS
 
