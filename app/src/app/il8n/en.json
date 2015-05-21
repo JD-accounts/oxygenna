@@ -5,7 +5,8 @@
             "LOGIN": "Login",
             "SIGN_UP": "Sign Up",
             "FORGOT": "Forgot Password",
-            "LOCK": "Lock Page"
+            "LOCK": "Lock Page",
+            "PROFILE": "Profile"
         },
         "DASHBOARDS": {
             "DASHBOARDS": "Dashboards",

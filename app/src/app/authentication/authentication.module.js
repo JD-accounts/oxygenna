@@ -35,6 +35,11 @@ angular.module('triAngularAuthentication', ['ui.gravatar'])
         url: '/forgot',
         templateUrl: 'app/authentication/forgot/forgot.tmpl.html',
         controller: 'ForgotController'
+    })
+    .state('admin-panel.default.profile', {
+        url: '/profile',
+        templateUrl: 'app/authentication/profile/profile.tmpl.html',
+        controller: 'ProfileController'
     });
 })
 .run(function(SideMenu) {
@@ -58,6 +63,10 @@ angular.module('triAngularAuthentication', ['ui.gravatar'])
         },{
             name: 'MENU.AUTH.LOCK',
             state: 'authentication.lock',
+            type: 'link',
+        },{
+            name: 'MENU.AUTH.PROFILE',
+            state: 'admin-panel.default.profile',
             type: 'link',
         }]
     });
