@@ -11,8 +11,7 @@
  * Handles the admin view
  */
 angular.module('triAngular').
-controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, $mdUtil, $state, triTheme, APP) {
-    $scope.triTheme = triTheme;
+controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, $mdUtil, $state) {
     $scope.toolbarShrink = undefined;
 
     if($state.current.data !== undefined) {
