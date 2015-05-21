@@ -11,9 +11,7 @@
  * Wrapper for material themes
  */
 angular.module('triAngular')
-.provider('triTheming', ThemingProvider);
-
-function ThemingProvider() {
+.provider('triTheming', function() {
     var themes = {};
 
     return {
@@ -37,7 +35,7 @@ function ThemingProvider() {
             };
         }
     };
-}
+});
 
 function Theme(name) {
     var THEME_COLOR_TYPES = ['primary', 'accent', 'warn', 'background'];

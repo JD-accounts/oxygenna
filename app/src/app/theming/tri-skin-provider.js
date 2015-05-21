@@ -11,10 +11,7 @@
  * Wrapper for material themes
  */
 angular.module('triAngular')
-.provider('triSkins', SkinsProvider)
-.run(addSkinToScope);
-
-function SkinsProvider($mdThemingProvider, triThemingProvider) {
+.provider('triSkins', function($mdThemingProvider, triThemingProvider) {
     var skins = {};
     var currentSkin = null;
     var useSkinCookie = false;
@@ -71,7 +68,10 @@ function SkinsProvider($mdThemingProvider, triThemingProvider) {
             };
         }
     };
-}
+})
+.run(function($rootScope, triSkins) {
+    $rootScope.triSkin = triSkins.getCurrent();
+});
 
 function Skin(id, name, $mdThemingProvider, triThemingProvider) {
     var THEMABLE_ELEMENTS = ['sidebar'];
@@ -95,12 +95,6 @@ function Skin(id, name, $mdThemingProvider, triThemingProvider) {
             .primaryPalette(theme.colors.primary.name)
             .accentPalette(theme.colors.accent.name)
             .warnPalette(theme.colors.warn.name);
-
         }
-
     }
-}
-
-function addSkinToScope($rootScope, triSkins) {
-    $rootScope.triSkin = triSkins.getCurrent();
 }
