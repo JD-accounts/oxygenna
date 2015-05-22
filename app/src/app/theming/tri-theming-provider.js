@@ -46,7 +46,6 @@ function ThemingProvider($mdThemingProvider) {
                     return $mdThemingProvider._PALETTES[name];
                 },
                 getPaletteColor: function(paletteName, hue) {
-                    console.log(paletteName, hue, $mdThemingProvider._PALETTES)
                     if(undefined !== $mdThemingProvider._PALETTES[paletteName] && undefined !== $mdThemingProvider._PALETTES[paletteName][hue]) {
                         return $mdThemingProvider._PALETTES[paletteName][hue];
                     }
