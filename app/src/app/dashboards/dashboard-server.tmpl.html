@@ -68,12 +68,12 @@
     </div>
 
     <div layout="row" layout-sm="column" layout-margin>
-        <widget flex title="{{'DASHBOARDS.SERVER.DISKS' | translate}}">
+        <widget flex="50" flex-sm="100" title="{{'DASHBOARDS.SERVER.DISKS' | translate}}">
             <md-divider></md-divider>
             <md-list>
                 <md-list-item ng-repeat="disk in disks">
                     <md-icon md-font-icon="{{disk.icon}}" class="md-primary"></md-icon>
-                    <p class="text-ellipsis">{{disk.name}}</p>
+                    <p class="text-ellipsis padding-left-50">{{disk.name}}</p>
                     <md-switch class="md-secondary" ng-model="disk.enabled"></md-switch>
                     <md-divider ng-hide="$last"></md-divider>
                 </md-list-item>
