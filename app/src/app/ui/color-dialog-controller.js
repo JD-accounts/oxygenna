@@ -11,15 +11,14 @@
  * Handles the colors popup dialog
  */
 angular.module('triAngularUI').
-controller('ColorDialogController', function ($scope, name, palette, triTheme) {
+controller('ColorDialogController', function ($scope, name, palette, triTheming) {
     $scope.name = name;
     $scope.palette = [];
-    $scope.triTheme = triTheme;
 
     $scope.itemStyle = function(palette) {
         return {
-            'background-color': triTheme.rgba(palette.value),
-            'color': triTheme.rgba(palette.contrast)
+            'background-color': triTheming.rgba(palette.value),
+            'color': triTheming.rgba(palette.contrast)
         };
     };
 

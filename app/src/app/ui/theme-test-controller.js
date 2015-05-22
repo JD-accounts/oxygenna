@@ -11,10 +11,10 @@
  * Handles the colors popup dialog
  */
 angular.module('triAngularUI').
-controller('ThemeTestController', function ($scope, triTheme) {
-    $scope.themes = triTheme.themes;
-    $scope.getPalette = triTheme.getPalette;
-    $scope.rgba = triTheme.rgba;
+controller('ThemeTestController', function ($scope, triTheming) {
+    $scope.themes = triTheming.themes;
+    $scope.getPalette = triTheming.getPalette;
+    $scope.rgba = triTheming.rgba;
     $scope.intentions = ['md-primary', 'md-accent', 'md-warn'];
     $scope.hues = ['', 'md-hue-1', 'md-hue-2', 'md-hue-3'];
 
@@ -26,10 +26,7 @@ controller('ThemeTestController', function ($scope, triTheme) {
         break;
     }
 
-
     $scope.parseCSS = function() {
-        $scope.compiledCSS = triTheme.parseRules($scope.selectedTheme, 'primary', $scope.materialCSS);
-        console.log($scope.materialCSS);
+        $scope.compiledCSS = triTheming.parseRules($scope.selectedTheme, 'primary', $scope.materialCSS);
     };
-
 });

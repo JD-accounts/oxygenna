@@ -13,7 +13,7 @@
 angular.module('triAngular')
 .provider('triTheming', ThemingProvider);
 
-function ThemingProvider() {
+function ThemingProvider($mdThemingProvider) {
     var themes = {};
 
     return {
@@ -31,9 +31,29 @@ function ThemingProvider() {
         },
         $get: function() {
             return {
-                getThemes: function() {
-                    return themes;
-                }
+                // getThemes: function() {
+                //     return themes;
+                // },
+                getThemeHue: function(themeName, intentName, hue) {
+                    if(undefined !== $mdThemingProvider._THEMES[themeName] && undefined !== $mdThemingProvider._THEMES[themeName].colors[intentName]) {
+                        var palette = $mdThemingProvider._THEMES[themeName].colors[intentName];
+                        if(undefined !== $mdThemingProvider._PALETTES[palette.name] && undefined !== $mdThemingProvider._PALETTES[palette.name][palette.hues[hue]]) {
+                            return $mdThemingProvider._PALETTES[palette.name][palette.hues[hue]];
+                        }
+                    }
+                },
+                getPalette: function(name) {
+                    return $mdThemingProvider._PALETTES[name];
+                },
+                getPaletteColor: function(paletteName, hue) {
+                    if(undefined !== $mdThemingProvider._PALETTES[paletteName] && undefined !== $mdThemingProvider._PALETTES[paletteName][hue]) {
+                        return $mdThemingProvider._PALETTES[paletteName][hue];
+                    }
+                },
+                rgba: $mdThemingProvider._rgba,
+                palettes: $mdThemingProvider._PALETTES,
+                themes: $mdThemingProvider._THEMES,
+                parseRules: $mdThemingProvider._parseRules,
             };
         }
     };

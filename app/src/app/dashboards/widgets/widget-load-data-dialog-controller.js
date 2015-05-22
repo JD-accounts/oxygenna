@@ -12,9 +12,8 @@
  */
 
 angular.module('triAngularDashboards')
-.controller('WidgetLoadDataDialogController', function ($scope, $mdDialog, triTheme, data) {
+.controller('WidgetLoadDataDialogController', function ($scope, $mdDialog, data) {
     $scope.data = data;
-    $scope.triTheme = triTheme;
 
     $scope.closeDialog = function() {
         $mdDialog.cancel();
