@@ -31,9 +31,9 @@ function ThemingProvider($mdThemingProvider) {
         },
         $get: function() {
             return {
-                // getThemes: function() {
-                //     return themes;
-                // },
+                getTheme: function(themeName) {
+                    return themes[themeName];
+                },
                 getThemeHue: function(themeName, intentName, hue) {
                     if(undefined !== $mdThemingProvider._THEMES[themeName] && undefined !== $mdThemingProvider._THEMES[themeName].colors[intentName]) {
                         var palette = $mdThemingProvider._THEMES[themeName].colors[intentName];
@@ -46,6 +46,7 @@ function ThemingProvider($mdThemingProvider) {
                     return $mdThemingProvider._PALETTES[name];
                 },
                 getPaletteColor: function(paletteName, hue) {
+                    console.log(paletteName, hue, $mdThemingProvider._PALETTES)
                     if(undefined !== $mdThemingProvider._PALETTES[paletteName] && undefined !== $mdThemingProvider._PALETTES[paletteName][hue]) {
                         return $mdThemingProvider._PALETTES[paletteName][hue];
                     }
