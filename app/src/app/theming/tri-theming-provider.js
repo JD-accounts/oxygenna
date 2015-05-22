@@ -31,9 +31,9 @@ function ThemingProvider($mdThemingProvider) {
         },
         $get: function() {
             return {
-                // getThemes: function() {
-                //     return themes;
-                // },
+                getTheme: function(themeName) {
+                    return themes[themeName];
+                },
                 getThemeHue: function(themeName, intentName, hue) {
                     if(undefined !== $mdThemingProvider._THEMES[themeName] && undefined !== $mdThemingProvider._THEMES[themeName].colors[intentName]) {
                         var palette = $mdThemingProvider._THEMES[themeName].colors[intentName];

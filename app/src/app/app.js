@@ -146,7 +146,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     // CYAN SKIN
     triThemingProvider.theme('cyan')
     .primaryPalette('cyan')
-    .accentPalette('pink')
+    .accentPalette('amber')
     .warnPalette('red');
 
     triThemingProvider.theme('white-cyan')

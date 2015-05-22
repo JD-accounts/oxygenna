@@ -99,6 +99,11 @@ angular.module('triAngularElements', [])
         url: '/elements/selects',
         templateUrl: 'app/elements/selects.tmpl.html'
     })
+    .state('admin-panel.default.elements-tables', {
+        url: '/elements/tables',
+        templateUrl: 'app/elements/tables.tmpl.html',
+        controller: 'TablesController',
+    })
     .state('admin-panel.default.elements-lists', {
         url: '/elements/lists',
         templateUrl: 'app/elements/lists.tmpl.html',
@@ -180,6 +185,10 @@ angular.module('triAngularElements', [])
             name: 'MENU.ELEMENTS.SELECTS',
             type: 'link',
             state: 'admin-panel.default.elements-selects'
+        },{
+            name: 'MENU.ELEMENTS.TABLES',
+            type: 'link',
+            state: 'admin-panel.default.elements-tables'
         },{
             name: 'MENU.ELEMENTS.SIDEBARS',
             type: 'link',
