@@ -80,8 +80,20 @@ $i : 1;
   .font-size-#{$i} {
     font-size: #{$i}rem !important;
     min-width: 1em;
+    line-height: 1;
   }
   $i : $i + 1;
+}
+
+// Line height classes
+.line-height-normal {
+  line-height: 1em;
+}
+.line-height-medium {
+  line-height: 1.2em;
+}
+.line-height-big {
+  line-height: 1.5em;
 }
 
 // - Font Icons
