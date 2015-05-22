@@ -12,13 +12,12 @@
  */
 
 angular.module('triAngularEmail')
-.controller('EmailDialogController', function ($scope, $timeout, $mdDialog, $filter, triTheme, textAngularManager, title, email, contacts, getFocus) {
+.controller('EmailDialogController', function ($scope, $timeout, $mdDialog, $filter, textAngularManager, title, email, contacts, getFocus) {
     $scope.title = title;
     $scope.email = email;
     $scope.contacts = contacts.data;
     $scope.showCCSIcon = 'icon-arrow-drop-down';
     $scope.showCCS = false;
-    $scope.triTheme = triTheme;
 
     $scope.queryContacts = function($query) {
         var lowercaseQuery = angular.lowercase($query);

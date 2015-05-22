@@ -1,6 +1,6 @@
 <div class="dashboard-container overlay-10 padded-content-page" layout="column">
     <div layout="row" layout-margin>
-        <widget calendar-widget flex class="widget-calendar" md-theme="cyan" palette-background="cyan:500" >
+        <widget calendar-widget flex class="widget-calendar" palette-background="cyan:500" >
             <div layout-padding>
                 <div layout="row" layout-padding layout-align="space-between center">
                     <h3 class="md-subhead">
@@ -25,7 +25,7 @@
             </div>
         </widget>
         <div layout="column" flex layout-margin>
-            <widget palette-background="deep-orange:500" md-theme="cyan" content-layout="column" content-layout-align="start space-between">
+            <widget palette-background="deep-orange:500" content-layout="column" content-layout-align="start space-between">
                 <h2 class="md-display-2 font-weight-100 margin-0" flex layout-padding>Call Sue</h2>
                 <md-divider></md-divider>
                 <div flex layout="row" layout-align="space-between center" layout-padding>
@@ -35,7 +35,7 @@
                     </md-button>
                 </div>
             </widget>
-            <widget palette-background="purple:300" md-theme="cyan" content-layout="column" content-layout-align="start space-between">
+            <widget palette-background="purple:300" content-layout="column" content-layout-align="start space-between">
                 <h2 class="md-display-2 font-weight-100 margin-0" flex layout-padding>Clean Desk</h2>
                 <md-divider></md-divider>
                 <div flex layout="row" layout-align="space-between center" layout-padding>
@@ -46,7 +46,7 @@
                 </div>
             </widget>
         </div>
-        <widget todo-widget class="dashboard-todo-widget" palette-background="light-blue:600" title="Todo List" subtitle="Your current todo list" md-theme="cyan" title-position="top" content-align="center start" content-padding>
+        <widget todo-widget class="dashboard-todo-widget" palette-background="light-blue:600" title="Todo List" subtitle="Your current todo list" title-position="top" content-align="center start" content-padding>
             <md-list flex class="padding-left-0">
                 <md-list-item ng-repeat="todo in todos">
                     <md-checkbox ng-model="todo.done"></md-checkbox>
