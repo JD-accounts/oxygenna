@@ -1,8 +1,8 @@
 <div class="dashboard-container overlay-10 padded-content-page" layout="column">
-    <div layout="row" layout-margin>
+    <div layout="row" layout-sm="column" layout-margin>
         <widget calendar-widget flex class="widget-calendar" palette-background="cyan:500" >
             <div layout-padding>
-                <div layout="row" layout-padding layout-align="space-between center">
+                <div layout="row" layout-padding layout-align="space-between center" layout-align-sm="center center">
                     <h3 class="md-subhead">
                         {{currentDay | amDateFormat:'MMMM YYYY'}}
                     </h3>
@@ -10,7 +10,7 @@
                         <md-button class="widget-button md-icon-button" ng-click="changeMonth('prev')">
                             <md-icon md-font-icon="icon-chevron-left"></md-icon>
                         </md-button>
-                        <md-button class="widget-button md-icon-button" ng-click="changeMonth('today')">
+                        <md-button hide-sm hide-md class="widget-button md-icon-button" ng-click="changeMonth('today')">
                             <md-icon md-font-icon="icon-today"></md-icon>
                         </md-button>
                         <md-button class="widget-button md-icon-button" ng-click="changeMonth('next')">
@@ -56,8 +56,8 @@
         </widget>
     </div>
 
-    <div layout="row" layout-margin>
-        <widget flex="60" title="It's all about Material" subtitle="We challenged ourselves to create a visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design."  title-position="bottom" >
+    <div layout="row" layout-sm="column" layout-margin>
+        <widget flex="60" flex-sm="100" title="It's all about Material" subtitle="We challenged ourselves to create a visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design."  title-position="bottom" >
             <img src="http://4.bp.blogspot.com/-ci8zjNrp50I/U_yCxyehuzI/AAAAAAAADX4/uiAIDRcpUB4/s1600/ahagzjsozh.jpg" alt="">
 
         </widget>
@@ -77,8 +77,8 @@
         </widget>
     </div>
 
-    <div layout="row" layout-margin>
-       <widget weather-widget="Sitia" flex="40" background-image="assets/images/dashboards/weather.jpg">
+    <div layout="row" layout-sm="column" layout-margin>
+       <widget weather-widget="Sitia" flex="40" flex-sm="100" background-image="assets/images/dashboards/weather.jpg">
             <div flex layout="column" layout-align="end center">
                 <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
                 <p class="md-display-4">{{weather.temp}}&deg;</p>
@@ -93,7 +93,7 @@
 
                 <div layout="row" layout-align="space-between center" class="padding-normal">
                     <i class="fa fa-twitter font-size-4 opacity-50"></i>
-                    <h3 flex class="md-subhead">Oxygenna's feed</h3>
+                    <h3 flex hide-sm class="md-subhead">Oxygenna's feed</h3>
                     <div class="widget-buttons">
                         <md-button class="md-icon-button" ng-click="prevTweet()"><md-icon md-font-icon="icon-keyboard-arrow-left"></md-icon></md-button>
                         <md-button class="md-icon-button" ng-click="nextTweet()"><md-icon md-font-icon="icon-keyboard-arrow-right"></md-icon></md-button>

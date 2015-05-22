@@ -38,7 +38,7 @@
         </widget>
     </div>
 
-    <div layout="row" layout-margin>
+    <div layout="row" layout-sm="column" layout-margin>
         <widget chartjs-line-widget flex title="{{'DASHBOARDS.ANALYTICS.PAGEVIEWS' | translate}}" subtitle="{{'DASHBOARDS.ANALYTICS.DATE' | translate}}" content-padding>
             <div flex>
                 <canvas class="chart-line" data="lineChart.data" labels="lineChart.labels" legend="false" series="lineChart.series" options="lineChart.options"></canvas>
@@ -59,7 +59,7 @@
             </table>
         </widget>
     </div>
-    <div layout="row" layout-margin>
+    <div layout="row" layout-sm="column" layout-margin>
         <widget flex load-data-widget="{ social: 'app/dashboards/data/social.json' }" title="{{'DASHBOARDS.ANALYTICS.SOCIAL' | translate}}" subtitle="{{'DASHBOARDS.ANALYTICS.DATE' | translate}}" content-padding>
             <table class="table">
                 <thead>
@@ -80,7 +80,7 @@
             </div>
         </widget>
     </div>
-    <div layout="row" layout-margin>
+    <div layout="row" layout-md="column" layout-sm="column" layout-margin>
         <widget google-geochart-widget flex title="{{'DASHBOARDS.ANALYTICS.LOCATION' | translate}}" subtitle="{{'DASHBOARDS.ANALYTICS.DATE' | translate}}" title-position="top" content-padding>
             <div class="google-chart" google-chart chart="geoChartData"></div>
         </widget>
