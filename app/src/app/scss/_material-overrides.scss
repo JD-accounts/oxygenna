@@ -13,3 +13,7 @@ body[md-theme="dark"] {
     color: #ffffff;
   }
 }
+.md-list-item-inner {
+  max-width: 100%;
+  box-sizing: border-box;
+}
