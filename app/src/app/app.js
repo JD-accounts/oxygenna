@@ -35,10 +35,9 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
      *      navigator.userLanguage
      */
     $translateProvider
-    .registerAvailableLanguageKeys(['en', 'el'], {
+    .registerAvailableLanguageKeys(['en', 'fr'], {
         'en_US': 'en',
-        'en_UK': 'en',
-        'el_GR': 'el',
+        'en_UK': 'en'
     })
     .determinePreferredLanguage();
 
