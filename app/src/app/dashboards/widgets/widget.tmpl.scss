@@ -25,15 +25,12 @@
       flex: 0 0 50%;
     }
   }
-  // md-icon[md-font-icon] {
-  //   color: inherit !important;
-  // }
-  .md-icon {
-    border-color: inherit !important;
-  }
   a {
     color: inherit;
     border-bottom: 1px dashed;
+  }
+  md-icon {
+    color: inherit;
   }
   &.widget-overlay-title {
     .widget-title {
