@@ -32,6 +32,9 @@
   md-icon {
     color: inherit;
   }
+  md-checkbox .md-icon {
+    border-color: inherit;
+  }
   &.widget-overlay-title {
     .widget-title {
       position: absolute;
