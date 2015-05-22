@@ -68,7 +68,7 @@
     </div>
 
     <div layout="row" layout-margin>
-        <widget flex title="{{'DASHBOARDS.SERVER.DISKS' | translate}}" md-theme="cyan">
+        <widget flex title="{{'DASHBOARDS.SERVER.DISKS' | translate}}">
             <md-divider></md-divider>
             <md-list>
                 <md-list-item ng-repeat="disk in disks">
@@ -79,7 +79,7 @@
                 </md-list-item>
             </md-list>
         </widget>
-        <widget flex title="{{'DASHBOARDS.SERVER.JOB' | translate}}" md-theme="white-cyan" background="primary">
+        <widget flex title="{{'DASHBOARDS.SERVER.JOB' | translate}}" background="primary">
             <md-divider></md-divider>
             <md-list>
                 <md-list-item class="md-2-line" ng-repeat="job in jobs">
@@ -102,7 +102,7 @@
                 <canvas class="chart-doughnut" data="pieChart.data" legend="false" labels="pieChart.labels"></canvas>
             </div>
         </widget>
-        <widget flex="70" title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" md-theme="cyan" palette-background="cyan:600" content-layout="column" content-layout-align="start">
+        <widget flex="70" title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" palette-background="cyan:600" content-layout="column" content-layout-align="start">
             <div flex layout="row" layout-fill layout-padding>
                 <h4 flex=20 class="opacity-80 margin-0 margin-right-20">
                     {{'DASHBOARDS.SERVER.DISK' | translate}}

@@ -43,27 +43,10 @@
 
 
 /**
-* Themes Page
+* Skins Page
 **/
-.ui-theme-card {
-  margin: 20px 0px;
-
-  md-card-content {
-    padding: 0px;
-  }
-
-  .md-toolbar-tools {
-    position: relative;
-
-    .md-fab {
-      top: 25px;
-      right: 25px;
-    }
-  }
-}
-
-.ui-theme-card-colorname {
-  text-align: right;
+.ui-skin-preview {
+  border: 1px solid black;
 }
 
 // Toolbar page

@@ -12,14 +12,12 @@
  */
 
 angular.module('triAngular')
-.controller('DefaultToolbarController', function ($scope, $translate, $state, $element, $mdUtil, $mdSidenav, SideMenu, triTheme, APP) {
-    $scope.appName = APP.name;
+.controller('DefaultToolbarController', function ($scope, $translate, $state, $element, $mdUtil, $mdSidenav, SideMenu) {
     $scope.menu = SideMenu.getMenu();
-    $scope.triTheme = triTheme;
 
     $scope.toolbarTypeClass = function() {
         return $scope.extraClass;
-    }
+    };
 
     $scope.$on('$stateChangeStart', initToolbar);
 
@@ -43,7 +41,7 @@ angular.module('triAngular')
 
     $scope.switchLanguage = function(languageCode) {
         $translate.use(languageCode).then(function(data) {
-        })
+        });
     };
 
     $scope.openSideNav = function(navID) {

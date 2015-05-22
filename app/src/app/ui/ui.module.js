@@ -85,10 +85,10 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
         templateUrl: 'app/ui/toolbars.tmpl.html'
     })
 
-    .state('admin-panel.default.ui-themes', {
-        url: '/ui/themes',
-        controller: 'ThemesController',
-        templateUrl: 'app/ui/themes.tmpl.html',
+    .state('admin-panel.default.ui-skins', {
+        url: '/ui/skins',
+        controller: 'SkinsUIController',
+        templateUrl: 'app/ui/skins.tmpl.html'
     });
 })
 .run(function(SideMenu, TypographySwitcher, $rootScope) {
@@ -146,8 +146,8 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
             state: 'admin-panel.default.ui-material-icons',
             type: 'link',
         },{
-            name: 'MENU.UI.THEMES',
-            state: 'admin-panel.default.ui-themes',
+            name: 'MENU.UI.SKINS',
+            state: 'admin-panel.default.ui-skins',
             type: 'link',
         },{
             name: 'MENU.UI.THEME-TEST',
