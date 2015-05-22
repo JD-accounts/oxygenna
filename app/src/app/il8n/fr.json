@@ -1,0 +1,85 @@
+{
+    "MENU": {
+        "AUTH": {
+            "AUTH": "L'authentification",
+            "LOGIN": "Connexion",
+            "SIGN_UP": "Inscrivez -",
+            "FORGOT": "Mot De Passe Oublié",
+            "LOCK": "Page De Verrouillage",
+            "PROFILE": "Profil"
+        },
+        "DASHBOARDS": {
+            "DASHBOARDS": "Des tableaux de bord",
+            "DASHBOARD": "Tableau de bord",
+            "WIDGETS": "Les Widgets"
+        },
+        "EMAIL": {
+            "EMAIL": "E-mail",
+            "INBOX": "Boîte de réception",
+            "TRASH": "Corbeille",
+            "SENT": "Envoyé"
+        },
+        "ELEMENTS": {
+            "ELEMENTS": "Éléments",
+            "BUTTONS": "Boutons",
+            "CARDS": "Cartes",
+            "ICONS": "Les icônes",
+            "CHECKBOXES": "Des cases à cocher",
+            "SWITCHES": "Les commutateurs",
+            "RADIOS": "Les Radios",
+            "DIALOGS": "Les boîtes de dialogue",
+            "GRIDS": "Grilles",
+            "TABS": "Onglets",
+            "SLIDERS": "Curseurs",
+            "SELECTS": "Sélectionne",
+            "TABLES": "Tables",
+            "PROGRESS": "Progrès",
+            "SIDEBARS": "Encadrés",
+            "TOOLBARS": "Les barres d'outils",
+            "TOOLTIPS": "Les info-bulles",
+            "WHITEFRAMES": "Whiteframes",
+            "TOASTS": "Toasts",
+            "LISTS": "Listes",
+            "CHIPS": "Jetons"
+        },
+        "FORMS": {
+            "FORMS": "Les formes",
+            "INPUTS": "Entrées",
+            "BINDING": "La Liaison De Données",
+            "AUTOCOMPLETE": "La saisie semi-automatique",
+            "VALIDATION": "Validation"
+        },
+        "INTRODUCTION": {
+            "INTRODUCTION": "Introduction"
+        },
+        "LEVELS": {
+            "LEVELS": "Les niveaux",
+            "1-1": "Niveau 1-1",
+            "2-1": "Niveau 2-1",
+            "3-1": "Niveau 3-1",
+            "4-1": "Niveau 4-1",
+            "4-2": "Niveau 4-2",
+            "4-3": "Niveau 4-3"
+        }
+    },
+    "ADMIN": {
+        "TOOLBAR": {
+            "SIDEBAR_TOGGLE": "Bascule Menu"
+        },
+        "NOTIFICATIONS": {
+            "ACCOUNT_SETTINGS": "Les Paramètres De Compte",
+            "CHAT_SETTINGS": "Les Paramètres De Chat",
+            "USER_STATS": "Statistiques De L'Utilisateur",
+            "SERVER_STATS": "Statistiques Du Serveur",
+            "SHOW_LOCATION": "Montrer mon emplacement",
+            "SHOW_AVATAR": "Afficher mon avatar",
+            "SEND_NOTIFICATIONS": "M'envoyer les notifications",
+            "ALLOW_BACKUPS": "Permettre les sauvegardes dans le cloud",
+            "SHOW_USERNAME": "Afficher mon nom d'utilisateur",
+            "SHOW_PROFILE": "Rendre mon profil public",
+            "STORAGE_SPACE": "L'Espace De Stockage (120/160 Go)",
+            "BANDWIDTH_USAGAE": "Utilisation De La Bande Passante (10/100 Go)",
+            "MEMORY_USAGAE": "L'Utilisation De La Mémoire (1/8 Go)"
+        }
+    }
+}
