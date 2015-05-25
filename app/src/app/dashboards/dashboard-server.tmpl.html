@@ -5,24 +5,24 @@
                 <md-tab label="{{'DASHBOARDS.SERVER.REAL_TIME' | translate}}">
                     <md-content class="md-padding">
                         <h1 class="md-headline">{{'DASHBOARDS.SERVER.BANDWIDTH' | translate}} <span class="md-caption">(Mbps)</span></h1>
-                        <canvas class="chart-line full-width" data="serverCharts.bandwidth.data" labels="serverCharts.bandwidth.labels" legend="false" options="serverCharts.bandwidth.options" colours="serverCharts.bandwidth.colours"></canvas>
+                        <canvas class="chart-line" data="serverCharts.bandwidth.data" labels="serverCharts.bandwidth.labels" legend="false" options="serverCharts.bandwidth.options" colours="serverCharts.bandwidth.colours"></canvas>
                         <h1 class="md-headline">{{'DASHBOARDS.SERVER.CPU' | translate}} <span class="md-caption">(%)</span></h1>
-                        <canvas class="chart-line full-width" data="serverCharts.cpu.data" labels="serverCharts.cpu.labels" legend="false" options="serverCharts.cpu.options" colours="serverCharts.cpu.colours"></canvas>
+                        <canvas class="chart-line" data="serverCharts.cpu.data" labels="serverCharts.cpu.labels" legend="false" options="serverCharts.cpu.options" colours="serverCharts.cpu.colours"></canvas>
                     </md-content>
                 </md-tab>
                 <md-tab label="{{'DASHBOARDS.SERVER.24HRS' | translate}}">
                     <md-content class="md-padding">
-                        <canvas class="chart-bar full-width" data="serverCharts.data24hrs.data" labels="serverCharts.data24hrs.labels" legend="true" options="serverCharts.data24hrs.options" series="serverCharts.data24hrs.series"></canvas>
+                        <canvas class="chart-bar" data="serverCharts.data24hrs.data" labels="serverCharts.data24hrs.labels" legend="true" options="serverCharts.data24hrs.options" series="serverCharts.data24hrs.series"></canvas>
                     </md-content>
                 </md-tab>
                 <md-tab label="{{'DASHBOARDS.SERVER.7DAYS' | translate}}">
                     <md-content class="md-padding">
-                        <canvas class="chart-bar full-width" data="serverCharts.data7days.data" labels="serverCharts.data7days.labels" legend="true" options="serverCharts.data7days.options" series="serverCharts.data7days.series"></canvas>
+                        <canvas class="chart-bar" data="serverCharts.data7days.data" labels="serverCharts.data7days.labels" legend="true" options="serverCharts.data7days.options" series="serverCharts.data7days.series"></canvas>
                     </md-content>
                 </md-tab>
                 <md-tab label="{{'DASHBOARDS.SERVER.365DAYS' | translate}}">
                     <md-content class="md-padding">
-                        <canvas class="chart-bar full-width" data="serverCharts.data365days.data" labels="serverCharts.data365days.labels" legend="true" options="serverCharts.data365days.options" series="serverCharts.data365days.series"></canvas>
+                        <canvas class="chart-bar" data="serverCharts.data365days.data" labels="serverCharts.data365days.labels" legend="true" options="serverCharts.data365days.options" series="serverCharts.data365days.series"></canvas>
                     </md-content>
                 </md-tab>
             </md-tabs>
