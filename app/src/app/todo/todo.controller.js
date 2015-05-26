@@ -14,10 +14,14 @@ angular.module('triAngularTodo')
 .controller('TodoController', function ($scope, $state, $mdDialog) {    
     
     $scope.messages = [
-	    {description: "Material Design", priority: "high", selected: true},	    
-	    {description: "Deploy to Server", priority: "low", selected: true},
+	    {description: "Material Design", priority: "high", selected: true},	   
+	    {description: "Install espresso machine", priority: "high", selected: false}, 
+	    {description: "Deploy to Server", priority: "medium", selected: true},
 	    {description: "Cloud Sync", priority: "medium", selected: false},
-	    {description: "Test Configurations", priority: "low", selected: false},
+	    {description: "Test Configurations", priority: "low", selected: false},	    
+	    {description: "Validate markup", priority: "low", selected: false},
+	    {description: "Debug javascript", priority: "low", selected: true},
+	    {description: "Arrange meeting", priority: "low", selected: true},
 	];
 
 	$scope.orderTasks = function(task) {

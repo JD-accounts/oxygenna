@@ -5,11 +5,14 @@
             "HEADER": "To do list",
             "DIALOG":{
             	"NEW": "Add Task",
-            	"DESC": "Task Description",
+            	"DESC": "Task Name",
             	"HIGH": "High",
             	"MEDIUM": "Medium",
             	"LOW": "Low",
-            	"PRIORITY": "Priority"
+            	"PRIORITY": "Priority",
+                "TASKFORM":{
+                    "PLEASE_ENTER": "Please enter a task name" 
+                }
             }         
         }
     }

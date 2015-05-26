@@ -15,7 +15,12 @@
       		<form name="taskForm" novalidate>
     	 		<md-input-container>     
     	 			<label>{{'MENU.TODO.DIALOG.DESC' | translate}}</label> 
-    	     		<input ng-model="item.description" class="dialog-close"></input>   
+    	     		<input ng-model="item.description" class="dialog-close" name="task" required></input>
+                    <div ng-messages="taskForm.task.$error">
+                        <div ng-message when="required">
+                            {{'MENU.TODO.DIALOG.TASKFORM.PLEASE_ENTER' | translate}}
+                        </div>
+                    </div>
     	     	</md-input-container>
     	     	<md-input-container> 
     	     	     <md-select placeholder="{{'MENU.TODO.DIALOG.PRIORITY' | translate}}" ng-model="item.priority">
@@ -32,7 +37,7 @@
     	<md-button ng-click="cancel()" class="md-primary">
      		Cancel
     	</md-button>
-    	<md-button ng-click="hide()" class="md-primary">
+    	<md-button ng-click="hide()" class="md-primary" ng-disabled="taskForm.$invalid">
       		Ok
     	</md-button>
   	</div>  	
