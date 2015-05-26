@@ -13,18 +13,17 @@
         },
         "COMPOSE": {
             "FROM": "From",
-            "TO": "To",
             "CC": "CC",
             "BCC": "BCC",
             "SUBJECT": "Subject",
             "SEND": "Send",
-            "CLOSE": "Close",
             "VALIDATION": {
                 "EMAIL_REQUIRED": "Please enter an address to send to.",
                 "EMAIL_VALID": "Please enter a valid email address.",
                 "SUBJECT_REQUIRED": "Please enter a subject for the email."
             }
         },
+        "TO": "To",
         "NEW": "Compose",
         "SENT": "Email to {{to}} sent.",
         "CANCELED": "Email canceled",
@@ -34,6 +33,7 @@
         "DELETE": "Delete",
         "DELETED": "Email Deleted",
         "RE": "R.e: ",
+        "CLOSE": "Close",
         "MESSAGE": "Message",
         "NO_EMAILS_FOUND": "No emails found",
         "NO_EMAIL_SELECTED": "No email selected",
