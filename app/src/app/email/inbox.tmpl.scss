@@ -118,3 +118,13 @@
     box-shadow: 0 0 0 0 transparent;
   }
 }
+
+#ui-admin-email {
+  &.ng-enter {
+    @include slideInRight();
+  }
+  &.ng-leave {
+    @include slideOutRight();
+  }
+}
+

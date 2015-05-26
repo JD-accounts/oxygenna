@@ -12,13 +12,3 @@
     @include slideOutDown();
   }
 }
-
-#ui-admin-email {
-  &.ng-enter {
-    @include slideInRight();
-  }
-  &.ng-leave {
-    @include slideOutRight();
-  }
-}
-

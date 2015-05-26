@@ -12,7 +12,7 @@ angular.module('triAngularEmail')
 .controller('EmailController', function ($scope, $stateParams, $mdDialog, $mdToast, $filter, emails, email, contacts) {
     $scope.email = email;
 
-    $scope.reply = function($event) {
+    $scope.emailAction = function(title) {
         var replyEmail = {
             to: [],
             cc: [],
@@ -30,17 +30,22 @@ angular.module('triAngularEmail')
             }
         });
 
-        openEmail($event, replyEmail, $filter('translate')('EMAIL.REPLY'));
+        openEmail(replyEmail, $filter('translate')(title));
     }
 
-    function openEmail($event, dialogEmail, title) {
+    $scope.menuClick = function($event) {
+        // store copy of button click event to use for dialog animations
+        $scope.menuClickEvent = $event;
+    };
+
+    function openEmail(email, title) {
         $mdDialog.show({
             controller: 'EmailDialogController',
             templateUrl: 'app/email/email-dialog.tmpl.html',
-            targetEvent: $event,
+            targetEvent: $scope.menuClickEvent,
             locals: {
                 title: title,
-                email: dialogEmail,
+                email: email,
                 contacts: contacts,
                 getFocus: true
             },

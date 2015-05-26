@@ -9,7 +9,12 @@
  *
  */
 angular.module('triAngularEmail')
-.controller('InboxController', function ($scope, $filter, $location, $mdMedia, $mdBottomSheet, $stateParams, $mdDialog, $mdToast, emails, contacts) {
+.controller('InboxController', function ($scope, $filter, $location, $state, $mdMedia, $mdBottomSheet, $stateParams, $mdDialog, $mdToast, emails, contacts) {
+    console.log($state.current);
+    // store the base state of where we are /inbox or /trash or /sent
+    // this can be then used if we close / delete email to return to
+    $scope.baseState = $state.current;
+
     $scope.inboxBasePath = $location.path();
     // store selected email if we have one
     $scope.selectedMail = null;
@@ -44,14 +49,16 @@ angular.module('triAngularEmail')
 
     // opens an email
     $scope.openMail = function(email) {
-        $location.url($scope.inboxBasePath + '/mail/' + email.id);
+        $state.go($scope.baseState.name + '.email', {
+            emailID: email.id
+        });
         email.unread = false;
         $scope.selectedMail = email.id;
     };
 
     // returns back to email list
     $scope.openlist = function() {
-        $location.url($scope.inboxBasePath);
+        $state.go($scope.baseState.name);
     };
 
     // returns back to email list
@@ -74,7 +81,7 @@ angular.module('triAngularEmail')
             }
         });
 
-        $location.url($scope.inboxBasePath);
+        $scope.openlist();
     };
 
     // opens the compose dialog
@@ -130,7 +137,8 @@ angular.module('triAngularEmail')
 
     // keep a watch for changes to size of page
     $scope.$watch(function() {
+
         // if not a small mobile view don't show the list - unless we are on the$scope.inboxBasePath + /mail list page
-        $scope.showEmailList = !$mdMedia('sm') || $location.path().indexOf($scope.inboxBasePath + '/mail/') === -1;
+        $scope.showEmailList = true;
     });
 });
