@@ -1,10 +1,17 @@
 'use strict';
 
-angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras', 'triAngularTodo'])
+angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras', 'triAngularTodo', 'ngMaterialDropmenu'])
 .constant('APP', {
     name: 'triangular',
     logo: 'assets/images/logo.png',
-    version: '1.0'
+    version: '1.0',
+    languages: [{
+        name: 'LANGUAGES.ENGLISH',
+        key: 'en'
+    },{
+        name: 'LANGUAGES.FRENCH',
+        key: 'fr'
+    }]
 })
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
@@ -12,7 +19,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 /**
  *  SETUP TRANSLATIONS
  */
-.config(function ($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider) {
+.config(function ($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider, APP) {
     /**
      *  each module loads its own translation file - making it easier to create translations
      *  also translations are not loaded when they aren't needed
@@ -27,6 +34,11 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     // cache translation files to save load on server
     $translateProvider.useLoaderCache(true);
 
+    // get languages set in APP constant
+    var languageKeys = [];
+    for(var lang in APP.languages) {
+        languageKeys.push(APP.languages[lang].key)
+    }
     /**
      *  try to detect the users language by checking the following
      *      navigator.language
@@ -35,7 +47,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
      *      navigator.userLanguage
      */
     $translateProvider
-    .registerAvailableLanguageKeys(['en', 'fr'], {
+    .registerAvailableLanguageKeys(languageKeys, {
         'en_US': 'en',
         'en_UK': 'en'
     })

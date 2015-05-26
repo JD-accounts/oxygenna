@@ -64,6 +64,9 @@
     },
     "ADMIN": {
         "TOOLBAR": {
+            "SETTINGS": "Settings",
+            "PROFILE": "Profile",
+            "LOGOUT": "Logout",
             "SIDEBAR_TOGGLE": "Toggle Menu"
         },
         "NOTIFICATIONS": {
@@ -81,5 +84,9 @@
             "BANDWIDTH_USAGAE": "Bandwidth Usage (10/100 Gb)",
             "MEMORY_USAGAE": "Memory Usage (1/8 Gb)"
         }
+    },
+    "LANGUAGES": {
+        "ENGLISH": "English",
+        "FRENCH": "French"
     }
 }

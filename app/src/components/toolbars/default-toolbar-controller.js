@@ -12,7 +12,7 @@
  */
 
 angular.module('triAngular')
-.controller('DefaultToolbarController', function ($scope, $translate, $state, $element, $mdUtil, $mdSidenav, SideMenu) {
+.controller('DefaultToolbarController', function ($scope, $translate, $state, $element, $mdUtil, $mdSidenav, SideMenu, APP) {
     $scope.menu = SideMenu.getMenu();
 
     $scope.toolbarTypeClass = function() {
@@ -54,4 +54,7 @@ angular.module('triAngular')
         $scope.$parent.$broadcast('triSwitchNotificationTab', tab);
         $scope.openSideNav('notifications');
     };
+
+    // until we can get languages from angular-translate use APP constant
+    $scope.languages = APP.languages;
 });
