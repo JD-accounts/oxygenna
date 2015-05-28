@@ -92,8 +92,7 @@ angular.module('triAngularElements', [])
     })
     .state('admin-panel.default.elements-grids', {
         url: '/elements/grids',
-        templateUrl: 'app/elements/grids.tmpl.html',
-        controller: 'GridsController'
+        templateUrl: 'app/elements/grids.tmpl.html'
     })
     .state('admin-panel.default.elements-selects', {
         url: '/elements/selects',
