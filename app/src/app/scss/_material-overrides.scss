@@ -17,3 +17,8 @@ body[md-theme="dark"] {
   max-width: 100%;
   box-sizing: border-box;
 }
+
+md-drop-menu md-content {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
