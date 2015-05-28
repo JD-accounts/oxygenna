@@ -186,10 +186,6 @@ angular.module('triAngularElements', [])
             type: 'link',
             state: 'admin-panel.default.elements-selects'
         },{
-            name: 'MENU.ELEMENTS.TABLES',
-            type: 'link',
-            state: 'admin-panel.default.elements-tables'
-        },{
             name: 'MENU.ELEMENTS.SIDEBARS',
             type: 'link',
             state: 'admin-panel.default.elements-sidebars'
@@ -201,6 +197,10 @@ angular.module('triAngularElements', [])
             name: 'MENU.ELEMENTS.SWITCHES',
             type: 'link',
             state: 'admin-panel.default.elements-switches'
+        },{
+            name: 'MENU.ELEMENTS.TABLES',
+            type: 'link',
+            state: 'admin-panel.default.elements-tables'
         },{
             name: 'MENU.ELEMENTS.TABS',
             type: 'link',
