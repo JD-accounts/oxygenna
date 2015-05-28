@@ -49,14 +49,14 @@
                 </div>
             </widget>
         </div>
-        <widget2 todo-widget class="dashboard-todo-widget" palette-background="light-blue:600" title="Todo List" subtitle="Your current todo list" title-position="top" content-align="center start" content-padding>
+        <widget todo-widget class="dashboard-todo-widget" palette-background="light-blue:600" title="Todo List" subtitle="Your current todo list" title-position="top" content-align="center start" content-padding>
             <md-list flex class="padding-left-0">
                 <md-list-item ng-repeat="todo in todos">
                     <md-checkbox ng-model="todo.done"></md-checkbox>
                     <p>{{todo.name}}</p>
                 </md-list-item>
             </md-list>
-        </widget2>
+        </widget>
     </div>
 
     <div layout="row" layout-sm="column" layout-margin>
