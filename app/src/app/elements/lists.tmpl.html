@@ -3,18 +3,34 @@
 
     <p>A list consists of a single continuous column of tessellated sub-divisions of equal width called rows that function as containers for tiles.</p>
 
-    <md-card class="elements-grids-example">
-        <div ng-include="'app/elements/examples/lists-1.tmpl.html'"></div>
-    </md-card>
+    <md-tabs class="elements-example margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="padding-40">
+                <md-card>
+                    <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/elements/examples/lists-1.tmpl.html'"></md-card-content>
+                </md-card>
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/elements/examples/lists-1.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
 
-    <h3 class="md-title">Example Code</h3>
-    <div hljs language="html" include="'app/elements/examples/lists-1.tmpl.html'"></div>
-
-    <h2 class="md-headline">List Controls</h2>
-    <md-card class="elements-grids-example">
-        <div ng-include="'app/elements/examples/lists-2.tmpl.html'"></div>
-    </md-card>
-
-    <h3 class="md-title">Example Code</h3>
-    <div hljs language="html" include="'app/elements/examples/lists-2.tmpl.html'"></div>
+    <h2>List Controls</h2>
+    <md-tabs class="elements-example margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="padding-40">
+                <md-card>
+                    <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/elements/examples/lists-2.tmpl.html'"></md-card-content>
+                </md-card>
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/elements/examples/lists-2.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
 </div>
