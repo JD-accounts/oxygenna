@@ -25,6 +25,10 @@ angular.module('triAngularDashboards', [])
         controller: 'DashboardServerController',
         templateUrl: 'app/dashboards/dashboard-server.tmpl.html',
     })
+    .state('admin-panel.default.dashboard-ie', {
+        url: '/dashboards/ie',
+        templateUrl: 'app/dashboards/dashboard-ie.tmpl.html',
+    })
     .state('admin-panel.default.dashboard-widgets', {
         url: '/dashboards/widgets',
         templateUrl: 'app/dashboards/widgets.tmpl.html',
@@ -47,6 +51,10 @@ angular.module('triAngularDashboards', [])
         },{
             name: 'MENU.DASHBOARDS.SERVER',
             state: 'admin-panel.default.dashboard-server',
+            type: 'link',
+        },{
+            name: 'MENU.DASHBOARDS.IE',
+            state: 'admin-panel.default.dashboard-ie',
             type: 'link',
         },{
             name: 'MENU.DASHBOARDS.WIDGETS',
