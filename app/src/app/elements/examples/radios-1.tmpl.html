@@ -1,21 +1,17 @@
-<p>Default Radio : <strong>{{data.default}}</strong></p>
-<md-radio-group ng-model="data.default" ng-init="data.default = 'Red'">
-    <md-radio-button value="Red">Red</md-radio-button>
-    <md-radio-button value="Green">Green</md-radio-button>
-    <md-radio-button value="Blue">Blue</md-radio-button>
-</md-radio-group>
+<div layout="column">
+    <p>Default Radio : <strong>{{data.default}}</strong></p>
+    <md-radio-group ng-model="data.default" ng-init="data.default = 'Red'">
+        <md-radio-button value="Red">Red</md-radio-button>
+        <md-radio-button value="Green">Green</md-radio-button>
+        <md-radio-button value="Blue">Blue</md-radio-button>
+    </md-radio-group>
+</div>
 
-
-<p>Primary Radio : <strong>{{data.primary}}</strong></p>
-<md-radio-group ng-model="data.primary" ng-init="data.primary = 'Red'">
-    <md-radio-button class="md-primary" value="Red">Red</md-radio-button>
-    <md-radio-button class="md-primary" value="Green">Green</md-radio-button>
-    <md-radio-button class="md-primary" value="Blue">Blue</md-radio-button>
-</md-radio-group>
-
-<p>Image Radio : <strong>{{data.avatar}}</strong></p>
-<md-radio-group class="elements-radio-avatar" ng-model="data.avatar" ng-init="data.avatar = 'avatar-1'; avatars = ['avatar-1','avatar-2','avatar-3','avatar-4','avatar-5']">
-    <md-radio-button ng-repeat="avatar in avatars" value="{{avatar}}">
-        <img ng-src="assets/images/avatars/{{avatar}}.png" alt="{{avatar}}">
-    </md-radio-button>
-</md-radio-group>
+<div layout="column">
+    <p>Primary Radio : <strong>{{data.primary}}</strong></p>
+    <md-radio-group class="md-primary" ng-model="data.primary" ng-init="data.primary = 'Red'">
+        <md-radio-button value="Red">Red</md-radio-button>
+        <md-radio-button value="Green">Green</md-radio-button>
+        <md-radio-button value="Blue">Blue</md-radio-button>
+    </md-radio-group>
+</div>

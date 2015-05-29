@@ -92,8 +92,7 @@ angular.module('triAngularElements', [])
     })
     .state('admin-panel.default.elements-grids', {
         url: '/elements/grids',
-        templateUrl: 'app/elements/grids.tmpl.html',
-        controller: 'GridsController'
+        templateUrl: 'app/elements/grids.tmpl.html'
     })
     .state('admin-panel.default.elements-selects', {
         url: '/elements/selects',
@@ -186,10 +185,6 @@ angular.module('triAngularElements', [])
             type: 'link',
             state: 'admin-panel.default.elements-selects'
         },{
-            name: 'MENU.ELEMENTS.TABLES',
-            type: 'link',
-            state: 'admin-panel.default.elements-tables'
-        },{
             name: 'MENU.ELEMENTS.SIDEBARS',
             type: 'link',
             state: 'admin-panel.default.elements-sidebars'
@@ -201,6 +196,10 @@ angular.module('triAngularElements', [])
             name: 'MENU.ELEMENTS.SWITCHES',
             type: 'link',
             state: 'admin-panel.default.elements-switches'
+        },{
+            name: 'MENU.ELEMENTS.TABLES',
+            type: 'link',
+            state: 'admin-panel.default.elements-tables'
         },{
             name: 'MENU.ELEMENTS.TABS',
             type: 'link',

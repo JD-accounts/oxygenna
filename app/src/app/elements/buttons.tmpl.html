@@ -1,15 +1,60 @@
 <div class="padded-content-page">
     <p class="md-subhead">A button consists of text and/or an image that clearly communicates what action will occur when the user touches it.  Triangular provides all the button types recommended in the <a href="http://www.google.com/design/spec/components/buttons.html">material design specification</a></p>
 
-    <h2 class="md-headline">Button Types</h2>
     <p>There are three types of main buttons: </p>
-    <ul>
-        <li><span>Floating action button: a circular button made of paper that lifts and emits ink reactions on press.</span></li>
-        <li><span>Raised button: a typically rectangular button made of paper that lifts and emits ink reactions on press.</span></li>
-        <li><span>Flat button: a button made of ink that emits ink reactions on press but does not lift.</span></li>
-    </ul>
 
-    <div class="elements-button-examples" layout="row" layout-align="space-around center">
+    <h2>Flat Button</h2>
+    <p>A button made of ink that emits ink reactions on press but does not lift.</p>
+    <md-tabs class="elements-example margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="padding-40">
+                <md-card>
+                    <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/elements/examples/button-flat.tmpl.html'"></md-card-content>
+                </md-card>
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/elements/examples/button-flat.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+
+    <h2>Raised Button</h2>
+    <p>A typically rectangular button made of paper that lifts and emits ink reactions on press.</p>
+    <md-tabs class="elements-example margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="padding-40">
+                <md-card>
+                    <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/elements/examples/button-raised.tmpl.html'"></md-card-content>
+                </md-card>
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/elements/examples/button-raised.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+
+    <h2>Floating action button (FAB)</h2>
+    <p>A circular button made of paper that lifts and emits ink reactions on press.</p>
+    <md-tabs class="elements-example margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="padding-40">
+                <md-card>
+                    <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/elements/examples/button-fab.tmpl.html'"></md-card-content>
+                </md-card>
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/elements/examples/button-fab.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
+
+    <div class="elements-button-examples" layout="row" layout-align="space-between center">
         <md-card flex layout="column" layout-align="center center">
             <md-toolbar>
                 <div class="md-toolbar-tools">
@@ -75,7 +120,9 @@
             </div>
         </md-whiteframe>
     </div>
-    <br>
+
+    <md-divider class="margin-top-20 margin-bottom-20"></md-divider>
+
     <div layout="row" layout-sm="column" layout-align="space-around start">
         <div flex="40" flex-sm="100" layout="column">
             <h3 class="md-title">Floating Action Button (FAB)</h3>
@@ -94,7 +141,9 @@
             </md-button>
         </md-whiteframe>
     </div>
-    <br>
+
+    <md-divider class="margin-top-20 margin-bottom-20"></md-divider>
+
     <div layout="row" layout-sm="column" layout-align="space-around start">
         <div flex="40" flex-sm="100" layout="column">
             <h3 class="md-title">Flat button</h3>
@@ -104,6 +153,7 @@
         <md-whiteframe class="elements-flat-usage md-whiteframe-z1" layout="column">
             <h2>Would you like to use our location service?</h2>
             <p>Let us monitor your location to keep you up to date with everything that is happening in your current area.</p>
+            <md-divider class="margin-top-20 margin-bottom-20"></md-divider>
             <div class="elements-flat-buttons" layout="row" layout-align="end center">
                 <md-button class="md-primary">Disagree</md-button>
                 <md-button class="md-primary">Agree</md-button>

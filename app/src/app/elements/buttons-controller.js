@@ -12,6 +12,9 @@
  */
 angular.module('triAngularElements').
 controller('ButtonsController', function ($scope, $interval) {
+    $scope.buttonClass = 'md-primary';
+    $scope.buttonHue = 'md-default';
+
     $scope.buttonDisabled = false;
     $scope.determinateValue = 30;
     $scope.determinateValue2 = 30;

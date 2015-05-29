@@ -3,8 +3,15 @@
 
     <p>The content in the left nav is ideally navigation- or identity-based. The content in the right nav should be secondary to the main content on a page.</p>
 
-    <md-content class="elements-sidebar-example md-whiteframe-z3" ng-include="'app/elements/examples/sidebars-1.tmpl.html'"></md-content>
-
-    <h3 class="md-subhead">Example Code</h3>
-    <div hljs language="html" include="'app/elements/examples/sidebars-1.tmpl.html'"></div>
+    <md-tabs class="elements-example margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="elements-sidebar-example" ng-include="'app/elements/examples/sidebars-1.tmpl.html'">
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/elements/examples/sidebars-1.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
 </div>

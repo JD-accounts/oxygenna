@@ -18,7 +18,7 @@
 angular.module('triAngularDashboards')
 .directive('todoWidget', function() {
     return {
-        require: 'widget2',
+        require: 'widget',
         restrict: 'A',
         link: function($scope, $element, attrs, widgetCtrl) {
             $scope.todos = [{
