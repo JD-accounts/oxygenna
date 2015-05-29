@@ -15,6 +15,7 @@
   }
   .widget-content {
     overflow: hidden;
+    flex-grow: 1;
     >img {
       display: block;
       max-width: 100%;
@@ -104,6 +105,7 @@
   .fc-month-view {
     tbody .fc-row {
       min-height: 1em;
+      max-height: 3em;
     }
 
     td, th {
@@ -174,6 +176,7 @@
   }
   .user-right {
     float: right;
+    width: 100%;
     .md-avatar {
       order: 2;
       margin-right: 0;
@@ -183,11 +186,14 @@
       h3 {
         text-align: right;
       }
-      p:before {
-        right: -8px;
-        border-width: 8px 8px 0px 0px;
-        border-top-color: inherit;
-      }
+      p {
+        float: right;
+        &:before {
+          right: -8px;
+          border-width: 8px 8px 0px 0px;
+          border-top-color: inherit;
+        }
+      }  
     }
   }
 }
