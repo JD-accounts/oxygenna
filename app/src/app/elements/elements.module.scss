@@ -136,23 +136,6 @@ $size-list: 16px 24px 32px 48px;
   }
 }
 
-// - Selects Pages
-.elements-select-example1 {
-  background: rgb(242, 242, 242);
-  .example-area {
-    padding: 24px;
-    width: 450px;
-    md-card-content {
-      padding: 16px;
-      background: white;
-    }
-    md-select {
-      // margin-top: 0px;
-      // margin-bottom: 0px;
-    }
-  }
-}
-
 // - Sidebar Pages
 .elements-sidebar-example {
   md-sidenav {
