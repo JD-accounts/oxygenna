@@ -82,8 +82,7 @@ angular.module('triAngularElements', [])
     })
     .state('admin-panel.default.elements-tabs', {
         url: '/elements/tabs',
-        templateUrl: 'app/elements/tabs.tmpl.html',
-        controller: 'TabsController'
+        templateUrl: 'app/elements/tabs.tmpl.html'
     })
     .state('admin-panel.default.elements-sidebars', {
         url: '/elements/sidebars',
