@@ -58,6 +58,7 @@ angular.module('triAngularEmail')
 
     // returns back to email list
     $scope.openlist = function() {
+        $( ".md-drop-menu-container" ).remove();
         $state.go($scope.baseState.name);
     };
 
