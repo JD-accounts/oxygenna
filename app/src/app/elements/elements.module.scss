@@ -166,17 +166,10 @@ $size-list: 16px 24px 32px 48px;
   }
 }
 
-// - Tooltips Pages
-.elements-tooltips-example {
-  .md-button {
-    margin: 50px 12px;
-  }
-}
-
-// - Whiteframes Pages
-.elements-whiteframes-example {
+// Whiteframe page
+.elements-whiteframe-example {
   md-whiteframe {
-    margin: 20px;
-    padding: 20px;
+    min-width: 500px;
+    background-color: white;
   }
 }
