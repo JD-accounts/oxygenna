@@ -3,150 +3,75 @@
 
     <p>Touching a text field places the cursor and automatically displays the keyboard. In addition to typing, text fields allow for a variety of other tasks, such as text selection (cut, copy, paste) and data lookup via auto-completion. See Patterns > Selection for text selection design.</p>
 
-    <h2 class="md-headline">Floating labels</h2>
+    <h2>Floating labels</h2>
     <p>With floating inline labels, when the user engages with the text input field, the labels move to float above the field.</p>
-    <div class="forms-example-box" layout="column" layout-align="center center">
-        <div class="example" layout="column">
-            <md-card flex>
-                <md-card-content>
-                    <h2 class="md-title">Create User</h2>
-                    <md-input-container>
-                        <label>Username</label>
-                        <input type="text">
-                    </md-input-container>
-                    <md-input-container>
-                        <label>Password</label>
-                        <input type="password">
-                    </md-input-container>
-                    <md-input-container>
-                        <label>Description</label>
-                        <textarea></textarea>
-                    </md-input-container>
-                    <div class="button-toolbar" layout="row" layout-align="end center">
-                        <md-button class="md-primary">Create</md-button>
-                        <md-button>Cancel</md-button>
-                    </div>
-                </md-card-content>
-            </md-card>
-        </div>
-    </div>
 
-    <h3 class="md-subhead">Example Code</h3>
-    <div hljs language="html">
-    <md-input-container>
-        <label>Username</label>
-        <input type="text">
-    </md-input-container>
-    <md-input-container>
-        <label>Password</label>
-        <input type="password">
-    </md-input-container>
-    <md-input-container>
-        <label>Description</label>
-        <textarea></textarea>
-    </md-input-container></div>
+    <md-tabs class="example-tabs margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="padding-40">
+                <md-card>
+                    <md-card-content ng-include="'app/forms/examples/inputs-float.tmpl.html'"></md-card-content>
+                </md-card>
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/forms/examples/inputs-float.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
 
-    <h2 class="md-headline">Forms with icons</h2>
+    <h2>Forms with icons</h2>
     <p>You can also add informative icons to your input fields.</p>
 
-    <div class="forms-example-box" layout="column" layout-align="center center">
-        <div class="example" layout="column">
-            <md-card flex>
-                <md-card-content>
-                    <h2 class="md-title">Create User</h2>
-                    <md-input-container md-no-float>
-                        <md-icon md-font-icon="icon-person"></md-icon>
-                        <input type="text" placeholder="Name">
-                    </md-input-container>
-                    <md-input-container md-no-float>
-                        <md-icon md-font-icon="icon-phone"></md-icon>
-                        <input type="text" placeholder="Phone Number">
-                    </md-input-container>
-                    <md-input-container md-no-float>
-                        <md-icon md-font-icon="icon-email"></md-icon>
-                        <input type="email" placeholder="Email (required)" ng-required="true">
-                    </md-input-container>
-                    <md-input-container md-no-float>
-                        <md-icon md-font-icon="icon-place"></md-icon>
-                        <input type="text" placeholder="Address">
-                    </md-input-container>
-                </md-card-content>
-            </md-card>
-        </div>
-    </div>
+    <md-tabs class="example-tabs margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="padding-40">
+                <md-card>
+                    <md-card-content ng-include="'app/forms/examples/inputs-icons.tmpl.html'"></md-card-content>
+                </md-card>
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/forms/examples/inputs-icons.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
 
-    <h3 class="md-subhead">Example Code</h3>
-    <div hljs language="html">
-    <md-input-container md-no-float>
-        <md-icon md-font-icon="icon-person"></md-icon>
-        <input type="text" placeholder="Name">
-    </md-input-container>
-    <md-input-container md-no-float>
-        <md-icon md-font-icon="icon-phone"></md-icon>
-        <input type="text" placeholder="Phone Number">
-    </md-input-container>
-    <md-input-container md-no-float>
-        <md-icon md-font-icon="icon-email"></md-icon>
-        <input type="email" placeholder="Email (required)" ng-required="true">
-    </md-input-container>
-    <md-input-container md-no-float>
-        <md-icon md-font-icon="icon-place"></md-icon>
-        <input type="text" placeholder="Address">
-    </md-input-container></div>
-
-    <h2 class="md-headline">Inputs with counter</h2>
+    <h2>Inputs with counter</h2>
     <p>You can use a character counter in fields where a character restriction is in place.</p>
 
-    <div class="forms-example-box" layout="column" layout-align="center center">
-        <div class="example" layout="column">
-            <md-card flex>
-                <md-card-content>
-                    <md-input-container>
-                        <label>Username (max 10 characters)</label>
-                        <input type="text" ng-model="username" md-maxlength="10">
-                    </md-input-container>
-                    <md-input-container>
-                        <label>Tweet</label>
-                        <textarea ng-model="tweet" md-maxlength="140"></textarea>
-                    </md-input-container>
-                </md-card-content>
-            </md-card>
-        </div>
-    </div>
+    <md-tabs class="example-tabs margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="padding-40">
+                <md-card>
+                    <md-card-content ng-include="'app/forms/examples/inputs-counter.tmpl.html'"></md-card-content>
+                </md-card>
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/forms/examples/inputs-counter.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
 
-    <h3 class="md-subhead">Example Code</h3>
-    <div hljs language="html">
-    <md-input-container>
-        <label>Username (max 10 characters)</label>
-        <input type="text" ng-model="username" md-maxlength="10">
-    </md-input-container>
-    <md-input-container>
-        <label>Tweet</label>
-        <textarea ng-model="tweet" md-maxlength="140"></textarea>
-    </md-input-container></div>
-
-    <h2 class="md-headline">Input state</h2>
+    <h2>Input state</h2>
     <p>You can also toggle the state of inputs by setting <code>ng-disabled</code></p>
 
-    <div class="forms-example-box" layout="row" layout-align="center center">
-        <div class="example" layout="column">
-            <md-card flex>
-                <md-card-content>
-                    <md-switch ng-model="inputDisabled">
-                        Disable Input
-                    </md-switch>
-                </md-card-content>
-            </md-card>
-        </div>
-        <div class="example" layout="column">
-            <md-card flex>
-                <md-card-content>
-                    <md-input-container>
-                        <label>Enable or Disable me</label>
-                        <input type="text" ng-model="username" ng-disabled="inputDisabled">
-                    </md-input-container>
-                </md-card-content>
-            </md-card>
-        </div>
-    </div>
+    <md-tabs class="example-tabs margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="padding-40">
+                <md-card>
+                    <md-card-content layout="row" layout-align="space-around center" ng-include="'app/forms/examples/inputs-states.tmpl.html'"></md-card-content>
+                </md-card>
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/forms/examples/inputs-states.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
 </md-content>
