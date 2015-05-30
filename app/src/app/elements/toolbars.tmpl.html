@@ -3,8 +3,18 @@
 
     <p>You can change the height of the toolbar by adding either the md-medium-tall or md-tall class to the toolbar.</p>
 
-    <md-content class="elements-toolbars-example md-whiteframe-z3" ng-include="'app/elements/examples/toolbar-1.tmpl.html'"></md-content>
-
-    <h3 class="md-subhead">Example Code</h3>
-    <div hljs language="html" include="'app/elements/examples/toolbar-1.tmpl.html'"></div>
+    <md-tabs class="elements-example margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="padding-40">
+                <md-card>
+                    <md-card-content ng-include="'app/elements/examples/toolbar-1.tmpl.html'"></md-card-content>
+                </md-card>
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/elements/examples/toolbar-1.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
 </div>
