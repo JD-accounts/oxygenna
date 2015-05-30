@@ -1,38 +1,27 @@
+// Elements Pages
+
 .elements-example {
   md-tab-content md-content {
     background: rgba(100, 100, 100, 0.1);
   }
 }
 
-// Elements Page
-
-.example-whiteframe-row {
-  md-whiteframe {
-    margin-right: 16px;
+.elements-example-nopadding {
+  md-card-content {
+    padding: 0px;
   }
 }
 
-// - Buttons
-.elements-page-buttons {
-  .md-button:not(.md-fab) {
-    min-width: 10em;
-  }
-}
-
+// Buttons page
 .elements-button-examples md-card-content {
   min-height: 100px;
 }
 
-.elements-page-intro {
-  font-size: 20px;
-  line-height: 32px;
-}
-
-.elements-try-out {
+.elements-buttons-try-out {
   text-align: right;
 }
 
-.elements-raised-usage {
+.elements-buttons-raised-usage {
   width: 400px;
   .elements-raised-content {
     padding: 16px;
@@ -45,7 +34,7 @@
   }
 }
 
-.elements-fab-usage {
+.elements-buttons-fab-usage {
   position: relative;
 
   .md-fab {
@@ -55,12 +44,12 @@
   }
 }
 
-.elements-flat-usage {
+.elements-buttons-flat-usage {
   width: 400px;
   padding: 16px;
 }
 
-.elements-flat-buttons {
+.elements-buttons-flat-buttons {
   .md-button {
     width: 100px;
     padding-left: 5px;
@@ -199,19 +188,5 @@ $size-list: 16px 24px 32px 48px;
   md-whiteframe {
     margin: 20px;
     padding: 20px;
-  }
-}
-
-// - Chips Pages
-.elements-chips-example {
-  md-card-content {
-    padding: 0px;
-  }
-}
-
-// Tables page
-.elements-table1-example {
-  md-card-content {
-    padding: 0px;
   }
 }
