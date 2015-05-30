@@ -11,7 +11,7 @@
  * Handles binding forms page
  */
 angular.module('triAngularForms').
-controller('AutocompleteController', function ($timeout, $q, $log) {
+controller('Autocomplete1Controller', function ($timeout, $q, $log) {
     var self = this;
 
     // list of `state` value/display objects

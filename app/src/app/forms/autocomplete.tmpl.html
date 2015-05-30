@@ -1,17 +1,23 @@
 <md-content class="padded-docs-page elements-page-cards md-padding" md-scroll-y flex>
     <p class="md-subhead">You can use autocomplete to search for matches from local or remote data sources.</p>
 
-    <div class="forms-example-box" layout="column" layout-align="center center">
-        <div class="example" layout="column">
-            <md-card flex>
-                <md-card-content ng-include="'app/forms/examples/autocomplete-1.tmpl.html'"></md-card-content>
-            </md-card>
-        </div>
-    </div>
-
-    <h3 class="md-subhead">Example Code</h3>
-    <p class="md-caption">HTML</p>
-    <div hljs language="html" include="'app/forms/examples/autocomplete-1.tmpl.html'"></div>
-    <p class="md-caption">JS</p>
-    <div hljs language="javascript" include="'app/forms/autocomplete-controller.js'"></div>
+    <md-tabs class="example-tabs margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="padding-40">
+                <md-card>
+                    <md-card-content ng-controller="Autocomplete1Controller as ctrl" ng-include="'app/forms/examples/autocomplete-1.tmpl.html'"></md-card-content>
+                </md-card>
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/forms/examples/autocomplete-1.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+        <md-tab label="JS">
+            <md-content>
+                <div flex hljs language="javascript" include="'app/forms/examples/autocomplete-1-controller.js'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
 </md-content>

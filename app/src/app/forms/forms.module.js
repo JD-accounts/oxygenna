@@ -23,9 +23,7 @@ angular.module('triAngularForms', [])
     })
     .state('admin-panel.default.forms-autocomplete', {
         url: '/forms/autocomplete',
-        templateUrl: 'app/forms/autocomplete.tmpl.html',
-        controller: 'AutocompleteController',
-        controllerAs: 'ctrl',
+        templateUrl: 'app/forms/autocomplete.tmpl.html'
     })
     .state('admin-panel.default.forms-validation', {
         url: '/forms/validation',
