@@ -88,5 +88,10 @@
     "LANGUAGES": {
         "ENGLISH": "English",
         "FRENCH": "French"
+    },
+    "TABLES": {
+        "NEXT": "Next Page",
+        "PREV": "Previous Page",
+        "OF": "of"
     }
 }

@@ -100,8 +100,7 @@ angular.module('triAngularElements', [])
     })
     .state('admin-panel.default.elements-tables', {
         url: '/elements/tables',
-        templateUrl: 'app/elements/tables.tmpl.html',
-        controller: 'TablesController',
+        templateUrl: 'app/elements/tables.tmpl.html'
     })
     .state('admin-panel.default.elements-lists', {
         url: '/elements/lists',
