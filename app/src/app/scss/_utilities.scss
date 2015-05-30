@@ -148,3 +148,20 @@ $i : 0;
 .clear:after {
     clear: both;
 }
+
+// Example Tabs
+.example-tabs {
+  md-tab-content md-content {
+    background: rgba(100, 100, 100, 0.1);
+  }
+}
+
+.example-tabs-nopadding {
+  md-card-content {
+    padding: 0px;
+  }
+}
+
+.example-tabs-500-height {
+  height: 500px;
+}
