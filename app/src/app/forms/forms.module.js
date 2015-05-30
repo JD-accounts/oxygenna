@@ -19,7 +19,6 @@ angular.module('triAngularForms', [])
     .state('admin-panel.default.forms-binding', {
         url: '/forms/binding',
         templateUrl: 'app/forms/binding.tmpl.html',
-        controller: 'BindingController'
     })
     .state('admin-panel.default.forms-autocomplete', {
         url: '/forms/autocomplete',

@@ -11,9 +11,9 @@
  * Handles binding forms page
  */
 angular.module('triAngularForms').
-controller('BindingController', function ($scope) {
+controller('Binding1Controller', function ($scope) {
     $scope.user = {
-        username: '',
+        username: 'Morris',
         password: '',
         description: '',
         favouriteColor: ''
