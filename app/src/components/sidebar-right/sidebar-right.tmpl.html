@@ -30,7 +30,7 @@
                 <md-content>
                     <md-list>
                         <div ng-repeat="group in notificationGroups">
-                            <md-subheader class="md-accent">{{group.name}}</md-subheader>
+                            <md-subheader class="md-primary">{{group.name}}</md-subheader>
                             <md-list-item ng-repeat="notification in group.notifications" layout="row" layout-align="space-between center">
                                 <md-icon md-font-icon="{{notification.icon}}" ng-style="{ color: notification.iconColor }"></md-icon>
                                 <p>{{notification.title}}</p>
@@ -49,7 +49,7 @@
                 <md-content>
                     <md-list>
                         <div ng-repeat="group in settingsGroups">
-                            <md-subheader class="md-accent">{{group.name | translate}}</md-subheader>
+                            <md-subheader class="md-primary">{{group.name | translate}}</md-subheader>
                             <md-list-item ng-repeat="setting in group.settings" layout="row" layout-align="space-around center">
                                 <md-icon md-font-icon="{{setting.icon}}"></md-icon>
                                 <p>{{setting.title | translate}}</p>
@@ -57,7 +57,7 @@
                             </md-list-item>
                         </div>
                         <div ng-repeat="group in statisticsGroups">
-                            <md-subheader class="md-accent">{{group.name | translate}}</md-subheader>
+                            <md-subheader class="md-primary">{{group.name | translate}}</md-subheader>
                             <md-list-item ng-repeat="stat in group.stats" layout="column" layout-align="space-around start">
                                 <p>{{stat.title | translate}}</p>
                                 <md-progress-linear ng-class="stat.mdClass" md-mode="determinate" ng-value="stat.value"></md-progress-linear>
