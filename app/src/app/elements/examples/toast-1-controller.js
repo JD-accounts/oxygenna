@@ -11,11 +11,11 @@
  * Handles toasts element page
  */
 angular.module('triAngularElements').
-controller('ToastsController', function ($scope, $mdToast) {
+controller('Toast1Controller', function ($scope, $mdToast) {
     $scope.showToast = function($event, position) {
         var $button = angular.element($event.currentTarget);
         $mdToast.show({
-            templateUrl: 'app/elements/examples/toast-template.tmpl.html',
+            template: "<md-toast><span flex>I'm a toast</span></md-toast>",
             position: position,
             hideDelay: 3000,
             parent: $button.parent()

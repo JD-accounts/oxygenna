@@ -3,8 +3,20 @@
 
     <p>They automatically disappear after a timeout or after user interaction elsewhere on the screen, particularly after interactions that summon a new surface or activity. Toasts can be swiped off screen. They do not block input on the screens on which they appear. Show only one snackbar on screen at a time.</p>
 
-    <md-content class="elements-toast-example md-whiteframe-z3" ng-include="'app/elements/examples/toast-1.tmpl.html'"></md-content>
-
-    <h3 class="md-subhead">Example Code</h3>
-    <div hljs language="html" include="'app/elements/examples/toast-1.tmpl.html'"></div>
+    <md-tabs class="elements-example margin-bottom-40" md-dynamic-height md-border-bottom>
+        <md-tab label="example">
+            <md-content class="elements-sidebar-example" ng-controller="Toast1Controller" ng-include="'app/elements/examples/toast-1.tmpl.html'">
+            </md-content>
+        </md-tab>
+        <md-tab label="HTML">
+            <md-content>
+                <div flex hljs language="html" include="'app/elements/examples/toast-1.tmpl.html'"></div>
+            </md-content>
+        </md-tab>
+        <md-tab label="JS">
+            <md-content>
+                <div flex hljs language="javascript" include="'app/elements/examples/toast-1-controller.js'"></div>
+            </md-content>
+        </md-tab>
+    </md-tabs>
 </div>

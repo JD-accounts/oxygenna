@@ -62,8 +62,7 @@ angular.module('triAngularElements', [])
     })
     .state('admin-panel.default.elements-toasts', {
         url: '/elements/toasts',
-        templateUrl: 'app/elements/toasts.tmpl.html',
-        controller: 'ToastsController'
+        templateUrl: 'app/elements/toasts.tmpl.html'
     })
     .state('admin-panel.default.elements-progress', {
         url: '/elements/progress',
