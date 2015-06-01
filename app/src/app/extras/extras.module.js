@@ -12,7 +12,7 @@ angular.module('triAngularExtras', [])
     $translatePartialLoaderProvider.addPart('app/extras');
 
     $stateProvider
-    .state('admin-panel.default.extra-gallery', {
+    .state('admin-panel-no-scroll.default.extra-gallery', {
         url: '/extras/gallery',
         templateUrl: 'app/extras/gallery.tmpl.html',
         controller: 'GalleryController'
@@ -39,7 +39,7 @@ angular.module('triAngularExtras', [])
         priority: 8.1,
         children: [{
             name: 'MENU.EXTRAS.GALLERY',
-            state: 'admin-panel.default.extra-gallery',
+            state: 'admin-panel-no-scroll.default.extra-gallery',
             type: 'link',
         },{
             name: 'MENU.EXTRAS.AVATARS',
