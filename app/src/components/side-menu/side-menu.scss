@@ -35,6 +35,9 @@ side-menu {
   line-height: inherit;
   font-size: 1.5rem;
 }
+.side-menu-icon[md-font-icon] {
+  width: 24px;
+}
 .menu-toggle-icon {
   text-align: center;
   float: right;
