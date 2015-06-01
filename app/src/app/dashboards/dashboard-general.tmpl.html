@@ -66,7 +66,7 @@
 
         <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" content-layout="column" content-layout-align="start">
             <md-divider></md-divider>
-            <md-list class="padding-top-20" flex>
+            <md-list class="padding-top-20 padding-bottom-0" flex>
                 <md-list-item ng-repeat="chat in conversation" class="md-2-line" ng-class="userClass($even)" ng-init="userColor = $even ? 'cyan' : 'light-green'">
                     <img class="md-avatar" ng-src="{{chat.image}}" alt="{{chat.name}}">
                     <div class="md-list-item-text">
@@ -76,6 +76,12 @@
                     </div>
                 </md-list-item>
             </md-list>
+            <div layout="row" layout-align="space-between center">
+                <md-input-container flex class="margin-left-20 margin-right-20">
+                    <label>Message</label>
+                    <input type="text">
+                </md-input-container>
+            </div>
         </widget>
     </div>
     <div layout="row" layout-sm="column" layout-margin>

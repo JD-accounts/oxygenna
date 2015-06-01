@@ -105,9 +105,9 @@ $size-list: 16px 24px 32px 48px;
 }
 
 // - Tabs Pages
-.elements-tabs-example {
-  md-grid-tile {
-    background-size: 100%;
+.example-tabs-content {
+  md-content {
+    background: none !important;
   }
 }
 
