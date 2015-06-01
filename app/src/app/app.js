@@ -119,7 +119,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
                 controller: 'DefaultToolbarController'
             },
             content: {
-                template: '<div flex ui-view class="full-height"></div>'
+                template: '<div flex ui-view layout="column"></div>'
             }
         },
     })

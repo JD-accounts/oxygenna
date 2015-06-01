@@ -12,7 +12,7 @@ angular.module('triAngularTodo', [])
     $translatePartialLoaderProvider.addPart('app/todo');
 
     $stateProvider
-    .state('admin-panel.default.todo', {
+    .state('admin-panel-no-scroll.default.todo', {
         url: '/todo',
         templateUrl: 'app/todo/todo.tmpl.html',
         controller: 'TodoController'
@@ -22,7 +22,7 @@ angular.module('triAngularTodo', [])
     SideMenu.addMenu({
         name: 'MENU.TODO.TITLE',
         icon: 'icon-done',
-        state: 'admin-panel.default.todo',
+        state: 'admin-panel-no-scroll.default.todo',
         type: 'link',
         priority: 2.3,
     });

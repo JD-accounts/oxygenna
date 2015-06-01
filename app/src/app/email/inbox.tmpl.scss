@@ -83,42 +83,6 @@
   max-height: 500px;
 }
 
-// - Sticky subheader
-.email-inbox-list .md-sticky-clone[sticky-state="active"] {
-  position: relative;
-  transform: translate3d(0, 0, 0);
-}
-
-.email-inbox-list .md-sticky-clone[sticky-state="active"]:not(.md-sticky-no-effect):after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  right: 0;
-  display: block;
-  background: rgba(0,0,0,0.035);
-  animation: subheaderStickyHoverIn 0.3s ease-out both;
-}
-
-@keyframes subheaderStickyHoverIn {
-  0% {
-    box-shadow: 0 0 0 0 transparent;
-  }
-
-  100% {
-    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16);
-  }
-}
-
-@keyframes subheaderStickyHoverOut {
-  0% {
-    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16);
-  }
-  100% {
-    box-shadow: 0 0 0 0 transparent;
-  }
-}
-
 #ui-admin-email {
   &.ng-enter {
     @include slideInRight();
