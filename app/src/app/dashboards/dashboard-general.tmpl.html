@@ -65,11 +65,10 @@
         </widget>
 
         <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" md-theme="blue" content-layout="column" content-layout-align="start">
-            <md-list class="overlay-5" flex>
+            <md-list class="overlay-5 padding-top-20" flex>
                 <md-list-item ng-repeat="chat in conversation" class="md-2-line" ng-class="userClass($even)" ng-init="userColor = $even ? 'cyan' : 'light-green'">
                     <img class="md-avatar" ng-src="{{chat.image}}" alt="{{chat.name}}">
                     <div class="md-list-item-text">
-                        <h3>{{chat.name}}</h3>
                         <p palette-background="{{userColor}}:200" ng-repeat="message in chat.messages">
                            {{message}}
                         </p>
