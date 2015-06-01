@@ -28,7 +28,8 @@ angular.module('triAngularExtras', [])
         controller: 'NotFoundController'
     })
     .state('admin-panel.default.extra-blank', {
-        url: '/extras/blank'
+        url: '/extras/blank',
+        templateUrl: 'app/extras/blank.tmpl.html',
     })
 })
 .run(function(SideMenu) {
