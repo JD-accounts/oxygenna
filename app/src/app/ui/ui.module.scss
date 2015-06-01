@@ -1,11 +1,7 @@
-/**
-* Colors Page
-**/
-
+// Colors Page
 .ui-color-grid md-grid-tile {
   cursor: pointer;
 }
-
 .ui-color-dialog-content {
   padding: 0px;
   md-list {
@@ -14,37 +10,26 @@
   }
 }
 
-/**
-* Typography Page
-**/
-
+// Typography Page
 .ui-typography-try-font {
   width: 80%;
   text-align: center;
 }
-
 .ui-typography-heading-example {
   margin: 0;
 }
-
 .ui-screen {
   .tabpanel-container div {
     padding: 20px;
   }
 }
 
-/**
-* Icons Pages
-**/
-
+// Icons Pages
 .ui-icons-box-icon {
   cursor: pointer;
 }
 
-
-/**
-* Skins Page
-**/
+// Skins Page
 .ui-skin-preview {
   border: 1px solid black;
 }

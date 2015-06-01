@@ -64,8 +64,9 @@
             <img src="http://4.bp.blogspot.com/-ci8zjNrp50I/U_yCxyehuzI/AAAAAAAADX4/uiAIDRcpUB4/s1600/ahagzjsozh.jpg" alt="" width="600">
         </widget>
 
-        <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" md-theme="blue" content-layout="column" content-layout-align="start">
-            <md-list class="overlay-5 padding-top-20" flex>
+        <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" content-layout="column" content-layout-align="start">
+            <md-divider></md-divider>
+            <md-list class="padding-top-20" flex>
                 <md-list-item ng-repeat="chat in conversation" class="md-2-line" ng-class="userClass($even)" ng-init="userColor = $even ? 'cyan' : 'light-green'">
                     <img class="md-avatar" ng-src="{{chat.image}}" alt="{{chat.name}}">
                     <div class="md-list-item-text">

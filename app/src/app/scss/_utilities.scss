@@ -149,6 +149,16 @@ $i : 0;
     clear: both;
 }
 
+// Animation content wrapper
+.animate-wrapper {
+  position: relative;
+  > .ng-enter, > .ng-leave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 // Example Tabs
 .example-tabs {
   md-tab-content md-content {
