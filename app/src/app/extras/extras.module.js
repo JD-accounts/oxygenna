@@ -41,13 +41,15 @@ angular.module('triAngularExtras', [])
             name: 'MENU.EXTRAS.AVATARS',
             state: 'admin-panel.default.extra-avatars',
             type: 'link',
-        },
-        {
-            name: 'MENU.EXTRAS.404.TITLE',
+        },{
+            name: 'MENU.EXTRAS.404',
             state: '404',
             type: 'link',
-        },
-        {
+        },{
+            name: 'MENU.EXTRAS.500',
+            state: '500',
+            type: 'link',
+        },{
             name: 'MENU.EXTRAS.BLANK',
             state: 'admin-panel.default.extra-blank',
             type: 'link',
