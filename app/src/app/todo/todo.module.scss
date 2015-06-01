@@ -1,8 +1,9 @@
-.todo-container {	
+.todo-container {
+	background: rgba(100, 100, 100, 0.1);
 	position: relative;
-	.md-button.md-fab.md-fab-bottom-right {
-		right:60px;
-		bottom:35px;
+
+	md-card {
+		min-width: 400px;
 	}
 
 	.slide {

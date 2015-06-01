@@ -1,24 +1,26 @@
-<div class="todo-container padding-70" layout="column" layout-margin>    
-	<h3>{{'MENU.TODO.HEADER' | translate}}</h3>
-	
-	<md-divider></md-divider>
-	
-	<md-list class="margin-bottom-10">
-		<md-list-item ng-repeat="message in messages | orderBy:orderTasks" ng-class="{'md-primary': message.priority === 'high', 'md-accent': message.priority === 'medium', 'md-warn': message.priority === 'low'}" class="slide">
-			<md-checkbox ng-model="message.selected"></md-checkbox>
-			<p>
-				{{message.description}}
-			</p>
-			<md-text-float>
-				{{message.priority}}
-			</md-text-float>
-		</md-list-item>
-	</md-list>
-	
-	<md-divider></md-divider>
-	
+<div class="padded-content-page todo-container" layout="column" layout-align="center center">
+	<md-card>
+	    <md-toolbar md-theme="{{triSkin.elements.content}}">
+	        <h2 class="md-toolbar-tools">
+	            {{'MENU.TODO.HEADER' | translate}}
+	        </h2>
+	    </md-toolbar>
+      	<md-card-content>
+			<md-list class="margin-bottom-10">
+				<md-list-item ng-repeat="message in messages | orderBy:orderTasks" ng-class="{'md-primary': message.priority === 'high', 'md-accent': message.priority === 'medium', 'md-warn': message.priority === 'low'}" class="slide">
+					<md-checkbox ng-model="message.selected"></md-checkbox>
+					<p>
+						{{message.description}}
+					</p>
+					<md-text-float>
+						{{message.priority}}
+					</md-text-float>
+				</md-list-item>
+			</md-list>
+        </md-card-content>
+    </md-card>
+
 	<md-button class="md-accent md-fab md-fab-bottom-right" ng-click="addTodo($event)">
        <md-icon md-font-icon="fa fa-plus"></md-icon>
     </md-button>
-	 
 </div>

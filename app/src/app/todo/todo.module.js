@@ -24,6 +24,6 @@ angular.module('triAngularTodo', [])
         icon: 'icon-done',
         state: 'admin-panel.default.todo',
         type: 'link',
-        priority: 9.1,
+        priority: 2.3,
     });
 });
