@@ -9,17 +9,17 @@
  */
 angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
 .constant('EMAIL_ROUTES', [{
-    state: 'email-panel.default.inbox',
+    state: 'admin-panel-no-scroll.email.inbox',
     name: 'MENU.EMAIL.INBOX',
     url: '/email/inbox',
     icon: 'icon-inbox'
 },{
-    state: 'email-panel.default.trash',
+    state: 'admin-panel-no-scroll.email.trash',
     name: 'MENU.EMAIL.TRASH',
     url: '/email/trash',
     icon: 'icon-remove-circle'
 },{
-    state: 'email-panel.default.sent',
+    state: 'admin-panel-no-scroll.email.sent',
     name: 'MENU.EMAIL.SENT',
     url: '/email/sent',
     icon: 'icon-mail'
@@ -28,12 +28,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
     $translatePartialLoaderProvider.addPart('app/email');
 
     $stateProvider
-    .state('email-panel', {
-        abstract: true,
-        templateUrl: 'app/email/layouts/email-panel.tmpl.html',
-    })
-
-    .state('email-panel.default', {
+    .state('admin-panel-no-scroll.email', {
         abstract: true,
         views: {
             sidebarLeft: {

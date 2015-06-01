@@ -91,16 +91,65 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         },
     })
 
-    .state('access-undefined', {
-        url: '/access-undefined/:toState',
-        templateUrl: 'app/misc/access-undefined.html',
-        controller: function($scope, $stateParams) {
-            $scope.state = $stateParams.toState;
+    .state('admin-panel-no-scroll', {
+        abstract: true,
+        templateUrl: 'app/layouts/no-scroll/no-scroll.tmpl.html',
+        data: {
+            toolbar: {
+                extraClass: '',
+                background: false,
+                shrink: true
+            },
+        }
+    })
+
+    .state('admin-panel-no-scroll.default', {
+        abstract: true,
+        views: {
+            sidebarLeft: {
+                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html',
+                controller: 'SidebarLeftController'
+            },
+            sidebarRight: {
+                templateUrl: 'components/sidebar-right/sidebar-right.tmpl.html',
+                controller: 'SidebarRightController'
+            },
+            toolbar: {
+                templateUrl: 'components/toolbars/default.tmpl.html',
+                controller: 'DefaultToolbarController'
+            },
+            content: {
+                template: '<div flex ui-view class="full-height"></div>'
+            }
+        },
+    })
+
+    .state('404', {
+        url: '/404',
+        templateUrl: '404.tmpl.html',
+        controller: function($scope, $state, APP) {
+            $scope.app = APP;
+
+            $scope.goHome = function() {
+                $state.go('admin-panel.default.dashboard-analytics');
+            };
+        }
+    })
+
+    .state('500', {
+        url: '/500',
+        templateUrl: '500.tmpl.html',
+        controller: function($scope, APP) {
+            $scope.app = APP;
         }
     });
 
+    // set default routes when no path specified
+    $urlRouterProvider.when('', '/dashboards/analytics');
+    $urlRouterProvider.when('/', '/dashboards/analytics');
+
     // always goto 404 if route not found
-    $urlRouterProvider.otherwise('/introduction');
+    $urlRouterProvider.otherwise('/404');
 
     // set prefix for local storage
     localStorageServiceProvider

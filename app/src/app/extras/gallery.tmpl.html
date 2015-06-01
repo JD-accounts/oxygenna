@@ -1,16 +1,21 @@
-<md-content class="padded-docs-page md-padding" md-scroll-y flex>
-    <p class="md-subhead">Grid lists are an alternative to standard list views. Grid lists are distinct from grids used for layouts and other visual presentations.</p>
-    <p>Use semi-transparent panels on top of the grid list items to display your labels. This allows you to control the contrast and ensures legibility of the labels while letting the content "shine through".</p>
-
-    <md-card class="elements-grids-example">
-        <md-toolbar class="md-accent">
-            <div class="md-toolbar-tools">
-                <h2>My Gallery</h2>
-            </div>
-        </md-toolbar>
-        <div ng-include="'app/extras/examples/gallery-1.tmpl.html'"></div>
-    </md-card>
-
-    <h3 class="md-subhead">Example Code</h3>
-    <div hljs language="html" include="'app/extras/examples/gallery-1.tmpl.html'"></div>
+<style>
+    md-backdrop.md-opaque {
+        background-color: black !important;
+    }
+</style>
+<md-content class="extras-gallery-container">
+    <md-list>
+        <div ng-repeat="day in feed">
+            <md-subheader>{{day.date | amCalendar}}</md-subheader>
+            <md-list-item>
+                <md-grid-list flex md-cols="6" md-cols-sm="4" md-row-height="4:3" md-gutter="4px">
+                    <md-grid-tile ng-click="openImage(day, image, $event)" md-rowspan="{{image.rowspan}}" md-colspan="{{image.colspan}}" ng-repeat="image in day.images" ng-style="{ 'background-image': 'url(' + image.url + ')', 'background-size' : 'cover' }">
+                        <md-grid-tile-footer>
+                            <h3>{{image.title}}</h3>
+                        </md-grid-tile-footer>
+                    </md-grid-tile>
+                </md-grid-list>
+            </md-list-item>
+        </div>
+    </md-list>
 </md-content>

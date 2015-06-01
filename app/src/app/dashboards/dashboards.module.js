@@ -37,12 +37,12 @@ angular.module('triAngularDashboards', [])
         type: 'dropdown',
         priority: 2.1,
         children: [{
-            name: 'MENU.DASHBOARDS.GENERAL',
-            state: 'admin-panel.default.dashboard-general',
-            type: 'link',
-        },{
             name: 'MENU.DASHBOARDS.ANALYTICS',
             state: 'admin-panel.default.dashboard-analytics',
+            type: 'link',
+        },{
+            name: 'MENU.DASHBOARDS.GENERAL',
+            state: 'admin-panel.default.dashboard-general',
             type: 'link',
         },{
             name: 'MENU.DASHBOARDS.SERVER',

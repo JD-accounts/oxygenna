@@ -12,7 +12,7 @@ angular.module('triAngularExtras', [])
     $translatePartialLoaderProvider.addPart('app/extras');
 
     $stateProvider
-    .state('admin-panel.default.extra-gallery', {
+    .state('admin-panel-no-scroll.default.extra-gallery', {
         url: '/extras/gallery',
         templateUrl: 'app/extras/gallery.tmpl.html',
         controller: 'GalleryController'
@@ -22,13 +22,9 @@ angular.module('triAngularExtras', [])
         templateUrl: 'app/extras/avatars.tmpl.html',
         controller: 'AvatarsController'
     })
-    .state('not-found', {
-        url: '/404',
-        templateUrl: 'app/extras/404.tmpl.html',
-        controller: 'NotFoundController'
-    })
     .state('admin-panel.default.extra-blank', {
-        url: '/extras/blank'
+        url: '/extras/blank',
+        templateUrl: 'app/extras/blank.tmpl.html',
     })
 })
 .run(function(SideMenu) {
@@ -39,7 +35,7 @@ angular.module('triAngularExtras', [])
         priority: 8.1,
         children: [{
             name: 'MENU.EXTRAS.GALLERY',
-            state: 'admin-panel.default.extra-gallery',
+            state: 'admin-panel-no-scroll.default.extra-gallery',
             type: 'link',
         },{
             name: 'MENU.EXTRAS.AVATARS',
@@ -48,7 +44,7 @@ angular.module('triAngularExtras', [])
         },
         {
             name: 'MENU.EXTRAS.404.TITLE',
-            state: 'not-found',
+            state: '404',
             type: 'link',
         },
         {

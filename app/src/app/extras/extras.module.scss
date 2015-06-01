@@ -3,3 +3,15 @@
   background-image: url(http://ingledow-staging.s3.amazonaws.com/media/blog/2014/12/05/material-design.jpg);
   background-size: cover;
 }
+
+// Gallery Page
+.extras-gallery-container {
+  height: 100%;
+}
+
+.extras-image-dialog {
+  img {
+    max-width: 100%;
+    max-height: 480px;
+  }
+}
