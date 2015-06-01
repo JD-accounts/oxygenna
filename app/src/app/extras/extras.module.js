@@ -22,11 +22,6 @@ angular.module('triAngularExtras', [])
         templateUrl: 'app/extras/avatars.tmpl.html',
         controller: 'AvatarsController'
     })
-    .state('not-found', {
-        url: '/404',
-        templateUrl: 'app/extras/404.tmpl.html',
-        controller: 'NotFoundController'
-    })
     .state('admin-panel.default.extra-blank', {
         url: '/extras/blank',
         templateUrl: 'app/extras/blank.tmpl.html',
@@ -49,7 +44,7 @@ angular.module('triAngularExtras', [])
         },
         {
             name: 'MENU.EXTRAS.404.TITLE',
-            state: 'not-found',
+            state: '404',
             type: 'link',
         },
         {
