@@ -91,6 +91,40 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         },
     })
 
+    .state('admin-panel-no-scroll', {
+        abstract: true,
+        templateUrl: 'app/layouts/no-scroll/no-scroll.tmpl.html',
+        data: {
+            toolbar: {
+                extraClass: '',
+                background: false,
+                shrink: true
+            },
+        }
+    })
+
+    .state('admin-panel-no-scroll.default', {
+        abstract: true,
+        views: {
+            sidebarLeft: {
+                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html',
+                controller: 'SidebarLeftController'
+            },
+            sidebarRight: {
+                templateUrl: 'components/sidebar-right/sidebar-right.tmpl.html',
+                controller: 'SidebarRightController'
+            },
+            toolbar: {
+                templateUrl: 'components/toolbars/default.tmpl.html',
+                controller: 'DefaultToolbarController'
+            },
+            content: {
+                template: '<div flex ui-view class="full-height"></div>'
+            }
+        },
+    })
+
+
     .state('access-undefined', {
         url: '/access-undefined/:toState',
         templateUrl: 'app/misc/access-undefined.html',
