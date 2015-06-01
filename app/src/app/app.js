@@ -128,11 +128,19 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         url: '/404',
         templateUrl: '404.tmpl.html',
         controller: function($scope, $state, APP) {
-            $scope.appName = APP.name;
+            $scope.app = APP;
 
             $scope.goHome = function() {
                 $state.go('admin-panel.default.dashboard-analytics');
             };
+        }
+    })
+
+    .state('500', {
+        url: '/500',
+        templateUrl: '500.tmpl.html',
+        controller: function($scope, APP) {
+            $scope.app = APP;
         }
     });
 
