@@ -103,6 +103,7 @@
     "500": {
         "TITLE": "500",
         "MESSAGE": "Something went wrong.",
-        "DESCRIPTION": "Sorry, something has gone wrong."
+        "DESCRIPTION": "Sorry, something has gone wrong.",
+        "HOME": "Go back home"
     }
 }
