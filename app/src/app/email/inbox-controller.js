@@ -10,7 +10,6 @@
  */
 angular.module('triAngularEmail')
 .controller('InboxController', function ($scope, $filter, $location, $state, $mdMedia, $mdBottomSheet, $stateParams, $mdDialog, $mdToast, emails, contacts) {
-    console.log($state.current);
     // store the base state of where we are /inbox or /trash or /sent
     // this can be then used if we close / delete email to return to
     $scope.baseState = $state.current;
@@ -136,10 +135,13 @@ angular.module('triAngularEmail')
         }
     });
 
-    // keep a watch for changes to size of page
-    $scope.$watch(function() {
 
-        // if not a small mobile view don't show the list - unless we are on the$scope.inboxBasePath + /mail list page
-        $scope.showEmailList = true;
-    });
+    function checkEmailList() {
+        $scope.showEmailList = !($mdMedia('sm') && $state.current.resolve.email !== undefined);
+    }
+
+    // add a watch for when the url location changes
+    $scope.$on('$locationChangeSuccess', checkEmailList);
+
+    checkEmailList();
 });
