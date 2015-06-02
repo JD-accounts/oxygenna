@@ -13,11 +13,15 @@ gulp.task('partials', function () {
     paths.src + '/{app,components}/**/*.html',
     paths.tmp + '/{app,components}/**/*.html'
   ])
-    // .pipe($.minifyHtml({
-    //   empty: true,
-    //   spare: true,
-    //   quotes: true
-    // }))
+    .pipe($.if(function(file) {
+        return $.match(file, ['!**/examples/*.html']);
+      },
+      $.minifyHtml({
+        empty: true,
+        spare: true,
+        quotes: true
+      }))
+    )
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
       module: 'triAngular'
     }))
@@ -81,6 +85,12 @@ gulp.task('translations', function () {
     .pipe($.size());
 });
 
+gulp.task('data', function () {
+  return gulp.src('src/**/data/*.json')
+    .pipe(gulp.dest('dist'))
+    .pipe($.size());
+});
+
 gulp.task('misc', function () {
   return gulp.src(paths.src + '/**/*.ico')
     .pipe(gulp.dest(paths.dist + '/'));
@@ -90,4 +100,4 @@ gulp.task('clean', function (done) {
   $.del([paths.dist + '/', paths.tmp + '/'], done);
 });
 
-gulp.task('buildapp', ['html', 'images', 'fonts', 'translations', 'misc']);
+gulp.task('buildapp', ['html', 'images', 'fonts', 'translations', 'misc', 'data']);

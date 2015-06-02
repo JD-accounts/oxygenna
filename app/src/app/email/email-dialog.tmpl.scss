@@ -1,4 +1,9 @@
 // Email Dialog
+.email-dialog {
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .email-dialog-to {
   box-shadow: 0 1px rgb(224,224,224);
   .md-icon-button {
