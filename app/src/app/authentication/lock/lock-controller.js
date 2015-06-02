@@ -26,9 +26,7 @@ angular.module('triAngularAuthentication')
     };
 
 
-    $scope.logoutClick = function() {
-        // terminate session here
-
+    $scope.logoutClick = function() {        
         // go back to login screen
         $state.go('public.auth.login');
     };
