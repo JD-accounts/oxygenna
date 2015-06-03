@@ -91,6 +91,13 @@ gulp.task('data', function () {
     .pipe($.size());
 });
 
+gulp.task('examplejs', function () {
+  return gulp.src('src/**/examples/*.js')
+    .pipe(gulp.dest('dist'))
+    .pipe($.size());
+});
+
+
 gulp.task('misc', function () {
   return gulp.src(paths.src + '/**/*.ico')
     .pipe(gulp.dest(paths.dist + '/'));
@@ -100,4 +107,4 @@ gulp.task('clean', function (done) {
   $.del([paths.dist + '/', paths.tmp + '/'], done);
 });
 
-gulp.task('buildapp', ['html', 'images', 'fonts', 'translations', 'misc', 'data']);
+gulp.task('buildapp', ['html', 'images', 'fonts', 'translations', 'misc', 'data', 'examplejs']);
