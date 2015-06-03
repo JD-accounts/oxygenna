@@ -11,13 +11,13 @@
                     </h3>
                 </div>
                 <div class="widget-buttons">
-                    <md-button class="widget-button md-icon-button" ng-click="changeMonth('prev')">
+                    <md-button class="widget-button md-icon-button" ng-click="changeMonth('prev')" aria-label="previous month">
                         <md-icon md-font-icon="icon-chevron-left"></md-icon>
                     </md-button>
-                    <md-button hide-sm hide-md class="widget-button md-icon-button" ng-click="changeMonth('today')">
+                    <md-button hide-sm hide-md class="widget-button md-icon-button" ng-click="changeMonth('today')" aria-label="today">
                         <md-icon md-font-icon="icon-today"></md-icon>
                     </md-button>
-                    <md-button class="widget-button md-icon-button" ng-click="changeMonth('next')">
+                    <md-button class="widget-button md-icon-button" ng-click="changeMonth('next')" aria-label="next month">
                         <md-icon md-font-icon="icon-chevron-right"></md-icon>
                     </md-button>
                 </div>
@@ -33,7 +33,7 @@
                 <md-divider></md-divider>
                 <div flex="20" layout="row" layout-align="space-between center" layout-padding>
                     <span>Monday 1st March</span>
-                    <md-button class="md-icon-button">
+                    <md-button class="md-icon-button" aria-label="call">
                         <md-icon md-font-icon="icon-call"></md-icon>
                     </md-button>
                 </div>
@@ -43,7 +43,7 @@
                 <md-divider></md-divider>
                 <div flex="20" layout="row" layout-align="space-between center" layout-padding>
                     <span>Tuesday 2st March</span>
-                    <md-button class="md-icon-button">
+                    <md-button class="md-icon-button" aria-label="clean">
                         <md-icon md-font-icon="icon-event"></md-icon>
                     </md-button>
                 </div>
@@ -116,8 +116,12 @@
                     <i class="fa fa-twitter font-size-4 opacity-50"></i>
                     <h3 flex hide-sm class="md-subhead">Oxygenna's feed</h3>
                     <div class="widget-buttons">
-                        <md-button class="md-icon-button" ng-click="prevTweet()"><md-icon md-font-icon="icon-keyboard-arrow-left"></md-icon></md-button>
-                        <md-button class="md-icon-button" ng-click="nextTweet()"><md-icon md-font-icon="icon-keyboard-arrow-right"></md-icon></md-button>
+                        <md-button class="md-icon-button" ng-click="prevTweet()" aria-label="previous tweet">
+                            <md-icon md-font-icon="icon-keyboard-arrow-left"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" ng-click="nextTweet()" aria-label="next tweet">
+                            <md-icon md-font-icon="icon-keyboard-arrow-right"></md-icon>
+                        </md-button>
                     </div>
                 </div>
                 <div layout="column" class="padding-top-0 padding-left-40 padding-right-40 padding-bottom-40">

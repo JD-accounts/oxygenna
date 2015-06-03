@@ -44,7 +44,8 @@
             "USAGE": "Utilisation Mensuelle",
             "LIMIT": "de la limite mensuelle",
             "TASKS": "Tâches actuelles",
-            "DATE": "11/03/15 - 11/4/15"
+            "DATE": "11/03/15 - 11/4/15",
+            "DISKUSAGE": "Utilisation du disque"
         },
         "WIDGETS": {
             "SALES": "Vente",

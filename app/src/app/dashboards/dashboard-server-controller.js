@@ -34,6 +34,11 @@ controller('DashboardServerController', function ($scope, $timeout, $mdToast) {
         complete: false
     }];
 
+    $scope.serverChart = {
+        labels: ['Swap space', 'Kernel', 'OS', 'Free space'],
+        data: [15, 5, 35, 45]
+    };
+
     $timeout(function() {
         $mdToast.show(
             $mdToast.simple()

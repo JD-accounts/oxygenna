@@ -11,7 +11,8 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     },{
         name: 'LANGUAGES.FRENCH',
         key: 'fr'
-    }]
+    }],
+    defaultSkin: 'cyan'
 })
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
@@ -159,7 +160,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
 /**
  *  PALETTES & THEMES & SKINS oh my.....
  */
-.config(function ($mdThemingProvider, triThemingProvider, triSkinsProvider) {
+.config(function ($mdThemingProvider, triThemingProvider, triSkinsProvider, APP) {
     /**
      *  PALETTES
      */
@@ -203,7 +204,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
      *  SKINS
      */
 
-    // CYAN SKIN
+    // CYAN CLOUD SKIN
     triThemingProvider.theme('cyan')
     .primaryPalette('cyan')
     .accentPalette('amber')
@@ -216,13 +217,13 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('deep-orange');
 
-    triSkinsProvider.skin('cyan', 'Cyan Skin')
+    triSkinsProvider.skin('cyan', 'Cyan Cloud')
     .sidebarTheme('cyan')
     .toolbarTheme('white-cyan')
     .logoTheme('cyan')
     .contentTheme('cyan');
 
-    // RED SKIN
+    // RED DWARF SKIN
     triThemingProvider.theme('red')
     .primaryPalette('red')
     .accentPalette('amber')
@@ -235,13 +236,13 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('purple');
 
-    triSkinsProvider.skin('red', 'Red Skin')
+    triSkinsProvider.skin('red', 'Red Dwarf')
     .sidebarTheme('red')
     .toolbarTheme('white-red')
     .logoTheme('red')
     .contentTheme('red');
 
-    // PURPLE SKIN
+    // PLUMB PURPLE SKIN
     triThemingProvider.theme('purple')
     .primaryPalette('purple')
     .accentPalette('deep-orange')
@@ -254,26 +255,26 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('deep-orange');
 
-    triSkinsProvider.skin('purple', 'Purple Skin')
+    triSkinsProvider.skin('purple', 'Plumb Purple')
     .sidebarTheme('purple')
     .toolbarTheme('white-purple')
     .logoTheme('purple')
     .contentTheme('purple');
 
-    // DARK SKIN
+    // DARK KNIGHT SKIN
     triThemingProvider.theme('dark')
     .primaryPalette('black')
     .accentPalette('amber')
     .warnPalette('deep-orange')
     .dark();
 
-    triSkinsProvider.skin('dark', 'Dark Skin')
+    triSkinsProvider.skin('dark', 'Dark Knight')
     .sidebarTheme('dark')
     .toolbarTheme('dark')
     .logoTheme('dark')
     .contentTheme('dark');
 
-    // BLUE GRAY SKIN
+    // BATTLESHIP GREY SKIN
     triThemingProvider.theme('blue-grey')
     .primaryPalette('blue-grey')
     .accentPalette('amber')
@@ -286,13 +287,13 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('orange');
 
-    triSkinsProvider.skin('blue-grey', 'Blue Grey Skin')
+    triSkinsProvider.skin('blue-grey', 'Battleship Grey')
     .sidebarTheme('blue-grey')
     .toolbarTheme('white-blue-grey')
     .logoTheme('blue-grey')
     .contentTheme('blue-grey');
 
-    // ORANGE SKIN
+    // ZESTY ORANGE SKIN
     triThemingProvider.theme('orange')
     .primaryPalette('orange' , {
       'default': '800'
@@ -307,14 +308,14 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('lime');
 
-    triSkinsProvider.skin('orange', 'Orange Skin')
+    triSkinsProvider.skin('orange', 'Zesty Orange')
     .sidebarTheme('orange')
     .toolbarTheme('white-orange')
     .logoTheme('orange')
     .contentTheme('orange');
 
 
-    // INDIGO SKIN
+    // INDIGO ISLAND SKIN
     triThemingProvider.theme('indigo')
     .primaryPalette('indigo' , {
       'default': '600'
@@ -322,13 +323,13 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .accentPalette('red')
     .warnPalette('lime');
 
-    triSkinsProvider.skin('indigo', 'Indigo Skin')
+    triSkinsProvider.skin('indigo', 'Indigo Island')
     .sidebarTheme('indigo')
     .toolbarTheme('indigo')
     .logoTheme('indigo')
     .contentTheme('indigo');
 
-    // LIGHT GREEN SKIN
+    // KERMIT GREEN SKIN
     triThemingProvider.theme('light-green')
     .primaryPalette('light-green' , {
       'default': '400'
@@ -343,7 +344,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('deep-orange');
 
-    triSkinsProvider.skin('light-green', 'Light Green Skin')
+    triSkinsProvider.skin('light-green', 'Kermit Green')
     .sidebarTheme('light-green')
     .toolbarTheme('white-light-green')
     .logoTheme('light-green')
@@ -360,106 +361,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     /**
      *  SET DEFAULT SKIN
      */
-    triSkinsProvider.setSkin('cyan');
-
-
-
-    // Create some themes for the template
-    // $mdThemingProvider.theme('default')
-    // .primaryPalette('indigo')
-    // .accentPalette('pink')
-    // .warnPalette('red');
-
-    // $mdThemingProvider.theme('amber')
-    // .primaryPalette('amber')
-    // .accentPalette('red')
-    // .warnPalette('orange');
-
-    // $mdThemingProvider.theme('blue')
-    // .primaryPalette('blue')
-    // .accentPalette('red')
-    // .warnPalette('orange');
-
-    // $mdThemingProvider.theme('green')
-    // .primaryPalette('green')
-    // .accentPalette('amber')
-    // .warnPalette('deep-orange');
-
-    // $mdThemingProvider.theme('red')
-    // .primaryPalette('red')
-    // .accentPalette('amber')
-    // .warnPalette('purple');
-
-    // $mdThemingProvider.theme('pink')
-    // .primaryPalette('pink')
-    // .accentPalette('deep-purple')
-    // .warnPalette('amber');
-
-    // $mdThemingProvider.theme('purple')
-    // .primaryPalette('purple')
-    // .accentPalette('deep-orange')
-    // .warnPalette('amber');
-
-    // $mdThemingProvider.theme('cyan')
-    // .primaryPalette('cyan')
-    // .accentPalette('amber')
-    // .warnPalette('deep-orange');
-
-    // $mdThemingProvider.theme('teal')
-    // .primaryPalette('teal')
-    // .accentPalette('red')
-    // .warnPalette('orange');
-
-    // $mdThemingProvider.theme('orange')
-    // .primaryPalette('orange')
-    // .accentPalette('lime')
-    // .warnPalette('amber')
-
-    // $mdThemingProvider.theme('deep-orange')
-    // .primaryPalette('deep-orange')
-    // .accentPalette('lime')
-    // .warnPalette('amber')
-
-    // $mdThemingProvider.theme('blue-grey')
-    // .primaryPalette('blue-grey')
-    // .accentPalette('red')
-    // .warnPalette('orange')
-    // .backgroundPalette('grey');
-
-    // $mdThemingProvider.theme('dark')
-    // .primaryPalette('black')
-    // .accentPalette('amber')
-    // .warnPalette('deep-orange')
-    // .backgroundPalette('black')
-    // .dark();
-
-    // $mdThemingProvider.theme('white-red')
-    // .primaryPalette('white')
-    // .accentPalette('red', {
-    //   'default': '500'
-    // })
-    // .warnPalette('orange');
-
-    // $mdThemingProvider.theme('white-blue')
-    // .primaryPalette('white')
-    // .accentPalette('blue', {
-    //   'default': '500'
-    // })
-    // .warnPalette('deep-orange');
-
-    // $mdThemingProvider.theme('white-cyan')
-    // .primaryPalette('white')
-    // .accentPalette('cyan', {
-    //   'default': '500'
-    // })
-    // .warnPalette('deep-orange');
-
-    // $mdThemingProvider.theme('white-green')
-    // .primaryPalette('white')
-    // .accentPalette('green', {
-    //   'default': '500'
-    // })
-    // .warnPalette('deep-orange');
+    triSkinsProvider.setSkin(APP.defaultSkin);
 })
 .config(['ChartJsProvider', function (ChartJsProvider) {
     // Configure all charts to use material design colors

@@ -34,10 +34,8 @@ angular.module('triAngular')
                     intent = splitIntent[0];
                     hue = splitIntent[1];
                 }
-                console.log($mdTheme.$mdTheme, intent, hue)
                 // get the color and apply it to the element
                 var color = triTheming.getThemeHue($mdTheme.$mdTheme, intent, hue);
-                console.log(color)
                 if(color !== undefined) {
                     $element.css({
                         'background-color': triTheming.rgba(color.value),
