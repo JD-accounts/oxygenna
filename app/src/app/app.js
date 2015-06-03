@@ -261,14 +261,14 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .logoTheme('purple')
     .contentTheme('purple');
 
-    // DARK NIGHT SKIN
+    // DARK KNIGHT SKIN
     triThemingProvider.theme('dark')
     .primaryPalette('black')
     .accentPalette('amber')
     .warnPalette('deep-orange')
     .dark();
 
-    triSkinsProvider.skin('dark', 'Dark Night')
+    triSkinsProvider.skin('dark', 'Dark Knight')
     .sidebarTheme('dark')
     .toolbarTheme('dark')
     .logoTheme('dark')
