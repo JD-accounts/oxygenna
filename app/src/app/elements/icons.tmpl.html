@@ -36,19 +36,19 @@
                 <p ng-show="selectedIcon == null">Select an icon from the list on the left</p>
                 <div layout="row" layout-align="space-around center" layout-fill layout-padded ng-hide="selectedIcon == null">
                     <div layout="column" layout-align="center center">
-                        <md-button class="md-fab md-primary">
+                        <md-button class="md-fab md-primary" aria-label="primary button">
                             <md-icon md-font-icon="{{selectedIcon.className}}"></md-icon>
                         </md-button>
                         <p class="md-caption">Primary</p>
                     </div>
                     <div layout="column" layout-align="center center">
-                        <md-button class="md-fab md-accent">
+                        <md-button class="md-fab md-accent" aria-label="accent button">
                             <md-icon md-font-icon="{{selectedIcon.className}}"></md-icon>
                         </md-button>
                         <p class="md-caption">Accent</p>
                     </div>
                     <div layout="column" layout-align="center center">
-                        <md-button class="md-fab md-warn">
+                        <md-button class="md-fab md-warn" aria-label="warn button">
                             <md-icon md-font-icon="{{selectedIcon.className}}"></md-icon>
                         </md-button>
                         <p class="md-caption">Warn</p>

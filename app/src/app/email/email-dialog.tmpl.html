@@ -5,7 +5,7 @@
               <span>{{title}}</span>
             </h2>
             <span flex></span>
-            <md-button class="md-icon-button" ng-click="cancel()">
+            <md-button class="md-icon-button" ng-click="cancel()" aria-label="cancel">
                 <md-icon md-font-icon="icon-close"></md-icon>
             </md-button>
         </div>
@@ -30,7 +30,7 @@
                             placeholder="{{'EMAIL.TO' | translate}}"
                             secondary-placeholder="{{'EMAIL.TO' | translate}}">
                         </md-contact-chips>
-                        <md-button class="email-dialog-toggle-ccs md-icon-button" ng-click="toggleCCS($event)">
+                        <md-button class="email-dialog-toggle-ccs md-icon-button" ng-click="toggleCCS($event)" aria-label="toggle ccs">
                             <md-icon md-font-icon="{{showCCSIcon}}"></md-icon>
                         </md-button>
                     </div>
@@ -81,7 +81,7 @@
     <div class="md-actions" layout="row">
         <text-angular-toolbar name="editor-toolbar" class="email-dialog-editor-toolbar" ta-toolbar-active-button-class="active"></text-angular-toolbar>
         <span flex></span>
-        <md-button ng-click="send()" class="md-primary" ng-disabled="emailForm.$invalid">
+        <md-button ng-click="send()" class="md-primary" ng-disabled="emailForm.$invalid" aria-label="send">
             {{'EMAIL.COMPOSE.SEND' | translate}}
         </md-button>
     </div>
