@@ -207,7 +207,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     triThemingProvider.theme('cyan')
     .primaryPalette('cyan')
     .accentPalette('amber')
-    .warnPalette('red');
+    .warnPalette('deep-orange');
 
     triThemingProvider.theme('white-cyan')
     .primaryPalette('white')
@@ -216,30 +216,139 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('deep-orange');
 
-    triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
+    triSkinsProvider.skin('cyan', 'Cyan Skin')
     .sidebarTheme('cyan')
     .toolbarTheme('white-cyan')
-    .logoTheme('white-cyan')
+    .logoTheme('cyan')
     .contentTheme('cyan');
 
-    // BLUE SKIN
-    triThemingProvider.theme('blue')
-    .primaryPalette('blue')
-    .accentPalette('red')
-    .warnPalette('orange');
+    // RED SKIN
+    triThemingProvider.theme('red')
+    .primaryPalette('red')
+    .accentPalette('amber')
+    .warnPalette('purple');
 
-    triThemingProvider.theme('white-blue')
+    triThemingProvider.theme('white-red')
     .primaryPalette('white')
-    .accentPalette('blue', {
+    .accentPalette('red', {
       'default': '500'
+    })
+    .warnPalette('purple');
+
+    triSkinsProvider.skin('red', 'Red Skin')
+    .sidebarTheme('red')
+    .toolbarTheme('white-red')
+    .logoTheme('red')
+    .contentTheme('red');
+
+    // PURPLE SKIN
+    triThemingProvider.theme('purple')
+    .primaryPalette('purple')
+    .accentPalette('deep-orange')
+    .warnPalette('amber');
+
+    triThemingProvider.theme('white-purple')
+    .primaryPalette('white')
+    .accentPalette('purple', {
+      'default': '400'
     })
     .warnPalette('deep-orange');
 
-    triSkinsProvider.skin('blue-bollocks', 'Blue Bollocks')
-    .sidebarTheme('blue')
-    .toolbarTheme('white-blue')
-    .logoTheme('white-blue')
-    .contentTheme('blue');
+    triSkinsProvider.skin('purple', 'Purple Skin')
+    .sidebarTheme('purple')
+    .toolbarTheme('white-purple')
+    .logoTheme('purple')
+    .contentTheme('purple');
+
+    // DARK SKIN
+    triThemingProvider.theme('dark')
+    .primaryPalette('black')
+    .accentPalette('amber')
+    .warnPalette('deep-orange')
+    .dark();
+
+    triSkinsProvider.skin('dark', 'Dark Skin')
+    .sidebarTheme('dark')
+    .toolbarTheme('dark')
+    .logoTheme('dark')
+    .contentTheme('dark');
+
+    // BLUE GRAY SKIN
+    triThemingProvider.theme('blue-grey')
+    .primaryPalette('blue-grey')
+    .accentPalette('amber')
+    .warnPalette('orange');
+
+    triThemingProvider.theme('white-blue-grey')
+    .primaryPalette('white')
+    .accentPalette('blue-grey', {
+      'default': '400'
+    })
+    .warnPalette('orange');
+
+    triSkinsProvider.skin('blue-grey', 'Blue Grey Skin')
+    .sidebarTheme('blue-grey')
+    .toolbarTheme('white-blue-grey')
+    .logoTheme('blue-grey')
+    .contentTheme('blue-grey');
+
+    // ORANGE SKIN
+    triThemingProvider.theme('orange')
+    .primaryPalette('orange' , {
+      'default': '800'
+    })
+    .accentPalette('lime')
+    .warnPalette('amber');
+
+    triThemingProvider.theme('white-orange')
+    .primaryPalette('white')
+    .accentPalette('orange', {
+      'default': '500'
+    })
+    .warnPalette('lime');
+
+    triSkinsProvider.skin('orange', 'Orange Skin')
+    .sidebarTheme('orange')
+    .toolbarTheme('white-orange')
+    .logoTheme('orange')
+    .contentTheme('orange');
+
+
+    // INDIGO SKIN
+    triThemingProvider.theme('indigo')
+    .primaryPalette('indigo' , {
+      'default': '600'
+    })
+    .accentPalette('red')
+    .warnPalette('lime');
+
+    triSkinsProvider.skin('indigo', 'Indigo Skin')
+    .sidebarTheme('indigo')
+    .toolbarTheme('indigo')
+    .logoTheme('indigo')
+    .contentTheme('indigo');
+
+    // LIGHT GREEN SKIN
+    triThemingProvider.theme('light-green')
+    .primaryPalette('light-green' , {
+      'default': '400'
+    })
+    .accentPalette('amber')
+    .warnPalette('deep-orange');
+
+    triThemingProvider.theme('white-light-green')
+    .primaryPalette('white')
+    .accentPalette('light-green', {
+      'default': '400'
+    })
+    .warnPalette('deep-orange');
+
+    triSkinsProvider.skin('light-green', 'Light Green Skin')
+    .sidebarTheme('light-green')
+    .toolbarTheme('white-light-green')
+    .logoTheme('light-green')
+    .contentTheme('light-green');
+
 
     /**
      *  FOR DEMO PURPOSES ALLOW SKIN TO BE SAVED IN A COOKIE
@@ -251,7 +360,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     /**
      *  SET DEFAULT SKIN
      */
-    triSkinsProvider.setSkin('cyan-cloud');
+    triSkinsProvider.setSkin('cyan');
 
 
 
