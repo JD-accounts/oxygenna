@@ -26,7 +26,7 @@
                 </div>
             </md-toolbar>
             <div layout="column" layout-align="center center">
-                <md-switch class="padding-top-10" ng-model="toolbarBackground" ng-true-value="'on'" ng-false-value="'off'" ng-change="tryIt()"></md-switch>
+                <md-switch class="padding-top-10" ng-model="toolbarBackground" ng-true-value="'on'" ng-false-value="'off'" ng-change="tryIt()" aria-label="try it"></md-switch>
                 <p class="md-caption">{{'UI.TOOLBARS.BACKGROUND_SHOW' | translate}}</p>
             </div>
         </div>
@@ -37,7 +37,7 @@
                 </div>
             </md-toolbar>
             <div layout="column" layout-align="center center">
-                <md-switch class="padding-top-10" ng-model="toolbarShrink" ng-true-value="'on'" ng-false-value="'off'" ng-change="tryIt(true)"></md-switch>
+                <md-switch class="padding-top-10" ng-model="toolbarShrink" ng-true-value="'on'" ng-false-value="'off'" ng-change="tryIt(true)" aria-label="try it"></md-switch>
                 <p class="md-caption">{{'UI.TOOLBARS.SHRINK_SHOW' | translate}}</p>
             </div>
         </div>
