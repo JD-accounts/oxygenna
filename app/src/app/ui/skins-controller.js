@@ -36,12 +36,7 @@ controller('SkinsUIController', function ($scope, $cookies, $window, triSkins, t
             var theme = triTheming.getTheme($scope.selectedSkin.elements[element]);
             var hue = theme.colors.primary.hues.default === undefined ? '500' : theme.colors.primary.hues.default;
             var color = triTheming.getPaletteColor(theme.colors.primary.name, hue);
-
-            console.log(color);
-
             $scope.elementColors[element] = triTheming.rgba(color.value);
-
-            console.log($scope.elementColors);
         }
     };
 

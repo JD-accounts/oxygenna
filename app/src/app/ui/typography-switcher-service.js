@@ -24,7 +24,6 @@ angular.module('triAngularUI')
                   families: [font.google]
                 },
                 active: function() {
-                    console.log('switched to ' + font.name);
                     $('button,select,html,textarea,input').css({'font-family': font.family});
                     $cookies['tri-typography-font'] = angular.toJson(font);
                 },
