@@ -14,7 +14,7 @@ angular.module('triAngular')
 .provider('triSkins', SkinsProvider)
 .run(addSkinToScope);
 
-function SkinsProvider($mdThemingProvider, triThemingProvider) {
+function SkinsProvider($mdThemingProvider, triThemingProvider, APP) {
     var skins = {};
     var currentSkin = null;
     var useSkinCookie = false;
@@ -50,7 +50,7 @@ function SkinsProvider($mdThemingProvider, triThemingProvider) {
                 // if we have a cookie set then override the currentSkin
                 if($cookies['triangular-skin'] !== undefined) {
                     var cookieTheme = angular.fromJson($cookies['triangular-skin']);
-                    currentSkin = skins[cookieTheme.skin];
+                    currentSkin = skins[cookieTheme.skin] !== undefined ? skins[cookieTheme.skin] : skins[APP.defaultSkin];
                 }
             }
 
