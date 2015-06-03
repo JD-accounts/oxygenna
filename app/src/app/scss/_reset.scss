@@ -26,6 +26,9 @@ ol, ul {
 blockquote, q {
   quotes: none;
 }
+img {
+  max-width: 100%;
+}
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';

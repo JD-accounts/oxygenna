@@ -28,8 +28,7 @@ angular.module('triAngularDashboards')
 
             $http.get(url).
             success(function(data, status, headers, config) {
-                if(data.query.count > 0) {
-                    console.log(data);
+                if(data.query.count > 0) {                    
                     widgetCtrl.setLoading(false);
                     $scope.weather = {
                         iconClass: 'wi-yahoo-' + data.query.results.channel.item.condition.code,

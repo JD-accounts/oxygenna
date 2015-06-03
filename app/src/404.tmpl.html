@@ -1,27 +1,26 @@
-<div class="not-found" layout="row" layout-fill>
-    <div class="animate-wrapper" flex layout="row">
-        <div class="login-frame" flex layout="row">
-            <div layout="row" flex layout-padding layout-align="center center">
-                <div flex="40" flex-lg="50" flex-md="70" flex-sm="100">
-                    <md-card>
-                        <md-toolbar>
-                            <div layout="column" flex layout-padding layout-align="center center">
-                                <img src="{{app.logo}}" alt="{{app.name}}">
-                                <h1 class="md-display-1">
-                                    {{'404.MESSAGE' | translate}}
-                                </h1>
-                            </div>
-                        </md-toolbar>
-
-                        <md-content class="md-padding">
-                            <div layout="column" layout-margin>
-                                <p>{{'404.DESCRIPTION' | translate}}</p>
-                                <md-button class="md-primary " ng-click="goHome()">{{'404.HOME' | translate}}</md-button>
-                            </div>
-                        </md-content>
-                    </md-card>
-                </div>
+<div layout="column" layout-fill layout-align="space-around center" md-theme="{{triSkin.elements.content}}" theme-background="primary:hue-1">
+    <div layout="row" class="full-width" layout-align="center center">
+        <div flex="50" flex-sm="90" layout="row">
+            <div>
+                <img src="assets/images/font/material-font-4.png">
+            </div>
+            <div>
+                <img src="assets/images/font/material-font-0.png">
+            </div>
+            <div>
+                <img src="assets/images/font/material-font-4.png">
             </div>
         </div>
+    </div>
+    <div layout="row" class="full-width" layout-align="center center">
+        <md-card flex="50" flex-sm="90">
+            <md-card-content class="text-center">
+                <h1 class="md-display-1">
+                    {{'404.MESSAGE' | translate}}
+                </h1>
+                <p>{{'404.DESCRIPTION' | translate}}</p>
+                <md-button class="md-primary md-raised" ng-click="goHome()">{{'404.HOME' | translate}}</md-button>
+            </md-card-content>
+        </md-card>
     </div>
 </div>
