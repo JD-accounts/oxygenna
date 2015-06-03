@@ -1,7 +1,11 @@
 // Email Dialog
 .email-dialog {
-  min-width: 100%;
-  min-height: 100%;
+  max-width: none;
+}
+@media (max-width: 599px) {
+  .email-dialog {
+    min-height: 100%;
+  }
 }
 
 .email-dialog-to {

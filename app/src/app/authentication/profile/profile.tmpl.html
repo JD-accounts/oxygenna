@@ -1,15 +1,17 @@
-<div class="profile-header" layout="row" layout-align="center center">
-    <img src="assets/images/avatars/avatar-5.png" alt="christos-avatar" class="avatar-image small"/>
-    <div class="avatar-details">
+<div class="padding-20 padding-top-200 overlay-gradient-30" layout="row" layout-align="start center" style="background: url(assets/images/backgrounds/bg-2.jpg) fixed">
+    <div class="margin-right-20">
+        <img src="assets/images/avatars/avatar-6.png" alt="girl-avatar" class="make-round" width="100"/>
+    </div>
+    <div class="text-light">
 	    <h3 class="font-weight-600 margin-bottom-0"><a href="">Christos</a> / Profile</h3>
 	    <p class="font-weight-300 margin-top-0">Edit your name, avatar etc</p>
 	 </div>
 </div>
 
 <div layout="row" class="profile" layout-wrap>
-  	<div flex="100" flex-gt-md="66">
+  	<div flex="100" flex-gt-md="100">
 	    <md-tabs md-dynamic-height md-border-bottom md-no-bar>
-	      	<md-tab label="Profile">               
+	      	<md-tab label="Profile">
 	         	<md-content class="md-padding md-default-theme">
 		            <form name="profile">
 		                <md-input-container>
@@ -52,17 +54,17 @@
 		                <md-input-container>
 		                    <label for="bio">{{'PROFILE.BIO.LABEL' | translate}}</label>
 		                    <textarea id="bio" label="bio" name="bio" ng-model="user.bio"/>
-		                </md-input-container>                
+		                </md-input-container>
 
 		                <div layout="column">
-		                    <md-button flex class="md-raised md-primary"  ng-click="updateSettingsClick()" ng-disabled="profile.$invalid">{{'PROFILE.BUTTON' | translate}}</md-button>
-		                </div>                
+		                    <md-button class="md-raised md-primary"  ng-click="updateSettingsClick()" ng-disabled="profile.$invalid">{{'PROFILE.BUTTON' | translate}}</md-button>
+		                </div>
 		            </form>
-	        	</md-content>        
+	        	</md-content>
 	      	</md-tab>
 	      	<md-tab label="Password">
-	        	<md-content class="md-padding md-default-theme">          
-		          	<form name="password">              
+	        	<md-content class="md-padding md-default-theme">
+		          	<form name="password">
 		                <md-input-container>
 		                    <label for="old-password">{{'PROFILE.PASSWORD.CURRENT' | translate}}</label>
 		                    <input id="old-password" label="old-password" name="old-password" type="text" ng-model="user.current"/>
@@ -81,13 +83,13 @@
 		                </md-input-container>
 
 		                <div layout="column">
-		                    <md-button flex class="md-raised md-primary"  ng-click="updateSettingsClick()" ng-disabled="profile.$invalid">{{'PROFILE.BUTTON' | translate}}</md-button>
-		                </div>                
+		                    <md-button class="md-raised md-primary"  ng-click="updateSettingsClick()" ng-disabled="profile.$invalid">{{'PROFILE.BUTTON' | translate}}</md-button>
+		                </div>
 		            </form>
 	        	</md-content>
 	      	</md-tab>
 	      	<md-tab label="Notifications">
-	        	<md-content class="md-padding">          
+	        	<md-content class="md-padding">
 		         	<md-list>
 			            <div ng-repeat="group in settingsGroups">
 			                <md-subheader class="md-accent">{{group.name | translate}}</md-subheader>
@@ -96,26 +98,11 @@
 			                    <p>{{setting.title | translate}}</p>
 			                    <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch>
 			                </md-list-item>
-			            </div>	            
+			            </div>
 		        	</md-list>
 	       	 	</md-content>
 	      	</md-tab>
 	    </md-tabs>
   	</div>
-  	<div layout="column" class="padding-top-10 side-column" flex="100" flex-gt-md="33">
-	  	<h4>Your Avatar</h4>
-	  	<div layout="row">
-	  	 	<img src="assets/images/avatars/avatar-5.png" alt="christos-avatar" class="avatar-image big"/>
-	  	 	<div layout="column" layout-align="center center">
-		      	<md-button class="md-accent md-raised md-hue-1">Change Avatar</md-button>	      	
-		      	<md-button class="md-warn md-raised md-hue-2">Delete</md-button>	      		      		      
-		    </div>	    
-	  	</div>
-	  	<md-divider class="margin-bottom-20 margin-top-20"></md-divider>
-	  	<h4>Appear online?</h4>
-	  	<div layout="row" layout-align="center center">
-	      	<md-button class="md-accent md-raised md-hue-1">Yes</md-button>	      	
-	      	<md-button class="md-warn md-raised md-hue-2">No</md-button>	      		      		      
-		</div>		
-  	</div>
+
 </div>
