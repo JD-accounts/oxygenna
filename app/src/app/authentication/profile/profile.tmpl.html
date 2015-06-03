@@ -1,4 +1,4 @@
-<div class="padding-20 padding-top-200 overlay-gradient-30" layout="row" layout-align="start center" style="background: url(assets/images/backgrounds/bg-2.jpg) fixed">
+<div class="padding-20 padding-top-200 overlay-gradient-30" layout="row" layout-align="start center" style="background: url(assets/images/backgrounds/bg-2.jpg) no-repeat ">
     <div class="margin-right-20">
         <img src="assets/images/avatars/avatar-6.png" alt="girl-avatar" class="make-round" width="100"/>
     </div>
@@ -56,9 +56,7 @@
 		                    <textarea id="bio" label="bio" name="bio" ng-model="user.bio"/>
 		                </md-input-container>
 
-		                <div layout="column">
-		                    <md-button class="md-raised md-primary"  ng-click="updateSettingsClick()" ng-disabled="profile.$invalid">{{'PROFILE.BUTTON' | translate}}</md-button>
-		                </div>
+		                <md-button class="md-raised md-primary"  ng-click="updateSettingsClick()" ng-disabled="profile.$invalid">{{'PROFILE.BUTTON' | translate}}</md-button>
 		            </form>
 	        	</md-content>
 	      	</md-tab>
