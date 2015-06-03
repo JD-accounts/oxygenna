@@ -97,9 +97,9 @@
     </div>
 
     <div layout="row" layout-sm="column" layout-margin>
-        <widget chartjs-pie-widget flex="30" flex-md="30" flex-sm="100" title="{{'DASHBOARDS.SERVER.TASKS' | translate}}" subtitle="{{'DASHBOARDS.SERVER.DATE' | translate}}" content-padding >
+        <widget chartjs-pie-widget flex="30" flex-md="30" flex-sm="100" title="{{'DASHBOARDS.SERVER.DISKUSAGE' | translate}}" subtitle="{{'DASHBOARDS.SERVER.DATE' | translate}}" content-padding >
             <div flex>
-                <canvas class="chart-doughnut full-width" data="pieChart.data" legend="false" labels="pieChart.labels"></canvas>
+                <canvas class="chart-doughnut full-width" data="serverChart.data" legend="false" labels="serverChart.labels"></canvas>
             </div>
         </widget>
         <widget flex-sm="100" title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" palette-background="cyan:600" content-layout="column" content-layout-align="start">

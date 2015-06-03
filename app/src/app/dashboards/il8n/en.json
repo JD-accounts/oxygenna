@@ -44,7 +44,8 @@
             "USAGE": "Monthly Usage",
             "LIMIT": "of monthly limit",
             "TASKS": "Current tasks",
-            "DATE": "11/03/15 - 11/4/15"
+            "DATE": "11/03/15 - 11/4/15",
+            "DISKUSAGE": "Disk Usage"
         },
         "WIDGETS": {
             "SALES": "Sales",
