@@ -56,7 +56,7 @@
 		                    <textarea id="bio" label="bio" name="bio" ng-model="user.bio"/>
 		                </md-input-container>
 
-		                <md-button class="md-raised md-primary"  ng-click="updateSettingsClick()" ng-disabled="profile.$invalid">{{'PROFILE.BUTTON' | translate}}</md-button>
+		                <md-button class="md-raised md-primary margin-left-0"  ng-click="updateSettingsClick()" ng-disabled="profile.$invalid">{{'PROFILE.BUTTON' | translate}}</md-button>
 		            </form>
 	        	</md-content>
 	      	</md-tab>
@@ -80,9 +80,8 @@
 		                    <ng-messages for="password.confirm.$error" ng-include="'app/authentication/signup/password.messages.html'"></ng-messages>
 		                </md-input-container>
 
-		                <div layout="column">
-		                    <md-button class="md-raised md-primary"  ng-click="updateSettingsClick()" ng-disabled="profile.$invalid">{{'PROFILE.BUTTON' | translate}}</md-button>
-		                </div>
+		                <md-button class="md-raised md-primary margin-left-0"  ng-click="updateSettingsClick()" ng-disabled="profile.$invalid">{{'PROFILE.BUTTON' | translate}}</md-button>
+
 		            </form>
 	        	</md-content>
 	      	</md-tab>

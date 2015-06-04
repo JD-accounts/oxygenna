@@ -55,7 +55,7 @@ controller('ToolbarsUIController', function ($scope, $state) {
     function updateVariables() {
         $scope.codeVariables = {
             extraClass: $scope.toolbarSize.value === 'default' ? '' : $scope.toolbarSize.value,
-            background: $scope.toolbarBackground === 'on' ? 'assets/images/backgrounds/bg-1.jpg' : false,
+            background: $scope.toolbarBackground === 'on' ? 'assets/images/backgrounds/bg-toolbar.jpg' : false,
             shrink: $scope.toolbarShrink === 'on' ? true : false,
         };
     }

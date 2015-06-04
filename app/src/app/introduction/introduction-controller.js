@@ -14,44 +14,44 @@ controller('IntroductionController', function ($scope) {
         [{
             name: 'Fully Responsive',
             icon: 'icon-computer',
-            palette: 'blue',
-            hue: '500'
+            palette: 'cyan',
+            hue: '200'
         },{
             name: 'Beautiful Themes',
             icon: 'icon-palette',
-            palette: 'blue',
-            hue: '600'
+            palette: 'cyan',
+            hue: '300'
         },{
             name: 'API Ready',
             icon: 'icon-share',
-            palette: 'blue',
-            hue: '700'
+            palette: 'cyan',
+            hue: '400'
         },{
             name: '5 Star Support',
             icon: 'icon-star',
-            palette: 'blue',
-            hue: '800'
+            palette: 'cyan',
+            hue: '500'
         }],
         [{
             name: 'Built with AngularJS',
             icon: 'fa fa-google',
-            palette: 'green',
-            hue: '500'
+            palette: 'cyan',
+            hue: '600'
         },{
             name: 'Angular Material',
             icon: 'fa fa-th-large',
-            palette: 'green',
-            hue: '600'
+            palette: 'cyan',
+            hue: '700'
         },{
             name: 'Gulp Build',
             icon: 'fa fa-terminal',
-            palette: 'green',
-            hue: '700'
+            palette: 'cyan',
+            hue: '800'
         },{
             name: 'SASS Stylesheets',
             icon: 'fa fa-css3',
-            palette: 'green',
-            hue: '800'
+            palette: 'cyan',
+            hue: '900'
         }]
     ];
 });
