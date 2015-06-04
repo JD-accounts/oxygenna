@@ -19,14 +19,14 @@ angular.module('triAngular')
 .directive('adminPanelContent', function($compile, $templateRequest) {
     return {
         restrict: 'A',
-        link: function($scope, $element, attrs) {
-            $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState) {
+        link: function($scope, $element) {
+            $scope.$on('$stateChangeStart', function() {
                 var mdContentElement = $element.parent();
                 // scroll page to the top when content is loaded (stops pages keeping scroll position even when they have changed url)
                 mdContentElement.scrollTop(0);
             });
 
-            $scope.$on('$viewContentLoaded', function($event) {
+            $scope.$on('$viewContentLoaded', function() {
                 var contentView = $element.find('#admin-panel-content-view');
 
                 // add footer to the content view
@@ -36,7 +36,7 @@ angular.module('triAngular')
                     var linkFn = $compile(template);
                     var content = linkFn($scope);
                     contentView.append(content);
-                }, function(reason) {
+                }, function() {
                     console.error('Could not load footer tempalate');
                 });
             });

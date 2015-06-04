@@ -27,7 +27,7 @@ angular.module('triAngularDashboards')
             var url = 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(query) + '&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
 
             $http.get(url).
-            success(function(data, status, headers, config) {
+            success(function(data) {
                 if(data.query.count > 0) {                    
                     widgetCtrl.setLoading(false);
                     $scope.weather = {
@@ -39,7 +39,7 @@ angular.module('triAngularDashboards')
                     };
                 }
             }).
-            error(function(data, status, headers, config) {
+            error(function(data) {
                 console.error('Could not get location weather', data);
             });
         }

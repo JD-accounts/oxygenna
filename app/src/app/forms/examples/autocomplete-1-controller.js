@@ -13,17 +13,7 @@
 angular.module('triAngularForms').
 controller('Autocomplete1Controller', function ($timeout, $q, $log) {
     var self = this;
-
-    // list of `state` value/display objects
-    self.states        = loadAll();
-    self.selectedItem  = null;
-    self.searchText    = null;
-    self.querySearch   = querySearch;
-    self.simulateQuery = false;
-    self.isDisabled    = false;
-    self.selectedItemChange = selectedItemChange;
-    self.searchTextChange   = searchTextChange;
-
+    
     // ******************************
     // Internal methods
     // ******************************
@@ -55,6 +45,7 @@ controller('Autocomplete1Controller', function ($timeout, $q, $log) {
      * Build `states` list of key/value pairs
      */
     function loadAll() {
+      /* jshint multistr: true */
         var allStates = 'Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware,\
               Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana,\
               Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana,\
@@ -81,4 +72,15 @@ controller('Autocomplete1Controller', function ($timeout, $q, $log) {
             return (state.value.indexOf(lowercaseQuery) === 0);
         };
     }
+
+    // list of `state` value/display objects
+    self.states        = loadAll();
+    self.selectedItem  = null;
+    self.searchText    = null;
+    self.querySearch   = querySearch;
+    self.simulateQuery = false;
+    self.isDisabled    = false;
+    self.selectedItemChange = selectedItemChange;
+    self.searchTextChange   = searchTextChange;
+
 });
