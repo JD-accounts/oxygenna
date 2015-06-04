@@ -16,7 +16,7 @@
 * ```
 */
 angular.module('triAngularDashboards')
-.directive('chartjsPieWidget', function ($timeout, $interval) {
+.directive('chartjsPieWidget', function ($timeout) {
     return {
         require: 'widget',
         restrict: 'A',
@@ -34,20 +34,7 @@ angular.module('triAngularDashboards')
             $scope.pieChart = {
                 labels: ['Facebook', 'Twitter', 'Google+', 'Others'],
                 data: [300, 500, 100, 50]
-            };
-
-            function randomData() {
-                for(var series = 0; series < $scope.pieChart.series.length; series++) {
-                    var row = [];
-                    for(var label = 0; label < $scope.pieChart.labels.length; label++) {
-                        row.push(Math.floor((Math.random() * 100) + 1));
-                    }
-                    $scope.pieChart.data.push(row);
-                }
-            }
-
-            // Simulate async data update
-            // c$interval(randomData, 5000);
+            }; 
         }
     };
 });

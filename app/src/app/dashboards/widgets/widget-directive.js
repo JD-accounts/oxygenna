@@ -53,9 +53,7 @@ angular.module('triAngularDashboards')
             // set if we overlay the title on top of the widget content
             $scope.overlayTitle = attrs.overlayTitle === undefined ? undefined : true;
 
-            $mdTheming($element);
-
-            var $mdTheme = $element.controller('mdTheme');
+            $mdTheming($element);            
 
             if(attrs.class !== undefined) {
                 $element.addClass(attrs.class);
@@ -69,7 +67,7 @@ angular.module('triAngularDashboards')
                 if(undefined !== $scope.menu.menuClick) {
                     $scope.menu.menuClick($event);
                 }
-            }
+            };
         }
     };
 });

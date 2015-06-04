@@ -20,7 +20,7 @@ angular.module('triAngularDashboards')
     return {
         require: 'widget',
         restrict: 'A',
-        link: function($scope, $element, attrs, widgetCtrl) {
+        link: function($scope) {
             $scope.geoChartData = {
                 type: 'GeoChart',
                 data: [
