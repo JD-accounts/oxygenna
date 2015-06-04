@@ -99,7 +99,7 @@ gulp.task('examplejs', function () {
 
 
 gulp.task('misc', function () {
-  return gulp.src(paths.src + '/**/*.ico')
+  return gulp.src(paths.src + '/favicon.png')
     .pipe(gulp.dest(paths.dist + '/'));
 });
 
