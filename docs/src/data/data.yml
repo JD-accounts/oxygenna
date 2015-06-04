@@ -22,8 +22,14 @@ topmenu:
                 name: Download
                 slug: download
             -
-                name: Source files
+                name: Source folder
                 slug: source
+            -
+                name: Demo folder
+                slug: demo
+            -
+                name: Extras folder
+                slug: extras
     -
         name: Customisation
         slug: customisation
