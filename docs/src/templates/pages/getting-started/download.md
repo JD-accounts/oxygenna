@@ -31,12 +31,13 @@ In order to get at the goodness inside you will need to [unzip this file](https:
 
 Once you have unzipped the {{theme.name}} zip file you will find the following folders have been created.
 
-| Folder / File |                Contents               |
-| ------------- | :------------------------------------ |
-| source        | contains the templates source files   |
-| demo          | compiled version of source files      |
-| docs          | the documentation you are reading now |
-| extras        | lots of extra material design goodies |
+| Folder / File |                    Contents                   |
+| ------------- | :-------------------------------------------- |
+| changelog.md  | lists changes to each version of the template |
+| source/       | contains the templates source files           |
+| demo/         | compiled version of source files              |
+| docs/         | the documentation you are reading now         |
+| extras/       | lots of extra material design goodies         |
 
 The source folder contatins the gulp build system and all the templates source files.  You can read more about how to set this up in the Getting Started -> Source section of the docs.
 
