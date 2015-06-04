@@ -32,6 +32,9 @@
     "after": false,
     "afterEach": false,
     "expect": false,
-    "moment":false
+    "moment":false,
+    "countUp":false,
+    "jQuery":false,
+    "$": false
   }
 }

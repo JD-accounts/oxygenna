@@ -11,6 +11,6 @@
  angular.module('triAngular')
  .filter('tableImage', function ($sce) {
     return function (value) {
-        return $sce.trustAsHtml("<div style=\"background-image: url('" + value + "')\"/>");
+        return $sce.trustAsHtml('<div style=\"background-image: url(\'' + value + '\')\"/>');
     };
 });

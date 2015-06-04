@@ -1,3 +1,4 @@
+'use strict';
 (function(angular) {
 
     var mod = angular.module('webfont-loader', []);
@@ -23,7 +24,7 @@
                         inactive: onInactive
                     });
                 }
-            }
+            };
         }
     ]);
 }(angular));
