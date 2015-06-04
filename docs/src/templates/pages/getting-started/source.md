@@ -1,6 +1,6 @@
 ---
-  title: Setup
-  subtitle: How to get started setting up the build
+  title: Source files
+  subtitle: How to get started setting up the build found in the source folder
   layout: docs.hbs
   section: getting-started
 ---
@@ -57,32 +57,61 @@ Inside the source folder you will see a folder structure like this:
 
 Inside the source folder you will find the following folders and files
 
-| Folder / File |                Contents               |
-| ------------- | :------------------------------------ |
-| app           | contains the templates main app files |
-| test          | testing folder                        |
-| bower.json    | bower package file                    |
-| package.json  | node.js package file                  |
-| gulpfile.js   | gulp build file                       |
-| composer.json | PHP composer package file             |
-| changelog.md  | lists changes to the template         |
+| Folder / File |                  Contents                  |
+| ------------- | :----------------------------------------- |
+| app/          | Contains the main app files                |
+| assets/       | Contains app image files                   |
+| components/   | Contains components shared between modules |
+| 404.tmpl.html | 404 page html                              |
+| 500.tmpl.html | 500 page html                              |
+| favicon.png   | Favourite icon                             |
+| index.html    | Main index html file                       |
 
 Inside the app folder you will find the following files and folders
 
-| Folder / File |                                          Contents                                          |
-| ------------- | :----------------------------------------------------------------------------------------- |
-| assets        | contains images used in the template                                                       |
-| fonts         | font icon files used in the template                                                       |
-| layouts       | layout files used in nunjucks template system                                              |
-| partials      | html partial files                                                                         |
-| scripts       | all the templates javascript files                                                         |
-| styles        | all the templates SASS files                                                               |
-| *.html        | the main html files that are combined with the layouts / partials to create the html pages |
+| Folder / File  |                                                Contents                                                |
+| -------------- | :----------------------------------------------------------------------------------------------------- |
+| app.js         | Main angular app file sets up the entire template source includes all modules                          |
+| app.scss       | Main app sass file that imports partials from scss folder                                              |
+| authentication | Module that contains all authentication pages (Login, Forgot Password, etc) in the Authentication menu |
+| charts         | Module that contains all chart example pages (ChartJS and Google) in the Charts menu.                  |
+| dashboards     | Module that contains all dashboard examples and widgets in the Dashboards menu.                        |
+| elements       | Module that contains all element examples in the Elements menu.                                        |
+| email          | Module that contains the email app in the Email menu.                                                  |
+| extras         | Module that contains the extras pages in the Extras menu.                                              |
+| forms          | Module that contains the forms pages in the Forms menu.                                                |
+| il8n           | Contains all the base translation json files for the triangular app                                    |
+| introduction   | Module that contains the introducion page shown in the Introduction menu.                              |
+| layouts        | Contains the templates used for layouts by the template                                                |
+| maps           | Module that contains the map examples show in the Maps menu.                                           |
+| menulevels     | Module that contains the menu levels pages in the Levels menu.                                         |
+| scss           | Contains the apps scss partials                                                                        |
+| theming        | Contains code used by triangular to allow access to Material Angulars color palettes and themes        |
+| todo           | Module that contains the todo app in the Todo menu.                                                    |
+| ui             | Module that contains the ui pages in the UI menu.                                                      |
+
+## Module structure
+
+Each module in {{theme.name}} uses Googles recommended structure and naming conventions.
+
+To find out how this structure works we will describe one of the more simple modules below, the introduction module.
+
+This module justs adds one menu item and one page to the site.
+
+|       Folder / File        |                                   Contents                                  |
+| -------------------------- | :-------------------------------------------------------------------------- |
+| il8n                       | Translation json files                                                      |
+| introduction-controller.js | Controller for the introduction.tmpl.html page                              |
+| introduction.module.js     | Module js file, use angular to declare a module, adds a menu and the routes |
+| introduction.tmpl.html     | Introduction page HTML                                                      |
+| introduction.tmpl.scss     | Introduction page SCSS for CSS styling                                      |
 
 
-# Setting up your system
+# Setting up Gulp
 
-In order you run the build system for the template you will need to install node.js on your system.  Follow the instructions below to install node.js on your system.
+In order you run the gulp build system for the template you will need to install node.js on your system.
+
+Follow the instructions below to install node.js on your system.
 
 ## Installing Node.js
 
@@ -110,15 +139,9 @@ and see something like this
       triangular: '0.0.0' }
 
 
-# Getting the build system ready
+## Getting the build system ready
 
 In order to finish the set up of the build system you just need to run 2 simple commands from the root directory of your unzipped source files.
-
-## Install bower packages
-
-Run the following command from the root of your source files to install the bower packages listed in bower.json
-
-    bower install
 
 ## Install node modules
 
@@ -126,8 +149,21 @@ Run the following command from the root of your source files to install the node
 
     npm install
 
+## Install bower packages
+
+Run the following command from the root of your source files to install the bower packages listed in bower.json
+
+    bower install
+
+If you do not have bower installed run
+
+    npm -g install bower
 
 # Running a development server
+
+Once you have gulp all ready to go you can start developing.
+
+To do this you just need to start a local development server
 
 ## Start a development server
 
@@ -135,11 +171,27 @@ Once you have bower packages and node modules installed you are ready to code.  
 
     gulp serve
 
-This should automatically open up a browser window with the template running.  Any changes you make to the HTML & JS & SASS files will be auto updated in your browser window.
+This should automatically open up a browser window with the template running.
+
+## Browsersync
+
+Once the development server is up and running any changes you make to the HTML & JS & SASS files will be auto updated in your browser window.
 
 # Creating a production build
 
-Once you are happy with your changes you can initiate a build that will create a copy of the template that you can FTP to your web server.
+## Running a production server
+
+Before you run a production build you can test your production files first by running a local production server.
+
+Just run the command
+
+    gulp serve:dist
+
+The local server that runs will now be running a built version of your site.
+
+## Running a production build
+
+Once you are happy with your site you can initiate a build that will create a copy of the template that you can FTP to your web server.
 
 Just run the command
 
