@@ -24,10 +24,10 @@ controller('SidebarRightController', function ($scope, $http, $mdSidenav, $state
     $http({
         method: 'GET',
         url: API_CONFIG.url + 'email/inbox',
-    }).success(function(data, status, headers, config) {
+    }).success(function(data) {
         $scope.emails = data;
     }).
-    error(function(data, status, headers, config) {
+    error(function() {
         console.error('Cant get email list');
     });
 
@@ -174,7 +174,7 @@ controller('SidebarRightController', function ($scope, $http, $mdSidenav, $state
         }]
     }];
 
-    $scope.openMail = function(email) {
+    $scope.openMail = function() {
         $state.go('private.admin.toolbar.inbox');
         $scope.close();
     };

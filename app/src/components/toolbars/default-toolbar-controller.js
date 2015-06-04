@@ -40,7 +40,7 @@ angular.module('triAngular')
     initToolbar();
 
     $scope.switchLanguage = function(languageCode) {
-        $translate.use(languageCode).then(function(data) {
+        $translate.use(languageCode).then(function() {
         });
     };
 
