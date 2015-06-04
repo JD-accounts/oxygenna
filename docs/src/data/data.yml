@@ -19,8 +19,11 @@ topmenu:
                 name: Introduction
                 slug: introduction
             -
-                name: Setup
-                slug: setup
+                name: Download
+                slug: download
+            -
+                name: Source files
+                slug: source
     -
         name: Customisation
         slug: customisation
