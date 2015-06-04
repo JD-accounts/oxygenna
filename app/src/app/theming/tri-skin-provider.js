@@ -48,8 +48,9 @@ function SkinsProvider($mdThemingProvider, triThemingProvider, APP) {
                     $cookies = cookies;
                 }]);
                 // if we have a cookie set then override the currentSkin
-                if($cookies['triangular-skin'] !== undefined) {
-                    var cookieTheme = angular.fromJson($cookies['triangular-skin']);
+                var triangularSkin = $cookies.get('triangular-skin');
+                if(triangularSkin !== undefined) {
+                    var cookieTheme = angular.fromJson(triangularSkin);
                     currentSkin = skins[cookieTheme.skin] !== undefined ? skins[cookieTheme.skin] : skins[APP.defaultSkin];
                 }
             }
