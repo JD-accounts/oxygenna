@@ -31,7 +31,6 @@
         appendChild(msViewportStyle);
     }
 
-
     var $window = $(window)
     var $body   = $(document.body)
 
@@ -43,8 +42,20 @@
     })
 
     $window.on('load', function () {
-      $body.scrollspy('refresh')
-    })
+      $body.scrollspy('refresh');
+    });
+
+    $('.bs-sidebar a').click(function (e) {
+      var targetHeadingID = $(e.currentTarget).attr('href');
+      var heading = $(targetHeadingID);
+      if(heading.length > 0) {
+        var offset = heading.offset();
+        $('html, body').animate({
+          scrollTop: offset.top - navHeight
+        }, 1000);
+      }
+      e.preventDefault();
+    });
 
     $('.bs-docs-container [href=#]').click(function (e) {
       e.preventDefault()
