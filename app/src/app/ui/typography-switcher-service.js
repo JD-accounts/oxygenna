@@ -12,11 +12,12 @@ angular.module('triAngularUI')
         },
         getCurrentFont: function() {
             // if we have no current font set, set it to first font (Roboto)
-            if(undefined === $cookies['tri-typography-font']) {
-                $cookies['tri-typography-font'] = angular.toJson(UI_FONTS[0]);
+            var fontCookie = $cookies.get('tri-typography-font');
+            if(undefined === fontCookie) {
+                $cookies.put('tri-typography-font', angular.toJson(UI_FONTS[0]));
             }
-
-            return angular.fromJson($cookies['tri-typography-font']);
+                        
+            return angular.fromJson($cookies.get('tri-typography-font'));
         },
         changeFont: function(font) {
             $window.WebFont.load({
@@ -25,7 +26,7 @@ angular.module('triAngularUI')
                 },
                 active: function() {
                     $('button,select,html,textarea,input').css({'font-family': font.family});
-                    $cookies['tri-typography-font'] = angular.toJson(font);
+                    $cookies.put('tri-typography-font', angular.toJson(font));
                 },
                 inactive: function() {
                     console.error('Font ' + font.name + ' could not be loaded');

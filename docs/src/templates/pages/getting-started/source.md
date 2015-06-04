@@ -1,5 +1,5 @@
 ---
-  title: Source files
+  title: Source folder
   subtitle: How to get started setting up the build found in the source folder
   layout: docs.hbs
   section: getting-started
