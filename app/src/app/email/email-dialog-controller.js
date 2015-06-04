@@ -29,18 +29,18 @@ angular.module('triAngularEmail')
         });
     };
 
-    $scope.toggleCCS = function($event) {
+    $scope.toggleCCS = function() {
         $scope.showCCS = !$scope.showCCS;
         $scope.showCCSIcon = $scope.showCCS ? 'icon-arrow-drop-up' : 'icon-arrow-drop-down';
     };
 
     $scope.send = function() {
         $mdDialog.hide($scope.email);
-    }
+    };
 
     $scope.cancel = function() {
         $mdDialog.cancel();
-    }
+    };
 
     if(getFocus) {
         $timeout(function() {

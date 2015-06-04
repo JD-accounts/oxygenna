@@ -31,7 +31,7 @@ controller('FaIconsController', function ($scope, $mdDialog, icons) {
         $mdDialog.show(
             $mdDialog.alert()
             .parent(angular.element(document.body))
-            .title("Here's the code for that icon")
+            .title('Here\'s the code for that icon')
             .content('<md-icon md-font-icon="' + icon.className + '"></md-icon>')
             .ok('Thanks')
             .targetEvent($event)

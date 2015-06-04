@@ -43,7 +43,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
                 template: '<div flex ui-view layout="column"></div>'
             }
         },
-    })
+    });
 
     angular.forEach(EMAIL_ROUTES, function(route) {
         $stateProvider

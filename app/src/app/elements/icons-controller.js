@@ -13,11 +13,11 @@
 angular.module('triAngularElements').
 controller('IconsController', function ($scope, icons, fa) {
     $scope.icons = [];
-    $scope.families = ['Material Icon Font', 'Font Awesome']
+    $scope.families = ['Material Icon Font', 'Font Awesome'];
     $scope.selectedIcon = null;
 
     // create filterable data structure for icons
-    angular.forEach(icons.data, function(iconGroup, groupName) {
+    angular.forEach(icons.data, function(iconGroup) {
         angular.forEach(iconGroup, function(icon, iconName) {
             $scope.icons.push({
                 name: iconName,
@@ -37,5 +37,5 @@ controller('IconsController', function ($scope, icons, fa) {
 
     $scope.selectIcon = function(icon) {
         $scope.selectedIcon = icon;
-    }
+    };
 });
