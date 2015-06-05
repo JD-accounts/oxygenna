@@ -95,6 +95,9 @@ $i : 1;
 .line-height-big {
   line-height: 1.5em;
 }
+.line-height-bigger {
+  line-height: 1.75em;
+}
 
 // - Font Icons
 md-icon[md-font-icon] {
@@ -127,4 +130,9 @@ md-icon[md-font-icon] {
 }
 .font-style-italic {
   font-style: italic;
+}
+
+// Text light
+.text-light {
+  color: rgba(255, 255, 255, 1);
 }

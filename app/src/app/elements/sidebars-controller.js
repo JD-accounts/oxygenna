@@ -13,6 +13,6 @@
 angular.module('triAngularElements').
 controller('SidebarsController', function ($scope, $mdSidenav) {
     $scope.openSidebar = function(id) {
-        $mdSidenav(id).toggle()
+        $mdSidenav(id).toggle();
     };
 });

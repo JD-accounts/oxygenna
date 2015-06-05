@@ -1,11 +1,8 @@
 'use strict';
 
 angular.module('triAngular')
-.service('SideMenu', function($location, $filter, $translate) {
-    var menu = [];
-    var activeMenu = null;
-    var activeParent = null;
-    var activeItem = null;
+.service('SideMenu', function() {
+    var menu = [];    
 
     function traverse(obj, callback, depth) {
         depth = depth === undefined ? -1 : depth;
@@ -39,7 +36,7 @@ angular.module('triAngular')
                 if(item.active) {
                     path.push(item);
                 }
-            })
+            });
             return path;
         }
     };

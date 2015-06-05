@@ -34,7 +34,7 @@ angular.module('triAngularAuthentication')
         icon: 'fa-linkedin',
         color: '#337ab7',
         url: '#'
-    }]
+    }];
 
     // controller to handle login check
     $scope.loginClick = function() {

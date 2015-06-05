@@ -14,7 +14,7 @@ angular.module('triAngular')
 .provider('triSkins', SkinsProvider)
 .run(addSkinToScope);
 
-function SkinsProvider($mdThemingProvider, triThemingProvider) {
+function SkinsProvider($mdThemingProvider, triThemingProvider, APP) {
     var skins = {};
     var currentSkin = null;
     var useSkinCookie = false;
@@ -48,9 +48,10 @@ function SkinsProvider($mdThemingProvider, triThemingProvider) {
                     $cookies = cookies;
                 }]);
                 // if we have a cookie set then override the currentSkin
-                if($cookies['triangular-skin'] !== undefined) {
-                    var cookieTheme = angular.fromJson($cookies['triangular-skin']);
-                    currentSkin = skins[cookieTheme.skin];
+                var triangularSkin = $cookies.get('triangular-skin');
+                if(triangularSkin !== undefined) {
+                    var cookieTheme = angular.fromJson(triangularSkin);
+                    currentSkin = skins[cookieTheme.skin] !== undefined ? skins[cookieTheme.skin] : skins[APP.defaultSkin];
                 }
             }
 
@@ -95,7 +96,7 @@ function Skin(id, name, $mdThemingProvider, triThemingProvider) {
             // register theme with mdThemingProvider (will load css in the header)
             var theme = triThemingProvider.theme(self.elements[element]);
 
-            var loadedTheme = $mdThemingProvider.theme(theme.name)
+            $mdThemingProvider.theme(theme.name)
             .primaryPalette(theme.colors.primary.name, theme.colors.primary.hues)
             .accentPalette(theme.colors.accent.name, theme.colors.accent.hues)
             .warnPalette(theme.colors.warn.name, theme.colors.warn.hues)

@@ -72,12 +72,7 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
                 });
             }
         }
-    })
-    .state('admin-panel.default.ui-sandbox', {
-        url: '/ui/sandbox',
-        controller: 'ThemeTestController',
-        templateUrl: 'app/ui/theme-test.tmpl.html',
-    })
+    })    
 
     .state('admin-panel.default.ui-toolbar', {
         url: '/ui/toolbars/:extraClass/:background/:shrink',
@@ -100,7 +95,7 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
             }
 
             if(undefined !== toParams.background) {
-                toState.data.toolbar.background = toParams.background === 'off' ? false : 'assets/images/backgrounds/bg-1.jpg';
+                toState.data.toolbar.background = toParams.background === 'off' ? false : 'assets/images/backgrounds/bg-toolbar.jpg';
             }
 
             if(undefined !== toParams.shrink) {
@@ -148,10 +143,6 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
         },{
             name: 'MENU.UI.SKINS',
             state: 'admin-panel.default.ui-skins',
-            type: 'link',
-        },{
-            name: 'MENU.UI.THEME-TEST',
-            state: 'admin-panel.default.ui-sandbox',
             type: 'link',
         },{
             name: 'MENU.UI.TOOLBAR',

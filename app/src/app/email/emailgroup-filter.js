@@ -19,5 +19,5 @@ angular.module('triAngularEmail')
                 return email;
             }
         });
-    }
+    };
 });

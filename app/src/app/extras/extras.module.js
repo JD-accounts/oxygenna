@@ -25,7 +25,7 @@ angular.module('triAngularExtras', [])
     .state('admin-panel.default.extra-blank', {
         url: '/extras/blank',
         templateUrl: 'app/extras/blank.tmpl.html',
-    })
+    });
 })
 .run(function(SideMenu) {
     SideMenu.addMenu({

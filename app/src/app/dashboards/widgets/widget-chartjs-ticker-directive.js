@@ -20,7 +20,7 @@ angular.module('triAngularDashboards')
     return {
         require: 'widget',
         restrict: 'A',
-        link: function ($scope, $element, attrs, widgetCtrl) {
+        link: function ($scope) {
             var maximum = 100;
             $scope.tickerChart = {
                 data: [[]],

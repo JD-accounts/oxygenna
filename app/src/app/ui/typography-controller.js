@@ -19,8 +19,8 @@ controller('TypographyController', function ($scope, TypographySwitcher, UI_FONT
         if($scope.currentFont.name === font.name) {
             $scope.currentFont = font;
         }
-    })
+    });
     $scope.changeFont = function() {
         TypographySwitcher.changeFont($scope.currentFont);
-    }
+    };
 });
