@@ -59,6 +59,9 @@ topmenu:
             -
                 name: Translating
                 slug: translating
+            -
+                name: Directives
+                slug: directives
     -
         name: Changelog
         slug: changelog

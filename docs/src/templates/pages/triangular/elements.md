@@ -1,6 +1,6 @@
 ---
   title: Elements
-  subtitle: Guide to Angular Material Elements
+  subtitle: Guide to the elements available in triangular
   layout: docs.hbs
   section: triangular
 ---
@@ -31,6 +31,10 @@ Each page not only has a demo example but also the example HTML and JS needed.
 - [Lists](http://triangular.oxygenna.com/#/elements/lists)
 - [Chips](http://triangular.oxygenna.com/#/elements/chips)
 - [Cards](http://triangular.oxygenna.com/#/elements/cards)
+
+# Dashboard Widgets
+
+- [Widgets](http://triangular.oxygenna.com/#/dashboards/widgets)
 
 # Charts
 
