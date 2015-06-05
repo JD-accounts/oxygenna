@@ -1,4 +1,14 @@
 {
+    "MENU": {
+        "AUTH": {
+            "AUTH": "Authentication",
+            "LOGIN": "Login",
+            "SIGN_UP": "Sign Up",
+            "FORGOT": "Forgot Password",
+            "LOCK": "Lock Page",
+            "PROFILE": "Profile"
+        }
+    },
     "HEADER": {
         "HEADING": "Triangular"
     },

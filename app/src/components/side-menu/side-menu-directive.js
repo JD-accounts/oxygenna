@@ -21,7 +21,7 @@ angular.module('triAngular')
         restrict: 'E',
         template: '<md-content><side-menu-item ng-repeat="item in menu | orderBy:\'priority\'" item="item"></side-menu-item></md-content>',
         scope: {},
-        controller: function($scope, $element) {
+        controller: function($scope) {
             // get the menu structure from the menu service
             $scope.menu = SideMenu.getMenu();
         },

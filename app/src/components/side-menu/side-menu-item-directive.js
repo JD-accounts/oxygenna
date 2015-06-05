@@ -24,7 +24,7 @@ angular.module('triAngular')
             item: '='
         },
         template: '<div ng-include="itemTemplate"></div>',
-        link: function($scope, $element, attrs, $sideMenu) {
+        link: function($scope) {
             // load a template for this directive based on the type ( link | dropdown )
             $scope.itemTemplate = 'components/side-menu/side-menu-' + $scope.item.type + '.tmpl.html';
             $scope.item.url = $state.href($scope.item.state);
@@ -92,7 +92,7 @@ angular.module('triAngular')
             };
 
             // this event is emitted up the tree to open parent menus
-            $scope.$on('openParents', function(event) {
+            $scope.$on('openParents', function() {
                 // openParents event so open the parent item
                 $scope.item.active = true;
                 $scope.item.open = true;

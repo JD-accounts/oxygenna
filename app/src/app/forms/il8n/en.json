@@ -1,3 +1,11 @@
 {
-    "TEST": "This is a tes"
+    "MENU": {
+        "FORMS": {
+            "FORMS": "Forms",
+            "INPUTS": "Inputs",
+            "BINDING": "Data Binding",
+            "AUTOCOMPLETE": "Autocomplete",
+            "VALIDATION": "Validation"
+        }
+    }
 }

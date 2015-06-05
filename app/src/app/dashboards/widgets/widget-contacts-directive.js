@@ -20,7 +20,7 @@ angular.module('triAngularDashboards')
     return {
         require: 'widget',
         restrict: 'A',
-        link: function($scope, $element, attrs, widgetCtrl) {
+        link: function($scope) {
             $scope.contacts = [{
                 name: 'Morris Onions',
                 image: 'assets/images/avatars/avatar-2.png'

@@ -46,5 +46,5 @@ controller('DashboardServerController', function ($scope, $timeout, $mdToast) {
             .position('bottom right')
             .hideDelay(3000)
         );
-    }, 5000)
+    }, 5000);
 });

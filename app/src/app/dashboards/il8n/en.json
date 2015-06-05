@@ -1,6 +1,7 @@
 {
     "MENU": {
         "DASHBOARDS": {
+            "DASHBOARDS": "Dashboards",
             "GENERAL": "General",
             "ANALYTICS": "Analytics",
             "SERVER": "Server",

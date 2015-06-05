@@ -1,12 +1,8 @@
 {
     "MENU": {
         "EXTRAS": {
-            "404": {
-                "TITLE": "404",
-                "HOME": "Rentrer à la maison",
-                "NOT_FOUND": "Page non trouvée",
-                "DESCRIPTION": "Désolé, la page que vous recherchez ne se trouve pas ici. Retournez à la page d'accueil et à partir de là.."
-            },
+            "404": "Page 404",
+            "500": "500 Page",
             "EXTRAS": "Extras",
             "GALLERY": "Galerie",
             "AVATARS": "Les Avatars",

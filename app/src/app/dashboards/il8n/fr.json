@@ -1,6 +1,7 @@
 {
     "MENU": {
         "DASHBOARDS": {
+            "DASHBOARDS": "Des tableaux de bord",
             "GENERAL": "Général",
             "ANALYTICS": "Analytics",
             "SERVER": "Serveur",
@@ -45,7 +46,7 @@
             "LIMIT": "de la limite mensuelle",
             "TASKS": "Tâches actuelles",
             "DATE": "11/03/15 - 11/4/15",
-            "DISKUSAGE": "Utilisation du disque"
+            "DISKUSAGE": "L'Utilisation Du Disque"
         },
         "WIDGETS": {
             "SALES": "Vente",

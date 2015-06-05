@@ -20,7 +20,7 @@ angular.module('triAngularDashboards')
     return {
         require: 'widget',
         restrict: 'A',
-        link: function($scope, $element, attrs, widgetCtrl) {
+        link: function($scope) {
             $scope.todos = [{
                 name: 'Buy Milk',
                 done: false
@@ -33,7 +33,7 @@ angular.module('triAngularDashboards')
             },{
                 name: 'Upload files',
                 done: false
-            }]
+            }];
         }
     };
 });

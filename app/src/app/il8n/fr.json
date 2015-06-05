@@ -1,69 +1,21 @@
 {
-    "MENU": {
-        "AUTH": {
-            "AUTH": "L'authentification",
-            "LOGIN": "Connexion",
-            "SIGN_UP": "Inscrivez -",
-            "FORGOT": "Mot De Passe Oublié",
-            "LOCK": "Page De Verrouillage",
-            "PROFILE": "Profil"
-        },
-        "DASHBOARDS": {
-            "DASHBOARDS": "Des tableaux de bord",
-            "DASHBOARD": "Tableau de bord",
-            "WIDGETS": "Les Widgets"
-        },
-        "EMAIL": {
-            "EMAIL": "E-mail",
-            "INBOX": "Boîte de réception",
-            "TRASH": "Corbeille",
-            "SENT": "Envoyé"
-        },
-        "ELEMENTS": {
-            "ELEMENTS": "Éléments",
-            "BUTTONS": "Boutons",
-            "CARDS": "Cartes",
-            "ICONS": "Les icônes",
-            "CHECKBOXES": "Des cases à cocher",
-            "SWITCHES": "Les commutateurs",
-            "RADIOS": "Les Radios",
-            "DIALOGS": "Les boîtes de dialogue",
-            "GRIDS": "Grilles",
-            "TABS": "Onglets",
-            "SLIDERS": "Curseurs",
-            "SELECTS": "Sélectionne",
-            "TABLES": "Tables",
-            "PROGRESS": "Progrès",
-            "SIDEBARS": "Encadrés",
-            "TOOLBARS": "Les barres d'outils",
-            "TOOLTIPS": "Les info-bulles",
-            "WHITEFRAMES": "Whiteframes",
-            "TOASTS": "Toasts",
-            "LISTS": "Listes",
-            "CHIPS": "Jetons"
-        },
-        "FORMS": {
-            "FORMS": "Les formes",
-            "INPUTS": "Entrées",
-            "BINDING": "La Liaison De Données",
-            "AUTOCOMPLETE": "La saisie semi-automatique",
-            "VALIDATION": "Validation"
-        },
-        "INTRODUCTION": {
-            "INTRODUCTION": "Introduction"
-        },
-        "LEVELS": {
-            "LEVELS": "Les niveaux",
-            "1-1": "Niveau 1-1",
-            "2-1": "Niveau 2-1",
-            "3-1": "Niveau 3-1",
-            "4-1": "Niveau 4-1",
-            "4-2": "Niveau 4-2",
-            "4-3": "Niveau 4-3"
-        }
+    "404": {
+        "TITLE": "404",
+        "HOME": "Rentrer à la maison",
+        "MESSAGE": "Page non trouvée",
+        "DESCRIPTION": "Désolé, la page que vous recherchez ne se trouve pas ici. Retournez à la page d'accueil et à partir de là."
+    },
+    "500": {
+        "TITLE": "500",
+        "MESSAGE": "Quelque chose s'est mal passé.",
+        "DESCRIPTION": "Désolé, quelque chose a mal tourné.",
+        "HOME": "Rentrer à la maison"
     },
     "ADMIN": {
         "TOOLBAR": {
+            "SETTINGS": "Paramètres",
+            "PROFILE": "Profil",
+            "LOGOUT": "Déconnexion",
             "SIDEBAR_TOGGLE": "Bascule Menu"
         },
         "NOTIFICATIONS": {
@@ -81,5 +33,14 @@
             "BANDWIDTH_USAGAE": "Utilisation De La Bande Passante (10/100 Go)",
             "MEMORY_USAGAE": "L'Utilisation De La Mémoire (1/8 Go)"
         }
+    },
+    "LANGUAGES": {
+        "ENGLISH": "Anglais",
+        "FRENCH": "Français"
+    },
+    "TABLES": {
+        "NEXT": "Page Suivante",
+        "PREV": "Page Précédente",
+        "OF": "de"
     }
 }

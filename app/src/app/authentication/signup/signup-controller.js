@@ -38,7 +38,7 @@ angular.module('triAngularAuthentication')
                 $state.go('public.auth.login');
             });
         }).
-        error(function(data) {
+        error(function() {
             $mdToast.show(
                 $mdToast.simple()
                 .content($filter('translate')('SIGNUP.MESSAGES.NO_SIGNUP'))

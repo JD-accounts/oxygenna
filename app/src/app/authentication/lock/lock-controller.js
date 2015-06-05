@@ -12,7 +12,7 @@
  *
  */
 angular.module('triAngularAuthentication')
-.controller('LockController', function ($scope, $state, $mdToast, $filter) {
+.controller('LockController', function ($scope, $state) {
     $scope.user = {
         name: 'Morris Onions',
         email: 'info@oxygenna.com',

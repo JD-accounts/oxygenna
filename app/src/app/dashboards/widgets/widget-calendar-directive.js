@@ -23,18 +23,18 @@ angular.module('triAngularDashboards')
         controller: function($scope) {
             $scope.calendarEvents = [];
         },
-        link: function($scope, $element, attrs, widgetCtrl) {
+        link: function($scope) {
             $scope.calendarOptions = {
                 header: false,
                 height: 'auto',
-                viewRender: function(view, element) {
+                viewRender: function(view) {
                     $scope.currentDay = view.calendar.getDate();
                 }
             };
 
             $scope.changeMonth = function(direction) {
                 uiCalendarConfig.calendars.calendarWidget.fullCalendar(direction);
-            }
+            };
         }
     };
 });

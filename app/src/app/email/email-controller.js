@@ -31,7 +31,7 @@ angular.module('triAngularEmail')
         });
 
         openEmail(replyEmail, $filter('translate')(title));
-    }
+    };
 
     $scope.menuClick = function($event) {
         // store copy of button click event to use for dialog animations
@@ -61,5 +61,5 @@ angular.module('triAngularEmail')
                 .hideDelay(3000)
             );
         });
-    };
+    }
 });

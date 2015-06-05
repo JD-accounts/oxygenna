@@ -1,6 +1,13 @@
 'use strict';
 
-angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ui.router', 'ngMaterial', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras', 'triAngularTodo', 'ngMaterialDropmenu'])
+angular.module('triAngular', [
+    // inject angular modules
+    'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngMaterial',
+    // inject extra 3rd party angular modules
+    'ui.router', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'ngMaterialDropmenu',
+    // inject our own triangular modules
+    'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras', 'triAngularTodo'
+])
 .constant('APP', {
     name: 'triangular',
     logo: 'assets/images/logo.png',
@@ -12,7 +19,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
         name: 'LANGUAGES.FRENCH',
         key: 'fr'
     }],
-    defaultSkin: 'cyan'
+    defaultSkin: 'cyan-cloud'
 })
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
@@ -38,7 +45,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     // get languages set in APP constant
     var languageKeys = [];
     for(var lang in APP.languages) {
-        languageKeys.push(APP.languages[lang].key)
+        languageKeys.push(APP.languages[lang].key);
     }
     /**
      *  try to detect the users language by checking the following
@@ -217,7 +224,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('deep-orange');
 
-    triSkinsProvider.skin('cyan', 'Cyan Cloud')
+    triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
     .sidebarTheme('cyan')
     .toolbarTheme('white-cyan')
     .logoTheme('cyan')
@@ -236,7 +243,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('purple');
 
-    triSkinsProvider.skin('red', 'Red Dwarf')
+    triSkinsProvider.skin('red-dwarf', 'Red Dwarf')
     .sidebarTheme('red')
     .toolbarTheme('white-red')
     .logoTheme('red')
@@ -255,7 +262,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('deep-orange');
 
-    triSkinsProvider.skin('purple', 'Plumb Purple')
+    triSkinsProvider.skin('plumb-purple', 'Plumb Purple')
     .sidebarTheme('purple')
     .toolbarTheme('white-purple')
     .logoTheme('purple')
@@ -268,7 +275,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .warnPalette('deep-orange')
     .dark();
 
-    triSkinsProvider.skin('dark', 'Dark Knight')
+    triSkinsProvider.skin('dark-knight', 'Dark Knight')
     .sidebarTheme('dark')
     .toolbarTheme('dark')
     .logoTheme('dark')
@@ -287,7 +294,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('orange');
 
-    triSkinsProvider.skin('blue-grey', 'Battleship Grey')
+    triSkinsProvider.skin('battleship-grey', 'Battleship Grey')
     .sidebarTheme('blue-grey')
     .toolbarTheme('white-blue-grey')
     .logoTheme('blue-grey')
@@ -308,7 +315,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('lime');
 
-    triSkinsProvider.skin('orange', 'Zesty Orange')
+    triSkinsProvider.skin('zesty-orange', 'Zesty Orange')
     .sidebarTheme('orange')
     .toolbarTheme('white-orange')
     .logoTheme('orange')
@@ -323,7 +330,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     .accentPalette('red')
     .warnPalette('lime');
 
-    triSkinsProvider.skin('indigo', 'Indigo Island')
+    triSkinsProvider.skin('indigo-island', 'Indigo Island')
     .sidebarTheme('indigo')
     .toolbarTheme('indigo')
     .logoTheme('indigo')
@@ -344,7 +351,7 @@ angular.module('triAngular', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     })
     .warnPalette('deep-orange');
 
-    triSkinsProvider.skin('light-green', 'Kermit Green')
+    triSkinsProvider.skin('kermit-green', 'Kermit Green')
     .sidebarTheme('light-green')
     .toolbarTheme('white-light-green')
     .logoTheme('light-green')

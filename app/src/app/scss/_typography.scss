@@ -1,4 +1,11 @@
 // Typography
+
+
+// set template font family
+button, select, html, textarea, input {
+  font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
+}
+
 html {
   font-size: 62.5%;
   line-height: 1.5;

@@ -35,14 +35,33 @@ topmenu:
         slug: customisation
         children:
             -
+                name: Modules
+                slug: modules
+            -
                 name: Colors & Themes
                 slug: themes
             -
                 name: Typography
                 slug: typography
+            -
+                name: Logo & Name
+                slug: logo
     -
-        name: Video Tutorials
-        slug: videos
+        name: Triangular
+        slug: triangular
+        children:
+            -
+                name: CSS
+                slug: css
+            -
+                name: Elements
+                slug: elements
+            -
+                name: Translating
+                slug: translating
+            -
+                name: Directives
+                slug: directives
     -
         name: Changelog
         slug: changelog

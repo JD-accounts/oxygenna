@@ -16,11 +16,11 @@
 * ```
 */
 angular.module('triAngularDashboards')
-.directive('chatWidget', function(uiCalendarConfig) {
+.directive('chatWidget', function() {
     return {
         require: 'widget',
         restrict: 'A',
-        link: function($scope, $element, attrs, widgetCtrl) {
+        link: function($scope) {
             $scope.conversation = [{
                 name: 'Morris Onions',
                 image: 'assets/images/avatars/avatar-6.png',

@@ -5,6 +5,12 @@
   section: customisation
 ---
 
+# Previewing available fonts
+
+{{theme.name}} comes with some pre defined fonts that you can try out.
+
+Goto the demo site to [take a look](http://triangular.oxygenna.com/#/ui/typography).
+
 # Changing the font
 
 Changing the font that is used by triangular is very easy.
@@ -19,6 +25,9 @@ You will see a section of code like this.
 
 Google Fonts wil tell you the correct code to replace this with when you choose to use a font from the [Google Fonts Site](http://www.google.com/fonts).
 
-Once you have replaced this link tag with the one suggested by Google Fonts, edit the <code>/app/src/app/typography.scss</code> file and change the following line to use your new font family.
+Once you have replaced this link tag with the one suggested by Google Fonts, edit the <code>/app/src/app/scss/_typography.scss</code> file and change the following line to use your new font family.
 
-    $font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
+    // set template font family
+    button, select, html, textarea, input {
+      font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
+    }

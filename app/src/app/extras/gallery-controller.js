@@ -15,7 +15,7 @@ controller('GalleryController', function ($scope, $mdDialog) {
     var loremPixelCategories = ['abstract', 'city', 'people', 'nature', 'food', 'fashion', 'nightlife'];
 
     function randomImage(title) {
-        var randomImage = Math.floor((Math.random() * 10) + 1);
+        var randImage = Math.floor((Math.random() * 10) + 1);
         var randomCategory = loremPixelCategories[Math.floor((Math.random() * (loremPixelCategories.length-1)) + 1)];
 
         var width = [300, 640];
@@ -41,8 +41,8 @@ controller('GalleryController', function ($scope, $mdDialog) {
             image.colspan = 1;
         }
 
-        image.url += '/' + randomCategory + '/' + randomImage;
-        image.urlFull += '/' + randomCategory + '/' + randomImage;
+        image.url += '/' + randomCategory + '/' + randImage;
+        image.urlFull += '/' + randomCategory + '/' + randImage;
 
         return image;
     }

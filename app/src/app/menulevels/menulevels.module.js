@@ -9,7 +9,7 @@
  */
 angular.module('triAngularMenuLevels', [])
 .config(function ($translatePartialLoaderProvider, $stateProvider) {
-    $translatePartialLoaderProvider.addPart('app/ui');
+    $translatePartialLoaderProvider.addPart('app/menulevels');
 
     $stateProvider
     .state('admin-panel.default.menu-levels', {

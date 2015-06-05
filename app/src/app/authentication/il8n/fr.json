@@ -1,4 +1,14 @@
 {
+    "MENU": {
+        "AUTH": {
+            "AUTH": "L'authentification",
+            "LOGIN": "Connexion",
+            "SIGN_UP": "Inscrivez -",
+            "FORGOT": "Mot De Passe Oublié",
+            "LOCK": "Page De Verrouillage",
+            "PROFILE": "Profil"
+        }
+    },
     "HEADER": {
         "HEADING": "Triangulaire"
     },
