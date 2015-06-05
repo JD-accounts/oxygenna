@@ -35,6 +35,9 @@ topmenu:
         slug: customisation
         children:
             -
+                name: Modules
+                slug: modules
+            -
                 name: Colors & Themes
                 slug: themes
             -
