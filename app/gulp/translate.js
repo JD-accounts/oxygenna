@@ -1,6 +1,8 @@
 'use strict';
 
 // ADD YOUR YANDEX API KEY HERE
+// go here for more info
+// https://tech.yandex.com/translate/
 var YANDEX_API_KEY = '';
 
 var gulp = require('gulp');
