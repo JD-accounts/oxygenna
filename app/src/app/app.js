@@ -19,7 +19,7 @@ angular.module('triAngular', [
         name: 'LANGUAGES.FRENCH',
         key: 'fr'
     }],
-    defaultSkin: 'cyan'
+    defaultSkin: 'cyan-cloud'
 })
 .constant('API_CONFIG', {
     'url':  'http://triangular-api.oxygenna.com/'
@@ -224,7 +224,7 @@ angular.module('triAngular', [
     })
     .warnPalette('deep-orange');
 
-    triSkinsProvider.skin('cyan', 'Cyan Cloud')
+    triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
     .sidebarTheme('cyan')
     .toolbarTheme('white-cyan')
     .logoTheme('cyan')
@@ -243,7 +243,7 @@ angular.module('triAngular', [
     })
     .warnPalette('purple');
 
-    triSkinsProvider.skin('red', 'Red Dwarf')
+    triSkinsProvider.skin('red-dwarf', 'Red Dwarf')
     .sidebarTheme('red')
     .toolbarTheme('white-red')
     .logoTheme('red')
@@ -262,7 +262,7 @@ angular.module('triAngular', [
     })
     .warnPalette('deep-orange');
 
-    triSkinsProvider.skin('purple', 'Plumb Purple')
+    triSkinsProvider.skin('plumb-purple', 'Plumb Purple')
     .sidebarTheme('purple')
     .toolbarTheme('white-purple')
     .logoTheme('purple')
@@ -275,7 +275,7 @@ angular.module('triAngular', [
     .warnPalette('deep-orange')
     .dark();
 
-    triSkinsProvider.skin('dark', 'Dark Knight')
+    triSkinsProvider.skin('dark-knight', 'Dark Knight')
     .sidebarTheme('dark')
     .toolbarTheme('dark')
     .logoTheme('dark')
@@ -294,7 +294,7 @@ angular.module('triAngular', [
     })
     .warnPalette('orange');
 
-    triSkinsProvider.skin('blue-grey', 'Battleship Grey')
+    triSkinsProvider.skin('battleship-grey', 'Battleship Grey')
     .sidebarTheme('blue-grey')
     .toolbarTheme('white-blue-grey')
     .logoTheme('blue-grey')
@@ -315,7 +315,7 @@ angular.module('triAngular', [
     })
     .warnPalette('lime');
 
-    triSkinsProvider.skin('orange', 'Zesty Orange')
+    triSkinsProvider.skin('zesty-orange', 'Zesty Orange')
     .sidebarTheme('orange')
     .toolbarTheme('white-orange')
     .logoTheme('orange')
@@ -330,7 +330,7 @@ angular.module('triAngular', [
     .accentPalette('red')
     .warnPalette('lime');
 
-    triSkinsProvider.skin('indigo', 'Indigo Island')
+    triSkinsProvider.skin('indigo-island', 'Indigo Island')
     .sidebarTheme('indigo')
     .toolbarTheme('indigo')
     .logoTheme('indigo')
@@ -351,7 +351,7 @@ angular.module('triAngular', [
     })
     .warnPalette('deep-orange');
 
-    triSkinsProvider.skin('light-green', 'Kermit Green')
+    triSkinsProvider.skin('kermit-green', 'Kermit Green')
     .sidebarTheme('light-green')
     .toolbarTheme('white-light-green')
     .logoTheme('light-green')
