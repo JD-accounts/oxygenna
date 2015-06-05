@@ -16,5 +16,5 @@ controller('SwitchesController', function ($scope) {
         for(var x in data) {
             data[x] = value;
         }
-    }
+    };
 });

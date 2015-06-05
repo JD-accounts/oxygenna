@@ -96,7 +96,7 @@ function Skin(id, name, $mdThemingProvider, triThemingProvider) {
             // register theme with mdThemingProvider (will load css in the header)
             var theme = triThemingProvider.theme(self.elements[element]);
 
-            var loadedTheme = $mdThemingProvider.theme(theme.name)
+            $mdThemingProvider.theme(theme.name)
             .primaryPalette(theme.colors.primary.name, theme.colors.primary.hues)
             .accentPalette(theme.colors.accent.name, theme.colors.accent.hues)
             .warnPalette(theme.colors.warn.name, theme.colors.warn.hues)
