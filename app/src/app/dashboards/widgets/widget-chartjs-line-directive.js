@@ -34,9 +34,9 @@ angular.module('triAngularDashboards')
 
             $scope.lineChart = {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                series: ['Pageviews', 'Visits'],
+                series: ['Pageviews', 'Visits', 'Sign ups'],
                 options: {
-                    datasetFill: true
+                    datasetFill: false
                 },
                 data: []
             };
