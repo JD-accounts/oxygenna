@@ -20,6 +20,7 @@
   "smarttabs": true,
   "white": true,
   "validthis": true,
+  "browser":true,
   "globals": {
     "angular": false,
     // Angular Mocks
@@ -35,6 +36,6 @@
     "moment":false,
     "countUp":false,
     "jQuery":false,
-    "$": false
+    "$": false    
   }
 }

@@ -45,7 +45,7 @@ angular.module('triAngular', [
     // get languages set in APP constant
     var languageKeys = [];
     for(var lang in APP.languages) {
-        languageKeys.push(APP.languages[lang].key)
+        languageKeys.push(APP.languages[lang].key);
     }
     /**
      *  try to detect the users language by checking the following
