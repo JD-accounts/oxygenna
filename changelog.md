@@ -1,6 +1,6 @@
 ---
   title: Theme Changelog
-  subtitle: Lists all changes to each version of {{theme.name}}
+  subtitle: Lists all changes to each version of triangular
   layout: docs.hbs
 ---
 
