@@ -83,7 +83,7 @@ From there you can run the gulp task that will translate the template translatio
 
 You need to specify 2 lanuages e.g.
 
-    translate --from en --to fr
+    gulp translate --from en --to fr
 
 The command above will grab all en.json files from all your il8n folders send them to Yandex to be translated into French.
 

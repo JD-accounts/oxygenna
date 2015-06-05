@@ -1,4 +1,12 @@
 {
+    "MENU": {
+        "EMAIL": {
+            "EMAIL": "E-mail",
+            "INBOX": "Boîte de réception",
+            "TRASH": "Corbeille",
+            "SENT": "Envoyé"
+        }
+    },
     "EMAIL": {
         "TOOLBAR": {
             "SEARCH": "Recherche"
@@ -13,18 +21,17 @@
         },
         "COMPOSE": {
             "FROM": "À partir de",
-            "TO": "Pour",
             "CC": "CC",
             "BCC": "CCI",
             "SUBJECT": "Sujet",
             "SEND": "Envoyer",
-            "CLOSE": "Fermer",
             "VALIDATION": {
                 "EMAIL_REQUIRED": "Veuillez entrer une adresse pour envoyer.",
                 "EMAIL_VALID": "Veuillez entrer une adresse email valide.",
                 "SUBJECT_REQUIRED": "Veuillez saisir un objet pour le courrier électronique."
             }
         },
+        "TO": "Pour",
         "NEW": "Composer",
         "SENT": "E-mail à {{pour}} a envoyé.",
         "CANCELED": "E-mail annulé",
@@ -34,6 +41,7 @@
         "DELETE": "Supprimer",
         "DELETED": "Email Supprimé",
         "RE": "R. e: ",
+        "CLOSE": "Fermer",
         "MESSAGE": "Message",
         "NO_EMAILS_FOUND": "Pas de courriels trouvé",
         "NO_EMAIL_SELECTED": "Aucun e-mail sélectionné",

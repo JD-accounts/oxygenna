@@ -5,11 +5,14 @@
             "HEADER": "Pour faire la liste",
             "DIALOG": {
                 "NEW": "Ajouter Une Tâche",
-                "DESC": "Description De La Tâche",
+                "DESC": "Nom De La Tâche",
                 "HIGH": "Haute",
                 "MEDIUM": "Moyen",
                 "LOW": "Faible",
-                "PRIORITY": "Priorité"
+                "PRIORITY": "Priorité",
+                "TASKFORM": {
+                    "PLEASE_ENTER": "Veuillez entrer un nom de tâche"
+                }
             }
         }
     }

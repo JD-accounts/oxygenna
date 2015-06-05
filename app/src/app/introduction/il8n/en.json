@@ -1,3 +1,7 @@
 {
-    "TEST": "This is a tes"
+    "MENU": {
+        "INTRODUCTION": {
+            "INTRODUCTION": "Introduction"
+        }
+    }
 }
