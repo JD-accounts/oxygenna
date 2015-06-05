@@ -1,13 +1,106 @@
 ---
-  title: Colors & Themes
-  subtitle: How to change the admin template colors
+  title: Colors & Skins
+  subtitle: How to change the admin template colors.
   layout: docs.hbs
   section: customisation
 ---
 
-# Changing the admin themes
+# Introduction
+
+Angular Material already comes with a system for handling themes and palettes.
+
+You can [read about them here ](https://material.angularjs.org/HEAD/#/Theming/01_introduction)
+
+With triangular we created 2 extra providers for handling themes and skins.
+
+|      Provider      |                                                                                                                    Description                                                                                                                    |
+| ------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| triThemingProvider | Copys exactly the functionality provided by the [mdThemingProvider](https://material.angularjs.org/HEAD/#/Theming/03_configuring_a_theme) but allows us to dynamically load themes which saves on the amount of extra CSS created by the template |
+| triSkinsProvider   | Allows you to create skins for triangular and assign themes to various areas of the template (toolbar, logo, content, sidebar)                                                                                                                    |
+
+# Set the default skin
+
+{{theme.name}} comes with many beautiful themes.
+
+You can [view and try them all here](http://triangular.oxygenna.com/#/ui/skins).
+
+To change the default skin is super easy.
+
+Just edit app.js and find this line.
+
+    defaultSkin: 'cyan-cloud'
+
+Change this to any of the provided skin names
+
+- cyan-cloud
+- red-dwarf
+- plumb-purple
+- dark-knight
+- battleship-grey
+- zesty-orange
+- indigo-island
+- kermit-green
+
+For example to change to the Plumb Purple theme you would change to.
+
+    defaultSkin: 'plumb-purple'
+
+# Create your own template skin
 
 To change the colors that are used in triangular edit <code>app.js</code>
+
+[You can see on the skins page](http://triangular.oxygenna.com/#/ui/skins) how the template can be colored.
+
+There are 4 areas of the template that you can set "themes" for.
+
+- Sidebar - the main left menu sidebar.
+- Toolbar - the top toolbar of the page.
+- Logo - the logo at the top of the Sidebar (top left of the page).
+- Content - the content area where your pages are shown.
+
+## Create some themes
+
+First of all you will need to create some themes to use to color the template areas.
+
+You can do this using the <code>triThemingProvider</code> to assign palettes.
+
+Material Angular comes with several material design palettes built in.  You can view the [palettes available here](http://triangular.oxygenna.com/#/ui/colors).
+
+    triThemingProvider.theme('cyan')
+    .primaryPalette('cyan')
+    .accentPalette('amber')
+    .warnPalette('deep-orange');
+
+The line above creates a theme called "cyan" which sets the primary palette to cyan and the accent and warn palettes to amber and deep-orange.
+
+Next we can make a 2nd theme to go with the cyan theme.
+
+    triThemingProvider.theme('white-cyan')
+    .primaryPalette('white')
+    .accentPalette('cyan', {
+      'default': '500'
+    })
+    .warnPalette('deep-orange');
+
+This theme has white as its primary palette and cyan as its accent palette.
+
+## Create a skin
+
+Now that we have some themes to play with we can assign them to the areas of the template.
+
+We can do this using the <code>triSkinsProvider</code>.
+
+    triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
+    .sidebarTheme('cyan')
+    .toolbarTheme('white-cyan')
+    .logoTheme('cyan')
+    .contentTheme('cyan');
+
+![Cyan Skin](assets/images/customisation/skin-preview.png)
+
+So above we have created a theme called Cyan Cloud that uses the two themes we created in the previous steps.
+
+The sidebar and logo are using cyan and the toolbar and content areas are using white-cyan
 
 You will find a config block that handles how the default themes are used for the various themable elements used in the template.
 
@@ -37,28 +130,13 @@ You can find more information about the themes available on the [themes page of 
 
 Or to create your own themes read the next section.
 
-# Creating your own themes
+# Disable demo skin selection
 
-You can also create your own themes using combinations of the available Material Design palettes or create your own custom palette.
+By default the template allows users to select a skin that is then stored in a cookie.
 
-Edit the <code>app.js</code> file and find the following lines
+If you want to disable this just edit app.js and remove the following line.
 
-    // Create some themes for the template
-    $mdThemingProvider.theme('default')
-    .primaryPalette('indigo')
-    .accentPalette('pink')
-    .warnPalette('orange');
-
-Here you can see a theme being created, you can create your own theme by copy / pasting the above code and changing the names of the palettes to [some of the available angular material palettes](https://material.angularjs.org/#/Theming/01_introduction).
-
-For example
-
-    // Create some themes for the template
-    $mdThemingProvider.theme('default')
-    .primaryPalette('blue')
-    .accentPalette('teal')
-    .warnPalette('grey');
-
+    triSkinsProvider.useSkinCookie(true);
 
 # Creating your own palettes
 
