@@ -1,6 +1,7 @@
 'use strict';
 
-var YANDEX_API_KEY = 'trnsl.1.1.20150427T131710Z.f57234d536e7e193.b63a29a71b1f58c6ba0375d74624a6825b517e5a';
+// ADD YOUR YANDEX API KEY HERE
+var YANDEX_API_KEY = '';
 
 var gulp = require('gulp');
 var gutil = require('gulp-util');
