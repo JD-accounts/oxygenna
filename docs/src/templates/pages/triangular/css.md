@@ -67,3 +67,18 @@ We have provided some helper CSS classes to help easily create pages.
 | <code>opacity-(0-100)</code> | Sets the opacity of the element. e.g. opacity-50 |
 | <code>make-round</code>      | Adds 50% border radius                           |
 | <code>overlay-(0-100)</code> | Adds dark overlay to container                   |
+
+
+# CSS autoprefixer
+
+The gulp automatically adds browser prefixes to your CSS using [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer).
+
+To configure this just edit
+
+    app/gulp/styles.js
+
+You can select which browsers you want to have compatibility with on this line.
+
+    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']}))
+
+By default triangular is compatible with the last 2 versions of evergreen browsers as well as Firefox ESR and Opera 12.1
