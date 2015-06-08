@@ -6,7 +6,7 @@ angular.module('triAngular', [
     // inject extra 3rd party angular modules
     'ui.router', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'ngMaterialDropmenu',
     // inject our own triangular modules
-    'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras', 'triAngularTodo'
+    'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras', 'triAngularTodo', 'triAngularCalendar'
 ])
 .constant('APP', {
     name: 'triangular',
