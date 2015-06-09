@@ -5,9 +5,19 @@
             <h3 class="md-subhead" ng-if="title">{{title}}</h3>
             <p class="md-body-1" ng-if="subtitle">{{subtitle}}</p>
         </div>
-        <md-button ng-if="menu" class="widget-button md-icon-button" ng-click="menuClick($event)" aria-label="menu">
-            <md-icon md-font-icon="{{menu.icon}}"></md-icon>
-        </md-button>
+        <md-menu ng-if="menu">
+            <md-button class="widget-button md-icon-button" ng-click="$mdOpenMenu()">
+                <md-icon md-font-icon="{{menu.icon}}"></md-icon>
+            </md-button>
+            <md-menu-content>
+                <md-menu-item ng-repeat="item in menu.items">
+                    <md-button ng-click="item.click($event)">
+                        <md-icon ng-if="item.icon" md-font-icon="{{item.icon}}"></md-icon>
+                        {{item.title | translate}}
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
     </div>
 
     <div class="widget-content" ng-attr-layout="{{contentLayout}}" ng-attr-layout-align="{{contentLayoutAlign}}" ng-attr-layout-padding="{{contentPadding}}" ng-transclude ng-attr-flex-order="{{contentOrder}}"></div>

@@ -25,27 +25,37 @@ angular.module('triAngularDashboards')
             var loadData = $parse(attrs.loadDataWidget)($scope);
 
             widgetCtrl.setMenu({
-                icon: 'icon-search',
-                menuClick: function($event) {
-                    var data = [];
-                    angular.forEach(loadData, function(url, variable) {
-                        data = $scope[variable];
-                    });
-                    $mdDialog.show({
-                        controller: 'WidgetLoadDataDialogController',
-                        templateUrl: 'app/dashboards/widgets/widget-load-data-dialog.tmpl.html',
-                        targetEvent: $event,
-                        locals: {
-                            data: data
-                        },
-                        clickOutsideToClose: true
-                    })
-                    .then(function(answer) {
-                        $scope.alert = 'You said the information was "' + answer + '".';
-                    }, function() {
-                        $scope.alert = 'You cancelled the dialog.';
-                    });
-                }
+                icon: 'icon-more-vert',
+                items: [{
+                    icon: 'icon-search',
+                    title: 'DASHBOARDS.WIDGETS.MENU.DETAILS',
+                    click: function($event) {
+                        var data = [];
+                        angular.forEach(loadData, function(url, variable) {
+                            data = $scope[variable];
+                        });
+                        $mdDialog.show({
+                            controller: 'WidgetLoadDataDialogController',
+                            templateUrl: 'app/dashboards/widgets/widget-load-data-dialog.tmpl.html',
+                            targetEvent: $event,
+                            locals: {
+                                data: data
+                            },
+                            clickOutsideToClose: true
+                        })
+                        .then(function(answer) {
+                            $scope.alert = 'You said the information was "' + answer + '".';
+                        }, function() {
+                            $scope.alert = 'You cancelled the dialog.';
+                        });
+                    }
+                },{
+                    icon: 'icon-share',
+                    title: 'DASHBOARDS.WIDGETS.MENU.SHARE',
+                },{
+                    icon: 'icon-print',
+                    title: 'DASHBOARDS.WIDGETS.MENU.PRINT',
+                }]
             });
 
             angular.forEach(loadData, function(url, variable) {

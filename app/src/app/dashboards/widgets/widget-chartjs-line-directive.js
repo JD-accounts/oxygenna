@@ -29,7 +29,25 @@ angular.module('triAngularDashboards')
             }, 1500);
 
             widgetCtrl.setMenu({
-                icon: 'icon-more-vert'
+                icon: 'icon-more-vert',
+                items: [{
+                    icon: 'icon-refresh',
+                    title: 'DASHBOARDS.WIDGETS.MENU.REFRESH',
+                    click: function($event) {
+                        $interval.cancel($scope.intervalPromise);
+                        widgetCtrl.setLoading(true);
+                        $timeout(function() {
+                            widgetCtrl.setLoading(false);
+                            randomData();
+                        }, 1500);
+                    }
+                },{
+                    icon: 'icon-share',
+                    title: 'DASHBOARDS.WIDGETS.MENU.SHARE',
+                },{
+                    icon: 'icon-print',
+                    title: 'DASHBOARDS.WIDGETS.MENU.PRINT',
+                }]
             });
 
             $scope.lineChart = {
@@ -53,7 +71,7 @@ angular.module('triAngularDashboards')
             }
 
             // Simulate async data update
-            $interval(randomData, 5000);
+            $scope.intervalPromise = $interval(randomData, 5000);
         }
     };
 });

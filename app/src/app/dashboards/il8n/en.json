@@ -49,6 +49,12 @@
             "DISKUSAGE": "Disk Usage"
         },
         "WIDGETS": {
+            "MENU": {
+                "REFRESH": "Refresh",
+                "DETAILS": "Details",
+                "SHARE": "Share",
+                "PRINT": "Print"
+            },
             "SALES": "Sales",
             "COMMENTS": "Comments",
             "SERVER_UPTIME": "Server Uptime",
