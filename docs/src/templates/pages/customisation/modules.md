@@ -40,7 +40,6 @@ Triangular loads the following 3rd party angular modules
 - **chart.js** - Reactive, responsive, beautiful charts for AngularJS using Chart.js [Site](http://jtblin.github.io/angular-chart.js)
 - **linkify** - Angular filter, directive, and service to linkify text. [Site](https://github.com/scottcorgan/angular-linkify)
 - **ui.calendar** - A complete AngularJS directive for the Arshaw FullCalendar. [Site](http://angular-ui.github.io/ui-calendar/)
-- **ngMaterialDropmenu** - For temporary use before official dropmenu release. [Site](https://github.com/Soopro/ng-material-dropmenu)
 
 ### Triangular Modules
 

@@ -30,8 +30,7 @@
     "angular-google-maps": "~2.1.0",
     "angular-linkify": "~1.2.0",
     "angular-ui-calendar": "~1.0.0",
-    "weather-icons": "https://github.com/chk1/weather-icons.git#master",
-    "ng-material-dropmenu": "*"
+    "weather-icons": "https://github.com/chk1/weather-icons.git#master"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"

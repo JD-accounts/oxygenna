@@ -55,6 +55,14 @@ angular.module('triAngular')
         $scope.openSideNav('notifications');
     };
 
+    $scope.profile = function() {
+        $state.go('admin-panel.default.profile');
+    };
+
+    $scope.logout = function() {
+        $state.go('authentication.login');
+    };
+
     // until we can get languages from angular-translate use APP constant
     $scope.languages = APP.languages;
 });
