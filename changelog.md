@@ -17,3 +17,5 @@
 - Removed ng-material-dropmenu and replaced with official version in 0.10.0-rc1
 - Updated countUp js
 - Removed gravatar js from bower & lock page
+- Updated Angular Translate to 2.7.2
+- Fix warning in email date parsing with moment
