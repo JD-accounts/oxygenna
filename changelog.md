@@ -13,3 +13,4 @@
 > Release Date : ???
 
 - Updated Angular Material to 0.10.0-rc1
+- Changed todo icon to use material font
