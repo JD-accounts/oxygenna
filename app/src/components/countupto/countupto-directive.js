@@ -19,7 +19,7 @@
 * Full options here http://inorganik.github.io/countUp.js/
 */
 angular.module('triAngular')
-.directive('countupto', function() {
+.directive('countupto', function($timeout) {
     return {
         restrict: 'A',
         scope: {
@@ -46,11 +46,13 @@ angular.module('triAngular')
             }
 
             attrs.from = attrs.from === undefined ? 0 : parseInt(attrs.from);
-            attrs.decimals = attrs.decimals === undefined ? 2 : parseInt(attrs.decimals);
-            attrs.duration = attrs.duration === undefined ? 2 : parseInt(attrs.duration);
+            attrs.decimals = attrs.decimals === undefined ? 2 : parseFloat(attrs.decimals);
+            attrs.duration = attrs.duration === undefined ? 5 : parseFloat(attrs.duration);
 
-            var numAnim = new countUp($element[0], attrs.from, $scope.countupto, attrs.decimals, attrs.duration, options);
-            numAnim.start();
+            $timeout(function() {
+                var numAnim = new CountUp($element[0], attrs.from, $scope.countupto, attrs.decimals, attrs.duration, options);
+                numAnim.start();
+            }, 500);
         }
 
     };
