@@ -10,7 +10,7 @@
     "angular-resource": "~1.4.0",
     "angular-messages": "~1.4.0",
     "angular-ui-router": "~0.2.13",
-    "angular-material": "0.9.6",
+    "angular-material": "0.10.0-rc1",
     "angular-gravatar": "~0.2.3",
     "angular-translate": "~2.6.0",
     "angular-translate-loader-partial": "~2.6.0",
