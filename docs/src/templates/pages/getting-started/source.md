@@ -151,13 +151,13 @@ Run the following command from the root of your source files to install the node
 
 ## Install bower packages
 
-Run the following command from the root of your source files to install the bower packages listed in bower.json
-
-    bower install
-
 If you do not have bower installed run
 
     npm -g install bower
+
+Run the following command from the root of your source files to install the bower packages listed in bower.json
+
+    bower install
 
 # Running a development server
 
@@ -166,6 +166,10 @@ Once you have gulp all ready to go you can start developing.
 To do this you just need to start a local development server
 
 ## Start a development server
+
+First make sure you have gulp installed globally
+
+  npm -g install gulp
 
 Once you have bower packages and node modules installed you are ready to code.  To start a development server just type.
 

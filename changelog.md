@@ -8,3 +8,10 @@
 > Release Date : 5th June 2015
 
 - Initial ThemeForest Submit
+
+# Version 1.0.1
+> Release Date : ???
+
+- Updated Angular Material to 0.10.0-rc1
+- Changed todo icon to use material font
+- Removed ng-material-dropmenu and replaced with official version in 0.10.0-rc1
