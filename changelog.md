@@ -14,3 +14,4 @@
 
 - Updated Angular Material to 0.10.0-rc1
 - Changed todo icon to use material font
+- Removed ng-material-dropmenu and replaced with official version in 0.10.0-rc1
