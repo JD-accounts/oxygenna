@@ -39,6 +39,9 @@ angular.module('triAngular', [
 
     $translatePartialLoaderProvider.addPart('app');
 
+    // make sure all values used in translate are sanitized for security
+    $translateProvider.useSanitizeValueStrategy('sanitize');
+
     // cache translation files to save load on server
     $translateProvider.useLoaderCache(true);
 
