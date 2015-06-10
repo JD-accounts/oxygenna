@@ -35,7 +35,6 @@
     "angular-mocks": "~1.4.0"
   },
   "resolutions": {
-    "angular": "1.4.0",
-    "angular-cookies": "~1.4.0"
+    "angular": "1.4.0"
   }
 }
