@@ -62,7 +62,7 @@ angular.module('triAngular', [
         'en_US': 'en',
         'en_UK': 'en'
     })
-    .determinePreferredLanguage();
+    .use('en');
 
     // store the users language preference in a cookie
     $translateProvider.useLocalStorage();
