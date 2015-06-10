@@ -13,7 +13,7 @@ The very first lines of javascript that run in app.js create the triangular app 
             // inject angular modules
             'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngMaterial',
             // inject extra 3rd party angular modules
-            'ui.router', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'ngMaterialDropmenu',
+            'ui.router', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'angularMoment', 'textAngular',
             // inject our own triangular modules
             'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras', 'triAngularTodo'
         ])
@@ -40,6 +40,10 @@ Triangular loads the following 3rd party angular modules
 - **chart.js** - Reactive, responsive, beautiful charts for AngularJS using Chart.js [Site](http://jtblin.github.io/angular-chart.js)
 - **linkify** - Angular filter, directive, and service to linkify text. [Site](https://github.com/scottcorgan/angular-linkify)
 - **ui.calendar** - A complete AngularJS directive for the Arshaw FullCalendar. [Site](http://angular-ui.github.io/ui-calendar/)
+- **angularMoment** - Moment.JS directives for Angular.JS (timeago and more). [Site](https://github.com/urish/angular-moment)
+- **textAngular** - A radically powerful Text-Editor/Wysiwyg editor for Angular.js! [Site](https://github.com/fraywing/textAngular)
+- **uiGmapgoogle-maps** - AngularJS directives for the Google Maps Javascript API. [Site](https://github.com/angular-ui/angular-google-maps)
+- **hljs** - AngularJS directive for syntax highlighting with highlight.js. [Site](https://github.com/pc035860/angular-highlightjs)
 
 ### Triangular Modules
 

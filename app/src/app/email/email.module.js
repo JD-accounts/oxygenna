@@ -7,7 +7,7 @@
  *
  * The `triangular.email` module adds email inbox pages
  */
-angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
+angular.module('triAngularEmail', [])
 .constant('EMAIL_ROUTES', [{
     state: 'admin-panel-no-scroll.email.inbox',
     name: 'MENU.EMAIL.INBOX',

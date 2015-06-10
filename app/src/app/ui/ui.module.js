@@ -7,7 +7,7 @@
  *
  * The `triAngularUI` module adds an UI pages
  */
-angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
+angular.module('triAngularUI', ['ngCookies', 'webfont-loader'])
 .constant('UI_FONTS', [{
     name: 'Roboto Draft',
     family: 'RobotoDraft',
@@ -72,7 +72,7 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
                 });
             }
         }
-    })    
+    })
 
     .state('admin-panel.default.ui-toolbar', {
         url: '/ui/toolbars/:extraClass/:background/:shrink',
