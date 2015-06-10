@@ -23,7 +23,7 @@ From there locate the {{theme.name}} template click the **download button** and 
 
 You should now have a file that looks something like this.
 
-    triangular-1.0.0.zip
+<code>triangular-1.0.0.zip</code>
 
 In order to get at the goodness inside you will need to [unzip this file](https://answers.stanford.edu/solution/how-do-i-zip-and-unzip-files-and-folders-do-i-need-winzip-or-stuffit).
 

@@ -99,9 +99,7 @@ This will stop the triAngularAuthentication module in the authentication folder 
 
 In order to make creating a module for your work as easy as possible we have created a simple seed module to get started.
 
-You can find the code in
-
-    app/seed-module
+You can find the code in <code>app/seed-module</code>
 
 To create your own module just make a copy of this folder and rename it to your new module name.
 
