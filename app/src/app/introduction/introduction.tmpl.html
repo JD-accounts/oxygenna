@@ -11,8 +11,8 @@
 </div>
 
 <div layout="row" class="intro-feature-row" layout-wrap layout-margin ng-repeat="features in featureRows">
-    <div layout="column" flex flex-sm="100" layout-align="center center" class="md-whiteframe-z1" ng-repeat="feature in features" palette-background="{{feature.palette}}:{{feature.hue}}">
-        <md-icon class="font-size-3 padding-10 text-inherit" md-font-icon="{{feature.icon}}"></md-icon>
+    <div layout="column" flex flex-sm="100" layout-align="center center" class="md-whiteframe-z1" ng-repeat="feature in features">
+        <md-icon class="font-size-5 padding-10" md-font-icon="{{feature.icon}}"></md-icon>
         <h3 class="font-weight-400 margin-top-0">{{feature.name}}</h3>
     </div>
 </div>
