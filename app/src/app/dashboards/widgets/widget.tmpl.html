@@ -2,8 +2,8 @@
 
     <div class="widget-title" ng-if="title || subtitle" layout="row" layout-padding layout-align="space-between center" ng-attr-flex-order="{{titleOrder}}">
         <div flex layout="column">
-            <h3 class="md-subhead" ng-if="title">{{title}}</h3>
-            <p class="md-body-1" ng-if="subtitle">{{subtitle}}</p>
+            <h3 class="md-subhead" ng-if="title" ng-bind-html="title"></h3>
+            <p class="md-body-1" ng-if="subtitle" ng-bind-html="subtitle"></p>
         </div>
         <md-menu ng-if="menu">
             <md-button class="widget-button md-icon-button" ng-click="$mdOpenMenu()">

@@ -18,6 +18,7 @@
 - Updated CountUp js
 - Removed gravatar js from bower & lock page
 - Updated Angular Translate to 2.7.2
+- Wiget titles & subtitles now use ng-bind-html to allow special chars (&,^,%,$,etc)
 - Fix warning in email date parsing with moment
 - Fix missing JS example on chips element page
 - Fix back home button on 500 page
