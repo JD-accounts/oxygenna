@@ -24,3 +24,4 @@
 - Fix back home button on 500 page
 - Fix build to include weather icons
 - Fix for controls on Google Maps
+- Fix right sidebar on ToDo page
