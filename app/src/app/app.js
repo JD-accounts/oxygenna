@@ -11,7 +11,7 @@ angular.module('triAngular', [
 .constant('APP', {
     name: 'triangular',
     logo: 'assets/images/logo.png',
-    version: '1.0',
+    version: '1.1.0',
     languages: [{
         name: 'LANGUAGES.ENGLISH',
         key: 'en'
