@@ -9,8 +9,8 @@
 
 - Initial ThemeForest Submit
 
-# Version 1.0.1
-> Release Date : ???
+# Version 1.1.0
+> Release Date : 11th June 2015
 
 - Updated Angular Material to 0.10.0-rc1
 - Changed todo icon to use material font
@@ -23,3 +23,4 @@
 - Fix missing JS example on chips element page
 - Fix back home button on 500 page
 - Fix build to include weather icons
+- Fix for controls on Google Maps
