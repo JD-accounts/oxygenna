@@ -92,7 +92,7 @@ gulp.task('data', function () {
 });
 
 gulp.task('examplejs', function () {
-  return gulp.src('src/**/examples/*.js')
+  return gulp.src('src/**/examples/*.{js,scss}')
     .pipe(gulp.dest('dist'))
     .pipe($.size());
 });
