@@ -150,8 +150,12 @@ angular.module('triAngular', [
     .state('500', {
         url: '/500',
         templateUrl: '500.tmpl.html',
-        controller: function($scope, APP) {
+        controller: function($scope, $state, APP) {
             $scope.app = APP;
+
+            $scope.goHome = function() {
+                $state.go('admin-panel.default.dashboard-analytics');
+            };
         }
     });
 
