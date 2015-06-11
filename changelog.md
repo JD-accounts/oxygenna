@@ -22,3 +22,4 @@
 - Fix warning in email date parsing with moment
 - Fix missing JS example on chips element page
 - Fix back home button on 500 page
+- Fix build to include weather icons
