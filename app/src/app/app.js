@@ -81,6 +81,12 @@ angular.module('triAngular', [
         }
     })
 
+    .state('test', {
+        templateUrl: 'app/test.tmpl.html',
+        url: '/test'
+    })
+
+
     .state('admin-panel.default', {
         abstract: true,
         views: {
