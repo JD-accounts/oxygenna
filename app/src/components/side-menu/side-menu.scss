@@ -1,6 +1,7 @@
 // Side menu
 side-menu {
   overflow-y: auto;
+  z-index: 1;
 }
 .side-menu-link {
   display: block;
