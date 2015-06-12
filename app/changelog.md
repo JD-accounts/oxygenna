@@ -30,6 +30,7 @@
 # Version 1.1.1
 > Release Date : 12th June 2015
 
+- Update to Angular Material 0.10.0-rc4
 - Fixed issue on email list for firefox
 - Improved performance of scrolling on email pages
 - Fixed scrollbar behaviour on sidebar
