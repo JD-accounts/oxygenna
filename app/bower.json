@@ -20,6 +20,7 @@
     "material-design-iconic-font": "~1.1.1",
     "angular-google-chart": "~0.0.11",
     "textAngular": "~1.3.7",
+    "countUp.js": "1.5.0",
     "angular-moment": "~0.10.1",
     "animate.css-scss": "https://github.com/geoffgraham/animate.scss.git#master",
     "jquery": "~2.1.3",
@@ -28,9 +29,7 @@
     "angular-google-maps": "~2.1.0",
     "angular-linkify": "~1.2.0",
     "angular-ui-calendar": "~1.0.0",
-    "weather-icons": "https://github.com/chk1/weather-icons.git#master",
-    "simplebar": "https://github.com/Grsmto/simplebar.git#~1.1.4",
-    "countUp.js": "1.5.0"
+    "weather-icons": "https://github.com/chk1/weather-icons.git#master"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"
@@ -43,12 +42,6 @@
       "main": [
         "./css/weather-icons.css",
         "./font/*"
-      ]
-    },
-    "simplebar": {
-      "main": [
-        "./dist/simplebar.css",
-        "./dist/simplebar.min.js"
       ]
     }
   }
