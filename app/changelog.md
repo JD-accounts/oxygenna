@@ -27,9 +27,10 @@
 - Fix right sidebar on ToDo page
 
 
-# Version 1.X
-> Release Date : ?
+# Version 1.1.1
+> Release Date : 12th June 2015
 
 - Fixed issue on email list for firefox
 - Improved performance of scrolling on email pages
 - Fixed scrollbar behaviour on sidebar
+- Fixed bower install problem being caused by countUp.js
