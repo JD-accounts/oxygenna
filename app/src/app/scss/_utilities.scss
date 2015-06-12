@@ -164,6 +164,17 @@ $i : 0;
   border-radius: 50%;
 }
 
+// Overfflow-classes
+.overflow-visible {
+  overflow: visible;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+
 // Example Tabs
 .example-tabs {
   md-tab-content md-content {

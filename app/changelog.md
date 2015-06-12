@@ -25,3 +25,11 @@
 - Fix build to include weather icons
 - Fix for controls on Google Maps
 - Fix right sidebar on ToDo page
+
+
+# Version 1.X
+> Release Date : ?
+
+- Fixed issue on email list for firefox
+- Improved performance of scrolling on email pages
+- Fixed scrollbar behaviour on sidebar
