@@ -10,7 +10,7 @@
     "angular-resource": "~1.4.0",
     "angular-messages": "~1.4.0",
     "angular-ui-router": "~0.2.13",
-    "angular-material": "0.10.0-rc1",
+    "angular-material": "0.10.0-rc4",
     "angular-translate": "~2.7.2",
     "angular-translate-loader-partial": "~2.7.2",
     "angular-translate-storage-cookie": "~2.7.2",
