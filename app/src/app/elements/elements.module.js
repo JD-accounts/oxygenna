@@ -92,6 +92,14 @@ angular.module('triAngularElements', [])
         url: '/elements/grids',
         templateUrl: 'app/elements/grids.tmpl.html'
     })
+    .state('admin-panel.default.fab-speed', {
+        url: '/elements/fab-speed',
+        templateUrl: 'app/elements/fab-speed.tmpl.html'
+    })
+    .state('admin-panel.default.fab-toolbar', {
+        url: '/elements/fab-toolbar',
+        templateUrl: 'app/elements/fab-toolbar.tmpl.html'
+    })
     .state('admin-panel.default.elements-selects', {
         url: '/elements/selects',
         templateUrl: 'app/elements/selects.tmpl.html'
@@ -157,6 +165,14 @@ angular.module('triAngularElements', [])
             name: 'MENU.ELEMENTS.DIALOGS',
             type: 'link',
             state: 'admin-panel.default.elements-dialogs'
+        },{
+            name: 'MENU.ELEMENTS.FAB-SPEED',
+            type: 'link',
+            state: 'admin-panel.default.fab-speed'
+        },{
+            name: 'MENU.ELEMENTS.FAB-TOOLBAR',
+            type: 'link',
+            state: 'admin-panel.default.fab-toolbar'
         },{
             name: 'MENU.ELEMENTS.GRIDS',
             type: 'link',
