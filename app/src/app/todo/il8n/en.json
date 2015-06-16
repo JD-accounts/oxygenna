@@ -3,6 +3,7 @@
         "TODO": {
             "TITLE": "To do",
             "HEADER": "To do list",
+            "REMOVEMSG":"Remove items from the list by swipping right",
             "DIALOG":{
             	"NEW": "Add Task",
             	"DESC": "Task Name",
