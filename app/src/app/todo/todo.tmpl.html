@@ -7,7 +7,7 @@
 	    </md-toolbar>
       	<md-card-content>
 			<md-list class="margin-bottom-10">
-				<md-list-item ng-repeat="message in messages | orderBy:orderTasks" ng-class="{'md-primary': message.priority === 'high', 'md-accent': message.priority === 'medium', 'md-warn': message.priority === 'low'}" class="slide" md-swipe-right="removeTodo(message)">
+				<md-list-item ng-repeat="message in messages | orderBy:orderTasks" ng-class="{'md-primary': message.priority === 'high', 'md-accent': message.priority === 'medium', 'md-warn': message.priority === 'low'}" class="slide" md-swipe-right="removeTodo(message)" md-no-ink>
 					<md-checkbox ng-model="message.selected"></md-checkbox>
 					<p>
 						{{message.description}}
