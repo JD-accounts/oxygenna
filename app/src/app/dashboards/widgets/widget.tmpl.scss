@@ -101,6 +101,18 @@ chart-legend ul {
   margin-top: 24px !important;
 }
 
+// Blog widget
+.widget-blog {
+  .widget-blog-text {
+    position: relative;
+
+    md-fab-speed-dial {
+      position: absolute;
+  top: -190px;
+  right: 42px;    }
+  }
+}
+
 // Calendar widget
 .widget-calendar {
   .fc-ltr .fc-basic-view .fc-day-number {
