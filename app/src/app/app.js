@@ -377,7 +377,7 @@ angular.module('triAngular', [
      */
     triSkinsProvider.setSkin(APP.defaultSkin);
 })
-.config(['ChartJsProvider', function (ChartJsProvider) {
+.config(function (ChartJsProvider) {
     // Configure all charts to use material design colors
     ChartJsProvider.setOptions({
         colours: [
@@ -393,7 +393,13 @@ angular.module('triAngular', [
         ],
         responsive: true,
     });
-}])
+})
+.run(function ($rootScope, $window) {
+    // add a class to the body if we are on windows
+    if($window.navigator.platform.indexOf('Win') !== -1) {
+        $rootScope.bodyClasses = ['os-windows'];
+    }
+})
 // setup google charts to use material charts
 .value('googleChartApiConfig', {
     version: '1.1',
