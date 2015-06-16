@@ -26,7 +26,6 @@
 - Fix for controls on Google Maps
 - Fix right sidebar on ToDo page
 
-
 # Version 1.1.1
 > Release Date : 12th June 2015
 
@@ -35,3 +34,8 @@
 - Improved performance of scrolling on email pages
 - Fixed scrollbar behaviour on sidebar
 - Fixed bower install problem being caused by countUp.js
+
+# Version ???
+> Release Date : ???
+
+- Restyled menu scrollbars for Windows IE and Chrome
