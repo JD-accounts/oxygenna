@@ -47,4 +47,12 @@ angular.module('triAngularTodo')
             $scope.messages.push(answer);      
         });
 	}; 
+
+	$scope.removeTodo = function( msg ){	
+	   	for(var i = $scope.messages.length - 1; i >= 0; i--) {
+		    if($scope.messages[i] === msg) {
+		    	$scope.messages.splice(i, 1);
+		    }
+		}
+	}; 
 });
