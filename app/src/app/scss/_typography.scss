@@ -131,6 +131,17 @@ md-icon[md-font-icon] {
   text-align: right !important;
 }
 
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+
 // - Font styles
 .font-style-normal {
   font-style: normal;
