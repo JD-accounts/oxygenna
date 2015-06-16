@@ -23,7 +23,8 @@
             "WHITEFRAMES": "Whiteframes",
             "TOASTS": "Toasts",
             "LISTS": "Lists",
-            "CHIPS": "Chips"
+            "CHIPS": "Chips",
+            "MENUS": "Menus"
         }
     }
 }

@@ -79,6 +79,10 @@ angular.module('triAngularElements', [])
         templateUrl: 'app/elements/dialogs.tmpl.html',
         controller: 'DialogsController'
     })
+    .state('admin-panel.default.menus', {
+        url: '/elements/menus',
+        templateUrl: 'app/elements/menus.tmpl.html',
+    })
     .state('admin-panel.default.elements-tabs', {
         url: '/elements/tabs',
         templateUrl: 'app/elements/tabs.tmpl.html'
@@ -185,6 +189,10 @@ angular.module('triAngularElements', [])
             name: 'MENU.ELEMENTS.LISTS',
             type: 'link',
             state: 'admin-panel.default.elements-lists'
+        },{
+            name: 'MENU.ELEMENTS.MENUS',
+            type: 'link',
+            state: 'admin-panel.default.menus'
         },{
             name: 'MENU.ELEMENTS.PROGRESS',
             type: 'link',
