@@ -20,6 +20,7 @@
   width: 260px;
   min-width: 260px;
   max-width: 260px;
+  -ms-overflow-style: none; /* ie fix for removing scrollbars */
 }
 
 // Toolbar

@@ -2,6 +2,20 @@
 side-menu {
   overflow-y: auto;
   z-index: 1;
+
+  /* Style for scrollbar on webkit browsers */
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(0,0,0,0.1);
+    transition: all .2s
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 4px;
+    transition: all .2s
+  }
+
 }
 .side-menu-link {
   display: block;
