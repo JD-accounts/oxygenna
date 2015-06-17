@@ -35,11 +35,14 @@
 - Fixed scrollbar behaviour on sidebar
 - Fixed bower install problem being caused by countUp.js
 
-# Version ???
-> Release Date : ???
+# Version 1.1.2
+> Release Date : 17th June 2015
 
 _ Update to Angular Material 0.10.0
 - Restyled menu scrollbars for Windows ( IE and Chrome )
 - Added FAB Speed Dial & FAB Toolbar element example pages
 - Added Fab Speed Dial to General Blog Widget
 - Added Menu example elements page
+- Added delete todo option
+- Added share button to blog widget in General Dashboard
+- Fix toolbar in IE10
