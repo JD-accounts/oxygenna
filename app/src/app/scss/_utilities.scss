@@ -175,6 +175,11 @@ $i : 0;
   overflow: hidden;
 }
 
+// Not selectable classes
+.not-select {
+  user-select: none;
+}
+
 // Example Tabs
 .example-tabs {
   md-tab-content md-content {
