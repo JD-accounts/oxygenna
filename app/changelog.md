@@ -38,7 +38,7 @@
 # Version 1.1.2
 > Release Date : 17th June 2015
 
-_ Update to Angular Material 0.10.0
+- Update to Angular Material 0.10.0
 - Restyled menu scrollbars for Windows ( IE and Chrome )
 - Added FAB Speed Dial & FAB Toolbar element example pages
 - Added Fab Speed Dial to General Blog Widget
