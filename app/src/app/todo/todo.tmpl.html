@@ -5,7 +5,7 @@
 	            {{'MENU.TODO.HEADER' | translate}}
 	        </h2>
 	    </md-toolbar>
-      	<md-card-content class="overflow-hidden">
+      	<md-card-content class="overflow-auto">
 			<md-list class="margin-bottom-10">
 				<md-list-item ng-repeat="message in messages | orderBy:orderTasks" ng-class="{'md-primary': message.priority === 'high', 'md-accent': message.priority === 'medium', 'md-warn': message.priority === 'low'}" class="slide" md-swipe-right="removeTodo(message)" md-no-ink>
 					<md-checkbox ng-model="message.selected"></md-checkbox>
