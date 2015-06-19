@@ -112,6 +112,10 @@ angular.module('triAngularElements', [])
         url: '/elements/tables',
         templateUrl: 'app/elements/tables.tmpl.html'
     })
+    .state('admin-panel.default.elements-textangular', {
+        url: '/elements/textangular',
+        templateUrl: 'app/elements/textangular.tmpl.html'
+    })
     .state('admin-panel.default.elements-lists', {
         url: '/elements/lists',
         templateUrl: 'app/elements/lists.tmpl.html',
@@ -225,6 +229,10 @@ angular.module('triAngularElements', [])
             name: 'MENU.ELEMENTS.TABS',
             type: 'link',
             state: 'admin-panel.default.elements-tabs'
+        },{
+            name: 'MENU.ELEMENTS.TEXTANGULAR',
+            type: 'link',
+            state: 'admin-panel.default.elements-textangular'
         },{
             name: 'MENU.ELEMENTS.TOASTS',
             type: 'link',
