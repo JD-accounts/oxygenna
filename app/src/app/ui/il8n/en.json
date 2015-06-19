@@ -8,7 +8,8 @@
             "TYPOGRAPHY": "Typography",
             "TOOLBAR": "Toolbar",
             "THEME-TEST": "Sandbox",
-            "SKINS": "Skins"
+            "SKINS": "Skins",
+            "WEATHER_ICONS": "Weather Icons"
         }
     },
     "UI": {

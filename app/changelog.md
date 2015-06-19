@@ -51,3 +51,4 @@
 > Release Date : ???
 
 - Fixed icon elements example buttons - used suggestion in [issue 3181](https://github.com/angular/material/issues/3181)
+- Added weather icons ui page
