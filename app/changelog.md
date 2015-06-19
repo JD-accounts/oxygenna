@@ -47,8 +47,11 @@
 - Added share button to blog widget in General Dashboard
 - Fix toolbar in IE10
 
-# Version ???
-> Release Date : ???
+# Version 1.1.3
+> Release Date : 19th June 2015
 
 - Fixed icon elements example buttons - used suggestion in [issue 3181](https://github.com/angular/material/issues/3181)
 - Added weather icons ui page
+- Added Textangular example elements page
+- Fixes for Internet Explorer 10
+- Updated docs with better node install instructions
