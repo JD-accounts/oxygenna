@@ -46,3 +46,8 @@
 - Added delete todo option
 - Added share button to blog widget in General Dashboard
 - Fix toolbar in IE10
+
+# Version ???
+> Release Date : ???
+
+- Fixed icon elements example buttons - used suggestion in [issue 3181](https://github.com/angular/material/issues/3181)
