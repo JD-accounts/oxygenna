@@ -9,13 +9,14 @@
  *
  */
 angular.module('triAngularDashboards').
-controller('DashboardAnalyticsController', function ($scope, $timeout, $mdToast, API_CONFIG,$location, $state) {        
+controller('DashboardAnalyticsController', function ($scope, $timeout, $mdToast, $rootScope) {        
     $timeout(function() {
+        $rootScope.$broadcast('newMailNotification');
         $mdToast.show({
             template: '<md-toast><span flex>You have new email messages! View them <a href="" ng-click=viewUnread()>here</a></span></md-toast>',
             controller: 'ToastCtrl',
             position: 'bottom right',
-            hideDelay: 10000
+            hideDelay: 5000
         });
     }, 5000);
 })
