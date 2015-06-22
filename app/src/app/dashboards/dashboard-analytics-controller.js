@@ -18,7 +18,7 @@ controller('DashboardAnalyticsController', function ($scope, $timeout, $mdToast,
             position: 'bottom right',
             hideDelay: 5000
         });
-    }, 5000);
+    }, 10000);
 })
 
 .controller('ToastCtrl', function($scope, $mdToast, $state) {
