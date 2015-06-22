@@ -57,45 +57,8 @@ $tri-badge-size: 2.2rem;
   transform: translate(-0.5rem, -0.6rem);
 }
 
-@-webkit-keyframes pulse-one {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.2, 1.2, 1.2);
-    transform: scale3d(1.2, 1.2, 1.2);
-  }
-
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes pulse-one {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    -ms-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.2, 1.2, 1.2);
-    -ms-transform: scale3d(1.2, 1.2, 1.2);
-    transform: scale3d(1.2, 1.2, 1.2);
-  }
-
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    -ms-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-
 .pulse {
-  -webkit-animation: pulse-one 0.5s linear;
-  -moz-animation: pulse-one 0.5s linear;
-  animation: pulse-one 0.5s linear;
+  -webkit-animation: pulse 1s linear;
+  -moz-animation: pulse 1s linear;
+  animation: pulse 1s linear;
 }
