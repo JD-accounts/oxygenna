@@ -64,7 +64,7 @@ angular.module('triAngular')
     };
 
     $scope.$on('newMailNotification', function(){
-        $scope.emailPulse = true;
+        $scope.emailNew = true;
     });        
 
     // until we can get languages from angular-translate use APP constant
