@@ -14,11 +14,12 @@ angular.module('triAngularDashboards', [])
     $stateProvider
     .state('admin-panel.default.dashboard-general', {
         url: '/dashboards/general',
-        templateUrl: 'app/dashboards/dashboard-general.tmpl.html',
+        templateUrl: 'app/dashboards/dashboard-general.tmpl.html',        
     })
     .state('admin-panel.default.dashboard-analytics', {
         url: '/dashboards/analytics',
         templateUrl: 'app/dashboards/dashboard-analytics.tmpl.html',
+        controller: 'DashboardAnalyticsController',
     })
     .state('admin-panel.default.dashboard-server', {
         url: '/dashboards/server',
