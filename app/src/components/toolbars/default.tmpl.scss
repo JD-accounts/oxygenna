@@ -56,8 +56,6 @@ $tri-badge-size: 2.2rem;
   border-radius: 50%;
 }
 
-.pulse {
-  -webkit-animation: pulse 1s linear;
-  -moz-animation: pulse 1s linear;
-  animation: pulse 1s linear;
+.toolbar-button-badge-new {
+  @include bounce();
 }
