@@ -12,30 +12,30 @@ angular.module('triAngularExtras').
 controller('TimelineController', function ($scope) {
     $scope.events = [{
         title: 'Carl Barnes',
-        subtitle:'Designer',        
+        date:'27/6/2015',        
     },{
         title: 'Dorothy Lewis',
-        subtitle:'Designer',        
+        date:'27/6/2015',        
     },{
         title: 'Harris Kwnst',
-        subtitle:'Developer',        
+        date:'26/6/2015',        
     },{
         title: 'Sue Ross',
-        subtitle:'Marketing',        
+        date:'24/6/2015',        
     },{
         title: 'Joe Ross',
-        subtitle:'Finance',        
+        date:'23/6/2015',        
     },{
         title: 'Shirley King',
-        subtitle:'Designer',        
+        date:'19/6/2015',        
     },{
         title: 'John King',
-        subtitle:'Developer',        
+        date:'17/6/2015',        
     },{
         title: 'Mary Rose',
-        subtitle:'Advertising',        
+        date:'16/6/2015',        
     },{
         title: 'Morris Onions',
-        subtitle:'Finance',        
+        date:'12/6/2015',        
     }];
 });
