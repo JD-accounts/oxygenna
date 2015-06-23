@@ -1,11 +1,11 @@
 <div class="timeline-container overlay-5 padded-content-page">
 	<div layout="row" layout-sm="column" layout-margin ng-repeat="event in events" ng-attr-layout-align="{{$odd? 'end':'start'}}">
-		<div layout="row" layout-sm="column" layout-margin flex="50" flex-sm="100" layout-align="start center">			
-			<md-divider flex="20" ng-hide="$even"></md-divider>
-		    <widget flex="70" title="{{event.title}}" subtitle="{{event.date}}" title-position="top">
+		<div layout="row" layout-sm="column" layout-margin flex="50" flex-sm="100" layout-align="start center">
+			<md-divider class="margin-0" flex="20" ng-hide="$even"></md-divider>
+		    <widget flex="70" class="margin-0" title="{{event.title}}" subtitle="{{event.date}}" title-position="top">
 		        <img src="assets/images/backgrounds/bg-1.jpg" />
-		    </widget>		    
-		    <md-divider flex="20" ng-hide="$odd"></md-divider>
+		    </widget>
+		    <md-divider class="margin-0" flex="20" ng-hide="$odd"></md-divider>
 		</div>
 	</div>
 </div>
