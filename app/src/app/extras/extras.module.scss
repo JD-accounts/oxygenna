@@ -9,3 +9,70 @@
     max-height: 480px;
   }
 }
+
+// Timeline
+$timeline-point: 100px;
+.timeline {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
+  .timeline-widget {
+    z-index: 4;
+  }
+  .timeline-point {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: $timeline-point;
+    height: $timeline-point;
+    transform: translate3D(50%, -50%, 0);
+    border-radius: 50%;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .timeline-point-date {
+    position: absolute;
+    z-index: 3;
+    background: inherit;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    line-height: $timeline-point;
+    overflow: hidden;
+    transition: width .5s, height 0.5s;
+    transform: translate3d(-50%, -50%, 0);
+    text-align: center;
+    font-size: 0.8em;
+    border-radius: 50%;
+  }
+  &:hover .timeline-point-date {
+    width: 100%;
+    height: 100%;
+  }
+  .timeline-y-axis {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotate(90deg);
+    z-index: 1;
+  }
+}
+
+@media (max-width: 599px) {
+  .timeline {
+    overflow: visible;
+    .timeline-point {
+      position: relative;
+      top: 0;
+      right: 0;
+      transform: none;
+      margin-bottom: 20px;
+    }
+    .timeline-x-axis {
+      display: none;
+    }
+  }
+}
