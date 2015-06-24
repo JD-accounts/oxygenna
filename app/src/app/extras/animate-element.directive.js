@@ -16,27 +16,34 @@
 * ```
 */
 angular.module('triAngularDashboards')
-.directive('animateElement', function($timeout) {
+.directive('animateElements', function($timeout) {
     return {        
         restrict: 'A',
-        link: function($scope, $element, attrs) {                                 
-            // if the first page to load is the timeline, re-trigger the check once images have loaded
-            $(window).load(function() {   
-                $timeout(function(){
+        link: function($scope, $element, attrs) {          
+            var $widgets  = [];
+            var $dividers = [];
+
+            // using interval checking since window load event does not work on some machines
+            var widgetsLoaded = setInterval(function() {
+                $widgets = $element.find('.timeline-widget');
+
+                if($widgets.length > 0 && $($widgets[0]).height() > 1) {
+                    $dividers = $element.find('.timeline-x-axis');
                     onScrollCallback();
-                },100);                
-            });
-            
-            // can not cache jquery selectors due to transclusion
-            var onScrollCallback =  function() {     
-                var $divider = $element.find('.timeline-x-axis');
-                var $widget = $element.find('.timeline-widget');
-                if ( $($element).offset().top <= $(window).scrollTop() + $(window).height() * 0.80 && $widget.height() > 1 ) {                                        
-                    $divider.addClass('timeline-content-animated '+ attrs.direction);
-                    $widget.addClass('timeline-content-animated '+ attrs.direction);
-                    angular.element('md-content').unbind('scroll', onScrollCallback);
-                }                
+                    clearInterval(widgetsLoaded);                    
+                }
+            }, 100);
+                                    
+            var onScrollCallback =  function() {                                     
+                for(var i=0; i<=$widgets.length-1; i++){
+                   if ( $($widgets[i]).offset().top <= $(window).scrollTop() + $(window).height() * 0.80 && $($widgets[i]).height() > 1) {                                         
+                        var dir = ( i % 2 === 0 ) ? 'left':'right';
+                        $($dividers[i]).addClass('timeline-content-animated '+ dir);
+                        $($widgets[i]).addClass('timeline-content-animated '+ dir);
+                   }
+                }                     
             };
+
             angular.element('md-content').bind('scroll', onScrollCallback).scroll();        
         }
     };
