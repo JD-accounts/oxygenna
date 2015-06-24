@@ -55,3 +55,10 @@
 - Added Textangular example elements page
 - Fixes for Internet Explorer 10
 - Updated docs with better node install instructions
+
+# Version 1.2
+> Release Date : ?
+
+- Added notifications on main dashboard
+- Added animation on toolbar budges
+- Added timeline page
