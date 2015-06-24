@@ -16,13 +16,15 @@
 * ```
 */
 angular.module('triAngularDashboards')
-.directive('animateElement', function() {
+.directive('animateElement', function($timeout) {
     return {        
         restrict: 'A',
         link: function($scope, $element, attrs) {                                 
             // if the first page to load is the timeline, re-trigger the check once images have loaded
-            $(window).load(function() {                
-                onScrollCallback();
+            $(window).load(function() {   
+                $timeout(function(){
+                    onScrollCallback();
+                },100);                
             });
             
             // can not cache jquery selectors due to transclusion
