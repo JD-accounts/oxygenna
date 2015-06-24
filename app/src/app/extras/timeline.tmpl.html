@@ -1,8 +1,8 @@
 <div class="overlay-5 padded-content-page">
 	<div class="timeline" layout="row" layout-sm="column" ng-repeat="event in events" ng-attr-layout-align="{{$odd? 'end':'start'}}">
-		<div layout="row" layout-sm="column" flex="50" flex-sm="100" ng-attr-layout-align="{{$odd? 'end':'start'}} center">
+		<div layout="row" layout-sm="column" flex="50" flex-sm="100" ng-attr-layout-align="{{$odd? 'end':'start'}} center" animate-element direction="{{$odd? 'right':'left'}}">
 			<md-content class="timeline-point md-whiteframe-z1">
-				<img src="{{event.image}}" class="timeline-point-avatar"/>
+				<img ng-src="{{event.image}}" class="timeline-point-avatar"/>
 				<span class="timeline-point-date">{{event.date}}</span>
 			</md-content>
 			<md-divider class="timeline-x-axis" class="margin-0" flex flex-order="2"></md-divider>

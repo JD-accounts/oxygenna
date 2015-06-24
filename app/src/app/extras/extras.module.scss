@@ -10,6 +10,7 @@
   }
 }
 
+
 // Timeline
 $timeline-point: 100px;
 .timeline {
@@ -18,6 +19,7 @@ $timeline-point: 100px;
   padding: 10px 0;
   .timeline-widget {
     z-index: 4;
+    opacity: 0;
   }
   .timeline-point {
     position: absolute;
@@ -57,7 +59,10 @@ $timeline-point: 100px;
     left: 0;
     width: 100%;
     transform: rotate(90deg);
-    z-index: 1;
+    z-index: 1;    
+  }
+  .timeline-x-axis {
+  	opacity: 0;
   }
 }
 
@@ -75,4 +80,14 @@ $timeline-point: 100px;
       display: none;
     }
   }
+}
+
+.timeline-content-animated {
+  opacity: 1!important;
+  &.left {
+  	@include slideInLeft();	
+  }
+  &.right {
+	@include slideInRight();
+  }  
 }
