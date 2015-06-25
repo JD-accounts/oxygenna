@@ -6,8 +6,8 @@
 				<span class="timeline-point-date">{{event.date}}</span>
 			</md-content>
 			<md-divider class="timeline-x-axis" class="margin-0" flex flex-order="2"></md-divider>
-		    <widget flex="70" class="timeline-widget margin-0" title="{{event.title}}" subtitle="{{event.subtitle}}" title-position="top" ng-attr-flex-order="{{$odd? 2:1}}">		    
-		     	<div replace-with='{{event.content}}'></div>		    		        
+		    <widget flex="70" class="timeline-widget margin-0" title="{{event.title}}" subtitle="{{event.subtitle}}" title-position="top" ng-attr-flex-order="{{$odd? 2:1}}" palette-background="{{event.palette}}" overlay-title>
+		     	<div replace-with='{{event.content}}'></div>
 		    </widget>
              <md-divider class="timeline-y-axis"></md-divider>
 		</div>
