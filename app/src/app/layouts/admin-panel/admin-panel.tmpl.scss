@@ -21,6 +21,15 @@
   min-width: 260px;
   max-width: 260px;
   -ms-overflow-style: none; /* ie fix for removing scrollbars */
+  &.admin-sidebar-collapsed {
+    min-width: 48px;
+    max-width: 48px;
+    transition: all .3s;
+    &:hover {
+      min-width: 260px;
+      max-width: 260px;
+    }
+  }
 }
 
 // Toolbar

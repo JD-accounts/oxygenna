@@ -119,6 +119,8 @@ side-menu {
     }
   }
 }
+
+
 // Multiple levels
 $submenu-overlay: #999999;
 
@@ -151,6 +153,37 @@ $submenu-overlay: #999999;
             background: rgba($submenu-overlay, .4);
           }
         }
+      }
+    }
+  }
+}
+
+// Collapsible Menu
+.admin-sidebar-collapsed.md-locked-open {
+  .sidebar-left-title {
+    opacity: 0;
+    transition: all .2s;
+    transition-delay: .3s;
+  }
+  .side-menu-link span {
+    opacity: 0;
+    transition: all .2s;
+    transition-delay: .3s;
+  }
+  .drop-down-list {
+    max-height: 0;
+  }
+  &:hover {
+    .sidebar-left-title {
+      opacity: 1;
+    }
+    .side-menu-link span {
+      opacity: 1;
+    }
+    .drop-down-list {
+      max-height: 1300px;
+      &.ng-hide {
+        max-height: 0;
       }
     }
   }

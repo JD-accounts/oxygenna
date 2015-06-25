@@ -5,6 +5,11 @@
 }
 
 .sidebar-left-logo {
-  margin-right: 12px;
-  max-height: 48px;
+  flex-shrink: 0;
+  img {
+    max-height: 64px;
+    vertical-align: top;
+    margin-right: 4px;
+    transform: translateX(-4px);
+  }
 }
