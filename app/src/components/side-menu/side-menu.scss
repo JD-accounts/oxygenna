@@ -19,6 +19,21 @@ side-menu {
   }
 }
 
+// Side menu shrink/grow icon
+.sidebar-left-icon {
+  text-align: right;
+  margin-right: 0 !important;
+  display: none;
+  md-icon {
+    transform: rotate(90deg);
+    transition: all .2s;
+  }
+  &:hover {
+    md-icon {
+      transform: rotate(-90deg);
+    }
+  }
+}
 .side-menu-link {
   display: block;
   text-align: left;
@@ -160,10 +175,11 @@ $submenu-overlay: #999999;
 
 // Collapsible Menu
 .admin-sidebar-collapsed.md-locked-open {
-  .sidebar-left-title {
+  .sidebar-left-title, .sidebar-left-icon {
     opacity: 0;
     transition: all .2s;
     transition-delay: .3s;
+    display: block;
   }
   .side-menu-link span {
     opacity: 0;
@@ -174,7 +190,7 @@ $submenu-overlay: #999999;
     max-height: 0;
   }
   &:hover {
-    .sidebar-left-title {
+    .sidebar-left-title, .sidebar-left-icon {
       opacity: 1;
     }
     .side-menu-link span {
