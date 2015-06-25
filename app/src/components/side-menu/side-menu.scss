@@ -33,7 +33,11 @@ side-menu {
       transform: rotate(-90deg);
     }
   }
+  .md-locked-open & {
+    display: block;
+  }
 }
+
 .side-menu-link {
   display: block;
   text-align: left;
@@ -179,7 +183,6 @@ $submenu-overlay: #999999;
     opacity: 0;
     transition: all .2s;
     transition-delay: .3s;
-    display: block;
   }
   .side-menu-link span {
     opacity: 0;

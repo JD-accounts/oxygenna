@@ -61,4 +61,5 @@
 
 - Added notifications on main dashboard
 - Added animation on toolbar budges
-- Added timeline page
+- Added time-line page
+- Added option for collapsible side menu
