@@ -7,8 +7,8 @@
 
         <h2 class="sidebar-left-title">{{sidebarInfo.appName}}</h2>
 
-        <md-button class="md-icon-button sidebar-left-icon" flex>
-            <md-icon md-font-icon="icon-unfold-less" ></md-icon>
+        <md-button class="md-icon-button sidebar-left-icon" flex  ng-click="toggleMenuLock()">
+            <md-icon ng-class="isMenuLocked == true ? 'icon-unfold-less': 'icon-unfold-more'"></md-icon>
         </md-button>
 
     </div>

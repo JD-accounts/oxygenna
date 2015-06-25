@@ -13,6 +13,7 @@
 angular.module('triAngular').
 controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, $mdUtil, $state) {
     $scope.toolbarShrink = undefined;
+    $scope.isMenuLocked = false;    
 
     if($state.current.data !== undefined) {
         if($state.current.data.toolbar !== undefined) {
@@ -20,5 +21,9 @@ controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, 
                 $scope.toolbarShrink = true;
             }
         }
+    }
+
+    $scope.toggleMenuLock = function() {
+    	$scope.isMenuLocked = !$scope.isMenuLocked;    	
     }
 });
