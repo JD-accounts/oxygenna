@@ -56,7 +56,7 @@
 - Fixes for Internet Explorer 10
 - Updated docs with better node install instructions
 
-# Version 1.2
+# Version 1.2.0
 > Release Date : 26th June 2015
 
 - Added notifications on main dashboard
