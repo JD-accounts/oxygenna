@@ -55,17 +55,17 @@ $timeline-point: 100px;
   .timeline-y-axis {
     margin: 0;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
     width: 100%;
     transform: rotate(90deg);
     z-index: 1;
   }
   &:first-child .timeline-y-axis {
-    transform: rotate(90deg) translateX(65%);
+    transform: rotate(90deg) translateX(50%);
   }
   &:last-child .timeline-y-axis {
-    transform: rotate(90deg) translateX(-40%);
+    transform: rotate(90deg) translateX(-50%);
   }
   .timeline-x-axis {
   	opacity: 0;
