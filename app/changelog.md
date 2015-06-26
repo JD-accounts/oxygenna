@@ -57,7 +57,7 @@
 - Updated docs with better node install instructions
 
 # Version 1.2
-> Release Date : ?
+> Release Date : 26th June 2015
 
 - Added notifications on main dashboard
 - Added animation on toolbar budges
