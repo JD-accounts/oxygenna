@@ -63,3 +63,4 @@
 - Added animation on toolbar budges
 - Added time-line page
 - Added option for collapsible side menu
+- Changed logo markup
