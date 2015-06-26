@@ -13,7 +13,7 @@
 angular.module('triAngular').
 controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, $mdUtil, $state) {
     $scope.toolbarShrink = undefined;
-    $scope.isMenuLocked = false;    
+    $scope.isMenuLocked = true;    
 
     if($state.current.data !== undefined) {
         if($state.current.data.toolbar !== undefined) {
