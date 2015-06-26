@@ -30,6 +30,11 @@
       max-width: 260px;
     }
   }
+  &.is-collapsing {
+    min-width: 48px;
+    max-width: 48px;
+    transition: all .3s;
+  }
 }
 
 // Toolbar
