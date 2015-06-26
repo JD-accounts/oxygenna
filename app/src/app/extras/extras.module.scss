@@ -59,7 +59,13 @@ $timeline-point: 100px;
     left: 0;
     width: 100%;
     transform: rotate(90deg);
-    z-index: 1;    
+    z-index: 1;
+  }
+  &:first-child .timeline-y-axis {
+    transform: rotate(90deg) translateX(65%);
+  }
+  &:last-child .timeline-y-axis {
+    transform: rotate(90deg) translateX(-40%);
   }
   .timeline-x-axis {
   	opacity: 0;
@@ -85,9 +91,9 @@ $timeline-point: 100px;
 .timeline-content-animated {
   opacity: 1!important;
   &.left {
-  	@include slideInLeft();	
+  	@include slideInLeft();
   }
   &.right {
 	@include slideInRight();
-  }  
+  }
 }
