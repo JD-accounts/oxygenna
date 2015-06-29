@@ -20,6 +20,7 @@ $timeline-point: 100px;
   .timeline-widget {
     z-index: 4;
     opacity: 0;
+    overflow: hidden;
   }
   .timeline-point {
     position: absolute;
@@ -72,6 +73,16 @@ $timeline-point: 100px;
   }
 }
 
+.timeline-content-animated {
+  opacity: 1!important;
+  &.left {
+    @include slideInLeft();
+  }
+  &.right {
+  @include slideInRight();
+  }
+}
+
 @media (max-width: 599px) {
   .timeline {
     overflow: visible;
@@ -85,15 +96,10 @@ $timeline-point: 100px;
     .timeline-x-axis {
       display: none;
     }
+    .timeline-y-axis {
+      top: 0 !important;
+      transform: rotate(90deg) translateX(0%) !important;
+    }
   }
 }
 
-.timeline-content-animated {
-  opacity: 1!important;
-  &.left {
-  	@include slideInLeft();
-  }
-  &.right {
-	@include slideInRight();
-  }
-}

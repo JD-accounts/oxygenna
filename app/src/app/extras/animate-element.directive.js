@@ -17,9 +17,9 @@
 */
 angular.module('triAngularDashboards')
 .directive('animateElements', function($timeout) {
-    return {        
+    return {
         restrict: 'A',
-        link: function($scope, $element, attrs) {          
+        link: function($scope, $element, attrs) {
             var $widgets  = [];
             var $dividers = [];
 
@@ -30,21 +30,21 @@ angular.module('triAngularDashboards')
                 if($widgets.length > 0 && $($widgets[0]).height() > 1) {
                     $dividers = $element.find('.timeline-x-axis');
                     onScrollCallback();
-                    clearInterval(widgetsLoaded);                    
+                    clearInterval(widgetsLoaded);
                 }
             }, 100);
-                                    
-            var onScrollCallback =  function() {                                     
+
+            var onScrollCallback =  function() {
                 for(var i=0; i<=$widgets.length-1; i++){
-                   if ( $($widgets[i]).offset().top <= $(window).scrollTop() + $(window).height() * 0.80 && $($widgets[i]).height() > 1) {                                         
+                   if ( $($widgets[i]).offset().top <= $(window).scrollTop() + $(window).height() * 0.80 && $($widgets[i]).height() > 1) {
                         var dir = ( i % 2 === 0 ) ? 'left':'right';
                         $($dividers[i]).addClass('timeline-content-animated '+ dir);
                         $($widgets[i]).addClass('timeline-content-animated '+ dir);
                    }
-                }                     
+                }
             };
 
-            angular.element('md-content').bind('scroll', onScrollCallback).scroll();        
+            angular.element('md-content').bind('scroll', onScrollCallback).scroll();
         }
     };
 });
