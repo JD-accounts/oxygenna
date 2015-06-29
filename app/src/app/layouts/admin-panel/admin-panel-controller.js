@@ -31,7 +31,7 @@ controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, 
     	if($scope.isMenuCollapsing === true){    	
     		$timeout(function() {
     			$scope.isMenuCollapsing = false;    			
-    		}, 2000);
+    		}, 300);
     	}    	    
     };
 
