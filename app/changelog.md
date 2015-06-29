@@ -64,3 +64,10 @@
 - Added time-line page
 - Added option for collapsible side menu
 - Changed logo markup
+
+# Version 1.2.1
+> Release Date : 29th June 2015
+
+- Fixed time-line page on mobile IOS
+- Fixed collapsible menu button
+- Fixed toggle icon animation for sub menus
