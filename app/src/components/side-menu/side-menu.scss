@@ -70,10 +70,8 @@ side-menu {
 .menu-toggle-icon {
   text-align: center;
   float: right;
-  span {
-    transition: all .5s;
-  }
-  &.open span {
+  transition: all .5s;
+  &.open {
     transform: rotate(90deg);
   }
 }
