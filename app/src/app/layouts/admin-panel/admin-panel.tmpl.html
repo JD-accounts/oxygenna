@@ -1,6 +1,6 @@
 <div layout="row" ng-controller="AdminController" class="full-height">
     <!-- left sidebar -->
-    <md-sidenav layout class="admin-sidebar-left md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ui-view="sidebarLeft" ng-class="menuClass()"></md-sidenav>
+    <md-sidenav layout class="admin-sidebar-left md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ui-view="sidebarLeft" ng-class="menuClass()" ng-mouseover="activateHover()" ng-mouseleave="removeHover()"></md-sidenav>
 
     <!-- main content -->
     <div id="admin-panel" layout="column" flex>

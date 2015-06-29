@@ -14,7 +14,8 @@ angular.module('triAngular').
 controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, $mdUtil, $state) {
     $scope.toolbarShrink = undefined;
     $scope.isMenuLocked = true; 
-    $scope.isMenuCollapsing = false;   
+    $scope.isMenuCollapsing = false; 
+    $scope.isHovering = false;  
 
     if($state.current.data !== undefined) {
         if($state.current.data.toolbar !== undefined) {
@@ -24,18 +25,29 @@ controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, 
         }
     }
 
-    $scope.toggleMenuLock = function() {    	    	
-    	$scope.isMenuLocked = !$scope.isMenuLocked;
+    // we need different event handlers for mouse over / leave, can not toggle the variable.
+    $scope.activateHover = function() {        
+        $scope.isHovering = true;
+    };
+
+    $scope.removeHover = function(){
+        $scope.isHovering = false;
+    };
+
+    $scope.toggleMenuLock = function() {    
+    	$scope.isMenuLocked = !$scope.isMenuLocked;        
     	$scope.isMenuCollapsing = !$scope.isMenuLocked;
     	
-    	if($scope.isMenuCollapsing === true){    	
-    		$timeout(function() {
-    			$scope.isMenuCollapsing = false;    			
-    		}, 300);
+    	if($scope.isMenuCollapsing === true){  
+            // manually remove the hover class in order to prevent the menu from growing back
+            $scope.isHovering = false;            
+    		$timeout(function() {                
+    			$scope.isMenuCollapsing = false;                  
+    		}, 1000);
     	}    	    
     };
 
-    $scope.menuClass = function() {    	
-    	return  $scope.isMenuLocked === true ? '' :($scope.isMenuCollapsing === true ? 'is-collapsing' :'admin-sidebar-collapsed');
+    $scope.menuClass = function() {      
+    	return  $scope.isMenuLocked === true ? '' :($scope.isMenuCollapsing === true ? 'is-collapsing' : ($scope.isHovering == true ? 'admin-sidebar-collapsed hover': 'admin-sidebar-collapsed' ));
     };
 });
