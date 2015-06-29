@@ -183,7 +183,7 @@ $submenu-overlay: #999999;
   .drop-down-list {
     max-height: 0;
   }
-  &:hover {
+  &.hover {
     .sidebar-left-title, .sidebar-left-icon {
       opacity: 1;
     }

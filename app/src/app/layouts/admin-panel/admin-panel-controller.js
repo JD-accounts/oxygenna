@@ -26,11 +26,11 @@ controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, 
     }
 
     // we need different event handlers for mouse over / leave, can not toggle the variable.
-    $scope.activateHover = function() {        
+    $scope.activateHover = function() {      
         $scope.isHovering = true;
     };
 
-    $scope.removeHover = function(){
+    $scope.removeHover = function(){        
         $scope.isHovering = false;
     };
 
@@ -43,11 +43,11 @@ controller('AdminController', function ($scope, $element, $timeout, $mdSidenav, 
             $scope.isHovering = false;            
     		$timeout(function() {                
     			$scope.isMenuCollapsing = false;                  
-    		}, 1000);
+    		}, 400);
     	}    	    
     };
 
-    $scope.menuClass = function() {      
+    $scope.menuClass = function() {        
     	return  $scope.isMenuLocked === true ? '' :($scope.isMenuCollapsing === true ? 'is-collapsing' : ($scope.isHovering == true ? 'admin-sidebar-collapsed hover': 'admin-sidebar-collapsed' ));
     };
 });
