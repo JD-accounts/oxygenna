@@ -5,7 +5,8 @@
             "GENERAL": "General",
             "ANALYTICS": "Analytics",
             "SERVER": "Server",
-            "WIDGETS": "Widgets"
+            "WIDGETS": "Widgets",
+            "SOCIAL": "Social"
         }
     },
     "DASHBOARDS": {

@@ -1,0 +1,69 @@
+<div class="dashboard-container overlay-5 padded-content-page" layout="column">
+    <div layout="row" layout-sm="column" layout-margin>
+        <div layout="column" layout-margin layout-fill flex="50" flex-sm="100">
+            <widget title="Some Title" subtitle="Positioned above the image" title-position="top">
+				<img src="assets/images/backgrounds/bg-1.jpg" />
+			</widget>
+        </div>
+
+        <div flex layout="column" layout-margin>
+         	<div layout="row" layout-margin>
+                 <widget flex="50" title="Some Title" subtitle="Positioned above the image" title-position="top">
+			        <img src="assets/images/backgrounds/bg-1.jpg" />
+			    </widget>
+                <widget title="Some Title" subtitle="Positioned above the image" title-position="top">
+			        <img src="assets/images/backgrounds/bg-1.jpg" />
+			    </widget>
+            </div>
+            <div layout-margin>
+	            <widget palette-background="cyan:500" twitter-widget>
+	                <div layout="row" layout-align="space-between center" class="padding-normal">
+	                    <i class="fa fa-twitter font-size-4 opacity-50"></i>
+	                    <h3 flex hide-sm class="md-subhead">Oxygenna's feed</h3>
+	                    <div class="widget-buttons">
+	                        <md-button class="md-icon-button" ng-click="prevTweet()" aria-label="previous tweet">
+	                            <md-icon md-font-icon="icon-keyboard-arrow-left"></md-icon>
+	                        </md-button>
+	                        <md-button class="md-icon-button" ng-click="nextTweet()" aria-label="next tweet">
+	                            <md-icon md-font-icon="icon-keyboard-arrow-right"></md-icon>
+	                        </md-button>
+	                    </div>
+	                </div>
+	                <div layout="column" class="padding-top-0 padding-left-40 padding-right-40 padding-bottom-40">
+	                    <md-tabs md-selected="selectedTab" class="dashboard-no-bar-tabs text-center" md-no-pagination md-no-bar md-dynamic-height>
+	                        <md-tab ng-repeat="tweet in tweets" label="tweet.id">
+	                            <div ng-bind="tweet.body" linkify="twitter" class="font-weight-300 font-size-2 font-style-italic line-height-big"></div>
+	                        </md-tab>
+	                    </md-tabs>
+	                </div>
+	            </widget>
+            </div>           
+        </div>
+    </div>
+    <div layout="row" layout-sm="column" layout-margin>        
+        <div flex layout="column" layout-margin>
+         	<div layout="row" layout-margin>
+                <widget flex="33" title="Some Title" subtitle="Positioned above the image" title-position="top">
+			        <img src="assets/images/backgrounds/bg-1.jpg" />
+			    </widget>
+                <widget flex title="Some Title" subtitle="Positioned above the image" title-position="top">
+			        <img src="assets/images/backgrounds/bg-1.jpg" />
+			    </widget>
+            </div>
+            <div layout="row" layout-margin>
+                <widget flex title="Some Title" subtitle="Positioned above the image" title-position="top">
+			        <img src="assets/images/backgrounds/bg-1.jpg" />
+			    </widget>
+                <widget flex="33" title="Some Title" subtitle="Positioned above the image" title-position="top">
+			        <img src="assets/images/backgrounds/bg-1.jpg" />
+			    </widget>
+            </div>
+        </div>
+        <div layout="column" layout-margin layout-fill flex="25" flex-sm="100">
+            <widget flex title="Some Title" subtitle="Positioned above the image" title-position="top">
+		        <img src="assets/images/backgrounds/bg-1.jpg" />
+		    </widget>
+        </div>
+    </div>
+
+</div>

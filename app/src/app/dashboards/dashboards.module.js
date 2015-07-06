@@ -29,6 +29,10 @@ angular.module('triAngularDashboards', [])
     .state('admin-panel.default.dashboard-widgets', {
         url: '/dashboards/widgets',
         templateUrl: 'app/dashboards/widgets.tmpl.html',
+    })
+    .state('admin-panel.default.dashboard-social', {
+        url: '/dashboards/social',
+        templateUrl: 'app/dashboards/dashboard-social.tmpl.html',        
     });
 })
 .run(function(SideMenu) {
@@ -52,6 +56,10 @@ angular.module('triAngularDashboards', [])
         },{
             name: 'MENU.DASHBOARDS.WIDGETS',
             state: 'admin-panel.default.dashboard-widgets',
+            type: 'link',
+        },{
+            name: 'MENU.DASHBOARDS.SOCIAL',
+            state: 'admin-panel.default.dashboard-social',
             type: 'link',
         }]
     });
