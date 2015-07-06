@@ -71,3 +71,8 @@
 - Fixed time-line page on mobile IOS
 - Fixed collapsible menu button
 - Fixed toggle icon animation for sub menus
+
+# Version ???
+> Release Date : ???
+
+- Translated calendar widget
