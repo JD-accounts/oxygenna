@@ -52,7 +52,41 @@
             "SALES": "Vente",
             "COMMENTS": "Commentaires",
             "SERVER_UPTIME": "La Disponibilité Des Serveurs",
-            "FULLDATA": "Les Données Complètes"
+            "FULLDATA": "Les Données Complètes",
+            "CALENDAR": {
+                "DAYNAMES": {
+                    "SUNDAY": "Dimanche",
+                    "MONDAY": "Lundi",
+                    "TUESDAY": "Mardi",
+                    "WEDNESDAY": "Mercredi",
+                    "THURSDAY": "Jeudi",
+                    "FRIDAY": "Vendredi",
+                    "SATURDAY": "Samedi"
+                },
+                "DAYNAMESSHORT": {
+                    "SUN": "Dim",
+                    "MON": "Lun",
+                    "TUE": "Mar",
+                    "WED": "Mer",
+                    "THU": "Jeu",
+                    "FRI": "Ven",
+                    "SAT": "Sam"
+                },
+                 "MONTHNAMES": {
+                    "JANUARY": "Janvier",
+                    "FEBRUARY": "Février",
+                    "MARCH": "Mars",
+                    "APRIL": "Avril",
+                    "MAY": "Mai",
+                    "JUNE": "Juin",
+                    "JULY": "Juillet",
+                    "AUGUST": "Août",
+                    "SEPTEMBER": "Septembre",
+                    "OCTOBER": "Octobre",
+                    "NOVEMBER": "Novembre",
+                    "DECEMBER": "Décembre"
+                }
+            }
         }
     }
 }
