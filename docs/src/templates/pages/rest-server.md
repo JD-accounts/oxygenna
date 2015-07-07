@@ -18,19 +18,20 @@ We will use the popular [Slim](http://www.slimframework.com/) php framework to s
 		 \Slim\Slim::registerAutoloader();
 
 		$app = new \Slim\Slim();
-
-		$app->get('/', function() use($app) {
+		
+		$app->map('/', function() use($app) {
 			$response = $app->response();    
 
 		    $response->header('Access-Control-Allow-Origin', '*');
-		    $response->header('Access-Control-Allow-Methods', 'GET, POST');
-		    $response->header('Access-Control-Allow-Headers', 'accept, origin, content-type');
+		    $response->header('Access-Control-Allow-Methods', 'GET, POST , OPTIONS');
+		    $response->header('Access-Control-Allow-Headers', 'Cache-Control, Pragma, accept, x-requested-with, origin, content-type, x-xsrf-token');
 
 		    $data = array('Harris' => 'programmer', 'Chris' => 'CEO');
 		    echo json_encode($data);
-		}); 
+		})->via('GET', 'POST'); 
 
 		$app->run();
+
 - Paste the following in the .htaccess file :
 		RewriteEngine On
 		RewriteCond %{REQUEST_FILENAME} !-f
@@ -65,11 +66,17 @@ which will render something like the following :
 # Contacting the Server through Angular
 Having confirmed that our simple test server is up and running, and is allowing CORS, all we have to do is use the angular $http service to contact it. In any controller inject the $http service and do the following:
 
-	$http.get("http://localhost/api/").success(function(response) {
-        console.log(response);
-    });
+	var req = {
+        method: 'POST',
+        url: 'http://localhost/api/',
+        headers: {
+           'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        data: { test: 'test' }
+    }
+    $http(req).success(function(res){console.log(res)}).error(function(err){console.log(err)});
 
-If you have your browser console open you will see the response data rendered there once the endpoint responds.
+If you have your browser console open you will see the response data rendered there once the endpoint responds. Changing the method to GET will make the service fire a GET request instead.
 
 # Further information
 For more information regarding slim, and guides on how to set up multiple routes in your server you can read the readme in the Slim github repository [here](https://github.com/codeguy/Slim).
