@@ -115,15 +115,9 @@ Follow the instructions below to install node.js on your system.
 
 ## Installing Node.js
 
-We recommend installing version 0.10.36 of node as this is the version we are using to test.
+We recommend installing the latest version of node.  At the time of writing this was (0.12.6).
 
-The latest version of node may have problems with some the node-sass package that is used.
-
-You can download the version 0.10.36 of node.js [from here](http://nodejs.org/dist/v0.10.36/) alternatively there are [guides on how to install using a package manager](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
-
-<div class="alert alert-info" role="alert">
-    <i class="fa fa-warning"></i> Note - We recommend installing version <strong>node 0.10.36</strong> of node which is the more stable than the latest 0.12 builds of node
-</div>
+You can download the latest of node.js [from here](https://nodejs.org/download/) alternatively there are [guides on how to install using a package manager](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
 
 ## Checking node is installed and working
 

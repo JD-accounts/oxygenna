@@ -77,3 +77,4 @@
 
 - Translated calendar widget
 - Added avatar option to widget title
+- Updated gulp-sass to 2.0.3 to allow better compatibility with latest versions of node.js
