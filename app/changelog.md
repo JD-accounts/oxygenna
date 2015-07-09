@@ -76,3 +76,4 @@
 > Release Date : ???
 
 - Translated calendar widget
+- Added avatar option to widget title

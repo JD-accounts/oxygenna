@@ -12,7 +12,7 @@
 *
 * @usage
 * ```html
-* <widget title="'Nice Title'" subtitle="'Subtitle'" title-position="top|bottom|left|right" content-padding overlay-title>content here</widget>
+* <widget title="'Nice Title'" subtitle="'Subtitle'" avatar="http://myavatar.jpg" title-position="top|bottom|left|right" content-padding overlay-title>content here</widget>
 * ```
 */
 angular.module('triAngularDashboards')
@@ -24,7 +24,8 @@ angular.module('triAngularDashboards')
         replace: true,
         scope: {
             title: '@',
-            subtitle: '@'
+            subtitle: '@',
+            avatar: '@'
         },
         controller: function($scope) {
             $scope.menu = null;
