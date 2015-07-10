@@ -13,9 +13,27 @@ angular.module('triAngularCalendar', [])
     // Tell the translate module that we want translations to be loaded from the il8n folder in this module
     $translatePartialLoaderProvider.addPart('app/calendar');
 
+    $stateProvider
+    .state('admin-panel-no-scroll.calendar', {
+        abstract: true,
+        views: {
+            sidebarLeft: {
+                templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html',
+                controller: 'SidebarLeftController'
+            },
+            toolbar: {
+                templateUrl: 'app/calendar/toolbar.tmpl.html',
+                // controller: 'EmailToolbarController'
+            },
+            content: {
+                template: '<div flex ui-view layout="column" class="overflow-hidden"></div>'
+            }
+        },
+    });
+
     // Create a state for our seed test page
     $stateProvider
-    .state('admin-panel.default.calendar', {
+    .state('admin-panel-no-scroll.calendar.default', {
         // set the url of this page
         url: '/calendar',
         // set the html template to show on this page
@@ -30,7 +48,7 @@ angular.module('triAngularCalendar', [])
         // give the menu a name to show (should be translatable and in the il8n folder json)
         name: 'MENU.CALENDAR.CALENDAR',
         // point this menu to the state we created in the $stateProvider above
-        state: 'admin-panel.default.calendar',
+        state: 'admin-panel-no-scroll.calendar.default',
         // set the menu type to a link
         type: 'link',
         // set an icon for this menu

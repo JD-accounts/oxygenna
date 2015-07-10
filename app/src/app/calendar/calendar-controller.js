@@ -16,7 +16,6 @@ angular.module('triAngularCalendar')
 // create a controller for the seed page and inject the scope directive
 .controller('CalendarController', function ($scope) {
     $scope.calendarOptions = {
-        header: false,
         height: 'auto',
         selectable: true,
         viewRender: function(view) {
