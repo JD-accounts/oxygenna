@@ -225,9 +225,10 @@ chart-legend ul {
   position: relative;
   .widget-follower-header-avatar {
     border-radius: 50%;
-    width: 80px;
+    width: 60px;
     position: absolute;
     right: 25px;
-    bottom: -40px;
+    top: 100%;
+    transform: translateY(-50%);
   }
 }

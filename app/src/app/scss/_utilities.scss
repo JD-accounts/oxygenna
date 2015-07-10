@@ -138,6 +138,22 @@ $i : 0;
   $i : $i + 10;
 }
 
+// Color inherit
+.color-inherit {
+  color: inherit !important;
+}
+
+// Display classes
+.display-block {
+  display: block !important;
+}
+.display-inline-block {
+  display: inline-block !important;
+}
+.display-inline {
+  display: inline !important;
+}
+
 // Clearfix
 .clear:before,
 .clear:after {
