@@ -13,7 +13,7 @@ angular.module('triAngularEmail')
 .filter('emailGroup', function() {
     return function(emails, emailGroup) {
         return emails.filter(function(email) {
-            var emailDate = moment(new Date(email.date));
+            var emailDate = moment(email.date, moment.ISO_8601);
 
             if(emailDate.isAfter(emailGroup.from) && emailDate.isBefore(emailGroup.to)) {
                 return email;

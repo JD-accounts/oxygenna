@@ -4,14 +4,14 @@ angular.module('triAngular', [
     // inject angular modules
     'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngMaterial',
     // inject extra 3rd party angular modules
-    'ui.router', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'ngMaterialDropmenu',
+    'ui.router', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'angularMoment', 'textAngular', 'uiGmapgoogle-maps', 'hljs',
     // inject our own triangular modules
     'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras', 'triAngularTodo', 'triAngularCalendar'
 ])
 .constant('APP', {
     name: 'triangular',
     logo: 'assets/images/logo.png',
-    version: '1.0',
+    version: '1.2.1',
     languages: [{
         name: 'LANGUAGES.ENGLISH',
         key: 'en'
@@ -39,6 +39,9 @@ angular.module('triAngular', [
 
     $translatePartialLoaderProvider.addPart('app');
 
+    // make sure all values used in translate are sanitized for security
+    $translateProvider.useSanitizeValueStrategy('sanitize');
+
     // cache translation files to save load on server
     $translateProvider.useLoaderCache(true);
 
@@ -59,7 +62,7 @@ angular.module('triAngular', [
         'en_US': 'en',
         'en_UK': 'en'
     })
-    .determinePreferredLanguage();
+    .use('en');
 
     // store the users language preference in a cookie
     $translateProvider.useLocalStorage();
@@ -147,8 +150,12 @@ angular.module('triAngular', [
     .state('500', {
         url: '/500',
         templateUrl: '500.tmpl.html',
-        controller: function($scope, APP) {
+        controller: function($scope, $state, APP) {
             $scope.app = APP;
+
+            $scope.goHome = function() {
+                $state.go('admin-panel.default.dashboard-analytics');
+            };
         }
     });
 
@@ -370,7 +377,7 @@ angular.module('triAngular', [
      */
     triSkinsProvider.setSkin(APP.defaultSkin);
 })
-.config(['ChartJsProvider', function (ChartJsProvider) {
+.config(function (ChartJsProvider) {
     // Configure all charts to use material design colors
     ChartJsProvider.setOptions({
         colours: [
@@ -386,7 +393,13 @@ angular.module('triAngular', [
         ],
         responsive: true,
     });
-}])
+})
+.run(function ($rootScope, $window) {
+    // add a class to the body if we are on windows
+    if($window.navigator.platform.indexOf('Win') !== -1) {
+        $rootScope.bodyClasses = ['os-windows'];
+    }
+})
 // setup google charts to use material charts
 .value('googleChartApiConfig', {
     version: '1.1',

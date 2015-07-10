@@ -7,7 +7,7 @@
  *
  * The `triangular.authentication` module handles all the login and signup pages
  */
-angular.module('triAngularAuthentication', ['ui.gravatar'])
+angular.module('triAngularAuthentication', [])
 .config(function ($translatePartialLoaderProvider, $stateProvider) {
     $translatePartialLoaderProvider.addPart('app/authentication');
 

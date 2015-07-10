@@ -14,19 +14,39 @@
                 </div>
                 <div layout="row" layout-align="space-between center">
                     <span class="md-caption" am-time-ago="email.date"></span>
-                    <md-dropmenu>
-                        <md-drop-label>
-                            <md-button ng-click="menuClick($event)" class="md-icon-button">
-                                <md-icon md-font-icon="icon-more-vert"></md-icon>
-                            </md-button>
-                        </md-drop-label>
-                        <md-drop-option ng-click="emailAction('EMAIL.REPLY')">{{'EMAIL.REPLY' | translate}}</md-drop-option>
-                        <md-drop-option ng-click="emailAction('EMAIL.REPLY_ALL')">{{'EMAIL.REPLY_ALL' | translate}}</md-drop-option>
-                        <md-drop-option ng-click="emailAction('EMAIL.FORWARD')">{{'EMAIL.FORWARD' | translate}}</md-drop-option>
-                        <md-drop-option ng-click="delete(email)">{{'EMAIL.DELETE' | translate}}</md-drop-option>
-                        <md-divider></md-divider>
-                        <md-drop-option ng-click="openlist()">{{'EMAIL.CLOSE' | translate}}</md-drop-option>
-                    </md-dropmenu>
+                    <md-menu>
+                        <md-button class="md-icon-button" aria-label="Open email interactions menu" ng-click="menuClick($event);$mdOpenMenu();">
+                            <md-icon md-font-icon="icon-more-vert"></md-icon>
+                        </md-button>
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ng-click="emailAction('EMAIL.REPLY')">
+                                    <md-icon md-font-icon="icon-reply"></md-icon>
+                                    {{'EMAIL.REPLY' | translate}}
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="emailAction('EMAIL.REPLY_ALL')">
+                                    <md-icon md-font-icon="icon-reply-all"></md-icon>
+                                    {{'EMAIL.REPLY_ALL' | translate}}
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="emailAction('EMAIL.FORWARD')">
+                                    <md-icon md-font-icon="icon-forward"></md-icon>
+                                    {{'EMAIL.FORWARD' | translate}}
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-divider></md-menu-divider>
+                            <md-menu-item>
+                                <md-button ng-click="openlist()">
+                                    <md-icon md-font-icon="icon-close"></md-icon>
+                                    {{'EMAIL.CLOSE' | translate}}
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+
                 </div>
             </div>
         </md-toolbar>

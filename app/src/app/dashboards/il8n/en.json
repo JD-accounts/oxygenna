@@ -5,7 +5,8 @@
             "GENERAL": "General",
             "ANALYTICS": "Analytics",
             "SERVER": "Server",
-            "WIDGETS": "Widgets"
+            "WIDGETS": "Widgets",
+            "SOCIAL": "Social"
         }
     },
     "DASHBOARDS": {
@@ -48,11 +49,57 @@
             "DATE": "11/03/15 - 11/4/15",
             "DISKUSAGE": "Disk Usage"
         },
+        "SOCIAL": {
+            "STATUS": {
+                "UPDATE": "Update your status",
+                "MIND": "Whats on your mind?"
+            }
+        },
         "WIDGETS": {
+            "MENU": {
+                "REFRESH": "Refresh",
+                "DETAILS": "Details",
+                "SHARE": "Share",
+                "PRINT": "Print"
+            },
             "SALES": "Sales",
             "COMMENTS": "Comments",
             "SERVER_UPTIME": "Server Uptime",
-            "FULLDATA": "Full Data"
+            "FULLDATA": "Full Data",
+            "CALENDAR": {
+                "DAYNAMES": {
+                    "SUNDAY": "Sunday",
+                    "MONDAY": "Monday",
+                    "TUESDAY": "Tuesday",
+                    "WEDNESDAY": "Wednesday",
+                    "THURSDAY": "Thursday",
+                    "FRIDAY": "Friday",
+                    "SATURDAY": "Saturday"
+                },
+                "DAYNAMESSHORT": {
+                    "SUN": "Sun",
+                    "MON": "Mon",
+                    "TUE": "Tue",
+                    "WED": "Wed",
+                    "THU": "Thu",
+                    "FRI": "Fri",
+                    "SAT": "Sat"
+                },
+                "MONTHNAMES": {
+                    "JANUARY": "January",
+                    "FEBRUARY": "February",
+                    "MARCH": "March",
+                    "APRIL": "April",
+                    "MAY": "May",
+                    "JUNE": "June",
+                    "JULY": "July",
+                    "AUGUST": "August",
+                    "SEPTEMBER": "September",
+                    "OCTOBER": "October",
+                    "NOVEMBER": "November",
+                    "DECEMBER": "December"
+                }
+            }
         }
     }
 }

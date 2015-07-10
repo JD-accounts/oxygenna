@@ -12,7 +12,7 @@
 *
 * @usage
 * ```html
-* <widget title="'Nice Title'" subtitle="'Subtitle'" title-position="top|bottom|left|right" content-padding overlay-title>content here</widget>
+* <widget title="'Nice Title'" subtitle="'Subtitle'" avatar="http://myavatar.jpg" title-position="top|bottom|left|right" content-padding overlay-title>content here</widget>
 * ```
 */
 angular.module('triAngularDashboards')
@@ -24,7 +24,8 @@ angular.module('triAngularDashboards')
         replace: true,
         scope: {
             title: '@',
-            subtitle: '@'
+            subtitle: '@',
+            avatar: '@'
         },
         controller: function($scope) {
             $scope.menu = null;
@@ -53,7 +54,7 @@ angular.module('triAngularDashboards')
             // set if we overlay the title on top of the widget content
             $scope.overlayTitle = attrs.overlayTitle === undefined ? undefined : true;
 
-            $mdTheming($element);            
+            $mdTheming($element);
 
             if(attrs.class !== undefined) {
                 $element.addClass(attrs.class);

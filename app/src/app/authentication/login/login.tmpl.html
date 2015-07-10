@@ -1,8 +1,8 @@
-<div layout="row" flex layout-padding layout-align="center center">
+<div layout="row" flex layout-padding layout-fill layout-align="center center">
     <div flex="40" flex-lg="50" flex-md="70" flex-sm="100">
         <md-card>
             <md-toolbar>
-                <div layout="column" flex layout-padding layout-align="center center">
+                <div class="padding-20 text-center">
                     <div><img src="assets/images/logo.png" alt="{{appName}}"></div>
                     <h1 class="md-headline">
                         {{'LOGIN.TITLE' | translate}}
@@ -36,6 +36,7 @@
                     </md-input-container>
 
                     <div layout="row" layout-align="space-between center">
+
                         <md-input-container>
                             <md-checkbox ng-model="user.rememberMe">
                                 {{'LOGIN.REMEMBER' | translate}}
@@ -48,20 +49,21 @@
 
                     </div>
 
-                    <div layout="column">
-                        <md-button class="md-raised md-primary"  ng-click="loginClick()" ng-disabled="login.$invalid">{{'LOGIN.BUTTON' | translate}}</md-button>
-                    </div>
 
-                    <div layout="column" layout-align="center center" layout-margin>
-                        <md-button flex class="md-primary" href="#/signup">{{'LOGIN.SIGNUP_LINK' |     translate}}</md-button>
-                    </div>
+                    <md-button class="md-raised md-primary full-width margin-left-0 margin-right-0 margin-top-10 margin-bottom-10"  ng-click="loginClick()" ng-disabled="login.$invalid">{{'LOGIN.BUTTON' | translate}}</md-button>
+
+
+
+                    <md-button  class="md-primary full-width margin-left-0 margin-right-0 margin-top-10 margin-bottom-10" href="#/signup">{{'LOGIN.SIGNUP_LINK' |     translate}}</md-button>
+
 
 
                     <div class="social-login">
                         <md-divider></md-divider>
-                            <div layout="column" layout-align="center center" layout-margin>
-                                {{'LOGIN.SOCIAL.OR' | translate}}
-                            </div>
+
+                        <div class="text-center margin-20">
+                            {{'LOGIN.SOCIAL.OR' | translate}}
+                        </div>
 
                         <div layout="row" layout-align="space-between center"  layout-margin>
                             <md-button ng-repeat="social in socialLogins" class="md-icon-button" ng-style="{ 'background-color': social.color }" aria-label="{{'LOGIN.SOCIAL.OR' | translate}} {{social.icon}}">

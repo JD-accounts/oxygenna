@@ -25,6 +25,11 @@ angular.module('triAngularExtras', [])
     .state('admin-panel.default.extra-blank', {
         url: '/extras/blank',
         templateUrl: 'app/extras/blank.tmpl.html',
+    })
+    .state('admin-panel.default.extra-timeline', {
+        url: '/extras/timeline',
+        templateUrl: 'app/extras/timeline.tmpl.html',
+        controller: 'TimelineController'
     });
 })
 .run(function(SideMenu) {
@@ -52,6 +57,10 @@ angular.module('triAngularExtras', [])
         },{
             name: 'MENU.EXTRAS.BLANK',
             state: 'admin-panel.default.extra-blank',
+            type: 'link',
+        },{
+            name: 'MENU.EXTRAS.TIMELINE',
+            state: 'admin-panel.default.extra-timeline',
             type: 'link',
         }]
     });

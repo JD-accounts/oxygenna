@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc module
- * @name triangular.authentication
+ * @name triangular.dashboards
  * @description
  *
- * The `triangular.authentication` module handles all the login and signup pages
+ * The `triangular.dashboards` module handles the most common dashboard pages.
  */
 angular.module('triAngularDashboards', [])
 .config(function ($translatePartialLoaderProvider, $stateProvider) {
@@ -14,11 +14,12 @@ angular.module('triAngularDashboards', [])
     $stateProvider
     .state('admin-panel.default.dashboard-general', {
         url: '/dashboards/general',
-        templateUrl: 'app/dashboards/dashboard-general.tmpl.html',
+        templateUrl: 'app/dashboards/dashboard-general.tmpl.html',        
     })
     .state('admin-panel.default.dashboard-analytics', {
         url: '/dashboards/analytics',
         templateUrl: 'app/dashboards/dashboard-analytics.tmpl.html',
+        controller: 'DashboardAnalyticsController',
     })
     .state('admin-panel.default.dashboard-server', {
         url: '/dashboards/server',
@@ -28,6 +29,10 @@ angular.module('triAngularDashboards', [])
     .state('admin-panel.default.dashboard-widgets', {
         url: '/dashboards/widgets',
         templateUrl: 'app/dashboards/widgets.tmpl.html',
+    })
+    .state('admin-panel.default.dashboard-social', {
+        url: '/dashboards/social',
+        templateUrl: 'app/dashboards/dashboard-social.tmpl.html',        
     });
 })
 .run(function(SideMenu) {
@@ -51,6 +56,10 @@ angular.module('triAngularDashboards', [])
         },{
             name: 'MENU.DASHBOARDS.WIDGETS',
             state: 'admin-panel.default.dashboard-widgets',
+            type: 'link',
+        },{
+            name: 'MENU.DASHBOARDS.SOCIAL',
+            state: 'admin-panel.default.dashboard-social',
             type: 'link',
         }]
     });

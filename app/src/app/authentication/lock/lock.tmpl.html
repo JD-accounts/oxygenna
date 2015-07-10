@@ -1,8 +1,8 @@
-<div layout="row" flex layout-padding layout-align="center center">
+<div layout="row" flex layout-padding layout-fill layout-align="center center">
     <div flex="40" flex-lg="50" flex-md="70" flex-sm="100">
         <md-card>
             <md-toolbar>
-                <div layout="column" flex layout-padding layout-align="center center">
+                <div class="padding-20 text-center">
                     <div><img src="assets/images/logo.png" alt="{{appName}}"></div>
                     <h1 class="md-headline">
                         {{'LOCK.TITLE' | translate}} {{user.name}}
@@ -11,10 +11,9 @@
             </md-toolbar>
 
             <md-content class="md-padding">
-                <div layout="column" flex layout-padding layout-align="center center">
-                    <img gravatar-src="user.email" gravatar-size="100" class="img-circle" >
-                    <p>{{'LOCK.LOGGED_OUT' | translate}}</p>
-                </div>
+
+                <p class="margin-top-20 margin-bottom-20">{{'LOCK.LOGGED_OUT' | translate}}</p>
+
                 <form name="lock">
                     <md-input-container>
                         <label for="password">{{'LOCK.PASSWORD.LABEL' | translate}}</label>
@@ -25,12 +24,11 @@
                             </div>
                         </div>
                     </md-input-container>
-                    <div layout="column">
-                        <md-button flex class="md-raised md-primary " ng-click="loginClick()" ng-disabled="lock.$invalid">{{'LOCK.LOGIN' | translate}}</md-button>
-                    </div>
-                    <div layout="column" layout-margin>
-                        <md-button class="md-primary " ng-click="logoutClick()">{{'LOCK.LOGOUT' | translate}}</md-button>
-                    </div>
+
+                    <md-button class="md-raised md-primary full-width margin-left-0 margin-right-0 margin-top-10 margin-bottom-10" ng-click="loginClick()" ng-disabled="lock.$invalid">{{'LOCK.LOGIN' | translate}}</md-button>
+
+
+                    <md-button  class="md-primary full-width margin-left-0 margin-right-0 margin-top-10 margin-bottom-10" ng-click="logoutClick()">{{'LOCK.LOGOUT' | translate}}</md-button>
 
                 </form>
 

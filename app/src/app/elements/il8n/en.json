@@ -10,6 +10,8 @@
             "RADIOS": "Radios",
             "DIALOGS": "Dialogs",
             "GRIDS": "Grids",
+            "FAB-SPEED": "FAB Speed Dial",
+            "FAB-TOOLBAR": "FAB Toolbar",
             "TABS": "Tabs",
             "SLIDERS": "Sliders",
             "SELECTS": "Selects",
@@ -17,11 +19,13 @@
             "PROGRESS": "Progress",
             "SIDEBARS": "Sidebars",
             "TOOLBARS": "Toolbars",
+            "TEXTANGULAR": "Textangular",
             "TOOLTIPS": "Tooltips",
             "WHITEFRAMES": "Whiteframes",
             "TOASTS": "Toasts",
             "LISTS": "Lists",
-            "CHIPS": "Chips"
+            "CHIPS": "Chips",
+            "MENUS": "Menus"
         }
     }
 }

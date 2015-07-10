@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc module
- * @name triangular.authentication
+ * @name triAngularMaps
  * @description
  *
- * The `triangular.authentication` module handles all the login and signup pages
+ * The triAngularMaps module adds some map example pages
  */
-angular.module('triAngularMaps', ['uiGmapgoogle-maps'])
+angular.module('triAngularMaps', [])
 .config(function ($translatePartialLoaderProvider, $stateProvider, uiGmapGoogleMapApiProvider) {
     $translatePartialLoaderProvider.addPart('app/maps');
 

@@ -7,7 +7,7 @@
  *
  * The `triAngularUI` module adds an UI pages
  */
-angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
+angular.module('triAngularUI', ['ngCookies', 'webfont-loader'])
 .constant('UI_FONTS', [{
     name: 'Roboto Draft',
     family: 'RobotoDraft',
@@ -60,6 +60,11 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
             }
         }
     })
+    .state('admin-panel.default.ui-weather-icons', {
+        url: '/ui/weather-icons',
+        controller: 'WeatherIconsController',
+        templateUrl: 'app/ui/weather-icons.tmpl.html'
+    })
     .state('admin-panel.default.ui-fa-icons', {
         url: '/ui/fa-icons',
         controller: 'FaIconsController',
@@ -72,7 +77,7 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
                 });
             }
         }
-    })    
+    })
 
     .state('admin-panel.default.ui-toolbar', {
         url: '/ui/toolbars/:extraClass/:background/:shrink',
@@ -156,6 +161,10 @@ angular.module('triAngularUI', ['ngCookies', 'hljs', 'webfont-loader'])
         },{
             name: 'MENU.UI.TYPOGRAPHY',
             state: 'admin-panel.default.ui-typography',
+            type: 'link',
+        },{
+            name: 'MENU.UI.WEATHER_ICONS',
+            state: 'admin-panel.default.ui-weather-icons',
             type: 'link',
         }]
     });

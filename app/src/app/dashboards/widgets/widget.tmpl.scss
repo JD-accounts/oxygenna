@@ -5,6 +5,10 @@
   background-color: #fff;
   transition: all .2s;
   min-height: 100px;
+  .widget-avatar {
+    border-radius: 50%;
+    width: 50px;
+  }
   .widget-title {
     .md-subhead, .md-body-1, .md-body-2 {
       margin: 0;
@@ -50,9 +54,11 @@
         left: 0;
         top: 0;
         background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%,rgba(0,0,0,0) 100%);
+        align-items: flex-start;
         &[flex-order="2"] {
           top: auto;
           bottom: 0;
+          align-items: flex-end;
           background: linear-gradient(to top, rgba(0,0,0,0.55) 0%,rgba(0,0,0,0) 100%);
         }
       }
@@ -93,6 +99,23 @@
   .widget-title {
     .md-subhead, md-icon {
       color: inherit;
+    }
+  }
+}
+
+chart-legend ul {
+  margin-top: 24px !important;
+}
+
+// Blog widget
+.widget-blog {
+  .widget-blog-text {
+    position: relative;
+
+    md-fab-speed-dial {
+      position: absolute;
+      top: -190px;
+      right: 42px;
     }
   }
 }
@@ -195,5 +218,16 @@
         }
       }
     }
+  }
+}
+
+.widget-follower-header {
+  position: relative;
+  .widget-follower-header-avatar {
+    border-radius: 50%;
+    width: 80px;
+    position: absolute;
+    right: 25px;
+    bottom: -40px;
   }
 }

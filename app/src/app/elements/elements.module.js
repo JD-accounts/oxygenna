@@ -79,6 +79,10 @@ angular.module('triAngularElements', [])
         templateUrl: 'app/elements/dialogs.tmpl.html',
         controller: 'DialogsController'
     })
+    .state('admin-panel.default.menus', {
+        url: '/elements/menus',
+        templateUrl: 'app/elements/menus.tmpl.html',
+    })
     .state('admin-panel.default.elements-tabs', {
         url: '/elements/tabs',
         templateUrl: 'app/elements/tabs.tmpl.html'
@@ -92,6 +96,14 @@ angular.module('triAngularElements', [])
         url: '/elements/grids',
         templateUrl: 'app/elements/grids.tmpl.html'
     })
+    .state('admin-panel.default.fab-speed', {
+        url: '/elements/fab-speed',
+        templateUrl: 'app/elements/fab-speed.tmpl.html'
+    })
+    .state('admin-panel.default.fab-toolbar', {
+        url: '/elements/fab-toolbar',
+        templateUrl: 'app/elements/fab-toolbar.tmpl.html'
+    })
     .state('admin-panel.default.elements-selects', {
         url: '/elements/selects',
         templateUrl: 'app/elements/selects.tmpl.html'
@@ -99,6 +111,10 @@ angular.module('triAngularElements', [])
     .state('admin-panel.default.elements-tables', {
         url: '/elements/tables',
         templateUrl: 'app/elements/tables.tmpl.html'
+    })
+    .state('admin-panel.default.elements-textangular', {
+        url: '/elements/textangular',
+        templateUrl: 'app/elements/textangular.tmpl.html'
     })
     .state('admin-panel.default.elements-lists', {
         url: '/elements/lists',
@@ -158,6 +174,14 @@ angular.module('triAngularElements', [])
             type: 'link',
             state: 'admin-panel.default.elements-dialogs'
         },{
+            name: 'MENU.ELEMENTS.FAB-SPEED',
+            type: 'link',
+            state: 'admin-panel.default.fab-speed'
+        },{
+            name: 'MENU.ELEMENTS.FAB-TOOLBAR',
+            type: 'link',
+            state: 'admin-panel.default.fab-toolbar'
+        },{
             name: 'MENU.ELEMENTS.GRIDS',
             type: 'link',
             state: 'admin-panel.default.elements-grids'
@@ -169,6 +193,10 @@ angular.module('triAngularElements', [])
             name: 'MENU.ELEMENTS.LISTS',
             type: 'link',
             state: 'admin-panel.default.elements-lists'
+        },{
+            name: 'MENU.ELEMENTS.MENUS',
+            type: 'link',
+            state: 'admin-panel.default.menus'
         },{
             name: 'MENU.ELEMENTS.PROGRESS',
             type: 'link',
@@ -201,6 +229,10 @@ angular.module('triAngularElements', [])
             name: 'MENU.ELEMENTS.TABS',
             type: 'link',
             state: 'admin-panel.default.elements-tabs'
+        },{
+            name: 'MENU.ELEMENTS.TEXTANGULAR',
+            type: 'link',
+            state: 'admin-panel.default.elements-textangular'
         },{
             name: 'MENU.ELEMENTS.TOASTS',
             type: 'link',

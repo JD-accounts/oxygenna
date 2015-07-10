@@ -24,6 +24,7 @@ angular.module('triAngular')
         template: '<md-content flex class="loader" ng-show="active" layout="column" layout-fill layout-align="center center"><div class="loader-inner"><md-progress-circular md-mode="indeterminate"></md-progress-circular></div><h3 class="md-headline">{{appName}}</h3></md-content>',
         link: function($scope) {
             $scope.appName = APP.name;
+
             $scope.active = true;
 
             $rootScope.$on('$viewContentLoading', function() {

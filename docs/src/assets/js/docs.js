@@ -90,12 +90,17 @@
       container: ".bs-docs-navbar .nav"
     })
 
-    // if( 'help.oxygenna.com' == document.domain ) {
+    if( 'help.oxygenna.com' == document.domain ) {
       $('#online-docs-warning').hide();
-    // }
+    }
 
     $('table').each(function() {
       $(this).addClass('table table-bordered table-striped');
+    });
+
+    hljs.configure({languages: ['javascript']});
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
     });
 })
 

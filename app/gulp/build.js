@@ -54,6 +54,7 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe(cssFilter.restore())
     .pipe(assets.restore())
     .pipe($.replace('../bower_components/material-design-iconic-font/fonts', '../fonts'))
+    .pipe($.replace('../font/weathericons-regular', '../fonts/weathericons-regular'))
     .pipe($.useref())
     .pipe($.revReplace())
     .pipe(htmlFilter)
@@ -74,7 +75,7 @@ gulp.task('images', function () {
 
 gulp.task('fonts', function () {
   return gulp.src($.mainBowerFiles())
-    .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
+    .pipe($.filter('**/*.{eot,otf,svg,ttf,woff,woff2}'))
     .pipe($.flatten())
     .pipe(gulp.dest(paths.dist + '/fonts/'));
 });
@@ -92,7 +93,7 @@ gulp.task('data', function () {
 });
 
 gulp.task('examplejs', function () {
-  return gulp.src('src/**/examples/*.js')
+  return gulp.src('src/**/examples/*.{js,scss}')
     .pipe(gulp.dest('dist'))
     .pipe($.size());
 });

@@ -7,7 +7,7 @@
  *
  * The `triangular.email` module adds email inbox pages
  */
-angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
+angular.module('triAngularEmail', [])
 .constant('EMAIL_ROUTES', [{
     state: 'admin-panel-no-scroll.email.inbox',
     name: 'MENU.EMAIL.INBOX',
@@ -40,7 +40,7 @@ angular.module('triAngularEmail', ['angularMoment', 'textAngular'])
                 controller: 'EmailToolbarController'
             },
             content: {
-                template: '<div flex ui-view layout="column"></div>'
+                template: '<div flex ui-view layout="column" class="overflow-hidden"></div>'
             }
         },
     });

@@ -115,8 +115,9 @@ Follow the instructions below to install node.js on your system.
 
 ## Installing Node.js
 
-You can download the latest versin of node.js [from here](http://nodejs.org/download/) alternatively there are [guides on how to install using a package manager](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
+We recommend installing the latest version of node.  At the time of writing this was (0.12.6).
 
+You can download the latest of node.js [from here](https://nodejs.org/download/) alternatively there are [guides on how to install using a package manager](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
 
 ## Checking node is installed and working
 
@@ -151,13 +152,13 @@ Run the following command from the root of your source files to install the node
 
 ## Install bower packages
 
-Run the following command from the root of your source files to install the bower packages listed in bower.json
-
-    bower install
-
 If you do not have bower installed run
 
     npm -g install bower
+
+Run the following command from the root of your source files to install the bower packages listed in bower.json
+
+    bower install
 
 # Running a development server
 
@@ -166,6 +167,10 @@ Once you have gulp all ready to go you can start developing.
 To do this you just need to start a local development server
 
 ## Start a development server
+
+First make sure you have gulp installed globally
+
+  npm -g install gulp
 
 Once you have bower packages and node modules installed you are ready to code.  To start a development server just type.
 

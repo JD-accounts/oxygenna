@@ -1,7 +1,36 @@
 // Side menu
 side-menu {
   overflow-y: auto;
+  z-index: 1;
 }
+
+/* Style for scrollbar on webkit browsers in windows - looks nice already on other operating systems ;) */
+.os-windows side-menu {
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(0,0,0,0.1);
+    transition: all .2s
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 4px;
+    transition: all .2s
+  }
+}
+
+// Side menu shrink/grow icon
+.sidebar-left-icon {
+  display: none;
+  md-icon {
+    transform: rotate(90deg);
+    transition: all .2s;
+  }
+  .md-locked-open & {
+    display: block;
+  }
+}
+
 .side-menu-link {
   display: block;
   text-align: left;
@@ -41,10 +70,8 @@ side-menu {
 .menu-toggle-icon {
   text-align: center;
   float: right;
-  span {
-    transition: all .5s;
-  }
-  &.open span {
+  transition: all .5s;
+  &.open {
     transform: rotate(90deg);
   }
 }
@@ -102,6 +129,8 @@ side-menu {
     }
   }
 }
+
+
 // Multiple levels
 $submenu-overlay: #999999;
 
@@ -134,6 +163,37 @@ $submenu-overlay: #999999;
             background: rgba($submenu-overlay, .4);
           }
         }
+      }
+    }
+  }
+}
+
+// Collapsible Menu
+.admin-sidebar-collapsed.md-locked-open {
+  .sidebar-left-title, .sidebar-left-icon {
+    opacity: 0;
+    transition: all .2s;
+    transition-delay: .3s;
+  }
+  .side-menu-link span {
+    opacity: 0;
+    transition: all .2s;
+    transition-delay: .3s;
+  }
+  .drop-down-list {
+    max-height: 0;
+  }
+  &.hover {
+    .sidebar-left-title, .sidebar-left-icon {
+      opacity: 1;
+    }
+    .side-menu-link span {
+      opacity: 1;
+    }
+    .drop-down-list {
+      max-height: 1300px;
+      &.ng-hide {
+        max-height: 0;
       }
     }
   }

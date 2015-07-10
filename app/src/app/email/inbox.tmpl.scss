@@ -5,6 +5,9 @@
 .email-inbox-list {
   position: relative;
   z-index: 1;
+  md-content {
+    transform: translate3d(0,0,0);
+  }
 }
 .email-inbox-list-item {
   transition: all .2s;
