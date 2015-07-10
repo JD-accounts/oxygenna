@@ -220,3 +220,14 @@ chart-legend ul {
     }
   }
 }
+
+.widget-follower-header {
+  position: relative;
+  .widget-follower-header-avatar {
+    border-radius: 50%;
+    width: 80px;
+    position: absolute;
+    right: 25px;
+    bottom: -40px;
+  }
+}
