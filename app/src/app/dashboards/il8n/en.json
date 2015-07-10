@@ -49,6 +49,12 @@
             "DATE": "11/03/15 - 11/4/15",
             "DISKUSAGE": "Disk Usage"
         },
+        "SOCIAL": {
+            "STATUS": {
+                "UPDATE": "Update your status",
+                "MIND": "Whats on your mind?"
+            }
+        },
         "WIDGETS": {
             "MENU": {
                 "REFRESH": "Refresh",

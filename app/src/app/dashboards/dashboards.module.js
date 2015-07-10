@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc module
- * @name triangular.authentication
+ * @name triangular.dashboards
  * @description
  *
- * The `triangular.authentication` module handles all the login and signup pages
+ * The `triangular.dashboards` module handles the most common dashboard pages.
  */
 angular.module('triAngularDashboards', [])
 .config(function ($translatePartialLoaderProvider, $stateProvider) {

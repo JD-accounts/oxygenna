@@ -63,6 +63,9 @@ topmenu:
                 name: Directives
                 slug: directives
     -
+        name: Rest Server
+        slug: rest-server
+    -
         name: Changelog
         slug: changelog
     -
