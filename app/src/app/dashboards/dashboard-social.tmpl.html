@@ -1,4 +1,4 @@
-<div class="dashboard-social-header padding-20 padding-top-200 overlay-gradient-30" layout="row" layout-align="start center" style="background: url(assets/images/backgrounds/bg-2.jpg) no-repeat; background-size: cover;">
+<div class="dashboard-social-header padding-20 padding-top-100 overlay-gradient-30" layout="row" layout-align="start center" style="background: url(assets/images/backgrounds/bg-2.jpg) no-repeat; background-size: cover;">
     <div class="margin-right-20">
         <img src="assets/images/avatars/avatar-5.png" alt="girl-avatar" class="make-round" width="100"/>
     </div>
@@ -143,30 +143,50 @@
             <span class="display-block">578</span>
         </md-tab-label>
         <md-tab-body>
-            <div layout="row" layout-sm="column" layout-margin>
-                <widget flex="70" flex-sm="100" title="Favorites" content-layout="column" content-layout-align="center top">
+            <div layout="row" layout-sm="column">
+                <widget flex="70" flex-sm="100" title="Favorites" content-layout="column" content-layout-align="center top"  layout-margin>
                     <md-divider></md-divider>
                     <md-list>
-                        <md-list-item class="md-3-line" ng-repeat="x in [1,2,3,4,5,6,7,8,9,10]">
-                            <img src="assets/images/avatars/avatar-3.png" class="md-avatar"/>
+                        <md-list-item class="md-3-line" ng-repeat="fave in favorites">
+                            <img ng-src="{{fave.avatar}}" class="md-avatar"/>
                             <div class="md-list-item-text">
-                                <h3>Twitch</h3>
-                                <h4>@twitch - Jul 2</h4>
-                                <p>We had an absolute blast bringing @E3 to you this year. Check out our video recap.</p>
+                                <div layout="row">
+                                    <span flex class="md-subhead text-dark">
+                                        {{fave.name}}
+                                        <span class="text-gray">@{{fave.user}}</span>
+                                    </span>
+                                    <span class="md-caption" am-time-ago="fave.date"></span>
+                                </div>
+                                <p linkify="twitter">{{fave.tweet}}</p>
                             </div>
+                            <md-divider></md-divider>
                         </md-list-item>
                     </md-list>
                 </widget>
-                <widget flex flex-sm="100" title="Trends" content-layout="column" content-layout-align="center top" palette-background="cyan:500">
-                    <md-divider></md-divider>
-                    <div class="padding-normal">
-                        <p linkify="twitter">#E32015</p>
-                        <p linkify="twitter">#WeForgiveYouAriana</p>
-                        <p linkify="twitter">#OTRASanDiego</p>
-                        <p linkify="twitter">#mnimonio3</p>
-                        <p linkify="twitter">#BlackMagicOutNow</p>
-                        <p linkify="twitter">#WalidTalb</p>
-                    </div>
+                <div flex layout="column">
+                    <widget flex title="Who to follow" content-layout="column" content-layout-align="center top" palette-background="cyan:500" layout-margin>
+                        <md-divider></md-divider>
+                        <md-list>
+                            <md-list-item class="md-2-line" ng-repeat="follow in whotofollow">
+                                <img ng-src="{{follow.avatar}}" class="md-avatar"/>
+                                <div class="md-list-item-text">
+                                    <h3>{{follow.name}}</h3>
+                                    <h4>@{{follow.user}}</h4>
+                                    <md-icon md-font-icon="icon-person-add" ng-click="doSecondaryAction($event)" class="md-secondary md-hue-3"></md-icon>
+                                </div>
+                                <md-divider ng-hide="$last"></md-divider>
+                            </md-list-item>
+                        </md-list>
+                    </widget>
+                    <widget flex title="Trends" content-layout="column" content-layout-align="center top" palette-background="cyan:500" layout-margin>
+                        <md-divider></md-divider>
+                        <md-list>
+                            <md-list-item ng-repeat="trend in trends">
+                                <p linkify="twitter">{{trend}}</p>
+                                <md-divider ng-hide="$last"></md-divider>
+                            </md-list-item>
+                        </div>
+                    </widget>
                 </div>
             </div>
         </md-tab-body>
