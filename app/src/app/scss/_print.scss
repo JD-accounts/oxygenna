@@ -1,0 +1,14 @@
+// Rules for media Print
+@media print {
+    md-sidenav, .md-fab {
+        display: none !important;
+    }
+
+    md-content {
+        overflow: visible;
+    }
+
+    .print-full {
+        page-break-inside: avoid;
+    }
+}
