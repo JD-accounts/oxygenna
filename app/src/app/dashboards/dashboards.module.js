@@ -14,7 +14,7 @@ angular.module('triAngularDashboards', [])
     $stateProvider
     .state('admin-panel.default.dashboard-general', {
         url: '/dashboards/general',
-        templateUrl: 'app/dashboards/dashboard-general.tmpl.html',        
+        templateUrl: 'app/dashboards/dashboard-general.tmpl.html',
     })
     .state('admin-panel.default.dashboard-analytics', {
         url: '/dashboards/analytics',
@@ -32,7 +32,8 @@ angular.module('triAngularDashboards', [])
     })
     .state('admin-panel.default.dashboard-social', {
         url: '/dashboards/social',
-        templateUrl: 'app/dashboards/dashboard-social.tmpl.html',        
+        templateUrl: 'app/dashboards/dashboard-social.tmpl.html',
+        controller: 'DashboardSocialController'
     });
 })
 .run(function(SideMenu) {

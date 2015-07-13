@@ -75,6 +75,7 @@
 # Version ???
 > Release Date : ???
 
-- Translated calendar widget
+- Added calendar translations so calendar widget can now be multi language
 - Added avatar option to widget title
 - Updated gulp-sass to 2.0.3 to allow better compatibility with latest versions of node.js
+- Added new Social Dashboard
