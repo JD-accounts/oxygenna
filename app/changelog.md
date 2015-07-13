@@ -80,4 +80,6 @@
 - Updated gulp-sass to 2.0.3 to allow better compatibility with latest versions of node.js
 - Updated gulp-ng-annotate to 1.0.0 to allow better compatibility with latest versions of node.js
 - Added media query that fixes printing out admin pages
+- Fixed bug in minify sidemenu on email pages
+- Minor bugfixes
 - Added new Social Dashboard
