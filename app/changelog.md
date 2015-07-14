@@ -72,9 +72,14 @@
 - Fixed collapsible menu button
 - Fixed toggle icon animation for sub menus
 
-# Version ???
-> Release Date : ???
+# Version 1.3.0
+> Release Date : 13th July 2015
 
-- Translated calendar widget
+- Added calendar translations so calendar widget can now be multi language
 - Added avatar option to widget title
 - Updated gulp-sass to 2.0.3 to allow better compatibility with latest versions of node.js
+- Updated gulp-ng-annotate to 1.0.0 to allow better compatibility with latest versions of node.js
+- Added media query that fixes printing out admin pages
+- Fixed bug in minify sidemenu on email pages
+- Minor bugfixes
+- Added new Social Dashboard

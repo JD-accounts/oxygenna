@@ -82,19 +82,19 @@ gulp.task('fonts', function () {
 
 gulp.task('translations', function () {
   return gulp.src('src/**/il8n/*.json')
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(paths.dist + '/'))
     .pipe($.size());
 });
 
 gulp.task('data', function () {
   return gulp.src('src/**/data/*.json')
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(paths.dist + '/'))
     .pipe($.size());
 });
 
 gulp.task('examplejs', function () {
   return gulp.src('src/**/examples/*.{js,scss}')
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(paths.dist + '/'))
     .pipe($.size());
 });
 

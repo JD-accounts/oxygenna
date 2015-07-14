@@ -27,11 +27,8 @@
 }
 
 // Social Dashboard
-.dashboard-social-header {
-  background: url(/assets/images/backgrounds/bg-3.jpg) no-repeat;
-  background-size: cover;
-}
-
-.dashboard-social-header-icon .md-font{
-  color: white;
+.tabs-tall {
+  md-pagination-wrapper, md-tabs-canvas {
+    height: 72px;
+  }
 }
