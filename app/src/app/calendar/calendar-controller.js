@@ -24,11 +24,6 @@ angular.module('triAngularCalendar')
             $scope.currentDay = date;
         },
         eventClick: function(calEvent, jsEvent, view) {
-            var eventCopy = angular.copy(calEvent)
-            eventCopy.start = eventCopy.start.toDate();
-            if(eventCopy.end) {
-                eventCopy.end = eventCopy.end.toDate();
-            }
             $mdDialog.show({
                 controller: 'EventDialogController',
                 templateUrl: 'app/calendar/event-dialog.tmpl.html',
@@ -36,23 +31,21 @@ angular.module('triAngularCalendar')
                 focusOnOpen: false,
                 locals: {
                     dialogData: {
-                        title: 'CALENDAR.EDIT_EVENT',
-                        confirmButtonText: 'CALENDAR.EDIT'
+                        title: 'CALENDAR.EDIT-EVENT',
+                        confirmButtonText: 'CALENDAR.SAVE'
                     },
-                    event: eventCopy
+                    event: calEvent,
+                    edit: true
                 }
             })
             .then(function(event) {
-                console.log(event);
                 uiCalendarConfig.calendars['triangular-calendar'].fullCalendar('updateEvent', event);
-                console.log($scope.eventSources);
-                // $scope.eventSources[0].events.push(event);
-                // $mdToast.show(
-                //     $mdToast.simple()
-                //     .content($filter('translate')('CALENDAR.EVENT.EVENT-CREATED'))
-                //     .position('bottom right')
-                //     .hideDelay(2000)
-                // );
+                $mdToast.show(
+                    $mdToast.simple()
+                    .content($filter('translate')('CALENDAR.EVENT.EVENT-UPDATED'))
+                    .position('bottom right')
+                    .hideDelay(2000)
+                );
             });
         }
     };
@@ -62,6 +55,7 @@ angular.module('triAngularCalendar')
     }];
 
     $scope.addEvent = function($event) {
+        var inAnHour = moment($scope.currentDay).add(1, 'h');
         $mdDialog.show({
             controller: 'EventDialogController',
             templateUrl: 'app/calendar/event-dialog.tmpl.html',
@@ -69,14 +63,17 @@ angular.module('triAngularCalendar')
             focusOnOpen: false,
             locals: {
                 dialogData: {
-                    title: 'CALENDAR.ADD_EVENT',
+                    title: 'CALENDAR.ADD-EVENT',
                     confirmButtonText: 'CALENDAR.ADD'
                 },
                 event: {
                     title: $filter('translate')('CALENDAR.EVENT.NEW-EVENT'),
-                    start: $scope.currentDay.toDate(),
+                    allDay: false,
+                    start: $scope.currentDay,
+                    end: inAnHour,
                     palette: 'cyan'
-                }
+                },
+                edit: false
             }
         })
         .then(function(event) {
