@@ -54,6 +54,6 @@ angular.module('triAngularCalendar', [])
         // set an icon for this menu
         icon: 'icon-today',
         // set a proirity for this menu item, menu is sorted by priority
-        priority: 1.1
+        priority: 2.3
     });
 });

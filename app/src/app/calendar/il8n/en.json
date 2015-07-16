@@ -3,5 +3,24 @@
         "CALENDAR": {
             "CALENDAR": "Calendar"
         }
+    },
+    "CALENDAR": {
+        "ADD": "Add",
+        "EDIT": "Edit",
+        "ADD_EVENT": "Add Event",
+        "EDIT_EVENT": "Edit Event",
+        "CANCEL": "Cancel",
+        "EVENT": {
+            "TITLE": "Title",
+            "ALL-DAY": "All day",
+            "START": "Start",
+            "END": "End",
+            "LOCATION": "Location",
+            "DESCRIPTION": "Description",
+            "COLOR": "Color",
+            "COLOR-PICK": "Pick a color",
+            "NEW-EVENT": "New Event",
+            "EVENT-CREATED": "Event Created"
+        }
     }
 }
