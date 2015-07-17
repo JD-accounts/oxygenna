@@ -17,6 +17,7 @@ angular.module('triAngularCalendar')
         contentHeight: 'auto',
         selectable: true,
         editable: true,
+        header: false,
         viewRender: function(view) {
             $scope.currentDay = view.calendar.getDate();
         },
