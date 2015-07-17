@@ -39,10 +39,22 @@ angular.module('triAngularCalendar')
                 }
             })
             .then(function(event) {
-                uiCalendarConfig.calendars['triangular-calendar'].fullCalendar('updateEvent', event);
+                var toastMessage = 'CALENDAR.EVENT.EVENT-UPDATED';
+                if(event.deleteMe !== undefined) {
+                    // remove the event from the calendar
+                    uiCalendarConfig.calendars['triangular-calendar'].fullCalendar('removeEvents', event._id);
+                    // change toast message
+                    toastMessage = 'CALENDAR.EVENT.EVENT-DELETED';
+                }
+                else {
+                    // update event
+                    uiCalendarConfig.calendars['triangular-calendar'].fullCalendar('updateEvent', event);
+                }
+
+                // pop a toast
                 $mdToast.show(
                     $mdToast.simple()
-                    .content($filter('translate')('CALENDAR.EVENT.EVENT-UPDATED'))
+                    .content($filter('translate')(toastMessage))
                     .position('bottom right')
                     .hideDelay(2000)
                 );

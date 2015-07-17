@@ -10,6 +10,7 @@
         "ADD-EVENT": "Add Event",
         "EDIT-EVENT": "Edit Event",
         "CANCEL": "Cancel",
+        "DELETE": "Delete",
         "EVENT": {
             "TITLE": "Title",
             "ALL-DAY": "All day",
@@ -22,6 +23,7 @@
             "NEW-EVENT": "New Event",
             "EVENT-CREATED": "Event Created",
             "EVENT-UPDATED": "Event Updated",
+            "EVENT-DELETED": "Event Deleted",
             "YEAR-PICK": "Year",
             "MONTH-PICK": "Month",
             "DATE-PICK": "Date",

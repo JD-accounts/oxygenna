@@ -12,11 +12,12 @@
  */
 
 angular.module('triAngularCalendar')
-.controller('EventDialogController', function ($scope, $mdDialog, $filter, triTheming, dialogData, event) {
+.controller('EventDialogController', function ($scope, $mdDialog, $filter, triTheming, dialogData, event, edit) {
     $scope.dialogData = dialogData;
     $scope.event = event;
     $scope.colors = [];
     $scope.selectedColor = null;
+    $scope.edit = edit;
 
     $scope.start = convertMomentToBits(event.start);
     if(event.end !== null) {
@@ -60,6 +61,11 @@ angular.module('triAngularCalendar')
     $scope.cancel = function() {
         $mdDialog.cancel();
     };
+
+    $scope.delete = function() {
+        event.deleteMe = true;
+        $mdDialog.hide(event);
+    }
 
     $scope.allDayChanged = function() {
         // if all day turned on and event already saved we need to create a new date
