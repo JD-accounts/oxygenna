@@ -1,6 +1,5 @@
-<div class="full-height" layout="row" flex>
-    <div ui-calendar="calendarOptions" ng-model="eventSources" calendar="triangular-calendar"></div>
-    <pre>{{eventSources | json}}</pre>
+<div class="calendar-page full-height" ng-style="{ 'background-image': 'url(' + backgroundImage + ')' }" flex>
+    <div flex ui-calendar="calendarOptions" ng-model="eventSources" calendar="triangular-calendar"></div>
     <md-button ng-click="addEvent($event)" class="md-fab md-accent md-fab-bottom-right" aria-label="{{'CALENDAR.ADD_EVENT' | translate}}">
         <md-icon md-font-icon="icon-add"></md-icon>
     </md-button>

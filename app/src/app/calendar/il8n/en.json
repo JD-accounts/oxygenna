@@ -43,6 +43,14 @@
             "OCTOBER": "October",
             "NOVEMBER": "November",
             "DECEMBER": "December"
+        },
+        "TOOLBAR": {
+            "CHANGE-VIEW": "Change View",
+            "VIEWS": {
+                "MONTH": "Month",
+                "WEEK": "Week",
+                "DAY": "Day"
+            }
         }
     }
 }

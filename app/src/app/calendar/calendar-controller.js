@@ -12,14 +12,19 @@
  */
 
 angular.module('triAngularCalendar')
-.controller('CalendarController', function ($scope, $mdDialog, $mdToast, $filter, uiCalendarConfig) {
+.controller('CalendarController', function ($scope, $rootScope, $mdDialog, $mdToast, $filter, $element, uiCalendarConfig) {
     $scope.calendarOptions = {
         contentHeight: 'auto',
         selectable: true,
         editable: true,
         header: false,
         viewRender: function(view) {
+            // change day
             $scope.currentDay = view.calendar.getDate();
+            // update toolbar with new day for month name
+            $rootScope.$broadcast('calendar-changeday', $scope.currentDay);
+            // update background image for month
+            $scope.backgroundImage = 'assets/images/calendar/' + ($scope.currentDay.month()+1) + '.jpg';
         },
         dayClick: function(date, jsEvent, view) {
             $scope.currentDay = date;

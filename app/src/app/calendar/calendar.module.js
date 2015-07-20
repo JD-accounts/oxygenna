@@ -23,12 +23,12 @@ angular.module('triAngularCalendar', [])
             },
             toolbar: {
                 templateUrl: 'app/calendar/toolbar.tmpl.html',
-                // controller: 'EmailToolbarController'
+                controller: 'CalendarToolbarController'
             },
             content: {
                 template: '<div flex ui-view layout="column" class="overflow-hidden"></div>'
             }
-        },
+        }
     });
 
     // Create a state for our seed test page
