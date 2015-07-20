@@ -18,6 +18,9 @@
 // Side menu Bar
 .admin-sidebar-left {
   overflow-x:hidden;
+  md-content {
+    overflow-x:hidden;
+  }
 }
 .admin-sidebar-left.md-locked-open {
   width: 260px;
