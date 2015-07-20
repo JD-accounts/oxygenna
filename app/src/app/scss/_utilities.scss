@@ -67,7 +67,7 @@ $i : 0;
 // - Opacity Classes
 $i : 0;
 @while $i <= 1 {
-  .opacity-#{$i * 100} {
+  .opacity-#{floor($i * 100)} {
     opacity: $i !important;
   }
   $i : $i + 0.1;
@@ -76,7 +76,7 @@ $i : 0;
 // - Overlay Classes
 $i : 0;
 @while $i <= 1 {
-  .overlay-#{$i * 100} {
+  .overlay-#{floor($i * 100)} {
     position: relative;
     z-index: 1;
     &:before {
@@ -95,7 +95,7 @@ $i : 0;
 
 $i : 0;
 @while $i <= 1 {
-  .overlay-gradient-#{$i * 100} {
+  .overlay-gradient-#{floor($i * 100)} {
     position: relative;
     z-index: 1;
     &:before {
