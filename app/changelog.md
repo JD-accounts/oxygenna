@@ -88,3 +88,4 @@
 > Release Date : ???
 
 - Fixed bug in Breadcrumbs when click icons in email toobar
+- Fixed delete email option
