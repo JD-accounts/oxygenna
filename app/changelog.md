@@ -83,3 +83,8 @@
 - Fixed bug in minify sidemenu on email pages
 - Minor bugfixes
 - Added new Social Dashboard
+
+# Version ???
+> Release Date : ???
+
+- Fixed bug in Breadcrumbs when click icons in email toobar
