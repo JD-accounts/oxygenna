@@ -1,7 +1,13 @@
 .calendar-page {
   background-size: cover;
+  background-attachment: fixed;
   transition: background .5s;
 
+  .fc-view-container {
+    &:focus {
+      outline: none;
+    }
+  }
   .fc-view {
     &:focus {
       outline: none;
@@ -11,7 +17,11 @@
       border-radius: 2px;
       overflow: hidden;
       box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.098), 0px 1px 5px 0px rgba(0, 0, 0, 0.084);
-      th, td, hr, thead, tbody, .fc-row, .fc-popover {
+
+      &:focus {
+        outline: none;
+      }
+        th, td, hr, thead, tbody, .fc-row, .fc-popover {
         border-color: rgba(100, 100, 100, .075);
       }
       .fc-content-skeleton {
