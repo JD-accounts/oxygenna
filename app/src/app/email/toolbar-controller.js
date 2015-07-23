@@ -12,7 +12,7 @@
  */
 
 angular.module('triAngularEmail')
-.controller('EmailToolbarController', function ($scope, $rootScope, $filter, $mdUtil, $mdSidenav, SideMenu, EMAIL_ROUTES) {
+.controller('EmailToolbarController', function ($scope, $rootScope, $filter, $mdUtil, $mdSidenav, $state, SideMenu, EMAIL_ROUTES) {
     $scope.showSearch = false;
     $scope.toolbarMenu = [];
     $scope.menu = SideMenu.getMenu();
@@ -20,7 +20,7 @@ angular.module('triAngularEmail')
     for(var i = 0; i < EMAIL_ROUTES.length; i++) {
         $scope.toolbarMenu.push({
             name: $filter('translate')(EMAIL_ROUTES[i].name),
-            url: EMAIL_ROUTES[i].url,
+            state: EMAIL_ROUTES[i].state,
             icon: EMAIL_ROUTES[i].icon,
         });
     }
