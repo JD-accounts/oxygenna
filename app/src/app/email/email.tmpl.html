@@ -37,6 +37,12 @@
                                     {{'EMAIL.FORWARD' | translate}}
                                 </md-button>
                             </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="delete(email)">
+                                    <md-icon md-font-icon="icon-delete"></md-icon>
+                                    {{'EMAIL.DELETE' | translate}}
+                                </md-button>
+                            </md-menu-item>
                             <md-menu-divider></md-menu-divider>
                             <md-menu-item>
                                 <md-button ng-click="openlist()">
