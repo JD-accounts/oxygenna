@@ -26,7 +26,7 @@ angular.module('triAngularCalendar', [])
                 controller: 'CalendarToolbarController'
             },
             content: {
-                template: '<div flex ui-view layout="column" class="overflow-hidden"></div>'
+                template: '<div flex ui-view layout="column"></div>'
             }
         }
     });
