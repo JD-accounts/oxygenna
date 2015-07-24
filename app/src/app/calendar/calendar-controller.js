@@ -12,7 +12,7 @@
  */
 
 angular.module('triAngularCalendar')
-.controller('CalendarController', function ($scope, $rootScope, $mdDialog, $mdToast, $filter, $element, uiCalendarConfig) {
+.controller('CalendarController', function ($scope, $rootScope, $mdDialog, $mdToast, $filter, $element, triTheming, uiCalendarConfig) {
     $scope.calendarOptions = {
         contentHeight: 'auto',
         selectable: true,
@@ -104,4 +104,46 @@ angular.module('triAngularCalendar')
             );
         });
     };
+
+    function createRandomEvents(number, startDate, endDate) {
+        var eventNames = ['Pick up the kids', 'Remember the milk', 'Meeting with Morris', 'Car service',  'Go Surfing', 'Party at Christos house', 'Beer Oclock', 'Festival tickets', 'Laundry!', 'Haircut appointment', 'Walk the dog', 'Dentist :(', 'Board meeting', 'Go fishing'];
+        for(var x = 0; x < number; x++) {
+            var randomMonthDate = randomDate(startDate, endDate);
+            var inAnHour = moment(randomMonthDate).add(1, 'h');
+            var randomEvent = Math.floor(Math.random() * (eventNames.length - 0));
+            var randomPalette = pickRandomProperty(triTheming.palettes);
+
+            $scope.eventSources[0].events.push({
+                title: eventNames[randomEvent],
+                allDay: false,
+                start: randomMonthDate,
+                end: inAnHour,
+                backgroundColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].value),
+                borderColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].value),
+                textColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].contrast),
+                palette: randomPalette
+            });
+        }
+    }
+
+    // create 10 random events for the month
+    createRandomEvents(100, moment().startOf('year'), moment().endOf('year'));
+
+    function randomDate(start, end) {
+        var startNumber = start.toDate().getTime();
+        var endNumber = end.toDate().getTime();
+        var randomTime = Math.random() * (endNumber - startNumber) + startNumber;
+        return moment(randomTime);
+    }
+
+    function pickRandomProperty(obj) {
+        var result;
+        var count = 0;
+        for (var prop in obj) {
+            if (Math.random() < 1/++count) {
+                result = prop;
+            }
+        }
+        return result;
+    }
 });
