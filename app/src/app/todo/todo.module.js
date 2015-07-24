@@ -24,6 +24,6 @@ angular.module('triAngularTodo', [])
         icon: 'icon-done',
         state: 'admin-panel-no-scroll.default.todo',
         type: 'link',
-        priority: 2.3,
+        priority: 2.4,
     });
 });
