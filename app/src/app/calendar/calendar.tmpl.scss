@@ -1,9 +1,9 @@
 .calendar-page {
   background-size: cover;
   background-attachment: fixed;
-  transition: background .5s;
+  transition: background-image 0.5s;
 
-  .fc-view-container {
+  .triangular-calendar, .fc-view-container {
     &:focus {
       outline: none;
     }
