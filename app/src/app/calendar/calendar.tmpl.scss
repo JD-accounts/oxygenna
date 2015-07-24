@@ -2,6 +2,7 @@
   background-size: cover;
   background-attachment: fixed;
   transition: background-image 0.5s;
+  padding: 80px;
 
   .triangular-calendar, .fc-view-container {
     &:focus {
@@ -47,4 +48,10 @@
 }
 .seed-list {
   list-style: lower-greek;
+}
+
+@media (max-width: 599px) {
+  .calendar-page {
+    padding: 20px;
+  }
 }
