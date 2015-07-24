@@ -12,7 +12,7 @@
  */
 
 angular.module('triAngularCalendar')
-.controller('CalendarToolbarController', function ($scope, $state, $element, uiCalendarConfig) {
+.controller('CalendarToolbarController', function ($scope, $state, $element, $mdUtil, $mdSidenav, uiCalendarConfig) {
     $scope.views = [{
         name: 'CALENDAR.TOOLBAR.VIEWS.MONTH',
         icon: 'icon-view-module',
@@ -47,6 +47,12 @@ angular.module('triAngularCalendar')
 
     $scope.toolbarTypeClass = function() {
         return $scope.extraClass;
+    };
+
+    $scope.openSideNav = function(navID) {
+        $mdUtil.debounce(function(){
+            $mdSidenav(navID).toggle();
+        }, 300)();
     };
 
     function initToolbar() {
