@@ -84,8 +84,13 @@
 - Minor bugfixes
 - Added new Social Dashboard
 
-# Version ???
-> Release Date : ???
+# Version 1.4.0
+> Release Date : 26th July 2015
 
+- Fix for SASS when compiling using command line
+- Fix for sidebar scroll bars in FireFox
 - Fixed bug in Breadcrumbs when click icons in email toobar
-- Fixed delete email option
+- Fixed delete email functionality
+- Added fix for scrolling long emails
+- Updated Angular Material to 0.10.1-rc3
+- NEW FEATURE Added new Calendar module
