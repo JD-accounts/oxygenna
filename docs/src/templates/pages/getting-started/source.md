@@ -156,6 +156,10 @@ If you do not have bower installed run
 
     npm -g install bower
 
+<div class="alert alert-info" role="alert">
+  <strong>Note</strong> - You will need git installed for bower to work <a href="https://git-scm.com/">Git website</a>
+</div>
+
 Run the following command from the root of your source files to install the bower packages listed in bower.json
 
     bower install
