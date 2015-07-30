@@ -94,3 +94,9 @@
 - Added fix for scrolling long emails
 - Updated Angular Material to 0.10.1-rc3
 - NEW FEATURE Added new Calendar module
+
+# Version ???
+> Release Date : ???
+
+- Fixed switching from email to todo in mobile sized screens
+- Fixed scrolling content on Gallery page
