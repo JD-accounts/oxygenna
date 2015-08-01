@@ -101,3 +101,4 @@
 - Fixed switching from email to todo in mobile sized screens
 - Fixed scrolling content on Gallery page
 - Better responsive layout for Todo App
+- Added highlightjs to bower (fixes build error due to changes in angular-highlightjs)
