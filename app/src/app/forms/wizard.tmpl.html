@@ -1,0 +1,180 @@
+<md-content class="padded-content-page">
+    <p class="md-subhead">We have combined material tabs and form inputs to create an interactive form wizard.  We have also added validation messages to all fields and prevented the user from completing a step in the wizard until it is valid.</p>
+
+    <md-tabs class="oxy-form-wizard md-primary" md-selected="wizard.currentStep" md-dynamic-height md-stretch-tabs="always" tri-wizard>
+        <md-tab id="account">
+            <md-tab-label>
+                <span class="oxy-step-label">1</span>{{'FORMS.WIZARD.CREATE' | translate}}
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class="md-padding">
+                    <form name="accountForm" tri-wizard-form novalidate>
+                        <div layout="column" flex>
+                            <md-input-container>
+                                <label>{{'FORMS.WIZARD.USERNAME' | translate}}</label>
+                                <input name="username" ng-model="wizard.data.account.user" required>
+                                <div ng-messages="accountForm.username.$error">
+                                    <div ng-message when="required">
+                                        {{'FORMS.WIZARD.PLEASE-ENTER' | translate}}
+                                    </div>
+                                </div>
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Email</label>
+                                <input type="email" name="email" ng-model="wizard.data.account.email" required>
+                                <div ng-messages="accountForm.email.$error">
+                                    <div ng-message when="required">
+                                        {{'FORMS.WIZARD.PLEASE-ENTER' | translate}}
+                                    </div>
+                                    <div ng-message when="email">
+                                        {{'FORMS.WIZARD.PLEASE-VALID' | translate}}
+                                    </div>
+                                </div>
+                            </md-input-container>
+                            <div layout layout-sm="column" flex>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.PASSWORD' | translate}}</label>
+                                    <input type="password" name="password" ng-model="wizard.data.account.password" required>
+                                    <div ng-messages="accountForm.password.$error">
+                                        <div ng-message when="required">
+                                            {{'FORMS.WIZARD.PLEASE-ENTER' | translate}}
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.PASSWORD-CONFIRM' | translate}}</label>
+                                    <input type="password" name="passwordConfirm" ng-model="wizard.data.account.passwordConfirm" required>
+                                    <div ng-messages="accountForm.passwordConfirm.$error">
+                                        <div ng-message when="required">
+                                            {{'FORMS.WIZARD.PLEASE-ENTER' | translate}}
+                                        </div>
+                                    </div>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </form>
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+        <md-tab id="address">
+            <md-tab-label>
+                <span class="oxy-step-label">2</span>{{'FORMS.WIZARD.YOUR-ADDRESS' | translate}}
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class="md-padding">
+                    <form name="addressForm" tri-wizard-form>
+                        <div layout="column" flex>
+                            <div layout layout-sm="column" flex>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.FIRST-NAME' | translate}}</label>
+                                    <input ng-model="wizard.data.address.firstName" required>
+                                </md-input-container>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.LAST-NAME' | translate}}</label>
+                                    <input ng-model="wizard.data.address.lastName">
+                                </md-input-container>
+                            </div>
+                            <md-input-container>
+                                <label>{{'FORMS.WIZARD.ADDRESS' | translate}}</label>
+                                <input ng-model="wizard.data.address.line1">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>{{'FORMS.WIZARD.ADDRESS-2' | translate}}</label>
+                                <input ng-model="wizard.data.address.line2">
+                            </md-input-container>
+                            <div layout layout-sm="column" flex>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.TOWN' | translate}}</label>
+                                    <input ng-model="wizard.data.address.town">
+                                </md-input-container>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.STATE' | translate}}</label>
+                                    <input ng-model="wizard.data.address.state">
+                                </md-input-container>
+                            </div>
+                            <div layout layout-sm="column" flex>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.ZIP' | translate}}</label>
+                                    <input ng-model="wizard.data.address.zip">
+                                </md-input-container>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.COUNTRY' | translate}}</label>
+                                    <md-select ng-model="wizard.data.address.country">
+                                        <md-option value="US">{{'FORMS.WIZARD.US' | translate}}</md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </form>
+                    <div layout="row" layout="start center">
+                        <span flex></span>
+                        <md-button ng-click="wizard.prevStep()">{{'FORMS.WIZARD.PREV' | translate}}</md-button>
+                        <md-button class="md-primary" ng-click="wizard.nextStep()" ng-disabled='addressForm.$invalid'>{{'FORMS.WIZARD.NEXT' | translate}}</md-button>
+                    </div>
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+        <md-tab id="billing">
+            <md-tab-label>
+                <span class="oxy-step-label">3</span>{{'FORMS.WIZARD.YOUR-BILLING' | translate}}
+            </md-tab-label>
+            <md-tab-body>
+                <md-content class="md-padding">
+                    <form name="billingForm" tri-wizard-form>
+                        <div layout="column" flex>
+                            <div layout layout-sm="column" flex>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.FIRST-NAME' | translate}}</label>
+                                    <input ng-model="wizard.data.address.firstName" required>
+                                </md-input-container>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.LAST-NAME' | translate}}</label>
+                                    <input ng-model="wizard.data.address.lastName">
+                                </md-input-container>
+                            </div>
+                            <md-input-container>
+                                <label>{{'FORMS.WIZARD.ADDRESS' | translate}}</label>
+                                <input ng-model="wizard.data.address.line1">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>{{'FORMS.WIZARD.ADDRESS-2' | translate}}</label>
+                                <input ng-model="wizard.data.address.line2">
+                            </md-input-container>
+                            <div layout layout-sm="column" flex>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.TOWN' | translate}}</label>
+                                    <input ng-model="wizard.data.address.town">
+                                </md-input-container>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.STATE' | translate}}</label>
+                                    <input ng-model="wizard.data.address.state">
+                                </md-input-container>
+                            </div>
+                            <div layout layout-sm="column" flex>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.ZIP' | translate}}</label>
+                                    <input ng-model="wizard.data.address.zip">
+                                </md-input-container>
+                                <md-input-container flex>
+                                    <label>{{'FORMS.WIZARD.COUNTRY' | translate}}</label>
+                                    <md-select ng-model="wizard.data.address.country">
+                                        <md-option value="US">{{'FORMS.WIZARD.US' | translate}}</md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </form>
+                    <div layout="row" layout="start center">
+                        <span flex></span>
+                        <md-button ng-click="wizard.prevStep()">{{'FORMS.WIZARD.PREV' | translate}}</md-button>
+                    </div>
+                </md-content>
+            </md-tab-body>
+        </md-tab>
+    </md-tabs>
+    <div layout="row" layout-align="start center">
+        <md-progress-linear flex="30" class="md-primary" md-mode="determinate" ng-value="vm.progress"></md-progress-linear>
+        <span flex></span>
+        <md-button class="md-primary" ng-click="wizard.nextStep()" ng-disabled="accountForm.$invalid">{{'FORMS.WIZARD.NEXT' | translate}}</md-button>
+    </div>
+</md-content>

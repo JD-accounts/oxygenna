@@ -5,7 +5,32 @@
             "INPUTS": "Inputs",
             "BINDING": "Data Binding",
             "AUTOCOMPLETE": "Autocomplete",
-            "VALIDATION": "Validation"
+            "VALIDATION": "Validation",
+            "WIZARD": "Wizard"
+        }
+    },
+    "FORMS": {
+        "WIZARD": {
+            "CREATE": "Create an account",
+            "YOUR-ADDRESS": "Your address",
+            "USERNAME": "Username",
+            "PASSWORD": "Password",
+            "PASSWORD-CONFIRM": "Confirm password",
+            "NEXT": "Next",
+            "PREV": "Previous",
+            "FIRST-NAME": "First name",
+            "LAST-NAME": "Last name",
+            "ADDRESS": "Address Line 1",
+            "ADDRESS-2": "Address Line 2",
+            "TOWN": "Town",
+            "STATE": "State",
+            "ZIP": "Zip",
+            "COUNTRY": "Country",
+            "US": "United States",
+
+            "PLEASE-ENTER": "This field is required",
+            "PLEASE-VALID": "Please enter a valid email"
         }
     }
 }
+
