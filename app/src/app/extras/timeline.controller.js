@@ -15,7 +15,7 @@ controller('TimelineController', function ($scope) {
         subtitle: 'We challenged ourselves to create a visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science.',
         date:'27/6/2015',
         image: 'assets/images/avatars/hair-black-eyes-blue-green-skin-tanned.png',
-        content: '<img src="assets/images/backgrounds/bg-1.jpg"/>',
+        content: '<img src="assets/images/material-backgrounds/mb-bg-01.jpg"/>',
         palette: "",
 
     },{
@@ -30,7 +30,7 @@ controller('TimelineController', function ($scope) {
         subtitle: 'Create a visual language that synthesizes classic principles of good design with the innovation and possibility of technology and science.',
         date:'26/6/2015',
         image: 'assets/images/avatars/hair-blonde-eyes-brown-skin-light.png',
-        content: '<img src="assets/images/backgrounds/bg-2.jpg"/>',
+        content: '<img src="assets/images/material-backgrounds/mb-bg-02.jpg"/>',
         palette: "cyan:500",
         classes: "widget-overlay-title"
     },{
@@ -38,7 +38,7 @@ controller('TimelineController', function ($scope) {
         subtitle: 'A material metaphor is the unifying theory of a rationalized space and a system of motion. ',
         date:'24/6/2015',
         image: 'assets/images/avatars/hair-black-eyes-dark-skin-dark.png',
-        content: '<img src="assets/images/backgrounds/bg-3.jpg"/>'
+        content: '<img src="assets/images/material-backgrounds/mb-bg-03.jpg"/>'
     },{
         title: 'Joe Ross',
         subtitle: 'CEO Google',
@@ -58,7 +58,7 @@ controller('TimelineController', function ($scope) {
         subtitle: 'Limit your selection of colors by choosing three hues from the primary palette and one accent color from the secondary palette.',
         date:'17/6/2015',
         image: 'assets/images/avatars/hair-black-eyes-brown-skin-dark.png',
-        content: '<img src="assets/images/backgrounds/bg-4.jpg"/>',
+        content: '<img src="assets/images/material-backgrounds/mb-bg-04.jpg"/>',
         palette: "cyan:500",
         classes: "widget-overlay-title"
     },{
@@ -73,7 +73,7 @@ controller('TimelineController', function ($scope) {
         subtitle: 'Use the accent color for your primary action button and components like switches or sliders.',
         date:'12/6/2015',
         image: 'assets/images/avatars/hair-black-eyes-brown-skin-tanned-2.png',
-        content: '<img src="assets/images/backgrounds/bg-5.jpg"/>',
+        content: '<img src="assets/images/material-backgrounds/mb-bg-05.jpg"/>',
         palette: "cyan:500",
         classes: "widget-overlay-title"
     }];
