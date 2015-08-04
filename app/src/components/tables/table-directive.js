@@ -87,6 +87,10 @@ angular.module('triAngularDashboards')
                 }
             };
 
+            $scope.totalItems = function() {
+                return $scope.contents.length;
+            };
+
             $scope.numberOfPages = function() {
                 return Math.ceil($scope.contents.length / $scope.pageSize);
             };
