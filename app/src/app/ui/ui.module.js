@@ -100,7 +100,7 @@ angular.module('triAngularUI', ['ngCookies', 'webfont-loader'])
             }
 
             if(undefined !== toParams.background) {
-                toState.data.toolbar.background = toParams.background === 'off' ? false : 'assets/images/backgrounds/bg-toolbar.jpg';
+                toState.data.toolbar.background = toParams.background === 'off' ? false : 'assets/images/backgrounds/material-backgrounds/mb-bg-33.jpg';
             }
 
             if(undefined !== toParams.shrink) {
