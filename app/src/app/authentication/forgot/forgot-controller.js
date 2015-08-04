@@ -14,7 +14,7 @@ angular.module('triAngularAuthentication')
 .controller('ForgotController', function ($scope, $state, $mdToast, $filter, $http, API_CONFIG) {
     // create blank user variable for login form
     $scope.user = {
-        email: 'info@oxygenna.com',
+        email: '',
     };
 
     // controller to handle login check
