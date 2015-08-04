@@ -16,17 +16,17 @@ angular.module('triAngularAuthentication')
     $scope.user = {
         name: 'Morris Onions',
         email: 'info@oxygenna.com',
-        password: 'demo'
+        password: ''
     };
 
     // controller to handle login check
-    $scope.loginClick = function() {        
+    $scope.loginClick = function() {
         // user logged in ok so goto the dashboard
-        $state.go('admin-panel.default.dashboard-general');        
+        $state.go('admin-panel.default.dashboard-general');
     };
 
 
-    $scope.logoutClick = function() {        
+    $scope.logoutClick = function() {
         // go back to login screen
         $state.go('public.auth.login');
     };

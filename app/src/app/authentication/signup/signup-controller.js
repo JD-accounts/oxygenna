@@ -14,10 +14,10 @@ angular.module('triAngularAuthentication')
 .controller('SignupController', function ($scope, $state, $mdToast, $http, $filter, API_CONFIG) {
     // create blank user variable for login form
     $scope.user = {
-        name: 'john',
-        email: 'john.langan@oxygenna.com',
-        password: '123456789',
-        confirm: '123456789'
+        name: '',
+        email: '',
+        password: '',
+        confirm: ''
     };
 
     $scope.signupClick = function() {
