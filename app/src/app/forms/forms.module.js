@@ -28,7 +28,7 @@ angular.module('triAngularForms', [])
         url: '/forms/wizard',
         templateUrl: 'app/forms/wizard.tmpl.html',
         controller: 'FormWizardController',
-        controllerAs: 'wizard'
+        controllerAs: 'wizardController'
     })
     .state('admin-panel.default.forms-validation', {
         url: '/forms/validation',

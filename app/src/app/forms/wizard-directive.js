@@ -28,14 +28,42 @@
         var totalErrors = 0;
         var fixedErrors = 0;
 
+        vm.currentStep = 3;
         vm.getForm = getForm;
+        vm.nextStep = nextStep;
+        vm.nextStepDisabled = nextStepDisabled;
+        vm.prevStep = prevStep;
+        vm.prevStepDisabled = prevStepDisabled;
         vm.progress = 0;
         vm.registerForm = registerForm;
         vm.updateProgress = updateProgress;
+
         ////////////////
 
         function getForm(index) {
             return forms[index];
+        }
+
+        function nextStep() {
+            vm.currentStep = vm.currentStep + 1;
+        }
+
+        function nextStepDisabled() {
+            // get current active form
+            var form = $scope.triWizard.getForm(vm.currentStep);
+            var formInvalid = true;
+            if(undefined !== form && undefined !== form.$invalid) {
+                formInvalid = form.$invalid;
+            }
+            return formInvalid;
+        }
+
+        function prevStep() {
+            vm.currentStep = vm.currentStep - 1;
+        }
+
+        function prevStepDisabled() {
+            return vm.currentStep === 0;
         }
 
         function registerForm(form) {
