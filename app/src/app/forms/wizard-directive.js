@@ -28,7 +28,7 @@
         var totalErrors = 0;
         var fixedErrors = 0;
 
-        vm.currentStep = 3;
+        vm.currentStep = 0;
         vm.getForm = getForm;
         vm.nextStep = nextStep;
         vm.nextStepDisabled = nextStepDisabled;
