@@ -103,5 +103,6 @@
 - Better responsive layout for Todo App
 - Added highlightjs to bower (fixes build error due to changes in angular-highlightjs)
 - Changed number of pages to total items in tables pagination (now reads 1-5 of 10) thanks Vasillis
+- Added new material background images and CSS classes
 - NEW Added 30 extra material backgrounds
 - NEW Form Wizard
