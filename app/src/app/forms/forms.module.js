@@ -24,6 +24,12 @@ angular.module('triAngularForms', [])
         url: '/forms/autocomplete',
         templateUrl: 'app/forms/autocomplete.tmpl.html'
     })
+    .state('admin-panel.default.forms-wizard', {
+        url: '/forms/wizard',
+        templateUrl: 'app/forms/wizard.tmpl.html',
+        controller: 'FormWizardController',
+        controllerAs: 'wizardController'
+    })
     .state('admin-panel.default.forms-validation', {
         url: '/forms/validation',
         templateUrl: 'app/forms/validation.tmpl.html'
@@ -48,6 +54,10 @@ angular.module('triAngularForms', [])
             name: 'MENU.FORMS.INPUTS',
             type: 'link',
             state: 'admin-panel.default.forms-inputs'
+        },{
+            name: 'MENU.FORMS.WIZARD',
+            type: 'link',
+            state: 'admin-panel.default.forms-wizard'
         },{
             name: 'MENU.FORMS.VALIDATION',
             type: 'link',
