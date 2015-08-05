@@ -11,8 +11,9 @@
     },
     "FORMS": {
         "WIZARD": {
-            "CREATE": "Create an account",
+            "CREATE": "Account details",
             "YOUR-ADDRESS": "Your address",
+            "YOUR-BILLING": "Billing details",
             "USERNAME": "Username",
             "PASSWORD": "Password",
             "PASSWORD-CONFIRM": "Confirm password",
@@ -27,9 +28,14 @@
             "ZIP": "Zip",
             "COUNTRY": "Country",
             "US": "United States",
-
+            "CARD-NUMBER": "Credit card number",
+            "CARD-NAME": "Name on card",
+            "CARD-EX-MONTH": "Expiry date (MM)",
+            "CARD-EX-YEAR": "Expiry date (YYYY)",
             "PLEASE-ENTER": "This field is required",
-            "PLEASE-VALID": "Please enter a valid email"
+            "PLEASE-VALID": "Please enter a valid email",
+            "CARD-MONTH-ERROR": "Month must be in the format MM",
+            "CARD-YEAR-ERROR": "Year must be in the format YYYY"
         }
     }
 }

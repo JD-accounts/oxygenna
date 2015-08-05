@@ -7,22 +7,17 @@
 
     /* @ngInject */
     function TriWizard() {
-        // Usage:
+        // Usage: <div tri-wizard> (put some forms in here) </div>
         //
-        // Creates:
+        // Creates: Nothing
         //
         var directive = {
             bindToController: true,
             controller: WizardController,
-            controllerAs: 'vm',
-            link: link,
+            controllerAs: 'triWizard',
             restrict: 'A'
         };
         return directive;
-
-        function link(scope, element, attrs) {
-            console.log('link')
-        }
     }
 
     /* @ngInject */
@@ -33,40 +28,44 @@
         var totalErrors = 0;
         var fixedErrors = 0;
 
-        vm.registerForm = registerForm;
+        vm.getForm = getForm;
         vm.progress = 0;
+        vm.registerForm = registerForm;
+        vm.updateProgress = updateProgress;
         ////////////////
+
+        function getForm(index) {
+            return forms[index];
+        }
 
         function registerForm(form) {
             forms.push(form);
+            var removeWatch = $scope.$watch(form.$name + '.$pristine', function(oldPristine, newPristine) {
+                if(newPristine === true) {
+                    totalErrors = calculateErrors();
+                    removeWatch();
+                }
+            })
         }
 
-        $scope.$watch(watchForms);
+        function updateProgress() {
+            var errors = calculateErrors();
+            fixedErrors = totalErrors - errors;
 
-        function watchForms() {
+            // calculate percentage process for completing the wizard
+            vm.progress = Math.floor((fixedErrors / totalErrors) * 100);
+        }
+
+        function calculateErrors() {
             var errorCount = 0;
-            var isPristine = true;
             for (var form = forms.length - 1; form >= 0; form--) {
-                // check if we have an unpristine form
-                if(forms[form].$pristine === false) {
-                    isPristine = false;
-                }
                 if(forms[form].$error !== undefined) {
                     for(var error in forms[form].$error) {
                         errorCount += forms[form].$error[error].length;
                     }
                 }
             }
-            // if we are pristine set the total errors to this
-            if(isPristine === true) {
-                totalErrors = errorCount;
-            }
-            // find out how many errors remain
-            fixedErrors = totalErrors - errorCount;
-
-            // calculate peercentage process for completing the wizard
-            vm.progress = Math.floor((fixedErrors / totalErrors) * 100);
+            return errorCount;
         }
-
     }
 })();

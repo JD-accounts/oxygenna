@@ -8,9 +8,10 @@
     /* @ngInject */
     function WizardFormProgress() {
         // Usage:
-
-        //
-        // Creates:
+        //  <div tri-wizard>
+        //      <form tri-wizard-form>
+        //      </form>
+        //  </div>
         //
         var directive = {
             require: ['form', '^triWizard'],
@@ -22,7 +23,14 @@
         function link(scope, element, attrs, require) {
             var ngFormCtrl = require[0];
             var triWizardCtrl = require[1];
+
+            // register this form with the parent triWizard directive
             triWizardCtrl.registerForm(ngFormCtrl);
+
+            // watch for form input changes and update the wizard progress
+            element.on('input', function() {
+                triWizardCtrl.updateProgress();
+            })
         }
     }
 })();
