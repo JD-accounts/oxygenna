@@ -6,15 +6,29 @@
         .controller('GithubController', GithubController);
 
     /* @ngInject */
-    function GithubController() {
+    function GithubController($http) {
+        var oxygennaAPIUrl = 'http://192.168.56.101';
         var vm = this;
-        vm.title = 'GithubController';
-
-        activate();
+        vm.data = {
+            purchaseCode: '',
+            githubUser: '',
+        };
+        vm.register = register;
+        vm.userSearch = userSearch;
 
         ////////////////
 
-        function activate() {
+        function register() {
+            // register-github-access
+            console.log('register');
+        }
+
+        function userSearch (query) {
+            return $http.get('https://api.github.com/search/users?q=' + query + '+type:user+in:login').
+            then(function(response) {
+                // get the items
+                return response.data.items;
+            });
         }
     }
 })();

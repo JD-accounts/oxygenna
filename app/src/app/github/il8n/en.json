@@ -6,7 +6,12 @@
     },
     "GITHUB": {
         "JOIN": "Join the team",
-        "INTRO": "Anyone who buys triangular can join the team and see changes, submit pull requests, create issues and get involved!",
-        "FILL-IN": "Just fill in the form below with your purchase code and github user and you are good to go!"
+        "INTRO": "Anyone who buys triangular can now join the team and see changes as they happen, submit pull requests, create issues and get involved!",
+        "FILL-IN": "Just fill in the form below with your purchase code and github user and you are good to go!",
+        "PURCHASE-CODE": "Triangular Purchase Code",
+        "GITHUB-USER": "GitHub Username",
+        "PURCHASE-CODE-ERROR": "Please enter a valid purchase code",
+        "GITHUB-USER-ERROR": "Please enter your GitHub username",
+        "SIGNUP": "Give me access to the repository"
     }
 }

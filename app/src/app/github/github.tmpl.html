@@ -1,29 +1,44 @@
-<div layout="column" layout-align="center center" class="material-background mb-bg-fb-02 overlay-gradient-40 text-light">
+<div layout="column" layout-align="center center" class="material-background mb-bg-fb-16 overlay-gradient-40 text-light">
     <h1 class="font-weight-100 font-size-8 margin-top-40" translate>GITHUB.JOIN</h1>
     <p flex="60" flex-sm="100" class="md-headline font-weight-300 text-center" translate>GITHUB.INTRO</p>
 </div>
 
-<div class="padded-content-page" layout="column" layout-align="center center">
-    <p translate>GITHUB.FILL-IN</p>
-    <form name="githubForm">
+<div class="padded-content-page" >
+    <p class="text-center" translate>GITHUB.FILL-IN</p>
+
+    <form name="githubForm" class="padding-left-40 padding-right-40">
         <md-input-container>
             <label translate>GITHUB.PURCHASE-CODE</label>
-            <input name="username" ng-model="wizardController.data.account.username" required>
-            <div ng-messages="accountForm.username.$error">
-                <div ng-message when="required" translate>FORMS.WIZARD.PLEASE-ENTER</div>
+            <input name="purchaseCode" ng-model="vm.data.purchaseCode" required>
+            <div ng-messages="githubForm.purchaseCode.$error">
+                <div ng-message when="required">{{'GITHUB.PURCHASE-CODE-ERROR' | translate}}</div>
             </div>
         </md-input-container>
-        <md-input-container>
-            <label>Email</label>
-            <input type="email" name="email" ng-model="wizardController.data.account.email" required>
-            <div ng-messages="accountForm.email.$error">
-                <div ng-message when="required">
-                    {{'FORMS.WIZARD.PLEASE-ENTER' | translate}}
+        <md-autocomplete
+            md-input-name="githubUser"
+            md-floating-label="{{'GITHUB.GITHUB-USER' | translate}}"
+            md-selected-item="vm.data.githubUser"
+            md-search-text="vm.searchText"
+            md-selected-item-change="vm.selectedItemChange(user)"
+            md-items="user in vm.userSearch(vm.searchText)"
+            md-item-text="user.login"
+            md-min-length="0"
+            md-delay="400"
+            placeholder="Please enter your GitHub username"
+            md-menu-class="autocomplete-custom-template"
+            required>
+            <md-item-template>
+                <div class="github-user-dropdown" layout="row" layout-align="start center">
+                    <img class="github-user-avatar" ng-src="{{user.avatar_url}}" alt="{{user.login}}">
+                    <span flex>{{user.login}}</span>
                 </div>
-                <div ng-message when="email">
-                    {{'FORMS.WIZARD.PLEASE-VALID' | translate}}
-                </div>
+            </md-item-template>
+            <div ng-messages="githubForm.githubUser.$error">
+                <div ng-message when="required">{{'GITHUB.GITHUB-USER-ERROR' | translate}}</div>
             </div>
-        </md-input-container>
+        </md-autocomplete>
     </form>
+    <div class="margin-top-40" layout="row" layout-align="center center">
+        <md-button class="md-primary md-raised" ng-disabled="githubForm.$invalid" ng-click="vm.register" translate="GITHUB.SIGNUP"></md-button>
+    </div>
 </div>

@@ -13,7 +13,8 @@
         .state('admin-panel.default.github', {
             url: '/github',
             templateUrl: 'app/github/github.tmpl.html',
-            controller: 'GithubController'
+            controller: 'GithubController',
+            controllerAs: 'vm'
         });
     }
 })();
