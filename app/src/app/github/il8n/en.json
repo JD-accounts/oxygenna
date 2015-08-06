@@ -1,0 +1,12 @@
+{
+    "MENU": {
+        "GITHUB": {
+            "GITHUB": "GitHub"
+        }
+    },
+    "GITHUB": {
+        "JOIN": "Join the team",
+        "INTRO": "Anyone who buys triangular can join the team and see changes, submit pull requests, create issues and get involved!",
+        "FILL-IN": "Just fill in the form below with your purchase code and github user and you are good to go!"
+    }
+}
