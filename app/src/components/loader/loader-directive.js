@@ -15,25 +15,45 @@
 * <tri-loader></tri-loader>
 * ```
 */
-angular.module('triAngular')
-.directive('triLoader', function($rootScope, APP) {
-    return {
-        restrict: 'E',
-        replace: true,
-        scope: {},
-        template: '<md-content flex class="loader" ng-show="active" layout="column" layout-fill layout-align="center center"><div class="loader-inner"><md-progress-circular md-mode="indeterminate"></md-progress-circular></div><h3 class="md-headline">{{appName}}</h3></md-content>',
-        link: function($scope) {
-            $scope.appName = APP.name;
+(function() {
+    'use strict';
 
-            $scope.active = true;
+    angular
+        .module('triAngular')
+        .directive('triLoader', TriLoader);
 
+    /* @ngInject */
+    function TriLoader ($rootScope) {
+        var directive = {
+            bindToController: true,
+            controller: TriLoaderController,
+            controllerAs: 'vm',
+            template: '<md-content flex class="loader" ng-show="vm.status.active" layout="column" layout-fill layout-align="center center"><div class="loader-inner"><md-progress-circular md-mode="indeterminate"></md-progress-circular></div><h3 class="md-headline">{{vm.appName}}</h3></md-content>',
+            link: link,
+            restrict: 'E',
+            replace: true,
+            scope: {
+            }
+        };
+        return directive;
+
+        function link($scope, element, attrs) {
             $rootScope.$on('$viewContentLoading', function() {
-                $scope.active = true;
+                $scope.vm.setLoaderActive(true);
             });
 
             $rootScope.$on('$viewContentLoaded', function() {
-                $scope.active = false;
+                $scope.vm.setLoaderActive(false);
             });
         }
-    };
-});
+    }
+
+    /* @ngInject */
+    function TriLoaderController ($rootScope, LoaderService, APP) {
+        var vm = this;
+
+        vm.appName = APP.name;
+        vm.status = LoaderService.status;
+        vm.setLoaderActive = LoaderService.setLoaderActive;
+    }
+})();

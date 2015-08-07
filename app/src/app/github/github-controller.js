@@ -6,7 +6,7 @@
         .controller('GithubController', GithubController);
 
     /* @ngInject */
-    function GithubController($http, $mdToast) {
+    function GithubController($http, $mdToast, LoaderService) {
         var oxygennaAPIUrl = 'http://192.168.56.101';
         var vm = this;
         vm.data = {
@@ -22,14 +22,18 @@
         ////////////////
 
         function register() {
+            LoaderService.setLoaderActive(true);
+
             $http.put(oxygennaAPIUrl + '/register-github-access', vm.data).
-            then(function(response) {
-                console.log(response);
+            then(function() {
+                // everything went ok
+                LoaderService.setLoaderActive(false);
+                popAToast('Success!  Check your GitHub email for your invite.');
             }, function(response) {
+                // something went wrong
+                LoaderService.setLoaderActive(false);
                 if(response.data.error !== undefined) {
-                    popAToast(response.data.error).then(function() {
-                        console.log('ok!')
-                    });
+                    popAToast(response.data.error);
                 }
             });
         }
