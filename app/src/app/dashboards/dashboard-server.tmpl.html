@@ -71,24 +71,24 @@
         <widget flex="50" flex-sm="100" title="{{'DASHBOARDS.SERVER.DISKS' | translate}}">
             <md-divider></md-divider>
             <md-list>
-                <md-list-item ng-repeat="disk in disks">
-                    <md-icon md-font-icon="{{disk.icon}}" class="md-primary"></md-icon>
-                    <p class="text-ellipsis padding-right-50">{{disk.name}}</p>
+                <md-list-item ng-repeat="disk in ::disks">
+                    <md-icon md-font-icon="{{::disk.icon}}" class="md-primary"></md-icon>
+                    <p class="text-ellipsis padding-right-50">{{::disk.name}}</p>
                     <md-switch class="md-secondary" ng-model="disk.enabled"></md-switch>
-                    <md-divider ng-hide="$last"></md-divider>
+                    <md-divider ng-hide="::$last"></md-divider>
                 </md-list-item>
             </md-list>
         </widget>
         <widget flex title="{{'DASHBOARDS.SERVER.JOB' | translate}}" background="primary">
             <md-divider></md-divider>
             <md-list>
-                <md-list-item class="md-2-line" ng-repeat="job in jobs">
+                <md-list-item class="md-2-line" ng-repeat="job in ::jobs">
                     <div class="md-list-item-text">
-                        <h3>{{job.job}}</h3>
-                        <p>{{job.time}}</p>
+                        <h3>{{::job.job}}</h3>
+                        <p>{{::job.time}}</p>
                     </div>
-                    <md-icon md-font-icon="icon-check alert-success" ng-show="job.complete"></md-icon>
-                    <md-icon md-font-icon="icon-close alert-error" ng-hide="job.complete"></md-icon>
+                    <md-icon md-font-icon="icon-check alert-success" ng-show="::job.complete"></md-icon>
+                    <md-icon md-font-icon="icon-close alert-error" ng-hide="::job.complete"></md-icon>
                     <md-divider ng-hide="$last"></md-divider>
                 </md-list-item>
             </md-list>
