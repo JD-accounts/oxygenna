@@ -7,7 +7,7 @@
 
     /* @ngInject */
     function GithubController($http, $mdToast, LoaderService) {
-        var oxygennaAPIUrl = 'http://192.168.56.101';
+        var oxygennaAPIUrl = 'http://api.oxygenna.com';
         var vm = this;
         vm.data = {
             id: '11711437',
