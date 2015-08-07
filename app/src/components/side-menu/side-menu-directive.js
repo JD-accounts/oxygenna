@@ -19,7 +19,7 @@ angular.module('triAngular')
 .directive('sideMenu', function($location, $mdTheming, triTheming, SideMenu) {
     return {
         restrict: 'E',
-        template: '<md-content><side-menu-item ng-repeat="item in menu | orderBy:\'priority\'" item="item"></side-menu-item></md-content>',
+        template: '<md-content><side-menu-item ng-repeat="item in ::menu | orderBy:\'priority\'" item="::item"></side-menu-item></md-content>',
         scope: {},
         controller: function($scope) {
             // get the menu structure from the menu service

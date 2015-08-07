@@ -89,11 +89,11 @@
         <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" content-layout="column" content-layout-align="start">
             <md-divider></md-divider>
             <md-list class="padding-top-20 padding-bottom-0" flex>
-                <md-list-item ng-repeat="chat in conversation" class="md-2-line" ng-class="userClass($even)" ng-init="userColor = $even ? 'cyan' : 'light-green'">
-                    <img class="md-avatar" ng-src="{{chat.image}}" alt="{{chat.name}}">
+                <md-list-item ng-repeat="chat in ::conversation" class="md-2-line" ng-class="userClass($even)" ng-init="userColor = $even ? 'cyan' : 'light-green'">
+                    <img class="md-avatar" ng-src="{{::chat.image}}" alt="{{::chat.name}}">
                     <div class="md-list-item-text">
-                        <p palette-background="{{userColor}}:200" ng-repeat="message in chat.messages">
-                           {{message}}
+                        <p palette-background="{{::userColor}}:200" ng-repeat="message in ::chat.messages">
+                           {{::message}}
                         </p>
                     </div>
                 </md-list-item>
@@ -113,15 +113,15 @@
                     <div layout="column" flex layout-align="start center">
                         <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
                         <h1 class="font-size-14 margin-top-80 margin-bottom-80 font-weight-100">
-                            {{weather.temp}}&deg;
+                            {{::weather.temp}}&deg;
                         </h1>
                     </div>
                     <div layout="column" class="full-width overlay-gradient-40">
                         <md-divider></md-divider>
                         <div flex layout="row" layout-margin layout-align="space-between center" class="padding-30">
                             <i class="wi font-size-2" ng-class="weather.iconClass"></i>
-                            <p class="margin-0">{{weather.text}}</p>
-                            <p class="margin-0">{{weather.location}}</p>
+                            <p class="margin-0">{{::weather.text}}</p>
+                            <p class="margin-0">{{::weather.location}}</p>
                         </div>
                     </div>
             </widget>
@@ -148,7 +148,7 @@
                 </div>
                 <div layout="column" class="padding-top-0 padding-left-40 padding-right-40 padding-bottom-40">
                     <md-tabs md-selected="selectedTab" class="dashboard-no-bar-tabs text-center" md-no-pagination md-no-bar md-dynamic-height>
-                        <md-tab ng-repeat="tweet in tweets" label="tweet.id">
+                        <md-tab ng-repeat="tweet in ::tweets" label="tweet.id">
                             <div ng-bind="tweet.body" linkify="twitter" class="font-weight-300 font-size-2 font-style-italic line-height-big"></div>
                         </md-tab>
                     </md-tabs>
@@ -158,9 +158,9 @@
             <div layout="row" layout-margin>
                  <widget flex="50" title="{{'DASHBOARDS.GENERAL.CONTACTS' | translate}}" contacts-widget>
                     <md-list>
-                        <md-list-item ng-repeat="contact in contacts">
-                            <img class="md-avatar" ng-src="{{contact.image}}" alt="{{contact.name}}">
-                            <p>{{contact.name}}</p>
+                        <md-list-item ng-repeat="contact in ::contacts">
+                            <img class="md-avatar" ng-src="{{::contact.image}}" alt="{{::contact.name}}">
+                            <p>{{::contact.name}}</p>
                             <md-icon md-font-icon="icon-chat" class="md-primary"></md-icon>
                             <md-divider ng-hide="$last"></md-divider>
                         </md-list-item>

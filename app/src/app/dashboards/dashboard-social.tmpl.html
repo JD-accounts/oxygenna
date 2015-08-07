@@ -147,17 +147,17 @@
                 <widget flex="70" flex-sm="100" title="Favorites" content-layout="column" content-layout-align="center top"  layout-margin>
                     <md-divider></md-divider>
                     <md-list>
-                        <md-list-item class="md-3-line" ng-repeat="fave in favorites">
-                            <img ng-src="{{fave.avatar}}" class="md-avatar"/>
+                        <md-list-item class="md-3-line" ng-repeat="fave in ::favorites">
+                            <img ng-src="{{::fave.avatar}}" class="md-avatar"/>
                             <div class="md-list-item-text">
                                 <div layout="row">
                                     <span flex class="md-subhead text-dark">
-                                        {{fave.name}}
-                                        <span class="text-gray">@{{fave.user}}</span>
+                                        {{::fave.name}}
+                                        <span class="text-gray">@{{::fave.user}}</span>
                                     </span>
                                     <span class="md-caption" am-time-ago="fave.date"></span>
                                 </div>
-                                <p linkify="twitter">{{fave.tweet}}</p>
+                                <p linkify="twitter">{{::fave.tweet}}</p>
                             </div>
                             <md-divider></md-divider>
                         </md-list-item>
@@ -167,23 +167,23 @@
                     <widget flex title="Who to follow" content-layout="column" content-layout-align="center top" palette-background="cyan:500" layout-margin>
                         <md-divider></md-divider>
                         <md-list>
-                            <md-list-item class="md-2-line" ng-repeat="follow in whotofollow">
-                                <img ng-src="{{follow.avatar}}" class="md-avatar"/>
+                            <md-list-item class="md-2-line" ng-repeat="follow in ::whotofollow">
+                                <img ng-src="{{::follow.avatar}}" class="md-avatar"/>
                                 <div class="md-list-item-text">
-                                    <h3>{{follow.name}}</h3>
-                                    <h4>@{{follow.user}}</h4>
+                                    <h3>{{::follow.name}}</h3>
+                                    <h4>@{{::follow.user}}</h4>
                                     <md-icon md-font-icon="icon-person-add" ng-click="doSecondaryAction($event)" class="md-secondary md-hue-3"></md-icon>
                                 </div>
-                                <md-divider ng-hide="$last"></md-divider>
+                                <md-divider ng-hide="::$last"></md-divider>
                             </md-list-item>
                         </md-list>
                     </widget>
                     <widget flex title="Trends" content-layout="column" content-layout-align="center top" palette-background="cyan:500" layout-margin>
                         <md-divider></md-divider>
                         <md-list>
-                            <md-list-item ng-repeat="trend in trends">
-                                <p linkify="twitter">{{trend}}</p>
-                                <md-divider ng-hide="$last"></md-divider>
+                            <md-list-item ng-repeat="trend in ::trends">
+                                <p linkify="twitter">{{::trend}}</p>
+                                <md-divider ng-hide="::$last"></md-divider>
                             </md-list-item>
                         </div>
                     </widget>

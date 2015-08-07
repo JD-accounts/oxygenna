@@ -10,10 +10,10 @@
                 <md-list-item ng-repeat="message in messages | orderBy:orderTasks" ng-class="{'md-primary': message.priority === 'high', 'md-accent': message.priority === 'medium', 'md-warn': message.priority === 'low'}" class="slide" md-swipe-right="removeTodo(message)" md-no-ink>
                     <md-checkbox ng-model="message.selected"></md-checkbox>
                     <p class="no-select">
-                        {{message.description}}
+                        {{::message.description}}
                     </p>
                     <md-text-float class="no-select">
-                        {{message.priority}}
+                        {{::message.priority}}
                     </md-text-float>
                 </md-list-item>
             </md-list>
