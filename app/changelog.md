@@ -106,3 +106,6 @@
 - Added new material background images and CSS classes
 - NEW Added 30 extra material backgrounds
 - NEW Form Wizard
+- NEW Advanced Table Element
+- NEW Added GitHub access for buyers
+- Added new LoaderService to allow controllers to turn loader on/off
