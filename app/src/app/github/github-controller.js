@@ -6,21 +6,32 @@
         .controller('GithubController', GithubController);
 
     /* @ngInject */
-    function GithubController($http) {
+    function GithubController($http, $mdToast) {
         var oxygennaAPIUrl = 'http://192.168.56.101';
         var vm = this;
         vm.data = {
+            id: '11711437',
             purchaseCode: '',
             githubUser: '',
         };
         vm.register = register;
         vm.userSearch = userSearch;
 
+        clearForm();
+
         ////////////////
 
         function register() {
-            // register-github-access
-            console.log('register');
+            $http.put(oxygennaAPIUrl + '/register-github-access', vm.data).
+            then(function(response) {
+                console.log(response);
+            }, function(response) {
+                if(response.data.error !== undefined) {
+                    popAToast(response.data.error).then(function() {
+                        console.log('ok!')
+                    });
+                }
+            });
         }
 
         function userSearch (query) {
@@ -30,5 +41,23 @@
                 return response.data.items;
             });
         }
+
+        function clearForm() {
+            vm.data.purchaseCode = '';
+            vm.data.githubUser = '';
+        }
+
+        function popAToast(message) {
+            var toast = $mdToast.simple({
+                hideDelay: false
+            })
+            .content(message)
+            .action('OK')
+            .highlightAction(false)
+            .position('bottom right');
+
+            return $mdToast.show(toast);
+        }
+
     }
 })();
