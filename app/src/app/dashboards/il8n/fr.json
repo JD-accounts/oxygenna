@@ -6,7 +6,7 @@
             "ANALYTICS": "Analytics",
             "SERVER": "Serveur",
             "WIDGETS": "Les Widgets",
-            "SOCIAL": "Social"
+            "SOCIAL": "Sociale"
         }
     },
     "DASHBOARDS": {
@@ -49,7 +49,19 @@
             "DATE": "11/03/15 - 11/4/15",
             "DISKUSAGE": "L'Utilisation Du Disque"
         },
+        "SOCIAL": {
+            "STATUS": {
+                "UPDATE": "Mise à jour de votre statut",
+                "MIND": "Ce qui est sur votre esprit?"
+            }
+        },
         "WIDGETS": {
+            "MENU": {
+                "REFRESH": "Actualiser",
+                "DETAILS": "Détails",
+                "SHARE": "Partager",
+                "PRINT": "Imprimer"
+            },
             "SALES": "Vente",
             "COMMENTS": "Commentaires",
             "SERVER_UPTIME": "La Disponibilité Des Serveurs",

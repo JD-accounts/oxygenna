@@ -95,8 +95,8 @@
 - Updated Angular Material to 0.10.1-rc3
 - NEW FEATURE Added new Calendar module
 
-# Version ???
-> Release Date : ???
+# Version 1.5.0
+> Release Date : 10th August 2015
 
 - Fixed switching from email to todo in mobile sized screens
 - Fixed scrolling content on Gallery page
@@ -106,9 +106,12 @@
 - Added new material background images and CSS classes
 - Added angular-material-data-table package
 - Added new LoaderService to allow controllers to turn loader on/off
+- Update material angular to 0.10.1-rc5
 - Changed 404 & 500 background pages
 - NEW Added 30 extra material backgrounds
 - NEW Form Wizard
 - NEW Advanced Table Element
 - NEW Added GitHub access for buyers
-
+- Used one time binding and removal of watches to increase performance by 70%
+- Removed all usage of translate filter and replaced with directive (better performance)
+- Added Chinese and Portuguese translations
