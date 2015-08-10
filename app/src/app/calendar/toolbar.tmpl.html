@@ -23,7 +23,7 @@
         </md-button>
         <md-menu-content width="2">
             <md-menu-item ng-repeat="view in views">
-                <md-button ng-click="changeView(view)" translate="{{::view.name}}"></md-button>
+                <md-button ng-click="changeView(view)" translate="{{::view.name}}" aria-label="{{::view.name}}"></md-button>
             </md-menu-item>
         </md-menu-content>
     </md-menu>

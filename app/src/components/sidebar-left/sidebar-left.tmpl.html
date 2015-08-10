@@ -7,7 +7,7 @@
 
         <h2 flex class="sidebar-left-title">{{::sidebarInfo.appName}}</h2>
 
-        <md-button class="md-icon-button sidebar-left-icon" ng-click="toggleMenuLock()">
+        <md-button class="md-icon-button sidebar-left-icon" ng-click="toggleMenuLock()" aria-label="Open side menu">
             <md-icon md-font-icon ng-class="isMenuLocked == true ? 'icon-unfold-less': 'icon-unfold-more'"></md-icon>
         </md-button>
 

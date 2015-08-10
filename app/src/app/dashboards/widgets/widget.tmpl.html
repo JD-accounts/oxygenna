@@ -9,7 +9,7 @@
             <p class="md-body-1" ng-if="::subtitle" translate>{{::subtitle}}</p>
         </div>
         <md-menu ng-if="::menu">
-            <md-button class="widget-button md-icon-button" ng-click="$mdOpenMenu()">
+            <md-button class="widget-button md-icon-button" ng-click="$mdOpenMenu()" aria-label="open menu">
                 <md-icon md-font-icon="{{::menu.icon}}"></md-icon>
             </md-button>
             <md-menu-content>

@@ -102,6 +102,7 @@
 - Fixed scrolling content on Gallery page
 - Better responsive layout for Todo App
 - Added highlightjs to bower (fixes build error due to changes in angular-highlightjs)
+- Fixed some aria-label warnings
 - Changed number of pages to total items in tables pagination (now reads 1-5 of 10) thanks Vasillis
 - Added new material background images and CSS classes
 - Added angular-material-data-table package
