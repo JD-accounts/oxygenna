@@ -86,7 +86,7 @@
             </div>
         </widget>
 
-        <widget chat-widget flex class="widget-chat" title="{{'DASHBOARDS.GENERAL.CHAT' | translate}}" content-layout="column" content-layout-align="start">
+        <widget chat-widget flex class="widget-chat" title="DASHBOARDS.GENERAL.CHAT" content-layout="column" content-layout-align="start">
             <md-divider></md-divider>
             <md-list class="padding-top-20 padding-bottom-0" flex>
                 <md-list-item ng-repeat="chat in ::conversation" class="md-2-line" ng-class="userClass($even)" ng-init="userColor = $even ? 'cyan' : 'light-green'">
@@ -156,7 +156,7 @@
             </widget>
             </div>
             <div layout="row" layout-margin>
-                 <widget flex="50" title="{{'DASHBOARDS.GENERAL.CONTACTS' | translate}}" contacts-widget>
+                 <widget flex="50" title="DASHBOARDS.GENERAL.CONTACTS" contacts-widget>
                     <md-list>
                         <md-list-item ng-repeat="contact in ::contacts">
                             <img class="md-avatar" ng-src="{{::contact.image}}" alt="{{::contact.name}}">

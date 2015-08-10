@@ -25,7 +25,7 @@ controller('SidebarRightController', function ($scope, $http, $mdSidenav, $state
         method: 'GET',
         url: API_CONFIG.url + 'email/inbox',
     }).success(function(data) {
-        $scope.emails = data;
+        $scope.emails = data.slice(1,20);
     }).
     error(function() {
         console.error('Cant get email list');

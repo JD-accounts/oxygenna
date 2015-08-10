@@ -23,7 +23,7 @@ angular.module('triAngular')
         scope: {
             breadcrumb: '='
         },
-        template: '<span><span>{{breadcrumb.name | translate}}<md-icon md-font-icon="icon-chevron-right" ng-show="breadcrumb.children.length > 0"></md-icon></span></span>',
+        template: '<span><span translate>{{::breadcrumb.name}}</span><md-icon md-font-icon="icon-chevron-right" ng-show="breadcrumb.children.length > 0"></md-icon></span>',
         link: function ($scope, $element) {
             if($scope.breadcrumb.children !== undefined) {
                 $element.find('span').attr('hide-sm', '');

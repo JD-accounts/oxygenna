@@ -9,9 +9,8 @@
             <md-icon md-font-icon="icon-language"></md-icon>
         </md-button>
         <md-menu-content width="3">
-            <md-menu-item ng-repeat="language in languages">
-                <md-button ng-click="switchLanguage(language.key)">
-                    {{language.name | translate}}
+            <md-menu-item ng-repeat="language in ::languages">
+                <md-button ng-click="switchLanguage(language.key)" translate="{{::language.name}}">
                 </md-button>
             </md-menu-item>
         </md-menu-content>
@@ -36,20 +35,20 @@
             <md-menu-item>
                 <md-button ng-click="toggleNotificationsTab(2)">
                     <md-icon md-font-icon="icon-settings"></md-icon>
-                    {{'ADMIN.TOOLBAR.SETTINGS' | translate}}
+                    <span translate="ADMIN.TOOLBAR.SETTINGS"></span>
                 </md-button>
             </md-menu-item>
             <md-menu-item>
                 <md-button ng-click="profile()">
                     <md-icon md-font-icon="icon-person"></md-icon>
-                    {{'ADMIN.TOOLBAR.PROFILE' | translate}}
+                    <span translate="ADMIN.TOOLBAR.PROFILE"></span>
                 </md-button>
             </md-menu-item>
             <md-menu-divider></md-menu-divider>
             <md-menu-item>
                 <md-button ng-click="logout()">
                     <md-icon md-font-icon="icon-exit-to-app"></md-icon>
-                    {{'ADMIN.TOOLBAR.LOGOUT' | translate}}
+                    <span translate="ADMIN.TOOLBAR.LOGOUT"></span>
                 </md-button>
             </md-menu-item>
         </md-menu-content>

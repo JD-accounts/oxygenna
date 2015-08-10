@@ -61,11 +61,11 @@
                     </div>
 
                     <md-input-container>
-                        <label for="subject">{{'EMAIL.COMPOSE.SUBJECT' | translate}}</label>
+                        <label for="subject" translate>EMAIL.COMPOSE.SUBJECT</label>
                         <input ng-model="email.subject" name="subject" required>
                         <div ng-messages="emailForm.subject.$error">
                             <div ng-message when="required">
-                                {{'EMAIL.COMPOSE.VALIDATION.SUBJECT_REQUIRED' | translate}}
+                                <span translate>EMAIL.COMPOSE.VALIDATION.SUBJECT_REQUIRED</span>
                             </div>
                         </div>
                     </md-input-container>
@@ -81,8 +81,6 @@
     <div class="md-actions" layout="row">
         <text-angular-toolbar name="editor-toolbar" class="email-dialog-editor-toolbar" ta-toolbar-active-button-class="active"></text-angular-toolbar>
         <span flex></span>
-        <md-button ng-click="send()" class="md-primary" ng-disabled="emailForm.$invalid" aria-label="send">
-            {{'EMAIL.COMPOSE.SEND' | translate}}
-        </md-button>
+        <md-button ng-click="send()" class="md-primary" ng-disabled="emailForm.$invalid" aria-label="send" translate="EMAIL.COMPOSE.SEND"></md-button>
     </div>
 </md-dialog>

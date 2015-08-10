@@ -1,10 +1,8 @@
 <md-input-container>
-    <label for="subject">{{'EMAIL.COMPOSE.SUBJECT' | translate}}</label>
+    <label for="subject" translate>EMAIL.COMPOSE.SUBJECT</label>
     <input ng-model="email.subject" name="subject" required>
     <div ng-messages="emailForm.subject.$error">
-        <div ng-message when="required">
-            {{'EMAIL.COMPOSE.VALIDATION.SUBJECT_REQUIRED' | translate}}
-        </div>
+        <div ng-message when="required"><span translate>EMAIL.COMPOSE.VALIDATION.SUBJECT_REQUIRED</span></div>
     </div>
 </md-input-container>
 
