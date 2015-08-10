@@ -104,8 +104,11 @@
 - Added highlightjs to bower (fixes build error due to changes in angular-highlightjs)
 - Changed number of pages to total items in tables pagination (now reads 1-5 of 10) thanks Vasillis
 - Added new material background images and CSS classes
+- Added angular-material-data-table package
+- Added new LoaderService to allow controllers to turn loader on/off
+- Changed 404 & 500 background pages
 - NEW Added 30 extra material backgrounds
 - NEW Form Wizard
 - NEW Advanced Table Element
 - NEW Added GitHub access for buyers
-- Added new LoaderService to allow controllers to turn loader on/off
+

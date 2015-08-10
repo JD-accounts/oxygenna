@@ -24,6 +24,6 @@ angular.module('triAngular')
         scope: {
             breadcrumbs: '='
         },
-        template: '<span class="breadcrumb" hide-sm ng-repeat="breadcrumb in breadcrumbs" ng-show="breadcrumb.active" breadcrumb="breadcrumb"></span>',
+        template: '<span class="breadcrumb" hide-sm ng-repeat="breadcrumb in ::breadcrumbs" ng-show="breadcrumb.active" breadcrumb="breadcrumb"></span>',
     };
 });
