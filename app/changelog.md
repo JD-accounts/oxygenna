@@ -113,4 +113,4 @@
 - NEW Added GitHub access for buyers
 - Used one time binding and removal of watches to increase performance by 70%
 - Removed all usage of translate filter and replaced with directive (better performance)
-
+- Added Chinese and Portuguese translations

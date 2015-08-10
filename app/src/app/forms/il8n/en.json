@@ -11,6 +11,8 @@
     },
     "FORMS": {
         "WIZARD": {
+            "INTRO": "We have combined material tabs and form inputs to create an interactive form wizardController.  We have also added validation messages to all fields and prevented the user from completing a step in the wizard until it is valid.",
+            "COMPLETE": "Complete",
             "CREATE": "Account details",
             "YOUR-ADDRESS": "Your address",
             "YOUR-BILLING": "Billing details",

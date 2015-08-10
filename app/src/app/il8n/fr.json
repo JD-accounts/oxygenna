@@ -35,8 +35,10 @@
         }
     },
     "LANGUAGES": {
+        "CHINESE": "Chinois",
         "ENGLISH": "Anglais",
-        "FRENCH": "Français"
+        "FRENCH": "Français",
+        "PORTUGUESE": "Portugais"
     },
     "TABLES": {
         "NEXT": "Page Suivante",

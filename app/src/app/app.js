@@ -13,11 +13,17 @@ angular.module('triAngular', [
     logo: 'assets/images/logo.png',
     version: '1.4.0',
     languages: [{
+        name: 'LANGUAGES.CHINESE',
+        key: 'zh'
+    },{
         name: 'LANGUAGES.ENGLISH',
         key: 'en'
     },{
         name: 'LANGUAGES.FRENCH',
         key: 'fr'
+    },{
+        name: 'LANGUAGES.PORTUGUESE',
+        key: 'pt'
     }],
     defaultSkin: 'cyan-cloud'
 })
