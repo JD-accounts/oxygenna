@@ -11,6 +11,8 @@
     },
     "FORMS": {
         "WIZARD": {
+            "INTRO": "Nous avons combiné le matériel des onglets et des entrées d'un formulaire pour créer un formulaire interactif wizardController. Nous avons également ajouté des messages de validation à tous les domaines et a empêché l'utilisateur à partir de l'achèvement d'une étape de l'assistant jusqu'à ce qu'il est valide.",
+            "COMPLETE": "Complet",
             "CREATE": "Détails du compte",
             "YOUR-ADDRESS": "Votre adresse",
             "YOUR-BILLING": "Détails de facturation",

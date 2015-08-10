@@ -106,6 +106,7 @@
 - Added new material background images and CSS classes
 - Added angular-material-data-table package
 - Added new LoaderService to allow controllers to turn loader on/off
+- Update material angular to 0.10.1-rc5
 - Changed 404 & 500 background pages
 - NEW Added 30 extra material backgrounds
 - NEW Form Wizard

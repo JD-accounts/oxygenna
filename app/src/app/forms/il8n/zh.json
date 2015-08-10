@@ -11,6 +11,8 @@
     },
     "FORMS": {
         "WIZARD": {
+            "INTRO": "我们联合材料的监视和种形式的投入，以创造一个互动形式wizardController的。 我们还增加了一个验证的信息的所有领域，并阻碍用户完成的一个步骤的巫师才是有效的。",
+            "COMPLETE": "完成",
             "CREATE": "账户的详细情况",
             "YOUR-ADDRESS": "你的地址",
             "YOUR-BILLING": "账单详情",

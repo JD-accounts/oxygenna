@@ -11,6 +11,8 @@
     },
     "FORMS": {
         "WIZARD": {
+            "INTRO": "Nós combinamos de material de guias e de forma entradas para criar um formulário interativo wizardController. Nós também adicionamos as mensagens de validação para todos os campos e impediu que o usuário concluir uma etapa no assistente até que ela seja válida.",
+            "COMPLETE": "Completo",
             "CREATE": "Detalhes da conta",
             "YOUR-ADDRESS": "O seu endereço",
             "YOUR-BILLING": "Detalhes de faturamento",
