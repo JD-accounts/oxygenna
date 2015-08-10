@@ -24,10 +24,10 @@ angular.module('triAngularIntroduction', [])
         state: 'admin-panel.default.introduction',
         type: 'link',
         icon: 'icon-info-outline',
-        priority: 1.1
+        priority: 0.1
     });
     SideMenu.addMenu({
         type: 'divider',
-        priority: 1.2
+        priority: 0.2
     });
 });
