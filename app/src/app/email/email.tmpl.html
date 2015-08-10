@@ -3,14 +3,14 @@
         <md-toolbar class="toolbar-default" md-theme="{{triSkin.elements.toolbar}}">
             <div layout="row" layout-align="space-between start">
                 <div class="email-single-title" flex>
-                    <h3 class="md-title" flex>{{email.from.name}}</h3>
+                    <h3 class="md-title" flex>{{::email.from.name}}</h3>
                     <span class="md-subhead">
-                        {{'EMAIL.TO' | translate}}
+                        <span translate>EMAIL.TO</span>
                         <span ng-repeat="to in email.to">
-                            {{to.name}}<span ng-if="!$last">,</span>
+                            {{::to.name}}<span ng-if="!$last">,</span>
                         </span>
                     </span>
-                    <span class="md-body-2">{{email.subject}}</span>
+                    <span class="md-body-2">{{::email.subject}}</span>
                 </div>
                 <div layout="row" layout-align="space-between center">
                     <span class="md-caption" am-time-ago="email.date"></span>
@@ -22,32 +22,32 @@
                             <md-menu-item>
                                 <md-button ng-click="emailAction('EMAIL.REPLY')">
                                     <md-icon md-font-icon="icon-reply"></md-icon>
-                                    {{'EMAIL.REPLY' | translate}}
+                                    <span translate>EMAIL.REPLY</span>
                                 </md-button>
                             </md-menu-item>
                             <md-menu-item>
                                 <md-button ng-click="emailAction('EMAIL.REPLY_ALL')">
                                     <md-icon md-font-icon="icon-reply-all"></md-icon>
-                                    {{'EMAIL.REPLY_ALL' | translate}}
+                                    <span translate>EMAIL.REPLY_ALL</span>
                                 </md-button>
                             </md-menu-item>
                             <md-menu-item>
                                 <md-button ng-click="emailAction('EMAIL.FORWARD')">
                                     <md-icon md-font-icon="icon-forward"></md-icon>
-                                    {{'EMAIL.FORWARD' | translate}}
+                                    <span translate>EMAIL.FORWARD</span>
                                 </md-button>
                             </md-menu-item>
                             <md-menu-item>
                                 <md-button ng-click="delete(email)">
                                     <md-icon md-font-icon="icon-delete"></md-icon>
-                                    {{'EMAIL.DELETE' | translate}}
+                                    <span translate>EMAIL.DELETE</span>
                                 </md-button>
                             </md-menu-item>
                             <md-menu-divider></md-menu-divider>
                             <md-menu-item>
                                 <md-button ng-click="openlist()">
                                     <md-icon md-font-icon="icon-close"></md-icon>
-                                    {{'EMAIL.CLOSE' | translate}}
+                                    <span translate>EMAIL.CLOSE</span>
                                 </md-button>
                             </md-menu-item>
                         </md-menu-content>

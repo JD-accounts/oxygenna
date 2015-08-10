@@ -2,7 +2,7 @@
     <md-toolbar md-theme="{{triSkin.elements.content}}">
         <div class="md-toolbar-tools">
             <h2>
-                <span>{{'MENU.TODO.DIALOG.NEW' | translate}}</span>
+                <span translate>MENU.TODO.DIALOG.NEW</span>
             </h2>
         </div>
     </md-toolbar>
@@ -13,19 +13,19 @@
         <div>
             <form name="taskForm" novalidate>
                 <md-input-container>
-                    <label>{{'MENU.TODO.DIALOG.DESC' | translate}}</label>
+                    <label translate>MENU.TODO.DIALOG.DESC</label>
                     <input ng-model="item.description" class="dialog-close" name="task" required></input>
                     <div ng-messages="taskForm.task.$error">
                         <div ng-message when="required">
-                            {{'MENU.TODO.DIALOG.TASKFORM.PLEASE_ENTER' | translate}}
+                            <span translate>MENU.TODO.DIALOG.TASKFORM.PLEASE_ENTER</span>
                         </div>
                     </div>
                 </md-input-container>
                 <md-input-container>
                     <md-select placeholder="{{'MENU.TODO.DIALOG.PRIORITY' | translate}}" ng-model="item.priority">
-                        <md-option value="high">{{'MENU.TODO.DIALOG.HIGH' | translate}}</md-option>
-                        <md-option value="medium">{{'MENU.TODO.DIALOG.MEDIUM' | translate}}</md-option>
-                        <md-option value="low">{{'MENU.TODO.DIALOG.LOW' | translate}}</md-option>
+                        <md-option value="high" translate>MENU.TODO.DIALOG.HIGH</md-option>
+                        <md-option value="medium" translate>MENU.TODO.DIALOG.MEDIUM</md-option>
+                        <md-option value="low" translate>MENU.TODO.DIALOG.LOW</md-option>
                     </md-select>
                 </md-input-container>
             </form>

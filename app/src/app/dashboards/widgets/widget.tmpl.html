@@ -5,8 +5,8 @@
             <img ng-src="{{::avatar}}" class="widget-avatar"/>
         </div>
         <div flex layout="column">
-            <h3 class="md-subhead" ng-if="::title" ng-bind-html="title"></h3>
-            <p class="md-body-1" ng-if="::subtitle" ng-bind-html="subtitle"></p>
+            <h3 class="md-subhead" ng-if="::title" translate>{{::title}}</h3>
+            <p class="md-body-1" ng-if="::subtitle" translate>{{::subtitle}}</p>
         </div>
         <md-menu ng-if="::menu">
             <md-button class="widget-button md-icon-button" ng-click="$mdOpenMenu()">
@@ -16,7 +16,7 @@
                 <md-menu-item ng-repeat="item in ::menu.items">
                     <md-button ng-click="item.click($event)">
                         <md-icon ng-if="::item.icon" md-font-icon="{{::item.icon}}"></md-icon>
-                        {{::item.title | translate}}
+                        <span translate>{{::item.title}}</span>
                     </md-button>
                 </md-menu-item>
             </md-menu-content>

@@ -7,24 +7,24 @@
 
     <div layout="row" layout-align="space-around center">
         <md-select placeholder="{{'UI.SKINS.SKIN_CHOOSE' | translate}}" ng-model="selectedSkin" ng-change="updatePreview()">
-            <md-option ng-repeat="skin in skins" ng-value="skin">{{skin.name}}</md-option>
+            <md-option ng-repeat="skin in ::skins" ng-value="skin">{{::skin.name}}</md-option>
         </md-select>
-        <md-button class="md-primary md-raised" ng-click="trySkin()">{{'UI.SKINS.SKIN_TRY' | translate}}</md-button>
+        <md-button class="md-primary md-raised" ng-click="trySkin()" translate="UI.SKINS.SKIN_TRY"></md-button>
     </div>
 
     <div class="material-background mb-bg-08 padding-40" layout layout-align="center center">
         <div class="ui-skin-preview-window md-whiteframe-z5" flex="70" layout="column">
             <div layout="row">
                 <div flex="30" ng-style="{ 'background-color' : elementColors.logo }" class="padding-20 ui-skin-preview-window-logo">
-                    {{'UI.SKINS.ELEMENTS.LOGO' | translate}}
+                    <span translate>UI.SKINS.ELEMENTS.LOGO</span>
                 </div>
                 <div flex="70" ng-style="{ 'background-color' : elementColors.toolbar }" class="padding-20 ui-skin-preview-window-toolbar">
-                    {{'UI.SKINS.ELEMENTS.TOOLBAR' | translate}}
+                    <span translate>UI.SKINS.ELEMENTS.TOOLBAR</span>
                 </div>
             </div>
             <div flex layout="row">
                 <div flex="30" ng-style="{ 'background-color' : elementColors.sidebar }" class="padding-20 ui-skin-preview-window-sidebar">
-                    {{'UI.SKINS.ELEMENTS.SIDEBAR' | translate}}
+                    <span translate>UI.SKINS.ELEMENTS.SIDEBAR</span>
                 </div>
                 <md-content flex="70" layout="column"  layout-align="space-between start" class="padding-20 ui-skin-preview-window-content" md-content>
 

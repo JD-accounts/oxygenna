@@ -4,9 +4,9 @@
             <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="">
                 <md-tab label="{{'DASHBOARDS.SERVER.REAL_TIME' | translate}}">
                     <md-content class="md-padding">
-                        <h1 class="md-headline">{{'DASHBOARDS.SERVER.BANDWIDTH' | translate}} <span class="md-caption">(Mbps)</span></h1>
+                        <h1 class="md-headline"><span translate>DASHBOARDS.SERVER.BANDWIDTH</span> <span class="md-caption">(Mbps)</span></h1>
                         <canvas class="chart-line" data="serverCharts.bandwidth.data" labels="serverCharts.bandwidth.labels" legend="false" options="serverCharts.bandwidth.options" colours="serverCharts.bandwidth.colours"></canvas>
-                        <h1 class="md-headline">{{'DASHBOARDS.SERVER.CPU' | translate}} <span class="md-caption">(%)</span></h1>
+                        <h1 class="md-headline"><span translate>DASHBOARDS.SERVER.CPU</span> <span class="md-caption">(%)</span></h1>
                         <canvas class="chart-line" data="serverCharts.cpu.data" labels="serverCharts.cpu.labels" legend="false" options="serverCharts.cpu.options" colours="serverCharts.cpu.colours"></canvas>
                     </md-content>
                 </md-tab>
@@ -34,7 +34,7 @@
                 </div>
                 <div layout="column" layout-align="center end">
                     <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis">192.168.1.1</p>
-                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.IP' | translate}}</p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.SERVER.IP</p>
                 </div>
             </widget>
             <widget palette-background="cyan:600" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
@@ -43,7 +43,7 @@
                 </div>
                 <div layout="column" layout-align="center end">
                     <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis" countupto="2" decimals="0" options="{suffix: 'Gb'}"></p>
-                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.MEMORY' | translate}}</p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.SERVER.MEMORY</p>
                 </div>
             </widget>
             <widget palette-background="cyan:700" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
@@ -52,7 +52,7 @@
                 </div>
                 <div layout="column" layout-align="center end">
                     <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0" countupto="30" decimals="0" options="{suffix: 'Gb'}"></p>
-                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.DISK' | translate}}</p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.SERVER.DISK</p>
                 </div>
             </widget>
             <widget palette-background="cyan:800" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
@@ -61,14 +61,14 @@
                 </div>
                 <div layout="column" layout-align="center end">
                     <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0">London</p>
-                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0">{{'DASHBOARDS.SERVER.LOCATION' | translate}}</p>
+                    <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.SERVER.LOCATION</p>
                 </div>
             </widget>
         </div>
     </div>
 
     <div layout="row" layout-sm="column" layout-margin>
-        <widget flex="50" flex-sm="100" title="{{'DASHBOARDS.SERVER.DISKS' | translate}}">
+        <widget flex="50" flex-sm="100" title="DASHBOARDS.SERVER.DISKS">
             <md-divider></md-divider>
             <md-list>
                 <md-list-item ng-repeat="disk in ::disks">
@@ -79,7 +79,7 @@
                 </md-list-item>
             </md-list>
         </widget>
-        <widget flex title="{{'DASHBOARDS.SERVER.JOB' | translate}}" background="primary">
+        <widget flex title="DASHBOARDS.SERVER.JOB" background="primary">
             <md-divider></md-divider>
             <md-list>
                 <md-list-item class="md-2-line" ng-repeat="job in ::jobs">
@@ -97,49 +97,41 @@
     </div>
 
     <div layout="row" layout-sm="column" layout-margin>
-        <widget chartjs-pie-widget flex="40" flex-md="40" flex-sm="100" title="{{'DASHBOARDS.SERVER.DISKUSAGE' | translate}}" subtitle="{{'DASHBOARDS.SERVER.DATE' | translate}}" content-padding>
+        <widget chartjs-pie-widget flex="40" flex-md="40" flex-sm="100" title="DASHBOARDS.SERVER.DISKUSAGE" subtitle="DASHBOARDS.SERVER.DATE" content-padding>
             <div flex>
                 <canvas class="chart-doughnut full-width" data="serverChart.data" legend="true" labels="serverChart.labels"></canvas>
             </div>
         </widget>
-        <widget flex-sm="100" title="{{'DASHBOARDS.SERVER.USAGE' | translate}}" palette-background="cyan:600" content-layout="column" content-layout-align="start center">
+        <widget flex-sm="100" title="DASHBOARDS.SERVER.USAGE" palette-background="cyan:600" content-layout="column" content-layout-align="start center">
             <div class="full-width" layout="row" layout-padding>
-                <h4 flex="20" class="opacity-80 margin-0 margin-right-20">
-                    {{'DASHBOARDS.SERVER.DISK' | translate}}
-                </h4>
+                <h4 flex="20" class="opacity-80 margin-0 margin-right-20" translate>DASHBOARDS.SERVER.DISK</h4>
                 <div flex>
                     <md-progress-linear class="md-warn margin-bottom-10" md-mode="determinate" value="60"></md-progress-linear>
-                    <span class="md-caption">(60% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
+                    <span class="md-caption">(60% <span translate>DASHBOARDS.SERVER.LIMIT</span>)</span>
                 </div>
             </div>
             <md-divider flex></md-divider>
             <div class="full-width" layout="row" layout-padding>
-                <h4 flex="20" class="opacity-80 margin-0 margin-right-20">
-                    {{'DASHBOARDS.SERVER.BANDWIDTH' | translate}}
-                </h4>
+                <h4 flex="20" class="opacity-80 margin-0 margin-right-20" translate>DASHBOARDS.SERVER.BANDWIDTH</h4>
                 <div flex>
                     <md-progress-linear class="md-accent margin-bottom-10" md-mode="determinate" value="30"></md-progress-linear>
-                    <span class="md-caption">(30% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
+                    <span class="md-caption">(30% <span translate>DASHBOARDS.SERVER.LIMIT</span>)</span>
                 </div>
             </div>
             <md-divider flex></md-divider>
             <div class="full-width" layout="row" layout-padding>
-                <h4 flex="20" class="opacity-80 margin-0 margin-right-20">
-                    {{'DASHBOARDS.SERVER.USAGE' | translate}}
-                </h4>
+                <h4 flex="20" class="opacity-80 margin-0 margin-right-20" translate>DASHBOARDS.SERVER.USAGE</h4>
                 <div flex>
                     <md-progress-linear class="md-warn margin-bottom-10" md-mode="determinate" value="83"></md-progress-linear>
-                    <span class="md-caption">(83% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
+                    <span class="md-caption">(83% <span translate>DASHBOARDS.SERVER.LIMIT</span>)</span>
                 </div>
             </div>
             <md-divider flex></md-divider>
             <div class="full-width" layout="row" layout-padding>
-                <h4 flex="20" class="opacity-80 margin-0 margin-right-20">
-                    {{'DASHBOARDS.SERVER.MEMORY' | translate}}
-                </h4>
+                <h4 flex="20" class="opacity-80 margin-0 margin-right-20" translate>DASHBOARDS.SERVER.MEMORY</h4>
                 <div flex>
                     <md-progress-linear class="md-accent margin-bottom-10" md-mode="determinate" value="65"></md-progress-linear>
-                    <span class="md-caption">(65% {{'DASHBOARDS.SERVER.LIMIT' | translate}})</span>
+                    <span class="md-caption">(65% <span translate>DASHBOARDS.SERVER.LIMIT</span>)</span>
                 </div>
             </div>
         </widget>

@@ -20,7 +20,7 @@
                         <label translate>GITHUB.PURCHASE-CODE</label>
                         <input name="purchaseCode" ng-model="vm.data.purchaseCode" required>
                         <div ng-messages="githubForm.purchaseCode.$error">
-                            <div ng-message when="required">{{'GITHUB.PURCHASE-CODE-ERROR' | translate}}</div>
+                            <div ng-message when="required"><span translate>GITHUB.PURCHASE-CODE-ERROR</span></div>
                         </div>
                     </md-input-container>
                     <md-autocomplete
@@ -44,7 +44,7 @@
                             </div>
                         </md-item-template>
                         <div ng-messages="githubForm.githubUser.$error">
-                            <div ng-message when="required">{{'GITHUB.GITHUB-USER-ERROR' | translate}}</div>
+                            <div ng-message when="required"><span translate>GITHUB.GITHUB-USER-ERROR</span></div>
                         </div>
                     </md-autocomplete>
                 </form>
