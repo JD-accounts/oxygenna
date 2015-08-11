@@ -116,3 +116,8 @@
 - Used one time binding and removal of watches to increase performance by 70%
 - Removed all usage of translate filter and replaced with directive (better performance)
 - Added Chinese and Portuguese translations
+
+# Version ???
+> Release Date : ???
+
+- Fixed state in toolbars demo page (menu now ignores params on route)

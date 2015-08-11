@@ -53,8 +53,7 @@ angular.module('triAngular')
             ***/
 
             function isActive() {
-                var params = $scope.item.params === undefined ? {} : $scope.item.params;
-                return $state.includes($scope.item.state, params);
+                return $state.includes($scope.item.state);
             }
 
             // on first init check if we are the current menu item
@@ -75,6 +74,7 @@ angular.module('triAngular')
                 $scope.item.active = false;
                 $scope.item.open = false;
                 if(isActive()) {
+                    console.log($scope.item);
                     openMenu();
                 }
             });
