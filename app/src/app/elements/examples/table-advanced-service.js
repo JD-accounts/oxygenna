@@ -8,7 +8,7 @@
     Service.$inject = ['$http', '$q'];
 
     /* @ngInject */
-    function Service($http, $q) {
+    function Service($http) {
         this.getUsers = getUsers;
 
         ////////////////

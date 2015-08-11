@@ -16,10 +16,10 @@
 * ```
 */
 angular.module('triAngularDashboards')
-.directive('animateElements', function($timeout) {
+.directive('animateElements', function() {
     return {
         restrict: 'A',
-        link: function($scope, $element, attrs) {
+        link: function($scope, $element) {
             var $widgets  = [];
             var $dividers = [];
 

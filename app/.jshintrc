@@ -21,6 +21,7 @@
   "white": true,
   "validthis": true,
   "browser":true,
+  "-W034": true,
   "globals": {
     "angular": false,
     // Angular Mocks

@@ -6,8 +6,8 @@
         .controller('FormWizardController', FormWizardController);
 
     /* @ngInject */
-    function FormWizardController($scope) {
+    function FormWizardController() {
         var vm = this;
-        vm.data = {}
+        vm.data = {};
     }
 })();

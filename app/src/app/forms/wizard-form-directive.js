@@ -30,7 +30,7 @@
             // watch for form input changes and update the wizard progress
             element.on('input', function() {
                 triWizardCtrl.updateProgress();
-            })
+            });
         }
     }
 })();

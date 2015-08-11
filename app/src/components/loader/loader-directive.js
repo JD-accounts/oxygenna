@@ -37,7 +37,7 @@
         };
         return directive;
 
-        function link($scope, element, attrs) {
+        function link($scope) {
             $rootScope.$on('$viewContentLoading', function() {
                 $scope.vm.setLoaderActive(true);
             });

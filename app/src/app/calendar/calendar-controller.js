@@ -26,10 +26,10 @@ angular.module('triAngularCalendar')
             // update background image for month
             $scope.backgroundImage = 'assets/images/calendar/' + ($scope.currentDay.month()+1) + '.jpg';
         },
-        dayClick: function(date, jsEvent, view) {
+        dayClick: function(date, jsEvent, view) { // jshint ignore:line
             $scope.currentDay = date;
         },
-        eventClick: function(calEvent, jsEvent, view) {
+        eventClick: function(calEvent, jsEvent, view) { // jshint ignore:line
             $mdDialog.show({
                 controller: 'EventDialogController',
                 templateUrl: 'app/calendar/event-dialog.tmpl.html',

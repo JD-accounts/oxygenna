@@ -33,7 +33,7 @@ angular.module('triAngularDashboards')
                 items: [{
                     icon: 'icon-refresh',
                     title: 'DASHBOARDS.WIDGETS.MENU.REFRESH',
-                    click: function($event) {
+                    click: function() {
                         $interval.cancel($scope.intervalPromise);
                         widgetCtrl.setLoading(true);
                         $timeout(function() {

@@ -16,15 +16,15 @@
 * ```
 */
 angular.module('triAngularDashboards')
-.directive('replaceWith', function($timeout) {
-    return {        
+.directive('replaceWith', function() {
+    return {
         restrict: 'A',
-        link: function (scope, element, attrs) {           
+        link: function (scope, element, attrs) {
             attrs.$observe('replaceWith', function(value) {
                 if (value) {
-                    element.replaceWith(value == undefined ? '' : value);
-                }  
-            }); 
+                    element.replaceWith(value === undefined ? '' : value);
+                }
+            });
         }
     };
 });

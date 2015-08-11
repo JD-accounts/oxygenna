@@ -73,7 +73,7 @@
                     totalErrors = calculateErrors();
                     removeWatch();
                 }
-            })
+            });
         }
 
         function updateProgress() {

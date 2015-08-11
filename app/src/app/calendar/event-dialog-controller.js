@@ -65,7 +65,7 @@ angular.module('triAngularCalendar')
     $scope.delete = function() {
         event.deleteMe = true;
         $mdDialog.hide(event);
-    }
+    };
 
     $scope.allDayChanged = function() {
         // if all day turned on and event already saved we need to create a new date

@@ -73,5 +73,5 @@ controller('DashboardSocialController', function ($scope) {
         user: 'DesignerDepot',
         date: moment().subtract(7, 'days'),
         tweet: 'Semantic UI 2.0: Design beautiful websites quicker http://depot.ly/Pq6oC'
-    }]
+    }];
 });
