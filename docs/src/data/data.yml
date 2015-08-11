@@ -66,6 +66,9 @@ topmenu:
         name: Rest Server
         slug: rest-server
     -
+        name: Tutorials
+        slug: videos
+    -
         name: Changelog
         slug: changelog
     -

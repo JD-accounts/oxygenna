@@ -26,7 +26,7 @@ Support is limited to questions regarding the template’s features or problems 
 
 # Getting Support
 
-<i class="fa fa-support"></i> Before creating a new ticket, please make sure that you have read our <a target="_blank" href="/index.html">Documentation</a> and watched our <a target="_blank" href="/videos.html">Video Tutorials</a>.
+<i class="fa fa-support"></i> Before creating a new ticket, please make sure that you have read our <a target="_blank" href="/index.html">Documentation</a> and watched our <a target="_blank" href="videos.html">Video Tutorials</a>.
 
 Also, search our <a target="_blank" href="https://oxygenna.ticksy.com/">forum</a> for similar topics.
 
