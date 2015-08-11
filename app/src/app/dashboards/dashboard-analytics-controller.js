@@ -9,7 +9,7 @@
  *
  */
 angular.module('triAngularDashboards').
-controller('DashboardAnalyticsController', function ($scope, $timeout, $mdToast, $rootScope) {        
+controller('DashboardAnalyticsController', function ($scope, $timeout, $mdToast, $rootScope) {
     $timeout(function() {
         $rootScope.$broadcast('newMailNotification');
         $mdToast.show({
@@ -22,8 +22,8 @@ controller('DashboardAnalyticsController', function ($scope, $timeout, $mdToast,
 })
 
 .controller('ToastCtrl', function($scope, $mdToast, $state) {
-    $scope.viewUnread = function() {        
-        $state.go('admin-panel-no-scroll.email.inbox');
+    $scope.viewUnread = function() {
+        $state.go('admin-panel-email-no-scroll.email.inbox');
     };
 });
 
