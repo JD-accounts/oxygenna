@@ -74,7 +74,6 @@ angular.module('triAngular')
                 $scope.item.active = false;
                 $scope.item.open = false;
                 if(isActive()) {
-                    console.log($scope.item);
                     openMenu();
                 }
             });
