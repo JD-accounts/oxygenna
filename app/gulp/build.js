@@ -10,8 +10,8 @@ var $ = require('gulp-load-plugins')({
 
 gulp.task('partials', function () {
   return gulp.src([
-    paths.src + '/{app,components}/**/*.html',
-    paths.tmp + '/{app,components}/**/*.html'
+    paths.src + '/{app,triangular,components}/**/*.html',
+    paths.tmp + '/{app,triangular,components}/**/*.html'
   ])
     .pipe($.if(function(file) {
         return $.match(file, ['!**/examples/*.html']);
@@ -23,7 +23,8 @@ gulp.task('partials', function () {
       }))
     )
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
-      module: 'triAngular'
+      module: 'triAngular',
+      root: 'app'
     }))
     .pipe(gulp.dest(paths.tmp + '/partials/'));
 });

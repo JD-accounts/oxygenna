@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('triAngular', [
+    'triangular',
     // inject angular modules
     'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngMaterial',
     // inject extra 3rd party angular modules
@@ -33,7 +34,25 @@ angular.module('triAngular', [
 /**
  *  SETUP TRANSLATIONS
  */
-.config(function ($stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider, APP) {
+.config(function (triSettingsProvider, $stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider, APP) {
+    console.log(triSettingsProvider);
+
+    triSettingsProvider.addLanguage({
+        name: 'LANGUAGES.CHINESE',
+        key: 'zh'
+    });
+    triSettingsProvider.addLanguage({
+        name: 'LANGUAGES.ENGLISH',
+        key: 'en'
+    });
+    triSettingsProvider.addLanguage({
+        name: 'LANGUAGES.FRENCH',
+        key: 'fr'
+    });
+    triSettingsProvider.addLanguage({
+        name: 'LANGUAGES.PORTUGUESE',
+        key: 'pt'
+    });
     /**
      *  each module loads its own translation file - making it easier to create translations
      *  also translations are not loaded when they aren't needed
@@ -400,7 +419,8 @@ angular.module('triAngular', [
         responsive: true,
     });
 })
-.run(function ($rootScope, $window) {
+.run(function ($rootScope, $window, triSettings) {
+    console.log('triSettings', triSettings.languages)
     // add a class to the body if we are on windows
     if($window.navigator.platform.indexOf('Win') !== -1) {
         $rootScope.bodyClasses = ['os-windows'];
