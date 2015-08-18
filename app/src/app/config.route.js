@@ -9,15 +9,15 @@
     function routeConfig($stateProvider, $urlRouterProvider) {
         // Setup the apps routes
 
-        $stateProvider
-        .state('triangular.admin-default.test-page', {
-            url: '/',
-            templateUrl: 'app/test/test.tmpl.html',
-        });
+        // $stateProvider
+        // .state('triangular.admin-default.test-page', {
+        //     url: '/',
+        //     templateUrl: 'app/test/test.tmpl.html',
+        // });
 
         // set default routes when no path specified
-        $urlRouterProvider.when('', '/');
-        $urlRouterProvider.when('/', '/');
+        $urlRouterProvider.when('', '/introduction');
+        $urlRouterProvider.when('/', '/introduction');
 
         // always goto 404 if route not found
         $urlRouterProvider.otherwise('/404');

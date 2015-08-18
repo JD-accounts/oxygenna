@@ -1,4 +1,12 @@
+// OLD APP CSS WILL BE REMOVED
+
+
+
 'use strict';
+
+// add old modules here to keep things running for now
+angular.module('triAngularAuthentication', []);
+
 
 angular.module('triAngular', [
     'triangular',

@@ -13,7 +13,7 @@ gulp.task('styles', function () {
   };
 
   var injectFiles = gulp.src([
-    paths.src + '/{app,triangular,components}/**/*.scss',
+    paths.src + '/app/**/*.scss',
     '!' + paths.src + '/app/app.scss',
     '!' + paths.src + '/app/**/_*.scss'
   ], { read: false });

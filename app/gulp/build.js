@@ -10,8 +10,8 @@ var $ = require('gulp-load-plugins')({
 
 gulp.task('partials', function () {
   return gulp.src([
-    paths.src + '/{app,triangular,components}/**/*.html',
-    paths.tmp + '/{app,triangular,components}/**/*.html'
+    paths.src + '/app/**/*.html',
+    paths.tmp + '/app/**/*.html'
   ])
     .pipe($.if(function(file) {
         return $.match(file, ['!**/examples/*.html']);

@@ -1,11 +1,11 @@
 // Side menu
-side-menu {
+tri-menu {
   overflow-y: auto;
   z-index: 1;
 }
 
 /* Style for scrollbar on webkit browsers in windows - looks nice already on other operating systems ;) */
-.os-windows side-menu {
+.os-windows tri-menu {
   &::-webkit-scrollbar {
     width: 8px;
     background: rgba(0,0,0,0.1);
