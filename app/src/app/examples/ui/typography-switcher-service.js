@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('triAngularUI')
+angular.module('app.examples.ui')
 .service('TypographySwitcher', function($window, $cookies, UI_FONTS) {
     var service = {
         init: function() {
@@ -16,7 +16,7 @@ angular.module('triAngularUI')
             if(undefined === fontCookie) {
                 $cookies.put('tri-typography-font', angular.toJson(UI_FONTS[0]));
             }
-                        
+
             return angular.fromJson($cookies.get('tri-typography-font'));
         },
         changeFont: function(font) {

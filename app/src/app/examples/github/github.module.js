@@ -2,6 +2,6 @@
     'use strict';
 
     angular
-        .module('triAngularGithub', [
+        .module('app.examples.github', [
         ]);
 })();
