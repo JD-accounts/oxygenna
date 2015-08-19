@@ -33,14 +33,18 @@
     }
 
     /* @ngInject */
-    function triMenuController(triMenu, $scope) {
+    function triMenuController(triMenu, $scope, $filter, $state) {
         var triMenuController = this;
 
-        triMenuController.menu = triMenu.menu;
-        triMenuController.toggleMenu = toggleMenu;
+        // get the menu and order it
+        triMenuController.menu = $filter('orderBy')(triMenu.menu, 'priority');
+        triMenuController.openLink = openLink;
 
-        function toggleMenu() {
-            $scope.$broadcast('toggleMenu', this.item, !this.item.open);
+        function openLink(menuItem) {
+            // if we dont have any default params for this state just use empty object
+            var params = menuItem.params === undefined ? {} : menuItem.params;
+            $state.go(menuItem.state, params);
+            $scope.$broadcast('openLink', menuItem.state);
         }
     }
 })();

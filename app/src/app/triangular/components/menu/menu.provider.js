@@ -18,7 +18,7 @@
         }
 
         // Service
-        this.$get = function($filter) {
+        this.$get = function() {
             return {
                 menu: menu
             };
