@@ -25,7 +25,7 @@
             'A200': 'ffffff',
             'A400': 'ffffff',
             'A700': 'ffffff',
-            'contrastDefaultColor': 'dark',    // whether, by default, text (contrast)
+            'contrastDefaultColor': 'dark'
         });
 
         $mdThemingProvider.definePalette('black', {
@@ -43,7 +43,7 @@
             'A200': 'ffffff',
             'A400': 'ffffff',
             'A700': 'ffffff',
-            'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
+            'contrastDefaultColor': 'light'
         });
 
         /**
@@ -59,7 +59,7 @@
         triThemingProvider.theme('white-cyan')
         .primaryPalette('white')
         .accentPalette('cyan', {
-          'default': '500'
+            'default': '500'
         })
         .warnPalette('deep-orange');
 
@@ -78,7 +78,7 @@
         triThemingProvider.theme('white-red')
         .primaryPalette('white')
         .accentPalette('red', {
-          'default': '500'
+            'default': '500'
         })
         .warnPalette('purple');
 
@@ -97,7 +97,7 @@
         triThemingProvider.theme('white-purple')
         .primaryPalette('white')
         .accentPalette('purple', {
-          'default': '400'
+            'default': '400'
         })
         .warnPalette('deep-orange');
 
@@ -129,7 +129,7 @@
         triThemingProvider.theme('white-blue-grey')
         .primaryPalette('white')
         .accentPalette('blue-grey', {
-          'default': '400'
+            'default': '400'
         })
         .warnPalette('orange');
 
@@ -142,7 +142,7 @@
         // ZESTY ORANGE SKIN
         triThemingProvider.theme('orange')
         .primaryPalette('orange' , {
-          'default': '800'
+            'default': '800'
         })
         .accentPalette('lime')
         .warnPalette('amber');
@@ -150,7 +150,7 @@
         triThemingProvider.theme('white-orange')
         .primaryPalette('white')
         .accentPalette('orange', {
-          'default': '500'
+            'default': '500'
         })
         .warnPalette('lime');
 
@@ -164,7 +164,7 @@
         // INDIGO ISLAND SKIN
         triThemingProvider.theme('indigo')
         .primaryPalette('indigo' , {
-          'default': '600'
+            'default': '600'
         })
         .accentPalette('red')
         .warnPalette('lime');
@@ -178,7 +178,7 @@
         // KERMIT GREEN SKIN
         triThemingProvider.theme('light-green')
         .primaryPalette('light-green' , {
-          'default': '400'
+            'default': '400'
         })
         .accentPalette('amber')
         .warnPalette('deep-orange');
@@ -186,7 +186,7 @@
         triThemingProvider.theme('white-light-green')
         .primaryPalette('white')
         .accentPalette('light-green', {
-          'default': '400'
+            'default': '400'
         })
         .warnPalette('deep-orange');
 

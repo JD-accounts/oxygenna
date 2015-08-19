@@ -121,3 +121,16 @@
 > Release Date : ???
 
 - Fixed state in toolbars demo page (menu now ignores params on route)
+
+
+# Version 2.0.0
+> Release Date : ????
+
+- Code style changed to match https://github.com/johnpapa/angular-styleguide
+- Triangular moved into a module to make it easier to drop the code into existing apps or creating new ones
+- More modular structure
+- Authentication Module: Error messages now only show when input has been changed
+- Authentication Module: All pages now use site wide logo and name
+
+- Glup: Replaced JSHint with ESLint and ESLint Angular Plugin
+- Gulp: Stopped debug server crash when js has syntax error

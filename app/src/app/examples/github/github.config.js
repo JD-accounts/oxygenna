@@ -10,16 +10,16 @@
         $translatePartialLoaderProvider.addPart('app/examples/github');
 
         $stateProvider
-        .state('admin-panel.default.github', {
+        .state('triangular.admin-default.github', {
             url: '/github',
-            templateUrl: 'app/github/github.tmpl.html',
+            templateUrl: 'app/examples/github/github.tmpl.html',
             controller: 'GithubController',
             controllerAs: 'vm'
         });
 
         triMenuProvider.addMenu({
             name: 'MENU.GITHUB.GITHUB',
-            state: 'admin-panel.default.github',
+            state: 'triangular.admin-default.github',
             type: 'link',
             icon: 'fa fa-github',
             priority: 1.1

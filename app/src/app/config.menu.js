@@ -6,7 +6,7 @@
         .config(menuConfig);
 
     /* @ngInject */
-    function menuConfig(triMenuProvider) {
+    function menuConfig() {
         // TODO add test menu here
         // triMenuProvider.addMenu({
         //     name: 'MENU.ELEMENTS.ELEMENTS',

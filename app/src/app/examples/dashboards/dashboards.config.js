@@ -10,27 +10,27 @@
         $translatePartialLoaderProvider.addPart('app/examples/dashboards');
 
         $stateProvider
-        .state('admin-panel.default.dashboard-general', {
+        .state('triangular.admin-default.dashboard-general', {
             url: '/dashboards/general',
-            templateUrl: 'app/dashboards/dashboard-general.tmpl.html',
+            templateUrl: 'app/examples/dashboards/dashboard-general.tmpl.html',
         })
-        .state('admin-panel.default.dashboard-analytics', {
+        .state('triangular.admin-default.dashboard-analytics', {
             url: '/dashboards/analytics',
-            templateUrl: 'app/dashboards/dashboard-analytics.tmpl.html',
-            controller: 'DashboardAnalyticsController',
+            templateUrl: 'app/examples/dashboards/dashboard-analytics.tmpl.html',
+            // controller: 'DashboardAnalyticsController',
         })
-        .state('admin-panel.default.dashboard-server', {
+        .state('triangular.admin-default.dashboard-server', {
             url: '/dashboards/server',
-            controller: 'DashboardServerController',
-            templateUrl: 'app/dashboards/dashboard-server.tmpl.html',
+            // controller: 'DashboardServerController',
+            templateUrl: 'app/examples/dashboards/dashboard-server.tmpl.html',
         })
-        .state('admin-panel.default.dashboard-widgets', {
+        .state('triangular.admin-default.dashboard-widgets', {
             url: '/dashboards/widgets',
-            templateUrl: 'app/dashboards/widgets.tmpl.html',
+            templateUrl: 'app/examples/dashboards/widgets.tmpl.html',
         })
-        .state('admin-panel.default.dashboard-social', {
+        .state('triangular.admin-default.dashboard-social', {
             url: '/dashboards/social',
-            templateUrl: 'app/dashboards/dashboard-social.tmpl.html',
+            templateUrl: 'app/examples/dashboards/dashboard-social.tmpl.html',
             controller: 'DashboardSocialController'
         });
 
@@ -41,23 +41,23 @@
             priority: 2.1,
             children: [{
                 name: 'MENU.DASHBOARDS.ANALYTICS',
-                state: 'admin-panel.default.dashboard-analytics',
+                state: 'triangular.admin-default.dashboard-analytics',
                 type: 'link',
             },{
                 name: 'MENU.DASHBOARDS.GENERAL',
-                state: 'admin-panel.default.dashboard-general',
+                state: 'triangular.admin-default.dashboard-general',
                 type: 'link',
             },{
                 name: 'MENU.DASHBOARDS.SERVER',
-                state: 'admin-panel.default.dashboard-server',
+                state: 'triangular.admin-default.dashboard-server',
                 type: 'link',
             },{
                 name: 'MENU.DASHBOARDS.WIDGETS',
-                state: 'admin-panel.default.dashboard-widgets',
+                state: 'triangular.admin-default.dashboard-widgets',
                 type: 'link',
             },{
                 name: 'MENU.DASHBOARDS.SOCIAL',
-                state: 'admin-panel.default.dashboard-social',
+                state: 'triangular.admin-default.dashboard-social',
                 type: 'link',
             }]
         });
