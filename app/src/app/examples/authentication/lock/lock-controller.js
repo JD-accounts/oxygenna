@@ -1,33 +1,27 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name LoginCtrl
- * @module triangular.authentication
- * @kind function
- *
- * @description
- *
- * Handles lock screen login
- *
- */
-angular.module('triAngularAuthentication')
-.controller('LockController', function ($scope, $state) {
-    $scope.user = {
-        name: 'Morris Onions',
-        email: 'info@oxygenna.com',
-        password: ''
-    };
+    angular
+        .module('app.examples.authentication')
+        .controller('LockController', LockController);
 
-    // controller to handle login check
-    $scope.loginClick = function() {
-        // user logged in ok so goto the dashboard
-        $state.go('admin-panel.default.dashboard-general');
-    };
+    /* @ngInject */
+    function LockController($state, triSettings) {
+        var vm = this;
+        vm.loginClick = loginClick;
+        vm.user = {
+            name: 'Morris Onions',
+            email: 'info@oxygenna.com',
+            password: ''
+        };
+        vm.triSettings = triSettings;
 
+        ////////////////
 
-    $scope.logoutClick = function() {
-        // go back to login screen
-        $state.go('public.auth.login');
-    };
-});
+        // controller to handle login check
+        function loginClick() {
+            // user logged in ok so goto the dashboard
+            $state.go('triangular.admin-default.dashboard-general');
+        }
+    }
+})();

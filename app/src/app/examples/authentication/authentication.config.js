@@ -17,27 +17,32 @@
         .state('authentication.login', {
             url: '/login',
             templateUrl: 'app/examples/authentication/login/login.tmpl.html',
-            controller: 'LoginController'
+            controller: 'LoginController',
+            controllerAs: 'vm'
         })
         .state('authentication.signup', {
             url: '/signup',
             templateUrl: 'app/examples/authentication/signup/signup.tmpl.html',
-            controller: 'SignupController'
+            controller: 'SignupController',
+            controllerAs: 'vm'
         })
         .state('authentication.lock', {
             url: '/lock',
             templateUrl: 'app/examples/authentication/lock/lock.tmpl.html',
-            controller: 'LockController'
+            controller: 'LockController',
+            controllerAs: 'vm'
         })
         .state('authentication.forgot', {
             url: '/forgot',
             templateUrl: 'app/examples/authentication/forgot/forgot.tmpl.html',
-            controller: 'ForgotController'
+            controller: 'ForgotController',
+            controllerAs: 'vm'
         })
-        .state('admin-panel.default.profile', {
+        .state('triangular.admin-default.profile', {
             url: '/profile',
             templateUrl: 'app/examples/authentication/profile/profile.tmpl.html',
-            controller: 'ProfileController'
+            controller: 'ProfileController',
+            controllerAs: 'vm'
         });
 
         triMenuProvider.addMenu({
@@ -63,7 +68,7 @@
                 type: 'link',
             },{
                 name: 'MENU.AUTH.PROFILE',
-                state: 'admin-panel.default.profile',
+                state: 'triangular.admin-default.profile',
                 type: 'link',
             }]
         });
