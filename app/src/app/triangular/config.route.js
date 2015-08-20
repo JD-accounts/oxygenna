@@ -23,17 +23,18 @@
                     controllerAs: 'menuController'
                 },
                 sidebarRight: {
-                    templateUrl: 'app/triangular/components/sidebar-right/sidebar-right.tmpl.html',
+                    templateUrl: 'app/triangular/components/sidebar-right/sidebar-right.tmpl.html'
                     // controller: 'SidebarRightController'
                 },
                 toolbar: {
                     templateUrl: 'app/triangular/components/toolbars/default.tmpl.html',
-                    // controller: 'DefaultToolbarController'
+                    controller: 'DefaultToolbarController',
+                    controllerAs: 'toolbarController'
                 },
                 content: {
                     template: '<div id="admin-panel-content-view" flex ui-view></div>'
                 }
-            },
+            }
         });
     }
 })();

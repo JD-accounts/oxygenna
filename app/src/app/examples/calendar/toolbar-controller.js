@@ -11,7 +11,7 @@
  * Handles all actions for email toolbar
  */
 
-angular.module('triAngularCalendar')
+angular.module('app.examples.calendar')
 .controller('CalendarToolbarController', function ($scope, $state, $element, $mdUtil, $mdSidenav, uiCalendarConfig) {
     $scope.views = [{
         name: 'CALENDAR.TOOLBAR.VIEWS.MONTH',

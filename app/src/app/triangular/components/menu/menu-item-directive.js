@@ -19,23 +19,15 @@
             },
             // replace: true,
             template: '<div ng-include="::triMenuItem.item.template"></div>',
-            link: link,
             controller: triMenuItemController,
             controllerAs: 'triMenuItem',
             bindToController: true
         };
         return directive;
-
-        function link($scope, $element, attr, triMenuController) {
-            // give menu item access to main triMenuController
-            $scope.triMenuItem.openLink = triMenuController.openLink;
-        }
     }
 
-
-    function triMenuItemController($scope, $state, $filter) {
+    function triMenuItemController($scope, $state, $filter, triBreadcrumbs) {
         var triMenuItem = this;
-
         // load a template for this directive based on the type ( link | dropdown )
         triMenuItem.item.template = 'app/triangular/components/menu/menu-item-' + triMenuItem.item.type + '.tmpl.html';
 
@@ -58,35 +50,46 @@
                 $scope.$on('openParents', function() {
                     // openParents event so open the parent item
                     triMenuItem.item.open = true;
+                    // also add this to the breadcrumbs
+                    triBreadcrumbs.addCrumb(triMenuItem.item);
                 });
-            break;
+                break;
             case 'link':
+                triMenuItem.openLink = openLink;
+
                 // on init check if this is current menu
-                if(triMenuItem.item.state === $state.current.name) {
-                    // this is the current menu so activate it and open parent menus
-                    triMenuItem.item.active = true;
-                    $scope.$emit('openParents');
-                }
+                checkItemActive($state.current.name, $state.params);
 
-                $scope.$on('openLink', function(event, state) {
-                    // if this is the item we are looking for
-                    triMenuItem.item.active = triMenuItem.item.state === state;
-                    if(triMenuItem.item.active) {
-                        $scope.$emit('openParents');
-                    }
+                $scope.$on('$stateChangeSuccess', function(event, toState, toParams) {
+                    checkItemActive(toState.name, toParams);
                 });
+                break;
+        }
 
-                $scope.$on('$stateChangeSuccess', function(event, toState) {
-                    triMenuItem.item.active = triMenuItem.item.state === toState.name;
-                    if(triMenuItem.item.active) {
-                        $scope.$emit('openParents');
-                    }
-                });
-            break;
-
-            function toggleDropdownMenu() {
-                $scope.$parent.$parent.$broadcast('toggleDropdownMenu', triMenuItem.item, !triMenuItem.item.open);
+        function checkItemActive(toStateName, toParams) {
+            // first check if the state is the same
+            triMenuItem.item.active = triMenuItem.item.state === toStateName;
+            // next if we are active and have params check them as well
+            if(triMenuItem.item.active && angular.isDefined(triMenuItem.item.params)) {
+                triMenuItem.item.active = angular.equals(triMenuItem.item.params, toParams);
             }
+            // if we are now the active item reset the breadcrumbs and open all parent dropdown items
+            if(triMenuItem.item.active) {
+                triBreadcrumbs.reset();
+                triBreadcrumbs.addCrumb(triMenuItem.item);
+                $scope.$emit('openParents');
+            }
+        }
+
+        function toggleDropdownMenu() {
+            $scope.$parent.$parent.$broadcast('toggleDropdownMenu', triMenuItem.item, !triMenuItem.item.open);
+        }
+
+        function openLink() {
+            var params = angular.isUndefined(triMenuItem.item.params) ? {} : triMenuItem.item.params;
+            $state.go(triMenuItem.item.state, params);
+            triMenuItem.item.active = true;
+            $scope.$emit('openParents');
         }
     }
 })();

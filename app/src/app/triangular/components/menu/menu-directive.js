@@ -17,11 +17,11 @@
             scope: {},
             controller: triMenuController,
             controllerAs: 'triMenuController',
-            link: link,
+            link: link
         };
         return directive;
 
-        function link($scope, $element, attrs) {
+        function link($scope, $element) {
             $mdTheming($element);
             var $mdTheme = $element.controller('mdTheme');
 
@@ -33,18 +33,9 @@
     }
 
     /* @ngInject */
-    function triMenuController(triMenu, $scope, $filter, $state) {
+    function triMenuController(triMenu, $scope, $filter) {
         var triMenuController = this;
-
         // get the menu and order it
         triMenuController.menu = $filter('orderBy')(triMenu.menu, 'priority');
-        triMenuController.openLink = openLink;
-
-        function openLink(menuItem) {
-            // if we dont have any default params for this state just use empty object
-            var params = menuItem.params === undefined ? {} : menuItem.params;
-            $state.go(menuItem.state, params);
-            $scope.$broadcast('openLink', menuItem.state);
-        }
     }
 })();

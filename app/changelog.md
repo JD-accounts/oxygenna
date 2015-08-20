@@ -134,3 +134,5 @@
 
 - Glup: Replaced JSHint with ESLint and ESLint Angular Plugin
 - Gulp: Stopped debug server crash when js has syntax error
+
+- Breadcrumbs: New faster breadcrumbs
