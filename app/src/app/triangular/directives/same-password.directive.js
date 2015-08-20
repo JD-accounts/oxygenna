@@ -26,7 +26,7 @@
             link: link,
             scope: {
                 triSamePassword: '='
-            },
+            }
         };
         return directive;
 

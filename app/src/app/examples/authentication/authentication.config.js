@@ -12,7 +12,7 @@
         $stateProvider
         .state('authentication', {
             abstract: true,
-            templateUrl: 'app/examples/authentication/layouts/authentication.tmpl.html',
+            templateUrl: 'app/examples/authentication/layouts/authentication.tmpl.html'
         })
         .state('authentication.login', {
             url: '/login',

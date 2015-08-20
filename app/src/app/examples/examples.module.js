@@ -16,6 +16,6 @@
             'app.examples.maps',
             'app.examples.menulevels',
             'app.examples.todo',
-            'app.examples.ui',
+            'app.examples.ui'
         ]);
 })();

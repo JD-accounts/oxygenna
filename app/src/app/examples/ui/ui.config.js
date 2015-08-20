@@ -13,12 +13,12 @@
         .state('admin-panel.default.ui-typography', {
             url: '/ui/typography',
             controller: 'TypographyController',
-            templateUrl: 'app/ui/typography.tmpl.html',
+            templateUrl: 'app/ui/typography.tmpl.html'
         })
         .state('admin-panel.default.ui-colors', {
             url: '/ui/colors',
             controller: 'ColorsController',
-            templateUrl: 'app/ui/colors.tmpl.html',
+            templateUrl: 'app/ui/colors.tmpl.html'
         })
         .state('admin-panel.default.ui-material-icons', {
             url: '/ui/material-icons',
@@ -28,7 +28,7 @@
                 icons: function($http, API_CONFIG) {
                     return $http({
                         method: 'GET',
-                        url: API_CONFIG.url + 'elements/icons',
+                        url: API_CONFIG.url + 'elements/icons'
                     });
                 }
             }
@@ -46,7 +46,7 @@
                 icons: function($http, API_CONFIG) {
                     return $http({
                         method: 'GET',
-                        url: API_CONFIG.url + 'elements/icons-fa',
+                        url: API_CONFIG.url + 'elements/icons-fa'
                     });
                 }
             }
@@ -72,19 +72,19 @@
             children: [{
                 name: 'MENU.UI.COLORS',
                 state: 'admin-panel.default.ui-colors',
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.UI.FONT_AWESOME',
                 state: 'admin-panel.default.ui-fa-icons',
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.UI.MATERIAL_ICONS',
                 state: 'admin-panel.default.ui-material-icons',
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.UI.SKINS',
                 state: 'admin-panel.default.ui-skins',
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.UI.TOOLBAR',
                 state: 'admin-panel.default.ui-toolbar',
@@ -93,15 +93,15 @@
                     background: 'off',
                     shrink: 'on'
                 },
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.UI.TYPOGRAPHY',
                 state: 'admin-panel.default.ui-typography',
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.UI.WEATHER_ICONS',
                 state: 'admin-panel.default.ui-weather-icons',
-                type: 'link',
+                type: 'link'
             }]
         });
     }
