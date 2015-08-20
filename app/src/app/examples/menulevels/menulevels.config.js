@@ -7,13 +7,14 @@
 
     /* @ngInject */
     function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/authentication');
+        $translatePartialLoaderProvider.addPart('app/examples/menulevels');
 
         $stateProvider
-        .state('admin-panel.default.menu-levels', {
+        .state('triangular.admin-default.menu-levels', {
             url: '/menu-levels/:level',
             controller: 'LevelController',
-            templateUrl: 'app/menulevels/level.tmpl.html',
+            controllerAs: 'vm',
+            templateUrl: 'app/examples/menulevels/level.tmpl.html'
         });
 
         triMenuProvider.addMenu({
@@ -33,21 +34,21 @@
                         children: [{
                             name: 'MENU.LEVELS.4-1',
                             type: 'link',
-                            state: 'admin-panel.default.menu-levels',
+                            state: 'triangular.admin-default.menu-levels',
                             params: {
                                 level: 'Item1-1-1-1'
                             }
                         },{
                             name: 'MENU.LEVELS.4-2',
                             type: 'link',
-                            state: 'admin-panel.default.menu-levels',
+                            state: 'triangular.admin-default.menu-levels',
                             params: {
                                 level: 'Item1-1-1-2'
                             }
                         },{
                             name: 'MENU.LEVELS.4-3',
                             type: 'link',
-                            state: 'admin-panel.default.menu-levels',
+                            state: 'triangular.admin-default.menu-levels',
                             params: {
                                 level: 'Item1-1-1-3'
                             }
