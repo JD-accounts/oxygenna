@@ -20,16 +20,17 @@
                 sidebarLeft: {
                     templateUrl: 'app/triangular/components/menu/menu.tmpl.html',
                     controller: 'MenuController',
-                    controllerAs: 'menuController'
+                    controllerAs: 'vm'
                 },
                 sidebarRight: {
-                    templateUrl: 'app/triangular/components/sidebar-right/sidebar-right.tmpl.html'
-                    // controller: 'SidebarRightController'
+                    templateUrl: 'app/triangular/components/notifications-panel/notifications-panel.tmpl.html',
+                    controller: 'NotificationsPanelController',
+                    controllerAs: 'vm'
                 },
                 toolbar: {
                     templateUrl: 'app/triangular/components/toolbars/default.tmpl.html',
                     controller: 'DefaultToolbarController',
-                    controllerAs: 'toolbarController'
+                    controllerAs: 'vm'
                 },
                 content: {
                     template: '<div id="admin-panel-content-view" flex ui-view></div>'

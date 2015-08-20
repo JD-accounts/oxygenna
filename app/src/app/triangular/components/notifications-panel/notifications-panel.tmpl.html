@@ -1,5 +1,5 @@
 <md-content flex layout class="admin-notifications">
-    <md-tabs flex md-stretch-tabs="always" md-selected="notificationsTab">
+    <md-tabs flex layout-fill md-stretch-tabs="always" md-selected="vm.currentTab">
         <md-tab>
             <md-tab-label>
                 <md-icon md-font-icon="icon-email"></md-icon>
@@ -7,7 +7,7 @@
             <md-tab-body>
                 <md-content>
                     <md-list>
-                        <md-list-item class="md-3-line" ng-repeat="email in ::emails" ng-click="openMail(email)">
+                        <md-list-item class="md-3-line" ng-repeat="email in ::vm.emails" ng-click="vm.openMail(email)">
                             <img class="md-avatar animate" ng-src="{{::email.from.image}}" alt="{{::email.from.name}}">
                             <div class="md-list-item-text">
                                 <div class="email-inbox-list-item-name-time" layout="row" layout-align="space-between start">
@@ -29,7 +29,7 @@
             <md-tab-body>
                 <md-content>
                     <md-list>
-                        <div ng-repeat="group in ::notificationGroups">
+                        <div ng-repeat="group in ::vm.notificationGroups">
                             <md-subheader class="md-primary">{{::group.name}}</md-subheader>
                             <md-list-item ng-repeat="notification in ::group.notifications" layout="row" layout-align="space-between center">
                                 <md-icon md-font-icon="{{::notification.icon}}" ng-style="{ color: notification.iconColor }"></md-icon>
@@ -48,7 +48,7 @@
             <md-tab-body>
                 <md-content>
                     <md-list>
-                        <div ng-repeat="group in ::settingsGroups">
+                        <div ng-repeat="group in ::vm.settingsGroups">
                             <md-subheader class="md-primary"><span translate>{{::group.name}}</span></md-subheader>
                             <md-list-item ng-repeat="setting in ::group.settings" layout="row" layout-align="space-around center">
                                 <md-icon md-font-icon="{{::setting.icon}}"></md-icon>
@@ -56,7 +56,7 @@
                                 <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch>
                             </md-list-item>
                         </div>
-                        <div ng-repeat="group in statisticsGroups">
+                        <div ng-repeat="group in ::vm.statisticsGroups">
                             <md-subheader class="md-primary"><span translate>{{::group.name}}</span></md-subheader>
                             <md-list-item ng-repeat="stat in ::group.stats" layout="column" layout-align="space-around start">
                                 <p translate>{{::stat.title}}</p>

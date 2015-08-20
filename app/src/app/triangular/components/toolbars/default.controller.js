@@ -6,70 +6,65 @@
         .controller('DefaultToolbarController', DefaultToolbarController);
 
     /* @ngInject */
-    function DefaultToolbarController($scope, $rootScope, $translate, $state, $element, $mdUtil, $mdSidenav, $timeout, triBreadcrumbs) {
+    function DefaultToolbarController($scope, $rootScope, $translate, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, triBreadcrumbs, triSettings) {
         var vm = this;
         vm.breadcrumbs = triBreadcrumbs.breadcrumbs;
+        vm.languages = triSettings.languages;
+        vm.openSideNav = openSideNav;
+        vm.switchLanguage = switchLanguage;
+        vm.toggleNotificationsTab = toggleNotificationsTab;
 
-        $scope.toolbarTypeClass = function() {
-            return $scope.extraClass;
-        };
+        // vm.toolbarTypeClass = function() {
+        //     return $scope.extraClass;
+        // }
 
-        $scope.$on('$stateChangeStart', initToolbar);
+        // $scope.$on('$stateChangeStart', initToolbar);
 
-        function initToolbar() {
-            $element.css('background-image', '');
+        // function initToolbar() {
+        //     $element.css('background-image', '');
 
-            if($state.current.data !== undefined) {
-                if($state.current.data.toolbar !== undefined) {
-                    if($state.current.data.toolbar.extraClass !== false) {
-                        $scope.extraClass = $state.current.data.toolbar.extraClass;
-                    }
+        //     if($state.current.data !== undefined) {
+        //         if($state.current.data.toolbar !== undefined) {
+        //             if($state.current.data.toolbar.extraClass !== false) {
+        //                 $scope.extraClass = $state.current.data.toolbar.extraClass;
+        //             }
 
-                    if($state.current.data.toolbar.background) {
-                        $element.css('background-image', 'url(' + $state.current.data.toolbar.background + ')');
-                    }
-                }
-            }
-        }
+        //             if($state.current.data.toolbar.background) {
+        //                 $element.css('background-image', 'url(' + $state.current.data.toolbar.background + ')');
+        //             }
+        //         }
+        //     }
+        // }
 
-        initToolbar();
+        // initToolbar();
 
-        $scope.switchLanguage = function(languageCode) {
-            $translate.use(languageCode).then(function() {
-            });
-        };
+        ////////////////
 
-        $scope.openSideNav = function(navID) {
+        function openSideNav(navID) {
             $mdUtil.debounce(function(){
                 $mdSidenav(navID).toggle();
             }, 300)();
-        };
+        }
 
-        $scope.toggleNotificationsTab = function(tab) {
+        function switchLanguage(languageCode) {
+            $translate.use(languageCode)
+            .then(function() {
+                $mdToast.show(
+                    $mdToast.simple()
+                    .content($filter('translate')('MESSAGES.LANGUAGE_CHANGED'))
+                    .position('bottom right')
+                    .hideDelay(500)
+                );
+            });
+        }
+
+        function toggleNotificationsTab(tab) {
             $scope.$parent.$broadcast('triSwitchNotificationTab', tab);
-            $scope.openSideNav('notifications');
-        };
-
-        $scope.profile = function() {
-            $state.go('admin-panel.default.profile');
-        };
-
-        $scope.logout = function() {
-            $state.go('authentication.login');
-        };
+            vm.openSideNav('notifications');
+        }
 
         $scope.$on('newMailNotification', function(){
             $scope.emailNew = true;
         });
-
-        // until we can get languages from angular-translate use APP constant
-        // $scope.languages = APP.languages;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-        }
     }
 })();
