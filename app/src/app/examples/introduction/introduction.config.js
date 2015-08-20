@@ -15,7 +15,8 @@
         .state('triangular.admin-default.introduction', {
             url: '/introduction',
             templateUrl: 'app/examples/introduction/introduction.tmpl.html',
-            // controller: 'IntroductionController'
+            controller: 'IntroductionController',
+            controllerAs: 'vm'
         });
 
         // add menu to triangular
