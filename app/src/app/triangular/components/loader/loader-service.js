@@ -2,8 +2,8 @@
     'use strict';
 
     angular
-        .module('triAngular')
-        .service('LoaderService', LoaderService);
+        .module('triangular.components')
+        .service('triLoader', LoaderService);
 
     /* @ngInject */
     function LoaderService() {
