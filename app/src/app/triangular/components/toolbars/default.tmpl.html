@@ -2,7 +2,13 @@
     <md-button class="md-icon-button" hide-gt-md ng-click="openSideNav('left')" aria-label="side navigation">
         <md-icon md-font-icon="icon-menu"></md-icon>
     </md-button>
-    <h2 flex breadcrumbs="menu"></h2>
+
+    <h2 flex>
+        <span ng-repeat="crumb in toolbarController.breadcrumbs.crumbs">
+            <span translate>{{crumb.name}}</span>
+            <md-icon md-font-icon="icon-chevron-right" ng-if="!$last">
+        </span>
+    </h2>
 
     <md-menu>
         <md-button class="md-icon-button" aria-label="language" ng-click="$mdOpenMenu()" aria-label="change language">
