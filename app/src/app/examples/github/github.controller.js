@@ -2,17 +2,17 @@
     'use strict';
 
     angular
-        .module('triAngularGithub')
+        .module('app.examples.github')
         .controller('GithubController', GithubController);
 
     /* @ngInject */
-    function GithubController($http, $mdToast, LoaderService) {
+    function GithubController($http, $mdToast, triLoader) {
         var oxygennaAPIUrl = 'http://api.oxygenna.com';
         var vm = this;
         vm.data = {
             id: '11711437',
             purchaseCode: '',
-            githubUser: '',
+            githubUser: ''
         };
         vm.register = register;
         vm.userSearch = userSearch;
@@ -22,17 +22,17 @@
         ////////////////
 
         function register() {
-            LoaderService.setLoaderActive(true);
+            triLoader.setLoaderActive(true);
 
             $http.put(oxygennaAPIUrl + '/register-github-access', vm.data).
             then(function() {
                 // everything went ok
-                LoaderService.setLoaderActive(false);
+                triLoader.setLoaderActive(false);
                 popAToast('Success!  Check your GitHub email for your invite.');
             }, function(response) {
                 // something went wrong
-                LoaderService.setLoaderActive(false);
-                if(response.data.error !== undefined) {
+                triLoader.setLoaderActive(false);
+                if(angular.isDefined(response.data.error)) {
                     popAToast(response.data.error);
                 }
             });
