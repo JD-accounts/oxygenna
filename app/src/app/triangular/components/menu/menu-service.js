@@ -2,10 +2,10 @@
 
 angular.module('triAngular')
 .service('SideMenu', function() {
-    var menu = [];    
+    var menu = [];
 
     function traverse(obj, callback, depth) {
-        depth = depth === undefined ? -1 : depth;
+        depth = angular.isUndefined(depth) ? -1 : depth;
 
         if (obj instanceof Array) {
             depth++;
@@ -14,7 +14,7 @@ angular.module('triAngular')
             }
         } else {
             callback(obj, depth);
-            if(obj.children !== undefined) {
+            if(angular.isDefined(obj.children)) {
                 traverse(obj.children, callback, depth);
             }
         }

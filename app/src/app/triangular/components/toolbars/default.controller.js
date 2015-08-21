@@ -9,6 +9,7 @@
     function DefaultToolbarController($scope, $mdMedia, $translate, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, triBreadcrumbs, triSettings, triLayout) {
         var vm = this;
         vm.breadcrumbs = triBreadcrumbs.breadcrumbs;
+        vm.emailNew = false;
         vm.languages = triSettings.languages;
         vm.openSideNav = openSideNav;
         vm.hideMenuButton = hideMenuButton;
@@ -69,7 +70,7 @@
         }
 
         $scope.$on('newMailNotification', function(){
-            $scope.emailNew = true;
+            vm.emailNew = true;
         });
     }
 })();

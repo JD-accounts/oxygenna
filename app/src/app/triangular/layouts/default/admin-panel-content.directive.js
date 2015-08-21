@@ -34,8 +34,6 @@
                     var linkFn = $compile(template);
                     var content = linkFn($scope);
                     contentView.append(content);
-                }, function() {
-                    console.error('Could not load footer tempalate');
                 });
             });
         }
