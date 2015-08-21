@@ -1,0 +1,19 @@
+{
+    "MENU": {
+        "LAYOUTS": {
+            "TITLE": "Layouts",
+            "COMPOSER": "Composer"
+        }
+    },
+    "EXAMPLES": {
+        "LAYOUTS": {
+            "OPTIONS": {
+                "SIDEMENUSIZES": {
+                    "HIDDEN": "Hidden",
+                    "ICONS": "Icons",
+                    "FULL": "Full Size"
+                }
+            }
+        }
+    }
+}

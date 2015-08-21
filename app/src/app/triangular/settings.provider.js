@@ -12,22 +12,16 @@
             languages: [],
             name: '',
             logo: '',
-            version: '',
-            defaultSkin: ''
+            version: ''
         };
 
         this.addLanguage = addLanguage;
-        this.setDefaultSkin = setDefaultSkin;
         this.setLogo = setLogo;
         this.setName = setName;
         this.setVersion = setVersion;
 
         function addLanguage(newLanguage) {
             settings.languages.push(newLanguage);
-        }
-
-        function setDefaultSkin(defaultSkin) {
-            settings.defaultSkin = defaultSkin;
         }
 
         function setLogo(logo) {

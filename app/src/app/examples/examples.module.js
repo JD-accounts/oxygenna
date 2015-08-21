@@ -13,6 +13,7 @@
             'app.examples.forms',
             'app.examples.github',
             'app.examples.introduction',
+            'app.examples.layouts',
             'app.examples.maps',
             'app.examples.menulevels',
             'app.examples.todo',

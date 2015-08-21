@@ -6,11 +6,12 @@
         .controller('DefaultToolbarController', DefaultToolbarController);
 
     /* @ngInject */
-    function DefaultToolbarController($scope, $rootScope, $translate, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, triBreadcrumbs, triSettings) {
+    function DefaultToolbarController($scope, $mdMedia, $translate, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, triBreadcrumbs, triSettings, triLayout) {
         var vm = this;
         vm.breadcrumbs = triBreadcrumbs.breadcrumbs;
         vm.languages = triSettings.languages;
         vm.openSideNav = openSideNav;
+        vm.hideMenuButton = hideMenuButton;
         vm.switchLanguage = switchLanguage;
         vm.toggleNotificationsTab = toggleNotificationsTab;
 
@@ -56,6 +57,10 @@
                     .hideDelay(500)
                 );
             });
+        }
+
+        function hideMenuButton() {
+            return triLayout.layout.sideMenuSize !== 'hidden' && $mdMedia('gt-md');
         }
 
         function toggleNotificationsTab(tab) {

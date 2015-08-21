@@ -11,8 +11,8 @@
         .state('triangular', {
             abstract: true,
             templateUrl: 'app/triangular/layouts/default/default.tmpl.html',
-            controller: 'AdminController',
-            controllerAs: 'adminController'
+            controller: 'DefaultLayoutController',
+            controllerAs: 'layoutController'
         })
         .state('triangular.admin-default', {
             abstract: true,
