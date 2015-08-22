@@ -6,15 +6,12 @@
 
 // add old modules here to keep things running for now
 angular.module('triAngularAuthentication', []);
-angular.module('triAngularCalendar', []);
 angular.module('triAngularCharts', []);
 angular.module('triAngularDashboards', []);
 angular.module('triAngularElements', []);
 angular.module('triAngularEmail', []);
 angular.module('triAngularExtras', []);
 angular.module('triAngularForms', []);
-angular.module('triAngularGithub', []);
-angular.module('triAngularIntroduction', []);
 angular.module('triAngularMaps', []);
 angular.module('triAngularTodo', []);
 angular.module('triAngularUI', []);
