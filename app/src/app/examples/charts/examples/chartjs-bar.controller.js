@@ -3,18 +3,15 @@
 
     angular
         .module('app.examples.charts')
-        .controller('ChartJsLineController', ChartJsLineController);
+        .controller('ChartJsBarController', ChartJSBarController);
 
     /* @ngInject */
-    function ChartJsLineController($interval) {
+    function ChartJSBarController($interval) {
         var vm = this;
         vm.labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-        vm.series = ['Series A', 'Series B', 'Series C'];
-        vm.options = {
-            datasetFill: false
-        };
+        vm.series = ['Series A', 'Series B'];
 
-        ///////////
+        /////////
 
         function randomData() {
             vm.data = [];

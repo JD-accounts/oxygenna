@@ -7,18 +7,18 @@
         <md-tab label="example">
             <md-content class="padding-40">
                 <md-card>
-                    <md-card-content ng-controller="GoogleChartsLineController" ng-include="'app/charts/examples/google-line.tmpl.html'"></md-card-content>
+                    <md-card-content ng-controller="GoogleChartsLineController as vm" ng-include="'app/examples/charts/examples/google-line.tmpl.html'"></md-card-content>
                 </md-card>
             </md-content>
         </md-tab>
         <md-tab label="HTML">
             <md-content>
-                <div flex hljs language="html" include="'app/charts/examples/google-line.tmpl.html'"></div>
+                <div flex hljs language="html" include="'app/examples/charts/examples/google-line.tmpl.html'"></div>
             </md-content>
         </md-tab>
         <md-tab label="JS">
             <md-content>
-                <div flex hljs language="javascript" include="'app/charts/examples/google-line-controller.js'"></div>
+                <div flex hljs language="javascript" include="'app/examples/charts/examples/google-line.controller.js'"></div>
             </md-content>
         </md-tab>
     </md-tabs>
