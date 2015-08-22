@@ -15,3 +15,13 @@
 .event-dialog-form-color-option .md-text {
   text-transform: capitalize;
 }
+
+md-select[md-container-class="calendar-color-select"] md-select-value span {
+  text-transform: capitalize;
+}
+
+.calendar-color-select {
+  md-option {
+    text-transform: capitalize;
+  }
+}

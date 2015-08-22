@@ -1,25 +1,27 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc filter
- * @name padding
- * @module triAngularCalendar
- * @kind filter
- *
- * Adds number padding to an integer
- */
-angular.module('triAngularCalendar')
-.filter('padding', function () {
-    return function (n, len) {
-        var num = parseInt(n, 10);
-        len = parseInt(len, 10);
-        if (isNaN(num) || isNaN(len)) {
-            return n;
+    angular
+        .module('app.examples.calendar')
+        .filter('padding', padding);
+
+    function padding() {
+        return paddingFilter;
+
+        ////////////////
+
+        function paddingFilter(n, len) {
+            var num = parseInt(n, 10);
+            len = parseInt(len, 10);
+            if (isNaN(num) || isNaN(len)) {
+                return n;
+            }
+            num = ''+num;
+            while (num.length < len) {
+                num = '0'+num;
+            }
+            return num;
         }
-        num = ''+num;
-        while (num.length < len) {
-            num = '0'+num;
-        }
-        return num;
-    };
-});
+    }
+
+})();
