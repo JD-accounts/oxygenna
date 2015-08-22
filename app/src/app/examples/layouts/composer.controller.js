@@ -10,7 +10,6 @@
         var vm = this;
         vm.changeOption = changeOption;
         vm.sideMenuSize = triLayout.getOption('sideMenuSize');
-        console.log(vm.sideMenuSize)
         vm.options = {
             sideMenuSizes: {
                 'hidden': 'EXAMPLES.LAYOUTS.OPTIONS.SIDEMENUSIZES.HIDDEN',
@@ -22,7 +21,6 @@
         ////////////////
 
         function changeOption(optionName) {
-            console.log(optionName, vm[optionName]);
             triLayout.setOption(optionName, vm[optionName]);
         }
     }

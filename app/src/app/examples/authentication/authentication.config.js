@@ -53,23 +53,23 @@
             children: [{
                 name: 'MENU.AUTH.LOGIN',
                 state: 'authentication.login',
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.AUTH.SIGN_UP',
                 state: 'authentication.signup',
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.AUTH.FORGOT',
                 state: 'authentication.forgot',
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.AUTH.LOCK',
                 state: 'authentication.lock',
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.AUTH.PROFILE',
                 state: 'triangular.admin-default.profile',
-                type: 'link',
+                type: 'link'
             }]
         });
     }
