@@ -12,7 +12,7 @@
 *
 * @usage
 * ```html
-* <widget calendar-widget></widget>
+* <tri-widget calendar-widget></tri-widget>
 * ```
 */
 angular.module('triAngularDashboards')

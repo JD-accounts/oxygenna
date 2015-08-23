@@ -12,7 +12,7 @@
 *
 * @usage
 * ```html
-* <widget todo-widget></widget>
+* <tri-widget todo-widget>
 * ```
 */
 angular.module('triAngularDashboards')

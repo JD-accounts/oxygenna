@@ -12,7 +12,7 @@
 *
 * @usage
 * ```html
-* <widget chartjs-line-widget>
+* <tri-widget chartjs-line-widget>
 * ```
 */
 angular.module('triAngularDashboards')

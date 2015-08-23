@@ -12,7 +12,7 @@
 *
 * @usage
 * ```html
-* <widget google-geochart-widget></widget>
+* <tri-widget google-geochart-widget></tri-widget>
 * ```
 */
 angular.module('triAngularDashboards')

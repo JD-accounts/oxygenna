@@ -12,7 +12,7 @@
 *
 * @usage
 * ```html
-* <widget weather-widget="London"></widget>
+* <tri-widget weather-widget="London"></tri-widget>
 * ```
 */
 angular.module('triAngularDashboards')
@@ -28,7 +28,7 @@ angular.module('triAngularDashboards')
 
             $http.get(url).
             success(function(data) {
-                if(data.query.count > 0) {                    
+                if(data.query.count > 0) {
                     widgetCtrl.setLoading(false);
                     $scope.weather = {
                         iconClass: 'wi-yahoo-' + data.query.results.channel.item.condition.code,

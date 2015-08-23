@@ -1,30 +1,30 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name themeBackground
-* @restrict A
-* @scope
-*
-* @description
-*
-* Adds a theme colour and contrast CSS to an element
-*
-* @usage
-* ```html
-* <div md-theme="cyan" theme-background="primary|accent|warn|background:default|hue-1|hue-2|hue-3">Coloured content</div>
-* ```
-*/
-angular.module('triAngular')
-.directive('themeBackground', function ($mdTheming, triTheming) {
-    return {
-        restrict: 'A',
-        link: function ($scope, $element, attrs) {
+    angular
+        .module('triangular.directives')
+        .directive('themeBackground', themeBackground);
+
+    /* @ngInject */
+    function themeBackground($mdTheming, triTheming) {
+        // Usage:
+        // ```html
+        // <div md-theme="cyan" theme-background="primary|accent|warn|background:default|hue-1|hue-2|hue-3">Coloured content</div>
+        // ```
+        // Creates:
+        //
+        var directive = {
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link($scope, $element, attrs) {
             $mdTheming($element);
 
             // make sure we have access to the theme
             var $mdTheme = $element.controller('mdTheme');
-            if(undefined !== $mdTheme) {
+            if(angular.isDefined($mdTheme)) {
                 var intent = attrs.themeBackground;
                 var hue = 'default';
 
@@ -36,7 +36,7 @@ angular.module('triAngular')
                 }
                 // get the color and apply it to the element
                 var color = triTheming.getThemeHue($mdTheme.$mdTheme, intent, hue);
-                if(color !== undefined) {
+                if(angular.isDefined(color)) {
                     $element.css({
                         'background-color': triTheming.rgba(color.value),
                         'border-color': triTheming.rgba(color.value),
@@ -45,5 +45,5 @@ angular.module('triAngular')
                 }
             }
         }
-    };
-});
+    }
+})();

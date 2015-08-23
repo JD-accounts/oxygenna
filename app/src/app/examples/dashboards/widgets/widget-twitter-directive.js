@@ -12,7 +12,7 @@
 *
 * @usage
 * ```html
-* <widget twitter-todo></widget>
+* <tri-widget twitter-todo></tri-widget>
 * ```
 */
 angular.module('triAngularDashboards')

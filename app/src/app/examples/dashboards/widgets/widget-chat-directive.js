@@ -12,7 +12,7 @@
 *
 * @usage
 * ```html
-* <widget chat-widget></widget>
+* <tri-widget chat-widget></tri-widget>
 * ```
 */
 angular.module('triAngularDashboards')

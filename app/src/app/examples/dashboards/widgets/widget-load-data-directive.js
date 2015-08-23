@@ -12,7 +12,7 @@
 *
 * @usage
 * ```html
-* <widget load-data-widget="{ variableName: urlOfJSONData }"></widget>
+* <tri-widget load-data-widget="{ variableName: urlOfJSONData }"></tri-widget>
 * ```
 */
 angular.module('triAngularDashboards')

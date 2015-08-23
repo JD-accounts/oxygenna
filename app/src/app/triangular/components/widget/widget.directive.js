@@ -1,45 +1,39 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name widget
-* @restrict E
-* @scope
-*
-* @description
-*
-* Creates a dashboard widget
-*
-* @usage
-* ```html
-* <widget title="'Nice Title'" subtitle="'Subtitle'" avatar="http://myavatar.jpg" title-position="top|bottom|left|right" content-padding overlay-title>content here</widget>
-* ```
-*/
-angular.module('triAngularDashboards')
-.directive('widget', function($mdTheming) {
-    return {
-        restrict: 'E',
-        templateUrl: 'app/dashboards/widgets/widget.tmpl.html',
-        transclude: true,
-        replace: true,
-        scope: {
-            title: '@',
-            subtitle: '@',
-            avatar: '@'
-        },
-        controller: function($scope) {
-            $scope.menu = null;
-            $scope.loading = false;
+    angular
+        .module('triangular.components')
+        .directive('triWidget', widget);
 
-            this.setMenu = function(menu) {
-                $scope.menu = menu;
-            };
+    /* @ngInject */
+    function widget ($mdTheming) {
+        // Usage:
+        //
+        // ```html
+        // <widget title="'Nice Title'" subtitle="'Subtitle'" avatar="http://myavatar.jpg" title-position="top|bottom|left|right" content-padding overlay-title>content here</widget>
+        // ```
 
-            this.setLoading = function(loading) {
-                $scope.loading = loading;
-            };
-        },
-        link: function($scope, $element, attrs) {
+        // Creates:
+        //
+        // Widget for use in dashboards
+        var directive = {
+            restrict: 'E',
+            templateUrl: 'app/triangular/components/widget/widget.tmpl.html',
+            transclude: true,
+            replace: true,
+            scope: {
+                title: '@',
+                subtitle: '@',
+                avatar: '@'
+            },
+            bindToController: true,
+            controller: Controller,
+            controllerAs: 'vm',
+            link: link
+        };
+        return directive;
+
+        function link($scope, $element, attrs) {
             // set the value of the widget layout attribute
             $scope.widgetLayout = attrs.titlePosition === 'left' || attrs.titlePosition === 'right' ? 'row' : 'column';
             // set the layout attribute for the widget content
@@ -53,7 +47,7 @@ angular.module('triAngularDashboards')
             $scope.contentOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 1 : 2;
             // set if we overlay the title on top of the widget content
             $scope.overlayTitle = attrs.overlayTitle === undefined ? undefined : true;
-
+            console.log($element);
             $mdTheming($element);
 
             if(attrs.class !== undefined) {
@@ -70,5 +64,20 @@ angular.module('triAngularDashboards')
                 }
             };
         }
-    };
-});
+    }
+
+    /* @ngInject */
+    function Controller () {
+        var vm = this;
+        vm.menu = null;
+        vm.loading = false;
+
+        this.setMenu = function(menu) {
+            vm.menu = menu;
+        };
+
+        this.setLoading = function(loading) {
+            vm.loading = loading;
+        };
+    }
+})();
