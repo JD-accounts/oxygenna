@@ -47,7 +47,7 @@
             $scope.contentOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 1 : 2;
             // set if we overlay the title on top of the widget content
             $scope.overlayTitle = attrs.overlayTitle === undefined ? undefined : true;
-            console.log($element);
+
             $mdTheming($element);
 
             if(attrs.class !== undefined) {
