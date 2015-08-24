@@ -9,7 +9,7 @@
     function layoutProvider() {
         // Provider
         var layout = {
-            sideMenuSize: 'full',
+            sideMenuSize: 'full'
         };
 
         this.getOption = getOption;

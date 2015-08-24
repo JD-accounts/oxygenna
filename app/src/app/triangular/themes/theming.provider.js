@@ -11,7 +11,7 @@
 
         return {
             theme: function(name) {
-                if(themes[name] !== undefined ) {
+                if(angular.isDefined(themes[name])) {
                     return themes[name];
                 }
 
@@ -28,9 +28,9 @@
                         return themes[themeName];
                     },
                     getThemeHue: function(themeName, intentName, hue) {
-                        if(undefined !== $mdThemingProvider._THEMES[themeName] && undefined !== $mdThemingProvider._THEMES[themeName].colors[intentName]) {
+                        if(angular.isDefined($mdThemingProvider._THEMES[themeName]) && angular.isDefined($mdThemingProvider._THEMES[themeName].colors[intentName])) {
                             var palette = $mdThemingProvider._THEMES[themeName].colors[intentName];
-                            if(undefined !== $mdThemingProvider._PALETTES[palette.name] && undefined !== $mdThemingProvider._PALETTES[palette.name][palette.hues[hue]]) {
+                            if(angular.isDefined($mdThemingProvider._PALETTES[palette.name]) && angular.isDefined($mdThemingProvider._PALETTES[palette.name][palette.hues[hue]])) {
                                 return $mdThemingProvider._PALETTES[palette.name][palette.hues[hue]];
                             }
                         }
@@ -39,14 +39,14 @@
                         return $mdThemingProvider._PALETTES[name];
                     },
                     getPaletteColor: function(paletteName, hue) {
-                        if(undefined !== $mdThemingProvider._PALETTES[paletteName] && undefined !== $mdThemingProvider._PALETTES[paletteName][hue]) {
+                        if(angular.isDefined($mdThemingProvider._PALETTES[paletteName]) && angular.isDefined($mdThemingProvider._PALETTES[paletteName][hue])) {
                             return $mdThemingProvider._PALETTES[paletteName][hue];
                         }
                     },
                     rgba: $mdThemingProvider._rgba,
                     palettes: $mdThemingProvider._PALETTES,
                     themes: $mdThemingProvider._THEMES,
-                    parseRules: $mdThemingProvider._parseRules,
+                    parseRules: $mdThemingProvider._parseRules
                 };
             }
         };
@@ -65,7 +65,7 @@
                     name: paletteName,
                     hues: {}
                 };
-                if(undefined !== hues) {
+                if(angular.isDefined(hues)) {
                     self.colors[colorType].hues = hues;
                 }
                 return self;
@@ -74,7 +74,7 @@
 
         self.dark = function(isDark) {
             // default setting when dark() is called is true
-            self.isDark = isDark === undefined ? true : isDark;
+            self.isDark = angular.isUndefined(isDark) ? true : isDark;
         };
     }
 })();

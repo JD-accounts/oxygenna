@@ -14,7 +14,8 @@
 // get the triangular seed module
 angular.module('triSeedModule')
 // create a controller for the seed page and inject the scope directive
-.controller('SeedPageController', function ($scope) {
+.controller('SeedPageController', function () {
+    var vm = this;
     // add some test data to the scope
-    $scope.testData = ['triangular', 'is', 'great'];
+    vm.testData = ['triangular', 'is', 'great'];
 });

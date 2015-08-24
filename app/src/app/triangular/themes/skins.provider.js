@@ -14,7 +14,7 @@
 
         return {
             skin: function(id, name) {
-                if(skins[id] !== undefined ) {
+                if(angular.isDefined(skins[id])) {
                     return skins[id];
                 }
 
@@ -25,8 +25,7 @@
                 return skins[id];
             },
             setSkin: function(id) {
-                if(skins[id] === undefined) {
-                    console.error('No such skin as ' + id);
+                if(angular.isUndefined(skins[id])) {
                     return;
                 }
 
@@ -42,9 +41,9 @@
                     }]);
                     // if we have a cookie set then override the currentSkin
                     var triangularSkin = $cookies.get('triangular-skin');
-                    if(triangularSkin !== undefined) {
+                    if(angular.isDefined(triangularSkin)) {
                         var cookieTheme = angular.fromJson(triangularSkin);
-                        currentSkin = skins[cookieTheme.skin] !== undefined ? skins[cookieTheme.skin] : skins[0];
+                        currentSkin = angular.isDefined(skins[cookieTheme.skin]) ? skins[cookieTheme.skin] : skins[0];
                     }
                 }
 
