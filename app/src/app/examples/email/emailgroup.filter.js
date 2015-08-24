@@ -9,7 +9,7 @@
  * Filters emails into groups like Yesterday, Last Week, etx
  */
 
-angular.module('triAngularEmail')
+angular.module('app.examples.email')
 .filter('emailGroup', function() {
     return function(emails, emailGroup) {
         return emails.filter(function(email) {

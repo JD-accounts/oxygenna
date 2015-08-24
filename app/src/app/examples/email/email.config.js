@@ -5,17 +5,17 @@
         .module('app.examples.email')
         .config(moduleConfig)
         .constant('EMAIL_ROUTES', [{
-            state: 'admin-panel-email-no-scroll.email.inbox',
+            state: 'triangular.admin-default.email-inbox',
             name: 'MENU.EMAIL.INBOX',
             url: '/email/inbox',
             icon: 'icon-inbox'
         },{
-            state: 'admin-panel-email-no-scroll.email.trash',
+            state: 'triangular.admin-default.email-trash',
             name: 'MENU.EMAIL.TRASH',
             url: '/email/trash',
             icon: 'icon-remove-circle'
         },{
-            state: 'admin-panel-email-no-scroll.email.sent',
+            state: 'triangular.admin-default.email-sent',
             name: 'MENU.EMAIL.SENT',
             url: '/email/sent',
             icon: 'icon-mail'
@@ -58,7 +58,7 @@
             $stateProvider
             .state(route.state, {
                 url: route.url,
-                templateUrl: 'app/email/inbox.tmpl.html',
+                templateUrl: 'app/examples/email/inbox.tmpl.html',
                 controller: 'InboxController',
                 resolve: {
                     emails: function($http, API_CONFIG) {
@@ -81,7 +81,7 @@
             $stateProvider
             .state(route.state + '.email', {
                 url: '/mail/:emailID',
-                templateUrl: 'app/email/email.tmpl.html',
+                templateUrl: 'app/examples/email/email.tmpl.html',
                 controller: 'EmailController',
                 resolve: {
                     email: function($stateParams, emails) {

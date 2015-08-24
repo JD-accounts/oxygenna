@@ -8,7 +8,7 @@
  *
  */
 
-angular.module('triAngularEmail')
+angular.module('app.examples.email')
 .controller('EmailController', function ($scope, $stateParams, $mdDialog, $mdToast, $filter, emails, email, contacts) {
     $scope.email = email;
 

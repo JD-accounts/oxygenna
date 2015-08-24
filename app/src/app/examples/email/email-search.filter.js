@@ -9,7 +9,7 @@
  * Filters emails when user searches using top search box
  */
 
-angular.module('triAngularEmail')
+angular.module('app.examples.email')
 .filter('emailSearchFilter', function() {
     return function(emails, emailSearch) {
         return emails.filter(function(email) {

@@ -8,7 +8,7 @@
  *
  * Filters some text to cut and add eliplis
  */
- angular.module('triAngularEmail')
+ angular.module('app.examples.email')
  .filter('cut', function () {
     return function (value, wordwise, max, tail) {
         if (!value) {

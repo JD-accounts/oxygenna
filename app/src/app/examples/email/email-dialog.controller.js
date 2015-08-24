@@ -11,7 +11,7 @@
  * Handles actions in compose dialog
  */
 
-angular.module('triAngularEmail')
+angular.module('app.examples.email')
 .controller('EmailDialogController', function ($scope, $timeout, $mdDialog, $filter, triSkins, textAngularManager, title, email, contacts, getFocus) {
     $scope.title = title;
     $scope.email = email;

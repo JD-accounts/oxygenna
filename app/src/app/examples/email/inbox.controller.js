@@ -8,7 +8,7 @@
  *
  *
  */
-angular.module('triAngularEmail')
+angular.module('app.examples.email')
 .controller('InboxController', function ($scope, $filter, $location, $state, $mdMedia, $mdBottomSheet, $stateParams, $mdDialog, $mdToast, emails, contacts) {
     // store the base state of where we are /inbox or /trash or /sent
     // this can be then used if we close / delete email to return to
@@ -56,7 +56,7 @@ angular.module('triAngularEmail')
     };
 
     // returns back to email list
-    $scope.openlist = function() {       
+    $scope.openlist = function() {
         $state.go($scope.baseState.name);
     };
 

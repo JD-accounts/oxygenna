@@ -11,7 +11,7 @@
  * Handles all actions for email toolbar
  */
 
-angular.module('triAngularEmail')
+angular.module('app.examples.email')
 .controller('EmailToolbarController', function ($scope, $rootScope, $filter, $mdUtil, $mdSidenav, $state, SideMenu, EMAIL_ROUTES) {
     $scope.showSearch = false;
     $scope.toolbarMenu = [];
