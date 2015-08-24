@@ -10,7 +10,7 @@
  *
  * Handles icons element page
  */
-angular.module('triAngularElements').
+angular.module('triAngularUI').
 controller('FaIconsController', function ($scope, $mdDialog, icons) {
     $scope.icons = loadIcons();
 

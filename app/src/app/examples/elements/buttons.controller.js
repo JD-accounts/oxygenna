@@ -1,29 +1,30 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name ButtonsController
- * @module triAngularElements
- * @kind function
- *
- * @description
- *
- * Handles buttons element page
- */
-angular.module('triAngularElements').
-controller('ButtonsController', function ($scope, $interval) {
-    $scope.buttonClass = 'md-primary';
-    $scope.buttonHue = 'md-default';
+    angular
+        .module('app.examples.elements')
+        .controller('ButtonsController', ButtonsController);
 
-    $scope.buttonDisabled = false;
-    $scope.determinateValue = 30;
-    $scope.determinateValue2 = 30;
-    $interval(function() {
-        $scope.determinateValue += 1;
-        $scope.determinateValue2 += 1.5;
-        if($scope.determinateValue > 100) {
-            $scope.determinateValue = 30;
-            $scope.determinateValue2 = 30;
+    /* @ngInject */
+    function ButtonsController($interval) {
+        var vm = this;
+        vm.buttonClass = 'md-primary';
+        vm.buttonHue = 'md-default';
+
+        vm.buttonDisabled = false;
+        vm.determinateValue = 30;
+        vm.determinateValue2 = 30;
+        $interval(intervalTriggered, 100, 0, true);
+
+        ////////////////
+
+        function intervalTriggered() {
+            vm.determinateValue += 1;
+            vm.determinateValue2 += 1.5;
+            if(vm.determinateValue > 100) {
+                vm.determinateValue = 30;
+                vm.determinateValue2 = 30;
+            }
         }
-    }, 100, 0, true);
-});
+    }
+})();

@@ -1,32 +1,28 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name ChipsController
- * @module triAngularElements
- * @kind function
- *
- * @description
- *
- * Handles buttons element page
- */
-angular.module('triAngularElements').
-controller('Fab1Controller', function ($scope, $mdToast, $element) {
-    $scope.fabDirections = ['up', 'down', 'left', 'right'];
-    $scope.fabDirection = $scope.fabDirections[0];
+    angular
+        .module('app.examples.elements')
+        .controller('Fab1Controller', Fab1Controller);
 
-    $scope.fabAnimations = ['md-fling', 'md-scale'];
-    $scope.fabAnimation = $scope.fabAnimations[0];
+    /* @ngInject */
+    function Fab1Controller($scope, $mdToast, $element) {
+        var vm = this;
+        vm.fabDirections = ['up', 'down', 'left', 'right'];
+        vm.fabDirection = vm.fabDirections[0];
+        vm.fabAnimations = ['md-fling', 'md-scale'];
+        vm.fabAnimation = vm.fabAnimations[0];
+        vm.fabStatuses = [false, true];
+        vm.fabStatus = vm.fabStatuses[0];
+        vm.share = share;
 
-    $scope.fabStatuses = [false, true];
-    $scope.fabStatus = $scope.fabStatuses[0];
-
-    $scope.share = function(message) {
-        $mdToast.show({
-            template: '<md-toast><span flex>' + message + '</span></md-toast>',
-            position: 'top right',
-            hideDelay: 3000,
-            parent: $element
-        });
-    };
-});
+        function share(message) {
+            $mdToast.show({
+                template: '<md-toast><span flex>' + message + '</span></md-toast>',
+                position: 'top right',
+                hideDelay: 3000,
+                parent: $element
+            });
+        }
+    }
+})();

@@ -10,7 +10,7 @@
  *
  * Handles weather icons UI page
  */
-angular.module('triAngularElements').
+angular.module('triAngularUI').
 controller('WeatherIconsController', function ($scope, $mdDialog) {
     $scope.icons = [{
         'className': 'wi wi-day-cloudy-gusts',

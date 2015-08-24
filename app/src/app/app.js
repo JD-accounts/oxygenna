@@ -5,10 +5,6 @@
 'use strict';
 
 // add old modules here to keep things running for now
-angular.module('triAngularAuthentication', []);
-// angular.module('triAngularCharts', []);
-// angular.module('triAngularDashboards', []);
-angular.module('triAngularElements', []);
 angular.module('triAngularEmail', []);
 angular.module('triAngularExtras', []);
 angular.module('triAngularForms', []);
@@ -51,8 +47,6 @@ angular.module('triAngular', [
  *  SETUP TRANSLATIONS
  */
 .config(function (triSettingsProvider, $stateProvider, $urlRouterProvider, $translateProvider, $translatePartialLoaderProvider, localStorageServiceProvider, APP) {
-    console.log(triSettingsProvider);
-
     triSettingsProvider.addLanguage({
         name: 'LANGUAGES.CHINESE',
         key: 'zh'

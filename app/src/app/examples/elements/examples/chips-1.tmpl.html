@@ -1,7 +1,7 @@
 <form name="emailForm" class="md-padding" flex>
     <md-contact-chips
-        ng-model="email.to"
-        md-contacts="queryContacts($query)"
+        ng-model="vm.email.to"
+        md-contacts="vm.queryContacts($query)"
         md-contact-name="name"
         md-contact-image="image"
         md-contact-email="email"
@@ -11,8 +11,8 @@
         secondary-placeholder="To">
     </md-contact-chips>
     <md-contact-chips
-        ng-model="email.cc"
-        md-contacts="queryContacts($query)"
+        ng-model="vm.email.cc"
+        md-contacts="vm.queryContacts($query)"
         md-contact-name="name"
         md-contact-image="image"
         md-contact-email="email"
@@ -22,8 +22,8 @@
         secondary-placeholder="CC">
     </md-contact-chips>
     <md-contact-chips
-        ng-model="email.bcc"
-        md-contacts="queryContacts($query)"
+        ng-model="vm.email.bcc"
+        md-contacts="vm.queryContacts($query)"
         md-contact-name="name"
         md-contact-image="image"
         md-contact-email="email"
@@ -34,7 +34,7 @@
     </md-contact-chips>
     <md-input-container>
         <label for="subject">Subject</label>
-        <input ng-model="email.subject" name="subject" required>
+        <input ng-model="vm.email.subject" name="subject" required>
     </md-input-container>
     <md-input-container>
         <label>Message</label>

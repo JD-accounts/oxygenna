@@ -9,13 +9,13 @@
         <md-tab label="example">
             <md-content class="padding-40">
                 <md-card>
-                    <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/elements/examples/button-flat.tmpl.html'"></md-card-content>
+                    <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/examples/elements/examples/button-flat.tmpl.html'"></md-card-content>
                 </md-card>
             </md-content>
         </md-tab>
         <md-tab label="HTML">
             <md-content>
-                <div flex hljs language="html" include="'app/elements/examples/button-flat.tmpl.html'"></div>
+                <div flex hljs language="html" include="'app/examples/elements/examples/button-flat.tmpl.html'"></div>
             </md-content>
         </md-tab>
     </md-tabs>
@@ -26,13 +26,13 @@
         <md-tab label="example">
             <md-content class="padding-40">
                 <md-card>
-                    <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/elements/examples/button-raised.tmpl.html'"></md-card-content>
+                    <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/examples/elements/examples/button-raised.tmpl.html'"></md-card-content>
                 </md-card>
             </md-content>
         </md-tab>
         <md-tab label="HTML">
             <md-content>
-                <div flex hljs language="html" include="'app/elements/examples/button-raised.tmpl.html'"></div>
+                <div flex hljs language="html" include="'app/examples/elements/examples/button-raised.tmpl.html'"></div>
             </md-content>
         </md-tab>
     </md-tabs>
@@ -43,13 +43,13 @@
         <md-tab label="example">
             <md-content class="padding-40">
                 <md-card>
-                    <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/elements/examples/button-fab.tmpl.html'"></md-card-content>
+                    <md-card-content layout="row" layout-padding layout-align="space-around center" ng-include="'app/examples/elements/examples/button-fab.tmpl.html'"></md-card-content>
                 </md-card>
             </md-content>
         </md-tab>
         <md-tab label="HTML">
             <md-content>
-                <div flex hljs language="html" include="'app/elements/examples/button-fab.tmpl.html'"></div>
+                <div flex hljs language="html" include="'app/examples/elements/examples/button-fab.tmpl.html'"></div>
             </md-content>
         </md-tab>
     </md-tabs>
@@ -111,8 +111,8 @@
             </md-toolbar>
             <div class="elements-raised-content">
                 <h3>Uploading</h3>
-                <h1>{{determinateValue}}%</h1>
-                <md-progress-linear class="md-warn" md-mode="buffer" value="{{determinateValue}}" md-buffer-value="{{determinateValue2}}"></md-progress-linear>
+                <h1>{{vm.determinateValue}}%</h1>
+                <md-progress-linear class="md-warn" md-mode="buffer" value="{{vm.determinateValue}}" md-buffer-value="{{vm.determinateValue2}}"></md-progress-linear>
             </div>
             <div class="elements-raised-buttons" layout="row" layout-align="end center">
                 <md-button class="md-raised md-primary" aria-label="pause">Pause</md-button>
@@ -267,13 +267,13 @@
     <p>You can also change the style of ripple effects using the <code>md-ripple-size</code> attribute</p>
     <div class="elements-button-colors" layout="row" layout-sm="column" layout-align="space-around center">
         <div layout="column" layout-align="center center">
-            <md-switch ng-model="buttonDisabled" aria-label="Switch 2" class="md-primary">
+            <md-switch ng-model="vm.buttonDisabled" aria-label="Switch 2" class="md-primary">
                 Toggle Button Disabled
             </md-switch>
         </div>
         <div layout="column" layout-align="center center">
-            <md-button class="md-primary md-raised" ng-disabled="buttonDisabled" aria-label="disabled button">Disabled</md-button>
-            <h3>Disabled: {{buttonDisabled}}</h3>
+            <md-button class="md-primary md-raised" ng-disabled="vm.buttonDisabled" aria-label="disabled button">Disabled</md-button>
+            <h3>Disabled: {{vm.buttonDisabled}}</h3>
         </div>
     </div>
 </div>

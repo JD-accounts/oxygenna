@@ -13,7 +13,7 @@
     'use strict';
 
     angular
-        .module('triAngularElements')
+        .module('app.examples.elements')
         .controller('TablesAdvancedController', Controller);
 
     /* @ngInject */

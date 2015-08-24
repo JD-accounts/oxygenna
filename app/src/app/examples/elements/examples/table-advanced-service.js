@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('triAngularElements')
+        .module('app.examples.elements')
         .service('Github', Service);
 
     Service.$inject = ['$http', '$q'];
@@ -18,9 +18,6 @@
             return $http.get('https://api.github.com/search/users?q='+query.filter+'+repos:%3E10+followers:%3E100&order='+order+'&sort=joined&per_page='+query.limit+'&page='+query.page).
             success(function(data) {
                 return data;
-            }).
-            error(function() {
-                console.error('Could not contact github');
             });
         }
     }

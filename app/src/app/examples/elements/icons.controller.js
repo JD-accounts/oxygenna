@@ -1,41 +1,38 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name IconsController
- * @module triAngularElements
- * @kind function
- *
- * @description
- *
- * Handles icons element page
- */
-angular.module('triAngularElements').
-controller('IconsController', function ($scope, icons, fa) {
-    $scope.icons = [];
-    $scope.families = ['Material Icon Font', 'Font Awesome'];
-    $scope.selectedIcon = null;
+    angular
+        .module('app.examples.elements')
+        .controller('IconsController', IconsController);
 
-    // create filterable data structure for icons
-    angular.forEach(icons.data, function(iconGroup) {
-        angular.forEach(iconGroup, function(icon, iconName) {
-            $scope.icons.push({
-                name: iconName,
-                family: 'Material Icon Font',
-                className: icon
+    /* @ngInject */
+    function IconsController(icons, fa) {
+        var vm = this;
+        vm.icons = [];
+        vm.families = ['Material Icon Font', 'Font Awesome'];
+        vm.selectedIcon = null;
+
+        // create filterable data structure for icons
+        angular.forEach(icons.data, function(iconGroup) {
+            angular.forEach(iconGroup, function(icon, iconName) {
+                vm.icons.push({
+                    name: iconName,
+                    family: 'Material Icon Font',
+                    className: icon
+                });
             });
         });
-    });
 
-    angular.forEach(fa.data, function(name, className) {
-        $scope.icons.push({
-            name: name,
-            family: 'Font Awesome',
-            className: className
+        angular.forEach(fa.data, function(name, className) {
+            vm.icons.push({
+                name: name,
+                family: 'Font Awesome',
+                className: className
+            });
         });
-    });
 
-    $scope.selectIcon = function(icon) {
-        $scope.selectedIcon = icon;
-    };
-});
+        vm.selectIcon = function(icon) {
+            vm.selectedIcon = icon;
+        };
+    }
+})();

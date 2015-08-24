@@ -10,6 +10,6 @@
 <md-switch ng-model="switches.disabled" aria-label="Disabled Switch" disabled ng-init="switches.disabled = true">
     Disabled Switch
 </md-switch>
-<md-switch ng-model="switches.master" aria-label="Master Switch" ng-change="toggleAll(switches, switches.master)" ng-init="switches.master = true">
+<md-switch ng-model="switches.master" aria-label="Master Switch" ng-change="vm.toggleAll(switches, switches.master)" ng-init="switches.master = true">
     Master Switch
 </md-switch>
