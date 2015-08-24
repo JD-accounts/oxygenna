@@ -29,6 +29,7 @@
         "angular": true,
         "module": true,
         "moment": true,
+        "CountUp": true,
         "inject": true
     }
 }

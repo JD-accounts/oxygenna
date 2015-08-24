@@ -1,45 +1,47 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name calendarWidget
-* @restrict E
-* @scope
-*
-* @description
-*
-* Adds some calendar data
-*
-* @usage
-* ```html
-* <tri-widget calendar-widget></tri-widget>
-* ```
-*/
-angular.module('triAngularDashboards')
-.directive('calendarWidget', function(uiCalendarConfig, $rootScope, $filter, $translate) {
-    return {
-        require: 'widget',
-        restrict: 'A',
-        controller: function($scope) {
-            $scope.calendarEvents = [];
-        },
-        link: function($scope) {
-            $scope.calendarOptions = {
-                lang: $translate.use(),
-                header: false,
-                height: 'auto',
-                viewRender: function(view) {
-                    $scope.currentDay = view.calendar.getDate();
-                }
-            };
+    angular
+        .module('app.examples.dashboards')
+        .directive('calendarWidget', calendarWidget);
 
-            $scope.changeMonth = function(direction) {
-                uiCalendarConfig.calendars.calendarWidget.fullCalendar(direction);
-            };
+    /* @ngInject */
+    function calendarWidget() {
+        // Usage:
+        //
+        // <tri-widget calendar-widget></tri-widget>
+        //
+        // Creates:
+        //
+        var directive = {
+            bindToController: true,
+            controller: Controller,
+            controllerAs: 'calendarController',
+            restrict: 'A'
+        };
+        return directive;
+    }
 
-            $rootScope.$on('$translateChangeSuccess', function () {
-                $scope.calendarOptions.lang = $translate.use();
-            });
-        }
-    };
-});
+    /* @ngInject */
+    function Controller (uiCalendarConfig, $rootScope, $translate) {
+        var vm = this;
+        vm.calendarEvents = [];
+
+        vm.calendarOptions = {
+            lang: $translate.use(),
+            header: false,
+            height: 'auto',
+            viewRender: function(view) {
+                vm.currentDay = view.calendar.getDate();
+            }
+        };
+
+        vm.changeMonth = function(direction) {
+            uiCalendarConfig.calendars.calendarWidget.fullCalendar(direction);
+        };
+
+        $rootScope.$on('$translateChangeSuccess', function () {
+            vm.calendarOptions.lang = $translate.use();
+        });
+    }
+})();

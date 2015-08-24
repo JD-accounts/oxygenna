@@ -11,7 +11,7 @@
 * Creates a material design table
 *
 */
-angular.module('triAngularDashboards')
+angular.module('triangular.components')
 .directive('mdTable', function($filter) {
     return {
         restrict: 'E',

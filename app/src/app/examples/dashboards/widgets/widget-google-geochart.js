@@ -1,26 +1,24 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name googleGeochartWidget
-* @restrict E
-* @scope
-*
-* @description
-*
-* Creates a dashboard geochart widget
-*
-* @usage
-* ```html
-* <tri-widget google-geochart-widget></tri-widget>
-* ```
-*/
-angular.module('triAngularDashboards')
-.directive('googleGeochartWidget', function() {
-    return {
-        require: 'widget',
-        restrict: 'A',
-        link: function($scope) {
+    angular
+        .module('app.examples.dashboards')
+        .directive('googleGeochartWidget', googleGeochartWidget);
+
+    /* @ngInject */
+    function googleGeochartWidget() {
+        // Usage:
+        //
+        // Creates:
+        //
+        var directive = {
+            require: 'triWidget',
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link($scope) {
             $scope.geoChartData = {
                 type: 'GeoChart',
                 data: [
@@ -34,5 +32,6 @@ angular.module('triAngularDashboards')
                 ]
             };
         }
-    };
-});
+    }
+
+})();

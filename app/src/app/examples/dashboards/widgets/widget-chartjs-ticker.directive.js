@@ -1,26 +1,24 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name chartjsTickerWidget
-* @restrict A
-* @scope
-*
-* @description
-*
-* Adds chartjs line ticker data to widget
-*
-* @usage
-* ```html
-* <tri-widget chartjs-ticker-widget>
-* ```
-*/
-angular.module('triAngularDashboards')
-.directive('chartjsTickerWidget', function ($timeout, $interval) {
-    return {
-        require: 'widget',
-        restrict: 'A',
-        link: function ($scope) {
+    angular
+        .module('app.examples.dashboards')
+        .directive('chartjsTickerWidget', chartjsTickerWidget);
+
+    /* @ngInject */
+    function chartjsTickerWidget($timeout, $interval) {
+        // Usage:
+        //
+        // Creates:
+        //
+        var directive = {
+            require: 'triWidget',
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link($scope) {
             var maximum = 100;
             $scope.tickerChart = {
                 data: [[]],
@@ -31,7 +29,7 @@ angular.module('triAngularDashboards')
                     showTooltips: false,
                     pointDot: false,
                     datasetStrokeWidth: 0.5,
-                    maintainAspectRatio: false,
+                    maintainAspectRatio: false
                 }
             };
 
@@ -58,5 +56,5 @@ angular.module('triAngularDashboards')
                 return y < 0 ? 0 : y > 100 ? 100 : y;
             }
         }
-    };
-});
+    }
+})();

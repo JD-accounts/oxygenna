@@ -1,26 +1,24 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name serverWidget
-* @restrict A
-* @scope
-*
-* @description
-*
-* Adds chartjs line ticker data to widget
-*
-* @usage
-* ```html
-* <tri-widget chartjs-ticker-widget>
-* ```
-*/
-angular.module('triAngularDashboards')
-.directive('serverWidget', function ($timeout, $interval) {
-    return {
-        require: 'widget',
-        restrict: 'A',
-        link: function ($scope) {
+    angular
+        .module('app.examples.dashboards')
+        .directive('serverWidget', serverWidget);
+
+    /* @ngInject */
+    function serverWidget($timeout, $interval) {
+        // Usage:
+        //
+        // Creates:
+        //
+        var directive = {
+            require: 'triWidget',
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link($scope) {
             $scope.serverCharts = {
                 bandwidth: {
                     dataLength: 50,
@@ -32,7 +30,7 @@ angular.module('triAngularDashboards')
                         showTooltips: false,
                         pointDot: false,
                         datasetStrokeWidth: 0.5,
-                        maintainAspectRatio: false,
+                        maintainAspectRatio: false
                     },
                     colours: ['#4285F4']
                 },
@@ -46,22 +44,22 @@ angular.module('triAngularDashboards')
                         showTooltips: false,
                         pointDot: false,
                         datasetStrokeWidth: 0.5,
-                        maintainAspectRatio: false,
+                        maintainAspectRatio: false
                     },
                     colours: ['#DB4437']
                 },
                 data24hrs: {
                     series: ['Bandwidth', 'CPU'],
-                    labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
+                    labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00']
                 },
                 data7days: {
                     series: ['Bandwidth', 'CPU'],
-                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
                 },
                 data365days: {
                     series: ['Bandwidth', 'CPU'],
-                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                },
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+                }
             };
 
             randomData($scope.serverCharts.data24hrs);
@@ -104,5 +102,5 @@ angular.module('triAngularDashboards')
                 return y < 0 ? 0 : y > max ? max : y;
             }
         }
-    };
-});
+    }
+})();

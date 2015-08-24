@@ -35,31 +35,32 @@
 
         function link($scope, $element, attrs) {
             // set the value of the widget layout attribute
-            $scope.widgetLayout = attrs.titlePosition === 'left' || attrs.titlePosition === 'right' ? 'row' : 'column';
+            $scope.vm.widgetLayout = attrs.titlePosition === 'left' || attrs.titlePosition === 'right' ? 'row' : 'column';
             // set the layout attribute for the widget content
-            $scope.contentLayout = attrs.contentLayout === undefined ? undefined : attrs.contentLayout;
+            $scope.vm.contentLayout = angular.isUndefined(attrs.contentLayout) ? undefined : attrs.contentLayout;
             // set if the layout-padding attribute will be added
-            $scope.contentPadding = attrs.contentPadding === undefined ? undefined : true;
+            $scope.vm.contentPadding = angular.isUndefined(attrs.contentPadding) ? undefined : true;
+
             // set the content align
-            $scope.contentLayoutAlign = attrs.contentLayoutAlign === undefined ? 'center center' : attrs.contentLayoutAlign;
+            $scope.vm.contentLayoutAlign = angular.isUndefined(attrs.contentLayoutAlign) ? 'center center' : attrs.contentLayoutAlign;
             // set the order of the title and content based on title position
-            $scope.titleOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 2 : 1;
-            $scope.contentOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 1 : 2;
+            $scope.vm.titleOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 2 : 1;
+            $scope.vm.contentOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 1 : 2;
             // set if we overlay the title on top of the widget content
-            $scope.overlayTitle = attrs.overlayTitle === undefined ? undefined : true;
+            $scope.vm.overlayTitle = angular.isUndefined(attrs.overlayTitle) ? undefined : true;
 
             $mdTheming($element);
 
-            if(attrs.class !== undefined) {
+            if(angular.isDefined(attrs.class)) {
                 $element.addClass(attrs.class);
             }
 
-            if(attrs.backgroundImage !== undefined) {
+            if(angular.isDefined(attrs.backgroundImage)) {
                 $element.css('background-image', 'url(' + attrs.backgroundImage + ')');
             }
 
             $scope.menuClick = function($event) {
-                if(undefined !== $scope.menu.menuClick) {
+                if(angular.isUndefined($scope.menu.menuClick)) {
                     $scope.menu.menuClick($event);
                 }
             };

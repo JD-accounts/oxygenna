@@ -1,26 +1,24 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name widget
-* @restrict E
-* @scope
-*
-* @description
-*
-* Creates a dashboard weather widget
-*
-* @usage
-* ```html
-* <tri-widget weather-widget="London"></tri-widget>
-* ```
-*/
-angular.module('triAngularDashboards')
-.directive('weatherWidget', function($http) {
-    return {
-        require: 'widget',
-        restrict: 'A',
-        link: function($scope, $element, attrs, widgetCtrl) {
+    angular
+        .module('app.examples.dashboards')
+        .directive('weatherWidget', weatherWidget);
+
+    /* @ngInject */
+    function weatherWidget($http) {
+        // Usage:
+        //
+        // Creates:
+        //
+        var directive = {
+            require: 'triWidget',
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link($scope, $element, attrs, widgetCtrl) {
             widgetCtrl.setLoading(true);
 
             var query = 'select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + attrs.weatherWidget + '")';
@@ -38,10 +36,7 @@ angular.module('triAngularDashboards')
                         location: attrs.weatherWidget
                     };
                 }
-            }).
-            error(function(data) {
-                console.error('Could not get location weather', data);
             });
         }
-    };
-});
+    }
+})();

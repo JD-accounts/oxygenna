@@ -1,35 +1,33 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name twitterWidget
-* @restrict E
-* @scope
-*
-* @description
-*
-* Gets data for a twitter feed widget
-*
-* @usage
-* ```html
-* <tri-widget twitter-todo></tri-widget>
-* ```
-*/
-angular.module('triAngularDashboards')
-.directive('twitterWidget', function() {
-    return {
-        require: 'widget',
-        restrict: 'A',
-        link: function($scope) {
+    angular
+        .module('app.examples.dashboards')
+        .directive('twitterWidget', twitterWidget);
+
+    /* @ngInject */
+    function twitterWidget() {
+        // Usage:
+        //
+        // Creates:
+        //
+        var directive = {
+            require: 'triWidget',
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link($scope) {
             $scope.tweets = [{
                 user: 'oxygenna',
-                body: 'Don\'t miss it! A Material Design Avatar set with 1440 avatars! http://sellfy.com/p/EUcC/ #avatars #materialdesign',
+                body: 'Don\'t miss it! A Material Design Avatar set with 1440 avatars! http://sellfy.com/p/EUcC/ #avatars #materialdesign'
             },{
                 user: 'oxygenna',
-                body: 'Looking for a design for emotion case study to convince the boss/client? This one\'s worth $2.8 million.',
+                body: 'Looking for a design for emotion case study to convince the boss/client? This one\'s worth $2.8 million.'
             },{
                 user: 'oxygenna',
-                body: 'New Freebie! A set of 27 Drinks-Lifestyle Icons available in PSD/AI/PNG format #freebie #icons #drinks http://wp.me/p5Xp06-Fq',
+                body: 'New Freebie! A set of 27 Drinks-Lifestyle Icons available in PSD/AI/PNG format #freebie #icons #drinks http://wp.me/p5Xp06-Fq'
             }];
 
             $scope.selectedTab = 0;
@@ -47,7 +45,6 @@ angular.module('triAngularDashboards')
                     $scope.selectedTab = 0;
                 }
             };
-
         }
-    };
-});
+    }
+})();

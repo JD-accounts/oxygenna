@@ -144,10 +144,10 @@
         </md-tab-label>
         <md-tab-body>
             <div layout="row" layout-sm="column">
-                <tri-widget flex="70" flex-sm="100" title="Favorites" content-layout="column" content-layout-align="center top"  layout-margin>
+                <tri-widget flex="70" flex-sm="100" title="Favorites" content-layout="column" content-layout-align="center top" layout-margin>
                     <md-divider></md-divider>
                     <md-list>
-                        <md-list-item class="md-3-line" ng-repeat="fave in ::favorites">
+                        <md-list-item class="md-3-line" ng-repeat="fave in ::vm.favorites">
                             <img ng-src="{{::fave.avatar}}" class="md-avatar"/>
                             <div class="md-list-item-text">
                                 <div layout="row">
@@ -167,7 +167,7 @@
                     <tri-widget flex title="Who to follow" content-layout="column" content-layout-align="center top" palette-background="cyan:500" layout-margin>
                         <md-divider></md-divider>
                         <md-list>
-                            <md-list-item class="md-2-line" ng-repeat="follow in ::whotofollow">
+                            <md-list-item class="md-2-line" ng-repeat="follow in ::vm.whotofollow">
                                 <img ng-src="{{::follow.avatar}}" class="md-avatar"/>
                                 <div class="md-list-item-text">
                                     <h3>{{::follow.name}}</h3>
@@ -181,7 +181,7 @@
                     <tri-widget flex title="Trends" content-layout="column" content-layout-align="center top" palette-background="cyan:500" layout-margin>
                         <md-divider></md-divider>
                         <md-list>
-                            <md-list-item ng-repeat="trend in ::trends">
+                            <md-list-item ng-repeat="trend in ::vm.trends">
                                 <p linkify="twitter">{{::trend}}</p>
                                 <md-divider ng-hide="::$last"></md-divider>
                             </md-list-item>

@@ -1,26 +1,24 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name todoWidget
-* @restrict E
-* @scope
-*
-* @description
-*
-* Adds some todo data
-*
-* @usage
-* ```html
-* <tri-widget todo-widget>
-* ```
-*/
-angular.module('triAngularDashboards')
-.directive('todoWidget', function() {
-    return {
-        require: 'widget',
-        restrict: 'A',
-        link: function($scope) {
+    angular
+        .module('app.examples.dashboards')
+        .directive('todoWidget', todoWidget);
+
+    /* @ngInject */
+    function todoWidget() {
+        // Usage:
+        //
+        // Creates:
+        //
+        var directive = {
+            require: 'triWidget',
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link($scope) {
             $scope.todos = [{
                 name: 'Buy Milk',
                 done: false
@@ -35,5 +33,5 @@ angular.module('triAngularDashboards')
                 done: false
             }];
         }
-    };
-});
+    }
+})();

@@ -1,26 +1,24 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name chartjsPieWidget
-* @restrict A
-* @scope
-*
-* @description
-*
-* Adds chartjs pie chart data to widget
-*
-* @usage
-* ```html
-* <tri-widget chartjs-pie-widget>
-* ```
-*/
-angular.module('triAngularDashboards')
-.directive('chartjsPieWidget', function ($timeout) {
-    return {
-        require: 'widget',
-        restrict: 'A',
-        link: function ($scope, $element, attrs, widgetCtrl) {
+    angular
+        .module('app.examples.dashboards')
+        .directive('chartjsPieWidget', chartjsPieWidget);
+
+    /* @ngInject */
+    function chartjsPieWidget($timeout) {
+        // Usage:
+        //
+        // Creates:
+        //
+        var directive = {
+            require: 'triWidget',
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link($scope, $element, attrs, widgetCtrl) {
             widgetCtrl.setLoading(true);
 
             $timeout(function() {
@@ -40,10 +38,10 @@ angular.module('triAngularDashboards')
                     }
                 },{
                     icon: 'icon-share',
-                    title: 'DASHBOARDS.WIDGETS.MENU.SHARE',
+                    title: 'DASHBOARDS.WIDGETS.MENU.SHARE'
                 },{
                     icon: 'icon-print',
-                    title: 'DASHBOARDS.WIDGETS.MENU.PRINT',
+                    title: 'DASHBOARDS.WIDGETS.MENU.PRINT'
                 }]
             });
 
@@ -52,5 +50,5 @@ angular.module('triAngularDashboards')
                 data: [300, 500, 100, 50]
             };
         }
-    };
-});
+    }
+})();

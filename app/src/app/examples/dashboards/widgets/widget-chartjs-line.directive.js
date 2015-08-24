@@ -1,26 +1,24 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name chartjsLineWidget
-* @restrict A
-* @scope
-*
-* @description
-*
-* Adds chartjs line chart data to widget
-*
-* @usage
-* ```html
-* <tri-widget chartjs-line-widget>
-* ```
-*/
-angular.module('triAngularDashboards')
-.directive('chartjsLineWidget', function ($timeout, $interval) {
-    return {
-        require: 'widget',
-        restrict: 'A',
-        link: function ($scope, $element, attrs, widgetCtrl) {
+    angular
+        .module('app.examples.dashboards')
+        .directive('chartjsLineWidget', chartjsLineWidget);
+
+    /* @ngInject */
+    function chartjsLineWidget($timeout, $interval) {
+        // Usage:
+        //
+        // Creates:
+        //
+        var directive = {
+            require: 'triWidget',
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link($scope, $element, attrs, widgetCtrl) {
             widgetCtrl.setLoading(true);
 
             $timeout(function() {
@@ -43,10 +41,10 @@ angular.module('triAngularDashboards')
                     }
                 },{
                     icon: 'icon-share',
-                    title: 'DASHBOARDS.WIDGETS.MENU.SHARE',
+                    title: 'DASHBOARDS.WIDGETS.MENU.SHARE'
                 },{
                     icon: 'icon-print',
-                    title: 'DASHBOARDS.WIDGETS.MENU.PRINT',
+                    title: 'DASHBOARDS.WIDGETS.MENU.PRINT'
                 }]
             });
 
@@ -73,5 +71,5 @@ angular.module('triAngularDashboards')
             // Simulate async data update
             $scope.intervalPromise = $interval(randomData, 5000);
         }
-    };
-});
+    }
+})();

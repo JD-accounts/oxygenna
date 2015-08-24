@@ -1,26 +1,25 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name loadDataWidget
-* @restrict E
-* @scope
-*
-* @description
-*
-* Loads some data
-*
-* @usage
-* ```html
-* <tri-widget load-data-widget="{ variableName: urlOfJSONData }"></tri-widget>
-* ```
-*/
-angular.module('triAngularDashboards')
-.directive('loadDataWidget', function($parse, $http, $mdDialog) {
-    return {
-        require: 'widget',
-        restrict: 'A',
-        link: function($scope, $element, attrs, widgetCtrl) {
+    angular
+        .module('app.examples.dashboards')
+        .directive('loadDataWidget', loadDataWidget);
+
+    /* @ngInject */
+    function loadDataWidget($parse, $http, $mdDialog) {
+        // Usage:
+        //
+        // <tri-widget load-data-widget="{ variableName: urlOfJSONData }"></tri-widget>
+        // Creates:
+        //
+        var directive = {
+            require: 'triWidget',
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link($scope, $element, attrs, widgetCtrl) {
             widgetCtrl.setLoading(true);
             var loadData = $parse(attrs.loadDataWidget)($scope);
 
@@ -35,8 +34,8 @@ angular.module('triAngularDashboards')
                             data = $scope[variable];
                         });
                         $mdDialog.show({
-                            controller: 'WidgetLoadDataDialogController',
-                            templateUrl: 'app/dashboards/widgets/widget-load-data-dialog.tmpl.html',
+                            controller: LoadDataDialogController,
+                            templateUrl: 'app/examples/dashboards/widgets/widget-load-data-dialog.tmpl.html',
                             targetEvent: $event,
                             locals: {
                                 data: data
@@ -51,12 +50,23 @@ angular.module('triAngularDashboards')
                     }
                 },{
                     icon: 'icon-share',
-                    title: 'DASHBOARDS.WIDGETS.MENU.SHARE',
+                    title: 'DASHBOARDS.WIDGETS.MENU.SHARE'
                 },{
                     icon: 'icon-print',
-                    title: 'DASHBOARDS.WIDGETS.MENU.PRINT',
+                    title: 'DASHBOARDS.WIDGETS.MENU.PRINT'
                 }]
             });
+
+            ///////////////////
+
+            /* @ngInject */
+            function LoadDataDialogController($scope, $mdDialog, data) {
+                $scope.data = data;
+
+                $scope.closeDialog = function() {
+                    $mdDialog.cancel();
+                };
+            }
 
             angular.forEach(loadData, function(url, variable) {
                 $http.get(url).
@@ -67,11 +77,8 @@ angular.module('triAngularDashboards')
                         header: header,
                         data: data
                     };
-                }).
-                error(function() {
-                    console.error('Could not load ' + url );
                 });
             });
         }
-    };
-});
+    }
+})();

@@ -4,27 +4,27 @@
             <div layout="row" layout-padding layout-align="space-between center" layout-align-sm="center center">
                 <div flex layout="column">
                     <h3 class="md-subhead text-ellipsis margin-0">
-                        {{currentDay | amDateFormat:'MMMM'}}
+                        {{calendarController.currentDay | amDateFormat:'MMMM'}}
                     </h3>
                     <h3 class="md-subhead text-ellipsis margin-0">
-                        {{currentDay | amDateFormat:'YYYY'}}
+                        {{calendarController.currentDay | amDateFormat:'YYYY'}}
                     </h3>
                 </div>
                 <div class="widget-buttons">
-                    <md-button class="widget-button md-icon-button" ng-click="changeMonth('prev')" aria-label="previous month">
+                    <md-button class="widget-button md-icon-button" ng-click="calendarController.changeMonth('prev')" aria-label="previous month">
                         <md-icon md-font-icon="icon-chevron-left"></md-icon>
                     </md-button>
-                    <md-button hide show-gt-lg class="widget-button md-icon-button" ng-click="changeMonth('today')" aria-label="today">
+                    <md-button hide show-gt-lg class="widget-button md-icon-button" ng-click="calendarController.changeMonth('today')" aria-label="today">
                         <md-icon md-font-icon="icon-today"></md-icon>
                     </md-button>
-                    <md-button class="widget-button md-icon-button" ng-click="changeMonth('next')" aria-label="next month">
+                    <md-button class="widget-button md-icon-button" ng-click="calendarController.changeMonth('next')" aria-label="next month">
                         <md-icon md-font-icon="icon-chevron-right"></md-icon>
                     </md-button>
                 </div>
             </div>
             <md-divider></md-divider>
             <div layout="column" layout-padding>
-                <div ui-calendar="calendarOptions" ng-model="calendarEvents" calendar="calendarWidget"></div>
+                <div ui-calendar="calendarController.calendarOptions" ng-model="calendarController.calendarEvents" calendar="calendarWidget"></div>
             </div>
         </tri-widget>
         <div layout="column" flex layout-margin>

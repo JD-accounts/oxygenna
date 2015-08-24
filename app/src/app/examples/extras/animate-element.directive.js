@@ -15,7 +15,7 @@
 * <widget chat-widget></widget>
 * ```
 */
-angular.module('triAngularDashboards')
+angular.module('triAngularExtras')
 .directive('animateElements', function() {
     return {
         restrict: 'A',

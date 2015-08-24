@@ -15,7 +15,7 @@
 * <div replace-with='{{yourModel.prop}}'></div>
 * ```
 */
-angular.module('triAngularDashboards')
+angular.module('triAngularExtras')
 .directive('replaceWith', function() {
     return {
         restrict: 'A',

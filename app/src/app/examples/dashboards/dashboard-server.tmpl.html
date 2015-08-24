@@ -71,7 +71,7 @@
         <tri-widget flex="50" flex-sm="100" title="DASHBOARDS.SERVER.DISKS">
             <md-divider></md-divider>
             <md-list>
-                <md-list-item ng-repeat="disk in ::disks">
+                <md-list-item ng-repeat="disk in ::vm.disks">
                     <md-icon md-font-icon="{{::disk.icon}}" class="md-primary"></md-icon>
                     <p class="text-ellipsis padding-right-50">{{::disk.name}}</p>
                     <md-switch class="md-secondary" ng-model="disk.enabled"></md-switch>
@@ -82,7 +82,7 @@
         <tri-widget flex title="DASHBOARDS.SERVER.JOB" background="primary">
             <md-divider></md-divider>
             <md-list>
-                <md-list-item class="md-2-line" ng-repeat="job in ::jobs">
+                <md-list-item class="md-2-line" ng-repeat="job in ::vm.jobs">
                     <div class="md-list-item-text">
                         <h3>{{::job.job}}</h3>
                         <p>{{::job.time}}</p>
@@ -99,7 +99,7 @@
     <div layout="row" layout-sm="column" layout-margin>
         <tri-widget chartjs-pie-widget flex="40" flex-md="40" flex-sm="100" title="DASHBOARDS.SERVER.DISKUSAGE" subtitle="DASHBOARDS.SERVER.DATE" content-padding>
             <div flex>
-                <canvas class="chart-doughnut full-width" data="serverChart.data" legend="true" labels="serverChart.labels"></canvas>
+                <canvas class="chart-doughnut full-width" data="vm.serverChart.data" legend="true" labels="vm.serverChart.labels"></canvas>
             </div>
         </tri-widget>
         <tri-widget flex-sm="100" title="DASHBOARDS.SERVER.USAGE" palette-background="cyan:600" content-layout="column" content-layout-align="start center">

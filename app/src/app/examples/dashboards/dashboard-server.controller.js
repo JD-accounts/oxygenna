@@ -1,50 +1,49 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name DashboardServerController
- * @module triAngularDashboards
- * @kind function
- *
- *
- */
-angular.module('triAngularDashboards').
-controller('DashboardServerController', function ($scope, $timeout, $mdToast) {
-    $scope.disks = [{
-        icon: 'icon-storage',
-        name: 'Ubuntu 10.04 LTS Disk Image (10000 MB, ext3)',
-        enabled: true
-    },{
-        icon: 'icon-settings-input-component',
-        name: 'Ubuntu 11.10 SSD Image (10224 MB, ext3)',
-        enabled: false
-    },{
-        icon: 'icon-storage',
-        name: '256MB Swap Image (256 MB, swap)',
-        enabled: true
-    }];
+    angular
+        .module('app.examples.dashboards')
+        .controller('DashboardServerController', DashboardServerController);
 
-    $scope.jobs = [{
-        job: 'Host initiated restart',
-        time: 'Took: 10 seconds',
-        complete: true
-    },{
-        job: 'Snapshot ',
-        time: 'Took: 6minutes 26 seconds',
-        complete: false
-    }];
+    /* @ngInject */
+    function DashboardServerController($scope, $timeout, $mdToast) {
+        var vm = this;
+        vm.disks = [{
+            icon: 'icon-storage',
+            name: 'Ubuntu 10.04 LTS Disk Image (10000 MB, ext3)',
+            enabled: true
+        },{
+            icon: 'icon-settings-input-component',
+            name: 'Ubuntu 11.10 SSD Image (10224 MB, ext3)',
+            enabled: false
+        },{
+            icon: 'icon-storage',
+            name: '256MB Swap Image (256 MB, swap)',
+            enabled: true
+        }];
 
-    $scope.serverChart = {
-        labels: ['Swap space', 'Kernel', 'OS', 'Free space'],
-        data: [15, 5, 35, 45]
-    };
+        vm.jobs = [{
+            job: 'Host initiated restart',
+            time: 'Took: 10 seconds',
+            complete: true
+        },{
+            job: 'Snapshot ',
+            time: 'Took: 6minutes 26 seconds',
+            complete: false
+        }];
 
-    $timeout(function() {
-        $mdToast.show(
-            $mdToast.simple()
-            .content('Server CPU at 100%!')
-            .position('bottom right')
-            .hideDelay(3000)
-        );
-    }, 5000);
-});
+        vm.serverChart = {
+            labels: ['Swap space', 'Kernel', 'OS', 'Free space'],
+            data: [15, 5, 35, 45]
+        };
+
+        $timeout(function() {
+            $mdToast.show(
+                $mdToast.simple()
+                .content('Server CPU at 100%!')
+                .position('bottom right')
+                .hideDelay(3000)
+            );
+        }, 5000);
+    }
+})();
