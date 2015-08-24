@@ -1,35 +1,34 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name md-table
-* @restrict E
-* @scope
-*
-* @description
-*
-* Creates a material design table
-*
-*/
-angular.module('triangular.components')
-.directive('mdTable', function($filter) {
-    return {
-        restrict: 'E',
-        scope: {
-            columns: '=',
-            contents: '=',
-            filters: '=',
-        },
-        link: function($scope, $element, attrs) {
+    angular
+        .module('triangular.components')
+        .directive('triTable', triTable);
+
+    /* @ngInject */
+    function triTable($filter) {
+        var directive = {
+            restrict: 'E',
+            scope: {
+                columns: '=',
+                contents: '=',
+                filters: '='
+            },
+            link: link,
+            templateUrl: 'app/triangular/components/tables/table-directive.tmpl.html'
+        };
+        return directive;
+
+        function link($scope, $element, attrs) {
             var sortableColumns = [];
             var activeSortColumn = null;
             var activeSortOrder = false;
 
             // init page size if not set to default
-            $scope.pageSize = attrs.pageSize === undefined ? 0 : attrs.pageSize;
+            $scope.pageSize = angular.isUndefined(attrs.pageSize) ? 0 : attrs.pageSize;
 
             // init page if not set to default
-            $scope.page = attrs.page === undefined ? 0 : attrs.page;
+            $scope.page = angular.isUndefined(attrs.page) ? 0 : attrs.page;
 
             // make an array of all sortable columns
             angular.forEach($scope.columns, function(column) {
@@ -79,7 +78,7 @@ angular.module('triangular.components')
             };
 
             $scope.cellContents = function(column, content) {
-                if(column.filter !== undefined) {
+                if(angular.isDefined(column.filter)) {
                     return $filter(column.filter)(content[column.field]);
                 }
                 else {
@@ -110,7 +109,6 @@ angular.module('triangular.components')
             $scope.goToPage = function (page) {
                 $scope.page = page;
             };
-        },
-        templateUrl: 'components/tables/table-directive.tmpl.html',
-    };
-});
+        }
+    }
+})();

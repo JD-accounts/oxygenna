@@ -1,17 +1,19 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc filter
- * @name tableImage
- * @module triAngular
- * @kind filter
- *
- * Used for table pagination
- */
-angular.module('triAngular')
-.filter('startFrom',function () {
-    return function (input, start) {
-        start = +start;
-        return input.slice(start);
-    };
-});
+    angular
+        .module('triangular.components')
+        .filter('startFrom', startFrom);
+
+    function startFrom() {
+        return filterFilter;
+
+        ////////////////
+
+        function filterFilter(input, start) {
+            start = +start;
+            return input.slice(start);
+        }
+    }
+
+})();
