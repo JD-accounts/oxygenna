@@ -1,41 +1,41 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name ColorsController
- * @module triAngularUI
- * @kind function
- *
- * @description
- *
- * Handles the colors ui page
- */
-angular.module('triAngularUI').
-controller('ColorsController', function ($scope, $mdDialog, triTheming) {
-    $scope.palettes = triTheming.palettes;
+    angular
+        .module('app.examples.ui')
+        .controller('ColorsController', ColorsController);
 
-    $scope.colourRGBA = function(value) {
-        var rgba = triTheming.rgba(value);
-        return {
-            'background-color': rgba
-        };
-    };
+    /* @ngInject */
+    function ColorsController($mdDialog, triTheming) {
+        var vm = this;
+        vm.colourRGBA = colourRGBA;
+        vm.palettes = triTheming.palettes;
+        vm.selectPalette = selectPalette;
 
-    $scope.selectPalette = function($event, name, palette) {
-        $mdDialog.show({
-            controller: 'ColorDialogController',
-            templateUrl: 'app/ui/color-dialog.tmpl.html',
-            targetEvent: $event,
-            locals: {
-                name: name,
-                palette: palette
-            },
-            clickOutsideToClose: true
-        })
-        .then(function(answer) {
-            $scope.alert = 'You said the information was "' + answer + '".';
-        }, function() {
-            $scope.alert = 'You cancelled the dialog.';
-        });
-    };
-});
+        function colourRGBA(value) {
+            var rgba = triTheming.rgba(value);
+            return {
+                'background-color': rgba
+            };
+        }
+
+        function selectPalette($event, name, palette) {
+            $mdDialog.show({
+                controller: 'ColorDialogController',
+                controllerAs: 'vm',
+                templateUrl: 'app/examples/ui/color-dialog.tmpl.html',
+                targetEvent: $event,
+                locals: {
+                    name: name,
+                    palette: palette
+                },
+                clickOutsideToClose: true
+            })
+            .then(function(answer) {
+                vm.alert = 'You said the information was "' + answer + '".';
+            }, function() {
+                vm.alert = 'You cancelled the dialog.';
+            });
+        }
+    }
+})();

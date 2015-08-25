@@ -10,20 +10,23 @@
         $translatePartialLoaderProvider.addPart('app/examples/ui');
 
         $stateProvider
-        .state('admin-panel.default.ui-typography', {
+        .state('triangular.admin-default.ui-typography', {
             url: '/ui/typography',
             controller: 'TypographyController',
-            templateUrl: 'app/ui/typography.tmpl.html'
+            controllerAs: 'vm',
+            templateUrl: 'app/examples/ui/typography.tmpl.html'
         })
-        .state('admin-panel.default.ui-colors', {
+        .state('triangular.admin-default.ui-colors', {
             url: '/ui/colors',
             controller: 'ColorsController',
-            templateUrl: 'app/ui/colors.tmpl.html'
+            controllerAs: 'vm',
+            templateUrl: 'app/examples/ui/colors.tmpl.html'
         })
-        .state('admin-panel.default.ui-material-icons', {
+        .state('triangular.admin-default.ui-material-icons', {
             url: '/ui/material-icons',
             controller: 'MaterialIconsController',
-            templateUrl: 'app/ui/material-icons.tmpl.html',
+            controllerAs: 'vm',
+            templateUrl: 'app/examples/ui/material-icons.tmpl.html',
             resolve: {
                 icons: function($http, API_CONFIG) {
                     return $http({
@@ -33,15 +36,17 @@
                 }
             }
         })
-        .state('admin-panel.default.ui-weather-icons', {
+        .state('triangular.admin-default.ui-weather-icons', {
             url: '/ui/weather-icons',
             controller: 'WeatherIconsController',
-            templateUrl: 'app/ui/weather-icons.tmpl.html'
+            controllerAs: 'vm',
+            templateUrl: 'app/examples/ui/weather-icons.tmpl.html'
         })
-        .state('admin-panel.default.ui-fa-icons', {
+        .state('triangular.admin-default.ui-fa-icons', {
             url: '/ui/fa-icons',
             controller: 'FaIconsController',
-            templateUrl: 'app/ui/fa-icons.tmpl.html',
+            controllerAs: 'vm',
+            templateUrl: 'app/examples/ui/fa-icons.tmpl.html',
             resolve: {
                 icons: function($http, API_CONFIG) {
                     return $http({
@@ -52,16 +57,18 @@
             }
         })
 
-        .state('admin-panel.default.ui-toolbar', {
+        .state('triangular.admin-default.ui-toolbar', {
             url: '/ui/toolbars/:extraClass/:background/:shrink',
             controller: 'ToolbarsUIController',
-            templateUrl: 'app/ui/toolbars.tmpl.html'
+            controllerAs: 'vm',
+            templateUrl: 'app/examples/ui/toolbars.tmpl.html'
         })
 
-        .state('admin-panel.default.ui-skins', {
+        .state('triangular.admin-default.ui-skins', {
             url: '/ui/skins',
             controller: 'SkinsUIController',
-            templateUrl: 'app/ui/skins.tmpl.html'
+            controllerAs: 'vm',
+            templateUrl: 'app/examples/ui/skins.tmpl.html'
         });
 
         triMenuProvider.addMenu({
@@ -71,23 +78,23 @@
             priority: 3.2,
             children: [{
                 name: 'MENU.UI.COLORS',
-                state: 'admin-panel.default.ui-colors',
+                state: 'triangular.admin-default.ui-colors',
                 type: 'link'
             },{
                 name: 'MENU.UI.FONT_AWESOME',
-                state: 'admin-panel.default.ui-fa-icons',
+                state: 'triangular.admin-default.ui-fa-icons',
                 type: 'link'
             },{
                 name: 'MENU.UI.MATERIAL_ICONS',
-                state: 'admin-panel.default.ui-material-icons',
+                state: 'triangular.admin-default.ui-material-icons',
                 type: 'link'
             },{
                 name: 'MENU.UI.SKINS',
-                state: 'admin-panel.default.ui-skins',
+                state: 'triangular.admin-default.ui-skins',
                 type: 'link'
             },{
                 name: 'MENU.UI.TOOLBAR',
-                state: 'admin-panel.default.ui-toolbar',
+                state: 'triangular.admin-default.ui-toolbar',
                 params: {
                     extraClass: 'default',
                     background: 'off',
@@ -96,11 +103,11 @@
                 type: 'link'
             },{
                 name: 'MENU.UI.TYPOGRAPHY',
-                state: 'admin-panel.default.ui-typography',
+                state: 'triangular.admin-default.ui-typography',
                 type: 'link'
             },{
                 name: 'MENU.UI.WEATHER_ICONS',
-                state: 'admin-panel.default.ui-weather-icons',
+                state: 'triangular.admin-default.ui-weather-icons',
                 type: 'link'
             }]
         });

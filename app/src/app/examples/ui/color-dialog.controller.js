@@ -1,31 +1,33 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name ColorDialogController
- * @module triAngularUI
- * @kind function
- *
- * @description
- *
- * Handles the colors popup dialog
- */
-angular.module('triAngularUI').
-controller('ColorDialogController', function ($scope, name, palette, triTheming) {
-    $scope.name = name;
-    $scope.palette = [];
+    angular
+        .module('app.examples.ui')
+        .controller('ColorDialogController', ColorDialogController);
 
-    $scope.itemStyle = function(palette) {
-        return {
-            'background-color': triTheming.rgba(palette.value),
-            'color': triTheming.rgba(palette.contrast)
-        };
-    };
+    /* @ngInject */
+    function ColorDialogController($scope, name, palette, triTheming) {
+        var vm = this;
+        vm.itemStyle = itemStyle;
+        vm.name = name;
+        vm.palette = [];
 
-    for(var code in palette) {
-        $scope.palette.push({
-            code: code,
-            palette: palette[code]
-        });
+        ///////////
+
+        function itemStyle(palette) {
+            return {
+                'background-color': triTheming.rgba(palette.value),
+                'color': triTheming.rgba(palette.contrast)
+            };
+        }
+
+        // init
+
+        for(var code in palette) {
+            vm.palette.push({
+                code: code,
+                palette: palette[code]
+            });
+        }
     }
-});
+})();

@@ -12,8 +12,8 @@
                     <span>Why not try a different font?</span>
                 </h2>
             </md-toolbar>
-            <md-select placeholder="Choose a font" ng-model="currentFont" ng-change="changeFont()">
-                <md-option ng-repeat="font in fonts" ng-value="font">{{font.name}}</md-option>
+            <md-select placeholder="Choose a font" ng-model="vm.currentFont" ng-change="vm.changeFont()">
+                <md-option ng-repeat="font in vm.fonts" ng-value="font">{{font.name}}</md-option>
             </md-select>
             <p class="ui-typography-try-font">Try selecting a font above, it will be saved and used from now on as you browse the site.</p>
         </md-whiteframe>

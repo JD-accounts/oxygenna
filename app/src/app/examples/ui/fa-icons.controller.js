@@ -1,40 +1,37 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name IconsController
- * @module triAngularElements
- * @kind function
- *
- * @description
- *
- * Handles icons element page
- */
-angular.module('triAngularUI').
-controller('FaIconsController', function ($scope, $mdDialog, icons) {
-    $scope.icons = loadIcons();
+    angular
+        .module('app.examples.ui')
+        .controller('FaIconsController', FaIconsController);
 
-    function loadIcons() {
-        var allIcons = [];
-        for(var className in icons.data) {
-            allIcons.push({
-                className: className,
-                name: icons.data[className]
-            });
+    /* @ngInject */
+    function FaIconsController($mdDialog, $document, icons) {
+        var vm = this;
+        vm.icons = loadIcons();
+        vm.iconSource = 'Select icon below to see HTML';
+        vm.selectIcon = selectIcon;
+
+        function loadIcons() {
+            var allIcons = [];
+            for(var className in icons.data) {
+                allIcons.push({
+                    className: className,
+                    name: icons.data[className]
+                });
+            }
+            return allIcons;
         }
-        return allIcons;
+
+        function selectIcon($event, icon) {
+            $mdDialog.show(
+                $mdDialog.alert()
+                .parent(angular.element($document.body))
+                .title('Here\'s the code for that icon')
+                .content('<md-icon md-font-icon="' + icon.className + '"></md-icon>')
+                .ok('Thanks')
+                .targetEvent($event)
+            );
+        }
     }
-
-    $scope.iconSource = 'Select icon below to see HTML';
-
-    $scope.selectIcon = function($event, icon) {
-        $mdDialog.show(
-            $mdDialog.alert()
-            .parent(angular.element(document.body))
-            .title('Here\'s the code for that icon')
-            .content('<md-icon md-font-icon="' + icon.className + '"></md-icon>')
-            .ok('Thanks')
-            .targetEvent($event)
-        );
-    };
-});
+})();

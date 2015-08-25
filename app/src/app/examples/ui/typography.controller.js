@@ -1,26 +1,29 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name TypographyController
- * @module triAngularUI
- * @kind function
- *
- * @description
- *
- * Handles the typography ui page
- */
-angular.module('triAngularUI').
-controller('TypographyController', function ($scope, TypographySwitcher, UI_FONTS) {
-    $scope.fonts = UI_FONTS;
-    $scope.currentFont = TypographySwitcher.getCurrentFont();
+    angular
+        .module('app.examples.ui')
+        .controller('TypographyController', TypographyController);
 
-    angular.forEach($scope.fonts, function(font) {
-        if($scope.currentFont.name === font.name) {
-            $scope.currentFont = font;
+    /* @ngInject */
+    function TypographyController(TypographySwitcher, UI_FONTS) {
+        var vm = this;
+        vm.fonts = UI_FONTS;
+        vm.changeFont = changeFont;
+        vm.currentFont = TypographySwitcher.getCurrentFont();
+
+        //////////////////
+
+        function changeFont() {
+            TypographySwitcher.changeFont(vm.currentFont);
         }
-    });
-    $scope.changeFont = function() {
-        TypographySwitcher.changeFont($scope.currentFont);
-    };
-});
+
+        // init
+
+        angular.forEach(vm.fonts, function(font) {
+            if(vm.currentFont.name === font.name) {
+                vm.currentFont = font;
+            }
+        });
+    }
+})();

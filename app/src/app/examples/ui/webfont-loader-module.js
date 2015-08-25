@@ -1,30 +1,33 @@
-'use strict';
-(function(angular) {
+(function() {
+    'use strict';
 
-    var mod = angular.module('webfont-loader', []);
+    angular
+        .module('webfont-loader', [])
+        .directive('webfontLoader', webfontLoader);
 
-    mod.directive('webfontLoader', ['$rootScope', '$window',
-        function($rootScope, $window) {
-            return {
-                link: function(scope, elem, attrs) {
+    /* @ngInject */
+    function webfontLoader($rootScope, $window) {
+        var directive = {
+            link: link
+        };
+        return directive;
 
-                    function onActive() {
-                        $rootScope.$broadcast('webfontLoader.loaded');
-                    }
+        function link(scope, element, attrs) {
+            function onActive() {
+                $rootScope.$broadcast('webfontLoader.loaded');
+            }
 
-                    function onInactive() {
-                        $rootScope.$broadcast('webfontLoader.error');
-                    }
+            function onInactive() {
+                $rootScope.$broadcast('webfontLoader.error');
+            }
 
-                    $window.WebFont.load({
-                        google: {
-                          families: [attrs.webfontLoader]
-                        },
-                        active: onActive,
-                        inactive: onInactive
-                    });
-                }
-            };
+            $window.WebFont.load({
+                google: {
+                    families: [attrs.webfontLoader]
+                },
+                active: onActive,
+                inactive: onInactive
+            });
         }
-    ]);
-}(angular));
+    }
+})();

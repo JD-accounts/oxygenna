@@ -1,4 +1,4 @@
-(function() {
+(function(jQuery) {
     'use strict';
 
     angular
@@ -10,15 +10,15 @@
         $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState) {
             if(toState.name === 'admin-panel.default.ui-toolbar') {
                 // override data in route to change the toolbar
-                if(undefined !== toParams.extraClass) {
+                if(angular.isDefined(toParams.extraClass)) {
                     toState.data.toolbar.extraClass = toParams.extraClass === 'default' ? '' : toParams.extraClass;
                 }
 
-                if(undefined !== toParams.background) {
+                if(angular.isDefined(toParams.background)) {
                     toState.data.toolbar.background = toParams.background === 'off' ? false : 'assets/images/backgrounds/material-backgrounds/mb-bg-33.jpg';
                 }
 
-                if(undefined !== toParams.shrink) {
+                if(angular.isDefined(toParams.shrink)) {
                     toState.data.toolbar.shrink = toParams.shrink === 'off' ? false : true;
                 }
             }
@@ -42,4 +42,4 @@
             }
         });
     }
-})();
+})(jQuery);
