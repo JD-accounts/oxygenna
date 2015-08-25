@@ -20,7 +20,7 @@
                 '#9E9D24',    // browny yellow
                 '#5C6BC0'     // dark blue
             ],
-            responsive: true,
+            responsive: true
         });
     }
 })();
