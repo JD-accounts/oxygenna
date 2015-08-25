@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('triAngularForms')
+        .module('app.examples.forms')
         .directive('triWizard', TriWizard);
 
     /* @ngInject */
@@ -52,7 +52,7 @@
             // get current active form
             var form = $scope.triWizard.getForm(vm.currentStep);
             var formInvalid = true;
-            if(undefined !== form && undefined !== form.$invalid) {
+            if(angular.isDefined(form) && angular.isDefined(form.$invalid)) {
                 formInvalid = form.$invalid;
             }
             return formInvalid;
@@ -87,7 +87,7 @@
         function calculateErrors() {
             var errorCount = 0;
             for (var form = forms.length - 1; form >= 0; form--) {
-                if(forms[form].$error !== undefined) {
+                if(angular.isDefined(forms[form].$error)) {
                     for(var error in forms[form].$error) {
                         errorCount += forms[form].$error[error].length;
                     }

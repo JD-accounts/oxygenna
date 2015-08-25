@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('triAngularForms')
+        .module('app.examples.forms')
         .directive('triWizardForm', WizardFormProgress);
 
     /* @ngInject */
@@ -16,7 +16,7 @@
         var directive = {
             require: ['form', '^triWizard'],
             link: link,
-            restrict: 'A',
+            restrict: 'A'
         };
         return directive;
 

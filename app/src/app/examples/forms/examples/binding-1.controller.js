@@ -1,21 +1,18 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name BindingController
- * @module triAngularElements
- * @kind function
- *
- * @description
- *
- * Handles binding forms page
- */
-angular.module('triAngularForms').
-controller('Binding1Controller', function ($scope) {
-    $scope.user = {
-        username: 'Morris',
-        password: '',
-        description: '',
-        favouriteColor: ''
-    };
-});
+    angular
+        .module('app.examples.forms')
+        .controller('Binding1Controller', Binding1Controller);
+
+    /* @ngInject */
+    function Binding1Controller() {
+        var vm = this;
+        vm.user = {
+            username: 'Morris',
+            password: '',
+            description: '',
+            favouriteColor: ''
+        };
+    }
+})();

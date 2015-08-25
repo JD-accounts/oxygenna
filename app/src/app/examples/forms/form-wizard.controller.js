@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('triAngularForms')
+        .module('app.examples.forms')
         .controller('FormWizardController', FormWizardController);
 
     /* @ngInject */
