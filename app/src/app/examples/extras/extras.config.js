@@ -10,24 +10,27 @@
         $translatePartialLoaderProvider.addPart('app/examples/extras');
 
         $stateProvider
-        .state('admin-panel-no-scroll.default.extra-gallery', {
+        .state('triangular.admin-default.extra-gallery', {
             url: '/extras/gallery',
-            templateUrl: 'app/extras/gallery.tmpl.html',
-            controller: 'GalleryController'
+            templateUrl: 'app/examples/extras/gallery.tmpl.html',
+            controller: 'GalleryController',
+            controllerAs: 'vm'
         })
-        .state('admin-panel.default.extra-avatars', {
+        .state('triangular.admin-default.extra-avatars', {
             url: '/extras/avatars',
-            templateUrl: 'app/extras/avatars.tmpl.html',
-            controller: 'AvatarsController'
+            templateUrl: 'app/examples/extras/avatars.tmpl.html',
+            controller: 'AvatarsController',
+            controllerAs: 'vm'
         })
-        .state('admin-panel.default.extra-blank', {
+        .state('triangular.admin-default.extra-blank', {
             url: '/extras/blank',
-            templateUrl: 'app/extras/blank.tmpl.html',
+            templateUrl: 'app/examples/extras/blank.tmpl.html'
         })
-        .state('admin-panel.default.extra-timeline', {
+        .state('triangular.admin-default.extra-timeline', {
             url: '/extras/timeline',
-            templateUrl: 'app/extras/timeline.tmpl.html',
-            controller: 'TimelineController'
+            templateUrl: 'app/examples/extras/timeline.tmpl.html',
+            controller: 'TimelineController',
+            controllerAs: 'vm'
         });
 
         triMenuProvider.addMenu({
@@ -37,28 +40,28 @@
             priority: 8.1,
             children: [{
                 name: 'MENU.EXTRAS.GALLERY',
-                state: 'admin-panel-no-scroll.default.extra-gallery',
-                type: 'link',
+                state: 'triangular.admin-default.extra-gallery',
+                type: 'link'
             },{
                 name: 'MENU.EXTRAS.AVATARS',
-                state: 'admin-panel.default.extra-avatars',
-                type: 'link',
+                state: 'triangular.admin-default.extra-avatars',
+                type: 'link'
             },{
                 name: 'MENU.EXTRAS.404',
                 state: '404',
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.EXTRAS.500',
                 state: '500',
-                type: 'link',
+                type: 'link'
             },{
                 name: 'MENU.EXTRAS.BLANK',
-                state: 'admin-panel.default.extra-blank',
-                type: 'link',
+                state: 'triangular.admin-default.extra-blank',
+                type: 'link'
             },{
                 name: 'MENU.EXTRAS.TIMELINE',
-                state: 'admin-panel.default.extra-timeline',
-                type: 'link',
+                state: 'triangular.admin-default.extra-timeline',
+                type: 'link'
             }]
         });
     }

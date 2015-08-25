@@ -1,30 +1,28 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
-* @ngdoc directive
-* @name replaceWith
-* @restrict E
-* @scope
-*
-* @description
-*
-* Replaces the DOM element that was applied onto with the content in the attribute once interpolated
-*
-* @usage
-* ```html
-* <div replace-with='{{yourModel.prop}}'></div>
-* ```
-*/
-angular.module('triAngularExtras')
-.directive('replaceWith', function() {
-    return {
-        restrict: 'A',
-        link: function (scope, element, attrs) {
+    angular
+        .module('app.examples.extras')
+        .directive('replaceWith', replaceWith);
+
+    /* @ngInject */
+    function replaceWith() {
+        // Usage:
+        //
+        // Creates:
+        //
+        var directive = {
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link(scope, element, attrs) {
             attrs.$observe('replaceWith', function(value) {
                 if (value) {
-                    element.replaceWith(value === undefined ? '' : value);
+                    element.replaceWith(angular.isUndefined(value) ? '' : value);
                 }
             });
         }
-    };
-});
+    }
+})();

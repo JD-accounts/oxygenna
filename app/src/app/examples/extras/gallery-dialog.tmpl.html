@@ -1,14 +1,14 @@
-<md-dialog aria-label="{{currentImage.title}}">
+<md-dialog aria-label="{{vm.currentImage.title}}">
     <md-dialog-content class="extras-image-dialog">
-        <img ng-src="{{currentImage.urlFull}}" alt="{{currentImage.title}}">
+        <img ng-src="{{vm.currentImage.urlFull}}" alt="{{vm.currentImage.title}}">
 
         <div class="md-actions">
-            {{currentImage.title}}
+            {{vm.currentImage.title}}
             <span flex></span>
-            <md-button ng-click="prev()" class="md-icon-button" aria-label="Close">
+            <md-button ng-click="vm.prev()" class="md-icon-button" aria-label="Close">
                 <md-icon md-font-icon="icon-chevron-left"></md-icon>
             </md-button>
-            <md-button ng-click="next()" class="md-icon-button" aria-label="Close">
+            <md-button ng-click="vm.next()" class="md-icon-button" aria-label="Close">
                 <md-icon md-font-icon="icon-chevron-right"></md-icon>
             </md-button>
         </div>

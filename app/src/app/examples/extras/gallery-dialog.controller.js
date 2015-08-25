@@ -1,30 +1,27 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name GalleryDialogController
- * @module triAngularExtras
- * @kind function
- *
- * Handles the gallery photo popup
- */
-angular.module('triAngularExtras').
-controller('GalleryDialogController', function ($scope, $mdDialog, day, image) {
-    $scope.currentImage = image;
+    angular
+        .module('app.examples.extras')
+        .controller('GalleryDialogController', GalleryDialogController);
 
-    $scope.closeDialog = function() {
-        $mdDialog.cancel();
-    };
+    /* @ngInject */
+    function GalleryDialogController($mdDialog, day, image) {
+        var vm = this;
+        vm.currentImage = image;
+        vm.next = next;
+        vm.prev = prev;
 
-    $scope.next = function() {
-        var index = day.images.indexOf($scope.currentImage);
-        index = index + 1 < day.images.length ? index + 1 : 0;
-        $scope.currentImage = day.images[index];
-    };
+        function next() {
+            var index = day.images.indexOf(vm.currentImage);
+            index = index + 1 < day.images.length ? index + 1 : 0;
+            vm.currentImage = day.images[index];
+        }
 
-    $scope.prev = function() {
-        var index = day.images.indexOf($scope.currentImage);
-        index = index - 1 < 0 ? day.images.length -1 : index - 1;
-        $scope.currentImage = day.images[index];
-    };
-});
+        function prev() {
+            var index = day.images.indexOf(vm.currentImage);
+            index = index - 1 < 0 ? day.images.length -1 : index - 1;
+            vm.currentImage = day.images[index];
+        }
+    }
+})();
