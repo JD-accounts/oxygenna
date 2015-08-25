@@ -1,23 +1,24 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc filter
- * @name emailGroup
- * @module triAngularEmail
- * @kind filter
- *
- * Filters emails into groups like Yesterday, Last Week, etx
- */
+    angular
+        .module('app.examples.email')
+        .filter('emailGroup', emailGroup);
 
-angular.module('app.examples.email')
-.filter('emailGroup', function() {
-    return function(emails, emailGroup) {
-        return emails.filter(function(email) {
-            var emailDate = moment(email.date, moment.ISO_8601);
+    function emailGroup() {
+        return filterFilter;
 
-            if(emailDate.isAfter(emailGroup.from) && emailDate.isBefore(emailGroup.to)) {
-                return email;
-            }
-        });
-    };
-});
+        ////////////////
+
+        function filterFilter(emails, emailGroup) {
+            return emails.filter(function(email) {
+                var emailDate = moment(email.date, moment.ISO_8601);
+
+                if(emailDate.isAfter(emailGroup.from) && emailDate.isBefore(emailGroup.to)) {
+                    return email;
+                }
+            });
+        }
+    }
+
+})();

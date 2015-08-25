@@ -5,54 +5,79 @@
         .module('app.examples.email')
         .config(moduleConfig)
         .constant('EMAIL_ROUTES', [{
-            state: 'triangular.admin-default.email-inbox',
+            state: 'triangular.email-default.email-inbox',
             name: 'MENU.EMAIL.INBOX',
             url: '/email/inbox',
             icon: 'icon-inbox'
         },{
-            state: 'triangular.admin-default.email-trash',
+            state: 'triangular.email-default.email-trash',
             name: 'MENU.EMAIL.TRASH',
             url: '/email/trash',
             icon: 'icon-remove-circle'
         },{
-            state: 'triangular.admin-default.email-sent',
+            state: 'triangular.email-default.email-sent',
             name: 'MENU.EMAIL.SENT',
             url: '/email/sent',
             icon: 'icon-mail'
         }]);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, $provide, triMenuProvider, EMAIL_ROUTES) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider, EMAIL_ROUTES) {
         $translatePartialLoaderProvider.addPart('app/examples/email');
 
         $stateProvider
-        .state('admin-panel-email-no-scroll', {
-            abstract: true,
-            templateUrl: 'app/layouts/no-scroll/no-scroll.tmpl.html',
-            data: {
-                toolbar: {
-                    extraClass: '',
-                    background: false,
-                    shrink: true
-                },
-            }
-        })
-        .state('admin-panel-email-no-scroll.email', {
+        .state('triangular.email-default', {
             abstract: true,
             views: {
                 sidebarLeft: {
-                    templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html',
-                    controller: 'SidebarLeftController'
+                    templateUrl: 'app/triangular/components/menu/menu.tmpl.html',
+                    controller: 'MenuController',
+                    controllerAs: 'vm'
+                },
+                sidebarRight: {
+                    templateUrl: 'app/triangular/components/notifications-panel/notifications-panel.tmpl.html',
+                    controller: 'NotificationsPanelController',
+                    controllerAs: 'vm'
                 },
                 toolbar: {
-                    templateUrl: 'app/email/toolbar.tmpl.html',
-                    controller: 'EmailToolbarController'
+                    templateUrl: 'app/examples/email/toolbar.tmpl.html',
+                    controller: 'EmailToolbarController',
+                    controllerAs: 'vm'
                 },
                 content: {
-                    template: '<div flex ui-view layout="column" class="overflow-hidden"></div>'
+                    template: '<div id="admin-panel-content-view" flex ui-view></div>'
                 }
-            },
+            }
         });
+
+        // $stateProvider
+        // .state('admin-panel-email-no-scroll', {
+        //     abstract: true,
+        //     templateUrl: 'app/layouts/no-scroll/no-scroll.tmpl.html',
+        //     data: {
+        //         toolbar: {
+        //             extraClass: '',
+        //             background: false,
+        //             shrink: true
+        //         },
+        //     }
+        // })
+        // .state('admin-panel-email-no-scroll.email', {
+        //     abstract: true,
+        //     views: {
+        //         sidebarLeft: {
+        //             templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html',
+        //             controller: 'SidebarLeftController'
+        //         },
+        //         toolbar: {
+        //             templateUrl: 'app/examples/email/toolbar.tmpl.html',
+        //             controller: 'EmailToolbarController'
+        //         },
+        //         content: {
+        //             template: '<div flex ui-view layout="column" class="overflow-hidden"></div>'
+        //         }
+        //     },
+        // });
 
         angular.forEach(EMAIL_ROUTES, function(route) {
             $stateProvider
@@ -60,17 +85,18 @@
                 url: route.url,
                 templateUrl: 'app/examples/email/inbox.tmpl.html',
                 controller: 'InboxController',
+                controllerAs: 'vm',
                 resolve: {
                     emails: function($http, API_CONFIG) {
                         return $http({
                             method: 'GET',
-                            url: API_CONFIG.url + 'email/inbox',
+                            url: API_CONFIG.url + 'email/inbox'
                         });
                     },
                     contacts: function($http, API_CONFIG) {
                         return $http({
                             method: 'GET',
-                            url: API_CONFIG.url + 'email/contacts',
+                            url: API_CONFIG.url + 'email/contacts'
                         });
                     }
                 }
@@ -83,6 +109,7 @@
                 url: '/mail/:emailID',
                 templateUrl: 'app/examples/email/email.tmpl.html',
                 controller: 'EmailController',
+                controllerAs: 'vm',
                 resolve: {
                     email: function($stateParams, emails) {
                         emails = emails.data;
@@ -100,36 +127,9 @@
                     if (false === email) {
                         $state.go(route.state);
                     }
-                },
+                }
             });
         });
-
-        /***
-        * Setup Editor Toolbar here
-        ***/
-        $provide.decorator('taOptions', ['taRegisterTool', 'taTranslations', '$delegate', function(taRegisterTool, taTranslations, taOptions){
-            taOptions.toolbar = [['bold', 'italics', 'underline', 'insertLink']];
-
-            taOptions.classes = {
-                focussed: 'focussed',
-                toolbar: 'editor-toolbar',
-                toolbarGroup: 'editor-group',
-                toolbarButton: 'md-button',
-                toolbarButtonActive: '',
-                disabled: '',
-                textEditor: 'form-control',
-                htmlEditor: 'form-control'
-            };
-            return taOptions;
-        }]);
-
-        $provide.decorator('taTools', ['$delegate', function(taTools){
-            taTools.bold.iconclass = 'icon-format-bold';
-            taTools.italics.iconclass = 'icon-format-italic';
-            taTools.underline.iconclass = 'icon-format-underline';
-            taTools.insertLink.iconclass = 'icon-insert-link';
-            return taTools;
-        }]);
 
         var emailMenu = {
             name: 'MENU.EMAIL.EMAIL',
@@ -143,7 +143,7 @@
             emailMenu.children.push({
                 name: route.name,
                 state: route.state,
-                type: 'link',
+                type: 'link'
             });
         });
 

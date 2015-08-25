@@ -1,36 +1,38 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc filter
- * @name emailSearchFilter
- * @module triAngularEmail
- * @kind filter
- *
- * Filters some text to cut and add eliplis
- */
- angular.module('app.examples.email')
- .filter('cut', function () {
-    return function (value, wordwise, max, tail) {
-        if (!value) {
-            return '';
-        }
+    angular
+        .module('app.examples.email')
+        .filter('cut', cut);
 
-        max = parseInt(max, 10);
-        if (!max) {
-            return value;
-        }
-        if (value.length <= max) {
-            return value;
-        }
+    function cut() {
+        return filterFunction;
 
-        value = value.substr(0, max);
-        if (wordwise) {
-            var lastspace = value.lastIndexOf(' ');
-            if (lastspace !== -1) {
-                value = value.substr(0, lastspace);
+        ////////////////
+
+        function filterFunction(value, wordwise, max, tail) {
+            if (!value) {
+                return '';
             }
-        }
 
-        return value + (tail || ' …');
-    };
-});
+            max = parseInt(max, 10);
+            if (!max) {
+                return value;
+            }
+            if (value.length <= max) {
+                return value;
+            }
+
+            value = value.substr(0, max);
+            if (wordwise) {
+                var lastspace = value.lastIndexOf(' ');
+                if (lastspace !== -1) {
+                    value = value.substr(0, lastspace);
+                }
+            }
+
+            return value + (tail || ' …');
+        }
+    }
+
+})();

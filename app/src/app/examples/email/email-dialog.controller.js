@@ -1,54 +1,57 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name ComposeController
- * @module triAngularEmail
- * @kind function
- *
- * @description
- *
- * Handles actions in compose dialog
- */
+    angular
+        .module('app.examples.email')
+        .controller('EmailDialogController', EmailDialogController);
 
-angular.module('app.examples.email')
-.controller('EmailDialogController', function ($scope, $timeout, $mdDialog, $filter, triSkins, textAngularManager, title, email, contacts, getFocus) {
-    $scope.title = title;
-    $scope.email = email;
-    $scope.contacts = contacts.data;
-    $scope.showCCSIcon = 'icon-arrow-drop-down';
-    $scope.showCCS = false;
+    /* @ngInject */
+    function EmailDialogController($timeout, $mdDialog, $filter, triSkins, textAngularManager, title, email, contacts, getFocus) {
+        var contactsData = contacts.data;
 
-    $scope.triSkin = triSkins.getCurrent();
+        var vm = this;
+        vm.cancel = cancel;
+        vm.email = email;
+        vm.title = title;
+        vm.send = send;
+        vm.showCCSIcon = 'icon-arrow-drop-down';
+        vm.showCCS = false;
+        vm.toggleCCS = toggleCCS;
+        vm.triSkin = triSkins.getCurrent();
+        vm.queryContacts = queryContacts;
 
-    $scope.queryContacts = function($query) {
-        var lowercaseQuery = angular.lowercase($query);
-        return $scope.contacts.filter(function(contact) {
-            var lowercaseName = angular.lowercase(contact.name);
-            if (lowercaseName.indexOf(lowercaseQuery) !== -1) {
-                return contact;
-            }
-        });
-    };
+        ///////////////
 
-    $scope.toggleCCS = function() {
-        $scope.showCCS = !$scope.showCCS;
-        $scope.showCCSIcon = $scope.showCCS ? 'icon-arrow-drop-up' : 'icon-arrow-drop-down';
-    };
+        function cancel() {
+            $mdDialog.cancel();
+        }
 
-    $scope.send = function() {
-        $mdDialog.hide($scope.email);
-    };
+        function toggleCCS() {
+            vm.showCCS = !vm.showCCS;
+            vm.showCCSIcon = vm.showCCS ? 'icon-arrow-drop-up' : 'icon-arrow-drop-down';
+        }
 
-    $scope.cancel = function() {
-        $mdDialog.cancel();
-    };
+        function send() {
+            $mdDialog.hide(vm.email);
+        }
 
-    if(getFocus) {
-        $timeout(function() {
-            // Retrieve the scope and trigger focus
-            var editorScope = textAngularManager.retrieveEditor('emailBody').scope;
-            editorScope.displayElements.text.trigger('focus');
-        }, 500);
+        function queryContacts($query) {
+            var lowercaseQuery = angular.lowercase($query);
+            return contactsData.filter(function(contact) {
+                var lowercaseName = angular.lowercase(contact.name);
+                if (lowercaseName.indexOf(lowercaseQuery) !== -1) {
+                    return contact;
+                }
+            });
+        }
+
+        ////////////////
+        if(getFocus) {
+            $timeout(function() {
+                // Retrieve the scope and trigger focus
+                var editorScope = textAngularManager.retrieveEditor('emailBody').scope;
+                editorScope.displayElements.text.trigger('focus');
+            }, 500);
+        }
     }
-});
+})();

@@ -1,13 +1,13 @@
 <div class="email-inbox full-height overflow-hidden" layout="row" flex>
-    <md-button ng-click="composeClick($event)" class="md-fab md-accent md-fab-bottom-right" aria-label="{{'EMAIL.COMPOSE_EMAIL' | translate}}">
+    <md-button ng-click="vm.composeClick($event)" class="md-fab md-accent md-fab-bottom-right" aria-label="{{'EMAIL.COMPOSE_EMAIL' | translate}}">
         <md-icon md-font-icon="icon-create"></md-icon>
     </md-button>
-    <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-sm="50" flex-gt-md="50" flex-gt-lg="40" ng-show="showEmailList" layout="column">
+    <div class="email-inbox-list md-whiteframe-z1" flex="100" flex-gt-sm="50" flex-gt-md="50" flex-gt-lg="40" ng-show="vm.showEmailList" layout="column">
         <md-content>
-            <section class="email-inbox-list-animate-repeat" ng-repeat="group in emailGroups" ng-show="group.emails.length > 0">
-                <md-subheader class="md-primary">{{::group.name}}</md-subheader>
+            <section class="email-inbox-list-animate-repeat" ng-repeat="group in vm.emailGroups" ng-if="vm.emails.length > 0">
+                <md-subheader ng-show="group.emails.length > 0" class="md-primary">{{::group.name}}</md-subheader>
                 <md-list>
-                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat md-3-line" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
+                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat md-3-line" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="vm.openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
 
                         <img class="md-avatar animate" ng-src="{{::email.from.image}}" alt="{{::email.from.name}}">
 
@@ -24,7 +24,7 @@
                     </md-list-item>
                 </md-list>
             </section>
-            <h2 ng-show="emails.length === 0" translate>EMAIL.NO_EMAILS_FOUND</h2>
+            <h2 ng-if="vm.emails.length === 0" translate>EMAIL.NO_EMAILS_FOUND</h2>
         </md-content>
     </div>
 

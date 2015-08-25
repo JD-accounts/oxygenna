@@ -1,44 +1,48 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name EmailToolbarController
- * @module triAngularEmail
- * @kind function
- *
- * @description
- *
- * Handles all actions for email toolbar
- */
+    angular
+        .module('app.examples.email')
+        .controller('EmailToolbarController', EmailToolbarController);
 
-angular.module('app.examples.email')
-.controller('EmailToolbarController', function ($scope, $rootScope, $filter, $mdUtil, $mdSidenav, $state, SideMenu, EMAIL_ROUTES) {
-    $scope.showSearch = false;
-    $scope.toolbarMenu = [];
-    $scope.menu = SideMenu.getMenu();
+    /* @ngInject */
+    function EmailToolbarController($rootScope, $filter, $mdUtil, $mdSidenav, $state, triBreadcrumbs, EMAIL_ROUTES) {
+        var vm = this;
+        vm.breadcrumbs = triBreadcrumbs.breadcrumbs;
+        vm.filterEmailList = filterEmailList;
+        vm.openSideNav = openSideNav;
+        vm.showSearch = false;
+        vm.toggleSearch = toggleSearch;
+        vm.toolbarMenu = [];
 
-    for(var i = 0; i < EMAIL_ROUTES.length; i++) {
-        $scope.toolbarMenu.push({
-            name: $filter('translate')(EMAIL_ROUTES[i].name),
-            state: EMAIL_ROUTES[i].state,
-            icon: EMAIL_ROUTES[i].icon,
-        });
+        /////////////////
+
+        function filterEmailList(emailSearch) {
+            $rootScope.$broadcast('emailSearch', emailSearch);
+        }
+
+        function toggleSearch() {
+            vm.showSearch = !vm.showSearch;
+        }
+
+        /**
+         * Build handler to open/close a SideNav;
+         */
+        function openSideNav(navID) {
+            $mdUtil.debounce(function(){
+                $mdSidenav(navID).toggle();
+            }, 300)();
+        }
+
+
+        // init
+
+        for(var i = 0; i < EMAIL_ROUTES.length; i++) {
+            vm.toolbarMenu.push({
+                name: $filter('translate')(EMAIL_ROUTES[i].name),
+                state: EMAIL_ROUTES[i].state,
+                icon: EMAIL_ROUTES[i].icon
+            });
+        }
     }
-
-    $scope.filterEmailList = function() {
-        $rootScope.$broadcast('emailSearch', $scope.emailSearch);
-    };
-
-    $scope.toggleSearch = function() {
-        $scope.showSearch = !$scope.showSearch;
-    };
-
-    /**
-     * Build handler to open/close a SideNav;
-     */
-    $scope.openSideNav = function(navID) {
-        $mdUtil.debounce(function(){
-            $mdSidenav(navID).toggle();
-        }, 300)();
-    };
-});
+})();
