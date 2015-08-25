@@ -21,7 +21,7 @@
             url: '/404',
             templateUrl: '404.tmpl.html',
             controllerAs: 'vm',
-            controller: function($state, triSettings) {
+            controller: function($state) {
                 var vm = this;
                 vm.goHome = function() {
                     $state.go('admin-panel.default.dashboard-analytics');
@@ -33,7 +33,7 @@
             url: '/500',
             templateUrl: '500.tmpl.html',
             controllerAs: 'vm',
-            controller: function($state, triSettings) {
+            controller: function($state) {
                 var vm = this;
                 vm.goHome = function() {
                     $state.go('admin-panel.default.dashboard-analytics');

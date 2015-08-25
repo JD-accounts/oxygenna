@@ -10,14 +10,15 @@
         $translatePartialLoaderProvider.addPart('app/examples/maps');
 
         $stateProvider
-        .state('admin-panel.default.maps-fullwidth', {
+        .state('triangular.admin-default.maps-fullwidth', {
             url: '/maps/fullwidth',
-            templateUrl: 'app/maps/maps-fullwidth.tmpl.html',
-            controller: 'MapController'
+            templateUrl: 'app/examples/maps/maps-fullwidth.tmpl.html',
+            controller: 'MapController',
+            controllerAs: 'vm'
         })
-        .state('admin-panel.default.maps-demos', {
+        .state('triangular.admin-default.maps-demos', {
             url: '/maps/demos',
-            templateUrl: 'app/maps/maps-demo.tmpl.html',
+            templateUrl: 'app/examples/maps/maps-demo.tmpl.html'
         });
 
         uiGmapGoogleMapApiProvider.configure({
@@ -32,12 +33,12 @@
             priority: 7.1,
             children: [{
                 name: 'MENU.MAPS.FULLWIDTH',
-                state: 'admin-panel.default.maps-fullwidth',
-                type: 'link',
+                state: 'triangular.admin-default.maps-fullwidth',
+                type: 'link'
             },{
                 name: 'MENU.MAPS.DEMOS',
-                state: 'admin-panel.default.maps-demos',
-                type: 'link',
+                state: 'triangular.admin-default.maps-demos',
+                type: 'link'
             }]
         });
     }

@@ -5,8 +5,6 @@
 'use strict';
 
 // add old modules here to keep things running for now
-angular.module('triAngularForms', []);
-angular.module('triAngularMaps', []);
 angular.module('triAngularTodo', []);
 angular.module('triAngularUI', []);
 
