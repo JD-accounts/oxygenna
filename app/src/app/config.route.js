@@ -15,6 +15,33 @@
         //     templateUrl: 'app/test/test.tmpl.html',
         // });
 
+        // 404 & 500 pages
+        $stateProvider
+        .state('404', {
+            url: '/404',
+            templateUrl: '404.tmpl.html',
+            controllerAs: 'vm',
+            controller: function($state, triSettings) {
+                var vm = this;
+                vm.goHome = function() {
+                    $state.go('admin-panel.default.dashboard-analytics');
+                };
+            }
+        })
+
+        .state('500', {
+            url: '/500',
+            templateUrl: '500.tmpl.html',
+            controllerAs: 'vm',
+            controller: function($state, triSettings) {
+                var vm = this;
+                vm.goHome = function() {
+                    $state.go('admin-panel.default.dashboard-analytics');
+                };
+            }
+        });
+
+
         // set default routes when no path specified
         $urlRouterProvider.when('', '/introduction');
         $urlRouterProvider.when('/', '/introduction');
