@@ -31,18 +31,15 @@
                 }
             }, 100);
 
-            // TODO rewrite this
-            /*eslint-disable */
             var onScrollCallback =  function() {
                 for(var i = 0; i < $widgets.length; i++) {
-                    if($($widgets[i]).offset().top <= $(window).scrollTop() + $(window).height() * 0.80 && $($widgets[i]).height() > 1) {
+                    if(angular.element($widgets[i]).offset().top <= angular.element(window).scrollTop() + angular.element(window).height() * 0.80 && angular.element($widgets[i]).height() > 1) {
                         var dir = ( i % 2 === 0 ) ? 'left':'right';
-                        $($dividers[i]).addClass('timeline-content-animated '+ dir);
-                        $($widgets[i]).addClass('timeline-content-animated '+ dir);
+                        angular.element($dividers[i]).addClass('timeline-content-animated '+ dir);
+                        angular.element($widgets[i]).addClass('timeline-content-animated '+ dir);
                     }
                 }
             };
-            /*eslint-enable */
 
             angular.element('md-content').bind('scroll', onScrollCallback).scroll();
         }
