@@ -1,14 +1,3 @@
-/**
- * @ngdoc function
- * @name TablesAdvancedController
- * @module triAngularElements
- * @kind function
- *
- * @description
- *
- * Handles advanced tables page
- */
-
 (function() {
     'use strict';
 

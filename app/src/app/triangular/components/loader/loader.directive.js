@@ -1,25 +1,8 @@
-'use strict';
-
-/**
-* @ngdoc directive
-* @name triLoader
-* @restrict E
-* @scope
-*
-* @description
-*
-* Adds a loader screen that takes up 100%
-*
-* @usage
-* ```html
-* <tri-loader></tri-loader>
-* ```
-*/
 (function() {
     'use strict';
 
     angular
-        .module('triAngular')
+        .module('triangular.components')
         .directive('triLoader', TriLoader);
 
     /* @ngInject */
@@ -49,11 +32,10 @@
     }
 
     /* @ngInject */
-    function TriLoaderController ($rootScope, LoaderService, APP) {
+    function TriLoaderController ($rootScope, triLoader, triSettings) {
         var vm = this;
-
-        vm.appName = APP.name;
-        vm.status = LoaderService.status;
-        vm.setLoaderActive = LoaderService.setLoaderActive;
+        vm.appName         = triSettings.name;
+        vm.status          = triLoader.status;
+        vm.setLoaderActive = triLoader.setLoaderActive;
     }
 })();
