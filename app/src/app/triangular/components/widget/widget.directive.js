@@ -64,6 +64,9 @@
                     $scope.menu.menuClick($event);
                 }
             };
+
+            // remove title attribute to stop popup on hover
+            $element.attr('title', '');
         }
     }
 

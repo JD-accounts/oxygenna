@@ -140,3 +140,4 @@
 
 - Layouts: new page layout examples
 - Layouts: new layout provider & service to easily modify page layouts
+- Dashboards: removed title attribute to stop popup title.
