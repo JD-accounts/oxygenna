@@ -14,7 +14,7 @@
             <form name="taskForm" novalidate>
                 <md-input-container>
                     <label translate>MENU.TODO.DIALOG.DESC</label>
-                    <input ng-model="item.description" class="dialog-close" name="task" required></input>
+                    <input ng-model="vm.item.description" class="dialog-close" name="task" required></input>
                     <div ng-messages="taskForm.task.$error">
                         <div ng-message when="required">
                             <span translate>MENU.TODO.DIALOG.TASKFORM.PLEASE_ENTER</span>
@@ -22,7 +22,7 @@
                     </div>
                 </md-input-container>
                 <md-input-container>
-                    <md-select placeholder="{{'MENU.TODO.DIALOG.PRIORITY' | translate}}" ng-model="item.priority">
+                    <md-select placeholder="{{'MENU.TODO.DIALOG.PRIORITY' | translate}}" ng-model="vm.item.priority">
                         <md-option value="high" translate>MENU.TODO.DIALOG.HIGH</md-option>
                         <md-option value="medium" translate>MENU.TODO.DIALOG.MEDIUM</md-option>
                         <md-option value="low" translate>MENU.TODO.DIALOG.LOW</md-option>
@@ -33,7 +33,7 @@
     </md-dialog-content>
     <div class="md-actions" layout="row">
         <span flex></span>
-        <md-button ng-click="cancel()">Cancel</md-button>
-        <md-button ng-click="hide()" class="md-primary" ng-disabled="taskForm.$invalid">Ok</md-button>
+        <md-button ng-click="vm.cancel()">Cancel</md-button>
+        <md-button ng-click="vm.hide()" class="md-primary" ng-disabled="taskForm.$invalid">Ok</md-button>
     </div>
 </md-dialog>

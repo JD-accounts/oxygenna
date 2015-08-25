@@ -1,30 +1,29 @@
-'use strict';
+(function() {
+    'use strict';
 
-/**
- * @ngdoc function
- * @name TodoController
- * @module triAngularTodo
- * @kind function
- *
- * @description
- *
- * Handles the todo app model and controls
- */
-angular.module('triAngularTodo')
-.controller('DialogController', function ($scope, $state, $mdDialog) {    
-    
-    $scope.item = {
-        description: '',
-        priority: '',
-        selected: false
-    };
-    
-    $scope.hide = function() {
-        $mdDialog.hide($scope.item);
-    };
-    
-    $scope.cancel = function() {
-        $mdDialog.cancel();
-    };
-    
-});
+    angular
+        .module('app.examples.todo')
+        .controller('DialogController', DialogController);
+
+    /* @ngInject */
+    function DialogController($state, $mdDialog) {
+        var vm = this;
+        vm.cancel = cancel;
+        vm.hide = hide;
+        vm.item = {
+            description: '',
+            priority: '',
+            selected: false
+        };
+
+        /////////////////////////
+
+        function hide() {
+            $mdDialog.hide(vm.item);
+        }
+
+        function cancel() {
+            $mdDialog.cancel();
+        }
+    }
+})();
