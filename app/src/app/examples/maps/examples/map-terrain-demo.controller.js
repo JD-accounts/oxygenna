@@ -26,7 +26,7 @@
                             anchor: new maps.Point(36,36),
                             origin: new maps.Point(0,0),
                             url: 'assets/images/maps/blue_marker.png'
-                        },
+                        }
                     }
                 },
                 options:{

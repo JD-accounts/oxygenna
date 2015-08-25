@@ -17,13 +17,10 @@
 
         function addCrumb(item) {
             this.breadcrumbs.crumbs.unshift(item);
-            console.log('add', this.breadcrumbs.crumbs)
         }
 
         function reset() {
             this.breadcrumbs.crumbs = [];
-            console.log('reset', this.breadcrumbs.crumbs)
-
         }
     }
 })();
