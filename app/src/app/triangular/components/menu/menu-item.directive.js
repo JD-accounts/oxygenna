@@ -89,7 +89,6 @@
             var params = angular.isUndefined(triMenuItem.item.params) ? {} : triMenuItem.item.params;
             $state.go(triMenuItem.item.state, params);
             triMenuItem.item.active = true;
-            $scope.$emit('openParents');
         }
     }
 })();
