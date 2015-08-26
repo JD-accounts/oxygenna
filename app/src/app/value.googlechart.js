@@ -4,13 +4,11 @@
 
     angular
         .module('app')
-        .value('googleChartApiConfig', value);
-
-    var value = {
-        version: '1.1',
-        optionalSettings: {
-            packages: ['line', 'bar', 'geochart', 'scatter'],
-            language: 'en'
-        }
-    };
+        .value('googleChartApiConfig', {
+            version: '1.1',
+            optionalSettings: {
+                packages: ['line', 'bar', 'geochart', 'scatter'],
+                language: 'en'
+            }
+        });
 })();
