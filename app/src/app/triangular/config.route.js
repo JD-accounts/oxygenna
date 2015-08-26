@@ -14,6 +14,12 @@
             controller: 'DefaultLayoutController',
             controllerAs: 'layoutController'
         })
+        .state('triangular-no-scroll', {
+            abstract: true,
+            templateUrl: 'app/triangular/layouts/default/default-no-scroll.tmpl.html',
+            controller: 'DefaultLayoutController',
+            controllerAs: 'layoutController'
+        })
         .state('triangular.admin-default', {
             abstract: true,
             views: {
@@ -34,6 +40,29 @@
                 },
                 content: {
                     template: '<div id="admin-panel-content-view" flex ui-view></div>'
+                }
+            }
+        })
+        .state('triangular.admin-default-no-scroll', {
+            abstract: true,
+            views: {
+                sidebarLeft: {
+                    templateUrl: 'app/triangular/components/menu/menu.tmpl.html',
+                    controller: 'MenuController',
+                    controllerAs: 'vm'
+                },
+                sidebarRight: {
+                    templateUrl: 'app/triangular/components/notifications-panel/notifications-panel.tmpl.html',
+                    controller: 'NotificationsPanelController',
+                    controllerAs: 'vm'
+                },
+                toolbar: {
+                    templateUrl: 'app/triangular/components/toolbars/default.tmpl.html',
+                    controller: 'DefaultToolbarController',
+                    controllerAs: 'vm'
+                },
+                content: {
+                    template: '<div flex ui-view layout="column" class="overflow-hidden"></div>'
                 }
             }
         });

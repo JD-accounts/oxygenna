@@ -5,17 +5,17 @@
         .module('app.examples.email')
         .config(moduleConfig)
         .constant('EMAIL_ROUTES', [{
-            state: 'triangular.email-default.email-inbox',
+            state: 'triangular-no-scroll.email.inbox',
             name: 'MENU.EMAIL.INBOX',
             url: '/email/inbox',
             icon: 'icon-inbox'
         },{
-            state: 'triangular.email-default.email-trash',
+            state: 'triangular-no-scroll.email.trash',
             name: 'MENU.EMAIL.TRASH',
             url: '/email/trash',
             icon: 'icon-remove-circle'
         },{
-            state: 'triangular.email-default.email-sent',
+            state: 'triangular-no-scroll.email.sent',
             name: 'MENU.EMAIL.SENT',
             url: '/email/sent',
             icon: 'icon-mail'
@@ -26,7 +26,7 @@
         $translatePartialLoaderProvider.addPart('app/examples/email');
 
         $stateProvider
-        .state('triangular.email-default', {
+        .state('triangular-no-scroll.email', {
             abstract: true,
             views: {
                 sidebarLeft: {
@@ -45,39 +45,10 @@
                     controllerAs: 'vm'
                 },
                 content: {
-                    template: '<div id="admin-panel-content-view" flex ui-view></div>'
+                    template: '<div flex ui-view layout="column" class="overflow-hidden"></div>'
                 }
             }
         });
-
-        // $stateProvider
-        // .state('admin-panel-email-no-scroll', {
-        //     abstract: true,
-        //     templateUrl: 'app/layouts/no-scroll/no-scroll.tmpl.html',
-        //     data: {
-        //         toolbar: {
-        //             extraClass: '',
-        //             background: false,
-        //             shrink: true
-        //         },
-        //     }
-        // })
-        // .state('admin-panel-email-no-scroll.email', {
-        //     abstract: true,
-        //     views: {
-        //         sidebarLeft: {
-        //             templateUrl: 'components/sidebar-left/sidebar-left.tmpl.html',
-        //             controller: 'SidebarLeftController'
-        //         },
-        //         toolbar: {
-        //             templateUrl: 'app/examples/email/toolbar.tmpl.html',
-        //             controller: 'EmailToolbarController'
-        //         },
-        //         content: {
-        //             template: '<div flex ui-view layout="column" class="overflow-hidden"></div>'
-        //         }
-        //     },
-        // });
 
         angular.forEach(EMAIL_ROUTES, function(route) {
             $stateProvider
