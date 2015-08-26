@@ -32,10 +32,10 @@
     }
 
     /* @ngInject */
-    function TriLoaderController ($rootScope, triLoader, triSettings) {
+    function TriLoaderController ($rootScope, triLoaderService, triSettings) {
         var vm = this;
         vm.appName         = triSettings.name;
-        vm.status          = triLoader.status;
-        vm.setLoaderActive = triLoader.setLoaderActive;
+        vm.status          = triLoaderService.status;
+        vm.setLoaderActive = triLoaderService.setLoaderActive;
     }
 })();

@@ -6,9 +6,9 @@
         .controller('EmailToolbarController', EmailToolbarController);
 
     /* @ngInject */
-    function EmailToolbarController($rootScope, $filter, $mdUtil, $mdSidenav, $state, triBreadcrumbs, EMAIL_ROUTES) {
+    function EmailToolbarController($rootScope, $filter, $mdUtil, $mdSidenav, $state, triBreadcrumbsService, EMAIL_ROUTES) {
         var vm = this;
-        vm.breadcrumbs = triBreadcrumbs.breadcrumbs;
+        vm.breadcrumbs = triBreadcrumbsService.breadcrumbs;
         vm.filterEmailList = filterEmailList;
         vm.openSideNav = openSideNav;
         vm.showSearch = false;

@@ -26,7 +26,7 @@
         return directive;
     }
 
-    function triMenuItemController($scope, $state, $filter, triBreadcrumbs) {
+    function triMenuItemController($scope, $state, $filter, triBreadcrumbsService) {
         var triMenuItem = this;
         // load a template for this directive based on the type ( link | dropdown )
         triMenuItem.item.template = 'app/triangular/components/menu/menu-item-' + triMenuItem.item.type + '.tmpl.html';
@@ -51,7 +51,7 @@
                     // openParents event so open the parent item
                     triMenuItem.item.open = true;
                     // also add this to the breadcrumbs
-                    triBreadcrumbs.addCrumb(triMenuItem.item);
+                    triBreadcrumbsService.addCrumb(triMenuItem.item);
                 });
                 break;
             case 'link':
@@ -75,8 +75,8 @@
             }
             // if we are now the active item reset the breadcrumbs and open all parent dropdown items
             if(triMenuItem.item.active) {
-                triBreadcrumbs.reset();
-                triBreadcrumbs.addCrumb(triMenuItem.item);
+                triBreadcrumbsService.reset();
+                triBreadcrumbsService.addCrumb(triMenuItem.item);
                 $scope.$emit('openParents');
             }
         }

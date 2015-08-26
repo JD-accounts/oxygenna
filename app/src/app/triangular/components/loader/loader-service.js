@@ -3,7 +3,7 @@
 
     angular
         .module('triangular.components')
-        .service('triLoader', LoaderService);
+        .service('triLoaderService', LoaderService);
 
     /* @ngInject */
     function LoaderService() {

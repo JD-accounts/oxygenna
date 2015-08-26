@@ -4,7 +4,8 @@
     angular
         .module('triangular', [
             'ngMaterial',
-            'triangular.layouts', 'triangular.components', 'triangular.themes', 'triangular.profiler', 'triangular.directives',
-            'ui.router'
+            'triangular.layouts', 'triangular.components', 'triangular.themes', 'triangular.directives',
+            'ui.router',
+            'triangular.profiler'
         ]);
 })();

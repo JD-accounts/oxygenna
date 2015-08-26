@@ -6,7 +6,7 @@
         .controller('TablesAdvancedController', Controller);
 
     /* @ngInject */
-    function Controller($scope, $timeout, $q, Github) {
+    function Controller($scope, $timeout, $q, GithubService) {
         var vm = this;
         vm.query = {
             filter: '',
@@ -47,7 +47,7 @@
         }
 
         function getUsers() {
-            Github.getUsers(vm.query).then(function(users){
+            GithubService.getUsers(vm.query).then(function(users){
                 vm.users = users.data;
             });
         }

@@ -6,7 +6,7 @@
         .controller('GithubController', GithubController);
 
     /* @ngInject */
-    function GithubController($http, $mdToast, triLoader) {
+    function GithubController($http, $mdToast, triLoaderService) {
         var oxygennaAPIUrl = 'http://api.oxygenna.com';
         var vm = this;
         vm.data = {
@@ -22,16 +22,16 @@
         ////////////////
 
         function register() {
-            triLoader.setLoaderActive(true);
+            triLoaderService.setLoaderActive(true);
 
             $http.put(oxygennaAPIUrl + '/register-github-access', vm.data).
             then(function() {
                 // everything went ok
-                triLoader.setLoaderActive(false);
+                triLoaderService.setLoaderActive(false);
                 popAToast('Success!  Check your GitHub email for your invite.');
             }, function(response) {
                 // something went wrong
-                triLoader.setLoaderActive(false);
+                triLoaderService.setLoaderActive(false);
                 if(angular.isDefined(response.data.error)) {
                     popAToast(response.data.error);
                 }

@@ -6,7 +6,7 @@
         .run(moduleRun);
 
     /* @ngInject */
-    function moduleRun(TypographySwitcher, $rootScope) {
+    function moduleRun(TypographySwitcherService, $rootScope) {
         $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState) {
             if(toState.name === 'admin-panel.default.ui-toolbar') {
                 // override data in route to change the toolbar
@@ -38,7 +38,7 @@
             async: true,
             success: function() {
                 // initialise typography switcher (make sure correct font is loaded if one has been selected)
-                TypographySwitcher.init();
+                TypographySwitcherService.init();
             }
         });
     }

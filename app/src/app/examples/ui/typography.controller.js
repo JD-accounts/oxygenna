@@ -6,16 +6,16 @@
         .controller('TypographyController', TypographyController);
 
     /* @ngInject */
-    function TypographyController(TypographySwitcher, UI_FONTS) {
+    function TypographyController(TypographySwitcherService, UI_FONTS) {
         var vm = this;
         vm.fonts = UI_FONTS;
         vm.changeFont = changeFont;
-        vm.currentFont = TypographySwitcher.getCurrentFont();
+        vm.currentFont = TypographySwitcherService.getCurrentFont();
 
         //////////////////
 
         function changeFont() {
-            TypographySwitcher.changeFont(vm.currentFont);
+            TypographySwitcherService.changeFont(vm.currentFont);
         }
 
         // init

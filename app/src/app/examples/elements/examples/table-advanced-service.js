@@ -3,7 +3,7 @@
 
     angular
         .module('app.examples.elements')
-        .service('Github', Service);
+        .service('GithubService', Service);
 
     Service.$inject = ['$http', '$q'];
 

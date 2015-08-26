@@ -3,7 +3,7 @@
 
     angular
         .module('app.examples.ui')
-        .service('TypographySwitcher', TypographySwitcher);
+        .service('TypographySwitcherService', TypographySwitcher);
 
     /* @ngInject */
     function TypographySwitcher($window, $cookies, $log, UI_FONTS) {

@@ -3,7 +3,7 @@
 
     angular
         .module('triangular.components')
-        .service('triBreadcrumbs', BreadcrumbsService);
+        .service('triBreadcrumbsService', BreadcrumbsService);
 
     /* @ngInject */
     function BreadcrumbsService() {
