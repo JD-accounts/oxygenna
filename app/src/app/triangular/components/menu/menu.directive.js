@@ -23,7 +23,7 @@
 
         function link($scope, $element) {
             $mdTheming($element);
-            var $mdTheme = $element.controller('mdTheme');
+            var $mdTheme = $element.controller('mdTheme'); //eslint-disable-line
 
             var menuColor = triTheming.getThemeHue($mdTheme.$mdTheme, 'primary', 'default');
             var menuColorRGBA = triTheming.rgba(menuColor.value);

@@ -39,7 +39,7 @@
                 layout[name] = value;
             }
 
-            function updateLayoutFromState(toState) {
+            function updateLayoutFromState(event, toState) {
                 // reset classes
                 for(var option in layoutDefaults) {
                     layout[option] = layoutDefaults[option];
@@ -59,9 +59,14 @@
     function layoutRunner($rootScope, triLayout) {
         // check for $stateChangeStart and update the layouts if we have data.layout set
         // if nothing set reset to defaults for every state
-        $rootScope.$on('$stateChangeStart', function(event, toState) {
-            triLayout.updateLayoutFromState(toState);
-        });
+        var destroyOn = $rootScope.$on('$stateChangeStart', triLayout.updateLayoutFromState);
+        $rootScope.$on('$destroy', removeWatch);
+
+        /////////////
+
+        function removeWatch() {
+            destroyOn();
+        }
     }
 })();
 

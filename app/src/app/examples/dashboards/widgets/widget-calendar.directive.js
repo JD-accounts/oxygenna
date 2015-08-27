@@ -23,10 +23,9 @@
     }
 
     /* @ngInject */
-    function Controller (uiCalendarConfig, $rootScope, $translate) {
+    function Controller ($scope, uiCalendarConfig, $rootScope, $translate) {
         var vm = this;
         vm.calendarEvents = [];
-
         vm.calendarOptions = {
             lang: $translate.use(),
             header: false,
@@ -35,13 +34,21 @@
                 vm.currentDay = view.calendar.getDate();
             }
         };
+        vm.changeMonth = changeMonth;
 
-        vm.changeMonth = function(direction) {
+        var destroyOn = $rootScope.$on('$translateChangeSuccess', switchLanguage);
+        $scope.$on('$destroy', destroyListener);
+
+        function changeMonth(direction) {
             uiCalendarConfig.calendars.calendarWidget.fullCalendar(direction);
-        };
+        }
 
-        $rootScope.$on('$translateChangeSuccess', function () {
+        function switchLanguage() {
             vm.calendarOptions.lang = $translate.use();
-        });
+        }
+
+        function destroyListener() {
+            destroyOn();
+        }
     }
 })();

@@ -21,13 +21,20 @@
         return directive;
 
         function link($scope) {
-            $rootScope.$on('$viewContentLoading', function() {
+            var loadingListener = $rootScope.$on('$viewContentLoading', function() {
                 $scope.vm.setLoaderActive(true);
             });
 
-            $rootScope.$on('$viewContentLoaded', function() {
+            var loadedListener = $rootScope.$on('$viewContentLoaded', function() {
                 $scope.vm.setLoaderActive(false);
             });
+
+            $scope.$on('$destroy', removeListeners);
+
+            function removeListeners() {
+                loadingListener();
+                loadedListener();
+            }
         }
     }
 

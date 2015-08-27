@@ -64,14 +64,14 @@
             switch(optionName) {
                 case 'footer':
                     var style = vm.layout.footer ? 'block' : 'none';
-                    document.getElementById('footer').style.display = style;
-                break;
+                    $document[0].getElementById('footer').style.display = style;
+                    break;
                 case 'toolbarShrink':
                     // update toolbar shrink
                     // needs some work
                     var mdContent = angular.element('#admin-panel md-content');
                     $rootScope.$broadcast('$mdContentLoaded', angular.element(mdContent[0]));
-                break;
+                    break;
             }
             // update the snippets
             createCodeSnippets();
@@ -79,12 +79,13 @@
 
         function createBackgroundOptions() {
             vm.options.toolbarBackgrounds['none'] = 'No Background ';
-            for(var x = 1; x < 40 ; x++) {
-                var paddedNumber = $filter('padding')(x, 2);
+            var x, paddedNumber;
+            for(x = 1; x < 40 ; x++) {
+                paddedNumber = $filter('padding')(x, 2);
                 vm.options.toolbarBackgrounds['full-image-background mb-bg-' + paddedNumber] = 'Background ' + x;
             }
-            for(var x = 1; x < 30 ; x++) {
-                var paddedNumber = $filter('padding')(x, 2);
+            for(x = 1; x < 30 ; x++) {
+                paddedNumber = $filter('padding')(x, 2);
                 vm.options.toolbarBackgrounds['full-image-background mb-bg-fb-' + paddedNumber] = 'Extra Background ' + x;
             }
         }

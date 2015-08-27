@@ -22,8 +22,8 @@
         function link($scope, $element, attrs) {
             $mdTheming($element);
 
-            // make sure we have access to the theme
-            var $mdTheme = $element.controller('mdTheme');
+            // make sure we have access to the theme - causes an eslint but nothing we can do about AM naming
+            var $mdTheme = $element.controller('mdTheme'); //eslint-disable-line
             if(angular.isDefined($mdTheme)) {
                 var intent = attrs.themeBackground;
                 var hue = 'default';
