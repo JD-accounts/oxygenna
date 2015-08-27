@@ -1,6 +1,4 @@
 .todo-container {
-	background: rgba(100, 100, 100, 0.1);
-
 	.slide {
 	 	&.ng-enter {
 	    	@include slideInRight();

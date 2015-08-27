@@ -212,3 +212,9 @@ $i : 0;
 .example-tabs-500-height {
   height: 500px;
 }
+
+// full background image
+.full-image-background {
+  background-size: cover;
+  background-position: center;
+}

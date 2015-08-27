@@ -3,6 +3,7 @@
         "TODO": {
             "TITLE": "To do",
             "HEADER": "To do list",
+            "NOTE": "Note",
             "REMOVEMSG":"Remove items from the list by swipping right",
             "DIALOG":{
             	"NEW": "Add Task",
@@ -12,9 +13,9 @@
             	"LOW": "Low",
             	"PRIORITY": "Priority",
                 "TASKFORM":{
-                    "PLEASE_ENTER": "Please enter a task name" 
+                    "PLEASE_ENTER": "Please enter a task name"
                 }
-            }         
+            }
         }
     }
 }

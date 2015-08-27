@@ -20,7 +20,7 @@
                 // update toolbar with new day for month name
                 $rootScope.$broadcast('calendar-changeday', vm.currentDay);
                 // update background image for month
-                triLayout.layout.contentClass = 'material-background calendar-background-month-' + vm.currentDay.month();
+                triLayout.layout.contentClass = 'full-image-background calendar-background-month-' + vm.currentDay.month();
             },
             dayClick: function(date, jsEvent, view) { //eslint-disable-line
                 vm.currentDay = date;

@@ -81,11 +81,11 @@
             vm.options.toolbarBackgrounds['none'] = 'No Background ';
             for(var x = 1; x < 40 ; x++) {
                 var paddedNumber = $filter('padding')(x, 2);
-                vm.options.toolbarBackgrounds['material-background mb-bg-' + paddedNumber] = 'Background ' + x;
+                vm.options.toolbarBackgrounds['full-image-background mb-bg-' + paddedNumber] = 'Background ' + x;
             }
             for(var x = 1; x < 30 ; x++) {
                 var paddedNumber = $filter('padding')(x, 2);
-                vm.options.toolbarBackgrounds['material-background mb-bg-fb-' + paddedNumber] = 'Extra Background ' + x;
+                vm.options.toolbarBackgrounds['full-image-background mb-bg-fb-' + paddedNumber] = 'Extra Background ' + x;
             }
         }
 

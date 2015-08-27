@@ -40,6 +40,10 @@
             }
 
             function updateLayoutFromState(toState) {
+                // reset classes
+                for(var option in layoutDefaults) {
+                    layout[option] = layoutDefaults[option];
+                }
                 var layoutOverrides = angular.isDefined(toState.data) && angular.isDefined(toState.data.layout) ? toState.data.layout : {};
                 angular.extend(layout, layoutDefaults, layoutOverrides);
             }
