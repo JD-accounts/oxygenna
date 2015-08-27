@@ -8,10 +8,15 @@
     "EXAMPLES": {
         "LAYOUTS": {
             "OPTIONS": {
-                "SIDEMENUSIZES": {
+                "SIDEMENU-SIZES": {
                     "HIDDEN": "Hidden",
                     "ICONS": "Icons",
                     "FULL": "Full Size"
+                },
+                "TOOLBAR-SIZES": {
+                    "DEFAULT": "Default",
+                    "MEDIUM": "Medium",
+                    "TALL": "Tall"
                 }
             }
         }

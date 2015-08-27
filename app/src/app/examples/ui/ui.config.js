@@ -93,15 +93,6 @@
                 state: 'triangular.admin-default.ui-skins',
                 type: 'link'
             },{
-                name: 'MENU.UI.TOOLBAR',
-                state: 'triangular.admin-default.ui-toolbar',
-                params: {
-                    extraClass: 'default',
-                    background: 'off',
-                    shrink: 'on'
-                },
-                type: 'link'
-            },{
                 name: 'MENU.UI.TYPOGRAPHY',
                 state: 'triangular.admin-default.ui-typography',
                 type: 'link'
