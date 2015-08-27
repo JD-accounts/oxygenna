@@ -3,6 +3,7 @@
         "TODO": {
             "TITLE": "做",
             "HEADER": "做清单",
+            "NOTE": "注意到",
             "REMOVEMSG": "删除的项目清单的swipping的权利",
             "DIALOG": {
                 "NEW": "增加的任务",

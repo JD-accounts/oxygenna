@@ -44,5 +44,8 @@
         "NEXT": "Página Seguinte",
         "PREV": "Página Anterior",
         "OF": "de"
+    },
+    "MESSAGES": {
+        "LANGUAGE_CHANGED": "A Língua Mudou"
     }
 }

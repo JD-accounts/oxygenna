@@ -3,6 +3,7 @@
         "TODO": {
             "TITLE": "Para o fazer",
             "HEADER": "Para fazer a lista",
+            "NOTE": "Nota",
             "REMOVEMSG": "Remover itens da lista por swipping direito",
             "DIALOG": {
                 "NEW": "Adicionar Tarefa",

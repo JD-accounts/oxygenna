@@ -44,5 +44,8 @@
         "NEXT": "下一页",
         "PREV": "前页",
         "OF": "的"
+    },
+    "MESSAGES": {
+        "LANGUAGE_CHANGED": "措辞的改变"
     }
 }
