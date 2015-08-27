@@ -21,7 +21,8 @@ angular.module('triSeedModule', [])
         // set the html template to show on this page
         templateUrl: 'app/seed-module/seed-page.tmpl.html',
         // set the controller to load for this page
-        controller: 'SeedPageController'
+        controller: 'SeedPageController',
+        controllerAs: 'vm'
     });
 })
 .run(function(SideMenu) {

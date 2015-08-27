@@ -44,5 +44,8 @@
         "MESSAGE": "Something went wrong.",
         "DESCRIPTION": "Sorry, something has gone wrong.",
         "HOME": "Go back home"
+    },
+    "MESSAGES": {
+        "LANGUAGE_CHANGED": "Language Changed"
     }
 }
