@@ -7,16 +7,16 @@
 
     /* @ngInject */
     function config(triLayoutProvider) {
-        triLayoutProvider.setOption('toolbarSize', 'default');
+        triLayoutProvider.setDefaultOption('toolbarSize', 'default');
 
-        triLayoutProvider.setOption('toolbarShrink', true);
+        triLayoutProvider.setDefaultOption('toolbarShrink', true);
 
-        triLayoutProvider.setOption('toolbarClass', '');
+        triLayoutProvider.setDefaultOption('toolbarClass', '');
 
-        triLayoutProvider.setOption('contentClass', '');
+        triLayoutProvider.setDefaultOption('contentClass', '');
 
-        triLayoutProvider.setOption('sideMenuSize', 'full');
+        triLayoutProvider.setDefaultOption('sideMenuSize', 'full');
 
-        triLayoutProvider.setOption('footer', true);
+        triLayoutProvider.setDefaultOption('footer', true);
     }
 })();

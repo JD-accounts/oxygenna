@@ -31,13 +31,33 @@
 
         function createCodeSnippets() {
             vm.allPagesCode =
-                'triLayoutProvider.setOption(\'toolbarSize\', \'' + vm.layout.toolbarSize + '\');\n' +
-                'triLayoutProvider.setOption(\'toolbarShrink\', ' + vm.layout.toolbarShrink + ');\n' +
-                'triLayoutProvider.setOption(\'toolbarClass\', \'' + vm.layout.toolbarClass + '\');\n' +
-                'triLayoutProvider.setOption(\'contentClass\', \'' + vm.layout.contentClass + '\');\n' +
-                'triLayoutProvider.setOption(\'sideMenuSize\', \'' + vm.layout.sideMenuSize + '\');\n' +
-                'triLayoutProvider.setOption(\'footer\', ' + vm.layout.footer + ');\n';
+                'triLayoutProvider.setDefaultOption(\'toolbarSize\', \'' + vm.layout.toolbarSize + '\');\n' +
+                'triLayoutProvider.setDefaultOption(\'toolbarShrink\', ' + vm.layout.toolbarShrink + ');\n' +
+                'triLayoutProvider.setDefaultOption(\'toolbarClass\', \'' + vm.layout.toolbarClass + '\');\n' +
+                'triLayoutProvider.setDefaultOption(\'contentClass\', \'' + vm.layout.contentClass + '\');\n' +
+                'triLayoutProvider.setDefaultOption(\'sideMenuSize\', \'' + vm.layout.sideMenuSize + '\');\n' +
+                'triLayoutProvider.setDefaultOption(\'footer\', ' + vm.layout.footer + ');\n';
 
+            vm.onePageCode =
+                '.state(\'triangular.admin-default.my-state\', {' + '\n' +
+                '    // set the url of this page' + '\n' +
+                '    url: \'/my-route\',' + '\n' +
+                '    // set the html template to show on this page' + '\n' +
+                '    templateUrl: \'app/examples/my-module/my-page.tmpl.html\',' + '\n' +
+                '    // set the controller to load for this page' + '\n' +
+                '    controller: \'MyController\',' + '\n' +
+                '    controllerAs: \'vm\'' + '\n' +
+                '    data: {' + '\n' +
+                '        layout: {' + '\n' +
+                '            toolbarSize: \'' + vm.layout.toolbarSize + '\',' + '\n' +
+                '            toolbarShrink: ' + vm.layout.toolbarShrink + ',' + '\n' +
+                '            toolbarClass: \'' + vm.layout.toolbarClass + '\',' + '\n' +
+                '            contentClass: \'' + vm.layout.contentClass + '\',' + '\n' +
+                '            sideMenuSize: \'' + vm.layout.sideMenuSize + '\',' + '\n' +
+                '            footer: ' + vm.layout.footer + '\n' +
+                '        }' + '\n' +
+                '    }' + '\n' +
+                '});';
         }
 
         function updateOption(optionName) {
