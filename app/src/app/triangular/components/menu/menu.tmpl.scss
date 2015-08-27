@@ -22,6 +22,7 @@
 tri-menu {
   overflow-y: auto;
   z-index: 1;
+  transform: translateZ(0);
 }
 
 /* Style for scrollbar on webkit browsers in windows - looks nice already on other operating systems ;) */
