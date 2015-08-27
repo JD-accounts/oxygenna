@@ -3,6 +3,7 @@
 
     angular
         .module('triangular')
+        .run(layoutRunner)
         .provider('triLayout', layoutProvider);
 
     /* @ngInject */
@@ -33,21 +34,30 @@
         angular.extend(layout, layoutDefaults);
 
         // Service
-        this.$get = function($rootScope) {
-            $rootScope.$on('$stateChangeStart', function(event, toState) {
-                var layoutOverrides = angular.isDefined(toState.data) && angular.isDefined(toState.data.layout) ? toState.data.layout : {};
-                angular.extend(layout, layoutDefaults, layoutOverrides);
-            });
-
+        this.$get = function() {
             function setOption(name, value) {
                 layout[name] = value;
             }
 
+            function updateLayoutFromState(toState) {
+                var layoutOverrides = angular.isDefined(toState.data) && angular.isDefined(toState.data.layout) ? toState.data.layout : {};
+                angular.extend(layout, layoutDefaults, layoutOverrides);
+            }
+
             return {
                 layout: layout,
-                setOption: setOption
+                setOption: setOption,
+                updateLayoutFromState: updateLayoutFromState
             };
         };
+    }
+
+    function layoutRunner($rootScope, triLayout) {
+        // check for $stateChangeStart and update the layouts if we have data.layout set
+        // if nothing set reset to defaults for every state
+        $rootScope.$on('$stateChangeStart', function(event, toState) {
+            triLayout.updateLayoutFromState(toState);
+        });
     }
 })();
 

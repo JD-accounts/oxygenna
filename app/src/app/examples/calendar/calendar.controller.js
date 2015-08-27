@@ -6,7 +6,7 @@
         .controller('CalendarController', CalendarController);
 
     /* @ngInject */
-    function CalendarController($rootScope, $mdDialog, $mdToast, $filter, $element, triTheming, uiCalendarConfig) {
+    function CalendarController($rootScope, $mdDialog, $mdToast, $filter, $element, triTheming, triLayout, uiCalendarConfig) {
         var vm = this;
         vm.addEvent = addEvent;
         vm.calendarOptions = {
@@ -20,7 +20,7 @@
                 // update toolbar with new day for month name
                 $rootScope.$broadcast('calendar-changeday', vm.currentDay);
                 // update background image for month
-                vm.backgroundImage = 'assets/images/calendar/' + (vm.currentDay.month()+1) + '.jpg';
+                triLayout.layout.contentClass = 'material-background calendar-background-month-' + vm.currentDay.month();
             },
             dayClick: function(date, jsEvent, view) { //eslint-disable-line
                 vm.currentDay = date;

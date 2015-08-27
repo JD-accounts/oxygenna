@@ -14,7 +14,12 @@
             url: '/github',
             templateUrl: 'app/examples/github/github.tmpl.html',
             controller: 'GithubController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            data: {
+                layout: {
+                    contentClass: 'material-background mb-bg-fb-16 overlay-40'
+                }
+            }
         });
 
         triMenuProvider.addMenu({

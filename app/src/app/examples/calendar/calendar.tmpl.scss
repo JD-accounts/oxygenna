@@ -50,6 +50,14 @@
   list-style: lower-greek;
 }
 
+$i : 0;
+@while $i <= 11 {
+  .calendar-background-month-#{$i} {
+    background-image: url(/assets/images/calendar/#{$i+1}.jpg);
+  }
+  $i : $i + 1;
+}
+
 @media (max-width: 599px) {
   .calendar-page {
     padding: 20px;
