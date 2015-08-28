@@ -6,8 +6,9 @@
         .controller('IntroductionController', IntroductionController);
 
     /* @ngInject */
-    function IntroductionController() {
+    function IntroductionController(triSettings) {
         var vm = this;
+        vm.version = triSettings.version;
         vm.featureRows = [
             [{
                 name: 'Fully Responsive',
