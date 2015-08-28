@@ -56,6 +56,7 @@
         };
     }
 
+    /* @ngInject */
     function layoutRunner($rootScope, triLayout) {
         // check for $stateChangeStart and update the layouts if we have data.layout set
         // if nothing set reset to defaults for every state

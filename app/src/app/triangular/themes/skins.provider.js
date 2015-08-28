@@ -68,6 +68,7 @@
         };
     }
 
+    /* @ngInject */
     function Skin(id, name, $mdThemingProvider, triThemingProvider) {
         var THEMABLE_ELEMENTS = ['sidebar', 'logo', 'toolbar', 'content'];
         var self = this;
@@ -99,6 +100,7 @@
         };
     }
 
+    /* @ngInject */
     function addSkinToScope($rootScope, triSkins) {
         $rootScope.triSkin = triSkins.getCurrent();
     }

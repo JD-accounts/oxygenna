@@ -26,6 +26,7 @@
         return directive;
     }
 
+    /* @ngInject */
     function triMenuItemController($scope, $state, $filter, triBreadcrumbsService) {
         var triMenuItem = this;
         // load a template for this directive based on the type ( link | dropdown )
