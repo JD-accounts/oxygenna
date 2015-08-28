@@ -28,6 +28,7 @@
             eventClick: function(calEvent, jsEvent, view) { //eslint-disable-line
                 $mdDialog.show({
                     controller: 'EventDialogController',
+                    controllerAs: 'vm',
                     templateUrl: 'app/examples/calendar/event-dialog.tmpl.html',
                     targetEvent: jsEvent,
                     focusOnOpen: false,
@@ -42,7 +43,7 @@
                 })
                 .then(function(event) {
                     var toastMessage = 'CALENDAR.EVENT.EVENT-UPDATED';
-                    if(angular.isUndefined(event.deleteMe)) {
+                    if(angular.isDefined(event.deleteMe) && event.deleteMe === true) {
                         // remove the event from the calendar
                         uiCalendarConfig.calendars['triangular-calendar'].fullCalendar('removeEvents', event._id);
                         // change toast message
@@ -104,10 +105,12 @@
 
         function createRandomEvents(number, startDate, endDate) {
             var eventNames = ['Pick up the kids', 'Remember the milk', 'Meeting with Morris', 'Car service',  'Go Surfing', 'Party at Christos house', 'Beer Oclock', 'Festival tickets', 'Laundry!', 'Haircut appointment', 'Walk the dog', 'Dentist :(', 'Board meeting', 'Go fishing'];
+            var locationNames = ['London', 'New York', 'Paris', 'Burnley'];
             for(var x = 0; x < number; x++) {
                 var randomMonthDate = randomDate(startDate, endDate);
                 var inAnHour = moment(randomMonthDate).add(1, 'h');
                 var randomEvent = Math.floor(Math.random() * (eventNames.length - 0));
+                var randomLocation = Math.floor(Math.random() * (locationNames.length - 0));
                 var randomPalette = pickRandomProperty(triTheming.palettes);
 
                 vm.eventSources[0].events.push({
@@ -115,6 +118,8 @@
                     allDay: false,
                     start: randomMonthDate,
                     end: inAnHour,
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, fugiat! Libero ut in nam cum architecto error magnam, quidem beatae deleniti, facilis perspiciatis modi unde nostrum ea explicabo a adipisci!',
+                    location: locationNames[randomLocation],
                     backgroundColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].value),
                     borderColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].value),
                     textColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].contrast),

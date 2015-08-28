@@ -30,40 +30,40 @@
                 <div class="event-dialog-input-row" layout="row" layout-align="space-between center">
                     <p translate>CALENDAR.EVENT.START</p>
                     <md-icon md-font-icon="icon-today"></md-icon>
-                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.YEAR-PICK' | translate}}" ng-model="start.year">
+                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.YEAR-PICK' | translate}}" ng-model="vm.start.year">
                         <md-option ng-repeat="year in vm.dateSelectOptions.years" ng-value="year">{{::year}}</md-option>
                     </md-select>
-                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.MONTH-PICK' | translate}}" ng-model="start.month">
+                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.MONTH-PICK' | translate}}" ng-model="vm.start.month">
                         <md-option ng-repeat="month in vm.dateSelectOptions.months" ng-value="$index" translate>{{::month}}</md-option>
                     </md-select>
-                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.DATE-PICK' | translate}}" ng-model="start.date">
+                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.DATE-PICK' | translate}}" ng-model="vm.start.date">
                         <md-option ng-repeat="date in vm.dateSelectOptions.dates" ng-value="date">{{::date}}</md-option>
                     </md-select>
                     <md-icon md-font-icon="icon-access-time"></md-icon>
-                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.HOUR-PICK' | translate}}" ng-model="start.hour">
+                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.HOUR-PICK' | translate}}" ng-model="vm.start.hour">
                         <md-option ng-repeat="hour in vm.dateSelectOptions.hours" ng-value="hour">{{::hour | padding:2}}</md-option>
                     </md-select>
-                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.MINUTE-PICK' | translate}}" ng-model="start.minute">
+                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.MINUTE-PICK' | translate}}" ng-model="vm.start.minute">
                         <md-option ng-repeat="minute in vm.dateSelectOptions.minutes" ng-value="minute">{{::minute | padding:2}}</md-option>
                     </md-select>
                 </div>
                 <div class="event-dialog-input-row" layout="row" layout-align="space-between center" ng-hide="vm.event.allDay">
                     <p translate>CALENDAR.EVENT.END</p>
                     <md-icon md-font-icon="icon-today"></md-icon>
-                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.YEAR-PICK' | translate}}" ng-model="end.year">
+                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.YEAR-PICK' | translate}}" ng-model="vm.end.year">
                         <md-option ng-repeat="year in vm.dateSelectOptions.years" ng-value="year">{{::year}}</md-option>
                     </md-select>
-                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.MONTH-PICK' | translate}}" ng-model="end.month">
+                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.MONTH-PICK' | translate}}" ng-model="vm.end.month">
                         <md-option ng-repeat="month in vm.dateSelectOptions.months" ng-value="$index" translate>{{::month}}</md-option>
                     </md-select>
-                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.DATE-PICK' | translate}}" ng-model="end.date">
+                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.DATE-PICK' | translate}}" ng-model="vm.end.date">
                         <md-option ng-repeat="date in vm.dateSelectOptions.dates" ng-value="date">{{::date}}</md-option>
                     </md-select>
                     <md-icon md-font-icon="icon-access-time"></md-icon>
-                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.HOUR-PICK' | translate}}" ng-model="end.hour">
+                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.HOUR-PICK' | translate}}" ng-model="vm.end.hour">
                         <md-option ng-repeat="hour in vm.dateSelectOptions.hours" ng-value="hour">{{::hour | padding:2}}</md-option>
                     </md-select>
-                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.MINUTE-PICK' | translate}}" ng-model="end.minute">
+                    <md-select class="padding-right-10" placeholder="{{'CALENDAR.EVENT.MINUTE-PICK' | translate}}" ng-model="vm.end.minute">
                         <md-option ng-repeat="minute in vm.dateSelectOptions.minutes" ng-value="minute">{{::minute | padding:2}}</md-option>
                     </md-select>
                 </div>
@@ -88,7 +88,7 @@
     </md-dialog-content>
 
     <div class="md-actions" layout="row">
-        <md-button class="md-warn" ng-click="vm.deleteClick()" aria-label="{{'CALENDAR.CANCEL' | translate}}" ng-show="edit" translate="CALENDAR.DELETE"></md-button>
+        <md-button class="md-warn" ng-click="vm.deleteClick()" aria-label="{{'CALENDAR.CANCEL' | translate}}" ng-show="vm.edit" translate="CALENDAR.DELETE"></md-button>
         <span flex></span>
         <md-button ng-click="vm.cancelClick()" aria-label="{{'CALENDAR.CANCEL' | translate}}" translate="CALENDAR.CANCEL"></md-button>
         <md-button ng-click="vm.okClick()" class="md-primary" ng-disabled="eventForm.$invalid" aria-label="{{vm.dialogData.confirmButtonText | translate}}" translate="{{::vm.dialogData.confirmButtonText}}"></md-button>
