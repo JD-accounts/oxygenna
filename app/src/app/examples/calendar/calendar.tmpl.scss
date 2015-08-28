@@ -1,8 +1,5 @@
 .calendar-page {
-  background-size: cover;
-  background-attachment: fixed;
-  transition: background-image 0.5s;
-  padding: 80px;
+  padding: 50px 105px;
 
   .triangular-calendar, .fc-view-container {
     &:focus {
@@ -46,6 +43,13 @@
     }
   }
 }
+
+.calendar-background-image {
+  background-size: cover;
+  background-attachment: fixed;
+  transition: background-image 0.8s;
+}
+
 .seed-list {
   list-style: lower-greek;
 }

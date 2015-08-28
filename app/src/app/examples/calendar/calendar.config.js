@@ -35,6 +35,11 @@
                 },
                 content: {
                     template: '<div id="admin-panel-content-view" flex ui-view></div>'
+                },
+                belowContent: {
+                    templateUrl: 'app/examples/calendar/calendar-fabs.tmpl.html',
+                    controller: 'CalendarFabController',
+                    controllerAs: 'vm'
                 }
             }
         })

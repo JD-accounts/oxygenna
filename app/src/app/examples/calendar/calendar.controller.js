@@ -6,7 +6,7 @@
         .controller('CalendarController', CalendarController);
 
     /* @ngInject */
-    function CalendarController($rootScope, $mdDialog, $mdToast, $filter, $element, triTheming, triLayout, uiCalendarConfig) {
+    function CalendarController($scope, $rootScope, $mdDialog, $mdToast, $filter, $element, triTheming, triLayout, uiCalendarConfig) {
         var vm = this;
         vm.addEvent = addEvent;
         vm.calendarOptions = {
@@ -20,7 +20,7 @@
                 // update toolbar with new day for month name
                 $rootScope.$broadcast('calendar-changeday', vm.currentDay);
                 // update background image for month
-                triLayout.layout.contentClass = 'full-image-background calendar-background-month-' + vm.currentDay.month();
+                triLayout.layout.contentClass = 'calendar-background-image calendar-background-month-' + vm.currentDay.month();
             },
             dayClick: function(date, jsEvent, view) { //eslint-disable-line
                 vm.currentDay = date;
@@ -68,7 +68,7 @@
             events: []
         }];
 
-        function addEvent($event) {
+        function addEvent(event, $event) {
             var inAnHour = moment(vm.currentDay).add(1, 'h');
             $mdDialog.show({
                 controller: 'EventDialogController',
@@ -123,6 +123,10 @@
             }
         }
 
+        // listeners
+
+        $scope.$on('addEvent', addEvent);
+
         // create 10 random events for the month
         createRandomEvents(100, moment().startOf('year'), moment().endOf('year'));
 
@@ -142,5 +146,6 @@
                 }
             }
             return result;
-        }    }
+        }
+    }
 })();
