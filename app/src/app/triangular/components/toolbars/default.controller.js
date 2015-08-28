@@ -16,28 +16,6 @@
         vm.switchLanguage = switchLanguage;
         vm.toggleNotificationsTab = toggleNotificationsTab;
 
-        // vm.toolbarTypeClass = function() {
-        //     return $scope.extraClass;
-        // }
-
-        // $scope.$on('$stateChangeStart', initToolbar);
-
-        // function initToolbar() {
-        //     $element.css('background-image', '');
-
-        //     if($state.current.data !== undefined) {
-        //         if($state.current.data.toolbar !== undefined) {
-        //             if($state.current.data.toolbar.extraClass !== false) {
-        //                 $scope.extraClass = $state.current.data.toolbar.extraClass;
-        //             }
-
-        //             if($state.current.data.toolbar.background) {
-        //                 $element.css('background-image', 'url(' + $state.current.data.toolbar.background + ')');
-        //             }
-        //         }
-        //     }
-        // }
-
         // initToolbar();
 
         ////////////////
