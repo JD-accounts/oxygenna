@@ -27,7 +27,7 @@
     }
 
     /* @ngInject */
-    function triMenuItemController($scope, $state, $filter, triBreadcrumbsService) {
+    function triMenuItemController($scope, $mdSidenav, $state, $filter, triBreadcrumbsService) {
         var triMenuItem = this;
         // load a template for this directive based on the type ( link | dropdown )
         triMenuItem.item.template = 'app/triangular/components/menu/menu-item-' + triMenuItem.item.type + '.tmpl.html';
@@ -90,6 +90,7 @@
             var params = angular.isUndefined(triMenuItem.item.params) ? {} : triMenuItem.item.params;
             $state.go(triMenuItem.item.state, params);
             triMenuItem.item.active = true;
+            $mdSidenav('left').close();
         }
     }
 })();

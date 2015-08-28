@@ -6,7 +6,7 @@
         .controller('MenuController', MenuController);
 
     /* @ngInject */
-    function MenuController($scope, $timeout, $mdSidenav, triSettings, triLayout) {
+    function MenuController(triSettings, triLayout) {
         var vm = this;
         vm.layout = triLayout.layout;
         vm.sidebarInfo = {
@@ -20,13 +20,5 @@
             var menu = vm.layout.sideMenuSize === 'icon' ? 'full' : 'icon';
             triLayout.setOption('sideMenuSize', menu);
         }
-
-        // add a watch for when the url location changes
-        $scope.$on('$locationChangeSuccess', function() {
-            // location has changed so close menu
-            $timeout(function(){
-                $mdSidenav('left').close();
-            });
-        });
     }
 })();
