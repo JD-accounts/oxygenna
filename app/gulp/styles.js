@@ -31,7 +31,9 @@ gulp.task('styles', function () {
     addRootSlash: false
   };
 
-  var indexFilter = $.filter('app.scss');
+  var indexFilter = $.filter('app.scss', {
+    restore: true
+  });
 
   return gulp.src([
     paths.src + '/app/app.scss'
