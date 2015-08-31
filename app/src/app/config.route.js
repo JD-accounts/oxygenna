@@ -9,12 +9,6 @@
     function routeConfig($stateProvider, $urlRouterProvider) {
         // Setup the apps routes
 
-        // $stateProvider
-        // .state('triangular.admin-default.test-page', {
-        //     url: '/',
-        //     templateUrl: 'app/test/test.tmpl.html',
-        // });
-
         // 404 & 500 pages
         $stateProvider
         .state('404', {
@@ -43,8 +37,8 @@
 
 
         // set default routes when no path specified
-        $urlRouterProvider.when('', '/introduction');
-        $urlRouterProvider.when('/', '/introduction');
+        $urlRouterProvider.when('', '/dashboards/analytics');
+        $urlRouterProvider.when('/', '/dashboards/analytics');
 
         // always goto 404 if route not found
         $urlRouterProvider.otherwise('/404');
