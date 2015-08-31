@@ -16,12 +16,12 @@
                 '': {
                     templateUrl: 'app/examples/todo/todo.tmpl.html',
                     controller: 'TodoController',
-                    controllerAs: 'vm',
+                    controllerAs: 'vm'
                 },
                 'belowContent': {
                     templateUrl: 'app/examples/todo/fab-button.tmpl.html',
                     controller: 'TodoFabController',
-                    controllerAs: 'vm',
+                    controllerAs: 'vm'
                 }
             },
             data: {
