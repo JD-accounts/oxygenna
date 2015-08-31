@@ -62,6 +62,9 @@ topmenu:
             -
                 name: Directives
                 slug: directives
+            -
+                name: Migration 1.0 -> 2.0
+                slug: migration
     -
         name: Rest Server
         slug: rest-server
