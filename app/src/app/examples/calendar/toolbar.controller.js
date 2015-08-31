@@ -6,27 +6,24 @@
         .controller('CalendarToolbarController', CalendarToolbarController);
 
     /* @ngInject */
-    function CalendarToolbarController($scope, $state, $element, $mdUtil, $mdSidenav, uiCalendarConfig) {
+    function CalendarToolbarController($scope, $state, $element, $mdUtil, $mdSidenav, triBreadcrumbsService, uiCalendarConfig) {
         var vm = this;
+        vm.breadcrumbs = triBreadcrumbsService.breadcrumbs;
         vm.changeMonth = changeMonth;
         vm.changeView = changeView;
-        vm.toolbarTypeClass = toolbarTypeClass;
         vm.openSideNav = openSideNav;
         vm.views = [{
             name: 'CALENDAR.TOOLBAR.VIEWS.MONTH',
             icon: 'icon-view-module',
-            viewName: 'month',
-            dateFormat: 'MMMM YYYY'
+            viewName: 'month'
         },{
             name: 'CALENDAR.TOOLBAR.VIEWS.WEEK',
             icon: 'icon-view-week',
-            viewName: 'agendaWeek',
-            dateFormat: 'w'
+            viewName: 'agendaWeek'
         },{
             name: 'CALENDAR.TOOLBAR.VIEWS.DAY',
             icon: 'icon-view-day',
-            viewName: 'agendaDay',
-            dateFormat: 'Do MMMM YYYY'
+            viewName: 'agendaDay'
         }];
         vm.currentView = vm.views[0];
 
@@ -41,36 +38,10 @@
             uiCalendarConfig.calendars['triangular-calendar'].fullCalendar('changeView', view.viewName);
         }
 
-        function toolbarTypeClass() {
-            return vm.extraClass;
-        }
-
         function openSideNav(navID) {
             $mdUtil.debounce(function(){
                 $mdSidenav(navID).toggle();
             }, 300)();
         }
-
-        function initToolbar() {
-            if(angular.isUndefined($state.current.data)) {
-                if(angular.isUndefined($state.current.data.toolbar)) {
-                    if($state.current.data.toolbar.extraClass !== false) {
-                        vm.extraClass = $state.current.data.toolbar.extraClass;
-                    }
-                }
-            }
-        }
-
-        // init
-
-        initToolbar();
-
-        // watchers
-
-        $scope.$on('calendar-changeday', function(event, date) {
-            vm.currentDay = date;
-        });
-
-        $scope.$on('$stateChangeStart', initToolbar);
     }
 })();

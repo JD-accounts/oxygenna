@@ -2,8 +2,12 @@
     <md-button class="md-icon-button" hide-gt-md ng-click="vm.openSideNav('left')" aria-label="side navigation">
         <md-icon md-font-icon="icon-menu"></md-icon>
     </md-button>
-    <h2 flex ng-hide="vm.currentView.viewName == 'agendaWeek'">{{vm.currentDay | amDateFormat:vm.currentView.dateFormat}}</h2>
-    <h2 flex ng-show="vm.currentView.viewName == 'agendaWeek'">Week {{vm.currentDay | amDateFormat:vm.currentView.dateFormat}} - {{vm.currentDay | amDateFormat:'YYYY'}}</h2>
+    <h2 flex>
+        <span ng-repeat="crumb in vm.breadcrumbs.crumbs">
+            <span translate>{{crumb.name}}</span>
+            <md-icon md-font-icon="icon-chevron-right" ng-if="!$last">
+        </span>
+    </h2>
 
     <div class="widget-buttons">
         <md-button class="widget-button md-icon-button" ng-click="vm.changeMonth('prev')" aria-label="previous month">

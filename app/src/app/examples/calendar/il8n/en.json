@@ -16,6 +16,8 @@
             "ALL-DAY": "All day",
             "START": "Start",
             "END": "End",
+            "START-TIME": "Start Time",
+            "END-TIME": "End Time",
             "LOCATION": "Location",
             "DESCRIPTION": "Description",
             "COLOR": "Color",

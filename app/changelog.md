@@ -140,3 +140,4 @@
 - Layouts: new layout provider & service to easily modify page layouts
 - Dashboards: removed title attribute to stop popup title.
 - NEW Profiler module to check speed of AngularJS
+- Calendar: Improved looks and mobile responsiveness.

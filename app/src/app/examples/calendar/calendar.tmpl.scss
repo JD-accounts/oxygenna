@@ -1,5 +1,5 @@
 .calendar-page {
-  padding: 50px 105px;
+  padding: 0px 120px;
 
   .triangular-calendar, .fc-view-container {
     &:focus {
@@ -64,6 +64,6 @@ $i : 0;
 
 @media (max-width: 599px) {
   .calendar-page {
-    padding: 20px;
+    padding: 0px 10px;
   }
 }
