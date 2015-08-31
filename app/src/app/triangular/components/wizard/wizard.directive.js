@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.examples.forms')
+        .module('triangular.components')
         .directive('triWizard', TriWizard);
 
     /* @ngInject */
