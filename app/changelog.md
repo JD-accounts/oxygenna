@@ -117,14 +117,8 @@
 - Removed all usage of translate filter and replaced with directive (better performance)
 - Added Chinese and Portuguese translations
 
-# Version ???
-> Release Date : ???
-
-- Fixed state in toolbars demo page (menu now ignores params on route)
-
-
 # Version 2.0.0
-> Release Date : ????
+> Release Date : 31st August 2015
 
 - Code style changed to match https://github.com/johnpapa/angular-styleguide
 - Triangular moved into a module to make it easier to drop the code into existing apps or creating new ones
