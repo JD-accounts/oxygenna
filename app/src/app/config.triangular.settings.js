@@ -11,7 +11,7 @@
         triSettingsProvider.setName('triangular');
         triSettingsProvider.setLogo('assets/images/logo.png');
         // set current version of app (shown in footer)
-        triSettingsProvider.setVersion('2.0.0');
+        triSettingsProvider.setVersion('2.0');
 
         // setup available languages in triangular
         for (var lang = APP_LANGUAGES.length - 1; lang >= 0; lang--) {
