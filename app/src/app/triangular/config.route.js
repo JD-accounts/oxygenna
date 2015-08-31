@@ -34,7 +34,7 @@
                     controllerAs: 'vm'
                 },
                 toolbar: {
-                    templateUrl: 'app/triangular/components/toolbars/default.tmpl.html',
+                    templateUrl: 'app/triangular/components/toolbars/toolbar.tmpl.html',
                     controller: 'DefaultToolbarController',
                     controllerAs: 'vm'
                 },
@@ -60,7 +60,7 @@
                     controllerAs: 'vm'
                 },
                 toolbar: {
-                    templateUrl: 'app/triangular/components/toolbars/default.tmpl.html',
+                    templateUrl: 'app/triangular/components/toolbars/toolbar.tmpl.html',
                     controller: 'DefaultToolbarController',
                     controllerAs: 'vm'
                 },
