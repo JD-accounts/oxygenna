@@ -5,7 +5,8 @@
         .module('triangular', [
             'ngMaterial',
             'triangular.layouts', 'triangular.components', 'triangular.themes', 'triangular.directives',
-            'ui.router',
-            'triangular.profiler'
+            // 'triangular.profiler',
+            // uncomment above to activate the speed profiler
+            'ui.router'
         ]);
 })();
