@@ -141,3 +141,4 @@
 - Dashboards: removed title attribute to stop popup title.
 - NEW Profiler module to check speed of AngularJS
 - Calendar: Improved looks and mobile responsiveness.
+- Docs: Added version migration guide to docs

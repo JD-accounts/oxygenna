@@ -9,7 +9,10 @@ var $ = require('gulp-load-plugins')();
 gulp.task('styles', function () {
 
   var sassOptions = {
-    style: 'expanded'
+    style: 'expanded',
+    includePaths: [
+      'bower_components'
+    ]
   };
 
   var injectFiles = gulp.src([
@@ -21,7 +24,6 @@ gulp.task('styles', function () {
   var injectOptions = {
     transform: function(filePath) {
       filePath = filePath.replace(paths.src + '/app/', '');
-      filePath = filePath.replace(paths.src + '/components/', '../components/');
       return '@import \'' + filePath + '\';';
     },
     starttag: '// injector',
