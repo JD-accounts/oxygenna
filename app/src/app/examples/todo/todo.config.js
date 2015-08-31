@@ -12,9 +12,18 @@
         $stateProvider
         .state('triangular.admin-default.todo', {
             url: '/todo',
-            templateUrl: 'app/examples/todo/todo.tmpl.html',
-            controller: 'TodoController',
-            controllerAs: 'vm',
+            views: {
+                '': {
+                    templateUrl: 'app/examples/todo/todo.tmpl.html',
+                    controller: 'TodoController',
+                    controllerAs: 'vm',
+                },
+                'belowContent': {
+                    templateUrl: 'app/examples/todo/fab-button.tmpl.html',
+                    controller: 'TodoFabController',
+                    controllerAs: 'vm',
+                }
+            },
             data: {
                 layout: {
                     contentClass: 'full-image-background mb-bg-fb-08 overlay-20'

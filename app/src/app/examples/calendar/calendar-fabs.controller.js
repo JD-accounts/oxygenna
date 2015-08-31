@@ -5,8 +5,6 @@
         .module('app.examples.calendar')
         .controller('CalendarFabController', CalendarFabController);
 
-    CalendarFabController.$inject = ['$rootScope'];
-
     /* @ngInject */
     function CalendarFabController($rootScope) {
         var vm = this;
