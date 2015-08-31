@@ -1,7 +1,8 @@
 {
     "MENU": {
         "SEED": {
-            "SEED-PAGE": "Página De Teste"
+            "SEED-MODULE": "Semente Do Módulo",
+            "SEED-PAGE": "Página Inicial"
         }
     },
     "SEED": {

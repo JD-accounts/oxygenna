@@ -16,6 +16,8 @@
             "ALL-DAY": "Todos os dias",
             "START": "Início",
             "END": "Fim",
+            "START-TIME": "Hora De Início",
+            "END-TIME": "Fim Do Horário De",
             "LOCATION": "Localização",
             "DESCRIPTION": "Descrição",
             "COLOR": "Cor",

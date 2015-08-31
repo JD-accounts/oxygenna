@@ -16,6 +16,8 @@
             "ALL-DAY": "整天",
             "START": "开始",
             "END": "结束",
+            "START-TIME": "开始的时间",
+            "END-TIME": "结束的时候",
             "LOCATION": "地点",
             "DESCRIPTION": "描述",
             "COLOR": "颜色",

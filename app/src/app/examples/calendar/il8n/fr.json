@@ -16,6 +16,8 @@
             "ALL-DAY": "Toute la journée",
             "START": "Démarrer",
             "END": "Fin",
+            "START-TIME": "Heure De Début",
+            "END-TIME": "Heure De Fin",
             "LOCATION": "Emplacement",
             "DESCRIPTION": "Description",
             "COLOR": "Couleur",

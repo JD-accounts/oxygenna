@@ -1,7 +1,8 @@
 {
     "MENU": {
         "SEED": {
-            "SEED-PAGE": "的测试的一页"
+            "SEED-MODULE": "种子模块",
+            "SEED-PAGE": "开始页"
         }
     },
     "SEED": {
