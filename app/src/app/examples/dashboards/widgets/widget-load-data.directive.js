@@ -59,7 +59,6 @@
                 $scope.alert = 'You cancelled the dialog.';
             }
 
-
             ///////////////////
 
             /* @ngInject */

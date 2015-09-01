@@ -33,13 +33,13 @@
             '100': 'b6b6b6',
             '200': '8c8c8c',
             '300': '646464',
-            '400': '4d4d4d',
-            '500': '3a3a3a',
-            '600': '2f2f2f',
+            '400': '3a3a3a',
+            '500': 'e1e1e1',
+            '600': 'e1e1e1',
             '700': '232323',
             '800': '1a1a1a',
             '900': '121212',
-            'A100': 'ffffff',
+            'A100': '3a3a3a',
             'A200': 'ffffff',
             'A400': 'ffffff',
             'A700': 'ffffff',
@@ -109,9 +109,12 @@
 
         // DARK KNIGHT SKIN
         triThemingProvider.theme('dark')
-        .primaryPalette('black')
+        .primaryPalette('black', {
+            'default': '300'
+        })
         .accentPalette('amber')
         .warnPalette('deep-orange')
+        .backgroundPalette('black')
         .dark();
 
         triSkinsProvider.skin('dark-knight', 'Dark Knight')

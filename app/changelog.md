@@ -141,3 +141,4 @@
 > Release Date : ???
 
 - Turn off profiler by default
+- Fixed styling for select and nav with dark knight theme

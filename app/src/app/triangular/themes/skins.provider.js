@@ -94,6 +94,12 @@
                 .accentPalette(theme.colors.accent.name, theme.colors.accent.hues)
                 .warnPalette(theme.colors.warn.name, theme.colors.warn.hues)
                 .dark(theme.isDark);
+
+                if(angular.isDefined(theme.colors.background)) {
+                    $mdThemingProvider
+                    .theme(theme.name)
+                    .backgroundPalette(theme.colors.background.name, theme.colors.background.hues);
+                }
             }
 
             $mdThemingProvider.setDefaultTheme(self.elements.content);
