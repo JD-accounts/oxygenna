@@ -29,13 +29,15 @@
                 // everything went ok
                 triLoaderService.setLoaderActive(false);
                 popAToast('Success!  Check your GitHub email for your invite.');
-            }, function(response) {
+            }, registerError);
+
+            function registerError(response) {
                 // something went wrong
                 triLoaderService.setLoaderActive(false);
                 if(angular.isDefined(response.data.error)) {
                     popAToast(response.data.error);
                 }
-            });
+            }
         }
 
         function userSearch (query) {

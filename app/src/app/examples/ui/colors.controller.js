@@ -33,9 +33,11 @@
             })
             .then(function(answer) {
                 vm.alert = 'You said the information was "' + answer + '".';
-            }, function() {
+            }, cancelDialog);
+
+            function cancelDialog() {
                 vm.alert = 'You cancelled the dialog.';
-            });
+            }
         }
     }
 })();

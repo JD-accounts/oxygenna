@@ -85,14 +85,16 @@
             })
             .then(function(email) {
                 sendEmail(null, email);
-            }, function() {
+            }, emailCancel);
+
+            function emailCancel() {
                 $mdToast.show(
                     $mdToast.simple()
                     .content($filter('translate')('EMAIL.CANCELED'))
                     .position('bottom right')
                     .hideDelay(3000)
                 );
-            });
+            }
         }
 
         function sendEmail($event, email) {

@@ -67,14 +67,16 @@
             .then(function(email) {
                 // send email sent event
                 $scope.$emit('sendEmail', email);
-            }, function() {
+            }, cancelEmail);
+
+            function cancelEmail() {
                 $mdToast.show(
                     $mdToast.simple()
                     .content($filter('translate')('EMAIL.CANCELED'))
                     .position('bottom right')
                     .hideDelay(3000)
                 );
-            });
+            }
         }
     }
 })();

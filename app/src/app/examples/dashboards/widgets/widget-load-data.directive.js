@@ -44,9 +44,7 @@
                         })
                         .then(function(answer) {
                             $scope.alert = 'You said the information was "' + answer + '".';
-                        }, function() {
-                            $scope.alert = 'You cancelled the dialog.';
-                        });
+                        }, cancelDialog);
                     }
                 },{
                     icon: 'icon-share',
@@ -56,6 +54,11 @@
                     title: 'DASHBOARDS.WIDGETS.MENU.PRINT'
                 }]
             });
+
+            function cancelDialog() {
+                $scope.alert = 'You cancelled the dialog.';
+            }
+
 
             ///////////////////
 
