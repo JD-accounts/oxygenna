@@ -136,3 +136,8 @@
 - NEW Profiler module to check speed of AngularJS
 - Calendar: Improved looks and mobile responsiveness.
 - Docs: Added version migration guide to docs
+
+# Version ???
+> Release Date : ???
+
+- Turn off profiler by default
