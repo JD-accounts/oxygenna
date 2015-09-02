@@ -15,7 +15,7 @@
                 filters: '='
             },
             link: link,
-            templateUrl: 'app/triangular/components/tables/table-directive.tmpl.html'
+            templateUrl: 'app/triangular/components/table/table-directive.tmpl.html'
         };
         return directive;
 
