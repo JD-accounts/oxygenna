@@ -67,13 +67,9 @@
                 break;
         }
 
-        function checkItemActive(toStateName, toParams) {
+        function checkItemActive() {
             // first check if the state is the same
-            triMenuItem.item.active = triMenuItem.item.state === toStateName;
-            // next if we are active and have params check them as well
-            if(triMenuItem.item.active && angular.isDefined(triMenuItem.item.params)) {
-                triMenuItem.item.active = angular.equals(triMenuItem.item.params, toParams);
-            }
+            triMenuItem.item.active = $state.includes(triMenuItem.item.state, triMenuItem.item.params);
             // if we are now the active item reset the breadcrumbs and open all parent dropdown items
             if(triMenuItem.item.active) {
                 triBreadcrumbsService.reset();
