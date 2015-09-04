@@ -49,10 +49,12 @@
             });
 
             $scope.lineChart = {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                labels: ['January', 'February', 'March', 'April', 'May'],
                 series: ['Pageviews', 'Visits', 'Sign ups'],
                 options: {
-                    datasetFill: false
+                    datasetFill: false,
+                    responsive: true,
+                    maintainAspectRatio:false
                 },
                 data: []
             };
