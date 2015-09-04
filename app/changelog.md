@@ -142,5 +142,10 @@
 
 - Turn off profiler by default.
 - Fixed styling for select and nav with dark knight theme.
+- Fixed button links in 404 & 500 pages
 - Moved font family CSS into app.scss from triangular module.
+- Fixed typo in first tables example
+- Fixed typo in timeline
+- Fixed double refresh from browser sync
+- Fixed eslint errors
 - Updated docs to match new 2.0 code
