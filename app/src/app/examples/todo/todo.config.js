@@ -26,7 +26,7 @@
             },
             data: {
                 layout: {
-                    contentClass: 'full-image-background mb-bg-fb-08 overlay-20'
+                    contentClass: 'full-image-background mb-bg-fb-08 background-overlay-static overlay-gradient-20'
                 }
             }
         });

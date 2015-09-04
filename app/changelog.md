@@ -148,6 +148,7 @@
 - Fixed typo in first tables example
 - Fixed typo in timeline
 - Fixed double refresh from browser sync
+- Fixed scrolling background bug in chrome & safari
 - Fixed eslint errors
 - Fixed menu focus on email detail view
 - Updated docs to match new 2.0 code

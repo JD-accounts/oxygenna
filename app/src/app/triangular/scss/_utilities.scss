@@ -218,3 +218,8 @@ $i : 0;
   background-size: cover;
   background-position: center;
 }
+
+/* added to fix bug in chrome & safari when scrolling an md-content with a background image (was removing gradient) */
+.background-overlay-static {
+  position: static;
+}
