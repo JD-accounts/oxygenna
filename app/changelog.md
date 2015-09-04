@@ -140,5 +140,7 @@
 # Version ???
 > Release Date : ???
 
-- Turn off profiler by default
-- Fixed styling for select and nav with dark knight theme
+- Turn off profiler by default.
+- Fixed styling for select and nav with dark knight theme.
+- Moved font family CSS into app.scss from triangular module.
+- Updated docs to match new 2.0 code
