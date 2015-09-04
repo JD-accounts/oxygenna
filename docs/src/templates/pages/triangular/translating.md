@@ -13,11 +13,11 @@ Angular tranlsate has [great documentation](http://angular-translate.github.io/d
 
 # How to translate a page
 
-In order to translate some text in a page just use the tranlsate filter in your HTML.
+In order to translate some text in a page just use the tranlsate directive in your HTML.
 
 for example
 
-<code>&#123;&#123;'HELLO' | translated}}</code>
+    <h1 translate>HELLO</h1>
 
 Then edit the en.json file located in your module/app il8n folder and add the following json.
 
@@ -33,7 +33,7 @@ Each menu item is filtered with the translate filter.  So just make sure that th
 
 For example in <code>app/introduction/introduction.module.js</code> you will find the following code.
 
-    SideMenu.addMenu({
+    triMenuProvider.addMenu({
         name: 'MENU.INTRODUCTION.INTRODUCTION',
         state: 'admin-panel.default.introduction',
         type: 'link',

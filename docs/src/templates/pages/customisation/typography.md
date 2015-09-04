@@ -25,9 +25,8 @@ You will see a section of code like this.
 
 Google Fonts wil tell you the correct code to replace this with when you choose to use a font from the [Google Fonts Site](http://www.google.com/fonts).
 
-Once you have replaced this link tag with the one suggested by Google Fonts, edit the <code>/app/src/app/scss/_typography.scss</code> file and change the following line to use your new font family.
+Once you have replaced this link tag with the one suggested by Google Fonts, edit the <code>/app/src/app.scss</code> file and change the following line to use your new font family.
 
-    // set template font family
     button, select, html, textarea, input {
       font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
     }

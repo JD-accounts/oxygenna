@@ -61,7 +61,6 @@ Inside the source folder you will find the following folders and files
 | ------------- | :----------------------------------------- |
 | app/          | Contains the main app files                |
 | assets/       | Contains app image files                   |
-| components/   | Contains components shared between modules |
 | 404.tmpl.html | 404 page html                              |
 | 500.tmpl.html | 500 page html                              |
 | favicon.png   | Favourite icon                             |
@@ -69,42 +68,38 @@ Inside the source folder you will find the following folders and files
 
 Inside the app folder you will find the following files and folders
 
-| Folder / File  |                                                Contents                                                |
-| -------------- | :----------------------------------------------------------------------------------------------------- |
-| app.js         | Main angular app file sets up the entire template source includes all modules                          |
-| app.scss       | Main app sass file that imports partials from scss folder                                              |
-| authentication | Module that contains all authentication pages (Login, Forgot Password, etc) in the Authentication menu |
-| charts         | Module that contains all chart example pages (ChartJS and Google) in the Charts menu.                  |
-| dashboards     | Module that contains all dashboard examples and widgets in the Dashboards menu.                        |
-| elements       | Module that contains all element examples in the Elements menu.                                        |
-| email          | Module that contains the email app in the Email menu.                                                  |
-| extras         | Module that contains the extras pages in the Extras menu.                                              |
-| forms          | Module that contains the forms pages in the Forms menu.                                                |
-| il8n           | Contains all the base translation json files for the triangular app                                    |
-| introduction   | Module that contains the introducion page shown in the Introduction menu.                              |
-| layouts        | Contains the templates used for layouts by the template                                                |
-| maps           | Module that contains the map examples show in the Maps menu.                                           |
-| menulevels     | Module that contains the menu levels pages in the Levels menu.                                         |
-| scss           | Contains the apps scss partials                                                                        |
-| theming        | Contains code used by triangular to allow access to Material Angulars color palettes and themes        |
-| todo           | Module that contains the todo app in the Todo menu.                                                    |
-| ui             | Module that contains the ui pages in the UI menu.                                                      |
+|         Folder / File         |                       Contents                       |
+| ----------------------------- | :--------------------------------------------------- |
+| examples/                     | Includes all the example pages used in the app       |
+| il8n/                         | Contains app translation files                       |
+| seed-module                   | Contans an example module to use in your own app     |
+| triangular/                   | The main triangular module                           |
+| app.module.js                 | The main app module file                             |
+| app.scss                      | The main app scss file                               |
+| config.chartjs.js             | Config to make chartjs plugin use MD colors          |
+| config.route.js               | Config to set up your app routes                     |
+| config.translate.js           | Config to set your app languages                     |
+| config.triangular.layout.js   | Config to set triangulars default page layouts       |
+| config.triangular.settings.js | Config to set triangulars default settings           |
+| config.triangular.themes.js   | Config to set up triangulars theme colors and themes |
+| value.googlechart.js          | Adds a value used by google charts plugin            |
 
 ## Module structure
 
-Each module in {{theme.name}} uses Googles recommended structure and naming conventions.
+Each module in {{theme.name}} uses John Papa's recommended structure and naming conventions.
 
 To find out how this structure works we will describe one of the more simple modules below, the introduction module.
 
 This module justs adds one menu item and one page to the site.
 
-|       Folder / File        |                                   Contents                                  |
-| -------------------------- | :-------------------------------------------------------------------------- |
-| il8n                       | Translation json files                                                      |
-| introduction-controller.js | Controller for the introduction.tmpl.html page                              |
-| introduction.module.js     | Module js file, use angular to declare a module, adds a menu and the routes |
-| introduction.tmpl.html     | Introduction page HTML                                                      |
-| introduction.tmpl.scss     | Introduction page SCSS for CSS styling                                      |
+|       Folder / File        |                         Contents                        |
+| -------------------------- | :------------------------------------------------------ |
+| il8n/                      | Translation json files                                  |
+| introduction.config.js     | Sets up the modules routes and adds menus to triangular |
+| introduction.controller.js | Controller for the introduction.tmpl.html page          |
+| introduction.module.js     | Module js file                                          |
+| introduction.tmpl.html     | Introduction page HTML                                  |
+| introduction.tmpl.scss     | Introduction page SCSS for CSS styling                  |
 
 
 # Setting up Gulp

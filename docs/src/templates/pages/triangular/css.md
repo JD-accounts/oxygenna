@@ -11,10 +11,10 @@ The CSS for {{theme.name}} is generated [using Sass ](http://sass-lang.com/).
 
 You can find the Sass code in the following places
 
-| Folder / File      | Contents                                                         |
-| ------------------ | :--------------------------------------------------------------- |
-| src/app.scss       | The main app sass file                                           |
-| src/scss/          | Contains more sass files that are imported in the main app.scss  |
+|          Folder / File          |                        Contents                       |
+| ------------------------------- | :---------------------------------------------------- |
+| src/app.scss                    | The main app sass file                                |
+| src/triangular/_triangular.scss | Contains all the css needed for the triangular module |
 
 <div class="alert alert-info" role="alert">
     **Note** - The gulp build will automatically compile any scss files added to the src folder or subfolders.  The resulting CSS will be minified and added to the app.css file.
@@ -24,7 +24,7 @@ Also each module imports its own scss files.
 
 For example the elements module has its own scss file here.
 
-    src/app/elements/elements.module.scss
+    app/examples/elements/elements.module.scss
 
 # Flexible Box Model
 

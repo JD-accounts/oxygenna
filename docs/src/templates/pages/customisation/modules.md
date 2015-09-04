@@ -7,16 +7,21 @@
 
 # Modules loaded by triangular
 
-The very first lines of javascript that run in app.js create the triangular app and tell angular which modules it will need to load.
+The very first lines of javascript that run in app.module.js create the triangular app and tell angular which modules it will need to load.
 
-        angular.module('triAngular', [
-            // inject angular modules
-            'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngMaterial',
-            // inject extra 3rd party angular modules
-            'ui.router', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'angularMoment', 'textAngular',
-            // inject our own triangular modules
-            'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras', 'triAngularTodo'
-        ])
+    (function() {
+      'use strict';
+
+      angular
+          .module('app', [
+              'triangular',
+              'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngMaterial',
+              'ui.router', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'angularMoment', 'textAngular', 'uiGmapgoogle-maps', 'hljs', 'md.data.table',
+              // 'seed-module'
+              // uncomment above to activate the example seed module
+              'app.examples'
+          ])
+    })();
 
 ### Angular Modules
 
@@ -45,54 +50,63 @@ Triangular loads the following 3rd party angular modules
 - **uiGmapgoogle-maps** - AngularJS directives for the Google Maps Javascript API. [Site](https://github.com/angular-ui/angular-google-maps)
 - **hljs** - AngularJS directive for syntax highlighting with highlight.js. [Site](https://github.com/pc035860/angular-highlightjs)
 
-### Triangular Modules
+### App Modules
 
-Finally triangular loads it's own modules
-
-- **triAngularIntroduction** - Module that contains introduction page in the Introduction menu
-- **triAngularUI** - Module that contains all pages in the UI menu (Colors, Skins, etc).
-- **triAngularAuthentication** - Module that contains all pages in the Authentication menu (Login, Forgot Password, etc).
-- **triAngularDashboards** - Module that contains all pages in the Dashboards menu (Analytics, Server, Widgets, etc).
-- **triAngularEmail** - Module that contains the Email app accessed via the Email menu.
-- **triAngularMenuLevels** - Module that contains all pages in the Levels menu.
-- **triAngularElements** - Module that contains all pages in the Elements menu (Buttons, Inputs, etc).
-- **triAngularForms** - Module that contains all pages in the Forms menu (Autocomplete, Inputs, etc).
-- **triAngularCharts** - Module that contains all pages in the Charts menu (ChartJS, Google, etc).
-- **triAngularMaps** - Module that contains all pages in the Maps menu (Full Width, Examples).
-- **triAngularExtras** - Module that contains all pages in the Extras menu (Gallery, Avatars, etc).
-- **triAngularTodo** - Module that contains the Todo app found on the Todo menu
+- **triangular** - The triangular core module located in the triangular/ folder
+- **app.examples** - All the example modules that you see in the demo site
 
 # Module structure
 
-Each module in {{theme.name}} uses Googles recommended structure and naming conventions.
+Each module in {{theme.name}} uses John Papa's recommended structure and naming conventions.
 
 To find out how this structure works we will describe one of the more simple modules below, the introduction module.
 
 This module justs adds one menu item and one page to the site.
 
-|       Folder / File        |                                   Contents                                  |
-| -------------------------- | :-------------------------------------------------------------------------- |
-| il8n                       | Translation json files                                                      |
-| introduction-controller.js | Controller for the introduction.tmpl.html page                              |
-| introduction.module.js     | Module js file, use angular to declare a module, adds a menu and the routes |
-| introduction.tmpl.html     | Introduction page HTML                                                      |
-| introduction.tmpl.scss     | Introduction page SCSS for CSS styling                                      |
+|       Folder / File        |                         Contents                        |
+| -------------------------- | :------------------------------------------------------ |
+| il8n/                      | Translation json files                                  |
+| introduction.config.js     | Sets up the modules routes and adds menus to triangular |
+| introduction.controller.js | Controller for the introduction.tmpl.html page          |
+| introduction.module.js     | Module js file                                          |
+| introduction.tmpl.html     | Introduction page HTML                                  |
+| introduction.tmpl.scss     | Introduction page SCSS for CSS styling                  |
 
 # Removing a module
 
-Removing a module is super easy just edit the array at the top of app.js and remove the string of the module you want to remove.
+Removing a module is super easy just edit the dependencies loaded in app/examples/examples.module.js
+
+    (function() {
+        'use strict';
+
+        angular
+            .module('app.examples', [
+                'app.examples.authentication',
+                'app.examples.calendar',
+                'app.examples.charts',
+                'app.examples.dashboards',
+                'app.examples.elements',
+                'app.examples.email',
+                'app.examples.extras',
+                'app.examples.forms',
+                'app.examples.github',
+                'app.examples.introduction',
+                'app.examples.layouts',
+                'app.examples.maps',
+                'app.examples.menulevels',
+                'app.examples.todo',
+                'app.examples.ui'
+            ]);
+    })();
+
 
 For example if you wanted to remove the authentication pages (login, forgot password, etc) you would want to remove the triangular authentication package.
 
-So you would edit this line
+So you would remove this nine
 
-    'triAngularIntroduction', 'triAngularUI', 'triAngularAuthentication', 'triAngularDashboards', 'triAngularEmail', 'triAngularMenuLevels', 'triAngularElements', 'triAngularForms', 'triAngularCharts', 'triAngularMaps', 'triAngularExtras', 'triAngularTodo'
+    'app.examples.authentication',
 
-and remove
-
-    'triAngularAuthentication',
-
-This will stop the triAngularAuthentication module in the authentication folder from being loaded and remove the menu and pages.
+This will stop the example authentication module in the authentication folder from being loaded and remove the menu and pages.
 
 
 # Creating a module
@@ -103,4 +117,4 @@ You can find the code in <code>app/seed-module</code>
 
 To create your own module just make a copy of this folder and rename it to your new module name.
 
-After that rename the module to your new module name and then add it to app.js
+After that rename the module to your new module name and then add it to the dependencies in app.module.js

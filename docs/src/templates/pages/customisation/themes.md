@@ -26,7 +26,7 @@ You can [view and try them all here](http://triangular.oxygenna.com/#/ui/skins).
 
 To change the default skin is super easy.
 
-Just edit app.js and find this line.
+Just edit config.triangular.themes.js and change this line to a skin you would like to load.
 
     defaultSkin: 'cyan-cloud'
 
@@ -47,7 +47,7 @@ For example to change to the Plumb Purple theme you would change to.
 
 # Create your own template skin
 
-To change the colors that are used in triangular edit <code>app.js</code>
+To change the colors that are used in triangular edit <code>config.triangular.themes.js</code>
 
 [You can see on the skins page](http://triangular.oxygenna.com/#/ui/skins) how the template can be colored.
 
@@ -134,7 +134,7 @@ Or to create your own themes read the next section.
 
 By default the template allows users to select a skin that is then stored in a cookie.
 
-If you want to disable this just edit app.js and remove the following line.
+If you want to disable this just edit config.triangular.themes.js and remove the following line.
 
     triSkinsProvider.useSkinCookie(true);
 
@@ -142,29 +142,37 @@ If you want to disable this just edit app.js and remove the following line.
 
 If you don't want to use the palettes provided by material design, you can also create your own.  Just add a config function that injects the <code>$mdThemeingProvide</code> and define the colors you want to use.
 
-    angular.module('triangular', ['ngMaterial'])
-    .config(function($mdThemingProvider) {
-        $mdThemingProvider.definePalette('amazingPaletteName', {
-            '50': 'ffebee',
-            '100': 'ffcdd2',
-            '200': 'ef9a9a',
-            '300': 'e57373',
-            '400': 'ef5350',
-            '500': 'f44336',
-            '600': 'e53935',
-            '700': 'd32f2f',
-            '800': 'c62828',
-            '900': 'b71c1c',
-            'A100': 'ff8a80',
-            'A200': 'ff5252',
-            'A400': 'ff1744',
-            'A700': 'd50000',
-            'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
-                                                // on this palette should be dark or light
-            'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
-             '200', '300', '400', 'A100'],
-            'contrastLightColors': undefined    // could also specify this if default was 'dark'
-        });
-        $mdThemingProvider.theme('default')
-        .primaryPalette('amazingPaletteName');
+    (function() {
+        'use strict';
+
+        angular
+            .module('app')
+            .config(themesConfig);
+
+        /* @ngInject */
+        function themesConfig ($mdThemingProvider) {
+            $mdThemingProvider.definePalette('amazingPaletteName', {
+                '50': 'ffebee',
+                '100': 'ffcdd2',
+                '200': 'ef9a9a',
+                '300': 'e57373',
+                '400': 'ef5350',
+                '500': 'f44336',
+                '600': 'e53935',
+                '700': 'd32f2f',
+                '800': 'c62828',
+                '900': 'b71c1c',
+                'A100': 'ff8a80',
+                'A200': 'ff5252',
+                'A400': 'ff1744',
+                'A700': 'd50000',
+                'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
+                                                    // on this palette should be dark or light
+                'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
+                 '200', '300', '400', 'A100'],
+                'contrastLightColors': undefined    // could also specify this if default was 'dark'
+            });
+            $mdThemingProvider.theme('default')
+            .primaryPalette('amazingPaletteName');
+        }
     });

@@ -17,27 +17,18 @@ With your own logo.  This will replace the logo used througout the theme (Logo a
     Note - Use the same image size as the template for the best results.
 </div>
 
-If you want to change the image filename used for the template logo edit the following line in app.js.
+If you want to change the image filename used for the template logo edit the following line in config.triangular.settings.js
 
-    logo: 'assets/images/logo.png',
-
+    triSettingsProvider.setLogo('assets/images/logo.png');
 
 # Changing the template name
 
-To change the name that is shown in the logo bar at the top of the sidemenu & loading animation just edit the following lines in app.js.
+To change the name that is shown in the logo bar at the top of the sidemenu & loading animation just edit the following line in config.triangular.settings.js
 
-    .constant('APP', {
-        name: 'triangular',
-        logo: 'assets/images/logo.png',
-        version: '1.0',
-        languages: [{
-            name: 'LANGUAGES.ENGLISH',
-            key: 'en'
-        },{
-            name: 'LANGUAGES.FRENCH',
-            key: 'fr'
-        }],
-        defaultSkin: 'cyan-cloud'
-    })
+    triSettingsProvider.setName('triangular');
 
-Change the name property to the name of your app.
+# Changing the template version
+
+To change the version number that is shown in the footer just edit the following line in config.triangular.settings.js
+
+    triSettingsProvider.setVersion('2.0');
