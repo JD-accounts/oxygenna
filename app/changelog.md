@@ -151,4 +151,5 @@
 - Fixed scrolling background bug in chrome & safari
 - Fixed eslint errors
 - Fixed menu focus on email detail view
+- updated eslint and eslint-angular-plugin
 - Updated docs to match new 2.0 code
