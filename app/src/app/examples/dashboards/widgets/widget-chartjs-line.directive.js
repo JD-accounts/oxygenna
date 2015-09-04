@@ -53,8 +53,7 @@
                 series: ['Pageviews', 'Visits', 'Sign ups'],
                 options: {
                     datasetFill: false,
-                    responsive: true,
-                    maintainAspectRatio:false
+                    responsive: true
                 },
                 data: []
             };

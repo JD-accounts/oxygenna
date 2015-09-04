@@ -137,16 +137,17 @@
 - Calendar: Improved looks and mobile responsiveness.
 - Docs: Added version migration guide to docs
 
-# Version ???
-> Release Date : ???
+# Version 2.0.1
+> Release Date : 4th September 2015
 
 - Turn off profiler by default.
+- Moved font family CSS into app.scss from triangular module.
+- Changed layout of analytics dashboard to look better on mobile
 - Fixed styling for select and nav with dark knight theme.
 - Fixed button links in 404 & 500 pages
-- Moved font family CSS into app.scss from triangular module.
 - Fixed typo in first tables example
 - Fixed typo in timeline
 - Fixed double refresh from browser sync
 - Fixed eslint errors
-- Fix menu focus on email detail view
+- Fixed menu focus on email detail view
 - Updated docs to match new 2.0 code

@@ -39,11 +39,14 @@
     </div>
 
     <div layout="row" layout-sm="column" layout-margin>
-        <tri-widget chartjs-line-widget flex title="DASHBOARDS.ANALYTICS.PAGEVIEWS" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
-            <div flex>
-                <canvas class="chart-line" data="lineChart.data" labels="lineChart.labels" legend="false" series="lineChart.series" options="lineChart.options"></canvas>
-            </div>
+        <tri-widget chartjs-line-widget title="DASHBOARDS.ANALYTICS.PAGEVIEWS" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
+            <canvas class="chart-line" data="lineChart.data" labels="lineChart.labels" legend="true" series="lineChart.series" options="lineChart.options"></canvas>
         </tri-widget>
+        <tri-widget chartjs-pie-widget title="DASHBOARDS.ANALYTICS.SOCIAL" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
+            <canvas class="chart-doughnut" data="pieChart.data" legend="true" labels="pieChart.labels"></canvas>
+        </tri-widget>
+    </div>
+    <div layout="row" layout-sm="column" layout-margin>
         <tri-widget flex load-data-widget="{ referrals: 'app/examples/dashboards/data/referrals.json' }" title="DASHBOARDS.ANALYTICS.REFERRALS" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
             <table class="table">
                 <thead>
@@ -58,8 +61,6 @@
                 </tbody>
             </table>
         </tri-widget>
-    </div>
-    <div layout="row" layout-sm="column" layout-margin>
         <tri-widget flex load-data-widget="{ social: 'app/examples/dashboards/data/social.json' }" title="DASHBOARDS.ANALYTICS.SOCIAL" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
             <table class="table">
                 <thead>
@@ -73,11 +74,6 @@
                     </tr>
                 </tbody>
             </table>
-        </tri-widget>
-        <tri-widget chartjs-pie-widget flex title="DASHBOARDS.ANALYTICS.SOCIAL" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
-            <div flex>
-                <canvas class="chart-doughnut" data="pieChart.data" legend="true" labels="pieChart.labels"></canvas>
-            </div>
         </tri-widget>
     </div>
     <div layout="row" layout-md="column" layout-sm="column" layout-margin>
