@@ -94,7 +94,8 @@
                         allDay: false,
                         start: vm.currentDay,
                         end: inAnHour,
-                        palette: 'cyan'
+                        palette: 'cyan',
+                        stick: true
                     },
                     edit: false
                 }
