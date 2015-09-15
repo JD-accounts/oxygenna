@@ -159,3 +159,4 @@
 
 - Added daggable Widgets option
 - Fixed bug when adding new events (not keeping data in calendar)
+- Fixed bug in countupto directive options
