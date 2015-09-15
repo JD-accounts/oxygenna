@@ -10,7 +10,7 @@
     "angular-resource": "1.4.5",
     "angular-messages": "1.4.5",
     "angular-ui-router": "~0.2.13",
-    "angular-material": "0.11.0",
+    "angular-material": "0.10.1",
     "angular-translate": "~2.7.2",
     "angular-translate-loader-partial": "~2.7.2",
     "angular-translate-storage-cookie": "~2.7.2",
@@ -38,8 +38,7 @@
     "angular-mocks": "1.4.5"
   },
   "resolutions": {
-    "angular": "1.4.5",
-    "angular-material": "0.11.0"
+    "angular": "1.4.5"
   },
   "overrides": {
     "weather-icons": {
