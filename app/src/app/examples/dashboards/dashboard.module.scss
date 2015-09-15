@@ -32,3 +32,11 @@
     height: 72px;
   }
 }
+
+// Draggable widgets
+.drag-container > .widget, .widget.gu-mirror {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
