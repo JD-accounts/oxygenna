@@ -153,3 +153,9 @@
 - Fixed menu focus on email detail view
 - updated eslint and eslint-angular-plugin
 - Updated docs to match new 2.0 code
+
+# Version ???
+> Release Date : ???
+
+- Added daggable Widgets option
+- Fixed bug when adding new events (not keeping data in calendar)
