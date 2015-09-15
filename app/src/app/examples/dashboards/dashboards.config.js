@@ -35,6 +35,10 @@
             templateUrl: 'app/examples/dashboards/dashboard-social.tmpl.html',
             controller: 'DashboardSocialController',
             controllerAs: 'vm'
+        })
+        .state('triangular.admin-default.dashboard-draggable', {
+            url: '/dashboards/draggable-widgets',
+            templateUrl: 'app/examples/dashboards/dashboard-draggable.tmpl.html'
         });
 
         triMenuProvider.addMenu({
@@ -61,6 +65,10 @@
             },{
                 name: 'MENU.DASHBOARDS.SOCIAL',
                 state: 'triangular.admin-default.dashboard-social',
+                type: 'link'
+            },{
+                name: 'MENU.DASHBOARDS.DRAGGABLE',
+                state: 'triangular.admin-default.dashboard-draggable',
                 type: 'link'
             }]
         });

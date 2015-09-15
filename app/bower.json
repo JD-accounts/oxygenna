@@ -31,7 +31,8 @@
     "angular-ui-calendar": "~1.0.0",
     "weather-icons": "https://github.com/chk1/weather-icons.git#master",
     "angular-material-data-table": "0.8.0",
-    "angular-digest-hud": "~0.1.13"
+    "angular-digest-hud": "~0.1.13",
+    "angular-dragula":"~1.0.12"
   },
   "devDependencies": {
     "angular-mocks": "1.4.5"
@@ -45,6 +46,12 @@
       "main": [
         "./css/weather-icons.css",
         "./font/*"
+      ]
+    },
+    "angular-dragula": {
+      "main": [
+        "dist/angular-dragula.js",
+        "dist/dragula.min.css"
       ]
     }
   }
