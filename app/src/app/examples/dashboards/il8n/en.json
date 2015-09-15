@@ -6,7 +6,8 @@
             "ANALYTICS": "Analytics",
             "SERVER": "Server",
             "WIDGETS": "Widgets",
-            "SOCIAL": "Social"
+            "SOCIAL": "Social",
+            "DRAGGABLE": "Draggable"
         }
     },
     "DASHBOARDS": {
@@ -66,6 +67,13 @@
             "COMMENTS": "Comments",
             "SERVER_UPTIME": "Server Uptime",
             "FULLDATA": "Full Data"
+        },
+        "DRAGGABLE": {
+            "TITLE": "Drag Me!",
+            "SUBTITLE1": "You only need to specify the container you want to use.",
+            "SUBTITLE2": "You can re-order these widgets inside the container.",
+            "SUBTITLE3": "It works for all elements, not only widgets!",
+            "SUBTITLE4": "Moving them outside their container is not quite possible."
         }
     }
 }
