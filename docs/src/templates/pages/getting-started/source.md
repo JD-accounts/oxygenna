@@ -118,21 +118,12 @@ You can download the latest of node.js [from here](https://nodejs.org/download/)
 
 Once you have node.js installed on your system you should be able to go to your command line and type
 
-    npm version
+    npm --version
 
 and see something like this
 
-    $ npm version
-    { http_parser: '1.0',
-      node: '0.10.28',
-      v8: '3.14.5.9',
-      ares: '1.9.0-DEV',
-      uv: '0.10.27',
-      zlib: '1.2.3',
-      modules: '11',
-      openssl: '1.0.1g',
-      npm: '2.0.0-alpha-5',
-      triangular: '0.0.0' }
+    $ npm --version
+    2.11.3
 
 
 ## Getting the build system ready
