@@ -31,6 +31,7 @@
         "moment": true,
         "CountUp": true,
         "jQuery": true,
-        "inject": true
+        "inject": true,
+        "angularDragula": true
     }
 }
