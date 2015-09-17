@@ -5,6 +5,7 @@
             "GENERAL": "General",
             "ANALYTICS": "Analytics",
             "SERVER": "Server",
+            "SALES": "Sales",
             "WIDGETS": "Widgets",
             "SOCIAL": "Social",
             "DRAGGABLE": "Draggable"
@@ -14,6 +15,13 @@
         "GENERAL": {
             "CONTACTS": "Contacts",
             "CHAT": "Chat"
+        },
+        "SALES": {
+            "SALES": "Sales",
+            "TOTAL-SALES": "Total Sales",
+            "ALL-TIME-EARNINGS": "All Time Earnings",
+            "TOTAL-EARNINGS": "Total Earnings",
+            "ORDERS": "Orders"
         },
         "ANALYTICS": {
             "COMMENTS": "Comments",

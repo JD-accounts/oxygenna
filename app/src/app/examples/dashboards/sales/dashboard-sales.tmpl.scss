@@ -1,0 +1,17 @@
+.sales-dashboard {
+  .status {
+    padding: 8px;
+  }
+  .status-delivered {
+    color: rgba(0, 0, 0, 0.870588);
+    background-color: rgb(255, 238, 88);
+  }
+  .status-complete {
+    color: rgba(0, 0, 0, 0.870588);
+    background-color: rgb(102, 187, 106);
+  }
+  .status-pending {
+    color: rgba(0, 0, 0, 0.870588);
+    background-color: rgb(255, 167, 38);
+  }
+}
