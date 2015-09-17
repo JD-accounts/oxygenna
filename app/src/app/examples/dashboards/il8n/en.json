@@ -21,7 +21,9 @@
             "TOTAL-SALES": "Total Sales",
             "ALL-TIME-EARNINGS": "All Time Earnings",
             "TOTAL-EARNINGS": "Total Earnings",
-            "ORDERS": "Orders"
+            "ORDERS": "Orders",
+            "ORDER-STATUS": "Order Status",
+            "TOP-PRODUCT-CATEGORIES": "Top Product Categories"
         },
         "ANALYTICS": {
             "COMMENTS": "Comments",

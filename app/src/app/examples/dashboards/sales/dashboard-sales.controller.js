@@ -14,7 +14,9 @@
         };
 
         vm.salesData = SalesService.generateSales(vm.dateRange);
-        vm.chartData = SalesService.createChartData(vm.salesData);
+        vm.chartLineData = SalesService.createLineChartData(vm.salesData);
+        vm.chartPieData = SalesService.createPieChartData(vm.salesData);
+        vm.chartBarData = SalesService.createBarChartData(vm.salesData);
 
         vm.query = {
             order: 'date',
