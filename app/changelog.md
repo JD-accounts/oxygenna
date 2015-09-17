@@ -160,3 +160,6 @@
 - Added daggable Widgets option
 - Fixed bug when adding new events (not keeping data in calendar)
 - Fixed bug in countupto directive options
+- Added show toolbar option to layout
+- Added new Sales Dashboard
+- Updated chart.js and examples

@@ -17,6 +17,8 @@
 
         triLayoutProvider.setDefaultOption('sideMenuSize', 'full');
 
+        triLayoutProvider.setDefaultOption('showToolbar', true);
+
         triLayoutProvider.setDefaultOption('footer', true);
     }
 })();
