@@ -141,7 +141,10 @@
             var chartData = {
                 labels: [],
                 series: ['Sales'],
-                data: []
+                data: [],
+                options: {
+                    barShowStroke : false
+                }
             };
 
             var row = [];
