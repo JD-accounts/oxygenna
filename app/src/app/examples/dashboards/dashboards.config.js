@@ -22,7 +22,7 @@
                     template: '<div id="admin-panel-content-view" flex ui-view></div>'
                 },
                 belowContent: {
-                    template: '<div ui-view="belowContent"></div>'
+                    template: '<div ui-view="belowContent"></div>',
                 }
             }
         })
@@ -66,7 +66,9 @@
                     controllerAs: 'vm'
                 },
                 'belowContent': {
-                    templateUrl: 'app/examples/dashboards/sales/fab-button.tmpl.html'
+                    templateUrl: 'app/examples/dashboards/sales/fab-button.tmpl.html',
+                    controller: 'SalesFabController',
+                    controllerAs: 'vm'
                 }
             }
         })
@@ -97,12 +99,12 @@
                 state: 'triangular.admin-default.dashboard-server',
                 type: 'link'
             },{
-                name: 'MENU.DASHBOARDS.WIDGETS',
-                state: 'triangular.admin-default.dashboard-widgets',
-                type: 'link'
-            },{
                 name: 'MENU.DASHBOARDS.SOCIAL',
                 state: 'triangular.admin-default.dashboard-social',
+                type: 'link'
+            },{
+                name: 'MENU.DASHBOARDS.WIDGETS',
+                state: 'triangular.admin-default.dashboard-widgets',
                 type: 'link'
             },{
                 name: 'MENU.DASHBOARDS.DRAGGABLE',

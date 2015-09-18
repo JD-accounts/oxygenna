@@ -23,7 +23,16 @@
             "TOTAL-EARNINGS": "Total Earnings",
             "ORDERS": "Orders",
             "ORDER-STATUS": "Order Status",
-            "TOP-PRODUCT-CATEGORIES": "Top Product Categories"
+            "TOP-PRODUCT-CATEGORIES": "Top Product Categories",
+            "DATE-UPDATED": "Date Range Updated",
+            "DATE-CHANGE": {
+                "TITLE": "Select a date range",
+                "START-DATE": "Start Date",
+                "END-DATE": "End Date",
+                "YEAR-PICK": "Year",
+                "MONTH-PICK": "Month",
+                "DATE-PICK": "Date"
+            }
         },
         "ANALYTICS": {
             "COMMENTS": "Comments",

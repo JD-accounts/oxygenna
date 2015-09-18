@@ -75,7 +75,7 @@
             var productAdjectives = ['Super', 'Amazing', 'Great', 'New'];
             var productTypes = ['T-Shirt', 'Book', 'Desk', 'Coat', 'Chair', 'Hat', 'Jeans'];
             var productColors = ['Red', 'Green', 'Blue', 'Pink', 'Yellow', 'Orange'];
-            var productCategories = ['Books', 'Electronics', 'Home', 'Toys', 'Clothes'];
+            var productCategories = ['Books', 'Electronics', 'Home', 'Toys', 'Clothes', 'Shoes', 'Mobiles'];
             for(var i = 0; i < numItems; i++) {
                 var item = {
                     name: productAdjectives[Math.floor(Math.random() * productAdjectives.length)] + ' ' + productColors[Math.floor(Math.random() * productColors.length)] + ' ' + productTypes[Math.floor(Math.random() * productTypes.length)],

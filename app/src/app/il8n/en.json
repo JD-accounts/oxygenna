@@ -1,4 +1,8 @@
 {
+    "GENERAL": {
+        "CANCEL": "Cancel",
+        "OK": "Ok"
+    },
     "ADMIN": {
         "TOOLBAR": {
             "SETTINGS": "Settings",
