@@ -4,16 +4,17 @@ html, body {
 
 // core
 
-@import "scss/reset";
-@import "scss/tables";
+@import "scss/contextual";
+@import "scss/dialogs";
 @import "scss/material-icons";
 @import "scss/material-overrides";
 @import "scss/material-backgrounds";
-@import "scss/contextual";
+@import "scss/print";
+@import "scss/reset";
+@import "scss/social";
+@import "scss/tables";
 @import "scss/typography";
 @import "scss/utilities";
-@import "scss/social";
-@import "scss/print";
 
 // components
 
