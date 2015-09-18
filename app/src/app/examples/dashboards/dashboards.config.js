@@ -22,7 +22,7 @@
                     template: '<div id="admin-panel-content-view" flex ui-view></div>'
                 },
                 belowContent: {
-                    template: '<div ui-view="belowContent"></div>',
+                    template: '<div ui-view="belowContent"></div>'
                 }
             }
         })

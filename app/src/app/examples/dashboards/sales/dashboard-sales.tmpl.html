@@ -5,15 +5,15 @@
 
     <div layout="row" layout-sm="column" layout-margin dragula='"drag-analytics-container"'>
         <tri-widget palette-background="cyan:600" content-layout="column" content-layout-align="space-between center" content-padding>
-            <p class="md-display-3 font-weight-100 margin-top-10 margin-bottom-0" countupto="vm.salesData.totalSales" duration="1.5" decimals="0"></p>
+            <p class="md-display-2 font-weight-100 margin-top-10 margin-bottom-0" countupto="vm.salesData.totalSales" duration="1.5" decimals="0"></p>
             <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-10" translate>DASHBOARDS.SALES.TOTAL-SALES</p>
         </tri-widget>
         <tri-widget palette-background="cyan:600" content-layout="column" content-layout-align="space-between center" content-padding>
-            <p class="md-display-3 font-weight-100 margin-top-10 margin-bottom-0" countupto="vm.salesData.totalEarnings" duration="1.5" options="{ prefix: '$' }" decimals="2"></p>
+            <p class="md-display-2 font-weight-100 margin-top-10 margin-bottom-0" countupto="vm.salesData.totalEarnings" duration="1.5" options="{ prefix: '$' }" decimals="2"></p>
             <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-10" translate>DASHBOARDS.SALES.TOTAL-EARNINGS</p>
         </tri-widget>
         <tri-widget palette-background="cyan:600" content-layout="column" content-layout-align="space-between center" content-padding>
-            <p class="md-display-3 font-weight-100 margin-top-10 margin-bottom-0" countupto="971315.53" duration="1.5" options="{ prefix: '$' }" decimals="2"></p>
+            <p class="md-display-2 font-weight-100 margin-top-10 margin-bottom-0" countupto="971315.53" duration="1.5" options="{ prefix: '$' }" decimals="2"></p>
             <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-10" translate>DASHBOARDS.SALES.ALL-TIME-EARNINGS</p>
         </tri-widget>
     </div>
@@ -44,8 +44,8 @@
                             </td>
                             <td>{{::order.total | currency}}</td>
                             <td>
-                                <md-button class="md-icon-button" aria-label="Open Order">
-                                    <md-icon md-font-icon="icon-search" ng-click="openOrder(order, $event)"></md-icon>
+                                <md-button ng-click="vm.openOrder(order, $event)" class="md-icon-button" aria-label="Open Order">
+                                    <md-icon md-font-icon="icon-search"></md-icon>
                                 </md-button>
                             </td>
                         </tr>

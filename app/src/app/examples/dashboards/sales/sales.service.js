@@ -11,6 +11,7 @@
         this.createLineChartData = createLineChartData;
         this.createPieChartData = createPieChartData;
         this.createBarChartData = createBarChartData;
+
         ////////////////
 
         function generateSales(dateRange) {
@@ -61,6 +62,7 @@
             var names = ['Loraine Heidenreich', 'Amie Hane', 'Rosalyn Heller V', 'Dr. Kristian Boyle II', 'Clarabelle Weber', 'Rowland Emard', 'Kitty Heller DVM', 'Winston Frami', 'Newton Welch', 'Trudie Feest', 'Vivien Sauer', 'Cleta Kuhn', 'Ruby Shields', 'Dr. Moises Beahan DDS', 'Miss Shanel Jenkins DVM', 'Kitty Heller DVM', 'Vivien Sauer', 'Clara Cremin', 'Eunice Morissette', 'Arch Sporer IV', 'Miss Shanel Jenkins DVM', 'Ryann Balistreri I', 'Norma Yost DDS', 'Manley Roberts', 'Ruby Shields', 'Miss Lavada Runolfsson', 'Kira Dooley', 'Meredith Ebert DDS'];
             var emails = ['johnson.althea@gleichner.net','will.rhea@weber.biz','roslyn75@keebler.com','okon.glenda@hamill.com','estroman@cruickshank.org','victoria41@hartmann.com','bogisich.janice@wilkinson.com','bryce97@kris.com','noe59@king.com','wiza.litzy@kozey.com','oconner.cortney@gmail.com','kub.fannie@hotmail.com','adrian00@gutkowski.com','justice69@yahoo.com','torphy.toney@yahoo.com','bogisich.janice@wilkinson.com','oconner.cortney@gmail.com','orval63@gmail.com','jaime94@gmail.com','olaf69@okeefe.com','torphy.toney@yahoo.com','bernhard.bruen@marvin.com','otilia61@hotmail.com','bogan.lelia@bins.info','adrian00@gutkowski.com','yazmin76@hotmail.com','kglover@hotmail.com','erick.hermann@larkin.net','bernhard.bruen@marvin.com','bradly90@corkery.info','orval63@gmail.com','olaf69@okeefe.com'];
             var order = {
+                id: makeid(),
                 buyer: emails[Math.floor(Math.random() * emails.length)],
                 name: names[Math.floor(Math.random() * names.length)],
                 date: moment(date + Math.floor(Math.random() * (86400000 - 0)) + 0),
@@ -160,6 +162,17 @@
             }
             chartData.data.push(row);
             return chartData;
+        }
+
+        function makeid() {
+            var text = '';
+            var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+
+            for( var i=0; i < 5; i++ ) {
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            }
+
+            return text;
         }
     }
 })();

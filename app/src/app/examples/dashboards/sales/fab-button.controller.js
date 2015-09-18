@@ -12,8 +12,8 @@
 
         ////////////////
 
-        function changeDate() {
-            $rootScope.$broadcast('salesChangeDate');
+        function changeDate($event) {
+            $rootScope.$broadcast('salesChangeDate', $event);
         }
     }
 })();

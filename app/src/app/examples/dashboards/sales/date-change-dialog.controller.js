@@ -6,7 +6,7 @@
         .controller('DateChangeDialogController', DateChangeDialogController);
 
     /* @ngInject */
-    function DateChangeDialogController($mdDialog,range) {
+    function DateChangeDialogController($mdDialog, range) {
         var vm = this;
         vm.cancelClick = cancelClick;
         vm.okClick = okClick;

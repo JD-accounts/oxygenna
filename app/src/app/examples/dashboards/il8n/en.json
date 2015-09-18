@@ -32,6 +32,19 @@
                 "YEAR-PICK": "Year",
                 "MONTH-PICK": "Month",
                 "DATE-PICK": "Date"
+            },
+            "ORDER": {
+                "TITLE": "Order #",
+                "DATE": "Order Date",
+                "BUYER-NAME": "Customer Name",
+                "BUYER-EMAIL": "Customer Email",
+                "NUM-ITEMS": "Number of Items",
+                "PRODUCT": "Product Description",
+                "CATEGORY": "Category",
+                "PRICE": "Price",
+                "SUB-TOTAL": "Sub Total",
+                "TAX": "Tax",
+                "TOTAL": "Total"
             }
         },
         "ANALYTICS": {
