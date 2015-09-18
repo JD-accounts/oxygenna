@@ -74,7 +74,9 @@
         })
         .state('triangular.admin-default.dashboard-draggable', {
             url: '/dashboards/draggable-widgets',
-            templateUrl: 'app/examples/dashboards/draggable.tmpl.html'
+            templateUrl: 'app/examples/dashboards/dashboard-draggable.tmpl.html',
+            controller: 'DashboardDraggableController',
+            controllerAs: 'vm'
         });
 
         triMenuProvider.addMenu({
