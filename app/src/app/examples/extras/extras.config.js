@@ -35,7 +35,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.EXTRAS.EXTRAS',
-            icon: 'icon-list',
+            icon: 'zmdi zmdi-view-list-alt',
             type: 'dropdown',
             priority: 8.1,
             children: [{

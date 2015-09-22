@@ -14,15 +14,15 @@
         vm.openSideNav = openSideNav;
         vm.views = [{
             name: 'CALENDAR.TOOLBAR.VIEWS.MONTH',
-            icon: 'icon-view-module',
+            icon: 'zmdi zmdi-view-module',
             viewName: 'month'
         },{
             name: 'CALENDAR.TOOLBAR.VIEWS.WEEK',
-            icon: 'icon-view-week',
+            icon: 'zmdi zmdi-view-week',
             viewName: 'agendaWeek'
         },{
             name: 'CALENDAR.TOOLBAR.VIEWS.DAY',
-            icon: 'icon-view-day',
+            icon: 'zmdi zmdi-view-day',
             viewName: 'agendaDay'
         }];
         vm.currentView = vm.views[0];

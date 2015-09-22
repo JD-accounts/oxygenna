@@ -5,19 +5,6 @@
 
 // Variables
 // --------------------------
-$md-font-path: "../bower_components/material-design-iconic-font/fonts";
-$md-css-prefix: icon;
-$md-version: "1.0.1";
+$zmdi-font-path: "../bower_components/material-design-iconic-font/dist/fonts";
 
-$md-border-color: gray;
-
-// @import "bower_components/material-design-iconic-font/scss/_variables.scss";
-@import "material-design-iconic-font/scss/_mixins.scss";
-@import "material-design-iconic-font/scss/_path.scss";
-@import "material-design-iconic-font/scss/_core.scss";
-@import "material-design-iconic-font/scss/_sizes.scss";
-@import "material-design-iconic-font/scss/_border.scss";
-@import "material-design-iconic-font/scss/_pulled.scss";
-@import "material-design-iconic-font/scss/_spinned.scss";
-@import "material-design-iconic-font/scss/_rotated.scss";
-@import "material-design-iconic-font/scss/_icons.scss";
+@import "bower_components/material-design-iconic-font/scss/material-design-iconic-font.scss";

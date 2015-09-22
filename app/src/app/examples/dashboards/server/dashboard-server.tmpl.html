@@ -30,7 +30,7 @@
         <div class="drag-container" flex layout="column" layout-margin dragula='"drag-server-container"'>
             <tri-widget palette-background="cyan:500" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
                 <div>
-                    <md-icon class="font-size-5 opacity-50" md-font-icon="icon-gps-fixed"></md-icon>
+                    <md-icon class="font-size-5 opacity-50" md-font-icon="zmdi zmdi-gps-dot"></md-icon>
                 </div>
                 <div layout="column" layout-align="center end">
                     <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis">192.168.1.1</p>
@@ -39,7 +39,7 @@
             </tri-widget>
             <tri-widget palette-background="cyan:600" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
                 <div>
-                    <md-icon class="font-size-5 opacity-50" md-font-icon="icon-memory"></md-icon>
+                    <md-icon class="font-size-5 opacity-50" md-font-icon="zmdi zmdi-memory"></md-icon>
                 </div>
                 <div layout="column" layout-align="center end">
                     <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis" countupto="2" decimals="0" options="{suffix: 'Gb'}"></p>
@@ -48,7 +48,7 @@
             </tri-widget>
             <tri-widget palette-background="cyan:700" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
                 <div>
-                    <md-icon class="font-size-5 opacity-50" md-font-icon="icon-storage"></md-icon>
+                    <md-icon class="font-size-5 opacity-50" md-font-icon="zmdi zmdi-storage"></md-icon>
                 </div>
                 <div layout="column" layout-align="center end">
                     <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0" countupto="30" decimals="0" options="{suffix: 'Gb'}"></p>
@@ -57,7 +57,7 @@
             </tri-widget>
             <tri-widget palette-background="cyan:800" background="primary" content-layout="row" content-layout-align="space-between center" content-padding>
                 <div>
-                    <md-icon class="font-size-5 opacity-50" md-font-icon="icon-location-on"></md-icon>
+                    <md-icon class="font-size-5 opacity-50" md-font-icon="zmdi zmdi-pin"></md-icon>
                 </div>
                 <div layout="column" layout-align="center end">
                     <p class="md-display-1 font-weight-100 margin-top-0 margin-bottom-0">London</p>
@@ -87,8 +87,8 @@
                         <h3>{{::job.job}}</h3>
                         <p>{{::job.time}}</p>
                     </div>
-                    <md-icon md-font-icon="icon-check alert-success" ng-show="::job.complete"></md-icon>
-                    <md-icon md-font-icon="icon-close alert-error" ng-hide="::job.complete"></md-icon>
+                    <md-icon md-font-icon="zmdi zmdi-check alert-success" ng-show="::job.complete"></md-icon>
+                    <md-icon md-font-icon="zmdi zmdi-close alert-error" ng-hide="::job.complete"></md-icon>
                     <md-divider ng-hide="$last"></md-divider>
                 </md-list-item>
             </md-list>

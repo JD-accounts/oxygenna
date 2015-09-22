@@ -12,31 +12,17 @@
         vm.icons = [];
         vm.iconSource = 'Select icon below to see HTML';
         vm.selectIcon = selectIcon;
+        vm.icons = icons.data;
 
-        function selectIcon($event, icon) {
+        function selectIcon($event, className) {
             $mdDialog.show(
                 $mdDialog.alert()
                 .parent(angular.element($document.body))
                 .title('Here\'s the code for that icon')
-                .content('<md-icon md-font-icon="' + icon.className + '"></md-icon>')
+                .content('<md-icon md-font-icon="' + className + '"></md-icon>')
                 .ok('Thanks')
                 .targetEvent($event)
             );
         }
-
-        // init
-
-        // create filterable data structure for icons
-        angular.forEach(icons.data, function(iconGroup, groupName) {
-            angular.forEach(iconGroup, function(icon, iconName) {
-                vm.icons.push({
-                    name: iconName,
-                    group: groupName,
-                    className: icon
-                });
-            });
-            vm.groups.push(groupName);
-        });
-
     }
 })();

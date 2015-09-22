@@ -167,7 +167,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.ELEMENTS.ELEMENTS',
-            icon: 'icon-school',
+            icon: 'zmdi zmdi-graduation-cap',
             type: 'dropdown',
             priority: 3.1,
             children: [{

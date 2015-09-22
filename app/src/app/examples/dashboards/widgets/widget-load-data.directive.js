@@ -24,9 +24,9 @@
             var loadData = $parse(attrs.loadDataWidget)($scope);
 
             widgetCtrl.setMenu({
-                icon: 'icon-more-vert',
+                icon: 'zmdi zmdi-more-vert',
                 items: [{
-                    icon: 'icon-search',
+                    icon: 'zmdi zmdi-search',
                     title: 'DASHBOARDS.WIDGETS.MENU.DETAILS',
                     click: function($event) {
                         var data = [];
@@ -47,10 +47,10 @@
                         }, cancelDialog);
                     }
                 },{
-                    icon: 'icon-share',
+                    icon: 'zmdi zmdi-share',
                     title: 'DASHBOARDS.WIDGETS.MENU.SHARE'
                 },{
-                    icon: 'icon-print',
+                    icon: 'zmdi zmdi-print',
                     title: 'DASHBOARDS.WIDGETS.MENU.PRINT'
                 }]
             });

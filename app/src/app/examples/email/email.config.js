@@ -8,17 +8,17 @@
             state: 'triangular-no-scroll.email.inbox',
             name: 'MENU.EMAIL.INBOX',
             url: '/email/inbox',
-            icon: 'icon-inbox'
+            icon: 'zmdi zmdi-inbox'
         },{
             state: 'triangular-no-scroll.email.trash',
             name: 'MENU.EMAIL.TRASH',
             url: '/email/trash',
-            icon: 'icon-remove-circle'
+            icon: 'zmdi zmdi-minus-circle'
         },{
             state: 'triangular-no-scroll.email.sent',
             name: 'MENU.EMAIL.SENT',
             url: '/email/sent',
-            icon: 'icon-mail'
+            icon: 'zmdi zmdi-email'
         }]);
 
     /* @ngInject */
@@ -104,7 +104,7 @@
 
         var emailMenu = {
             name: 'MENU.EMAIL.EMAIL',
-            icon: 'icon-email',
+            icon: 'zmdi zmdi-email',
             type: 'dropdown',
             priority: 2.2,
             children: []

@@ -19,7 +19,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.LEVELS.LEVELS',
-            icon: 'icon-receipt',
+            icon: 'zmdi zmdi-receipt',
             type: 'dropdown',
             priority: 6.1,
             children: [{

@@ -28,7 +28,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.MAPS.MAPS',
-            icon: 'icon-place',
+            icon: 'zmdi zmdi-pin',
             type: 'dropdown',
             priority: 7.1,
             children: [{

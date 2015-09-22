@@ -19,7 +19,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.LAYOUTS.TITLE',
-            icon: 'icon-view-module',
+            icon: 'zmdi zmdi-view-module',
             type: 'dropdown',
             priority: 2.4,
             children: [{

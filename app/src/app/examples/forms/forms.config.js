@@ -35,7 +35,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.FORMS.FORMS',
-            icon: 'icon-event-available',
+            icon: 'zmdi zmdi-calendar-check',
             type: 'dropdown',
             priority: 3.3,
             children: [{

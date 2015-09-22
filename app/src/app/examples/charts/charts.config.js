@@ -41,7 +41,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.CHARTS.CHARTS',
-            icon: 'icon-insert-chart',
+            icon: 'zmdi zmdi-chart',
             type: 'dropdown',
             priority: 5.1,
             children: [{

@@ -26,10 +26,10 @@
         }]);
 
         $provide.decorator('taTools', ['$delegate', function(taTools){
-            taTools.bold.iconclass = 'icon-format-bold';
-            taTools.italics.iconclass = 'icon-format-italic';
-            taTools.underline.iconclass = 'icon-format-underline';
-            taTools.insertLink.iconclass = 'icon-insert-link';
+            taTools.bold.iconclass = 'zmdi zmdi-format-bold';
+            taTools.italics.iconclass = 'zmdi zmdi-format-italic';
+            taTools.underline.iconclass = 'zmdi zmdi-format-underlined';
+            taTools.insertLink.iconclass = 'zmdi zmdi-link';
             return taTools;
         }]);
     }

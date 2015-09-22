@@ -81,7 +81,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.DASHBOARDS.DASHBOARDS',
-            icon: 'icon-home',
+            icon: 'zmdi zmdi-home',
             type: 'dropdown',
             priority: 2.1,
             children: [{

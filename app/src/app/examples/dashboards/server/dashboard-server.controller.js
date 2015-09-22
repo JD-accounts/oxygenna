@@ -9,15 +9,15 @@
     function DashboardServerController($scope, $timeout, $mdToast, $element, dragulaService) {
         var vm = this;
         vm.disks = [{
-            icon: 'icon-storage',
+            icon: 'zmdi zmdi-storage',
             name: 'Ubuntu 10.04 LTS Disk Image (10000 MB, ext3)',
             enabled: true
         },{
-            icon: 'icon-settings-input-component',
+            icon: 'zmdi zmdi-settings-input-component',
             name: 'Ubuntu 11.10 SSD Image (10224 MB, ext3)',
             enabled: false
         },{
-            icon: 'icon-storage',
+            icon: 'zmdi zmdi-storage',
             name: '256MB Swap Image (256 MB, swap)',
             enabled: true
         }];

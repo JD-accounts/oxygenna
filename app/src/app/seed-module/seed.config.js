@@ -20,7 +20,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.SEED.SEED-MODULE',
-            icon: 'icon-grade',
+            icon: 'zmdi zmdi-grade',
             type: 'dropdown',
             priority: 1.1,
             children: [{
