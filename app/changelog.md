@@ -162,4 +162,7 @@
 - Added show toolbar option to layout
 - Added new Sales Dashboard
 - Added daggable Widgets option
+- Added dynamic menu example (Menu / Dynamic Menu)
+- Improved triMenu service to allow dynamic menus
 - Updated chart.js and examples
+- Updated Material Design Iconic Font to 2.1.2 (65 New Icons!)

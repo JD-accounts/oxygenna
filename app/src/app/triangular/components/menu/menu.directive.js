@@ -13,7 +13,7 @@
         //
         var directive = {
             restrict: 'E',
-            template: '<md-content><tri-menu-item ng-repeat="item in ::triMenuController.menu" item="::item"></tri-menu-item></md-content>',
+            template: '<md-content><tri-menu-item ng-repeat="item in triMenuController.menu | orderBy:\'priority\'" item="::item"></tri-menu-item></md-content>',
             scope: {},
             controller: triMenuController,
             controllerAs: 'triMenuController',
@@ -33,9 +33,9 @@
     }
 
     /* @ngInject */
-    function triMenuController(triMenu, $scope, $filter) {
+    function triMenuController(triMenu) {
         var triMenuController = this;
         // get the menu and order it
-        triMenuController.menu = $filter('orderBy')(triMenu.menu, 'priority');
+        triMenuController.menu = triMenu.menu;
     }
 })();

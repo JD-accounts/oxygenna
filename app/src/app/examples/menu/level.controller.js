@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.examples.menulevels')
+        .module('app.examples.menu')
         .controller('LevelController', LevelController);
 
     /* @ngInject */
