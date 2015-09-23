@@ -11,6 +11,10 @@
         "DESCRIPTION": "对不起，出了点问题了",
         "HOME": "回家去"
     },
+    "GENERAL": {
+        "CANCEL": "取消",
+        "OK": "好不好"
+    },
     "ADMIN": {
         "TOOLBAR": {
             "SETTINGS": "环境下",
