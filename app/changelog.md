@@ -154,8 +154,8 @@
 - updated eslint and eslint-angular-plugin
 - Updated docs to match new 2.0 code
 
-# Version ???
-> Release Date : ???
+# Version 2.1.0
+> Release Date : 23rd September 2015
 
 - Fixed bug when adding new events (not keeping data in calendar)
 - Fixed bug in countupto directive options
