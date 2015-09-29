@@ -38,17 +38,17 @@
             name: 'Server',
             notifications: [{
                 title: 'Server Down',
-                icon: 'icon-error',
+                icon: 'zmdi zmdi-error',
                 iconColor: 'rgb(244, 67, 54)',
                 date: moment().startOf('hour')
             },{
                 title: 'Slow Response Time',
-                icon: 'icon-warning',
+                icon: 'zmdi zmdi-warning',
                 iconColor: 'rgb(255, 152, 0)',
                 date: moment().startOf('hour')
             },{
                 title: 'Server Down',
-                icon: 'icon-error',
+                icon: 'zmdi zmdi-error',
                 iconColor: 'rgb(244, 67, 54)',
                 date: moment().startOf('hour')
             }]
@@ -56,32 +56,32 @@
             name: 'Sales',
             notifications: [{
                 title: 'Triangular Admin $21',
-                icon: 'icon-shopping-cart',
+                icon: 'zmdi zmdi-shopping-cart',
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
             },{
                 title: 'Lambda WordPress $60',
-                icon: 'icon-shopping-cart',
+                icon: 'zmdi zmdi-shopping-cart',
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
             },{
                 title: 'Triangular Admin $21',
-                icon: 'icon-shopping-cart',
+                icon: 'zmdi zmdi-shopping-cart',
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
             },{
                 title: 'Triangular Admin $21',
-                icon: 'icon-shopping-cart',
+                icon: 'zmdi zmdi-shopping-cart',
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
             },{
                 title: 'Lambda WordPress $60',
-                icon: 'icon-shopping-cart',
+                icon: 'zmdi zmdi-shopping-cart',
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
             },{
                 title: 'Triangular Admin $21',
-                icon: 'icon-shopping-cart',
+                icon: 'zmdi zmdi-shopping-cart',
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
             }]
@@ -91,30 +91,30 @@
             name: 'ADMIN.NOTIFICATIONS.ACCOUNT_SETTINGS',
             settings: [{
                 title: 'ADMIN.NOTIFICATIONS.SHOW_LOCATION',
-                icon: 'icon-location-on',
+                icon: 'zmdi zmdi-pin',
                 enabled: true
             },{
                 title: 'ADMIN.NOTIFICATIONS.SHOW_AVATAR',
-                icon: 'icon-face-unlock',
+                icon: 'zmdi zmdi-face',
                 enabled: false
             },{
                 title: 'ADMIN.NOTIFICATIONS.SEND_NOTIFICATIONS',
-                icon: 'icon-notifications-on',
+                icon: 'zmdi zmdi-notifications-active',
                 enabled: true
             }]
         },{
             name: 'ADMIN.NOTIFICATIONS.CHAT_SETTINGS',
             settings: [{
                 title: 'ADMIN.NOTIFICATIONS.SHOW_USERNAME',
-                icon: 'icon-person',
+                icon: 'zmdi zmdi-account',
                 enabled: true
             },{
                 title: 'ADMIN.NOTIFICATIONS.SHOW_PROFILE',
-                icon: 'icon-account-box',
+                icon: 'zmdi zmdi-account-box',
                 enabled: false
             },{
                 title: 'ADMIN.NOTIFICATIONS.ALLOW_BACKUPS',
-                icon: 'icon-backup',
+                icon: 'zmdi zmdi-cloud-upload',
                 enabled: true
             }]
         }];

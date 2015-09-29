@@ -1,13 +1,3 @@
-.event-dialog {
-  max-width: none;
-}
-@media (max-width: 599px) {
-  .event-dialog {
-    min-height: 100%;
-  }
-}
-
-
 .event-dialog-form {
   md-list-item .md-list-item-inner {
     padding: 2px;

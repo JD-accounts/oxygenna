@@ -27,9 +27,9 @@
             }, 1500);
 
             widgetCtrl.setMenu({
-                icon: 'icon-more-vert',
+                icon: 'zmdi zmdi-more-vert',
                 items: [{
-                    icon: 'icon-refresh',
+                    icon: 'zmdi zmdi-refresh',
                     title: 'DASHBOARDS.WIDGETS.MENU.REFRESH',
                     click: function() {
                         $interval.cancel($scope.intervalPromise);
@@ -40,10 +40,10 @@
                         }, 1500);
                     }
                 },{
-                    icon: 'icon-share',
+                    icon: 'zmdi zmdi-share',
                     title: 'DASHBOARDS.WIDGETS.MENU.SHARE'
                 },{
-                    icon: 'icon-print',
+                    icon: 'zmdi zmdi-print',
                     title: 'DASHBOARDS.WIDGETS.MENU.PRINT'
                 }]
             });

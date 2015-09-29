@@ -73,7 +73,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.UI.UI',
-            icon: 'icon-straighten',
+            icon: 'zmdi zmdi-ruler',
             type: 'dropdown',
             priority: 3.2,
             children: [{

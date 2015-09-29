@@ -12,22 +12,22 @@
         vm.featureRows = [
             [{
                 name: 'Fully Responsive',
-                icon: 'icon-computer',
+                icon: 'zmdi zmdi-laptop',
                 palette: 'cyan',
                 hue: '200'
             },{
                 name: 'Beautiful Themes',
-                icon: 'icon-palette',
+                icon: 'zmdi zmdi-palette',
                 palette: 'cyan',
                 hue: '300'
             },{
                 name: 'API Ready',
-                icon: 'icon-share',
+                icon: 'zmdi zmdi-share',
                 palette: 'cyan',
                 hue: '400'
             },{
                 name: '5 Star Support',
-                icon: 'icon-star',
+                icon: 'zmdi zmdi-star',
                 palette: 'cyan',
                 hue: '500'
             }],

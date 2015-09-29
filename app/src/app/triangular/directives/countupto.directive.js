@@ -37,7 +37,7 @@
             // override default options?
             if ($scope.options) {
                 for(var option in options) {
-                    if(angular.isUndefined($scope.options[option])) {
+                    if(angular.isDefined($scope.options[option])) {
                         options[option] = $scope.options[option];
                     }
                 }

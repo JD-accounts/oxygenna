@@ -1,13 +1,4 @@
 // Email Dialog
-.email-dialog {
-  max-width: none;
-}
-@media (max-width: 599px) {
-  .email-dialog {
-    min-height: 100%;
-  }
-}
-
 .email-dialog-to {
   box-shadow: 0 1px rgb(224,224,224);
   .md-icon-button {

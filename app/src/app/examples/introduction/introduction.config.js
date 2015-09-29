@@ -24,7 +24,7 @@
             name: 'MENU.INTRODUCTION.INTRODUCTION',
             state: 'triangular.admin-default.introduction',
             type: 'link',
-            icon: 'icon-info-outline',
+            icon: 'zmdi zmdi-info-outline',
             priority: 0.1
         });
         triMenuProvider.addMenu({

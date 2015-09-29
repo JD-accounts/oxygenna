@@ -153,3 +153,16 @@
 - Fixed menu focus on email detail view
 - updated eslint and eslint-angular-plugin
 - Updated docs to match new 2.0 code
+
+# Version 2.1.0
+> Release Date : 23rd September 2015
+
+- Fixed bug when adding new events (not keeping data in calendar)
+- Fixed bug in countupto directive options
+- Added show toolbar option to layout
+- Added new Sales Dashboard
+- Added daggable Widgets option
+- Added dynamic menu example (Menu / Dynamic Menu)
+- Improved triMenu service to allow dynamic menus
+- Updated chart.js and examples
+- Updated Material Design Iconic Font to 2.1.2 (65 New Icons!)

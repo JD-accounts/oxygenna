@@ -106,6 +106,10 @@ md-icon[md-font-icon] {
   font-size: 2rem;
 }
 
+md-icon[md-font-icon]:focus {
+  outline: none;
+}
+
 // - Text Ellipsis
 .text-ellipsis {
   white-space: nowrap;

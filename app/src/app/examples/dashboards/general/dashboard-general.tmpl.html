@@ -12,13 +12,13 @@
                 </div>
                 <div class="widget-buttons">
                     <md-button class="widget-button md-icon-button" ng-click="calendarController.changeMonth('prev')" aria-label="previous month">
-                        <md-icon md-font-icon="icon-chevron-left"></md-icon>
+                        <md-icon md-font-icon="zmdi zmdi-chevron-left"></md-icon>
                     </md-button>
                     <md-button hide show-gt-lg class="widget-button md-icon-button" ng-click="calendarController.changeMonth('today')" aria-label="today">
-                        <md-icon md-font-icon="icon-today"></md-icon>
+                        <md-icon md-font-icon="zmdi zmdi-calendar-alt"></md-icon>
                     </md-button>
                     <md-button class="widget-button md-icon-button" ng-click="calendarController.changeMonth('next')" aria-label="next month">
-                        <md-icon md-font-icon="icon-chevron-right"></md-icon>
+                        <md-icon md-font-icon="zmdi zmdi-chevron-right"></md-icon>
                     </md-button>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 <div flex="20" layout="row" layout-align="space-between center" layout-padding>
                     <span>Monday 1st March</span>
                     <md-button class="md-icon-button" aria-label="call">
-                        <md-icon md-font-icon="icon-call"></md-icon>
+                        <md-icon md-font-icon="zmdi zmdi-call"></md-icon>
                     </md-button>
                 </div>
             </tri-widget>
@@ -44,7 +44,7 @@
                 <div flex="20" layout="row" layout-align="space-between center" layout-padding>
                     <span>Tuesday 2st March</span>
                     <md-button class="md-icon-button" aria-label="clean">
-                        <md-icon md-font-icon="icon-event"></md-icon>
+                        <md-icon md-font-icon="zmdi zmdi-event"></md-icon>
                     </md-button>
                 </div>
             </tri-widget>
@@ -68,7 +68,7 @@
                 <md-fab-speed-dial md-direction="up" class="md-fling">
                     <md-fab-trigger>
                         <md-button aria-label="share this post" class="md-fab md-warn">
-                            <md-icon md-font-icon="icon-share"></md-icon>
+                            <md-icon md-font-icon="zmdi zmdi-share"></md-icon>
                         </md-button>
                     </md-fab-trigger>
                     <md-fab-actions>
@@ -139,10 +139,10 @@
                     <h3 flex hide-sm class="md-subhead">Oxygenna's feed</h3>
                     <div class="widget-buttons">
                         <md-button class="md-icon-button" ng-click="prevTweet()" aria-label="previous tweet">
-                            <md-icon md-font-icon="icon-keyboard-arrow-left"></md-icon>
+                            <md-icon md-font-icon="zmdi zmdi-chevron-left"></md-icon>
                         </md-button>
                         <md-button class="md-icon-button" ng-click="nextTweet()" aria-label="next tweet">
-                            <md-icon md-font-icon="icon-keyboard-arrow-right"></md-icon>
+                            <md-icon md-font-icon="zmdi zmdi-chevron-right"></md-icon>
                         </md-button>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                         <md-list-item ng-repeat="contact in ::contacts">
                             <img class="md-avatar" ng-src="{{::contact.image}}" alt="{{::contact.name}}">
                             <p>{{::contact.name}}</p>
-                            <md-icon md-font-icon="icon-chat" class="md-primary"></md-icon>
+                            <md-icon md-font-icon="zmdi zmdi-chat" class="md-primary"></md-icon>
                             <md-divider ng-hide="$last"></md-divider>
                         </md-list-item>
                     </md-list>

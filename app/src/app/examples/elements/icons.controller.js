@@ -13,13 +13,11 @@
         vm.selectedIcon = null;
 
         // create filterable data structure for icons
-        angular.forEach(icons.data, function(iconGroup) {
-            angular.forEach(iconGroup, function(icon, iconName) {
-                vm.icons.push({
-                    name: iconName,
-                    family: 'Material Icon Font',
-                    className: icon
-                });
+        angular.forEach(icons.data, function(icon) {
+            vm.icons.push({
+                name: icon.name,
+                family: 'Material Icon Font',
+                className: icon.class
             });
         });
 

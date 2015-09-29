@@ -11,6 +11,10 @@
         "DESCRIPTION": "Désolé, quelque chose a mal tourné.",
         "HOME": "Rentrer à la maison"
     },
+    "GENERAL": {
+        "CANCEL": "Annuler",
+        "OK": "Ok"
+    },
     "ADMIN": {
         "TOOLBAR": {
             "SETTINGS": "Paramètres",

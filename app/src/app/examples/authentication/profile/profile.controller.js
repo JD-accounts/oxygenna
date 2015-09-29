@@ -12,30 +12,30 @@
             name: 'ADMIN.NOTIFICATIONS.ACCOUNT_SETTINGS',
             settings: [{
                 title: 'ADMIN.NOTIFICATIONS.SHOW_LOCATION',
-                icon: 'icon-location-on',
+                icon: 'zmdi zmdi-pin',
                 enabled: true
             },{
                 title: 'ADMIN.NOTIFICATIONS.SHOW_AVATAR',
-                icon: 'icon-face-unlock',
+                icon: 'zmdi zmdi-face',
                 enabled: false
             },{
                 title: 'ADMIN.NOTIFICATIONS.SEND_NOTIFICATIONS',
-                icon: 'icon-notifications-on',
+                icon: 'zmdi zmdi-notifications-active',
                 enabled: true
             }]
         },{
             name: 'ADMIN.NOTIFICATIONS.CHAT_SETTINGS',
             settings: [{
                 title: 'ADMIN.NOTIFICATIONS.SHOW_USERNAME',
-                icon: 'icon-person',
+                icon: 'zmdi zmdi-account',
                 enabled: true
             },{
                 title: 'ADMIN.NOTIFICATIONS.SHOW_PROFILE',
-                icon: 'icon-account-box',
+                icon: 'zmdi zmdi-account-box',
                 enabled: false
             },{
                 title: 'ADMIN.NOTIFICATIONS.ALLOW_BACKUPS',
-                icon: 'icon-backup',
+                icon: 'zmdi zmdi-cloud-upload',
                 enabled: true
             }]
         }];

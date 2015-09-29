@@ -14,7 +14,7 @@
         vm.email = email;
         vm.title = title;
         vm.send = send;
-        vm.showCCSIcon = 'icon-arrow-drop-down';
+        vm.showCCSIcon = 'zmdi zmdi-arrow-drop-down';
         vm.showCCS = false;
         vm.toggleCCS = toggleCCS;
         vm.triSkin = triSkins.getCurrent();
@@ -28,7 +28,7 @@
 
         function toggleCCS() {
             vm.showCCS = !vm.showCCS;
-            vm.showCCSIcon = vm.showCCS ? 'icon-arrow-drop-up' : 'icon-arrow-drop-down';
+            vm.showCCSIcon = vm.showCCS ? 'zmdi zmdi-arrow-drop-up' : 'zmdi zmdi-arrow-drop-down';
         }
 
         function send() {

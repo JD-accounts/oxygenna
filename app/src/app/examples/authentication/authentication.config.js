@@ -47,7 +47,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.AUTH.AUTH',
-            icon: 'icon-person',
+            icon: 'zmdi zmdi-account',
             type: 'dropdown',
             priority: 4.1,
             children: [{

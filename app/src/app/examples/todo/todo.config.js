@@ -33,7 +33,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.TODO.TITLE',
-            icon: 'icon-done',
+            icon: 'zmdi zmdi-check',
             state: 'triangular.admin-default.todo',
             type: 'link',
             priority: 2.4

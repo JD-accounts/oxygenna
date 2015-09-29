@@ -11,6 +11,10 @@
         "DESCRIPTION": "Desculpe, algo deu errado.",
         "HOME": "Voltar para casa"
     },
+    "GENERAL": {
+        "CANCEL": "Cancelar",
+        "OK": "Ok"
+    },
     "ADMIN": {
         "TOOLBAR": {
             "SETTINGS": "Definições",
