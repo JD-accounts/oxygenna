@@ -1,6 +1,7 @@
-<div class="widget md-whiteframe-z1" ng-class="::{'widget-overlay-title': vm.overlayTitle}" flex ng-attr-layout="{{::vm.widgetLayout}}">
+<div class="widget md-whiteframe-z2" ng-class="::{'widget-overlay-title': vm.overlayTitle}" flex layout="{{vm.widgetLayout}}">
 
-    <div class="widget-title" ng-if="::(vm.title || vm.subtitle)" layout="row" layout-padding layout-align="space-between center" ng-attr-flex-order="{{::titleOrder}}">
+
+    <div class="widget-title" ng-if="::(vm.title || vm.subtitle)" layout="row" layout-padding layout-align="space-between center" flex-order="{{vm.titleOrder}}">
         <div layout="column" ng-if="::vm.avatar">
             <img ng-src="{{::vm.avatar}}" class="widget-avatar"/>
         </div>
@@ -23,7 +24,7 @@
         </md-menu>
     </div>
 
-    <div class="widget-content" ng-attr-layout="{{::vm.contentLayout}}" ng-attr-layout-align="{{::vm.contentLayoutAlign}}" ng-attr-layout-padding="{{::vm.contentPadding}}" ng-transclude ng-attr-flex-order="{{::contentOrder}}"></div>
+    <div class="widget-content" layout="{{vm.contentLayout}}" layout-align="{{vm.contentLayoutAlign}}" ng-class="{'layout-padding': vm.contentPadding}" ng-transclude flex-order="{{vm.contentOrder}}"></div>
 
     <div class="widget-loading ng-hide" ng-show="vm.loading" layout layout-fill layout-align="center center">
         <div class="widget-loading-inner" ng-show="vm.loading">

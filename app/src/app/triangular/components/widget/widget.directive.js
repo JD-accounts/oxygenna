@@ -39,7 +39,7 @@
             // set the layout attribute for the widget content
             $scope.vm.contentLayout = angular.isUndefined(attrs.contentLayout) ? undefined : attrs.contentLayout;
             // set if the layout-padding attribute will be added
-            $scope.vm.contentPadding = angular.isUndefined(attrs.contentPadding) ? undefined : true;
+            $scope.vm.contentPadding = angular.isDefined(attrs.contentPadding);
 
             // set the content align
             $scope.vm.contentLayoutAlign = angular.isUndefined(attrs.contentLayoutAlign) ? 'center center' : attrs.contentLayoutAlign;
