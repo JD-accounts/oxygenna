@@ -39,7 +39,8 @@
   },
   "resolutions": {
     "angular": "1.4.5",
-    "material-design-iconic-font": "~2.1.2"
+    "material-design-iconic-font": "~2.1.2",
+    "angular-material": "0.11.1"
   },
   "overrides": {
     "weather-icons": {
