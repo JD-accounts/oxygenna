@@ -13,7 +13,7 @@
             name: 'Ubuntu 10.04 LTS Disk Image (10000 MB, ext3)',
             enabled: true
         },{
-            icon: 'zmdi zmdi-settings-input-component',
+            icon: 'zmdi zmdi-input-composite',
             name: 'Ubuntu 11.10 SSD Image (10224 MB, ext3)',
             enabled: false
         },{
