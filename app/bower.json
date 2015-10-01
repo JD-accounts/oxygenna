@@ -43,6 +43,12 @@
     "angular-material": "0.11.1"
   },
   "overrides": {
+    "angular-material": {
+      "main": [
+        "angular-material.js",
+        "angular-material.scss"
+      ]
+    },
     "weather-icons": {
       "main": [
         "./css/weather-icons.css",

@@ -166,3 +166,9 @@
 - Improved triMenu service to allow dynamic menus
 - Updated chart.js and examples
 - Updated Material Design Iconic Font to 2.1.2 (65 New Icons!)
+
+# Version 2.2.0
+> Release Date : ???
+
+- app.scss now imports angular-material.scss file (gives access to angular material variables)
+- Added nicer hover effect to draggable widgets
