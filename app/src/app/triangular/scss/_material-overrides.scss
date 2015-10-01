@@ -18,6 +18,17 @@ body[md-theme="dark"] {
   box-sizing: border-box;
 }
 
+.md-list-item-text {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.email-inbox-list-item p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 md-card md-card-content {
   display: block;
 }
