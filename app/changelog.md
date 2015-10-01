@@ -168,7 +168,12 @@
 - Updated Material Design Iconic Font to 2.1.2 (65 New Icons!)
 
 # Version 2.2.0
-> Release Date : ???
+> Release Date : 1st October 2015
 
 - app.scss now imports angular-material.scss file (gives access to angular material variables)
 - Added nicer hover effect to draggable widgets
+- Updated to angular material 0.11.1
+- Fixed 0.11.1 padding issues on dashboards
+- Fixed 0.11.1 layout issues on dashboards
+- Datepicker added to sales dashboard dialog
+- Datepicker added to events dialog

@@ -19,7 +19,14 @@
         vm.event = event;
         vm.okClick = okClick;
         vm.selectedColor = null;
-        vm.start = convertMomentToBits(event.start);
+        // create start and end date of event
+        vm.start = event.start.toDate();
+        vm.startTime = convertMomentToTime(event.start);
+
+        if(event.end !== null) {
+            vm.end = event.end.toDate();
+            vm.endTime = convertMomentToTime(event.end);
+        }
 
         ////////////////
 
@@ -31,9 +38,9 @@
         }
 
         function okClick() {
-            saveBitsToMoment(vm.start, vm.event.start);
+            vm.event.start = updateEventDateTime(vm.start, vm.startTime);
             if(vm.event.end !== null) {
-                saveBitsToMoment(vm.end, vm.event.end);
+                vm.event.end = updateEventDateTime(vm.end, vm.endTime);
             }
             $mdDialog.hide(vm.event);
         }
@@ -52,46 +59,31 @@
             if(vm.event.allDay === false && vm.event.end === null) {
                 vm.event.end = moment(vm.event.start);
                 vm.event.end.endOf('day');
-                vm.end = convertMomentToBits(vm.event.end);
+                vm.end = vm.event.end.toDate();
+                vm.endTime = convertMomentToTime(vm.event.end);
             }
         }
 
-        function convertMomentToBits(moment) {
+        function convertMomentToTime(moment) {
             return {
-                year: moment.year(),
-                month: moment.month(),
-                date: moment.date(),
                 hour: moment.hour(),
                 minute: moment.minute()
             };
         }
 
-        function saveBitsToMoment(bits, moment) {
-            moment.year(bits.year);
-            moment.month(bits.month);
-            moment.date(bits.date);
-            moment.hour(bits.hour);
-            moment.minute(bits.minute);
+        function updateEventDateTime(date, time) {
+            var newDate = moment(date);
+            newDate.hour(time.hour);
+            newDate.minute(time.minute);
+            return newDate;
         }
 
         function createDateSelectOptions() {
-            // create options for date select boxes (this will be removed in favor of mdDatetime picker when it becomes available)
+            // create options for time select boxes (this will be removed in favor of mdDatetime picker when it becomes available)
             vm.dateSelectOptions = {
-                years: [],
-                months: ['CALENDAR.MONTHNAMES.JANUARY','CALENDAR.MONTHNAMES.FEBRUARY','CALENDAR.MONTHNAMES.MARCH','CALENDAR.MONTHNAMES.APRIL','CALENDAR.MONTHNAMES.MAY','CALENDAR.MONTHNAMES.JUNE','CALENDAR.MONTHNAMES.JULY','CALENDAR.MONTHNAMES.AUGUST','CALENDAR.MONTHNAMES.SEPTEMBER','CALENDAR.MONTHNAMES.OCTOBER','CALENDAR.MONTHNAMES.NOVEMBER', 'CALENDAR.MONTHNAMES.DECEMBER'],
-                dates: [],
                 hours: [],
                 minutes: []
             };
-            // years
-            var now = new Date();
-            for(var year = now.getFullYear() - 5; year <= now.getFullYear() + 5; year++) {
-                vm.dateSelectOptions.years.push(year);
-            }
-            // days
-            for(var date = 1; date <= 31; date++) {
-                vm.dateSelectOptions.dates.push(date);
-            }
             // hours
             for(var hour = 0; hour <= 23; hour++) {
                 vm.dateSelectOptions.hours.push(hour);
@@ -103,11 +95,6 @@
         }
 
         // init
-
-        if(event.end !== null) {
-            vm.end = convertMomentToBits(vm.event.end);
-        }
-
         createDateSelectOptions();
 
         // create colors

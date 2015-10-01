@@ -14,8 +14,8 @@
         ////////////////
 
         function okClick() {
-            range.start = moment(vm.start);
-            range.end = moment(vm.end);
+            range.start = new moment(vm.start);
+            range.end = new moment(vm.end);
             $mdDialog.hide();
         }
 
