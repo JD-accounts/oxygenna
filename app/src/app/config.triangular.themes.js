@@ -46,13 +46,22 @@
             'contrastDefaultColor': 'light'
         });
 
+        var triCyanMap = $mdThemingProvider.extendPalette('cyan', {
+            'contrastDefaultColor': 'light',
+            'contrastLightColors': '500 700 800 900',
+            'contrastStrongLightColors': '500 700 800 900'
+        });
+
+        // Register the new color palette map with the name triCyan
+        $mdThemingProvider.definePalette('triCyan', triCyanMap);
+
         /**
          *  SKINS
          */
 
         // CYAN CLOUD SKIN
         triThemingProvider.theme('cyan')
-        .primaryPalette('cyan')
+        .primaryPalette('triCyan')
         .accentPalette('amber')
         .warnPalette('deep-orange');
 

@@ -4,7 +4,7 @@
   "dependencies": {
     "angular": "1.4.5",
     "angular-animate": "1.4.5",
-    "angular-chart.js": "~0.8.3",
+    "angular-chart.js": "~0.8.4",
     "angular-cookies": "1.4.5",
     "angular-digest-hud": "~0.1.13",
     "angular-dragula": "~1.0.12",
@@ -13,7 +13,7 @@
     "angular-highlightjs": "0.4.1",
     "angular-linkify": "~1.2.0",
     "angular-local-storage": "~0.2.2",
-    "angular-material": "0.10.1",
+    "angular-material": "0.11.1",
     "angular-material-data-table": "0.8.0",
     "angular-messages": "1.4.5",
     "angular-moment": "~0.10.1",
@@ -39,9 +39,16 @@
   },
   "resolutions": {
     "angular": "1.4.5",
-    "material-design-iconic-font": "~2.1.2"
+    "material-design-iconic-font": "~2.1.2",
+    "angular-material": "0.11.1"
   },
   "overrides": {
+    "angular-material": {
+      "main": [
+        "angular-material.js",
+        "angular-material.scss"
+      ]
+    },
     "weather-icons": {
       "main": [
         "./css/weather-icons.css",

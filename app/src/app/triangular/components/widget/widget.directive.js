@@ -37,12 +37,11 @@
             // set the value of the widget layout attribute
             $scope.vm.widgetLayout = attrs.titlePosition === 'left' || attrs.titlePosition === 'right' ? 'row' : 'column';
             // set the layout attribute for the widget content
-            $scope.vm.contentLayout = angular.isUndefined(attrs.contentLayout) ? undefined : attrs.contentLayout;
+            $scope.vm.contentLayout = angular.isUndefined(attrs.contentLayout) ? 'column' : attrs.contentLayout;
             // set if the layout-padding attribute will be added
-            $scope.vm.contentPadding = angular.isUndefined(attrs.contentPadding) ? undefined : true;
-
+            $scope.vm.contentPadding = angular.isDefined(attrs.contentPadding);
             // set the content align
-            $scope.vm.contentLayoutAlign = angular.isUndefined(attrs.contentLayoutAlign) ? 'center center' : attrs.contentLayoutAlign;
+            $scope.vm.contentLayoutAlign = angular.isUndefined(attrs.contentLayoutAlign) ? '' : attrs.contentLayoutAlign;
             // set the order of the title and content based on title position
             $scope.vm.titleOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 2 : 1;
             $scope.vm.contentOrder = attrs.titlePosition === 'right' || attrs.titlePosition === 'bottom' ? 1 : 2;
