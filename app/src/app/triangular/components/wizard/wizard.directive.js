@@ -30,6 +30,7 @@
 
         vm.currentStep = 0;
         vm.getForm = getForm;
+        vm.isFormValid = isFormValid;
         vm.nextStep = nextStep;
         vm.nextStepDisabled = nextStepDisabled;
         vm.prevStep = prevStep;
@@ -56,6 +57,12 @@
                 formInvalid = form.$invalid;
             }
             return formInvalid;
+        }
+
+        function isFormValid(step) {
+            if(angular.isDefined(forms[step])) {
+                return forms[step].$valid;
+            }
         }
 
         function prevStep() {
