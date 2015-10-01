@@ -237,3 +237,19 @@ chart-legend ul {
     transform: translateY(-50%);
   }
 }
+
+// Draggable widgets
+
+.drag-container > .widget {
+  &:hover {
+    box-shadow: $whiteframe-shadow-24dp;
+  }
+}
+
+.widget.gu-mirror {
+  box-shadow: $whiteframe-shadow-24dp;
+}
+
+.drag-container > .gu-transit {
+  opacity: 0;
+}
