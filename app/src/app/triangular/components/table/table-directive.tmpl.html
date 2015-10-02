@@ -2,8 +2,8 @@
     <thead>
         <tr>
             <th ng-repeat="column in columns" ng-click="sortClick(column.field)" ng-class="headerClass(column.field)">
-                <md-icon ng-show="showSortOrder(column.field, true)" class="icon-rotate-90" md-font-icon="zmdi zmdi-arrow-back"></md-icon>
-                <md-icon ng-show="showSortOrder(column.field, false)" class="icon-rotate-270" md-font-icon="zmdi zmdi-arrow-back"></md-icon>
+                <md-icon ng-show="showSortOrder(column.field, true)" class="zmdi-hc-rotate-90" md-font-icon="zmdi zmdi-arrow-back"></md-icon>
+                <md-icon ng-show="showSortOrder(column.field, false)" class="zmdi-hc-rotate-270" md-font-icon="zmdi zmdi-arrow-back"></md-icon>
                 <span>
                     {{column.title}}
                 </span>
