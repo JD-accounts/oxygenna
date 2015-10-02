@@ -180,3 +180,4 @@
 - Fixed bug in scatter chart example
 - Datepicker added to sales dashboard dialog
 - Datepicker added to events dialog
+- Updated AngularJS to 1.4.7
