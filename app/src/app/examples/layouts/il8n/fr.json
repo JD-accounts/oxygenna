@@ -2,7 +2,10 @@
     "MENU": {
         "LAYOUTS": {
             "TITLE": "Les mises en page",
-            "COMPOSER": "Compositeur"
+            "COMPOSER": "Compositeur",
+            "FULL-WIDTH": "Mise En Page Pleine Largeur",
+            "ICON-MENU": "Menu De L'Icône",
+            "TALL-TOOLBAR": "Hauteur de la Barre d'outils avec fond"
         }
     },
     "EXAMPLES": {
