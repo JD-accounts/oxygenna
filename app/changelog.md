@@ -176,5 +176,6 @@
 - Updated to angular material 0.11.1
 - Fixed 0.11.1 padding issues on dashboards
 - Fixed 0.11.1 layout issues on dashboards
+- Fixed arrows on table example
 - Datepicker added to sales dashboard dialog
 - Datepicker added to events dialog
