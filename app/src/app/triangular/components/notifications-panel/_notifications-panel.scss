@@ -13,6 +13,10 @@
     vertical-align: middle;
     line-height: 4rem;
   }
+
+  md-tab-item {
+    max-width:100%!important;
+  }
   // - List item font size
   md-list-item {
     p {
