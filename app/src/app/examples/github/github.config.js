@@ -17,7 +17,8 @@
             controllerAs: 'vm',
             data: {
                 layout: {
-                    contentClass: 'full-image-background mb-bg-fb-16 background-overlay-static overlay-gradient-20'
+                    contentClass: 'full-image-background mb-bg-fb-16 background-overlay-static',
+                    innerContentClass: 'overlay-gradient-20'
                 }
             }
         });

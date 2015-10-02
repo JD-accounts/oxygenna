@@ -13,6 +13,7 @@
             toolbarShrink: true,
             toolbarClass: '',
             contentClass: '',
+            innerContentClass: '',
             sideMenuSize: 'full',
             footer: true
         };
