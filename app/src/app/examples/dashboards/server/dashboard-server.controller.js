@@ -6,7 +6,7 @@
         .controller('DashboardServerController', DashboardServerController);
 
     /* @ngInject */
-    function DashboardServerController($scope, $timeout, $mdToast, $element, dragulaService) {
+    function DashboardServerController($scope, $timeout, $mdToast) {
         var vm = this;
         vm.disks = [{
             icon: 'zmdi zmdi-storage',
@@ -45,10 +45,5 @@
                 .hideDelay(3000)
             );
         }, 5000);
-
-        var mirrorContainer = $element.find('.mirror-container')[0];
-        dragulaService.options($scope,'drag-server-container', {
-            mirrorContainer: mirrorContainer
-        });
     }
 })();

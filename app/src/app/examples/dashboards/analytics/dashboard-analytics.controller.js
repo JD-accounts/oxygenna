@@ -6,7 +6,7 @@
         .controller('DashboardAnalyticsController', DashboardAnalyticsController);
 
     /* @ngInject */
-    function DashboardAnalyticsController($scope, $timeout, $mdToast, $rootScope, $state, $element, dragulaService) {
+    function DashboardAnalyticsController($scope, $timeout, $mdToast, $rootScope, $state) {
         $timeout(function() {
             $rootScope.$broadcast('newMailNotification');
             $mdToast.show({
@@ -26,10 +26,5 @@
                 $state.go('admin-panel-email-no-scroll.email.inbox');
             };
         }
-
-        var mirrorContainer = $element.find('.mirror-container')[0];
-        dragulaService.options($scope,'drag-analytics-container', {
-            mirrorContainer: mirrorContainer
-        });
     }
 })();
