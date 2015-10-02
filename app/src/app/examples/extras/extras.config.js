@@ -58,10 +58,6 @@
                 name: 'MENU.EXTRAS.BLANK',
                 state: 'triangular.admin-default.extra-blank',
                 type: 'link'
-            },{
-                name: 'MENU.EXTRAS.TIMELINE',
-                state: 'triangular.admin-default.extra-timeline',
-                type: 'link'
             }]
         });
     }
