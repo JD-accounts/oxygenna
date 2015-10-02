@@ -10,6 +10,7 @@
     /* @ngInject */
     function GoogleChartsScatterController() {
         var vm = this;
+        var scatterData = [];
         vm.chartData = {
             type: 'Scatter',
             data: {
@@ -35,7 +36,6 @@
         // init
 
         // create some random data
-        var scatterData = [];
         for(var x = 0; x < 100; x++) {
             scatterData.push({
                 c: [{
