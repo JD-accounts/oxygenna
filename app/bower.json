@@ -60,5 +60,12 @@
   "resolutions": {
     "angular": "1.4.7",
     "angular-material": "0.11.4"
-  }
+  },
+  "main": [
+    "dist/triangular.js"
+  ],
+  "ignore": [
+    "**/*",
+    "!dist"
+  ]
 }
