@@ -3,7 +3,7 @@
   position: relative;
   background-size: cover;
   background-color: #fff;
-  transition: all .2s;
+  transition: all .3s;
   min-height: 100px;
   .widget-avatar {
     border-radius: 50%;
@@ -239,15 +239,15 @@ chart-legend ul {
 }
 
 // Draggable widgets
-
 .drag-container > .widget {
   &:hover {
-    box-shadow: $whiteframe-shadow-24dp;
+    cursor: move;
+    box-shadow: $whiteframe-shadow-12dp;
   }
 }
 
 .widget.gu-mirror {
-  box-shadow: $whiteframe-shadow-24dp;
+  box-shadow: $whiteframe-shadow-12dp;
 }
 
 .drag-container > .gu-transit {
