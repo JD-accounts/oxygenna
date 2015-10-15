@@ -17,5 +17,9 @@
   ],
   "main": [
     "dist/triangular.js"
+  ],
+  "ignore": [
+    "**/*",
+    "!dist"
   ]
 }
