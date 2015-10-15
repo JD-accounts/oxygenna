@@ -99,13 +99,6 @@ gulp.task('examplejs', function () {
     .pipe($.size());
 });
 
-gulp.task('jshint', function() {
-  gulp.src('src/**/*.js')
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('default'));
-});
-
-
 gulp.task('misc', function () {
   return gulp.src(paths.src + '/favicon.png')
     .pipe(gulp.dest(paths.dist + '/'));

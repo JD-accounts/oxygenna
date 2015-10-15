@@ -1,0 +1,18 @@
+{
+  "name": "triangular",
+  "version": "2.1.0",
+  "homepage": "https://github.com/oxygenna/triangular",
+  "authors": [
+    "John Langan <john.langan@oxygenna.com>"
+  ],
+  "description": "Material Design Admin Template",
+  "main": "app/gulpfile.js",
+  "license": "Themeforest",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
