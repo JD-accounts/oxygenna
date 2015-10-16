@@ -188,3 +188,4 @@
 - Added bower package for easy maintenance of apps
 - Updated docs with new create app documentation
 - Added check for footer when injected (stops adding extra footers)
+- Added menu badges
