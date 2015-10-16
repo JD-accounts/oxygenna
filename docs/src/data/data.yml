@@ -31,6 +31,16 @@ topmenu:
                 name: Extras folder
                 slug: extras
     -
+        name: Creating an app
+        slug: creating-app
+        children:
+            -
+                name: Creating a new app
+                slug: new-app
+            -
+                name: Adding triangular to an existing app
+                slug: existing-app
+    -
         name: Customisation
         slug: customisation
         children:
