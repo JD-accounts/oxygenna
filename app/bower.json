@@ -62,10 +62,12 @@
     "angular-material": "0.11.4"
   },
   "main": [
-    "dist/triangular.js"
+    "dist/triangular.js",
+    "dist/triangular.min.js",
+    "dist/triangular.css",
+    "dist/triangular.min.css"
   ],
   "ignore": [
-    "**/*",
-    "!dist"
+    "README.md"
   ]
 }
