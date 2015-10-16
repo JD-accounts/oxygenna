@@ -2,13 +2,15 @@ html, body {
   height: 100%;
 }
 
+// import animate scss
+@import "animate.css-scss/animate.scss";
+
+
 // core
 
 @import "scss/contextual";
 @import "scss/dialogs";
-@import "scss/material-icons";
 @import "scss/material-overrides";
-@import "scss/material-backgrounds";
 @import "scss/print";
 @import "scss/reset";
 @import "scss/social";
