@@ -119,7 +119,8 @@
         // DARK KNIGHT SKIN
         triThemingProvider.theme('dark')
         .primaryPalette('black', {
-            'default': '300'
+            'default': '300',
+            'hue-1': '400'
         })
         .accentPalette('amber')
         .warnPalette('deep-orange')
