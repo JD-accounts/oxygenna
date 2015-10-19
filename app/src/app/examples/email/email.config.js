@@ -106,7 +106,7 @@
             name: 'MENU.EMAIL.EMAIL',
             icon: 'zmdi zmdi-email',
             type: 'dropdown',
-            priority: 2.2,
+            priority: 2.1,
             children: []
         };
 

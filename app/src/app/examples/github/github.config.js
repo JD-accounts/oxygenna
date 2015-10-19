@@ -28,11 +28,7 @@
             state: 'triangular.admin-default.github',
             type: 'link',
             icon: 'fa fa-github',
-            priority: 1.1
-        });
-        triMenuProvider.addMenu({
-            type: 'divider',
-            priority: 1.2
+            priority: 2.2
         });
     }
 })();

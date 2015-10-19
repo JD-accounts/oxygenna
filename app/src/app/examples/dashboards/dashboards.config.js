@@ -83,7 +83,7 @@
             name: 'MENU.DASHBOARDS.DASHBOARDS',
             icon: 'zmdi zmdi-home',
             type: 'dropdown',
-            priority: 2.1,
+            priority: 1.1,
             children: [{
                 name: 'MENU.DASHBOARDS.ANALYTICS',
                 state: 'triangular.admin-default.dashboard-analytics',
