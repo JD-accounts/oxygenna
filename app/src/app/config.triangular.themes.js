@@ -67,7 +67,7 @@
 
         triThemingProvider.theme('white-cyan')
         .primaryPalette('white')
-        .accentPalette('cyan', {
+        .accentPalette('triCyan', {
             'default': '500'
         })
         .warnPalette('deep-orange');
