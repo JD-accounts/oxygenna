@@ -181,3 +181,11 @@
 - Datepicker added to sales dashboard dialog
 - Datepicker added to events dialog
 - Updated AngularJS to 1.4.7
+
+# Version ???
+> Release Date : ???
+
+- Added bower package for easy maintenance of apps
+- Updated docs with new create app documentation
+- Added check for footer when injected (stops adding extra footers)
+- Added menu badges

@@ -98,7 +98,7 @@
       $(this).addClass('table table-bordered table-striped');
     });
 
-    hljs.configure({languages: ['javascript']});
+    hljs.configure({languages: ['javascript', 'css', 'html', 'bash']});
     $('pre code').each(function(i, block) {
       hljs.highlightBlock(block);
     });

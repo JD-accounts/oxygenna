@@ -114,7 +114,8 @@
             emailMenu.children.push({
                 name: route.name,
                 state: route.state,
-                type: 'link'
+                type: 'link',
+                badge: Math.round(Math.random() * (20 - 1) + 1)
             });
         });
 

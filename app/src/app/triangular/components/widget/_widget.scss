@@ -238,16 +238,20 @@ chart-legend ul {
   }
 }
 
+$shadow-key-umbra-opacity:      0.2;
+$shadow-key-penumbra-opacity:   0.14;
+$shadow-ambient-shadow-opacity: 0.12;
+
 // Draggable widgets
 .drag-container > .widget {
   &:hover {
     cursor: move;
-    box-shadow: $whiteframe-shadow-12dp;
+    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, $shadow-key-umbra-opacity), 0px 12px 17px 2px rgba(0, 0, 0, $shadow-key-penumbra-opacity), 0px 5px 22px 4px rgba(0, 0, 0, $shadow-ambient-shadow-opacity);
   }
 }
 
 .widget.gu-mirror {
-  box-shadow: $whiteframe-shadow-12dp;
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, $shadow-key-umbra-opacity), 0px 12px 17px 2px rgba(0, 0, 0, $shadow-key-penumbra-opacity), 0px 5px 22px 4px rgba(0, 0, 0, $shadow-ambient-shadow-opacity);
 }
 
 .drag-container > .gu-transit {
