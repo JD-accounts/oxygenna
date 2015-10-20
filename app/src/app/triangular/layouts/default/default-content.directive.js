@@ -44,8 +44,6 @@
                         contentView.append(content);
                     });
 
-                    // update md-content that view has changed so that md-scroll-shrink toolbar works
-                    $rootScope.$broadcast('$mdContentLoaded', $element);
                 }
             }
         }

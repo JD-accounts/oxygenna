@@ -12,9 +12,6 @@
         $stateProvider
         .state('triangular.admin-calendar', {
             abstract: true,
-            data: {
-                toolbarShrink: false
-            },
             views: {
                 sidebarLeft: {
                     templateUrl: 'app/triangular/components/menu/menu.tmpl.html',
