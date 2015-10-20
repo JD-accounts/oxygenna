@@ -30,7 +30,7 @@
 
 
         <div layout="column" flex layout-margin>
-            <tri-widget palette-background="deep-orange:500" content-layout="column" content-layout-align="start space-between">
+            <tri-widget palette-background="deep-orange:500" content-layout="column" content-layout-align="space-between">
                 <h2 class="md-display-2 font-weight-100 margin-0" flex layout-padding>Call Sue</h2>
                 <md-divider></md-divider>
                 <div flex="20" layout="row" layout-align="space-between center" layout-padding>
@@ -40,7 +40,7 @@
                     </md-button>
                 </div>
             </tri-widget>
-            <tri-widget palette-background="purple:300" content-layout="column" content-layout-align="start space-between">
+            <tri-widget palette-background="purple:300" content-layout="column" content-layout-align="space-between">
                 <h2 class="md-display-2 font-weight-100 margin-0" flex layout-padding>Clean Desk</h2>
                 <md-divider></md-divider>
                 <div flex="20" layout="row" layout-align="space-between center" layout-padding>
@@ -51,7 +51,7 @@
                 </div>
             </tri-widget>
         </div>
-        <tri-widget todo-widget class="dashboard-todo-widget" palette-background="light-blue:600" title="Todo List" subtitle="Your current todo list" title-position="top" content-align="center start" content-padding>
+        <tri-widget todo-widget class="dashboard-todo-widget" palette-background="light-blue:600" title="Todo List" subtitle="Your current todo list" title-position="top" content-layout-align="space-between" content-padding>
             <md-list flex class="padding-left-0">
                 <md-list-item ng-repeat="todo in todos">
                     <md-checkbox ng-model="todo.done"></md-checkbox>
@@ -88,7 +88,7 @@
             </div>
         </tri-widget>
 
-        <tri-widget chat-widget flex class="widget-chat" title="DASHBOARDS.GENERAL.CHAT" content-layout="column" content-layout-align="start">
+        <tri-widget chat-widget flex class="widget-chat" title="DASHBOARDS.GENERAL.CHAT" content-layout="column" content-layout-align="space-between">
             <md-divider></md-divider>
             <md-list class="padding-top-20 padding-bottom-0" flex>
                 <md-list-item ng-repeat="chat in ::conversation" class="md-3-line" ng-class="userClass($even)" ng-init="userColor = $even ? 'cyan' : 'light-green'">
@@ -110,22 +110,21 @@
     </div>
     <div layout="row" layout-sm="column" layout-margin>
         <div layout="column" layout-margin layout-fill flex="40" flex-sm="100">
-           <tri-widget flex="70" weather-widget="Sitia" background-image="assets/images/dashboards/weather.jpg" palette-background="deep-orange:800" content-layout="column" content-layout-align="space-between center" flex>
-
-                    <div layout="column" flex layout-align="start center">
-                        <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
-                        <h1 class="font-size-14 margin-top-80 margin-bottom-80 font-weight-100">
-                            {{::weather.temp}}&deg;
-                        </h1>
+           <tri-widget flex weather-widget="Sitia" background-image="assets/images/dashboards/weather.jpg" palette-background="deep-orange:800" content-layout="column" content-layout-align="space-between">
+                <div layout="column" flex layout-align="start center">
+                    <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
+                    <h1 class="font-size-14 margin-top-80 margin-bottom-80 font-weight-100">
+                        {{::weather.temp}}&deg;
+                    </h1>
+                </div>
+                <div layout="column" class="full-width overlay-gradient-40">
+                    <md-divider></md-divider>
+                    <div flex layout="row" layout-margin layout-align="space-between center" class="padding-30">
+                        <i class="wi font-size-2" ng-class="weather.iconClass"></i>
+                        <p class="margin-0">{{::weather.text}}</p>
+                        <p class="margin-0">{{::weather.location}}</p>
                     </div>
-                    <div layout="column" class="full-width overlay-gradient-40">
-                        <md-divider></md-divider>
-                        <div flex layout="row" layout-margin layout-align="space-between center" class="padding-30">
-                            <i class="wi font-size-2" ng-class="weather.iconClass"></i>
-                            <p class="margin-0">{{::weather.text}}</p>
-                            <p class="margin-0">{{::weather.location}}</p>
-                        </div>
-                    </div>
+                </div>
             </tri-widget>
 
             <tri-widget flex title="Color palette" subtitle="Color in material design is inspired by bold hues and bright highlights. "  palette-background="deep-orange:800" background-image="assets/images/backgrounds/material-backgrounds/mb-bg-05.jpg" overlay-title title-position="bottom" >
@@ -135,7 +134,6 @@
         <div flex layout="column" layout-margin>
             <div layout-margin>
             <tri-widget palette-background="triCyan:500" twitter-widget>
-
                 <div layout="row" layout-align="space-between center" class="padding-normal">
                     <i class="fa fa-twitter font-size-4 opacity-50"></i>
                     <h3 flex hide-sm class="md-subhead">Oxygenna's feed</h3>
@@ -158,8 +156,8 @@
             </tri-widget>
             </div>
             <div layout="row" layout-margin>
-                 <tri-widget flex="50" title="DASHBOARDS.GENERAL.CONTACTS" contacts-widget>
-                    <md-list>
+                 <tri-widget flex="50" title="DASHBOARDS.GENERAL.CONTACTS" contacts-widget content-layout="row">
+                    <md-list flex>
                         <md-list-item ng-repeat="contact in ::contacts">
                             <img class="md-avatar" ng-src="{{::contact.image}}" alt="{{::contact.name}}">
                             <p>{{::contact.name}}</p>
