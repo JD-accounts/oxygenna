@@ -38,17 +38,17 @@
             name: 'Server',
             notifications: [{
                 title: 'Server Down',
-                icon: 'zmdi zmdi-error',
+                icon: 'zmdi zmdi-alert-circle',
                 iconColor: 'rgb(244, 67, 54)',
                 date: moment().startOf('hour')
             },{
                 title: 'Slow Response Time',
-                icon: 'zmdi zmdi-warning',
+                icon: 'zmdi zmdi-alert-triangle',
                 iconColor: 'rgb(255, 152, 0)',
                 date: moment().startOf('hour')
             },{
                 title: 'Server Down',
-                icon: 'zmdi zmdi-error',
+                icon: 'zmdi zmdi-alert-circle',
                 iconColor: 'rgb(244, 67, 54)',
                 date: moment().startOf('hour')
             }]

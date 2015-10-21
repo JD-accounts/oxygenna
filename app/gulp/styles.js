@@ -18,7 +18,8 @@ gulp.task('styles', function () {
   var injectFiles = gulp.src([
     paths.src + '/app/**/*.scss',
     '!' + paths.src + '/app/app.scss',
-    '!' + paths.src + '/app/**/_*.scss'
+    '!' + paths.src + '/app/**/_*.scss',
+    '!' + paths.src + '/app/triangular/triangular.scss'
   ], { read: false });
 
   var injectOptions = {
