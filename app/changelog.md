@@ -189,3 +189,7 @@
 - Updated docs with new create app documentation
 - Added check for footer when injected (stops adding extra footers)
 - Added menu badges
+- Updated to angular material 0.12.0-rc1
+- Fixed dashboard layouts & widgets to work with angular material 0.12.0-rc1
+- Added back timeline
+- Added file uploader

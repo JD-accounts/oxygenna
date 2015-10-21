@@ -163,6 +163,10 @@
         .state('triangular.admin-default.elements-cards', {
             url: '/elements/cards',
             templateUrl: 'app/examples/elements/cards.tmpl.html'
+        })
+        .state('triangular.admin-default.elements-upload', {
+            url: '/elements/upload',
+            templateUrl: 'app/examples/elements/upload.tmpl.html'
         });
 
         triMenuProvider.addMenu({
@@ -266,6 +270,10 @@
                 name: 'MENU.ELEMENTS.WHITEFRAMES',
                 type: 'link',
                 state: 'triangular.admin-default.elements-whiteframes'
+            },{
+                name: 'MENU.ELEMENTS.UPLOAD',
+                type: 'link',
+                state: 'triangular.admin-default.elements-upload'
             }]
         });
     }
