@@ -182,8 +182,8 @@
 - Datepicker added to events dialog
 - Updated AngularJS to 1.4.7
 
-# Version ???
-> Release Date : ???
+# Version 2.3.0
+> Release Date : 23rd October 2015
 
 - Added bower package for easy maintenance of apps
 - Updated docs with new create app documentation
@@ -193,4 +193,6 @@
 - Fixed dashboard layouts & widgets to work with angular material 0.12.0-rc1
 - Added back timeline
 - Added file uploader
+- Added function to set footer copyright (thanks jeffsteinmetz)
 - Fixes for table localization (thanks merqurio)
+- Fixes for Safari browser compatibility

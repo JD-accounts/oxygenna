@@ -9,7 +9,7 @@
     function FooterController(triSettings, triLayout) {
         var vm = this;
         vm.name = triSettings.name;
-        vm.date = new Date();
+        vm.copyright = triSettings.copyright;
         vm.layout = triLayout.layout;
         vm.version = triSettings.version;
     }
