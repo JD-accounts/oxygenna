@@ -193,3 +193,4 @@
 - Fixed dashboard layouts & widgets to work with angular material 0.12.0-rc1
 - Added back timeline
 - Added file uploader
+- Fixes for table localization (thanks merqurio)
