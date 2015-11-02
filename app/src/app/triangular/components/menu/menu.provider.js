@@ -9,27 +9,38 @@
     /* @ngInject */
     function menuProvider() {
         // Provider
-        var menu = [];
+        var menuArray = [];
 
         this.addMenu = addMenu;
         this.removeMenu = removeMenu;
+        this.removeAllMenu = removeAllMenu;
 
         function addMenu(item) {
-            menu.push(item);
+            menuArray.push(item);
         }
 
         function removeMenu(state, params) {
-            findAndDestroyMenu(menu, state, params);
+            findAndDestroyMenu(menuArray, state, params);
         }
 
-        function findAndDestroyMenu(menu, state, params) {
+        function removeAllMenu() {
+            for (var i = menuArray.length - 1; i >= 0 ; i--) {
+                menuArray.splice(i, 1);
+            }
+        }
+
+        function findAndDestroyMenu(menu, state, params, isChildren) {
             if (menu instanceof Array) {
-                for (var i = 0; i < menu.length; i++) {
-                    if(menu[i].state === state && menu[i].params === params) {
+                for (var i = menu.length - 1; i >= 0 ; i--) {
+                    if(menu[i].state === state && angular.equals(menu[i].params, params)) {
                         menu.splice(i, 1);
+                        if (!isNaN(isChildren) && !menuArray[isChildren].children.length) {
+                            menuArray.splice(isChildren, 1);
+                        }
+                        break;
                     }
                     else if(angular.isDefined(menu[i].children)) {
-                        findAndDestroyMenu(menu[i].children, state, params);
+                        findAndDestroyMenu(menu[i].children, state, params, i);
                     }
                 }
             }
@@ -38,9 +49,10 @@
         // Service
         this.$get = function() {
             return {
-                menu: menu,
+                menu: menuArray,
                 addMenu: addMenu,
-                removeMenu: removeMenu
+                removeMenu: removeMenu,
+                removeAllMenu: removeAllMenu
             };
         };
     }
