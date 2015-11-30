@@ -18,7 +18,7 @@
         .controller('DefaultLayoutController', DefaultLayoutController);
 
     /* @ngInject */
-    function DefaultLayoutController($scope, $element, triLayout) {
+    function DefaultLayoutController($scope, $element, $timeout, $window, triLayout) {
         // we need to use the scope here because otherwise the expression in md-is-locked-open doesnt work
         $scope.layout = triLayout.layout; //eslint-disable-line
         var vm = this;
@@ -31,12 +31,18 @@
         function activateHover() {
             if(triLayout.layout.sideMenuSize === 'icon') {
                 $element.find('.admin-sidebar-left').addClass('hover');
+                $timeout(function(){
+                    $window.dispatchEvent(new Event('resize'));
+                });
             }
         }
 
         function removeHover () {
             if(triLayout.layout.sideMenuSize === 'icon') {
                 $element.find('.admin-sidebar-left').removeClass('hover');
+                $timeout(function(){
+                    $window.dispatchEvent(new Event('resize'));
+                });
             }
         }
     }
