@@ -33,7 +33,7 @@
                 $element.find('.admin-sidebar-left').addClass('hover');
                 $timeout(function(){
                     $window.dispatchEvent(new Event('resize'));
-                });
+                },300);
             }
         }
 
@@ -42,7 +42,7 @@
                 $element.find('.admin-sidebar-left').removeClass('hover');
                 $timeout(function(){
                     $window.dispatchEvent(new Event('resize'));
-                });
+                },300);
             }
         }
     }
