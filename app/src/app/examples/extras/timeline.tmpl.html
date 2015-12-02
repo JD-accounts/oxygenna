@@ -1,5 +1,5 @@
 <div class="overlay-5 padded-content-page" animate-elements>
-    <div class="timeline" layout="row" ng-repeat="event in ::vm.events" ng-attr-layout-align="{{$odd? 'end':'start'}}">
+    <div class="timeline" layout="row" ng-repeat="event in ::vm.events" ng-attr-layout-align="{{$odd? 'end end':'start start'}}">
         <div layout="row" flex="50" flex-sm="100" ng-attr-layout-align="{{$odd? 'end':'start'}} center">
             <div class="timeline-point md-whiteframe-z1" theme-background="primary" md-theme="{{triSkin.elements.content}}">
                 <img ng-src="{{::event.image}}" class="timeline-point-avatar"/>
