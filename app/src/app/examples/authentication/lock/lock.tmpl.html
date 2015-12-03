@@ -16,7 +16,7 @@
                 <p class="margin-top-20 margin-bottom-20" translate>LOCK.LOGGED_OUT</p>
 
                 <form name="lock">
-                    <md-input-container>
+                    <md-input-container class="md-block">
                         <label for="password" translate>LOCK.PASSWORD.LABEL</label>
                         <input label="password" name="password" type="password" ng-model="vm.user.password" required/>
                         <div ng-messages for="lock.password.$error" ng-if="lock.password.$dirty">

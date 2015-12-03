@@ -13,7 +13,7 @@
             <md-content class="md-padding">
                 <p translate>FORGOT.ENTER_EMAIL</p>
                 <form name="forgot">
-                    <md-input-container>
+                    <md-input-container class="md-block">
                         <label for="email" translate>FORGOT.EMAIL.LABEL</label>
                         <input id="email" label="email" name="email" type="email" ng-model="vm.user.email" required/>
                         <div ng-messages="forgot.email.$error" ng-if="forgot.email.$dirty">

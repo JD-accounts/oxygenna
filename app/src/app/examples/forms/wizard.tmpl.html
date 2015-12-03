@@ -22,7 +22,7 @@
                         <md-content class="md-padding">
                             <form name="accountForm" tri-wizard-form novalidate>
                                 <div>
-                                    <md-input-container>
+                                    <md-input-container class="md-block">
                                         <label translate>FORMS.WIZARD.USERNAME</label>
                                         <input name="username" ng-model="wizardController.data.account.username" required>
                                         <div ng-messages="accountForm.username.$error">
@@ -31,7 +31,7 @@
                                             </div>
                                         </div>
                                     </md-input-container>
-                                    <md-input-container>
+                                    <md-input-container class="md-block">
                                         <label>Email</label>
                                         <input type="email" name="email" ng-model="wizardController.data.account.email" required>
                                         <div ng-messages="accountForm.email.$error">
@@ -97,7 +97,7 @@
                                             </div>
                                         </md-input-container>
                                     </div>
-                                    <md-input-container>
+                                    <md-input-container class="md-block">
                                         <label translate>FORMS.WIZARD.ADDRESS</label>
                                         <input name="address1" ng-model="wizardController.data.address.line1" required>
                                         <div ng-messages="addressForm.address1.$error">
@@ -106,7 +106,7 @@
                                             </div>
                                         </div>
                                     </md-input-container>
-                                    <md-input-container>
+                                    <md-input-container class="md-block">
                                         <label translate>FORMS.WIZARD.ADDRESS-2</label>
                                         <input ng-model="wizardController.data.address.line2">
                                     </md-input-container>
@@ -156,7 +156,7 @@
                         <md-content class="md-padding">
                             <form name="billingForm" tri-wizard-form>
                                 <div>
-                                    <md-input-container>
+                                    <md-input-container class="md-block">
                                         <label translate>FORMS.WIZARD.CARD-NUMBER</label>
                                         <input name="cardNumber" ng-model="wizardController.data.billing.number" required>
                                         <div ng-messages="billingForm.cardNumber.$error">
@@ -165,7 +165,7 @@
                                             </div>
                                         </div>
                                     </md-input-container>
-                                    <md-input-container>
+                                    <md-input-container class="md-block">
                                         <label translate>FORMS.WIZARD.CARD-NAME</label>
                                         <input name="cardName" ng-model="wizardController.data.billing.name" required>
                                         <div ng-messages="billingForm.cardName.$error">
