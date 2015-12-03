@@ -6,7 +6,7 @@
         .controller('FaIconsController', FaIconsController);
 
     /* @ngInject */
-    function FaIconsController($mdDialog, $document, icons) {
+    function FaIconsController($mdDialog, $document, $scope, $compile, icons) {
         var vm = this;
         vm.icons = loadIcons();
         vm.iconSource = 'Select icon below to see HTML';
@@ -24,11 +24,12 @@
         }
 
         function selectIcon($event, icon) {
+            var dialogContent = $compile('<div hljs language="html"><md-icon md-font-icon="'+ icon.className +'"></md-icon></div>')($scope);
             $mdDialog.show(
                 $mdDialog.alert()
                 .parent(angular.element($document.body))
                 .title('Here\'s the code for that icon')
-                .content('<div hljs language="html"><md-icon md-font-icon="'+ icon.className +'"></md-icon></div>')
+                .htmlContent(dialogContent[0].innerHTML)
                 .ok('Thanks')
                 .targetEvent($event)
             );

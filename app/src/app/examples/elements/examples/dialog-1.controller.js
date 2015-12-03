@@ -20,7 +20,7 @@
             $mdDialog.show(
                 $mdDialog.confirm()
                 .title(dialog.title)
-                .content(dialog.content)
+                .textContent(dialog.content)
                 .ok(dialog.ok)
                 .cancel(dialog.cancel)
                 .targetEvent($event)

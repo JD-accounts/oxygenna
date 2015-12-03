@@ -17,7 +17,7 @@
     <md-dialog-content class="sticky-container">
         <div>
             <form class="event-dialog-form" name="eventForm">
-                <md-input-container>
+                <md-input-container class="md-block">
                     <label translate>CALENDAR.EVENT.TITLE</label>
                     <input ng-model="vm.event.title" required>
                 </md-input-container>
@@ -59,15 +59,15 @@
                         </md-select>
                     </div>
                 </div>
-                <md-input-container>
+                <md-input-container class="md-block">
                     <label translate>CALENDAR.EVENT.LOCATION</label>
                     <input type="text" ng-model="vm.event.location">
                 </md-input-container>
-                <md-input-container>
+                <md-input-container class="md-block">
                     <label translate>CALENDAR.EVENT.DESCRIPTION</label>
                     <textarea ng-model="vm.event.description"></textarea>
                 </md-input-container>
-                <md-input-container>
+                <md-input-container class="md-block">
                     <div layout="row" layout-align="space-between center">
                         <p flex translate>CALENDAR.EVENT.COLOR</p>
                         <md-select md-container-class="calendar-color-select" placeholder="{{'CALENDAR.EVENT.COLOR-PICK' | translate}}" ng-model="vm.selectedColor" ng-change="vm.colorChanged()">

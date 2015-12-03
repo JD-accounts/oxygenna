@@ -6,7 +6,7 @@
         .controller('WeatherIconsController', WeatherIconsController);
 
     /* @ngInject */
-    function WeatherIconsController($mdDialog, $document) {
+    function WeatherIconsController($mdDialog, $document, $scope, $compile) {
         var vm = this;
         vm.icons = [{
             'className': 'wi wi-day-cloudy-gusts',
@@ -547,11 +547,12 @@
         vm.selectIcon = selectIcon;
 
         function selectIcon($event, icon) {
+            var dialogContent = $compile('<div hljs language="html"><md-icon md-font-icon="' + icon.className + '"></md-icon></div>')($scope);
             $mdDialog.show(
                 $mdDialog.alert()
                 .parent(angular.element($document.body))
                 .title('Here\'s the code for that icon')
-                .content('<div hljs language="html"><md-icon md-font-icon="' + icon.className + '"></md-icon></div>')
+                .htmlContent(dialogContent[0].innerHTML)
                 .ok('Thanks')
                 .targetEvent($event)
             );
