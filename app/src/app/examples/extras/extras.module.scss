@@ -61,6 +61,8 @@ $timeline-point: 100px;
     width: 100%;
     transform: rotate(90deg);
     z-index: 1;
+    height: 1px;
+    background: rgba(0,0,0,0.2);
   }
   &:first-child .timeline-y-axis {
     transform: rotate(90deg) translateX(50%);
@@ -70,6 +72,7 @@ $timeline-point: 100px;
   }
   .timeline-x-axis {
   	opacity: 0;
+    border-top: 1px solid rgba(0,0,0,0.2);
   }
 }
 
