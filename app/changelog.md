@@ -196,3 +196,14 @@
 - Added function to set footer copyright (thanks jeffsteinmetz)
 - Fixes for table localization (thanks merqurio)
 - Fixes for Safari browser compatibility
+
+# Version 2.4.0
+> Release Date : ???
+
+- Converted material backgrounds to jpg - thanks TheRealDuckboy
+- Fixed bug in toolbar icon - thanks jeffsteinmetz
+- Menu improvements - thanks dixso
+- Fix wrong module name in elements - thanks movibe
+- Fixed layout issues in wizard
+- Fixed bug in md-toast positioning
+
