@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
+var path = require('path');
 
 var paths = gulp.paths;
 
@@ -37,26 +38,22 @@ gulp.task('html', ['inject', 'partials'], function () {
     addRootSlash: false
   };
 
-  var htmlFilter = $.filter(['*.html', '!/src/app/elements/examples/*.html']);
-  var jsFilter = $.filter('**/*.js');
-  var cssFilter = $.filter('**/*.css');
-  var assets;
+  var htmlFilter = $.filter(['*.html', '!/src/app/elements/examples/*.html'], {restore: true});
+  var jsFilter = $.filter('**/*.js', {restore: true});
+  var cssFilter = $.filter('**/*.css', {restore: true});
 
   return gulp.src(paths.tmp + '/serve/*.html')
     .pipe($.inject(partialsInjectFile, partialsInjectOptions))
-    .pipe(assets = $.useref.assets())
-    .pipe($.rev())
+    .pipe($.useref())
     .pipe(jsFilter)
     .pipe($.ngAnnotate())
     .pipe($.uglify({preserveComments: $.uglifySaveLicense}))
-    .pipe(jsFilter.restore())
+    .pipe(jsFilter.restore)
     .pipe(cssFilter)
     .pipe($.csso())
-    .pipe(cssFilter.restore())
-    .pipe(assets.restore())
+    .pipe(cssFilter.restore)
     .pipe($.replace('../bower_components/material-design-iconic-font/dist/fonts', '../fonts'))
     .pipe($.replace('../font/weathericons-regular', '../fonts/weathericons-regular'))
-    .pipe($.useref())
     .pipe($.revReplace())
     .pipe(htmlFilter)
     .pipe($.minifyHtml({
@@ -64,7 +61,7 @@ gulp.task('html', ['inject', 'partials'], function () {
       spare: true,
       quotes: true
     }))
-    .pipe(htmlFilter.restore())
+    .pipe(htmlFilter.restore)
     .pipe(gulp.dest(paths.dist + '/'))
     .pipe($.size({ title: paths.dist + '/', showFiles: true }));
 });
@@ -104,8 +101,8 @@ gulp.task('misc', function () {
     .pipe(gulp.dest(paths.dist + '/'));
 });
 
-gulp.task('clean', function (done) {
-  $.del([paths.dist + '/', paths.tmp + '/'], done);
+gulp.task('clean', function () {
+  return $.del([path.join(paths.dist, '/'), path.join(paths.tmp, '/')]);
 });
 
 gulp.task('buildapp', ['html', 'images', 'fonts', 'translations', 'misc', 'data', 'examplejs']);

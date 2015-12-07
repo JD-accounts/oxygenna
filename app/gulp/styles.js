@@ -41,7 +41,7 @@ gulp.task('styles', function () {
   ])
     .pipe(indexFilter)
     .pipe($.inject(injectFiles, injectOptions))
-    .pipe(indexFilter.restore())
+    .pipe(indexFilter.restore)
     .pipe($.sass(sassOptions))
 
   .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']}))
