@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
+var path = require('path');
 
 var paths = gulp.paths;
 
@@ -104,8 +105,8 @@ gulp.task('misc', function () {
     .pipe(gulp.dest(paths.dist + '/'));
 });
 
-gulp.task('clean', function (done) {
-  $.del([paths.dist + '/', paths.tmp + '/'], done);
+gulp.task('clean', function () {
+  return $.del([path.join(paths.dist, '/'), path.join(paths.tmp, '/')]);
 });
 
 gulp.task('buildapp', ['html', 'images', 'fonts', 'translations', 'misc', 'data', 'examplejs']);
