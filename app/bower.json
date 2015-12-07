@@ -69,10 +69,10 @@
     "angular-material": "1.0.0-rc5"
   },
   "main": [
-    "dist/triangular.js",
-    "dist/triangular.min.js",
-    "dist/triangular.css",
-    "dist/triangular.min.css"
+    "triangular.js",
+    "triangular.min.js",
+    "triangular.css",
+    "triangular.min.css"
   ],
   "ignore": [
     "README.md"
