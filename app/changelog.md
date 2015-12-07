@@ -205,5 +205,6 @@
 - Menu improvements - thanks dixso
 - Fix wrong module name in elements - thanks movibe
 - Fixed layout issues in wizard
-- Fixed bug in md-toast positioning
-
+- updated all node.js packages
+- updated AngularJS to 1.4.8
+- fixed gulp tasks to work with latest node packages
