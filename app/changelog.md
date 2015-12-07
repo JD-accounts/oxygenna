@@ -198,13 +198,16 @@
 - Fixes for Safari browser compatibility
 
 # Version 2.4.0
-> Release Date : ???
+> Release Date : 7th December 2015
 
 - Converted material backgrounds to jpg - thanks TheRealDuckboy
 - Fixed bug in toolbar icon - thanks jeffsteinmetz
 - Menu improvements - thanks dixso
-- Fix wrong module name in elements - thanks movibe
+- Fixed wrong module name in elements - thanks movibe
 - Fixed layout issues in wizard
-- updated all node.js packages
-- updated AngularJS to 1.4.8
-- fixed gulp tasks to work with latest node packages
+- Updated to new angular material RC6
+- New router module that adds / updates title
+- New Fullscreen toggle
+- Updated all node.js packages
+- Updated AngularJS to 1.4.8
+- Fixed gulp tasks to work with latest node packages
