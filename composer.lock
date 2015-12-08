@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:oxygenna/oxygenna-ant-theme-build.git",
-                "reference": "c6bce00d4ab8cc52f797bbec7b1c98ad9a87d44c"
+                "reference": "d86e7cc20eb69ed6dafb9694c708e9527c6719a9"
             },
             "type": "library",
             "extra": {
@@ -31,7 +31,7 @@
                 }
             ],
             "description": "Oxygenna's Theme Builder",
-            "time": "2015-12-07 09:08:47"
+            "time": "2015-12-08 07:41:16"
         }
     ],
     "packages-dev": [],
