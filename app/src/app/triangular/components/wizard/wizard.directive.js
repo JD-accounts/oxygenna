@@ -21,7 +21,7 @@
     }
 
     /* @ngInject */
-    function WizardController($scope) {
+    function WizardController($scope, $timeout) {
         var vm = this;
 
         var forms = [];
@@ -75,12 +75,6 @@
 
         function registerForm(form) {
             forms.push(form);
-            var removeWatch = $scope.$watch(form.$name + '.$pristine', function(oldPristine, newPristine) {
-                if(newPristine === true) {
-                    totalErrors = calculateErrors();
-                    removeWatch();
-                }
-            });
         }
 
         function updateProgress() {
@@ -102,5 +96,13 @@
             }
             return errorCount;
         }
+
+        // init
+
+        // wait until this tri wizard is ready (all forms registered)
+        // then calculate the total errors
+        $timeout(function() {
+            totalErrors = calculateErrors();
+        });
     }
 })();

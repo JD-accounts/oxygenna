@@ -211,3 +211,8 @@
 - Updated all node.js packages
 - Updated AngularJS to 1.4.8
 - Fixed gulp tasks to work with latest node packages
+
+# Version ???
+> Release Date : ???
+
+- Fixed tri wizard to work with ng-repeated inputs
