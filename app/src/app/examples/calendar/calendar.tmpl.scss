@@ -61,7 +61,7 @@ $i : 0;
   $i : $i + 1;
 }
 
-@media (max-width: 599px) {
+@media (max-width: $layout-breakpoint-xs) {
   .calendar-page {
     padding: 0px 10px;
   }
