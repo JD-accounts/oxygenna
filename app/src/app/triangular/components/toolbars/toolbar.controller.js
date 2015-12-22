@@ -42,7 +42,7 @@
         }
 
         function hideMenuButton() {
-            return triLayout.layout.sideMenuSize !== 'hidden' && $mdMedia('gt-md');
+            return triLayout.layout.sideMenuSize !== 'hidden' && $mdMedia('gt-sm');
         }
 
         function toggleNotificationsTab(tab) {
