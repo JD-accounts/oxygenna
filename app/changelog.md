@@ -223,4 +223,4 @@
 - Updated docs about bower package using https instead of ssh
 - Removed ngTouch package (no longer needed by angular material)
 - Fixed FAB speed dial remaining open on General Dashboard
-
+- Updated all dialogs to use new angular material 1.0.1 markup

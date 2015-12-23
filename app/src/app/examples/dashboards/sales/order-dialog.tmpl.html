@@ -13,7 +13,7 @@
         </div>
     </md-toolbar>
 
-    <md-dialog-content class="padding-20">
+    <md-dialog-content class="md-dialog-content">
         <div flex layout="row" class="margin-bottom-10">
             <div flex>
                 <strong translate>DASHBOARDS.SALES.ORDER.DATE</strong>
@@ -47,14 +47,14 @@
             </div>
         </div>
 
-        <md-divider></md-divider>
+        <md-divider class="margin-bottom-40 margin-top-40"></md-divider>
 
-        <table class="md-table">
+        <table class="order-dialog-product-table md-table">
             <thead>
                 <tr>
                     <th translate>DASHBOARDS.SALES.ORDER.PRODUCT</th>
                     <th translate>DASHBOARDS.SALES.ORDER.CATEGORY</th>
-                    <th translate>DASHBOARDS.SALES.ORDER.PRICE</th>
+                    <th class="text-right" translate>DASHBOARDS.SALES.ORDER.PRICE</th>
                 </tr>
             </thead>
             <tbody>
@@ -63,27 +63,24 @@
                     <td>{{item.category}}</td>
                     <td class="text-right padding-right-10">{{item.price | currency}}</td>
                 </tr>
-            </tbody>
-        </table>
-        <table class="md-table" palette-background="grey:100">
-            <tbody>
                 <tr>
-                    <td class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.SUB-TOTAL</td>
+                    <td colspan="2" class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.SUB-TOTAL</td>
                     <td class="text-right font-weight-600 padding-right-10">{{vm.order.subTotal | currency}}</td>
                 </tr>
                 <tr>
-                    <td class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.TAX</td>
+                    <td colspan="2" class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.TAX</td>
                     <td class="text-right font-weight-600 padding-right-10">{{vm.order.tax | currency}}</td>
                 </tr>
                 <tr>
-                    <td class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.TOTAL</td>
+                    <td colspan="2" class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.TOTAL</td>
                     <td class="text-right font-weight-600 padding-right-10">{{vm.order.total | currency}}</td>
                 </tr>
             </tbody>
         </table>
     </md-dialog-content>
-    <div class="md-actions" layout="row">
+
+    <md-dialog-actions layout="row">
         <span flex></span>
         <md-button ng-click="vm.okClick()" class="md-primary" aria-label="{{GENERAL.OK | translate}}" translate="GENERAL.OK"></md-button>
-    </div>
+    </md-dialog-actions>
 </md-dialog>
