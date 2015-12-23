@@ -14,7 +14,7 @@
                     <md-button class="widget-button md-icon-button" ng-click="calendarController.changeMonth('prev')" aria-label="previous month">
                         <md-icon md-font-icon="zmdi zmdi-chevron-left"></md-icon>
                     </md-button>
-                    <md-button hide show-gt-lg class="widget-button md-icon-button" ng-click="calendarController.changeMonth('today')" aria-label="today">
+                    <md-button show-gt-md class="widget-button md-icon-button" ng-click="calendarController.changeMonth('today')" aria-label="today">
                         <md-icon md-font-icon="zmdi zmdi-calendar-alt"></md-icon>
                     </md-button>
                     <md-button class="widget-button md-icon-button" ng-click="calendarController.changeMonth('next')" aria-label="next month">
@@ -64,7 +64,7 @@
     <div layout="row" layout-xs="column" layout-margin>
         <tri-widget class="widget-blog" flex="60" flex-xs="100" content-layout="column" content-layout-align="start center">
             <img src="assets/images/backgrounds/material-backgrounds/mb-bg-01.jpg" alt="some bg">
-            <div class="widget-blog-text padding-10">
+            <div class="widget-blog-text padding-10" ng-cloak>
                 <h2>It's all about Material</h2>
                 <p>We challenged ourselves to create a visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design.</p>
                 <md-fab-speed-dial md-direction="up" class="md-fling">
