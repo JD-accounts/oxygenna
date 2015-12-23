@@ -212,7 +212,15 @@
 - Updated AngularJS to 1.4.8
 - Fixed gulp tasks to work with latest node packages
 
-# Version ???
-> Release Date : ???
+# Version 2.5.0
+> Release Date : 23rd December 2015
 
 - Fixed tri wizard to work with ng-repeated inputs
+- Updated node packages to latest versions
+- Update to Material Angular 1.0.1 whooop
+- Fixed bug in profile password fields
+- Changed layout/flex/media classes to work with material angular 1.0.1 (uses new xs instead of sm)
+- Updated docs about bower package using https instead of ssh
+- Removed ngTouch package (no longer needed by angular material)
+- Fixed FAB speed dial remaining open on General Dashboard
+
