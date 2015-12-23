@@ -8,7 +8,7 @@
         </div>
     </md-toolbar>
 
-    <md-dialog-content class="sticky-container">
+    <md-dialog-content class="md-dialog-content">
         <div layout="row" layout-padding>
             <div flex layout="column" layout-align="center center">
                 <h2 translate>DASHBOARDS.SALES.DATE-CHANGE.START-DATE</h2>
@@ -24,9 +24,9 @@
         </div>
     </md-dialog-content>
 
-    <div class="md-actions" layout="row">
+    <md-dialog-actions layout="row">
         <span flex></span>
         <md-button ng-click="vm.cancelClick()" aria-label="{{'GENERAL.CANCEL' | translate}}" translate="GENERAL.CANCEL"></md-button>
         <md-button ng-click="vm.okClick()" class="md-primary" aria-label="{{GENERAL.OK | translate}}" translate="GENERAL.OK"></md-button>
-    </div>
+    </md-dialog-actions>
 </md-dialog>
