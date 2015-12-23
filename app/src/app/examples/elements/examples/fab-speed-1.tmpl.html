@@ -1,5 +1,5 @@
 <div ng-controller="Fab1Controller as vm" flex>
-    <div layout="row" layout-align="center center" style="min-height: 300px" flex>
+    <div layout="row" layout-align="center center" style="min-height: 300px" flex ng-cloak>
         <md-fab-speed-dial md-direction="{{vm.fabDirection}}" md-open="vm.fabStatus" ng-class="vm.fabAnimation">
             <md-fab-trigger>
                 <md-button aria-label="share this post" class="md-fab md-warn">
