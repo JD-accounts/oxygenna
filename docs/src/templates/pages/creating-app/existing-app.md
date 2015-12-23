@@ -12,6 +12,12 @@ We had lots of requests for this from people who have existing codebases and wan
 The process is quite simple, run the following command in your project folder
 
 ```bash
+bower install https://github.com/oxygenna/triangular-bower.git --save-dev
+```
+
+or if you have [SSH Certificates](https://help.github.com/articles/generating-ssh-keys/) set up on GitHub
+
+```bash
 bower install git@github.com:oxygenna/triangular-bower.git --save-dev
 ```
 
