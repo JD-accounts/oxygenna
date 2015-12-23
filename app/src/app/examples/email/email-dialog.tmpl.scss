@@ -1,10 +1,12 @@
 // Email Dialog
 .email-dialog-to {
   box-shadow: 0 1px rgb(224,224,224);
+  position: relative;
   .md-icon-button {
     margin: 0px;
     position: absolute;
-    right: 0;
+    right: -16px;
+    top: 4px;
   }
   .md-chips {
     box-shadow: none;
