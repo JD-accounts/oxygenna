@@ -229,3 +229,4 @@
 > Release Date : ???
 
 - Fixed active email highlight in email list
+- Fixed ng-messages in authentication pages
