@@ -15,7 +15,6 @@
         // Creates:
         //
         var directive = {
-            bindToController: true,
             link: link,
             restrict: 'A'
         };
