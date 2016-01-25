@@ -3,8 +3,10 @@ html, body {
 }
 
 // import animate scss
-@import "animate.css-scss/animate.scss";
+@import "animatewithsass/animate.scss";
 
+// variables
+@import "scss/variables";
 
 // core
 

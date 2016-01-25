@@ -224,3 +224,10 @@
 - Removed ngTouch package (no longer needed by angular material)
 - Fixed FAB speed dial remaining open on General Dashboard
 - Updated all dialogs to use new angular material 1.0.1 markup
+
+# Version ???
+> Release Date : ???
+
+- Fixed active email highlight in email list
+- Fixed ng-messages in authentication pages
+- Fixed menu background color on mobile side menu

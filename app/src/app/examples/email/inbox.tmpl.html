@@ -7,10 +7,10 @@
             <section class="email-inbox-list-animate-repeat" ng-repeat="group in vm.emailGroups" ng-if="vm.emails.length > 0">
                 <md-subheader ng-show="group.emails.length > 0" class="md-primary">{{::group.name}}</md-subheader>
                 <md-divider></md-divider>
+
                 <md-list>
 
-                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat md-3-line" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="vm.openMail(email)" ng-class="{ active: selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
-
+                    <md-list-item class="email-inbox-list-item email-inbox-list-animate-repeat md-3-line" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="vm.openMail(email)" ng-class="{ active: vm.selectedMail === email.id, 'email-inbox-list-item-unread': email.unread }">
                         <img class="md-avatar animate" ng-src="{{::email.from.image}}" alt="{{::email.from.name}}">
 
                         <div class="md-list-item-text">

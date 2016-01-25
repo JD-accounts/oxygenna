@@ -15,7 +15,7 @@
                     <md-input-container class="md-block">
                         <label for="name" translate>SIGNUP.NAME.LABEL</label>
                         <input id="name" label="name" name="name" type="text" ng-model="vm.user.name" required/>
-                        <div ng-messages="signup.name.$error" ng-if="signup.name.$dirty">
+                        <div ng-messages="signup.name.$error">
                             <div ng-message when="required">
                                 <span translate>SIGNUP.NAME.PLEASE_ENTER</span>
                             </div>
@@ -24,7 +24,7 @@
                     <md-input-container class="md-block">
                         <label for="email" translate>SIGNUP.EMAIL.LABEL</label>
                         <input id="email" label="email" name="email" type="email" ng-model="vm.user.email" required/>
-                        <div ng-messages="signup.email.$error" ng-if="signup.email.$dirty">
+                        <div ng-messages="signup.email.$error">
                             <div ng-message when="required">
                                 <span translate>SIGNUP.EMAIL.PLEASE_ENTER</span>
                             </div>
@@ -37,13 +37,33 @@
                     <md-input-container class="md-block">
                         <label for="password" translate>SIGNUP.PASSWORD.LABEL</label>
                         <input id="password" label="password" name="password" type="password" ng-model="vm.user.password" tri-same-password="signup.confirm" ng-minlength="8" required/>
-                        <ng-messages for="signup.password.$error" ng-include="'app/examples/authentication/signup/password.messages.html'" ng-if="signup.password.$dirty"></ng-messages>
+                        <ng-messages for="signup.password.$error">
+                            <div ng-message when="required">
+                                <span translate>SIGNUP.PASSWORD.PLEASE_ENTER</span>
+                            </div>
+                            <div ng-message when="minlength">
+                                <span translate>SIGNUP.PASSWORD.MIN_LENGTH</span>
+                            </div>
+                            <div ng-message when="samePassword">
+                                <span translate>SIGNUP.PASSWORD.SAME_PASSWORD</span>
+                            </div>
+                        </ng-messages>
                     </md-input-container>
 
                     <md-input-container class="md-block">
                         <label for="password" translate>SIGNUP.PASSWORD_CONFIRM.LABEL</label>
                         <input id="confirm" label="confirm" name="confirm" type="password" ng-model="vm.user.confirm" tri-same-password="signup.password" ng-minlength="8" required/>
-                        <ng-messages for="signup.confirm.$error" ng-include="'app/examples/authentication/signup/password.messages.html'" ng-if="signup.confirm.$dirty"></ng-messages>
+                        <ng-messages for="signup.confirm.$error">
+                            <div ng-message when="required">
+                                <span translate>SIGNUP.PASSWORD.PLEASE_ENTER</span>
+                            </div>
+                            <div ng-message when="minlength">
+                                <span translate>SIGNUP.PASSWORD.MIN_LENGTH</span>
+                            </div>
+                            <div ng-message when="samePassword">
+                                <span translate>SIGNUP.PASSWORD.SAME_PASSWORD</span>
+                            </div>
+                        </ng-messages>
                     </md-input-container>
 
                     <md-button class="md-raised md-primary full-width margin-left-0 margin-right-0 margin-top-10 margin-bottom-10" ng-click="vm.signupClick()" ng-disabled="signup.$invalid" translate="SIGNUP.BUTTON" aria-label="{{'SIGNUP.BUTTON' | translate}}"></md-button>
