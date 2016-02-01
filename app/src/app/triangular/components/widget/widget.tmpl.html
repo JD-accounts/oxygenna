@@ -1,7 +1,7 @@
 <div class="widget md-whiteframe-z2" ng-class="::{'widget-overlay-title': vm.overlayTitle}" flex layout="{{vm.widgetLayout}}">
 
-    <div class="widget-title" ng-if="::(vm.title || vm.subtitle)" layout="row" layout-padding layout-align="space-between center" flex-order="{{vm.titleOrder}}">
-        <div layout="column" ng-if="::vm.avatar">
+    <div class="widget-title" ng-if="::(vm.title || vm.subtitle)" layout="row" layout-padding layout-align="start center" flex-order="{{vm.titleOrder}}">
+        <div ng-if="::vm.avatar">
             <img ng-src="{{::vm.avatar}}" class="widget-avatar"/>
         </div>
         <div flex layout="column">
