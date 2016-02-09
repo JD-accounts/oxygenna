@@ -8,14 +8,14 @@
     /* @ngInject */
     function runFunction($rootScope, $window, $state, $filter, $translate, $timeout, triRoute, triBreadcrumbsService) {
         var breadcrumbs = triBreadcrumbsService.breadcrumbs;
-        init();
 
-        var destroyOn = $rootScope.$on('$stateChangeSuccess', function(){
+        // change title when language changes - when a menu item is clicked - on app init
+        var menuTitleHandler = $rootScope.$on('changeTitle', function(){
             setFullTitle();
         });
 
         $rootScope.$on('$destroy', function(){
-            destroyOn();
+            menuTitleHandler();
         });
 
         function setFullTitle() {
@@ -26,10 +26,6 @@
                 });
                 $window.document.title = title;
             });
-        }
-
-        function init() {
-            setFullTitle();
         }
     }
 })();

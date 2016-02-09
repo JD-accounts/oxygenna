@@ -6,7 +6,7 @@
         .service('triBreadcrumbsService', BreadcrumbsService);
 
     /* @ngInject */
-    function BreadcrumbsService() {
+    function BreadcrumbsService($rootScope) {
         this.breadcrumbs = {
             crumbs: []
         };
@@ -17,6 +17,7 @@
 
         function addCrumb(item) {
             this.breadcrumbs.crumbs.unshift(item);
+            $rootScope.$emit('changeTitle');
         }
 
         function reset() {
