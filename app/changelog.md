@@ -235,3 +235,5 @@
 - Chrome 48 bug fix for flex-box layout
 - Updated to Angular Material 1.0.5
 - Fixed header title in FireFox
+- Fixed email list styling
+- Fixed Dashboard widget chart widths
