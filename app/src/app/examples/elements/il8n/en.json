@@ -28,5 +28,12 @@
             "MENUS": "Menus",
             "UPLOAD": "Upload"
         }
+    },
+    "TABLE": {
+        "COLUMNS": {
+            "NAME": "Name",
+            "DESCRIPTION": "Description",
+            "BIRTH": "Date of Birth"
+        }
     }
 }
