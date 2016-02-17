@@ -6,7 +6,8 @@
         .config(config);
 
     /* @ngInject */
-    function config(ChartJsProvider) {
+    function config(ChartJsProvider, highchartsNGProvider) {
+        highchartsNGProvider.lazyLoad();
         // Configure all charts to use material design colors
         ChartJsProvider.setOptions({
             colours: [
