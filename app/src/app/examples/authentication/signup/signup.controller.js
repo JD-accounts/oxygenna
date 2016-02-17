@@ -23,7 +23,7 @@
             $http({
                 method: 'POST',
                 url: API_CONFIG.url + 'signup',
-                data: $scope.user
+                data: vm.user
             }).
             success(function(data) {
                 $mdToast.show(
