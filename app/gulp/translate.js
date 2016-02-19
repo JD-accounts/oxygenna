@@ -3,7 +3,7 @@
 // ADD YOUR YANDEX API KEY HERE
 // go here for more info
 // https://tech.yandex.com/translate/
-var YANDEX_API_KEY = '';
+var YANDEX_API_KEY = 'trnsl.1.1.20150427T131710Z.f57234d536e7e193.b63a29a71b1f58c6ba0375d74624a6825b517e5a';
 
 var gulp = require('gulp');
 var gutil = require('gulp-util');
@@ -11,7 +11,7 @@ var argv = require('yargs').argv;
 var map = require('map-stream');
 var rename = require('gulp-rename');
 var traverse = require('traverse');
-var translate = require('yandex-translate');
+var translate = require('yandex-translate')(YANDEX_API_KEY);
 var transform = require('vinyl-transform');
 var jsonFormat = require('gulp-json-format');
 
@@ -26,7 +26,7 @@ gulp.task('translate', function () {
         if(typeof x !== 'object') {
           var self = this;
           translateCount++;
-          translate(x, { to: argv.to, key: YANDEX_API_KEY }, function(err, res) {
+          translate.translate(x, { to: argv.to, key: YANDEX_API_KEY }, function(err, res) {            
             self.update(res.text.toString());
             translateCount--;
             if(translateCount === 0) {
@@ -37,7 +37,7 @@ gulp.task('translate', function () {
           });
         }
       });
-    })
+    });
   });
 
   // make sure we have a from and to language
