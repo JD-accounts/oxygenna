@@ -31,9 +31,9 @@
         <table md-table class="md-primary md-data-table" md-row-select ng-model="vm.selected">
             <thead md-head md-order="vm.query.order" md-on-reorder="vm.getUsers">
                 <tr md-row>
-                    <th md-column>avatar</th>
-                    <th md-column>login</th>
-                    <th md-column md-numberic md-order-by="id">ID</th>
+                    <th md-column><span translate>{{vm.columns.avatar}}</span></th>
+                    <th md-column><span translate>{{vm.columns.login}}</span></th>
+                    <th md-column md-numberic md-order-by="id"><span translate>{{vm.columns.id}}</span></th>
                 </tr>
             </thead>
             <tbody md-body>

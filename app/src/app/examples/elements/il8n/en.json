@@ -33,7 +33,10 @@
         "COLUMNS": {
             "NAME": "Name",
             "DESCRIPTION": "Description",
-            "BIRTH": "Date of Birth"
+            "BIRTH": "Date of Birth",
+            "AVATAR": "Avatar",
+            "LOGIN": "Login",
+            "ID": "ID"
         }
     }
 }
