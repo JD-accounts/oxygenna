@@ -237,3 +237,8 @@
 - Fixed header title in FireFox
 - Fixed email list styling
 - Fixed Dashboard widget chart widths
+
+# Version ???
+> Release Date : ???
+
+- Fixed translate gulp task.
