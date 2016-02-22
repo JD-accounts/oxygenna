@@ -26,7 +26,7 @@ gulp.task('translate', function () {
         if(typeof x !== 'object') {
           var self = this;
           translateCount++;
-          translate.translate(x, { to: argv.to, key: YANDEX_API_KEY }, function(err, res) {            
+          translate.translate(x, { to: argv.to, key: YANDEX_API_KEY }, function(err, res) {
             self.update(res.text.toString());
             translateCount--;
             if(translateCount === 0) {

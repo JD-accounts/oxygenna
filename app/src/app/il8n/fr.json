@@ -48,7 +48,7 @@
         "NEXT": "Page Suivante",
         "PREV": "Page Précédente",
         "OF": "de",
-        "ROWS": "Lignes par page:"
+        "ROWS": "Nombre de lignes par page:"
     },
     "MESSAGES": {
         "LANGUAGE_CHANGED": "Langue Changé"

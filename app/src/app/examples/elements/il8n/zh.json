@@ -25,7 +25,15 @@
             "TOASTS": "敬酒",
             "LISTS": "清单",
             "CHIPS": "薯片",
-            "MENUS": "菜单"
+            "MENUS": "菜单",
+            "UPLOAD": "上传"
+        }
+    },
+    "TABLE": {
+        "COLUMNS": {
+            "NAME": "的名字",
+            "DESCRIPTION": "描述",
+            "BIRTH": "出生日期"
         }
     }
 }
