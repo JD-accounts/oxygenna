@@ -167,7 +167,7 @@
         });
 
         function openMail() {
-            $state.go('private.admin.toolbar.inbox');
+            $state.go('triangular-no-scroll.email.inbox');
             vm.close();
         }
 

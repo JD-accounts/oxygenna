@@ -31,7 +31,7 @@
                     .highlightAction(true)
                     .hideDelay(0)
                 ).then(function() {
-                    $state.go('public.auth.login');
+                    $state.go('authentication.login');
                 });
             }).
             error(function(data) {
