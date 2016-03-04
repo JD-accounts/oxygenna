@@ -60,7 +60,12 @@
                     controllerAs: 'vm'
                 },
                 content: {
-                    template: '<div id="admin-panel-content-view" class="{{layout.innerContentClass}}" flex ui-view></div>'
+                    templateProvider: function($templateCache, $http, triLayout) {
+                        return $http.get(triLayout.layout.contentTemplateUrl, {cache: $templateCache })
+                                .then(function(response) {
+                                    return response.data;
+                                });
+                    }
                 },
                 belowContent: {
                     template: '<div ui-view="belowContent"></div>'
