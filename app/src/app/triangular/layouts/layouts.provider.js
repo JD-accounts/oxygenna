@@ -15,7 +15,14 @@
             contentClass: '',
             innerContentClass: '',
             sideMenuSize: 'full',
-            footer: true
+            footer: true,
+            sidebarLeftTemplateUrl: 'app/triangular/components/menu/menu.tmpl.html',
+            sidebarLeftController: 'MenuController',
+            sidebarRightTemplateUrl: 'app/triangular/components/notifications-panel/notifications-panel.tmpl.html',
+            sidebarRightController: 'NotificationsPanelController',
+            toolbarTemplateUrl: 'app/triangular/components/toolbars/toolbar.tmpl.html',
+            toolbarController: 'NotificationsPanelController',
+            footerTemplateUrl: 'app/triangular/components/footer/footer.tmpl.html'
         };
         var layout = {};
 

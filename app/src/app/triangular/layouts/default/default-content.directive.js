@@ -6,7 +6,7 @@
         .directive('triDefaultContent', triDefaultContent);
 
     /* @ngInject */
-    function triDefaultContent ($rootScope, $compile, $templateRequest) {
+    function triDefaultContent ($rootScope, $compile, $templateRequest, triLayout) {
         // Usage:
         //
         // Creates:
@@ -36,7 +36,7 @@
                 var footerElem = contentView.find('#footer');
                 if (footerElem.length === 0) {
                     // add footer to the content view
-                    $templateRequest('app/triangular/components/footer/footer.tmpl.html')
+                    $templateRequest(triLayout.layout.footerTemplateUrl)
                     .then(function(template) {
                         // compile template with current scope and add to the content
                         var linkFn = $compile(template);
