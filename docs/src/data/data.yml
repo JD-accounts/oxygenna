@@ -56,6 +56,10 @@ topmenu:
             -
                 name: Logo & Name
                 slug: logo
+
+            -
+                name: Templates
+                slug: templates
     -
         name: Triangular
         slug: triangular
