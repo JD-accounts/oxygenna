@@ -23,7 +23,7 @@
             sidebarRightTemplateUrl: 'app/triangular/components/notifications-panel/notifications-panel.tmpl.html',
             sidebarRightController: 'NotificationsPanelController',
             toolbarTemplateUrl: 'app/triangular/components/toolbars/toolbar.tmpl.html',
-            toolbarController: 'NotificationsPanelController',
+            toolbarController: 'DefaultToolbarController',
             footerTemplateUrl: 'app/triangular/components/footer/footer.tmpl.html'
         };
         var resetableOptions = ['toolbarSize', 'toolbarShrink', 'toolbarClass', 'contentClass', 'innerContentClass', 'showToolbar', 'footer', 'contentTemplateUrl', 'sidebarLeftTemplateUrl', 'sidebarLeftController', 'sidebarRightTemplateUrl', 'sidebarRightController', 'toolbarTemplateUrl', 'toolbarController', 'footerTemplateUrl'];
