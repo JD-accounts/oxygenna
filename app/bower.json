@@ -32,7 +32,8 @@
     "material-design-iconic-font": "~2.2.0",
     "textAngular": "~1.5.0",
     "weather-icons": "https://github.com/chk1/weather-icons.git#master",
-    "ng-file-upload": "~12.0.1"
+    "ng-file-upload": "~12.0.1",
+    "highlightjs": "^9.2.0"
   },
   "devDependencies": {
     "angular-mocks": "1.4.8"
@@ -56,6 +57,12 @@
         "dist/dragula.min.css"
       ]
     },
+    "font-awesome": {
+      "main": [
+        "./css/font-awesome.css",
+        "./fonts/*"
+      ]
+    },    
     "ng-file-upload": {
       "main": [
         "ng-file-upload-shim.js",
@@ -65,9 +72,7 @@
   },
   "resolutions": {
     "angular": "1.4.8",
-    "angular-material": "1.0.5",
-    "angular-translate": "~2.10.0",
-    "angular-translate-storage-cookie": "~2.10.0"
+    "angular-material": "1.0.5"
   },
   "main": [
     "triangular.js",
