@@ -271,4 +271,5 @@
     - textAngular to 1.5.0,
     - ng-file-upload to 12.0.1    
 - Added template override options to triLayoutProvider to allow users to override templates for left sidebar, the right sidebar, the content, the toolbar and the footer.
+- Fixed icon button widths in toolbar
 - Updated documentation
