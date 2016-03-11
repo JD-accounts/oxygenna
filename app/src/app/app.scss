@@ -1,6 +1,5 @@
-// import material icons
-$zmdi-font-path: "../bower_components/material-design-iconic-font/dist/fonts";
-@import "bower_components/material-design-iconic-font/scss/material-design-iconic-font.scss";
+$sidenav-mobile-width: 320px;
+$sidenav-desktop-width: 320px;
 
 // import angular material scss
 @import "angular-material/angular-material.scss";
@@ -23,5 +22,6 @@ button, select, html, textarea, input {
  *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
  */
+
 // injector
 // endinjector
