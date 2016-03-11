@@ -168,6 +168,8 @@ chart-legend ul {
     .md-list-item-text {
       padding-bottom: 16px;
       position: relative;
+      overflow: visible;
+      margin-top: 0;
       h3 {
         font-size: 1.4rem;
       }
