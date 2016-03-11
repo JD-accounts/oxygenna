@@ -242,3 +242,10 @@
 > Release Date : ???
 
 - Fixed translate gulp task.
+- Added watch to countupto directive
+- Fixed bug where ng-messages covering inputs
+- Fixed form issues in authentication pages
+- Table titles now translatable
+- Upgraded md-data-table to 0.9.11
+- Added template override options to triLayoutProvider to allow users to override templates for left sidebar, the right sidebar, the content, the toolbar and the footer.
+- Updated documentation
