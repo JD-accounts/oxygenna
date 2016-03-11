@@ -272,4 +272,5 @@
     - ng-file-upload to 12.0.1    
 - Added template override options to triLayoutProvider to allow users to override templates for left sidebar, the right sidebar, the content, the toolbar and the footer.
 - Fixed icon button widths in toolbar
+- Changed email list in secondary sidebar to use new md-dense list
 - Updated documentation

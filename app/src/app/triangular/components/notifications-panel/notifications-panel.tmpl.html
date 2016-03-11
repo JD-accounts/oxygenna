@@ -6,15 +6,13 @@
             </md-tab-label>
             <md-tab-body>
                 <md-content>
-                    <md-list>
-                        <md-list-item class="md-3-line" ng-repeat="email in ::vm.emails" ng-click="vm.openMail(email)">
-                            <img class="md-avatar animate" ng-src="{{::email.from.image}}" alt="{{::email.from.name}}">
+                    <md-list class="md-dense">
+                        <md-list-item class="md-2-line" ng-repeat="email in ::vm.emails" ng-click="vm.openMail(email)">
+                            <img class="md-avatar" ng-src="{{::email.from.image}}" alt="{{::email.from.name}}">
                             <div class="md-list-item-text">
-                                <div class="email-inbox-list-item-name-time" layout="row" layout-align="space-between start">
-                                    <h3>{{::email.from.name}}</h3>
-                                    <p class="md-caption" am-time-ago="::email.date"></p>
-                                </div>
+                                <h3>{{::email.from.name}}</h3>
                                 <h4>{{::email.subject}}</h4>
+                                <p class="md-caption" am-time-ago="::email.date"></p>
                             </div>
                             <md-divider ng-hide="$last"></md-divider>
                         </md-list-item>
