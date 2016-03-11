@@ -62,29 +62,20 @@
     </div>
 
     <div layout="row" layout-xs="column" layout-margin>
-        <tri-widget class="widget-blog" flex="60" flex-xs="100" content-layout="column" content-layout-align="start center">
-            <img src="assets/images/backgrounds/material-backgrounds/mb-bg-01.jpg" alt="some bg">
-            <div class="widget-blog-text padding-10" ng-cloak>
-                <h2>It's all about Material</h2>
-                <p>We challenged ourselves to create a visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design.</p>
-                <md-fab-speed-dial md-direction="up" class="md-fling">
-                    <md-fab-trigger>
-                        <md-button aria-label="share this post" class="md-fab md-warn">
-                            <md-icon md-font-icon="zmdi zmdi-share"></md-icon>
-                        </md-button>
-                    </md-fab-trigger>
-                    <md-fab-actions>
-                        <md-button aria-label="twitter" class="md-fab md-raised md-mini" ng-click="share('Shared on Twitter', $event)">
-                            <md-icon md-font-icon="fa fa-twitter"></md-icon>
-                        </md-button>
-                        <md-button aria-label="facebook" class="md-fab md-raised md-mini" ng-click="share('Shared on Facebook', $event)">
-                            <md-icon md-font-icon="fa fa-facebook"></md-icon>
-                        </md-button>
-                        <md-button aria-label="google-plus" class="md-fab md-raised md-mini" ng-click="share('Shared on Google+', $event)">
-                            <md-icon md-font-icon="fa fa-google-plus"></md-icon>
-                        </md-button>
-                    </md-fab-actions>
-                </md-fab-speed-dial>
+       <tri-widget flex weather-widget="Sitia" background-image="assets/images/dashboards/weather.jpg" palette-background="deep-orange:800" content-layout="column" content-layout-align="space-between">
+            <div layout="column" flex layout-align="start center">
+                <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
+                <h1 class="font-size-14 margin-top-80 margin-bottom-80 font-weight-100">
+                    {{::weather.temp}}&deg;
+                </h1>
+            </div>
+            <div layout="column" class="full-width overlay-gradient-40">
+                <md-divider></md-divider>
+                <div flex layout="row" layout-margin layout-align="space-between center" class="padding-30">
+                    <i class="wi font-size-2" ng-class="weather.iconClass"></i>
+                    <p class="margin-0">{{::weather.text}}</p>
+                    <p class="margin-0">{{::weather.location}}</p>
+                </div>
             </div>
         </tri-widget>
 
@@ -110,20 +101,29 @@
     </div>
     <div layout="row" layout-xs="column" layout-margin>
         <div layout="column" layout-margin layout-fill flex="40" flex-xs="100">
-           <tri-widget flex weather-widget="Sitia" background-image="assets/images/dashboards/weather.jpg" palette-background="deep-orange:800" content-layout="column" content-layout-align="space-between">
-                <div layout="column" flex layout-align="start center">
-                    <p class="md-caption">{{weather.date | amDateFormat:'dddd, MMMM Do YYYY'}}</p>
-                    <h1 class="font-size-14 margin-top-80 margin-bottom-80 font-weight-100">
-                        {{::weather.temp}}&deg;
-                    </h1>
-                </div>
-                <div layout="column" class="full-width overlay-gradient-40">
-                    <md-divider></md-divider>
-                    <div flex layout="row" layout-margin layout-align="space-between center" class="padding-30">
-                        <i class="wi font-size-2" ng-class="weather.iconClass"></i>
-                        <p class="margin-0">{{::weather.text}}</p>
-                        <p class="margin-0">{{::weather.location}}</p>
-                    </div>
+            <tri-widget class="widget-blog" flex="60" flex-xs="100" content-layout="column" content-layout-align="start center">
+                <img src="assets/images/backgrounds/material-backgrounds/mb-bg-01.jpg" alt="some bg">
+                <div class="widget-blog-text padding-10" ng-cloak>
+                    <h2>It's all about Material</h2>
+                    <p>We challenged ourselves to create a visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design.</p>
+                    <md-fab-speed-dial md-direction="up" class="md-fling">
+                        <md-fab-trigger>
+                            <md-button aria-label="share this post" class="md-fab md-warn">
+                                <md-icon md-font-icon="zmdi zmdi-share"></md-icon>
+                            </md-button>
+                        </md-fab-trigger>
+                        <md-fab-actions>
+                            <md-button aria-label="twitter" class="md-fab md-raised md-mini" ng-click="share('Shared on Twitter', $event)">
+                                <md-icon md-font-icon="fa fa-twitter"></md-icon>
+                            </md-button>
+                            <md-button aria-label="facebook" class="md-fab md-raised md-mini" ng-click="share('Shared on Facebook', $event)">
+                                <md-icon md-font-icon="fa fa-facebook"></md-icon>
+                            </md-button>
+                            <md-button aria-label="google-plus" class="md-fab md-raised md-mini" ng-click="share('Shared on Google+', $event)">
+                                <md-icon md-font-icon="fa fa-google-plus"></md-icon>
+                            </md-button>
+                        </md-fab-actions>
+                    </md-fab-speed-dial>
                 </div>
             </tri-widget>
             <div layout="row" layout-margin>
