@@ -14,3 +14,6 @@ trim_trailing_whitespace = false
 
 [*.tmpl.html]
 indent_size = 4
+
+[*.scss]
+indent_size = 2
