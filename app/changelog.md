@@ -238,7 +238,7 @@
 - Fixed email list styling
 - Fixed Dashboard widget chart widths
 
-# Version ???
+# Version 2.6.0
 > Release Date : ???
 
 - Fixed translate gulp task.
@@ -246,6 +246,29 @@
 - Fixed bug where ng-messages covering inputs
 - Fixed form issues in authentication pages
 - Table titles now translatable
-- Upgraded md-data-table to 0.9.11
+- Upgraded packages
+    - md-data-table to 0.9.11
+    - angular-dragula to 1.2.2,
+    - angular-google-chart to 0.1.0,
+    - angular-google-maps to 2.3.2,
+    - angular-highlightjs to 0.5.1,    
+    - angular-local-storage to 0.2.5,
+    - angular-material to 1.1.0-rc1,
+    - angular-material-data-table to 0.9.12,    
+    - angular-moment to 1.0.0-beta.4,
+    - angular-resource to 1.4.8,
+    - angular-sanitize to 1.4.8,
+    - angular-translate to 2.10.0,
+    - angular-translate-loader-partial to 2.10.0,
+    - angular-translate-storage-cookie to 2.10.0,
+    - angular-translate-storage-local to 2.10.0,
+    - angular-ui-calendar to 1.0.1,
+    - angular-ui-router to 0.2.18,
+    - countUp.js to 1.6.1,
+    - font-awesome to 4.5.0,
+    - jquery to 2.2.1,
+    - material-design-iconic-font to 2.2.0,
+    - textAngular to 1.5.0,
+    - ng-file-upload to 12.0.1    
 - Added template override options to triLayoutProvider to allow users to override templates for left sidebar, the right sidebar, the content, the toolbar and the footer.
 - Updated documentation
