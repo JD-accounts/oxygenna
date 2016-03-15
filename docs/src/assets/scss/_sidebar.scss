@@ -71,6 +71,8 @@
   .bs-sidebar.affix {
     position: fixed; /* Undo the static from mobile first approach */
     top: 80px;
+    max-height: 85%;
+    overflow: scroll;
   }
   .bs-sidebar.affix-bottom {
     position: absolute; /* Undo the static from mobile first approach */
