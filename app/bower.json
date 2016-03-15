@@ -13,8 +13,8 @@
     "angular-highlightjs": "0.4.1",
     "angular-linkify": "~1.2.0",
     "angular-local-storage": "~0.2.2",
-    "angular-material": "1.0.1",
-    "angular-material-data-table": "0.8.14",
+    "angular-material": "1.0.5",
+    "angular-material-data-table": "0.9.11",
     "angular-messages": "1.4.8",
     "angular-moment": "~0.10.1",
     "angular-resource": "1.4.8",
@@ -65,7 +65,7 @@
   },
   "resolutions": {
     "angular": "1.4.8",
-    "angular-material": "1.0.1"
+    "angular-material": "1.0.5"
   },
   "main": [
     "triangular.js",

@@ -15,8 +15,18 @@
             contentClass: '',
             innerContentClass: '',
             sideMenuSize: 'full',
-            footer: true
+            showToolbar: true,
+            footer: true,
+            contentTemplateUrl: 'app/triangular/layouts/default/default-content.tmpl.html',
+            sidebarLeftTemplateUrl: 'app/triangular/components/menu/menu.tmpl.html',
+            sidebarLeftController: 'MenuController',
+            sidebarRightTemplateUrl: 'app/triangular/components/notifications-panel/notifications-panel.tmpl.html',
+            sidebarRightController: 'NotificationsPanelController',
+            toolbarTemplateUrl: 'app/triangular/components/toolbars/toolbar.tmpl.html',
+            toolbarController: 'DefaultToolbarController',
+            footerTemplateUrl: 'app/triangular/components/footer/footer.tmpl.html'
         };
+        var resetableOptions = ['toolbarSize', 'toolbarShrink', 'toolbarClass', 'contentClass', 'innerContentClass', 'showToolbar', 'footer', 'contentTemplateUrl', 'sidebarLeftTemplateUrl', 'sidebarLeftController', 'sidebarRightTemplateUrl', 'sidebarRightController', 'toolbarTemplateUrl', 'toolbarController', 'footerTemplateUrl'];
         var layout = {};
 
         this.getDefaultOption = getDefaultOption;
@@ -42,11 +52,11 @@
 
             function updateLayoutFromState(event, toState) {
                 // reset classes
-                for(var option in layoutDefaults) {
+                angular.forEach(resetableOptions, function(option){
                     layout[option] = layoutDefaults[option];
-                }
+                });
                 var layoutOverrides = angular.isDefined(toState.data) && angular.isDefined(toState.data.layout) ? toState.data.layout : {};
-                angular.extend(layout, layoutDefaults, layoutOverrides);
+                angular.extend(layout, layout, layoutOverrides);
             }
 
             return {

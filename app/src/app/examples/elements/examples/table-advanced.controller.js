@@ -15,6 +15,11 @@
             page: 1
         };
         vm.selected = [];
+        vm.columns = {
+            avatar: 'TABLE.COLUMNS.AVATAR',
+            login: 'TABLE.COLUMNS.LOGIN',
+            id: 'TABLE.COLUMNS.ID'
+        };
         vm.filter = {
             options: {
                 debounce: 500

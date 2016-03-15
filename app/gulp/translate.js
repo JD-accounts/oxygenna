@@ -11,7 +11,7 @@ var argv = require('yargs').argv;
 var map = require('map-stream');
 var rename = require('gulp-rename');
 var traverse = require('traverse');
-var translate = require('yandex-translate');
+var translate = require('yandex-translate')(YANDEX_API_KEY);
 var transform = require('vinyl-transform');
 var jsonFormat = require('gulp-json-format');
 
@@ -26,7 +26,7 @@ gulp.task('translate', function () {
         if(typeof x !== 'object') {
           var self = this;
           translateCount++;
-          translate(x, { to: argv.to, key: YANDEX_API_KEY }, function(err, res) {
+          translate.translate(x, { to: argv.to, key: YANDEX_API_KEY }, function(err, res) {
             self.update(res.text.toString());
             translateCount--;
             if(translateCount === 0) {
@@ -37,7 +37,7 @@ gulp.task('translate', function () {
           });
         }
       });
-    })
+    });
   });
 
   // make sure we have a from and to language

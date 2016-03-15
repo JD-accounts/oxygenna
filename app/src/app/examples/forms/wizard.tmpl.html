@@ -25,7 +25,7 @@
                                     <md-input-container class="md-block">
                                         <label translate>FORMS.WIZARD.USERNAME</label>
                                         <input name="username" ng-model="wizardController.data.account.username" required>
-                                        <div ng-messages="accountForm.username.$error">
+                                        <div ng-messages="accountForm.username.$error" md-auto-hide="false" ng-show="accountForm.username.$touched">
                                             <div ng-message when="required">
                                                 <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                             </div>
@@ -34,7 +34,7 @@
                                     <md-input-container class="md-block">
                                         <label>Email</label>
                                         <input type="email" name="email" ng-model="wizardController.data.account.email" required>
-                                        <div ng-messages="accountForm.email.$error">
+                                        <div ng-messages="accountForm.email.$error" md-auto-hide="false" ng-show="accountForm.email.$touched">
                                             <div ng-message when="required">
                                                 <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                             </div>
@@ -47,7 +47,7 @@
                                         <md-input-container flex>
                                             <label translate>FORMS.WIZARD.PASSWORD</label>
                                             <input type="password" name="password" ng-model="wizardController.data.account.password" required>
-                                            <div ng-messages="accountForm.password.$error">
+                                            <div ng-messages="accountForm.password.$error" md-auto-hide="false" ng-show="accountForm.password.$touched">
                                                 <div ng-message when="required">
                                                     <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                                 </div>
@@ -56,7 +56,7 @@
                                         <md-input-container flex>
                                             <label translate>FORMS.WIZARD.PASSWORD-CONFIRM</label>
                                             <input type="password" name="passwordConfirm" ng-model="wizardController.data.account.passwordConfirm" required>
-                                            <div ng-messages="accountForm.passwordConfirm.$error">
+                                            <div ng-messages="accountForm.passwordConfirm.$error" md-auto-hide="false" ng-show="accountForm.passwordConfirm.$touched">
                                                 <div ng-message when="required">
                                                     <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                                 </div>
@@ -81,7 +81,7 @@
                                         <md-input-container flex>
                                             <label translate>FORMS.WIZARD.FIRST-NAME</label>
                                             <input name="firstName" ng-model="wizardController.data.address.firstName" required>
-                                            <div ng-messages="addressForm.firstName.$error">
+                                            <div ng-messages="addressForm.firstName.$error" md-auto-hide="false" ng-show="addressForm.firstName.$touched">
                                                 <div ng-message when="required">
                                                     <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                                 </div>
@@ -90,7 +90,7 @@
                                         <md-input-container flex>
                                             <label translate>FORMS.WIZARD.LAST-NAME</label>
                                             <input name="lastName" ng-model="wizardController.data.address.lastName" required>
-                                            <div ng-messages="addressForm.lastName.$error">
+                                            <div ng-messages="addressForm.lastName.$error" md-auto-hide="false" ng-show="addressForm.lastName.$touched">
                                                 <div ng-message when="required">
                                                     <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                                 </div>
@@ -100,7 +100,7 @@
                                     <md-input-container class="md-block">
                                         <label translate>FORMS.WIZARD.ADDRESS</label>
                                         <input name="address1" ng-model="wizardController.data.address.line1" required>
-                                        <div ng-messages="addressForm.address1.$error">
+                                        <div ng-messages="addressForm.address1.$error" md-auto-hide="false" ng-show="addressForm.address1.$touched">
                                             <div ng-message when="required">
                                                 <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                             </div>
@@ -124,7 +124,7 @@
                                         <md-input-container flex>
                                             <label translate>FORMS.WIZARD.ZIP</label>
                                             <input name="zip" ng-model="wizardController.data.address.zip" required>
-                                            <div ng-messages="addressForm.zip.$error">
+                                            <div ng-messages="addressForm.zip.$error" md-auto-hide="false" ng-show="addressForm.zip.$touched">
                                                 <div ng-message when="required">
                                                     <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                                 </div>
@@ -135,7 +135,7 @@
                                             <md-select ng-change="triWizard.updateProgress()" name="country" ng-model="wizardController.data.address.country" required>
                                                 <md-option value="US" translate>FORMS.WIZARD.US</md-option>
                                             </md-select>
-                                            <div ng-messages="addressForm.country.$error">
+                                            <div ng-messages="addressForm.country.$error" md-auto-hide="false" ng-show="addressForm.country.$touched">
                                                 <div ng-message when="required">
                                                     <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                                 </div>
@@ -159,7 +159,7 @@
                                     <md-input-container class="md-block">
                                         <label translate>FORMS.WIZARD.CARD-NUMBER</label>
                                         <input name="cardNumber" ng-model="wizardController.data.billing.number" required>
-                                        <div ng-messages="billingForm.cardNumber.$error">
+                                        <div ng-messages="billingForm.cardNumber.$error" md-auto-hide="false" ng-show="billingForm.cardNumber.$touched">
                                             <div ng-message when="required">
                                                 <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                             </div>
@@ -168,7 +168,7 @@
                                     <md-input-container class="md-block">
                                         <label translate>FORMS.WIZARD.CARD-NAME</label>
                                         <input name="cardName" ng-model="wizardController.data.billing.name" required>
-                                        <div ng-messages="billingForm.cardName.$error">
+                                        <div ng-messages="billingForm.cardName.$error" md-auto-hide="false" ng-show="billingForm.cardName.$touched">
                                             <div ng-message when="required">
                                                 <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                             </div>
@@ -179,7 +179,7 @@
                                     <md-input-container flex>
                                         <label translate>FORMS.WIZARD.CARD-EX-MONTH</label>
                                         <input name="cardMonth" ng-model="wizardController.data.billing.cardMonth" ng-minlength="2" ng-maxlength="2" ng-pattern="/^(0?[1-9]|1[012])$/" required>
-                                        <div ng-messages="billingForm.cardMonth.$error">
+                                        <div ng-messages="billingForm.cardMonth.$error" md-auto-hide="false" ng-show="billingForm.cardMonth.$touched">
                                             <div ng-message when="required">
                                                 <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                             </div>
@@ -197,7 +197,7 @@
                                     <md-input-container flex>
                                         <label translate>FORMS.WIZARD.CARD-EX-YEAR</label>
                                         <input name="cardYear" ng-model="wizardController.data.billing.cardYear" ng-minlength="4" ng-maxlength="4" ng-pattern="/^[0-9]+$/" required>
-                                        <div ng-messages="billingForm.cardYear.$error">
+                                        <div ng-messages="billingForm.cardYear.$error" md-auto-hide="false" ng-show="billingForm.cardYear.$touched">
                                             <div ng-message when="required">
                                                 <span translate>FORMS.WIZARD.PLEASE-ENTER</span>
                                             </div>

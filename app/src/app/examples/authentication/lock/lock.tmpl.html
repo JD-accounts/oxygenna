@@ -19,7 +19,7 @@
                     <md-input-container class="md-block">
                         <label for="password" translate>LOCK.PASSWORD.LABEL</label>
                         <input label="password" name="password" type="password" ng-model="vm.user.password" required/>
-                        <div ng-messages for="lock.password.$error">
+                        <div ng-messages for="lock.password.$error" md-auto-hide="false" ng-show="lock.password.$touched">
                             <div ng-message when="required"><span translate>LOCK.PASSWORD.PLEASE_ENTER</span></div>
                         </div>
                     </md-input-container>

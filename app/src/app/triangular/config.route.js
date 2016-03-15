@@ -24,22 +24,48 @@
             abstract: true,
             views: {
                 sidebarLeft: {
-                    templateUrl: 'app/triangular/components/menu/menu.tmpl.html',
-                    controller: 'MenuController',
+                    templateProvider: function($templateCache, $http, triLayout) {
+                        return $http.get(triLayout.layout.sidebarLeftTemplateUrl, {cache: $templateCache })
+                                .then(function(response) {
+                                    return response.data;
+                                });
+                    },
+                    controllerProvider: function(triLayout) {
+                        return triLayout.layout.sidebarLeftController;
+                    },
                     controllerAs: 'vm'
                 },
                 sidebarRight: {
-                    templateUrl: 'app/triangular/components/notifications-panel/notifications-panel.tmpl.html',
-                    controller: 'NotificationsPanelController',
+                    templateProvider: function($templateCache, $http, triLayout) {
+                        return $http.get(triLayout.layout.sidebarRightTemplateUrl, {cache: $templateCache })
+                                .then(function(response) {
+                                    return response.data;
+                                });
+                    },
+                    controllerProvider: function(triLayout) {
+                        return triLayout.layout.sidebarRightController;
+                    },
                     controllerAs: 'vm'
                 },
                 toolbar: {
-                    templateUrl: 'app/triangular/components/toolbars/toolbar.tmpl.html',
-                    controller: 'DefaultToolbarController',
+                    templateProvider: function($templateCache, $http, triLayout) {
+                        return $http.get(triLayout.layout.toolbarTemplateUrl, {cache: $templateCache })
+                                .then(function(response) {
+                                    return response.data;
+                                });
+                    },
+                    controllerProvider: function(triLayout) {
+                        return triLayout.layout.toolbarController;
+                    },
                     controllerAs: 'vm'
                 },
                 content: {
-                    template: '<div id="admin-panel-content-view" class="{{layout.innerContentClass}}" flex ui-view></div>'
+                    templateProvider: function($templateCache, $http, triLayout) {
+                        return $http.get(triLayout.layout.contentTemplateUrl, {cache: $templateCache })
+                                .then(function(response) {
+                                    return response.data;
+                                });
+                    }
                 },
                 belowContent: {
                     template: '<div ui-view="belowContent"></div>'

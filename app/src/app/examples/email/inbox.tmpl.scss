@@ -24,7 +24,7 @@
     }
   }
   .md-list-item-text {
-    white-space: normal;
+    overflow: hidden;
   }
 }
 
@@ -42,7 +42,7 @@
 
 .email-inbox-list-item-unread {
   h3, h4 {
-    font-weight: 500 !important;
+    font-weight: 700 !important;
   }
 }
 

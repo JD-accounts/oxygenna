@@ -25,7 +25,15 @@
             "TOASTS": "Toasts",
             "LISTS": "Listes",
             "CHIPS": "Jetons",
-            "MENUS": "Menus"
+            "MENUS": "Menus",
+            "UPLOAD": "Télécharger"
+        }
+    },
+    "TABLE": {
+        "COLUMNS": {
+            "NAME": "Nom",
+            "DESCRIPTION": "Description",
+            "BIRTH": "Date de Naissance"
         }
     }
 }

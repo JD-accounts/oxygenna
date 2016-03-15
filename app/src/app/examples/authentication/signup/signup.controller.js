@@ -23,7 +23,7 @@
             $http({
                 method: 'POST',
                 url: API_CONFIG.url + 'signup',
-                data: $scope.user
+                data: vm.user
             }).
             success(function(data) {
                 $mdToast.show(
@@ -34,7 +34,7 @@
                     .highlightAction(true)
                     .hideDelay(0)
                 ).then(function() {
-                    $state.go('public.auth.login');
+                    $state.go('authentication.login');
                 });
             }).
             error(function() {

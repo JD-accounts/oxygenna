@@ -38,6 +38,7 @@
                     .position('bottom right')
                     .hideDelay(500)
                 );
+                $rootScope.$emit('changeTitle');
             });
         }
 

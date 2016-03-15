@@ -17,14 +17,14 @@
                         <md-input-container class="md-block">
                             <label for="name" translate>PROFILE.NAME.LABEL</label>
                             <input id="name" label="name" name="name" type="text" ng-model="vm.user.name" required/>
-                            <div ng-messages="profile.name.$error">
+                            <div ng-messages="profile.name.$error" md-auto-hide="false" ng-show="profile.name.$touched">
                                 <div ng-message when="required"><span translate>PROFILE.NAME.PLEASE_ENTER</span></div>
                             </div>
                         </md-input-container>
                         <md-input-container class="md-block">
                             <label for="email" translate>PROFILE.EMAIL.LABEL</label>
                             <input id="email" label="email" name="email" type="email" ng-model="vm.user.email" required/>
-                            <div ng-messages="profile.email.$error">
+                            <div ng-messages="profile.email.$error" md-auto-hide="false" ng-show="profile.email.$touched">
                                 <div ng-message when="required">
                                     <span translate>PROFILE.EMAIL.PLEASE_ENTER</span>
                                 </div>
@@ -69,13 +69,13 @@
                         <md-input-container class="md-block">
                             <label for="password" translate>PROFILE.PASSWORD.LABEL</label>
                             <input id="password" label="password" name="password" type="password" ng-model="vm.user.password" tri-same-password="password.confirm" ng-minlength="8" required/>
-                            <div ng-messages="password.password.$error" ng-include="'app/examples/authentication/signup/password.messages.html'"></div>
+                            <div ng-messages="password.password.$error" ng-include="'app/examples/authentication/signup/password.messages.html'" md-auto-hide="false" ng-show="password.password.$touched"></div>
                         </md-input-container>
 
                         <md-input-container class="md-block">
                             <label for="confirm" translate>PROFILE.PASSWORD_CONFIRM.LABEL</label>
                             <input id="confirm" label="confirm" name="confirm" type="password" ng-model="vm.user.confirm" tri-same-password="password.password" ng-minlength="8" required/>
-                            <div ng-messages="password.confirm.$error" ng-include="'app/examples/authentication/signup/password.messages.html'"></div>
+                            <div ng-messages="password.confirm.$error" ng-include="'app/examples/authentication/signup/password.messages.html'" md-auto-hide="false" ng-show="password.confirm.$touched"></div>
                         </md-input-container>
 
                         <md-button class="md-raised md-primary margin-left-0" ng-disabled="profile.$invalid" translate="PROFILE.BUTTON"></md-button>

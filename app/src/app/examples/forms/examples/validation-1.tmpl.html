@@ -3,7 +3,7 @@
     <md-input-container class="md-block">
         <label for="email">email</label>
         <input id="email" label="email" name="email" type="email" ng-model="user.email" required/>
-        <div ng-messages="login.email.$error">
+        <div ng-messages="login.email.$error" md-auto-hide="false" ng-show="login.email.$touched">
             <div ng-message="required">
                 Please enter your email address.
             </div>
