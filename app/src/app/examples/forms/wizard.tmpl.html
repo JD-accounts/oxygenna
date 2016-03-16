@@ -5,7 +5,7 @@
     </div>
 
     <div flex layout="row" layout-align="center center" layout-fill>
-        <div flex="90" class="md-whiteframe-z1 margin-bottom-100" tri-wizard>
+        <md-card flex="90" class="md-whiteframe-z1 margin-bottom-100" tri-wizard>
             <md-toolbar class="md-primary">
                 <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
                     <h2>Form Wizard</h2><h2> {{triWizard.progress}}% <span translate>FORMS.WIZARD.COMPLETE</span></h2>
@@ -232,11 +232,11 @@
                     </md-tab-body>
                 </md-tab>
             </md-tabs>
-            <div class="wizard-navbar" layout-fill layout-padding layout="row" layout-align="end center">
+            <md-card-actions layout="row" layout-align="end center">
                 <md-button class="md-primary md-raised" ng-click="triWizard.prevStep()" ng-hide="triWizard.currentStep > 2" ng-disabled="triWizard.prevStepDisabled()" translate="FORMS.WIZARD.PREV"></md-button>
                 <md-button class="md-primary md-raised" ng-click="triWizard.nextStep()" ng-hide="triWizard.progress == 100 && triWizard.currentStep > 1" ng-disabled="triWizard.nextStepDisabled()" translate="FORMS.WIZARD.NEXT"></md-button>
                 <md-button class="md-accent md-raised" ng-click="triWizard.currentStep = 3" ng-show="triWizard.progress == 100 && triWizard.currentStep < 3" translate="FORMS.WIZARD.SEND"></md-button>
-            </div>
+            </md-card-actions>
         </div>
-    </div>
+    </md-card>
 </div>
