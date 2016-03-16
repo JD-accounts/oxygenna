@@ -274,3 +274,4 @@
 - Fixed icon button widths in toolbar
 - Changed email list in secondary sidebar to use new md-dense list
 - Updated documentation
+- Added new card examples to elements / cards
