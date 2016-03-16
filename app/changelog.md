@@ -239,7 +239,7 @@
 - Fixed Dashboard widget chart widths
 
 # Version 2.6.0
-> Release Date : ???
+> Release Date : 16th March 2016
 
 - Fixed translate gulp task.
 - Added watch to countupto directive
