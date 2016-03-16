@@ -276,3 +276,4 @@
 - Updated documentation
 - Added new card examples to elements / cards
 - Restyle of email card and list
+- Better display of scrollbars on IE10+
