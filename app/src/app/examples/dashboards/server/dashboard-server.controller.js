@@ -10,15 +10,15 @@
         var vm = this;
         vm.disks = [{
             icon: 'zmdi zmdi-storage',
-            name: 'Ubuntu 10.04 LTS Disk Image (10000 MB, ext3)',
+            name: 'Ubuntu 10.04 LTS Disk Image',
             enabled: true
         },{
             icon: 'zmdi zmdi-input-composite',
-            name: 'Ubuntu 11.10 SSD Image (10224 MB, ext3)',
+            name: 'Ubuntu 11.10 SSD Image',
             enabled: false
         },{
             icon: 'zmdi zmdi-storage',
-            name: '256MB Swap Image (256 MB, swap)',
+            name: '256MB Swap Image',
             enabled: true
         }];
 
