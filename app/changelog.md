@@ -276,4 +276,5 @@
 - Updated documentation
 - Added new card examples to elements / cards
 - Restyle of email card and list
-- Better display of scrollbars on IE10+
+- Better display of scrollbars on Windows IE10+ & Chrome
+- Fixed layout of authentication pages in IE11+
