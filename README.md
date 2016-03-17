@@ -1,4 +1,4 @@
-Triangular [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/oxygenna/triangular?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+Triangular [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/oxygenna/triangular)
 ===========================================
 
 Welcome to triangulars code repo here you can see all the development of triangular as it happens and discuss & contribute to it's further devlopment.  Feel free to log into gitter and join the conversation.

@@ -7,6 +7,10 @@ $sidenav-desktop-width: 320px;
 // import triangular module scss
 @import "triangular/triangular";
 
+body {
+  color: #212121;
+}
+
 // set template font family
 button, select, html, textarea, input {
   font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;

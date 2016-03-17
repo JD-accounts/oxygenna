@@ -237,7 +237,7 @@ tri-menu {
 }
 
 /* Style for scrollbar on webkit browsers in windows - looks nice already on other operating systems ;) */
-.os-windows side-menu {
+.os-windows side-menu, .os-windows md-content {
   &::-webkit-scrollbar {
     width: 8px;
     background: rgba(0,0,0,0.1);
@@ -249,6 +249,7 @@ tri-menu {
     border-radius: 4px;
     transition: all .2s
   }
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 // Side menu shrink/grow icon

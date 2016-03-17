@@ -23,8 +23,8 @@
                     subtitle: 'Sales, Expenses, and Profit: 2014-2017'
                 },
                 bars: 'vertical',
-                width: 800,
-                height: 600
+                width: '100%',
+                height: '600'
             }
         };
     }

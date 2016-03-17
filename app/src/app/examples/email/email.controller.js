@@ -12,7 +12,6 @@
         vm.deleteEmail = deleteEmail;
         vm.email = email;
         vm.emailAction = emailAction;
-        vm.menuClick = menuClick;
 
         /////////////////
 
@@ -24,7 +23,7 @@
             $scope.$emit('deleteEmail', email);
         }
 
-        function emailAction(title) {
+        function emailAction($event, title) {
             var replyEmail = {
                 to: [],
                 cc: [],
@@ -42,20 +41,15 @@
                 }
             });
 
-            openEmail(replyEmail, $filter('translate')(title));
+            openEmail($event, replyEmail, $filter('translate')(title));
         }
 
-        function menuClick($event) {
-            // store copy of button click event to use for dialog animations
-            vm.menuClickEvent = $event;
-        }
-
-        function openEmail(email, title) {
+        function openEmail($event, email, title) {
             $mdDialog.show({
                 controller: 'EmailDialogController',
                 controllerAs: 'vm',
                 templateUrl: 'app/examples/email/email-dialog.tmpl.html',
-                targetEvent: vm.menuClickEvent,
+                targetEvent: $event,
                 locals: {
                     title: title,
                     email: email,

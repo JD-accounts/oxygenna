@@ -239,7 +239,7 @@
 - Fixed Dashboard widget chart widths
 
 # Version 2.6.0
-> Release Date : ???
+> Release Date : 16th March 2016
 
 - Fixed translate gulp task.
 - Added watch to countupto directive
@@ -275,3 +275,6 @@
 - Changed email list in secondary sidebar to use new md-dense list
 - Updated documentation
 - Added new card examples to elements / cards
+- Restyle of email card and list
+- Better display of scrollbars on Windows IE10+ & Chrome
+- Fixed layout of authentication pages in IE11+
