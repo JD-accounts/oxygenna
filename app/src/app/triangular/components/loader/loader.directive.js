@@ -23,12 +23,10 @@
         function link($scope) {
             var loadingListener = $rootScope.$on('$stateChangeStart', function() {
                 $scope.vm.setLoaderActive(true);
-                console.log('turn on');
             });
 
             var loadedListener = $rootScope.$on('$viewContentLoaded', function() {
                 $scope.vm.setLoaderActive(false);
-                console.log('turn off');
             });
 
             $scope.$on('$destroy', removeListeners);
@@ -45,7 +43,6 @@
         var vm = this;
         vm.triSettings     = triSettings;
         vm.status          = triLoaderService.status;
-        vm.setLoaderActive = triLoaderService.setLoaderActive;
-        console.log('loader', vm);
+        vm.setLoaderActive = triLoaderService.setLoaderActive;        
     }
 })();
