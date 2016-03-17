@@ -3,15 +3,19 @@
 
     angular
         .module('triangular.components')
-        .service('triBreadcrumbsService', BreadcrumbsService);
+        .factory('triBreadcrumbsService', BreadcrumbsService);
 
     /* @ngInject */
     function BreadcrumbsService($rootScope) {
-        this.breadcrumbs = {
-            crumbs: []
+        var crumbs = [];
+
+        return {
+            breadcrumbs: {
+                crumbs: crumbs
+            },
+            addCrumb: addCrumb,
+            reset: reset
         };
-        this.addCrumb = addCrumb;
-        this.reset = reset;
 
         ////////////////
 

@@ -3,14 +3,16 @@
 
     angular
         .module('app.examples.dashboards')
-        .service('SalesService', SalesService);
+        .factory('SalesService', SalesService);
 
     /* @ngInject */
     function SalesService() {
-        this.generateSales = generateSales;
-        this.createLineChartData = createLineChartData;
-        this.createPieChartData = createPieChartData;
-        this.createBarChartData = createBarChartData;
+        return {
+            generateSales: generateSales,
+            createLineChartData: createLineChartData,
+            createPieChartData: createPieChartData,
+            createBarChartData: createBarChartData
+        };
 
         ////////////////
 

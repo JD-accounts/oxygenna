@@ -3,13 +3,15 @@
 
     angular
         .module('app.examples.elements')
-        .service('GithubService', Service);
+        .factory('GithubService', Service);
 
     Service.$inject = ['$http', '$q'];
 
     /* @ngInject */
     function Service($http) {
-        this.getUsers = getUsers;
+        return {
+            getUsers: getUsers
+        };
 
         ////////////////
 

@@ -278,3 +278,11 @@
 - Restyle of email card and list
 - Better display of scrollbars on Windows IE10+ & Chrome
 - Fixed layout of authentication pages in IE11+
+
+# Version ???
+> Release Date : ???
+
+- Moved loader watches into triangular run (catches events earlier)
+- Changed services to factories to match John Pappa style
+- Removed calls to API in auth pages
+- Added docs for menus

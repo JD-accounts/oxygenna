@@ -6,43 +6,24 @@
         .directive('triLoader', TriLoader);
 
     /* @ngInject */
-    function TriLoader ($rootScope) {
+    function TriLoader () {
         var directive = {
             bindToController: true,
             controller: TriLoaderController,
             controllerAs: 'vm',
-            template: '<div flex class="loader padding-100" ng-show="vm.status.active" layout="column" layout-fill layout-align="center center"><h3 class="md-headline">{{vm.triSettings.name}}</h3><md-progress-linear md-mode="indeterminate"></md-progress-linear></div>',
-            link: link,
+            template: '<div flex class="loader padding-100" ng-show="vm.isActive()" layout="column" layout-fill layout-align="center center"><h3 class="md-headline">{{vm.triSettings.name}}</h3><md-progress-linear md-mode="indeterminate"></md-progress-linear></div>',
             restrict: 'E',
             replace: true,
             scope: {
             }
         };
         return directive;
-
-        function link($scope) {
-            var loadingListener = $rootScope.$on('$stateChangeStart', function() {
-                $scope.vm.setLoaderActive(true);
-            });
-
-            var loadedListener = $rootScope.$on('$viewContentLoaded', function() {
-                $scope.vm.setLoaderActive(false);
-            });
-
-            $scope.$on('$destroy', removeListeners);
-
-            function removeListeners() {
-                loadingListener();
-                loadedListener();
-            }
-        }
     }
 
     /* @ngInject */
     function TriLoaderController ($rootScope, triLoaderService, triSettings) {
         var vm = this;
-        vm.triSettings     = triSettings;
-        vm.status          = triLoaderService.status;
-        vm.setLoaderActive = triLoaderService.setLoaderActive;        
+        vm.triSettings = triSettings;
+        vm.isActive    = triLoaderService.isActive;
     }
 })();

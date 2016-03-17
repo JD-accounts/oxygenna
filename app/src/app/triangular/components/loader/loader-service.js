@@ -3,21 +3,25 @@
 
     angular
         .module('triangular.components')
-        .service('triLoaderService', LoaderService);
+        .factory('triLoaderService', LoaderService);
 
     /* @ngInject */
     function LoaderService() {
-        var vm = this;
+        var active = false;
 
-        vm.status = {
-            active: true
+        return {
+            isActive: isActive,
+            setLoaderActive: setLoaderActive
         };
-        vm.setLoaderActive = setLoaderActive;
 
         ////////////////
 
-        function setLoaderActive(active) {
-            vm.status.active = active;
+        function isActive() {
+            return active;
+        }
+
+        function setLoaderActive(setActive) {
+            active = setActive;
         }
     }
 })();

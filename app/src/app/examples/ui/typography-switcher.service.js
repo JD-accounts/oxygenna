@@ -3,13 +3,15 @@
 
     angular
         .module('app.examples.ui')
-        .service('TypographySwitcherService', TypographySwitcher);
+        .factory('TypographySwitcherService', TypographySwitcher);
 
     /* @ngInject */
     function TypographySwitcher($window, $cookies, $log, UI_FONTS) {
-        this.changeFont = changeFont;
-        this.getCurrentFont = getCurrentFont;
-        this.init = init;
+        return {
+            changeFont: changeFont,
+            getCurrentFont: getCurrentFont,
+            init: init
+        };
 
         //////////////////
 
