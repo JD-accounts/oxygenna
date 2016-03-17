@@ -57,9 +57,8 @@
         "BUTTON": "Sign Up",
         "HAVE_LOGIN": "Already have an account? Login here.",
         "MESSAGES": {
-            "CONFIRM_SENT": "Confirmation sent to",
+            "CONFIRM_SENT": "Confirmation sent",
             "LOGIN_NOW": "Login",
-            "CONFIRM_SENT": "Confirmation sent to",
             "NO_SIGNUP": "Could not sign user up"
         }
     },
