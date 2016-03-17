@@ -48,6 +48,9 @@ topmenu:
                 name: Modules
                 slug: modules
             -
+                name: Menu
+                slug: menu
+            -
                 name: Colors & Themes
                 slug: themes
             -
