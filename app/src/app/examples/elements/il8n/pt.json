@@ -26,14 +26,19 @@
             "LISTS": "Listas",
             "CHIPS": "Fichas",
             "MENUS": "Menus",
-            "UPLOAD": "Upload"
+            "UPLOAD": "Upload",
+            "LOADER": "Carregador",
+            "DATEPICKER": "O selecionador de data"
         }
     },
     "TABLE": {
         "COLUMNS": {
             "NAME": "Nome",
             "DESCRIPTION": "Descrição",
-            "BIRTH": "Data de Nascimento"
+            "BIRTH": "Data de Nascimento",
+            "AVATAR": "Avatar",
+            "LOGIN": "Login",
+            "ID": "ID"
         }
     }
 }

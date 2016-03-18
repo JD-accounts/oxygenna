@@ -57,7 +57,7 @@
         "BUTTON": "签了",
         "HAVE_LOGIN": "已经有一个帐户吗？ 登录在这里",
         "MESSAGES": {
-            "CONFIRM_SENT": "确认发送给",
+            "CONFIRM_SENT": "确认发",
             "LOGIN_NOW": "登陆",
             "NO_SIGNUP": "能不签，多用户来"
         }

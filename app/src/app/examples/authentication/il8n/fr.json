@@ -57,7 +57,7 @@
         "BUTTON": "Inscrivez -",
         "HAVE_LOGIN": "Avez déjà un compte? Connectez-vous ici.",
         "MESSAGES": {
-            "CONFIRM_SENT": "Envoi de notre Confirmation",
+            "CONFIRM_SENT": "Confirmation",
             "LOGIN_NOW": "Connexion",
             "NO_SIGNUP": "N'a pas pu signer utilisateur"
         }

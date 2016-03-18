@@ -26,14 +26,19 @@
             "LISTS": "清单",
             "CHIPS": "薯片",
             "MENUS": "菜单",
-            "UPLOAD": "上传"
+            "UPLOAD": "上传",
+            "LOADER": "装载机",
+            "DATEPICKER": "Datepicker"
         }
     },
     "TABLE": {
         "COLUMNS": {
             "NAME": "的名字",
             "DESCRIPTION": "描述",
-            "BIRTH": "出生日期"
+            "BIRTH": "出生日期",
+            "AVATAR": "降世神通",
+            "LOGIN": "登陆",
+            "ID": "身份证"
         }
     }
 }

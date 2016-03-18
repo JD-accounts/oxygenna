@@ -57,7 +57,7 @@
         "BUTTON": "Assinar",
         "HAVE_LOGIN": "Já tem uma conta? Login aqui.",
         "MESSAGES": {
-            "CONFIRM_SENT": "Confirmação enviado ao",
+            "CONFIRM_SENT": "Confirmação enviado",
             "LOGIN_NOW": "Login",
             "NO_SIGNUP": "Não poderia assinar usuário até"
         }
