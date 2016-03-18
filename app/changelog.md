@@ -280,7 +280,7 @@
 - Fixed layout of authentication pages in IE11+
 
 # Version 2.6.1
-> Release Date : ???
+> Release Date : 18th March 2016
 
 - Moved loader watches into triangular run (catches events earlier)
 - Changed services to factories to match John Pappa style
