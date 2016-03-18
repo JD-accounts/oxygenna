@@ -27,7 +27,8 @@
             "CHIPS": "Chips",
             "MENUS": "Menus",
             "UPLOAD": "Upload",
-            "LOADER": "Loader"
+            "LOADER": "Loader",
+            "DATEPICKER": "Datepicker"
         }
     },
     "TABLE": {

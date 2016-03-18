@@ -279,7 +279,7 @@
 - Better display of scrollbars on Windows IE10+ & Chrome
 - Fixed layout of authentication pages in IE11+
 
-# Version ???
+# Version 2.6.1
 > Release Date : ???
 
 - Moved loader watches into triangular run (catches events earlier)
@@ -287,3 +287,4 @@
 - Removed calls to API in auth pages
 - Added docs for menus
 - Added loader example to elements
+- Added datepicker example

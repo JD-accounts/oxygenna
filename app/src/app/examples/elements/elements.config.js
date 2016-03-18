@@ -171,6 +171,10 @@
         .state('triangular.admin-default.elements-loader', {
             url: '/elements/loader',
             templateUrl: 'app/examples/elements/loader.tmpl.html'
+        })
+        .state('triangular.admin-default.elements-datepicker', {
+            url: '/elements/datepicker',
+            templateUrl: 'app/examples/elements/datepicker.tmpl.html'
         });
 
         triMenuProvider.addMenu({
@@ -194,6 +198,10 @@
                 name: 'MENU.ELEMENTS.CHIPS',
                 type: 'link',
                 state: 'triangular.admin-default.elements-chips'
+            },{
+                name: 'MENU.ELEMENTS.DATEPICKER',
+                type: 'link',
+                state: 'triangular.admin-default.elements-datepicker'
             },{
                 name: 'MENU.ELEMENTS.DIALOGS',
                 type: 'link',
