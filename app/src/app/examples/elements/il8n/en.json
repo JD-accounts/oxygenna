@@ -26,7 +26,8 @@
             "LISTS": "Lists",
             "CHIPS": "Chips",
             "MENUS": "Menus",
-            "UPLOAD": "Upload"
+            "UPLOAD": "Upload",
+            "LOADER": "Loader"
         }
     },
     "TABLE": {

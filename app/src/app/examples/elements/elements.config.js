@@ -167,6 +167,10 @@
         .state('triangular.admin-default.elements-upload', {
             url: '/elements/upload',
             templateUrl: 'app/examples/elements/upload.tmpl.html'
+        })
+        .state('triangular.admin-default.elements-loader', {
+            url: '/elements/loader',
+            templateUrl: 'app/examples/elements/loader.tmpl.html'
         });
 
         triMenuProvider.addMenu({
@@ -214,6 +218,10 @@
                 name: 'MENU.ELEMENTS.LISTS',
                 type: 'link',
                 state: 'triangular.admin-default.elements-lists'
+            },{
+                name: 'MENU.ELEMENTS.LOADER',
+                type: 'link',
+                state: 'triangular.admin-default.elements-loader'
             },{
                 name: 'MENU.ELEMENTS.MENUS',
                 type: 'link',

@@ -286,3 +286,4 @@
 - Changed services to factories to match John Pappa style
 - Removed calls to API in auth pages
 - Added docs for menus
+- Added loader example to elements
