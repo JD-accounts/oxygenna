@@ -28,7 +28,7 @@ tri-menu {
     transform: rotate(90deg);
     transition: all .2s;
   }
-  .md-locked-open & {
+  ._md-locked-open & {
     display: block;
   }
 }
