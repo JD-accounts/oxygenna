@@ -251,10 +251,10 @@
     - angular-dragula to 1.2.2,
     - angular-google-chart to 0.1.0,
     - angular-google-maps to 2.3.2,
-    - angular-highlightjs to 0.5.1,    
+    - angular-highlightjs to 0.5.1,
     - angular-local-storage to 0.2.5,
     - angular-material to 1.1.0-rc1,
-    - angular-material-data-table to 0.9.12,    
+    - angular-material-data-table to 0.9.12,
     - angular-moment to 1.0.0-beta.4,
     - angular-resource to 1.4.8,
     - angular-sanitize to 1.4.8,
@@ -269,7 +269,7 @@
     - jquery to 2.2.1,
     - material-design-iconic-font to 2.2.0,
     - textAngular to 1.5.0,
-    - ng-file-upload to 12.0.1    
+    - ng-file-upload to 12.0.1
 - Added template override options to triLayoutProvider to allow users to override templates for left sidebar, the right sidebar, the content, the toolbar and the footer.
 - Fixed icon button widths in toolbar
 - Changed email list in secondary sidebar to use new md-dense list
@@ -288,3 +288,10 @@
 - Added docs for menus
 - Added loader example to elements
 - Added datepicker example
+
+# Version 2.6.2
+> Release Date : 29th March 2016
+
+- Fixed Side Navigation Toggle
+- Upgraded md-table examples with progress bar functionality
+- Updated Documentation with examples for Template Overriding
