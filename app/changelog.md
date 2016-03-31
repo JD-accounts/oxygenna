@@ -295,3 +295,8 @@
 - Fixed Side Navigation Toggle
 - Upgraded md-table examples with progress bar functionality
 - Updated Documentation with examples for Template Overriding
+
+# Version ???
+> Release Date : ???
+
+- Fixed unwanted animation on table advanced when select search or check item
