@@ -29,30 +29,180 @@ In order to use your own templates instead of the default ones, locate and edit 
 
 and override the template/controller you want using the setDefaultOption method.
 
-# Overriding the Sidebar
+# Overriding the Left Sidebar
+
+## Overriding the left sidebar template
 
 An example overriding the template used for the left sidebar can be seen below:
 
-1. Grab the contents of the original sidebar template, which as mentioned in the section above is located under
+1. Grab the contents of the original sidebar template from the triangular module.
 
   <code>app/triangular/components/menu/menu.tmpl.html</code>
 
-  and paste it's contents in your own new template - let's call it <code>custom-sidebar.html</code>. Your <code>custom-sidebar.html</code> can be located anywhere inside your app.
-2. Once you have created your custom template, change it's contents to your liking.
-3. Having added your own contents in your custom sidebar template, you will want to make triangular use this one instead the original. This can be achieved by editing <code>config.triangular.layout.js</code> as mentioned above, and adding the following:
+2. Copy the file somewhere into your app, for example:
 
-  <code>triLayoutProvider.setDefaultOption('sidebarLeftTemplateUrl', 'path/to/your/custom-sidebar.html');</code>
+    <code>app/module/my-menu.html</code>
 
-  where path/to/your/ is the path within your app that you placed your template in.
+3. Now you will want to make triangular use your version of the template instead the original.
+  To do this edit <code>config.triangular.layout.js</code> and change the sidebarLeftTemplateUrl option to point to your new template.
 
-4. If you also want to modify the sidebar's functionality, you will have to repeat a similar process to the one above, but for the sidebar's controller this time. Grab the contents of the original sidebar controller, which as mentioned in the top section of the page is the <code>MenuController</code> and is located under
+  <pre><code>triLayoutProvider.setDefaultOption('sidebarLeftTemplateUrl', 'app/module/my-menu.html');</code></pre>
+
+4. You can now modify the markup in your version of the menu <code>app/module/my-menu.html</code>
+
+## Overriding the left sidebar controller
+
+If you also want to modify the sidebar's functionality you can override it's controller.
+
+1. Grab the contents of the original controller from
 
   <code>app/triangular/components/menu/menu.controller.js</code>
 
-  and paste it's contents in your own new controller - let's call it <code>custom-menu.controller.js</code>. Your <code>custom-menu.controller.js</code> can be located anywhere inside your app. Let's assume that you named the controller function itself <code>CustomMenuController</code>.
-5. Modify the controller code in <code>custom-menu.controller.js</code> to your liking.
-6. You now want triangular to use your custom controller instead of the default one. Similarly to step 3, edit <code>config.triangular.layout.js</code> again and add the following:
+2. Copy the file somewhere in your app for example.
 
-  <code>triLayoutProvider.setDefaultOption('sidebarLeftController', 'CustomMenuController');</code>
+  <code>app/module/my-menu-controller.controller.js</code>
 
-You have now successfully overridden the default sidebar and it's controller!
+3. Rename the controller in your new copy of the js file.
+
+  <pre><code>.controller('MyMenuController', MenuController);</code></pre>
+
+4. Now you want triangular to use your custom controller instead of the default one.
+  Edit <code>config.triangular.layout.js</code> and change sidebarLeftController to use your new controller name.
+
+  <pre><code>triLayoutProvider.setDefaultOption('sidebarLeftController', 'MyMenuController');</code></pre>
+
+5. Modify the controller js code to your liking.
+
+# Overriding the Right Sidebar
+
+## Overriding the right sidebar template
+
+An example overriding the template used for the right sidebar can be seen below:
+
+1. Grab the contents of the original sidebar template from the triangular module.
+
+  <code>app/triangular/components/menu/menu.tmpl.html</code>
+
+2. Copy the file somewhere into your app, for example:
+
+    <code>app/module/my-menu.html</code>
+
+3. Now you will want to make triangular use your version of the template instead the original.
+  To do this edit <code>config.triangular.layout.js</code> and change the sidebarLeftTemplateUrl option to point to your new template.
+
+  <pre><code>triLayoutProvider.setDefaultOption('sidebarLeftTemplateUrl', 'app/module/my-menu.html');</code></pre>
+
+4. You can now modify the markup in your version of the menu <code>app/module/my-menu.html</code>
+
+## Overriding the right sidebar controller
+
+If you also want to modify the sidebar's functionality you can override it's controller.
+
+1. Grab the contents of the original controller from
+
+  <code>app/triangular/components/menu/menu.controller.js</code>
+
+2. Copy the file somewhere in your app for example.
+
+  <code>app/module/my-menu-controller.controller.js</code>
+
+3. Rename the controller in your new copy of the js file.
+
+  <pre><code>.controller('MyMenuController', MenuController);</code></pre>
+
+4. Now you want triangular to use your custom controller instead of the default one.
+  Edit <code>config.triangular.layout.js</code> and change sidebarLeftController to use your new controller name.
+
+  <pre><code>triLayoutProvider.setDefaultOption('sidebarLeftController', 'MyMenuController');</code></pre>
+
+5. Modify the controller js code to your liking.
+
+# Overriding the Toolbar
+
+## Overriding the toolbar template
+
+An example overriding the template used for the toolbar can be seen below:
+
+1. Grab the contents of the original sidebar template from the triangular module.
+
+  <code>app/triangular/components/menu/menu.tmpl.html</code>
+
+2. Copy the file somewhere into your app, for example:
+
+    <code>app/module/my-menu.html</code>
+
+3. Now you will want to make triangular use your version of the template instead the original.
+  To do this edit <code>config.triangular.layout.js</code> and change the sidebarLeftTemplateUrl option to point to your new template.
+
+  <pre><code>triLayoutProvider.setDefaultOption('sidebarLeftTemplateUrl', 'app/module/my-menu.html');</code></pre>
+
+4. You can now modify the markup in your version of the menu <code>app/module/my-menu.html</code>
+
+## Overriding the toolbar controller
+
+If you also want to modify the sidebar's functionality you can override it's controller.
+
+1. Grab the contents of the original controller from
+
+  <code>app/triangular/components/menu/menu.controller.js</code>
+
+2. Copy the file somewhere in your app for example.
+
+  <code>app/module/my-menu-controller.controller.js</code>
+
+3. Rename the controller in your new copy of the js file.
+
+  <pre><code>.controller('MyMenuController', MenuController);</code></pre>
+
+4. Now you want triangular to use your custom controller instead of the default one.
+  Edit <code>config.triangular.layout.js</code> and change sidebarLeftController to use your new controller name.
+
+  <pre><code>triLayoutProvider.setDefaultOption('sidebarLeftController', 'MyMenuController');</code></pre>
+
+5. Modify the controller js code to your liking.
+
+
+# Overriding the Footer
+
+## Overriding the footer template
+
+An example overriding the template used for the footer can be seen below:
+
+1. Grab the contents of the original sidebar template from the triangular module.
+
+  <code>app/triangular/components/menu/menu.tmpl.html</code>
+
+2. Copy the file somewhere into your app, for example:
+
+    <code>app/module/my-menu.html</code>
+
+3. Now you will want to make triangular use your version of the template instead the original.
+  To do this edit <code>config.triangular.layout.js</code> and change the sidebarLeftTemplateUrl option to point to your new template.
+
+  <pre><code>triLayoutProvider.setDefaultOption('sidebarLeftTemplateUrl', 'app/module/my-menu.html');</code></pre>
+
+4. You can now modify the markup in your version of the menu <code>app/module/my-menu.html</code>
+
+## Overriding the footer controller
+
+If you also want to modify the sidebar's functionality you can override it's controller.
+
+1. Grab the contents of the original controller from
+
+  <code>app/triangular/components/menu/menu.controller.js</code>
+
+2. Copy the file somewhere in your app for example.
+
+  <code>app/module/my-menu-controller.controller.js</code>
+
+3. Rename the controller in your new copy of the js file.
+
+  <pre><code>.controller('MyMenuController', MenuController);</code></pre>
+
+4. Now you want triangular to use your custom controller instead of the default one.
+  Edit <code>config.triangular.layout.js</code> and change sidebarLeftController to use your new controller name.
+
+  <pre><code>triLayoutProvider.setDefaultOption('sidebarLeftController', 'MyMenuController');</code></pre>
+
+5. Modify the controller js code to your liking.
+
