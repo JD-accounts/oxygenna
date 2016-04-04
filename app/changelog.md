@@ -300,3 +300,4 @@
 > Release Date : ???
 
 - Fixed unwanted animation on table advanced when select search or check item
+- Updated material to 1.1.0-rc2
