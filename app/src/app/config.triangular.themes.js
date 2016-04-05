@@ -65,7 +65,7 @@
         .accentPalette('amber')
         .warnPalette('deep-orange');
 
-        triThemingProvider.theme('white-cyan')
+        triThemingProvider.theme('default')
         .primaryPalette('white')
         .accentPalette('triCyan', {
             'default': '500'
@@ -74,7 +74,7 @@
 
         triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
         .sidebarTheme('cyan')
-        .toolbarTheme('white-cyan')
+        .toolbarTheme('default')
         .logoTheme('cyan')
         .contentTheme('cyan');
 
