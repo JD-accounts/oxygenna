@@ -296,8 +296,10 @@
 - Upgraded md-table examples with progress bar functionality
 - Updated Documentation with examples for Template Overriding
 
-# Version ???
-> Release Date : ???
+# Version 2.6.3
+> Release Date : 7th April 2016
 
 - Fixed unwanted animation on table advanced when select search or check item
 - Updated material to 1.1.0-rc2
+- Fix for flash of default theme until this issue is resolved https://github.com/angular/material/pull/7427
+- Updated Docs with further detail on template customisations
