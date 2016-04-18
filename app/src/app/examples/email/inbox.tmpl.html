@@ -6,7 +6,7 @@
                 <md-list-item class="inbox-list__email inbox-list__email--animated md-3-line md-long-text" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="vm.openMail(email)" ng-class="{ 'inbox-list__email--active': vm.selectedMail === email.id, 'inbox-list__email--unread': email.unread }">
                     <img class="md-avatar" ng-src="{{::email.from.image}}" alt="{{::email.from.name}}">
                     <div class="md-list-item-text" layout="column">
-                        <h3>{{::email.from.name}} <span class="md-caption" am-time-ago="email.date"></span></h3>
+                        <h3><span class="md-caption" am-time-ago="email.date"></span>{{::email.from.name}}</h3>
                         <h4>{{::email.subject}}</h4>
                         <p>{{::email.content[0] | cut:true:80:' ...'}}</p>
                     </div>
