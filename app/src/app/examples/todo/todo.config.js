@@ -6,8 +6,7 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/todo');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
         .state('triangular.admin-default.todo', {

@@ -23,7 +23,7 @@
                     </md-input-container>
                     <md-autocomplete
                         md-input-name="githubUser"
-                        md-floating-label="{{'GITHUB.GITHUB-USER' | translate}}"
+                        md-floating-label="{{'GITHUB.GITHUB-USER' | triTranslate}}"
                         md-selected-item="vm.data.githubUser"
                         md-search-text="vm.searchText"
                         md-items="user in vm.userSearch(vm.searchText)"
@@ -48,7 +48,7 @@
                 </form>
 
                 <div class="margin-top-40" layout="row" layout-align="end center">
-                    <md-button class="md-primary" ng-disabled="githubForm.$invalid" ng-click="vm.register()" translate="GITHUB.SIGNUP" aria-label="{{'GITHUB.SIGNUP' | translate}}"></md-button>
+                    <md-button class="md-primary" ng-disabled="githubForm.$invalid" ng-click="vm.register()" translate="GITHUB.SIGNUP" aria-label="{{'GITHUB.SIGNUP' | triTranslate}}"></md-button>
                 </div>
 
             </md-card-content>

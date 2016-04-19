@@ -6,8 +6,7 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, uiGmapGoogleMapApiProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/maps');
+    function moduleConfig($stateProvider, uiGmapGoogleMapApiProvider, triMenuProvider) {
 
         $stateProvider
         .state('triangular.admin-default.maps-fullwidth', {

@@ -6,7 +6,7 @@
         .config(translateConfig);
 
     /* @ngInject */
-    function translateConfig(triSettingsProvider, triRouteProvider, APP_LANGUAGES) {
+    function translateConfig(triSettingsProvider, triRouteProvider) {
         var now = new Date();
         // set app name & logo (used in loader, sidemenu, footer, login pages, etc)
         triSettingsProvider.setName('triangular');
@@ -17,13 +17,5 @@
         // set the document title that appears on the browser tab
         triRouteProvider.setTitle('Triangular');
         triRouteProvider.setSeparator('|');
-
-        // setup available languages in triangular
-        for (var lang = APP_LANGUAGES.length - 1; lang >= 0; lang--) {
-            triSettingsProvider.addLanguage({
-                name: APP_LANGUAGES[lang].name,
-                key: APP_LANGUAGES[lang].key
-            });
-        }
     }
 })();

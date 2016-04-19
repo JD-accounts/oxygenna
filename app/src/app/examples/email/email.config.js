@@ -22,8 +22,7 @@
         }]);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider, EMAIL_ROUTES) {
-        $translatePartialLoaderProvider.addPart('app/examples/email');
+    function moduleConfig($stateProvider, triMenuProvider, EMAIL_ROUTES) {
 
         $stateProvider
         .state('triangular-no-scroll.email', {

@@ -14,7 +14,7 @@
         <md-content class="md-padding">
 
             <div layout="row" layout-align="space-around center">
-                <md-select placeholder="{{'UI.SKINS.SKIN_CHOOSE' | translate}}" ng-model="vm.selectedSkin" ng-change="vm.updatePreview()">
+                <md-select placeholder="{{'UI.SKINS.SKIN_CHOOSE' | triTranslate}}" ng-model="vm.selectedSkin" ng-change="vm.updatePreview()">
                     <md-option ng-repeat="skin in ::vm.skins" ng-value="skin">{{::skin.name}}</md-option>
                 </md-select>
                 <md-button class="md-primary md-raised" ng-click="vm.trySkin()" translate="UI.SKINS.SKIN_TRY"></md-button>

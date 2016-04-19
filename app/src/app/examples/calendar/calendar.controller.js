@@ -58,7 +58,7 @@
                     // pop a toast
                     $mdToast.show(
                         $mdToast.simple()
-                        .content($filter('translate')(toastMessage))
+                        .content($filter('triTranslate')(toastMessage))
                         .position('bottom right')
                         .hideDelay(2000)
                     );
@@ -90,7 +90,7 @@
                         confirmButtonText: 'CALENDAR.ADD'
                     },
                     event: {
-                        title: $filter('translate')('CALENDAR.EVENT.NEW-EVENT'),
+                        title: $filter('triTranslate')('CALENDAR.EVENT.NEW-EVENT'),
                         allDay: false,
                         start: vm.currentDay,
                         end: inAnHour,
@@ -104,7 +104,7 @@
                 vm.eventSources[0].events.push(event);
                 $mdToast.show(
                     $mdToast.simple()
-                    .content($filter('translate')('CALENDAR.EVENT.EVENT-CREATED'))
+                    .content($filter('triTranslate')('CALENDAR.EVENT.EVENT-CREATED'))
                     .position('bottom right')
                     .hideDelay(2000)
                 );

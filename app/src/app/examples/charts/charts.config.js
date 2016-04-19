@@ -6,8 +6,7 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/charts');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
         .state('triangular.admin-default.charts-google-bar', {

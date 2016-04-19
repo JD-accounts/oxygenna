@@ -29,7 +29,7 @@
                 cc: [],
                 bcc: [],
                 // add r.e to subject if there is one
-                subject: email.subject === '' ? '' : $filter('translate')('EMAIL.RE') + email.subject,
+                subject: email.subject === '' ? '' : $filter('triTranslate')('EMAIL.RE') + email.subject,
                 // wrap previous content in blockquote and add new line
                 content: '<br><br><blockquote>' + email.content + '</blockquote>'
             };
@@ -41,7 +41,7 @@
                 }
             });
 
-            openEmail($event, replyEmail, $filter('translate')(title));
+            openEmail($event, replyEmail, $filter('triTranslate')(title));
         }
 
         function openEmail($event, email, title) {
@@ -66,7 +66,7 @@
             function cancelEmail() {
                 $mdToast.show(
                     $mdToast.simple()
-                    .content($filter('translate')('EMAIL.CANCELED'))
+                    .content($filter('triTranslate')('EMAIL.CANCELED'))
                     .position('bottom right')
                     .hideDelay(3000)
                 );

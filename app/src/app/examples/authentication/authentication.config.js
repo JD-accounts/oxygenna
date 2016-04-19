@@ -6,8 +6,7 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/authentication');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
         .state('authentication', {

@@ -6,8 +6,7 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/dashboards');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
         .state('triangular.sales-layout', {
@@ -80,7 +79,7 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.DASHBOARDS.DASHBOARDS',
+            name: 'Dashboards',
             icon: 'zmdi zmdi-home',
             type: 'dropdown',
             priority: 1.1,

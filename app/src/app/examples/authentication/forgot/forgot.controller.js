@@ -19,9 +19,9 @@
         function resetClick() {
             $mdToast.show(
                 $mdToast.simple()
-                .content($filter('translate')('FORGOT.MESSAGES.RESET_SENT'))
+                .content($filter('triTranslate')('FORGOT.MESSAGES.RESET_SENT'))
                 .position('bottom right')
-                .action($filter('translate')('FORGOT.MESSAGES.LOGIN_NOW'))
+                .action($filter('triTranslate')('FORGOT.MESSAGES.LOGIN_NOW'))
                 .highlightAction(true)
                 .hideDelay(0)
             ).then(function() {

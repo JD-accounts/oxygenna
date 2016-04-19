@@ -25,8 +25,8 @@
                     md-contact-email="email"
                     md-require-match
                     filter-selected="true"
-                    placeholder="{{'EMAIL.TO' | translate}}"
-                    secondary-placeholder="{{'EMAIL.TO' | translate}}">
+                    placeholder="{{'EMAIL.TO' | triTranslate}}"
+                    secondary-placeholder="{{'EMAIL.TO' | triTranslate}}">
                 </md-contact-chips>
                 <md-button class="md-icon-button" ng-click="vm.toggleCCS($event)" aria-label="toggle ccs">
                     <md-icon md-font-icon ng-class="vm.showCCSIcon"></md-icon>
@@ -42,8 +42,8 @@
                     md-contact-email="email"
                     md-require-match
                     filter-selected="true"
-                    placeholder="{{'EMAIL.COMPOSE.CC' | translate}}"
-                    secondary-placeholder="{{'EMAIL.COMPOSE.CC' | translate}}">
+                    placeholder="{{'EMAIL.COMPOSE.CC' | triTranslate}}"
+                    secondary-placeholder="{{'EMAIL.COMPOSE.CC' | triTranslate}}">
                 </md-contact-chips>
                 <md-contact-chips
                     ng-model="vm.email.bcc"
@@ -53,8 +53,8 @@
                     md-contact-email="email"
                     md-require-match
                     filter-selected="true"
-                    placeholder="{{'EMAIL.COMPOSE.BCC' | translate}}"
-                    secondary-placeholder="{{'EMAIL.COMPOSE.BCC' | translate}}">
+                    placeholder="{{'EMAIL.COMPOSE.BCC' | triTranslate}}"
+                    secondary-placeholder="{{'EMAIL.COMPOSE.BCC' | triTranslate}}">
                 </md-contact-chips>
             </div>
 

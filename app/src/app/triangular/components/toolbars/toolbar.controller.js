@@ -6,7 +6,7 @@
         .controller('DefaultToolbarController', DefaultToolbarController);
 
     /* @ngInject */
-    function DefaultToolbarController($scope, $rootScope, $mdMedia, $translate, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, $document, triBreadcrumbsService, triSettings, triLayout) {
+    function DefaultToolbarController($scope, $rootScope, $mdMedia, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, $document, triBreadcrumbsService, triSettings, triLayout) {
         var vm = this;
         vm.breadcrumbs = triBreadcrumbsService.breadcrumbs;
         vm.emailNew = false;
@@ -30,16 +30,16 @@
         }
 
         function switchLanguage(languageCode) {
-            $translate.use(languageCode)
-            .then(function() {
-                $mdToast.show(
-                    $mdToast.simple()
-                    .content($filter('translate')('MESSAGES.LANGUAGE_CHANGED'))
-                    .position('bottom right')
-                    .hideDelay(500)
-                );
-                $rootScope.$emit('changeTitle');
-            });
+            // $translate.use(languageCode)
+            // .then(function() {
+            //     $mdToast.show(
+            //         $mdToast.simple()
+            //         .content($filter('triTranslate')('MESSAGES.LANGUAGE_CHANGED'))
+            //         .position('bottom right')
+            //         .hideDelay(500)
+            //     );
+            //     $rootScope.$emit('changeTitle');
+            // });
         }
 
         function hideMenuButton() {
