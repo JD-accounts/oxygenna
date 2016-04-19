@@ -3,7 +3,7 @@
 // ADD YOUR YANDEX API KEY HERE
 // go here for more info
 // https://tech.yandex.com/translate/
-var YANDEX_API_KEY = '';
+var YANDEX_API_KEY = 'trnsl.1.1.20160419T081920Z.7dcd7c9662c6e24b.0b34c60e6c039212865feb43787f4e41e3b8a2f6';
 
 var gulp = require('gulp');
 var gutil = require('gulp-util');
@@ -48,7 +48,7 @@ gulp.task('translate', function () {
   // make sure we have a from and to language
   if(argv.from !== undefined && argv.to !== undefined) {
     return gulp.src([
-      paths.src + '/app/**/il8n/' + argv.from + '.json',
+      paths.src + '/app/**/i18n/' + argv.from + '.json',
     ])
     .pipe(translateFile)
     .pipe(jsonFormat(4))
