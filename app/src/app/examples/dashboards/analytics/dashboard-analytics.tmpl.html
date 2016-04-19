@@ -6,7 +6,7 @@
             </div>
             <div layout="column" layout-align="center end">
                 <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis" countupto="54" decimals="0"></p>
-                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.ANALYTICS.COMMENTS</p>
+                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>Comments</p>
             </div>
         </tri-widget>
         <tri-widget palette-background="triCyan:500" content-layout="row" content-layout-align="space-between center" content-padding>
@@ -15,7 +15,7 @@
             </div>
             <div layout="column" layout-align="center end">
                 <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0 text-ellipsis" countupto="101" decimals="0"></p>
-                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.ANALYTICS.TWEETS</p>
+                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>Tweets</p>
             </div>
         </tri-widget>
         <tri-widget palette-background="indigo:500" content-layout="row" content-layout-align="space-between center" content-padding>
@@ -24,7 +24,7 @@
             </div>
             <div layout="column" layout-align="center end">
                 <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0" countupto="943" decimals="0"></p>
-                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.ANALYTICS.LIKES</p>
+                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>Likes</p>
             </div>
         </tri-widget>
         <tri-widget palette-background="teal:500" content-layout="row" content-layout-align="space-between center" content-padding>
@@ -33,20 +33,20 @@
             </div>
             <div layout="column" layout-align="center end">
                 <p class="md-display-3 font-weight-100 margin-top-0 margin-bottom-0" countupto="944" decimals="0"></p>
-                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>DASHBOARDS.ANALYTICS.REACH</p>
+                <p class="md-body-2 opacity-60 margin-top-0 margin-bottom-0" translate>Reach</p>
             </div>
         </tri-widget>
     </div>
     <div layout="row" layout-xs="column" layout-margin>
-        <tri-widget chartjs-line-widget title="DASHBOARDS.ANALYTICS.PAGEVIEWS" subtitle="DASHBOARDS.ANALYTICS.DATE" content-layout="row" content-padding>
+        <tri-widget chartjs-line-widget title="Pageviews & Visits" subtitle="11/03/15 - 11/4/15" content-layout="row" content-padding>
             <canvas class="chart-line" chart-data="lineChart.data" chart-labels="lineChart.labels" chart-legend="true" chart-series="lineChart.series" chart-options="lineChart.options"></canvas>
         </tri-widget>
-        <tri-widget chartjs-pie-widget title="DASHBOARDS.ANALYTICS.SOCIAL" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
+        <tri-widget chartjs-pie-widget title="Network Referrals" subtitle="11/03/15 - 11/4/15" content-padding>
             <canvas class="chart-doughnut" chart-data="pieChart.data" chart-legend="true" chart-labels="pieChart.labels"></canvas>
         </tri-widget>
     </div>
     <div layout="row" layout-xs="column" layout-margin>
-        <tri-widget flex load-data-widget="{ referrals: 'app/examples/dashboards/data/referrals.json' }" title="DASHBOARDS.ANALYTICS.REFERRALS" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
+        <tri-widget flex load-data-widget="{ referrals: 'app/examples/dashboards/data/referrals.json' }" title="Referral Traffic" subtitle="11/03/15 - 11/4/15" content-padding>
             <table class="table">
                 <thead>
                     <tr>
@@ -60,7 +60,7 @@
                 </tbody>
             </table>
         </tri-widget>
-        <tri-widget flex load-data-widget="{ social: 'app/examples/dashboards/data/social.json' }" title="DASHBOARDS.ANALYTICS.SOCIAL" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
+        <tri-widget flex load-data-widget="{ social: 'app/examples/dashboards/data/social.json' }" title="Network Referrals" subtitle="11/03/15 - 11/4/15" content-padding>
             <table class="table">
                 <thead>
                     <tr>
@@ -76,10 +76,10 @@
         </tri-widget>
     </div>
     <div layout="row" layout-md="column" layout-xs="column" layout-margin>
-        <tri-widget google-geochart-widget flex title="DASHBOARDS.ANALYTICS.LOCATION" subtitle="DASHBOARDS.ANALYTICS.DATE" title-position="top" content-padding>
+        <tri-widget google-geochart-widget flex title="Location" subtitle="11/03/15 - 11/4/15" title-position="top" content-padding>
             <div class="google-chart" google-chart chart="geoChartData"></div>
         </tri-widget>
-        <tri-widget flex load-data-widget="{ social: 'app/examples/dashboards/data/location.json' }" title="DASHBOARDS.ANALYTICS.SOCIAL" subtitle="DASHBOARDS.ANALYTICS.DATE" content-padding>
+        <tri-widget flex load-data-widget="{ social: 'app/examples/dashboards/data/location.json' }" title="Network Referrals" subtitle="11/03/15 - 11/4/15" content-padding>
             <table class="table">
                 <thead>
                     <tr>

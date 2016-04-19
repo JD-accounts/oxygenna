@@ -1,8 +1,8 @@
 <md-input-container class="md-block">
-    <label for="subject" translate>EMAIL.COMPOSE.SUBJECT</label>
+    <label for="subject" translate>Subject</label>
     <input ng-model="email.subject" name="subject" required>
     <div ng-messages="emailForm.subject.$error">
-        <div ng-message when="required"><span translate>EMAIL.COMPOSE.VALIDATION.SUBJECT_REQUIRED</span></div>
+        <div ng-message when="required"><span translate>Please enter a subject for the email.</span></div>
     </div>
 </md-input-container>
 

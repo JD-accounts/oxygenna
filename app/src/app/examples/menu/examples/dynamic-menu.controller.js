@@ -18,7 +18,7 @@
         function toggleExtraMenu(showMenu) {
             if(showMenu) {
                 triMenu.addMenu({
-                    name: 'MENU.MENU.DYNAMIC-MENU',
+                    name: 'Dynamic Menu-MENU',
                     icon: 'zmdi zmdi-flower-alt',
                     type: 'link',
                     priority: 0.0,

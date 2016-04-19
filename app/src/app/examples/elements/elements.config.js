@@ -6,8 +6,7 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/elements/');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
         .state('triangular.admin-default.elements-buttons', {
@@ -178,116 +177,116 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.ELEMENTS.ELEMENTS',
+            name: 'Elements',
             icon: 'zmdi zmdi-graduation-cap',
             type: 'dropdown',
             priority: 3.1,
             children: [{
-                name: 'MENU.ELEMENTS.BUTTONS',
+                name: 'Buttons',
                 type: 'link',
                 state: 'triangular.admin-default.elements-buttons'
             },{
-                name: 'MENU.ELEMENTS.CARDS',
+                name: 'Cards',
                 type: 'link',
                 state: 'triangular.admin-default.elements-cards'
             },{
-                name: 'MENU.ELEMENTS.CHECKBOXES',
+                name: 'Checkboxes',
                 type: 'link',
                 state: 'triangular.admin-default.elements-checkboxes'
             },{
-                name: 'MENU.ELEMENTS.CHIPS',
+                name: 'Chips',
                 type: 'link',
                 state: 'triangular.admin-default.elements-chips'
             },{
-                name: 'MENU.ELEMENTS.DATEPICKER',
+                name: 'Datepicker',
                 type: 'link',
                 state: 'triangular.admin-default.elements-datepicker'
             },{
-                name: 'MENU.ELEMENTS.DIALOGS',
+                name: 'Dialogs',
                 type: 'link',
                 state: 'triangular.admin-default.elements-dialogs'
             },{
-                name: 'MENU.ELEMENTS.FAB-SPEED',
+                name: 'FAB Speed Dial',
                 type: 'link',
                 state: 'triangular.admin-default.fab-speed'
             },{
-                name: 'MENU.ELEMENTS.FAB-TOOLBAR',
+                name: 'FAB Toolbar',
                 type: 'link',
                 state: 'triangular.admin-default.fab-toolbar'
             },{
-                name: 'MENU.ELEMENTS.GRIDS',
+                name: 'Grids',
                 type: 'link',
                 state: 'triangular.admin-default.elements-grids'
             },{
-                name: 'MENU.ELEMENTS.ICONS',
+                name: 'Icons',
                 type: 'link',
                 state: 'triangular.admin-default.elements-icons'
             },{
-                name: 'MENU.ELEMENTS.LISTS',
+                name: 'Lists',
                 type: 'link',
                 state: 'triangular.admin-default.elements-lists'
             },{
-                name: 'MENU.ELEMENTS.LOADER',
+                name: 'Loader',
                 type: 'link',
                 state: 'triangular.admin-default.elements-loader'
             },{
-                name: 'MENU.ELEMENTS.MENUS',
+                name: 'Menus',
                 type: 'link',
                 state: 'triangular.admin-default.menus'
             },{
-                name: 'MENU.ELEMENTS.PROGRESS',
+                name: 'Progress',
                 type: 'link',
                 state: 'triangular.admin-default.elements-progress'
             },{
-                name: 'MENU.ELEMENTS.RADIOS',
+                name: 'Radios',
                 type: 'link',
                 state: 'triangular.admin-default.elements-radios'
             },{
-                name: 'MENU.ELEMENTS.SELECTS',
+                name: 'Selects',
                 type: 'link',
                 state: 'triangular.admin-default.elements-selects'
             },{
-                name: 'MENU.ELEMENTS.SIDEBARS',
+                name: 'Sidebars',
                 type: 'link',
                 state: 'triangular.admin-default.elements-sidebars'
             },{
-                name: 'MENU.ELEMENTS.SLIDERS',
+                name: 'Sliders',
                 type: 'link',
                 state: 'triangular.admin-default.elements-sliders'
             },{
-                name: 'MENU.ELEMENTS.SWITCHES',
+                name: 'Switches',
                 type: 'link',
                 state: 'triangular.admin-default.elements-switches'
             },{
-                name: 'MENU.ELEMENTS.TABLES',
+                name: 'Tables',
                 type: 'link',
                 state: 'triangular.admin-default.elements-tables'
             },{
-                name: 'MENU.ELEMENTS.TABS',
+                name: 'Tabs',
                 type: 'link',
                 state: 'triangular.admin-default.elements-tabs'
             },{
-                name: 'MENU.ELEMENTS.TEXTANGULAR',
+                name: 'Textangular',
                 type: 'link',
                 state: 'triangular.admin-default.elements-textangular'
             },{
-                name: 'MENU.ELEMENTS.TOASTS',
+                name: 'Toasts',
                 type: 'link',
                 state: 'triangular.admin-default.elements-toasts'
             },{
-                name: 'MENU.ELEMENTS.TOOLBARS',
+                name: 'Toolbars',
                 type: 'link',
                 state: 'triangular.admin-default.elements-toolbars'
             },{
-                name: 'MENU.ELEMENTS.TOOLTIPS',
+                name: 'Tooltips',
                 type: 'link',
                 state: 'triangular.admin-default.elements-tooltips'
             },{
-                name: 'MENU.ELEMENTS.WHITEFRAMES',
+                name: 'Whiteframes',
                 type: 'link',
                 state: 'triangular.admin-default.elements-whiteframes'
             },{
-                name: 'MENU.ELEMENTS.UPLOAD',
+                name: 'Upload',
                 type: 'link',
                 state: 'triangular.admin-default.elements-upload'
             }]

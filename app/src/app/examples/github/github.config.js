@@ -6,9 +6,7 @@
         .config(config);
 
     /* @ngInject */
-    function config($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/github');
-
+    function config($stateProvider, triMenuProvider) {
         $stateProvider
         .state('triangular.admin-default.github', {
             url: '/github',
@@ -24,7 +22,7 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.GITHUB.GITHUB',
+            name: 'GitHub',
             state: 'triangular.admin-default.github',
             type: 'link',
             icon: 'fa fa-github',

@@ -6,24 +6,23 @@
         .config(moduleConfig)
         .constant('EMAIL_ROUTES', [{
             state: 'triangular-no-scroll.email.inbox',
-            name: 'MENU.EMAIL.INBOX',
+            name: 'Inbox',
             url: '/email/inbox',
             icon: 'zmdi zmdi-inbox'
         },{
             state: 'triangular-no-scroll.email.trash',
-            name: 'MENU.EMAIL.TRASH',
+            name: 'Trash',
             url: '/email/trash',
             icon: 'zmdi zmdi-minus-circle'
         },{
             state: 'triangular-no-scroll.email.sent',
-            name: 'MENU.EMAIL.SENT',
+            name: 'Sent',
             url: '/email/sent',
             icon: 'zmdi zmdi-email'
         }]);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider, EMAIL_ROUTES) {
-        $translatePartialLoaderProvider.addPart('app/examples/email');
+    function moduleConfig($stateProvider, triMenuProvider, EMAIL_ROUTES) {
 
         $stateProvider
         .state('triangular-no-scroll.email', {
@@ -103,7 +102,7 @@
         });
 
         var emailMenu = {
-            name: 'MENU.EMAIL.EMAIL',
+            name: 'Email',
             icon: 'zmdi zmdi-email',
             type: 'dropdown',
             priority: 2.1,

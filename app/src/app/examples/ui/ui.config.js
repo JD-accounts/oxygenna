@@ -6,8 +6,7 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/ui');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
         .state('triangular.admin-default.ui-typography', {
@@ -72,32 +71,32 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.UI.UI',
+            name: 'UI',
             icon: 'zmdi zmdi-ruler',
             type: 'dropdown',
             priority: 3.2,
             children: [{
-                name: 'MENU.UI.COLORS',
+                name: 'Colors',
                 state: 'triangular.admin-default.ui-colors',
                 type: 'link'
             },{
-                name: 'MENU.UI.FONT_AWESOME',
+                name: 'Font Awesome',
                 state: 'triangular.admin-default.ui-fa-icons',
                 type: 'link'
             },{
-                name: 'MENU.UI.MATERIAL_ICONS',
+                name: 'Material Icons',
                 state: 'triangular.admin-default.ui-material-icons',
                 type: 'link'
             },{
-                name: 'MENU.UI.SKINS',
+                name: 'Skins',
                 state: 'triangular.admin-default.ui-skins',
                 type: 'link'
             },{
-                name: 'MENU.UI.TYPOGRAPHY',
+                name: 'Typography',
                 state: 'triangular.admin-default.ui-typography',
                 type: 'link'
             },{
-                name: 'MENU.UI.WEATHER_ICONS',
+                name: 'Weather Icons',
                 state: 'triangular.admin-default.ui-weather-icons',
                 type: 'link'
             }]

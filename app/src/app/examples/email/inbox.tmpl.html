@@ -18,11 +18,11 @@
     <div class="md-whiteframe-z1 animate-wrapper" layout="column" layout-align="start center" flex>
         <div flex id="ui-admin-email" ui-view layout="column" layout-align="start center" class="overflow-auto full-width">
             <div flex class="inbox-no-email-selected" layout="column" layout-align="center">
-                <h2 hide-xs translate>EMAIL.NO_EMAIL_SELECTED</h2>
+                <h2 hide-xs translate>No email selected</h2>
             </div>
         </div>
     </div>
 </div>
-<md-button ng-click="vm.composeClick($event)" class="md-fab md-accent md-fab-bottom-right" aria-label="{{'EMAIL.COMPOSE_EMAIL' | translate}}">
+<md-button ng-click="vm.composeClick($event)" class="md-fab md-accent md-fab-bottom-right" aria-label="{{'EMAIL.COMPOSE_EMAIL' | triTranslate}}">
     <md-icon md-font-icon="zmdi zmdi-edit"></md-icon>
 </md-button>

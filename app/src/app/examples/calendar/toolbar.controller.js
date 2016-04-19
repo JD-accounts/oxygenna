@@ -13,15 +13,15 @@
         vm.changeView = changeView;
         vm.openSideNav = openSideNav;
         vm.views = [{
-            name: 'CALENDAR.TOOLBAR.VIEWS.MONTH',
+            name: 'Month',
             icon: 'zmdi zmdi-view-module',
             viewName: 'month'
         },{
-            name: 'CALENDAR.TOOLBAR.VIEWS.WEEK',
+            name: 'Week',
             icon: 'zmdi zmdi-view-week',
             viewName: 'agendaWeek'
         },{
-            name: 'CALENDAR.TOOLBAR.VIEWS.DAY',
+            name: 'Day',
             icon: 'zmdi zmdi-view-day',
             viewName: 'agendaDay'
         }];

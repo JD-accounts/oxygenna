@@ -29,7 +29,7 @@
                 icon: 'zmdi zmdi-more-vert',
                 items: [{
                     icon: 'zmdi zmdi-refresh',
-                    title: 'DASHBOARDS.WIDGETS.MENU.REFRESH',
+                    title: 'Refresh',
                     click: function() {
                         widgetCtrl.setLoading(true);
                         $timeout(function() {
@@ -38,10 +38,10 @@
                     }
                 },{
                     icon: 'zmdi zmdi-share',
-                    title: 'DASHBOARDS.WIDGETS.MENU.SHARE'
+                    title: 'Share'
                 },{
                     icon: 'zmdi zmdi-print',
-                    title: 'DASHBOARDS.WIDGETS.MENU.PRINT'
+                    title: 'Print'
                 }]
             });
 

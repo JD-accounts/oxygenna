@@ -6,8 +6,7 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/authentication');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
         .state('authentication', {
@@ -46,28 +45,28 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.AUTH.AUTH',
+            name: 'Authentication',
             icon: 'zmdi zmdi-account',
             type: 'dropdown',
             priority: 4.1,
             children: [{
-                name: 'MENU.AUTH.LOGIN',
+                name: 'Login',
                 state: 'authentication.login',
                 type: 'link'
             },{
-                name: 'MENU.AUTH.SIGN_UP',
+                name: 'Sign Up',
                 state: 'authentication.signup',
                 type: 'link'
             },{
-                name: 'MENU.AUTH.FORGOT',
+                name: 'Forgot Password',
                 state: 'authentication.forgot',
                 type: 'link'
             },{
-                name: 'MENU.AUTH.LOCK',
+                name: 'Lock Page',
                 state: 'authentication.lock',
                 type: 'link'
             },{
-                name: 'MENU.AUTH.PROFILE',
+                name: 'Profile',
                 state: 'triangular.admin-default.profile',
                 type: 'link'
             }]

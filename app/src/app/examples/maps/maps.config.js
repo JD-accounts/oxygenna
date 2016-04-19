@@ -6,8 +6,7 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, uiGmapGoogleMapApiProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/maps');
+    function moduleConfig($stateProvider, uiGmapGoogleMapApiProvider, triMenuProvider) {
 
         $stateProvider
         .state('triangular.admin-default.maps-fullwidth', {
@@ -27,16 +26,16 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.MAPS.MAPS',
+            name: 'Maps',
             icon: 'zmdi zmdi-pin',
             type: 'dropdown',
             priority: 7.1,
             children: [{
-                name: 'MENU.MAPS.FULLWIDTH',
+                name: 'Fullwidth',
                 state: 'triangular.admin-default.maps-fullwidth',
                 type: 'link'
             },{
-                name: 'MENU.MAPS.DEMOS',
+                name: 'Demos',
                 state: 'triangular.admin-default.maps-demos',
                 type: 'link'
             }]

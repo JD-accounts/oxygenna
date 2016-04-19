@@ -6,8 +6,7 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/layouts');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
         .state('triangular.admin-default.layouts-composer', {
@@ -47,24 +46,24 @@
             templateUrl: 'app/examples/dashboards/general/dashboard-general.tmpl.html'
         });
         triMenuProvider.addMenu({
-            name: 'MENU.LAYOUTS.TITLE',
+            name: 'Layouts',
             icon: 'zmdi zmdi-view-module',
             type: 'dropdown',
             priority: 2.4,
             children: [{
-                name: 'MENU.LAYOUTS.FULL-WIDTH',
+                name: 'Full Width Layout',
                 type: 'link',
                 state: 'triangular.admin-default.layouts-example-full-width'
             },{
-                name: 'MENU.LAYOUTS.ICON-MENU',
+                name: 'Icon Menu',
                 type: 'link',
                 state: 'triangular.admin-default.layouts-example-icon-menu'
             },{
-                name: 'MENU.LAYOUTS.TALL-TOOLBAR',
+                name: 'Tall Toolbar with background',
                 type: 'link',
                 state: 'triangular.admin-default.layouts-example-tall-toolbar'
             },{
-                name: 'MENU.LAYOUTS.COMPOSER',
+                name: 'Composer',
                 type: 'link',
                 state: 'triangular.admin-default.layouts-composer'
             }]

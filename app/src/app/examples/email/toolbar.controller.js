@@ -44,7 +44,7 @@
 
         for(var i = 0; i < EMAIL_ROUTES.length; i++) {
             vm.toolbarMenu.push({
-                name: $filter('translate')(EMAIL_ROUTES[i].name),
+                name: $filter('triTranslate')(EMAIL_ROUTES[i].name),
                 state: EMAIL_ROUTES[i].state,
                 icon: EMAIL_ROUTES[i].icon
             });
