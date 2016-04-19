@@ -6,7 +6,21 @@
         .config(translateConfig);
 
     /* @ngInject */
-    function translateConfig($translateProvider, $translatePartialLoaderProvider, triSettingsProvider, APP_LANGUAGES) {
+    function translateConfig($translateProvider, $translatePartialLoaderProvider, triSettingsProvider) {
+        var appLanguages = [{
+            name: 'Chinese',
+            key: 'zh'
+        },{
+            name: 'English',
+            key: 'en'
+        },{
+            name: 'French',
+            key: 'fr'
+        },{
+            name: 'Portuguese',
+            key: 'pt'
+        }];
+
         /**
          *  each module loads its own translation file - making it easier to create translations
          *  also translations are not loaded when they aren't needed
@@ -24,10 +38,17 @@
         // cache translation files to save load on server
         $translateProvider.useLoaderCache(true);
 
-        // setup available languages in translate
-        var languageKeys = [];
-        for (var lang = APP_LANGUAGES.length - 1; lang >= 0; lang--) {
-            languageKeys.push(APP_LANGUAGES[lang].key);
+        // setup available languages in angular translate & triangular
+        var angularTranslateLanguageKeys = [];
+        for (var language in appLanguages) {
+            // add language key to array for angular translate
+            angularTranslateLanguageKeys.push(appLanguages[language].key);
+
+            // tell triangular that we support this language
+            triSettingsProvider.addLanguage({
+                name: appLanguages[language].name,
+                key: appLanguages[language].key
+            });
         }
 
         /**
@@ -38,7 +59,7 @@
          *      navigator.userLanguage
          */
         $translateProvider
-        .registerAvailableLanguageKeys(languageKeys, {
+        .registerAvailableLanguageKeys(angularTranslateLanguageKeys, {
             'en_US': 'en',
             'en_UK': 'en'
         })
@@ -46,13 +67,5 @@
 
         // store the users language preference in a cookie
         $translateProvider.useLocalStorage();
-
-        // setup available languages in triangular
-        for (var language = APP_LANGUAGES.length - 1; language >= 0; language--) {
-            triSettingsProvider.addLanguage({
-                name: APP_LANGUAGES[language].name,
-                key: APP_LANGUAGES[language].key
-            });
-        }
     }
 })();
