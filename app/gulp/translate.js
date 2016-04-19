@@ -17,7 +17,7 @@ var translate = require('yandex-translate')(YANDEX_API_KEY);
 var transform = require('vinyl-transform');
 var jsonFormat = require('gulp-json-format');
 var runSequence = require('run-sequence');
-var jeditor = require("gulp-json-editor");
+var jeditor = require('gulp-json-editor');
 
 
 var paths = gulp.paths;
@@ -127,4 +127,6 @@ gulp.task('translate-write-new-translations', function () {
     .pipe(gulp.dest(paths.src + '/app/i18n/'));
 });
 
-gulp.task('translate-flatten-english', runSequence('translate-collate-english', 'translate-replace-english', 'translate-write-new-translations'));
+gulp.task('translate-flatten-english', function() {
+  return runSequence('translate-collate-english', 'translate-replace-english', 'translate-write-new-translations');
+});
