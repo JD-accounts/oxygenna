@@ -303,3 +303,9 @@
 - Updated material to 1.1.0-rc2
 - Fix for flash of default theme until this issue is resolved https://github.com/angular/material/pull/7427
 - Updated Docs with further detail on template customisations
+
+# Version ???
+> Release Date : ???
+
+- Translations are now optional - include app.translation module if you need multi-language
+- Moved translation files out of modules and into one app i18n folder in the app
