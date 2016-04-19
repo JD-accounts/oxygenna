@@ -84,31 +84,31 @@
             type: 'dropdown',
             priority: 1.1,
             children: [{
-                name: 'MENU.DASHBOARDS.ANALYTICS',
+                name: 'Analytics',
                 state: 'triangular.admin-default.dashboard-analytics',
                 type: 'link'
             },{
-                name: 'MENU.DASHBOARDS.GENERAL',
+                name: 'General',
                 state: 'triangular.admin-default.dashboard-general',
                 type: 'link'
             },{
-                name: 'MENU.DASHBOARDS.SALES',
+                name: 'Sales',
                 state: 'triangular.admin-default.dashboard-sales',
                 type: 'link'
             },{
-                name: 'MENU.DASHBOARDS.SERVER',
+                name: 'Server',
                 state: 'triangular.admin-default.dashboard-server',
                 type: 'link'
             },{
-                name: 'MENU.DASHBOARDS.SOCIAL',
+                name: 'Social',
                 state: 'triangular.admin-default.dashboard-social',
                 type: 'link'
             },{
-                name: 'MENU.DASHBOARDS.WIDGETS',
+                name: 'Widgets',
                 state: 'triangular.admin-default.dashboard-widgets',
                 type: 'link'
             },{
-                name: 'MENU.DASHBOARDS.DRAGGABLE',
+                name: 'Draggable',
                 state: 'triangular.admin-default.dashboard-draggable',
                 type: 'link'
             }]

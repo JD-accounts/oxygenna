@@ -16,9 +16,9 @@
         };
         vm.selected = [];
         vm.columns = {
-            avatar: 'TABLE.COLUMNS.AVATAR',
-            login: 'TABLE.COLUMNS.LOGIN',
-            id: 'TABLE.COLUMNS.ID'
+            avatar: 'Avatar',
+            login: 'Login',
+            id: 'ID'
         };
         vm.filter = {
             options: {

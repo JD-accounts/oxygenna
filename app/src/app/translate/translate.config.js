@@ -13,24 +13,10 @@
          *  each module will have a il8n folder that will contain its translations
          */
         $translateProvider.useLoader('$translatePartialLoader', {
-            urlTemplate: '{part}/il8n/{lang}.json'
+            urlTemplate: '{part}/i18n/{lang}.json'
         });
 
         $translatePartialLoaderProvider.addPart('app');
-        $translatePartialLoaderProvider.addPart('app/examples/authentication');
-        $translatePartialLoaderProvider.addPart('app/examples/calendar');
-        $translatePartialLoaderProvider.addPart('app/examples/charts');
-        $translatePartialLoaderProvider.addPart('app/examples/dashboards');
-        $translatePartialLoaderProvider.addPart('app/examples/elements/');
-        $translatePartialLoaderProvider.addPart('app/examples/email');
-        $translatePartialLoaderProvider.addPart('app/examples/extras');
-        $translatePartialLoaderProvider.addPart('app/examples/forms');
-        $translatePartialLoaderProvider.addPart('app/examples/github');
-        $translatePartialLoaderProvider.addPart('app/examples/layouts');
-        $translatePartialLoaderProvider.addPart('app/examples/maps');
-        $translatePartialLoaderProvider.addPart('app/examples/menu');
-        $translatePartialLoaderProvider.addPart('app/examples/todo');
-        $translatePartialLoaderProvider.addPart('app/examples/ui');
 
         // make sure all values used in translate are sanitized for security
         $translateProvider.useSanitizeValueStrategy('sanitize');

@@ -2,7 +2,7 @@
     <md-toolbar>
         <div class="md-toolbar-tools">
             <h2 flex >
-                <span translate>DASHBOARDS.SALES.ORDER.TITLE</span><span>{{vm.order.id}}</span>
+                <span translate>Order #</span><span>{{vm.order.id}}</span>
             </h2>
             <md-button class="md-icon-button" ng-click="vm.printClick()" aria-label="print">
                 <md-icon md-font-icon="zmdi zmdi-print"></md-icon>
@@ -16,7 +16,7 @@
     <md-dialog-content class="md-dialog-content">
         <div flex layout="row" class="margin-bottom-10">
             <div flex>
-                <strong translate>DASHBOARDS.SALES.ORDER.DATE</strong>
+                <strong translate>Order Date</strong>
             </div>
             <div flex>
                 <span>{{vm.order.date | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}</span>
@@ -24,7 +24,7 @@
         </div>
         <div flex layout="row" class="margin-bottom-10">
             <div flex>
-                <strong translate>DASHBOARDS.SALES.ORDER.BUYER-NAME</strong>
+                <strong translate>Customer Name</strong>
             </div>
             <div flex>
                 <span>{{vm.order.name}}</span>
@@ -32,7 +32,7 @@
         </div>
         <div flex layout="row" class="margin-bottom-10">
             <div flex>
-                <strong translate>DASHBOARDS.SALES.ORDER.BUYER-EMAIL</strong>
+                <strong translate>Customer Email</strong>
             </div>
             <div flex>
                 <span>{{vm.order.buyer}}</span>
@@ -40,7 +40,7 @@
         </div>
         <div flex layout="row" class="margin-bottom-10">
             <div flex>
-                <strong translate>DASHBOARDS.SALES.ORDER.NUM-ITEMS</strong>
+                <strong translate>Number of Items</strong>
             </div>
             <div flex>
                 <span>{{vm.order.items.length}}</span>
@@ -52,9 +52,9 @@
         <table class="order-dialog-product-table md-table">
             <thead>
                 <tr>
-                    <th translate>DASHBOARDS.SALES.ORDER.PRODUCT</th>
-                    <th translate>DASHBOARDS.SALES.ORDER.CATEGORY</th>
-                    <th class="text-right" translate>DASHBOARDS.SALES.ORDER.PRICE</th>
+                    <th translate>Product Description</th>
+                    <th translate>Category</th>
+                    <th class="text-right" translate>Price</th>
                 </tr>
             </thead>
             <tbody>
@@ -64,15 +64,15 @@
                     <td class="text-right padding-right-10">{{item.price | currency}}</td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.SUB-TOTAL</td>
+                    <td colspan="2" class="font-weight-600" translate>Sub Total</td>
                     <td class="text-right font-weight-600 padding-right-10">{{vm.order.subTotal | currency}}</td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.TAX</td>
+                    <td colspan="2" class="font-weight-600" translate>Tax</td>
                     <td class="text-right font-weight-600 padding-right-10">{{vm.order.tax | currency}}</td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="font-weight-600" translate>DASHBOARDS.SALES.ORDER.TOTAL</td>
+                    <td colspan="2" class="font-weight-600" translate>Total</td>
                     <td class="text-right font-weight-600 padding-right-10">{{vm.order.total | currency}}</td>
                 </tr>
             </tbody>
@@ -81,6 +81,6 @@
 
     <md-dialog-actions layout="row">
         <span flex></span>
-        <md-button ng-click="vm.okClick()" class="md-primary" aria-label="{{GENERAL.OK | triTranslate}}" translate="GENERAL.OK"></md-button>
+        <md-button ng-click="vm.okClick()" class="md-primary" aria-label="{{Ok | triTranslate}}" translate="Ok"></md-button>
     </md-dialog-actions>
 </md-dialog>

@@ -18,12 +18,12 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.SEED.SEED-MODULE',
+            name: 'Seed Module',
             icon: 'zmdi zmdi-grade',
             type: 'dropdown',
             priority: 1.1,
             children: [{
-                name: 'MENU.SEED.SEED-PAGE',
+                name: 'Start Page',
                 state: 'triangular.admin-default.seed-page',
                 type: 'link'
             }]

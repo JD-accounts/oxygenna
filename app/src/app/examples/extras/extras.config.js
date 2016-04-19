@@ -33,32 +33,32 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.EXTRAS.EXTRAS',
+            name: 'Extras',
             icon: 'zmdi zmdi-view-list-alt',
             type: 'dropdown',
             priority: 8.1,
             children: [{
-                name: 'MENU.EXTRAS.GALLERY',
+                name: 'Gallery',
                 state: 'triangular.admin-default.extra-gallery',
                 type: 'link'
             },{
-                name: 'MENU.EXTRAS.AVATARS',
+                name: 'Avatars',
                 state: 'triangular.admin-default.extra-avatars',
                 type: 'link'
             },{
-                name: 'MENU.EXTRAS.404',
+                name: '404 Page',
                 state: '404',
                 type: 'link'
             },{
-                name: 'MENU.EXTRAS.500',
+                name: '500 Page',
                 state: '500',
                 type: 'link'
             },{
-                name: 'MENU.EXTRAS.BLANK',
+                name: 'Blank Page',
                 state: 'triangular.admin-default.extra-blank',
                 type: 'link'
             },{
-                name: 'MENU.EXTRAS.TIMELINE',
+                name: 'Timeline',
                 state: 'triangular.admin-default.extra-timeline',
                 type: 'link'
             }]

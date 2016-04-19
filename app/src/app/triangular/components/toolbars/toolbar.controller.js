@@ -34,7 +34,7 @@
             // .then(function() {
             //     $mdToast.show(
             //         $mdToast.simple()
-            //         .content($filter('triTranslate')('MESSAGES.LANGUAGE_CHANGED'))
+            //         .content($filter('triTranslate')('Language Changed'))
             //         .position('bottom right')
             //         .hideDelay(500)
             //     );

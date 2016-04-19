@@ -19,9 +19,9 @@
         function resetClick() {
             $mdToast.show(
                 $mdToast.simple()
-                .content($filter('triTranslate')('FORGOT.MESSAGES.RESET_SENT'))
+                .content($filter('triTranslate')('Your new password has been mailed'))
                 .position('bottom right')
-                .action($filter('triTranslate')('FORGOT.MESSAGES.LOGIN_NOW'))
+                .action($filter('triTranslate')('Login'))
                 .highlightAction(true)
                 .hideDelay(0)
             ).then(function() {

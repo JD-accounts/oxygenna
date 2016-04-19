@@ -39,28 +39,28 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.FORMS.FORMS',
+            name: 'Forms',
             icon: 'zmdi zmdi-calendar-check',
             type: 'dropdown',
             priority: 3.3,
             children: [{
-                name: 'MENU.FORMS.AUTOCOMPLETE',
+                name: 'Autocomplete',
                 type: 'link',
                 state: 'triangular.admin-default.forms-autocomplete'
             },{
-                name: 'MENU.FORMS.BINDING',
+                name: 'Data Binding',
                 type: 'link',
                 state: 'triangular.admin-default.forms-binding'
             },{
-                name: 'MENU.FORMS.INPUTS',
+                name: 'Inputs',
                 type: 'link',
                 state: 'triangular.admin-default.forms-inputs'
             },{
-                name: 'MENU.FORMS.WIZARD',
+                name: 'Wizard',
                 type: 'link',
                 state: 'triangular.admin-default.forms-wizard'
             },{
-                name: 'MENU.FORMS.VALIDATION',
+                name: 'Validation',
                 type: 'link',
                 state: 'triangular.admin-default.forms-validation'
             }]

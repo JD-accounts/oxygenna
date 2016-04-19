@@ -22,9 +22,9 @@
         function signupClick() {
             $mdToast.show(
                 $mdToast.simple()
-                .content($filter('triTranslate')('SIGNUP.MESSAGES.CONFIRM_SENT'))
+                .content($filter('triTranslate')('Confirmation sent'))
                 .position('bottom right')
-                .action($filter('triTranslate')('SIGNUP.MESSAGES.LOGIN_NOW'))
+                .action($filter('triTranslate')('Login'))
                 .highlightAction(true)
                 .hideDelay(0)
             ).then(function() {

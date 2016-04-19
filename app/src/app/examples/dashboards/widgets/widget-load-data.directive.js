@@ -27,7 +27,7 @@
                 icon: 'zmdi zmdi-more-vert',
                 items: [{
                     icon: 'zmdi zmdi-search',
-                    title: 'DASHBOARDS.WIDGETS.MENU.DETAILS',
+                    title: 'Details',
                     click: function($event) {
                         var data = [];
                         angular.forEach(loadData, function(url, variable) {
@@ -48,10 +48,10 @@
                     }
                 },{
                     icon: 'zmdi zmdi-share',
-                    title: 'DASHBOARDS.WIDGETS.MENU.SHARE'
+                    title: 'Share'
                 },{
                     icon: 'zmdi zmdi-print',
-                    title: 'DASHBOARDS.WIDGETS.MENU.PRINT'
+                    title: 'Print'
                 }]
             });
 

@@ -22,7 +22,7 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.GITHUB.GITHUB',
+            name: 'GitHub',
             state: 'triangular.admin-default.github',
             type: 'link',
             icon: 'fa fa-github',

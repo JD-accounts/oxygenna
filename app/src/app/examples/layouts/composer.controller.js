@@ -14,16 +14,16 @@
         vm.onePageCode = '';
         vm.options = {
             toolbarSizes: {
-                'default': 'EXAMPLES.LAYOUTS.OPTIONS.TOOLBAR-SIZES.DEFAULT',
-                'md-medium-tall': 'EXAMPLES.LAYOUTS.OPTIONS.TOOLBAR-SIZES.MEDIUM',
-                'md-tall': 'EXAMPLES.LAYOUTS.OPTIONS.TOOLBAR-SIZES.TALL'
+                'default': 'Default',
+                'md-medium-tall': 'Medium',
+                'md-tall': 'Tall'
             },
             toolbarBackgrounds: {
             },
             sideMenuSizes: {
-                'hidden': 'EXAMPLES.LAYOUTS.OPTIONS.SIDEMENU-SIZES.HIDDEN',
-                'icon': 'EXAMPLES.LAYOUTS.OPTIONS.SIDEMENU-SIZES.ICONS',
-                'full': 'EXAMPLES.LAYOUTS.OPTIONS.SIDEMENU-SIZES.FULL'
+                'hidden': 'Hidden',
+                'icon': 'Icons',
+                'full': 'Full Size'
             }
         };
 

@@ -5,16 +5,16 @@
         .module('app.translate')
         // create a constant for languages so they can be added to both triangular & translate
         .constant('APP_LANGUAGES', [{
-            name: 'LANGUAGES.CHINESE',
+            name: 'Chinese',
             key: 'zh'
         },{
-            name: 'LANGUAGES.ENGLISH',
+            name: 'English',
             key: 'en'
         },{
-            name: 'LANGUAGES.FRENCH',
+            name: 'French',
             key: 'fr'
         },{
-            name: 'LANGUAGES.PORTUGUESE',
+            name: 'Portuguese',
             key: 'pt'
         }]);
 })();

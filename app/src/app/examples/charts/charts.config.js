@@ -39,43 +39,43 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.CHARTS.CHARTS',
+            name: 'Charts',
             icon: 'zmdi zmdi-chart',
             type: 'dropdown',
             priority: 5.1,
             children: [{
-                name: 'MENU.CHARTS.GOOGLE',
+                name: 'Google',
                 type: 'dropdown',
                 children: [{
-                    name: 'MENU.CHARTS.BAR',
+                    name: 'Bar',
                     state: 'triangular.admin-default.charts-google-bar',
                     type: 'link'
                 },{
-                    name: 'MENU.CHARTS.SCATTER',
+                    name: 'Scatter',
                     state: 'triangular.admin-default.charts-google-scatter',
                     type: 'link'
                 },{
-                    name: 'MENU.CHARTS.LINE',
+                    name: 'Line',
                     state: 'triangular.admin-default.charts-google-line',
                     type: 'link'
                 }]
             },{
-                name: 'MENU.CHARTS.CHARTJS',
+                name: 'Chart.js',
                 type: 'dropdown',
                 children: [{
-                    name: 'MENU.CHARTS.BAR',
+                    name: 'Bar',
                     state: 'triangular.admin-default.charts-chartjs-bar',
                     type: 'link'
                 },{
-                    name: 'MENU.CHARTS.LINE',
+                    name: 'Line',
                     state: 'triangular.admin-default.charts-chartjs-line',
                     type: 'link'
                 },{
-                    name: 'MENU.CHARTS.PIE',
+                    name: 'Pie',
                     state: 'triangular.admin-default.charts-chartjs-pie',
                     type: 'link'
                 },{
-                    name: 'MENU.CHARTS.TICKER',
+                    name: 'Ticker',
                     state: 'triangular.admin-default.charts-chartjs-ticker',
                     type: 'link'
                 }]

@@ -50,7 +50,7 @@
 
         triMenuProvider.addMenu({
             // give the menu a name to show (should be translatable and in the il8n folder json)
-            name: 'MENU.CALENDAR.CALENDAR',
+            name: 'Calendar',
             // point this menu to the state we created in the $stateProvider above
             state: 'triangular.admin-calendar.calendar',
             // set the menu type to a link

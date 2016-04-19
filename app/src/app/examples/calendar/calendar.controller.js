@@ -35,20 +35,20 @@
                     focusOnOpen: false,
                     locals: {
                         dialogData: {
-                            title: 'CALENDAR.EDIT-EVENT',
-                            confirmButtonText: 'CALENDAR.SAVE'
+                            title: 'Edit Event',
+                            confirmButtonText: 'Save'
                         },
                         event: calEvent,
                         edit: true
                     }
                 })
                 .then(function(event) {
-                    var toastMessage = 'CALENDAR.EVENT.EVENT-UPDATED';
+                    var toastMessage = 'Event Updated';
                     if(angular.isDefined(event.deleteMe) && event.deleteMe === true) {
                         // remove the event from the calendar
                         uiCalendarConfig.calendars['triangular-calendar'].fullCalendar('removeEvents', event._id);
                         // change toast message
-                        toastMessage = 'CALENDAR.EVENT.EVENT-DELETED';
+                        toastMessage = 'Event Deleted';
                     }
                     else {
                         // update event
@@ -86,11 +86,11 @@
                 focusOnOpen: false,
                 locals: {
                     dialogData: {
-                        title: 'CALENDAR.ADD-EVENT',
-                        confirmButtonText: 'CALENDAR.ADD'
+                        title: 'Add-EVENT',
+                        confirmButtonText: 'Add'
                     },
                     event: {
-                        title: $filter('triTranslate')('CALENDAR.EVENT.NEW-EVENT'),
+                        title: $filter('triTranslate')('New Event'),
                         allDay: false,
                         start: vm.currentDay,
                         end: inAnHour,
@@ -104,7 +104,7 @@
                 vm.eventSources[0].events.push(event);
                 $mdToast.show(
                     $mdToast.simple()
-                    .content($filter('triTranslate')('CALENDAR.EVENT.EVENT-CREATED'))
+                    .content($filter('triTranslate')('Event Created'))
                     .position('bottom right')
                     .hideDelay(2000)
                 );
