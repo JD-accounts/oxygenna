@@ -24,11 +24,8 @@
             abstract: true,
             views: {
                 sidebarLeft: {
-                    templateProvider: function($templateCache, $http, triLayout) {
-                        return $http.get(triLayout.layout.sidebarLeftTemplateUrl, {cache: $templateCache })
-                                .then(function(response) {
-                                    return response.data;
-                                });
+                    templateProvider: function($templateRequest, triLayout) {
+                        return $templateRequest(triLayout.layout.sidebarLeftTemplateUrl);
                     },
                     controllerProvider: function(triLayout) {
                         return triLayout.layout.sidebarLeftController;
@@ -36,11 +33,8 @@
                     controllerAs: 'vm'
                 },
                 sidebarRight: {
-                    templateProvider: function($templateCache, $http, triLayout) {
-                        return $http.get(triLayout.layout.sidebarRightTemplateUrl, {cache: $templateCache })
-                                .then(function(response) {
-                                    return response.data;
-                                });
+                    templateProvider: function($templateRequest, triLayout) {
+                        return $templateRequest(triLayout.layout.sidebarRightTemplateUrl);
                     },
                     controllerProvider: function(triLayout) {
                         return triLayout.layout.sidebarRightController;
@@ -48,11 +42,8 @@
                     controllerAs: 'vm'
                 },
                 toolbar: {
-                    templateProvider: function($templateCache, $http, triLayout) {
-                        return $http.get(triLayout.layout.toolbarTemplateUrl, {cache: $templateCache })
-                                .then(function(response) {
-                                    return response.data;
-                                });
+                    templateProvider: function($templateRequest, triLayout) {
+                        return $templateRequest(triLayout.layout.toolbarTemplateUrl);
                     },
                     controllerProvider: function(triLayout) {
                         return triLayout.layout.toolbarController;
@@ -60,11 +51,8 @@
                     controllerAs: 'vm'
                 },
                 content: {
-                    templateProvider: function($templateCache, $http, triLayout) {
-                        return $http.get(triLayout.layout.contentTemplateUrl, {cache: $templateCache })
-                                .then(function(response) {
-                                    return response.data;
-                                });
+                    templateProvider: function($templateRequest, triLayout) {
+                        return $templateRequest(triLayout.layout.contentTemplateUrl);
                     }
                 },
                 belowContent: {
