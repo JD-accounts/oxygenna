@@ -309,3 +309,4 @@
 
 - Translations are now optional - include app.translation module if you need multi-language
 - Moved translation files out of modules and into one app i18n folder in the app
+- Updated Angular Material to 1.1.0-RC4
