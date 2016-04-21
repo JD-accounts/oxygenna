@@ -14,6 +14,30 @@
   -webkit-backface-visibility: hidden;
 }
 
+.animate-me {
+  /* start 'enter' transition */
+  &.ng-enter,
+  &.ng-leave {
+    position: absolute !important;
+  }
+
+  &.ng-enter {
+    /* transition on enter for .5s */
+    transition: .5s;
+  }
+
+  &.ng-enter {
+      /* start with opacity 0 (invisible) */
+      opacity: 0;
+  }
+
+  /* end 'enter' transition */
+  &.ng-enter-active {
+    /* end with opacity 1 (fade in) */
+    opacity: 1;
+  }
+}
+
 // Side menu Bar
 .admin-sidebar-left {
   overflow-x:hidden;
