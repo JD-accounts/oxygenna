@@ -9,13 +9,13 @@
     function moduleConfig($stateProvider, uiGmapGoogleMapApiProvider, triMenuProvider) {
 
         $stateProvider
-        .state('triangular.admin-default.maps-fullwidth', {
+        .state('triangular.maps-fullwidth', {
             url: '/maps/fullwidth',
             templateUrl: 'app/examples/maps/maps-fullwidth.tmpl.html',
             controller: 'MapController',
             controllerAs: 'vm'
         })
-        .state('triangular.admin-default.maps-demos', {
+        .state('triangular.maps-demos', {
             url: '/maps/demos',
             templateUrl: 'app/examples/maps/maps-demo.tmpl.html'
         });
@@ -32,11 +32,11 @@
             priority: 7.1,
             children: [{
                 name: 'Fullwidth',
-                state: 'triangular.admin-default.maps-fullwidth',
+                state: 'triangular.maps-fullwidth',
                 type: 'link'
             },{
                 name: 'Demos',
-                state: 'triangular.admin-default.maps-demos',
+                state: 'triangular.maps-demos',
                 type: 'link'
             }]
         });

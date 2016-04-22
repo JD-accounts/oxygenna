@@ -9,13 +9,13 @@
     function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
-        .state('triangular.admin-default.elements-buttons', {
+        .state('triangular.elements-buttons', {
             url: '/elements/buttons',
             templateUrl: 'app/examples/elements/buttons.tmpl.html',
             controller: 'ButtonsController',
             controllerAs: 'vm'
         })
-        .state('triangular.admin-default.elements-icons', {
+        .state('triangular.elements-icons', {
             url: '/elements/icons',
             templateUrl: 'app/examples/elements/icons.tmpl.html',
             controller: 'IconsController',
@@ -35,41 +35,41 @@
                 }
             }
         })
-        .state('triangular.admin-default.elements-checkboxes', {
+        .state('triangular.elements-checkboxes', {
             url: '/elements/checkboxes',
             templateUrl: 'app/examples/elements/checkboxes.tmpl.html'
         })
-        .state('triangular.admin-default.elements-radios', {
+        .state('triangular.elements-radios', {
             url: '/elements/radios',
             templateUrl: 'app/examples/elements/radios.tmpl.html'
         })
-        .state('triangular.admin-default.elements-toolbars', {
+        .state('triangular.elements-toolbars', {
             url: '/elements/toolbars',
             templateUrl: 'app/examples/elements/toolbars.tmpl.html'
         })
-        .state('triangular.admin-default.elements-tooltips', {
+        .state('triangular.elements-tooltips', {
             url: '/elements/tooltips',
             templateUrl: 'app/examples/elements/tooltips.tmpl.html'
         })
-        .state('triangular.admin-default.elements-whiteframes', {
+        .state('triangular.elements-whiteframes', {
             url: '/elements/whiteframes',
             templateUrl: 'app/examples/elements/whiteframes.tmpl.html'
         })
-        .state('triangular.admin-default.elements-sliders', {
+        .state('triangular.elements-sliders', {
             url: '/elements/sliders',
             templateUrl: 'app/examples/elements/sliders.tmpl.html'
         })
-        .state('triangular.admin-default.elements-toasts', {
+        .state('triangular.elements-toasts', {
             url: '/elements/toasts',
             templateUrl: 'app/examples/elements/toasts.tmpl.html'
         })
-        .state('triangular.admin-default.elements-progress', {
+        .state('triangular.elements-progress', {
             url: '/elements/progress',
             templateUrl: 'app/examples/elements/progress.tmpl.html',
             controller: 'ProgressController',
             controllerAs: 'vm'
         })
-        .state('triangular.admin-default.elements-switches', {
+        .state('triangular.elements-switches', {
             url: '/elements/switches',
             templateUrl: 'app/examples/elements/switches.tmpl.html',
             controller: function() {
@@ -81,21 +81,21 @@
             },
             controllerAs: 'vm'
         })
-        .state('triangular.admin-default.elements-dialogs', {
+        .state('triangular.elements-dialogs', {
             url: '/elements/dialogs',
             templateUrl: 'app/examples/elements/dialogs.tmpl.html',
             controller: 'DialogsController',
             controllerAs: 'vm'
         })
-        .state('triangular.admin-default.menus', {
+        .state('triangular.menus', {
             url: '/elements/menus',
             templateUrl: 'app/examples/elements/menus.tmpl.html'
         })
-        .state('triangular.admin-default.elements-tabs', {
+        .state('triangular.elements-tabs', {
             url: '/elements/tabs',
             templateUrl: 'app/examples/elements/tabs.tmpl.html'
         })
-        .state('triangular.admin-default.elements-sidebars', {
+        .state('triangular.elements-sidebars', {
             url: '/elements/sidebars',
             templateUrl: 'app/examples/elements/sidebars.tmpl.html',
             controller: function($mdSidenav) {
@@ -105,31 +105,31 @@
             },
             controllerAs: 'vm'
         })
-        .state('triangular.admin-default.elements-grids', {
+        .state('triangular.elements-grids', {
             url: '/elements/grids',
             templateUrl: 'app/examples/elements/grids.tmpl.html'
         })
-        .state('triangular.admin-default.fab-speed', {
+        .state('triangular.fab-speed', {
             url: '/elements/fab-speed',
             templateUrl: 'app/examples/elements/fab-speed.tmpl.html'
         })
-        .state('triangular.admin-default.fab-toolbar', {
+        .state('triangular.fab-toolbar', {
             url: '/elements/fab-toolbar',
             templateUrl: 'app/examples/elements/fab-toolbar.tmpl.html'
         })
-        .state('triangular.admin-default.elements-selects', {
+        .state('triangular.elements-selects', {
             url: '/elements/selects',
             templateUrl: 'app/examples/elements/selects.tmpl.html'
         })
-        .state('triangular.admin-default.elements-tables', {
+        .state('triangular.elements-tables', {
             url: '/elements/tables',
             templateUrl: 'app/examples/elements/tables.tmpl.html'
         })
-        .state('triangular.admin-default.elements-textangular', {
+        .state('triangular.elements-textangular', {
             url: '/elements/textangular',
             templateUrl: 'app/examples/elements/textangular.tmpl.html'
         })
-        .state('triangular.admin-default.elements-lists', {
+        .state('triangular.elements-lists', {
             url: '/elements/lists',
             templateUrl: 'app/examples/elements/lists.tmpl.html',
             controller: function(emails) {
@@ -145,7 +145,7 @@
                 }
             }
         })
-        .state('triangular.admin-default.elements-chips', {
+        .state('triangular.elements-chips', {
             url: '/elements/chips',
             templateUrl: 'app/examples/elements/chips.tmpl.html',
             controller: 'ChipsController',
@@ -159,19 +159,19 @@
                 }
             }
         })
-        .state('triangular.admin-default.elements-cards', {
+        .state('triangular.elements-cards', {
             url: '/elements/cards',
             templateUrl: 'app/examples/elements/cards.tmpl.html'
         })
-        .state('triangular.admin-default.elements-upload', {
+        .state('triangular.elements-upload', {
             url: '/elements/upload',
             templateUrl: 'app/examples/elements/upload.tmpl.html'
         })
-        .state('triangular.admin-default.elements-loader', {
+        .state('triangular.elements-loader', {
             url: '/elements/loader',
             templateUrl: 'app/examples/elements/loader.tmpl.html'
         })
-        .state('triangular.admin-default.elements-datepicker', {
+        .state('triangular.elements-datepicker', {
             url: '/elements/datepicker',
             templateUrl: 'app/examples/elements/datepicker.tmpl.html'
         });
@@ -184,111 +184,111 @@
             children: [{
                 name: 'Buttons',
                 type: 'link',
-                state: 'triangular.admin-default.elements-buttons'
+                state: 'triangular.elements-buttons'
             },{
                 name: 'Cards',
                 type: 'link',
-                state: 'triangular.admin-default.elements-cards'
+                state: 'triangular.elements-cards'
             },{
                 name: 'Checkboxes',
                 type: 'link',
-                state: 'triangular.admin-default.elements-checkboxes'
+                state: 'triangular.elements-checkboxes'
             },{
                 name: 'Chips',
                 type: 'link',
-                state: 'triangular.admin-default.elements-chips'
+                state: 'triangular.elements-chips'
             },{
                 name: 'Datepicker',
                 type: 'link',
-                state: 'triangular.admin-default.elements-datepicker'
+                state: 'triangular.elements-datepicker'
             },{
                 name: 'Dialogs',
                 type: 'link',
-                state: 'triangular.admin-default.elements-dialogs'
+                state: 'triangular.elements-dialogs'
             },{
                 name: 'FAB Speed Dial',
                 type: 'link',
-                state: 'triangular.admin-default.fab-speed'
+                state: 'triangular.fab-speed'
             },{
                 name: 'FAB Toolbar',
                 type: 'link',
-                state: 'triangular.admin-default.fab-toolbar'
+                state: 'triangular.fab-toolbar'
             },{
                 name: 'Grids',
                 type: 'link',
-                state: 'triangular.admin-default.elements-grids'
+                state: 'triangular.elements-grids'
             },{
                 name: 'Icons',
                 type: 'link',
-                state: 'triangular.admin-default.elements-icons'
+                state: 'triangular.elements-icons'
             },{
                 name: 'Lists',
                 type: 'link',
-                state: 'triangular.admin-default.elements-lists'
+                state: 'triangular.elements-lists'
             },{
                 name: 'Loader',
                 type: 'link',
-                state: 'triangular.admin-default.elements-loader'
+                state: 'triangular.elements-loader'
             },{
                 name: 'Menus',
                 type: 'link',
-                state: 'triangular.admin-default.menus'
+                state: 'triangular.menus'
             },{
                 name: 'Progress',
                 type: 'link',
-                state: 'triangular.admin-default.elements-progress'
+                state: 'triangular.elements-progress'
             },{
                 name: 'Radios',
                 type: 'link',
-                state: 'triangular.admin-default.elements-radios'
+                state: 'triangular.elements-radios'
             },{
                 name: 'Selects',
                 type: 'link',
-                state: 'triangular.admin-default.elements-selects'
+                state: 'triangular.elements-selects'
             },{
                 name: 'Sidebars',
                 type: 'link',
-                state: 'triangular.admin-default.elements-sidebars'
+                state: 'triangular.elements-sidebars'
             },{
                 name: 'Sliders',
                 type: 'link',
-                state: 'triangular.admin-default.elements-sliders'
+                state: 'triangular.elements-sliders'
             },{
                 name: 'Switches',
                 type: 'link',
-                state: 'triangular.admin-default.elements-switches'
+                state: 'triangular.elements-switches'
             },{
                 name: 'Tables',
                 type: 'link',
-                state: 'triangular.admin-default.elements-tables'
+                state: 'triangular.elements-tables'
             },{
                 name: 'Tabs',
                 type: 'link',
-                state: 'triangular.admin-default.elements-tabs'
+                state: 'triangular.elements-tabs'
             },{
                 name: 'Textangular',
                 type: 'link',
-                state: 'triangular.admin-default.elements-textangular'
+                state: 'triangular.elements-textangular'
             },{
                 name: 'Toasts',
                 type: 'link',
-                state: 'triangular.admin-default.elements-toasts'
+                state: 'triangular.elements-toasts'
             },{
                 name: 'Toolbars',
                 type: 'link',
-                state: 'triangular.admin-default.elements-toolbars'
+                state: 'triangular.elements-toolbars'
             },{
                 name: 'Tooltips',
                 type: 'link',
-                state: 'triangular.admin-default.elements-tooltips'
+                state: 'triangular.elements-tooltips'
             },{
                 name: 'Whiteframes',
                 type: 'link',
-                state: 'triangular.admin-default.elements-whiteframes'
+                state: 'triangular.elements-whiteframes'
             },{
                 name: 'Upload',
                 type: 'link',
-                state: 'triangular.admin-default.elements-upload'
+                state: 'triangular.elements-upload'
             }]
         });
     }

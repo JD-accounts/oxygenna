@@ -8,7 +8,7 @@
     /* @ngInject */
     function config($stateProvider, triMenuProvider) {
         $stateProvider
-        .state('triangular.admin-default.github', {
+        .state('triangular.github', {
             url: '/github',
             templateUrl: 'app/examples/github/github.tmpl.html',
             controller: 'GithubController',
@@ -23,7 +23,7 @@
 
         triMenuProvider.addMenu({
             name: 'GitHub',
-            state: 'triangular.admin-default.github',
+            state: 'triangular.github',
             type: 'link',
             icon: 'fa fa-github',
             priority: 2.2

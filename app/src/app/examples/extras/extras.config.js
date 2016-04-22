@@ -9,23 +9,23 @@
     function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
-        .state('triangular.admin-default.extra-gallery', {
+        .state('triangular.extra-gallery', {
             url: '/extras/gallery',
             templateUrl: 'app/examples/extras/gallery.tmpl.html',
             controller: 'GalleryController',
             controllerAs: 'vm'
         })
-        .state('triangular.admin-default.extra-avatars', {
+        .state('triangular.extra-avatars', {
             url: '/extras/avatars',
             templateUrl: 'app/examples/extras/avatars.tmpl.html',
             controller: 'AvatarsController',
             controllerAs: 'vm'
         })
-        .state('triangular.admin-default.extra-blank', {
+        .state('triangular.extra-blank', {
             url: '/extras/blank',
             templateUrl: 'app/examples/extras/blank.tmpl.html'
         })
-        .state('triangular.admin-default.extra-timeline', {
+        .state('triangular.extra-timeline', {
             url: '/extras/timeline',
             templateUrl: 'app/examples/extras/timeline.tmpl.html',
             controller: 'TimelineController',
@@ -39,11 +39,11 @@
             priority: 8.1,
             children: [{
                 name: 'Gallery',
-                state: 'triangular.admin-default.extra-gallery',
+                state: 'triangular.extra-gallery',
                 type: 'link'
             },{
                 name: 'Avatars',
-                state: 'triangular.admin-default.extra-avatars',
+                state: 'triangular.extra-avatars',
                 type: 'link'
             },{
                 name: '404 Page',
@@ -55,11 +55,11 @@
                 type: 'link'
             },{
                 name: 'Blank Page',
-                state: 'triangular.admin-default.extra-blank',
+                state: 'triangular.extra-blank',
                 type: 'link'
             },{
                 name: 'Timeline',
-                state: 'triangular.admin-default.extra-timeline',
+                state: 'triangular.extra-timeline',
                 type: 'link'
             }]
         });

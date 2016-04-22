@@ -37,7 +37,7 @@
             controller: 'ForgotController',
             controllerAs: 'vm'
         })
-        .state('triangular.admin-default.profile', {
+        .state('triangular.profile', {
             url: '/profile',
             templateUrl: 'app/examples/authentication/profile/profile.tmpl.html',
             controller: 'ProfileController',
@@ -67,7 +67,7 @@
                 type: 'link'
             },{
                 name: 'Profile',
-                state: 'triangular.admin-default.profile',
+                state: 'triangular.profile',
                 type: 'link'
             }]
         });
