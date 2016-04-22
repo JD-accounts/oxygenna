@@ -11,7 +11,7 @@
         $stateProvider
         .state('triangular.standard-page',  {
             url: '/layouts/standard-page',
-            templateUrl: 'app/examples/layouts/standard-page.tmpl.html',
+            templateUrl: 'app/examples/layouts/standard-page.tmpl.html'
         })
         .state('triangular.no-scroll-page',  {
             url: '/layouts/no-scroll-page',

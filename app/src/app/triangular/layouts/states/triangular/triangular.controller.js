@@ -25,6 +25,7 @@
 
         vm.activateHover = activateHover;
         vm.removeHover  = removeHover;
+        vm.showLoader = triLoaderService.isActive();
 
         ////////////////
 
@@ -49,6 +50,16 @@
         // register listeners for loader
         $scope.$on('loader', function(event, isActive) {
             vm.showLoader = isActive;
+        });
+
+        $scope.$on('$stateChangeStart', function() {
+            triLoaderService.setLoaderActive(true);
+        });
+
+        $scope.$on('$viewContentLoaded', function() {
+            $timeout(function() {
+                triLoaderService.setLoaderActive(false);
+            });
         });
     }
 })();

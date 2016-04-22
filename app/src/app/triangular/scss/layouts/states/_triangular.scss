@@ -8,3 +8,31 @@
     left: 0px;
   }
 }
+
+.triangular-toolbar-and-content {
+  position: relative;
+}
+
+.triangular-toolbar {
+    &.ng-enter {
+        transition: .5s;
+    }
+
+    &.ng-enter {
+      @include slideInDown();
+    }
+
+    &.ng-leave {
+      display: none;
+    }
+}
+
+.triangular-loader {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: #fff;
+}
