@@ -14,7 +14,7 @@
                 'root': {
                     templateUrl: 'app/triangular/layouts/states/triangular/triangular.tmpl.html',
                     controller: 'TriangularStateController',
-                    controllerAs: 'vm'
+                    controllerAs: 'stateController'
                 },
                 'sidebarLeft@triangular': {
                     templateProvider: function($templateRequest, triLayout) {

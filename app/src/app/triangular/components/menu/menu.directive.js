@@ -7,10 +7,6 @@
 
     /* @ngInject */
     function triMenuDirective($location, $mdTheming, triTheming) {
-        // Usage:
-        //
-        // Creates:
-        //
         var directive = {
             restrict: 'E',
             template: '<md-content><tri-menu-item ng-repeat="item in triMenuController.menu | orderBy:\'priority\'" item="::item"></tri-menu-item></md-content>',

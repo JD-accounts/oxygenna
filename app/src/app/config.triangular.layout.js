@@ -7,8 +7,15 @@
 
     /* @ngInject */
     function config(triLayoutProvider) {
-        triLayoutProvider.setDefaultOption('loaderController', 'LoaderController');
+        // set app templates (all in app/layouts folder so you can tailor them to your needs)
+
+        // loader screen HTML & controller
         triLayoutProvider.setDefaultOption('loaderTemplateUrl', 'app/layouts/loader/loader.tmpl.html');
+        triLayoutProvider.setDefaultOption('loaderController', 'LoaderController');
+
+        // left sidemenu HTML and controller
+        triLayoutProvider.setDefaultOption('sidebarLeftTemplateUrl', 'app/layouts/sidemenu/sidemenu.tmpl.html');
+        triLayoutProvider.setDefaultOption('sidebarLeftController', 'SideMenuController');
 
         triLayoutProvider.setDefaultOption('toolbarSize', 'default');
 

@@ -31,21 +31,23 @@
 
         function activateHover() {
             if(triLayout.layout.sideMenuSize === 'icon') {
-                $element.find('.admin-sidebar-left').addClass('hover');
+                $element.find('.triangular-sidebar-left').addClass('hover');
                 $timeout(function(){
                     $window.dispatchEvent(new Event('resize'));
-                },300);
+                }, 300);
             }
         }
 
         function removeHover () {
             if(triLayout.layout.sideMenuSize === 'icon') {
-                $element.find('.admin-sidebar-left').removeClass('hover');
+                $element.find('.triangular-sidebar-left').removeClass('hover');
                 $timeout(function(){
                     $window.dispatchEvent(new Event('resize'));
-                },300);
+                }, 300);
             }
         }
+
+        // watches
 
         // register listeners for loader
         $scope.$on('loader', function(event, isActive) {

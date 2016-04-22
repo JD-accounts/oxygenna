@@ -3,10 +3,10 @@
 
     angular
         .module('triangular.components')
-        .controller('MenuController', MenuController);
+        .controller('SideMenuController', SideMenuController);
 
     /* @ngInject */
-    function MenuController(triSettings, triLayout) {
+    function SideMenuController(triSettings, triLayout) {
         var vm = this;
         vm.layout = triLayout.layout;
         vm.sidebarInfo = {
@@ -14,7 +14,6 @@
             appLogo: triSettings.logo
         };
         vm.toggleIconMenu = toggleIconMenu;
-
         ////////////
         function toggleIconMenu() {
             var menu = vm.layout.sideMenuSize === 'icon' ? 'full' : 'icon';
