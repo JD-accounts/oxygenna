@@ -5,17 +5,17 @@
         .module('app.examples.email')
         .config(moduleConfig)
         .constant('EMAIL_ROUTES', [{
-            state: 'triangular-no-scroll.email.inbox',
+            state: 'triangular.email.inbox',
             name: 'Inbox',
             url: '/email/inbox',
             icon: 'zmdi zmdi-inbox'
         },{
-            state: 'triangular-no-scroll.email.trash',
+            state: 'triangular.email.trash',
             name: 'Trash',
             url: '/email/trash',
             icon: 'zmdi zmdi-minus-circle'
         },{
-            state: 'triangular-no-scroll.email.sent',
+            state: 'triangular.email.sent',
             name: 'Sent',
             url: '/email/sent',
             icon: 'zmdi zmdi-email'
@@ -25,26 +25,26 @@
     function moduleConfig($stateProvider, triMenuProvider, EMAIL_ROUTES) {
 
         $stateProvider
-        .state('triangular-no-scroll.email', {
+        .state('triangular.email',  {
             abstract: true,
             views: {
-                sidebarLeft: {
-                    templateUrl: 'app/triangular/components/menu/menu.tmpl.html',
-                    controller: 'MenuController',
-                    controllerAs: 'vm'
-                },
-                sidebarRight: {
-                    templateUrl: 'app/triangular/components/notifications-panel/notifications-panel.tmpl.html',
-                    controller: 'NotificationsPanelController',
-                    controllerAs: 'vm'
-                },
-                toolbar: {
-                    templateUrl: 'app/examples/email/toolbar.tmpl.html',
+                'toolbar@triangular': {
+                    templateUrl: 'app/examples/email/layout/toolbar/toolbar.tmpl.html',
                     controller: 'EmailToolbarController',
                     controllerAs: 'vm'
-                },
-                content: {
-                    template: '<div flex ui-view layout="column" class="overflow-hidden"></div>'
+                    // controller: function($scope, $timeout, triLoaderService) {
+                    //     $timeout(function() {
+                    //         console.log('loader');
+                    //         triLoaderService.setLoaderActive(true);
+                    //     }, 3000)
+                    //
+                    // },
+
+                }
+            },
+            data: {
+                layout: {
+                    contentClass: 'triangular-non-scrolling'
                 }
             }
         });
@@ -53,9 +53,13 @@
             $stateProvider
             .state(route.state, {
                 url: route.url,
-                templateUrl: 'app/examples/email/inbox.tmpl.html',
-                controller: 'InboxController',
-                controllerAs: 'vm',
+                views: {
+                    '@triangular': {
+                        templateUrl: 'app/examples/email/inbox.tmpl.html',
+                        controller: 'InboxController',
+                        controllerAs: 'vm'
+                    }
+                },
                 resolve: {
                     emails: function($http, API_CONFIG) {
                         return $http({
