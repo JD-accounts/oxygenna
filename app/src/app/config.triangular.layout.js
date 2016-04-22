@@ -7,6 +7,9 @@
 
     /* @ngInject */
     function config(triLayoutProvider) {
+        triLayoutProvider.setDefaultOption('loaderController', 'LoaderController');
+        triLayoutProvider.setDefaultOption('loaderTemplateUrl', 'app/layouts/loader/loader.tmpl.html');
+
         triLayoutProvider.setDefaultOption('toolbarSize', 'default');
 
         triLayoutProvider.setDefaultOption('toolbarShrink', false);
