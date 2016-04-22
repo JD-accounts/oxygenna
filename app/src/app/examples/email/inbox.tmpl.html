@@ -1,7 +1,6 @@
-<div layout="column">
 <div flex layout="row">
     <md-content flex="100" flex-gt-xs="50" flex-gt-lg="40" ng-show="vm.showEmailList">
-        <md-list class="inbox-list" flex>
+        <md-list class="inbox-list">
             <div ng-repeat="group in vm.emailGroups">
                 <md-subheader class="md-primary" ng-show="group.emails.length > 0">{{::group.name}}</md-subheader>
                 <md-list-item class="inbox-list__email inbox-list__email--animated md-3-line md-long-text" ng-repeat="email in group.emails | orderBy:'-date'" ng-click="vm.openMail(email)" ng-class="{ 'inbox-list__email--active': vm.selectedMail === email.id, 'inbox-list__email--unread': email.unread }">
@@ -27,4 +26,3 @@
 <md-button ng-click="vm.composeClick($event)" class="md-fab md-accent md-fab-bottom-right" aria-label="{{'EMAIL.COMPOSE_EMAIL' | triTranslate}}">
     <md-icon md-font-icon="zmdi zmdi-edit"></md-icon>
 </md-button>
-</div>

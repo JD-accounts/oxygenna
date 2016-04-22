@@ -32,14 +32,6 @@
                     templateUrl: 'app/examples/email/layout/toolbar/toolbar.tmpl.html',
                     controller: 'EmailToolbarController',
                     controllerAs: 'vm'
-                    // controller: function($scope, $timeout, triLoaderService) {
-                    //     $timeout(function() {
-                    //         console.log('loader');
-                    //         triLoaderService.setLoaderActive(true);
-                    //     }, 3000)
-                    //
-                    // },
-
                 }
             },
             data: {
