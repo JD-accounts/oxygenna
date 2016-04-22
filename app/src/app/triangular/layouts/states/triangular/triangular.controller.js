@@ -31,7 +31,7 @@
 
         function activateHover() {
             if(triLayout.layout.sideMenuSize === 'icon') {
-                $element.find('.triangular-sidebar-left').addClass('hover');
+                $element.find('.triangular-sidenav-left').addClass('hover');
                 $timeout(function(){
                     $window.dispatchEvent(new Event('resize'));
                 }, 300);
@@ -40,7 +40,7 @@
 
         function removeHover () {
             if(triLayout.layout.sideMenuSize === 'icon') {
-                $element.find('.triangular-sidebar-left').removeClass('hover');
+                $element.find('.triangular-sidenav-left').removeClass('hover');
                 $timeout(function(){
                     $window.dispatchEvent(new Event('resize'));
                 }, 300);

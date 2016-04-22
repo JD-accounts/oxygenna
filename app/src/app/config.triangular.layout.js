@@ -14,8 +14,12 @@
         triLayoutProvider.setDefaultOption('loaderController', 'LoaderController');
 
         // left sidemenu HTML and controller
-        triLayoutProvider.setDefaultOption('sidebarLeftTemplateUrl', 'app/layouts/sidemenu/sidemenu.tmpl.html');
-        triLayoutProvider.setDefaultOption('sidebarLeftController', 'SideMenuController');
+        triLayoutProvider.setDefaultOption('sidebarLeftTemplateUrl', 'app/layouts/leftsidenav/leftsidenav.tmpl.html');
+        triLayoutProvider.setDefaultOption('sidebarLeftController', 'LeftSidenavController');
+
+        // right sidemenu HTML and controller
+        triLayoutProvider.setDefaultOption('sidebarRightTemplateUrl', 'app/layouts/rightsidenav/rightsidenav.tmpl.html');
+        triLayoutProvider.setDefaultOption('sidebarRightController', 'RightSidenavController');
 
         triLayoutProvider.setDefaultOption('toolbarSize', 'default');
 
