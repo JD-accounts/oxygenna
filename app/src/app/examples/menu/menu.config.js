@@ -13,17 +13,32 @@
             url: '/menu-levels/:level',
             controller: 'LevelController',
             controllerAs: 'vm',
-            templateUrl: 'app/examples/menu/level.tmpl.html'
+            templateUrl: 'app/examples/menu/level.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.menu-dynamic', {
             url: '/menu/dynamic',
             controller: 'MenuDynamicController',
             controllerAs: 'vm',
-            templateUrl: 'app/examples/menu/dynamic.tmpl.html'
+            templateUrl: 'app/examples/menu/dynamic.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.menu-dynamic-dummy-page', {
             url: '/menu/dynamic-page',
-            templateUrl: 'app/examples/menu/dynamic-page.tmpl.html'
+            templateUrl: 'app/examples/menu/dynamic-page.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         });
 
         triMenuProvider.addMenu({

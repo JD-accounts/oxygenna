@@ -13,7 +13,12 @@
             url: '/maps/fullwidth',
             templateUrl: 'app/examples/maps/maps-fullwidth.tmpl.html',
             controller: 'MapController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.maps-demos', {
             url: '/maps/demos',

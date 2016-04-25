@@ -23,7 +23,12 @@
         })
         .state('triangular.extra-blank', {
             url: '/extras/blank',
-            templateUrl: 'app/examples/extras/blank.tmpl.html'
+            templateUrl: 'app/examples/extras/blank.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.extra-timeline', {
             url: '/extras/timeline',

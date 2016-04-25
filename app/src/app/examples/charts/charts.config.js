@@ -11,31 +11,66 @@
         $stateProvider
         .state('triangular.charts-google-bar', {
             url: '/charts/google/bar',
-            templateUrl: 'app/examples/charts/google-bar.tmpl.html'
+            templateUrl: 'app/examples/charts/google-bar.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.charts-google-scatter', {
             url: '/charts/google/scatter',
-            templateUrl: 'app/examples/charts/google-scatter.tmpl.html'
+            templateUrl: 'app/examples/charts/google-scatter.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.charts-google-line', {
             url: '/charts/google/line',
-            templateUrl: 'app/examples/charts/google-line.tmpl.html'
+            templateUrl: 'app/examples/charts/google-line.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.charts-chartjs-bar', {
             url: '/charts/chartjs/bar',
-            templateUrl: 'app/examples/charts/chartjs-bar.tmpl.html'
+            templateUrl: 'app/examples/charts/chartjs-bar.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.charts-chartjs-pie', {
             url: '/charts/chartjs/pie',
-            templateUrl: 'app/examples/charts/chartjs-pie.tmpl.html'
+            templateUrl: 'app/examples/charts/chartjs-pie.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.charts-chartjs-ticker', {
             url: '/charts/chartjs/ticker',
-            templateUrl: 'app/examples/charts/chartjs-ticker.tmpl.html'
+            templateUrl: 'app/examples/charts/chartjs-ticker.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.charts-chartjs-line', {
             url: '/charts/chartjs/line',
-            templateUrl: 'app/examples/charts/chartjs-line.tmpl.html'
+            templateUrl: 'app/examples/charts/chartjs-line.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         });
 
         triMenuProvider.addMenu({

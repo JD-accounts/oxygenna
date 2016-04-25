@@ -13,13 +13,23 @@
             url: '/elements/buttons',
             templateUrl: 'app/examples/elements/buttons.tmpl.html',
             controller: 'ButtonsController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-icons', {
             url: '/elements/icons',
             templateUrl: 'app/examples/elements/icons.tmpl.html',
             controller: 'IconsController',
             controllerAs: 'vm',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            },
             resolve: {
                 icons: function($http, API_CONFIG) {
                     return $http({
@@ -37,37 +47,77 @@
         })
         .state('triangular.elements-checkboxes', {
             url: '/elements/checkboxes',
-            templateUrl: 'app/examples/elements/checkboxes.tmpl.html'
+            templateUrl: 'app/examples/elements/checkboxes.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-radios', {
             url: '/elements/radios',
-            templateUrl: 'app/examples/elements/radios.tmpl.html'
+            templateUrl: 'app/examples/elements/radios.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-toolbars', {
             url: '/elements/toolbars',
-            templateUrl: 'app/examples/elements/toolbars.tmpl.html'
+            templateUrl: 'app/examples/elements/toolbars.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-tooltips', {
             url: '/elements/tooltips',
-            templateUrl: 'app/examples/elements/tooltips.tmpl.html'
+            templateUrl: 'app/examples/elements/tooltips.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-whiteframes', {
             url: '/elements/whiteframes',
-            templateUrl: 'app/examples/elements/whiteframes.tmpl.html'
+            templateUrl: 'app/examples/elements/whiteframes.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-sliders', {
             url: '/elements/sliders',
-            templateUrl: 'app/examples/elements/sliders.tmpl.html'
+            templateUrl: 'app/examples/elements/sliders.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-toasts', {
             url: '/elements/toasts',
-            templateUrl: 'app/examples/elements/toasts.tmpl.html'
+            templateUrl: 'app/examples/elements/toasts.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-progress', {
             url: '/elements/progress',
             templateUrl: 'app/examples/elements/progress.tmpl.html',
             controller: 'ProgressController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-switches', {
             url: '/elements/switches',
@@ -79,21 +129,41 @@
                     }
                 };
             },
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-dialogs', {
             url: '/elements/dialogs',
             templateUrl: 'app/examples/elements/dialogs.tmpl.html',
             controller: 'DialogsController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.menus', {
             url: '/elements/menus',
-            templateUrl: 'app/examples/elements/menus.tmpl.html'
+            templateUrl: 'app/examples/elements/menus.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-tabs', {
             url: '/elements/tabs',
-            templateUrl: 'app/examples/elements/tabs.tmpl.html'
+            templateUrl: 'app/examples/elements/tabs.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-sidebars', {
             url: '/elements/sidebars',
@@ -103,31 +173,66 @@
                     $mdSidenav(id).toggle();
                 };
             },
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-grids', {
             url: '/elements/grids',
-            templateUrl: 'app/examples/elements/grids.tmpl.html'
+            templateUrl: 'app/examples/elements/grids.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.fab-speed', {
             url: '/elements/fab-speed',
-            templateUrl: 'app/examples/elements/fab-speed.tmpl.html'
+            templateUrl: 'app/examples/elements/fab-speed.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.fab-toolbar', {
             url: '/elements/fab-toolbar',
-            templateUrl: 'app/examples/elements/fab-toolbar.tmpl.html'
+            templateUrl: 'app/examples/elements/fab-toolbar.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-selects', {
             url: '/elements/selects',
-            templateUrl: 'app/examples/elements/selects.tmpl.html'
+            templateUrl: 'app/examples/elements/selects.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-tables', {
             url: '/elements/tables',
-            templateUrl: 'app/examples/elements/tables.tmpl.html'
+            templateUrl: 'app/examples/elements/tables.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-textangular', {
             url: '/elements/textangular',
-            templateUrl: 'app/examples/elements/textangular.tmpl.html'
+            templateUrl: 'app/examples/elements/textangular.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-lists', {
             url: '/elements/lists',
@@ -143,6 +248,11 @@
                         url: API_CONFIG.url + 'email/inbox'
                     });
                 }
+            },
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
             }
         })
         .state('triangular.elements-chips', {
@@ -157,23 +267,48 @@
                         url: API_CONFIG.url + 'email/contacts'
                     });
                 }
+            },
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
             }
         })
         .state('triangular.elements-cards', {
             url: '/elements/cards',
-            templateUrl: 'app/examples/elements/cards.tmpl.html'
+            templateUrl: 'app/examples/elements/cards.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-upload', {
             url: '/elements/upload',
-            templateUrl: 'app/examples/elements/upload.tmpl.html'
+            templateUrl: 'app/examples/elements/upload.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-loader', {
             url: '/elements/loader',
-            templateUrl: 'app/examples/elements/loader.tmpl.html'
+            templateUrl: 'app/examples/elements/loader.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.elements-datepicker', {
             url: '/elements/datepicker',
-            templateUrl: 'app/examples/elements/datepicker.tmpl.html'
+            templateUrl: 'app/examples/elements/datepicker.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         });
 
         triMenuProvider.addMenu({

@@ -33,7 +33,8 @@
             },
             data: {
                 layout: {
-                    contentClass: 'triangular-non-scrolling layout-column'
+                    contentClass: 'triangular-non-scrolling layout-column',
+                    footer: false
                 }
             }
         });

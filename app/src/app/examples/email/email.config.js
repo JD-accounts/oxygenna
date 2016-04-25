@@ -36,6 +36,7 @@
             },
             data: {
                 layout: {
+                    footer: false,
                     contentClass: 'triangular-non-scrolling'
                 }
             }

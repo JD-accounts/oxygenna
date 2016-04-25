@@ -11,15 +11,30 @@
         $stateProvider
         .state('triangular.forms-inputs', {
             url: '/forms/inputs',
-            templateUrl: 'app/examples/forms/inputs.tmpl.html'
+            templateUrl: 'app/examples/forms/inputs.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.forms-binding', {
             url: '/forms/binding',
-            templateUrl: 'app/examples/forms/binding.tmpl.html'
+            templateUrl: 'app/examples/forms/binding.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.forms-autocomplete', {
             url: '/forms/autocomplete',
-            templateUrl: 'app/examples/forms/autocomplete.tmpl.html'
+            templateUrl: 'app/examples/forms/autocomplete.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.forms-wizard', {
             url: '/forms/wizard',
@@ -28,14 +43,19 @@
             controllerAs: 'wizardController',
             data: {
                 layout: {
-                    contentClass: 'full-image-background mb-bg-fb-02 background-overlay-static',
+                    contentClass: 'layout-column full-image-background mb-bg-fb-02 background-overlay-static',
                     innerContentClass: 'overlay-gradient-20'
                 }
             }
         })
         .state('triangular.forms-validation', {
             url: '/forms/validation',
-            templateUrl: 'app/examples/forms/validation.tmpl.html'
+            templateUrl: 'app/examples/forms/validation.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         });
 
         triMenuProvider.addMenu({
