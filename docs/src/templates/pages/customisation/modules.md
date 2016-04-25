@@ -65,7 +65,7 @@ This module justs adds one menu item and one page to the site.
 
 |       Folder / File        |                         Contents                        |
 | -------------------------- | :------------------------------------------------------ |
-| il8n/                      | Translation json files                                  |
+| i18n/                      | Translation json files                                  |
 | introduction.config.js     | Sets up the modules routes and adds menus to triangular |
 | introduction.controller.js | Controller for the introduction.tmpl.html page          |
 | introduction.module.js     | Module js file                                          |

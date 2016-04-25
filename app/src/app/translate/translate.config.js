@@ -24,7 +24,7 @@
         /**
          *  each module loads its own translation file - making it easier to create translations
          *  also translations are not loaded when they aren't needed
-         *  each module will have a il8n folder that will contain its translations
+         *  each module will have a i18n folder that will contain its translations
          */
         $translateProvider.useLoader('$translatePartialLoader', {
             urlTemplate: '{part}/i18n/{lang}.json'

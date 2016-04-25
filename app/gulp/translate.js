@@ -91,7 +91,7 @@ gulp.task('translate-collate-english', function () {
     });
   });
 
-  return gulp.src(paths.src + '/app/**/il8n/en.json')
+  return gulp.src(paths.src + '/app/**/i18n/en.json')
   .pipe(flattenFile);
 });
 

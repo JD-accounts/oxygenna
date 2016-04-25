@@ -71,7 +71,7 @@ Inside the app folder you will find the following files and folders
 |         Folder / File         |                       Contents                       |
 | ----------------------------- | :--------------------------------------------------- |
 | examples/                     | Includes all the example pages used in the app       |
-| il8n/                         | Contains app translation files                       |
+| i18n/                         | Contains app translation files                       |
 | seed-module                   | Contans an example module to use in your own app     |
 | triangular/                   | The main triangular module                           |
 | app.module.js                 | The main app module file                             |
@@ -94,7 +94,7 @@ This module justs adds one menu item and one page to the site.
 
 |       Folder / File        |                         Contents                        |
 | -------------------------- | :------------------------------------------------------ |
-| il8n/                      | Translation json files                                  |
+| i18n/                      | Translation json files                                  |
 | introduction.config.js     | Sets up the modules routes and adds menus to triangular |
 | introduction.controller.js | Controller for the introduction.tmpl.html page          |
 | introduction.module.js     | Module js file                                          |
@@ -193,4 +193,3 @@ Just run the command
     gulp build
 
 This will initiate a build, once it has finished you will find your built files in a folder called dist that will have been created for you.
-

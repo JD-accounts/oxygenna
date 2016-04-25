@@ -79,7 +79,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('translations', function () {
-  return gulp.src('src/**/il8n/*.json')
+  return gulp.src('src/**/i18n/*.json')
     .pipe(gulp.dest(paths.dist + '/'))
     .pipe($.size());
 });
