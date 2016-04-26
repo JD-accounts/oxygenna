@@ -21,6 +21,10 @@
         triLayoutProvider.setDefaultOption('sidebarRightTemplateUrl', 'app/layouts/rightsidenav/rightsidenav.tmpl.html');
         triLayoutProvider.setDefaultOption('sidebarRightController', 'RightSidenavController');
 
+        // top toolbar HTML and controller
+        triLayoutProvider.setDefaultOption('toolbarTemplateUrl', 'app/layouts/toolbar/toolbar.tmpl.html');
+        triLayoutProvider.setDefaultOption('toolbarController', 'ToolbarController');
+
         // footer HTML
         triLayoutProvider.setDefaultOption('footerTemplateUrl', 'app/layouts/footer/footer.tmpl.html');
 
