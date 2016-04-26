@@ -70,10 +70,7 @@
                 injectFooterUpdateContent(viewName);
             }
 
-            // turn off the loader
-            $timeout(function() {
-                triLoaderService.setLoaderActive(false);
-            });
+            triLoaderService.setLoaderActive(false);
         }
 
         // watches
@@ -84,9 +81,31 @@
         });
 
         $scope.$on('$stateChangeStart', function() {
+            console.log('$stateChangeStart');
             triLoaderService.setLoaderActive(true);
         });
 
-        $scope.$on('$viewContentLoaded', viewContentLoaded);
+        var loadingQueue = [];
+        $scope.$on('$viewContentLoading', function($event, viewName) {
+            loadingQueue.push(viewName);
+            console.log('loading', viewName);
+            console.log('queue', loadingQueue);
+            // triLoaderService.setLoaderActive(true);
+        });
+
+        $scope.$on('$viewContentLoaded', function($event, viewName) {
+            var index = loadingQueue.indexOf(viewName);
+            if(-1 !== index) {
+                loadingQueue.splice(index, 1);
+            }
+            console.log('index', index);
+            console.log('loaded', viewName);
+            console.log('queue', loadingQueue);
+            if(loadingQueue.length === 0) {
+                triLoaderService.setLoaderActive(false);
+            }
+        });
+
+        // $scope.$on('$viewContentLoaded', viewContentLoaded);
     }
 })();
