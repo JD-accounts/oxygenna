@@ -19,13 +19,16 @@
 
     /* @ngInject */
     function TriangularStateController($scope, $rootScope, $timeout, $templateRequest, $compile, $element, $window, triLayout, triLoaderService) {
-        // we need to use the scope here because otherwise the expression in md-is-locked-open doesnt work
-        $scope.layout = triLayout.layout; //eslint-disable-line
+        var loadingQueue = [];
         var vm = this;
 
         vm.activateHover = activateHover;
         vm.removeHover  = removeHover;
         vm.showLoader = triLoaderService.isActive();
+
+        // we need to use the scope here because otherwise the expression in md-is-locked-open doesnt work
+        $scope.layout = triLayout.layout; //eslint-disable-line
+
 
         ////////////////
 
@@ -55,6 +58,15 @@
             }
         }
 
+        function loaderEvent(event, isActive) {
+            vm.showLoader = isActive;
+        }
+
+        function stateChangeStart() {
+            // state has changed so start the loader
+            triLoaderService.setLoaderActive(true);
+        }
+
         function removeHover () {
             if(triLayout.layout.sideMenuSize === 'icon') {
                 $element.find('.triangular-sidenav-left').removeClass('hover');
@@ -64,48 +76,42 @@
             }
         }
 
+        function viewContentLoading($event, viewName) {
+            // a view is loading so add it to the queue
+            // so we know when to turn off the loader
+            loadingQueue.push(viewName);
+        }
+
         function viewContentLoaded($event, viewName) {
             if(angular.isDefined(triLayout.layout.footer) && triLayout.layout.footer === true) {
                 // inject footer into content
                 injectFooterUpdateContent(viewName);
             }
 
-            triLoaderService.setLoaderActive(false);
+            // view content has loaded so remove it from queue
+            var index = loadingQueue.indexOf(viewName);
+            if(-1 !== index) {
+                loadingQueue.splice(index, 1);
+            }
+            // is the loadingQueue empty?
+            if(loadingQueue.length === 0) {
+                // nothing left to load so turn off the loader
+                triLoaderService.setLoaderActive(false);
+            }
         }
 
         // watches
 
         // register listeners for loader
-        $scope.$on('loader', function(event, isActive) {
-            vm.showLoader = isActive;
-        });
+        $scope.$on('loader', loaderEvent);
 
-        $scope.$on('$stateChangeStart', function() {
-            console.log('$stateChangeStart');
-            triLoaderService.setLoaderActive(true);
-        });
+        // watch for ui router state change
+        $scope.$on('$stateChangeStart', stateChangeStart);
 
-        var loadingQueue = [];
-        $scope.$on('$viewContentLoading', function($event, viewName) {
-            loadingQueue.push(viewName);
-            console.log('loading', viewName);
-            console.log('queue', loadingQueue);
-            // triLoaderService.setLoaderActive(true);
-        });
+        // watch for view content loading
+        $scope.$on('$viewContentLoading', viewContentLoading);
 
-        $scope.$on('$viewContentLoaded', function($event, viewName) {
-            var index = loadingQueue.indexOf(viewName);
-            if(-1 !== index) {
-                loadingQueue.splice(index, 1);
-            }
-            console.log('index', index);
-            console.log('loaded', viewName);
-            console.log('queue', loadingQueue);
-            if(loadingQueue.length === 0) {
-                triLoaderService.setLoaderActive(false);
-            }
-        });
-
-        // $scope.$on('$viewContentLoaded', viewContentLoaded);
+        // watch for view content loaded
+        $scope.$on('$viewContentLoaded', viewContentLoaded);
     }
 })();

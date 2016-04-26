@@ -11,7 +11,12 @@
         $stateProvider
         .state('triangular.standard-page',  {
             url: '/layouts/standard-page',
-            templateUrl: 'app/examples/layouts/standard-page.tmpl.html'
+            templateUrl: 'app/examples/layouts/standard-page.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
         .state('triangular.no-scroll-page',  {
             url: '/layouts/no-scroll-page',
@@ -41,7 +46,7 @@
             data: {
                 layout: {
                     toolbarSize: 'md-tall',
-                    toolbarClass: 'full-image-background mb-bg-fb-14'
+                    toolbarClass: 'md-warn'
                 }
             },
             url: '/layouts/tall-toolbar',
