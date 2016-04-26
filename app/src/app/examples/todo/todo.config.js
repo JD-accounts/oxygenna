@@ -27,6 +27,9 @@
                 layout: {
                     contentClass: 'layout-column full-image-background mb-bg-fb-08 background-overlay-static',
                     innerContentClass: 'overlay-gradient-20'
+                },
+                permissions: {
+                    only: ['viewTodo']
                 }
             }
         });
