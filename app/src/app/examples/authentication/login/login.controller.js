@@ -36,7 +36,7 @@
         ////////////////
 
         function loginClick() {
-            $state.go('triangular.admin-default.dashboard-analytics');
+            $state.go('triangular.dashboard-analytics');
         }
     }
 })();

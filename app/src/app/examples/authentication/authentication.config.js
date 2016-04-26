@@ -11,7 +11,11 @@
         $stateProvider
         .state('authentication', {
             abstract: true,
-            templateUrl: 'app/examples/authentication/layouts/authentication.tmpl.html'
+            views: {
+                'root': {
+                    templateUrl: 'app/examples/authentication/layouts/authentication.tmpl.html'
+                }
+            }
         })
         .state('authentication.login', {
             url: '/login',
@@ -37,7 +41,7 @@
             controller: 'ForgotController',
             controllerAs: 'vm'
         })
-        .state('triangular.admin-default.profile', {
+        .state('triangular.profile', {
             url: '/profile',
             templateUrl: 'app/examples/authentication/profile/profile.tmpl.html',
             controller: 'ProfileController',
@@ -67,7 +71,7 @@
                 type: 'link'
             },{
                 name: 'Profile',
-                state: 'triangular.admin-default.profile',
+                state: 'triangular.profile',
                 type: 'link'
             }]
         });

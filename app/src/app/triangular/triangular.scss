@@ -22,17 +22,17 @@ html, body {
 
 // components
 
-@import "components/footer/footer.scss";
-@import "components/loader/loader.scss";
-@import "components/menu/menu.scss";
-@import "components/notifications-panel/notifications-panel.scss";
-@import "components/table/table.scss";
-@import "components/toolbars/toolbar.scss";
-@import "components/widget/widget.scss";
-@import "components/wizard/wizard.scss";
+@import "scss/components/footer.scss";
+@import "scss/components/loader.scss";
+@import "scss/components/menu.scss";
+@import "scss/components/notifications-panel.scss";
+@import "scss/components/table.scss";
+@import "scss/components/toolbar.scss";
+@import "scss/components/widget.scss";
+@import "scss/components/wizard.scss";
 
 // directives
 
 // layouts
 
-@import "layouts/default/default.scss";
+@import "scss/layouts/states/triangular.scss";

@@ -9,21 +9,36 @@
     function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
-        .state('triangular.admin-default.menu-levels', {
+        .state('triangular.menu-levels', {
             url: '/menu-levels/:level',
             controller: 'LevelController',
             controllerAs: 'vm',
-            templateUrl: 'app/examples/menu/level.tmpl.html'
+            templateUrl: 'app/examples/menu/level.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.menu-dynamic', {
+        .state('triangular.menu-dynamic', {
             url: '/menu/dynamic',
             controller: 'MenuDynamicController',
             controllerAs: 'vm',
-            templateUrl: 'app/examples/menu/dynamic.tmpl.html'
+            templateUrl: 'app/examples/menu/dynamic.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.menu-dynamic-dummy-page', {
+        .state('triangular.menu-dynamic-dummy-page', {
             url: '/menu/dynamic-page',
-            templateUrl: 'app/examples/menu/dynamic-page.tmpl.html'
+            templateUrl: 'app/examples/menu/dynamic-page.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         });
 
         triMenuProvider.addMenu({
@@ -34,7 +49,7 @@
             children: [{
                 name: 'Dynamic Menu',
                 type: 'link',
-                state: 'triangular.admin-default.menu-dynamic'
+                state: 'triangular.menu-dynamic'
             },{
                 name: 'Level 1-1',
                 type: 'dropdown',
@@ -47,21 +62,21 @@
                         children: [{
                             name: 'Level 4-1',
                             type: 'link',
-                            state: 'triangular.admin-default.menu-levels',
+                            state: 'triangular.menu-levels',
                             params: {
                                 level: 'Item1-1-1-1'
                             }
                         },{
                             name: 'Level 4-2',
                             type: 'link',
-                            state: 'triangular.admin-default.menu-levels',
+                            state: 'triangular.menu-levels',
                             params: {
                                 level: 'Item1-1-1-2'
                             }
                         },{
                             name: 'Level 4-3',
                             type: 'link',
-                            state: 'triangular.admin-default.menu-levels',
+                            state: 'triangular.menu-levels',
                             params: {
                                 level: 'Item1-1-1-3'
                             }

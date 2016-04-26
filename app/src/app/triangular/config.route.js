@@ -10,76 +10,55 @@
         $stateProvider
         .state('triangular', {
             abstract: true,
-            templateUrl: 'app/triangular/layouts/default/default.tmpl.html',
-            controller: 'DefaultLayoutController',
-            controllerAs: 'layoutController'
-        })
-        .state('triangular-no-scroll', {
-            abstract: true,
-            templateUrl: 'app/triangular/layouts/default/default-no-scroll.tmpl.html',
-            controller: 'DefaultLayoutController',
-            controllerAs: 'layoutController'
-        })
-        .state('triangular.admin-default', {
-            abstract: true,
             views: {
-                sidebarLeft: {
+                'root': {
+                    templateUrl: 'app/triangular/layouts/states/triangular/triangular.tmpl.html',
+                    controller: 'TriangularStateController',
+                    controllerAs: 'stateController'
+                },
+                'sidebarLeft@triangular': {
                     templateProvider: function($templateRequest, triLayout) {
-                        return $templateRequest(triLayout.layout.sidebarLeftTemplateUrl);
+                        if(angular.isDefined(triLayout.layout.sidebarLeftTemplateUrl)) {
+                            return $templateRequest(triLayout.layout.sidebarLeftTemplateUrl);
+                        }
                     },
                     controllerProvider: function(triLayout) {
                         return triLayout.layout.sidebarLeftController;
                     },
                     controllerAs: 'vm'
                 },
-                sidebarRight: {
+                'sidebarRight@triangular': {
                     templateProvider: function($templateRequest, triLayout) {
-                        return $templateRequest(triLayout.layout.sidebarRightTemplateUrl);
+                        if(angular.isDefined(triLayout.layout.sidebarRightTemplateUrl)) {
+                            return $templateRequest(triLayout.layout.sidebarRightTemplateUrl);
+                        }
                     },
                     controllerProvider: function(triLayout) {
                         return triLayout.layout.sidebarRightController;
                     },
                     controllerAs: 'vm'
                 },
-                toolbar: {
+                'toolbar@triangular': {
                     templateProvider: function($templateRequest, triLayout) {
-                        return $templateRequest(triLayout.layout.toolbarTemplateUrl);
+                        if(angular.isDefined(triLayout.layout.toolbarTemplateUrl)) {
+                            return $templateRequest(triLayout.layout.toolbarTemplateUrl);
+                        }
                     },
                     controllerProvider: function(triLayout) {
                         return triLayout.layout.toolbarController;
                     },
                     controllerAs: 'vm'
                 },
-                content: {
+                'loader@triangular': {
                     templateProvider: function($templateRequest, triLayout) {
-                        return $templateRequest(triLayout.layout.contentTemplateUrl);
-                    }
-                },
-                belowContent: {
-                    template: '<div ui-view="belowContent"></div>'
-                }
-            }
-        })
-        .state('triangular.admin-default-no-scroll', {
-            abstract: true,
-            views: {
-                sidebarLeft: {
-                    templateUrl: 'app/triangular/components/menu/menu.tmpl.html',
-                    controller: 'MenuController',
-                    controllerAs: 'vm'
-                },
-                sidebarRight: {
-                    templateUrl: 'app/triangular/components/notifications-panel/notifications-panel.tmpl.html',
-                    controller: 'NotificationsPanelController',
-                    controllerAs: 'vm'
-                },
-                toolbar: {
-                    templateUrl: 'app/triangular/components/toolbars/toolbar.tmpl.html',
-                    controller: 'DefaultToolbarController',
-                    controllerAs: 'vm'
-                },
-                content: {
-                    template: '<div flex ui-view layout="column" class="overflow-hidden"></div>'
+                        if(angular.isDefined(triLayout.layout.loaderTemplateUrl)) {
+                            return $templateRequest(triLayout.layout.loaderTemplateUrl);
+                        }
+                    },
+                    controllerProvider: function(triLayout) {
+                        return triLayout.layout.loaderController;
+                    },
+                    controllerAs: 'loader'
                 }
             }
         });

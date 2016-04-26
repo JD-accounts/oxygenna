@@ -1,23 +1,22 @@
-.inbox {
-  .md-list-item-text h3 .md-caption {
-    float: right;
-  }
-}
-
 .inbox-list {
   background: white;
-
-  md-list-item {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  // angular material is adding width 100% to the list item when it has ng-click
-  // this stops it making the text overflow
-  md-list-item._md-button-wrap > .md-button:first-child ._md-list-item-inner {
-    width: auto;
-  }
 }
+
+.inbox-list__email.md-3-line.md-long-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.inbox-list__email h3 .md-caption {
+  float: right;
+}
+
+// angular material is adding width 100% to the list item when it has ng-click
+// this stops it making the text overflow
+.inbox-list__email._md-button-wrap > .md-button:first-child ._md-list-item-inner {
+  width: auto;
+}
+
 
 // selected email
 .inbox-list__email--active {
