@@ -15,6 +15,9 @@
             controller: 'MapController',
             controllerAs: 'vm',
             data: {
+                permission: {
+                    only: ['viewMaps']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -22,7 +25,12 @@
         })
         .state('triangular.maps-demos', {
             url: '/maps/demos',
-            templateUrl: 'app/examples/maps/maps-demo.tmpl.html'
+            templateUrl: 'app/examples/maps/maps-demo.tmpl.html',
+            data: {
+                permission: {
+                    only: ['viewMaps']
+                }
+            }
         });
 
         uiGmapGoogleMapApiProvider.configure({
@@ -35,6 +43,7 @@
             icon: 'zmdi zmdi-pin',
             type: 'dropdown',
             priority: 7.1,
+            permission: 'viewMaps',
             children: [{
                 name: 'Fullwidth',
                 state: 'triangular.maps-fullwidth',

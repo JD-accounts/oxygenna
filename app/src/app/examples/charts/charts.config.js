@@ -13,6 +13,9 @@
             url: '/charts/google/bar',
             templateUrl: 'app/examples/charts/google-bar.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewCharts']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -22,6 +25,9 @@
             url: '/charts/google/scatter',
             templateUrl: 'app/examples/charts/google-scatter.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewCharts']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -31,6 +37,9 @@
             url: '/charts/google/line',
             templateUrl: 'app/examples/charts/google-line.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewCharts']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -40,6 +49,9 @@
             url: '/charts/chartjs/bar',
             templateUrl: 'app/examples/charts/chartjs-bar.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewCharts']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -49,6 +61,9 @@
             url: '/charts/chartjs/pie',
             templateUrl: 'app/examples/charts/chartjs-pie.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewCharts']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -58,6 +73,9 @@
             url: '/charts/chartjs/ticker',
             templateUrl: 'app/examples/charts/chartjs-ticker.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewCharts']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -67,6 +85,9 @@
             url: '/charts/chartjs/line',
             templateUrl: 'app/examples/charts/chartjs-line.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewCharts']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -78,6 +99,7 @@
             icon: 'zmdi zmdi-chart',
             type: 'dropdown',
             priority: 5.1,
+            permission: 'viewCharts',
             children: [{
                 name: 'Google',
                 type: 'dropdown',

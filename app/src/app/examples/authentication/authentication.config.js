@@ -15,6 +15,11 @@
                 'root': {
                     templateUrl: 'app/examples/authentication/layouts/authentication.tmpl.html'
                 }
+            },
+            data: {
+                permission: {
+                    only: ['viewAuthentication']
+                }
             }
         })
         .state('authentication.login', {
@@ -53,6 +58,7 @@
             icon: 'zmdi zmdi-account',
             type: 'dropdown',
             priority: 4.1,
+            permission: 'viewAuthentication',
             children: [{
                 name: 'Login',
                 state: 'authentication.login',

@@ -10,7 +10,19 @@
         $stateProvider
         .state('triangular.permission', {
             url: '/permission',
-            templateUrl: 'app/permission/permission.tmpl.html',
+            templateUrl: 'app/permission/pages/permission.tmpl.html',
+            controller: 'PermissionController',
+            controllerAs: 'vm',
+            resolve: {
+                users: ['UserService', function(UserService) {
+                    return UserService.getUsers();
+                }]
+            },
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         });
 
         triMenuProvider.addMenu({
@@ -19,7 +31,7 @@
             type: 'dropdown',
             priority: 4.1,
             children: [{
-                name: 'Menu Permissions',
+                name: 'Permissions',
                 state: 'triangular.permission',
                 type: 'link'
             }]
