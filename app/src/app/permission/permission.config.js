@@ -23,6 +23,33 @@
                     contentClass: 'layout-column'
                 }
             }
+        })
+        .state('triangular.permission-define', {
+            url: '/permission/define',
+            templateUrl: 'app/permission/pages/permission-define.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
+        })
+        .state('triangular.permission-routes', {
+            url: '/permission/routes',
+            templateUrl: 'app/permission/pages/permission-routes.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
+        })
+        .state('triangular.permission-views', {
+            url: '/permission/views',
+            templateUrl: 'app/permission/pages/permission-views.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         });
 
         triMenuProvider.addMenu({
@@ -33,6 +60,18 @@
             children: [{
                 name: 'Permissions',
                 state: 'triangular.permission',
+                type: 'link'
+            },{
+                name: 'Define Roles',
+                state: 'triangular.permission-define',
+                type: 'link'
+            },{
+                name: 'Routes',
+                state: 'triangular.permission-routes',
+                type: 'link'
+            },{
+                name: 'Views',
+                state: 'triangular.permission-views',
                 type: 'link'
             }]
         });
