@@ -304,9 +304,10 @@
 - Fix for flash of default theme until this issue is resolved https://github.com/angular/material/pull/7427
 - Updated Docs with further detail on template customisations
 
-# Version ???
-> Release Date : ???
+# Version 2.7.0
+> Release Date : 27th April 2016
 
 - Translations are now optional - include app.translation module if you need multi-language
 - Moved translation files out of modules and into one app i18n folder in the app
 - Updated Angular Material to 1.1.0-RC4
+- New permissions module adds angular permissions to hide / show menu items and block routes

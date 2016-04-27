@@ -20,8 +20,6 @@
         vm.toggleFullScreen = toggleFullScreen;
         vm.currentUser = UserService.getCurrentUser();
 
-        // initToolbar();
-
         ////////////////
 
         function openSideNav(navID) {
