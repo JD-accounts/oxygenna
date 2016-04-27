@@ -17,6 +17,9 @@
                 layout: {
                     contentClass: 'layout-column full-image-background mb-bg-fb-16 background-overlay-static',
                     innerContentClass: 'overlay-gradient-20'
+                },
+                permissions: {
+                    only: ['viewGitHub']
                 }
             }
         });
@@ -26,7 +29,8 @@
             state: 'triangular.github',
             type: 'link',
             icon: 'fa fa-github',
-            priority: 2.2
+            priority: 2.2,
+            permission: 'viewGitHub'
         });
     }
 })();

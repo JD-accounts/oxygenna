@@ -39,6 +39,9 @@
                     footer: false,
                     contentClass: 'triangular-non-scrolling'
                 }
+            },
+            permissions: {
+                only: ['viewEmail']
             }
         });
 
@@ -103,6 +106,7 @@
             icon: 'zmdi zmdi-email',
             type: 'dropdown',
             priority: 2.1,
+            permission: 'viewEmail',
             children: []
         };
 

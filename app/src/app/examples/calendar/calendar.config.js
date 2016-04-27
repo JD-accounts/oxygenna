@@ -35,6 +35,9 @@
                 layout: {
                     contentClass: 'triangular-non-scrolling layout-column',
                     footer: false
+                },
+                permissions: {
+                    only: ['viewCalendar']
                 }
             }
         });
@@ -49,7 +52,8 @@
             // set an icon for this menu
             icon: 'zmdi zmdi-calendar-alt',
             // set a proirity for this menu item, menu is sorted by priority
-            priority: 2.3
+            priority: 2.3,
+            permission: 'viewCalendar'
         });
     }
 })();

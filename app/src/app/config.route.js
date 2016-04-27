@@ -15,15 +15,21 @@
             url: '/404',
             views: {
                 'root': {
-                    templateUrl: '404.tmpl.html'
+                    templateUrl: '404.tmpl.html',
+                    controller: 'ErrorPageController',
+                    controllerAs: 'vm'
                 }
-            },
-            controllerAs: 'vm',
-            controller: function($state) {
-                var vm = this;
-                vm.goHome = function() {
-                    $state.go('triangular.dashboard-analytics');
-                };
+            }
+        })
+
+        .state('401', {
+            url: '/401',
+            views: {
+                'root': {
+                    templateUrl: '401.tmpl.html',
+                    controller: 'ErrorPageController',
+                    controllerAs: 'vm'
+                }
             }
         })
 
@@ -31,15 +37,10 @@
             url: '/500',
             views: {
                 'root': {
-                    templateUrl: '500.tmpl.html'
+                    templateUrl: '500.tmpl.html',
+                    controller: 'ErrorPageController',
+                    controllerAs: 'vm'
                 }
-            },
-            controllerAs: 'vm',
-            controller: function($state) {
-                var vm = this;
-                vm.goHome = function() {
-                    $state.go('triangular.dashboard-analytics');
-                };
             }
         });
 

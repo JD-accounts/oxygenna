@@ -15,6 +15,9 @@
             controller: 'ButtonsController',
             controllerAs: 'vm',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -26,6 +29,9 @@
             controller: 'IconsController',
             controllerAs: 'vm',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -49,6 +55,9 @@
             url: '/elements/checkboxes',
             templateUrl: 'app/examples/elements/checkboxes.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -58,6 +67,9 @@
             url: '/elements/radios',
             templateUrl: 'app/examples/elements/radios.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -67,6 +79,9 @@
             url: '/elements/toolbars',
             templateUrl: 'app/examples/elements/toolbars.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -76,6 +91,9 @@
             url: '/elements/tooltips',
             templateUrl: 'app/examples/elements/tooltips.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -85,6 +103,9 @@
             url: '/elements/whiteframes',
             templateUrl: 'app/examples/elements/whiteframes.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -94,6 +115,9 @@
             url: '/elements/sliders',
             templateUrl: 'app/examples/elements/sliders.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -103,6 +127,9 @@
             url: '/elements/toasts',
             templateUrl: 'app/examples/elements/toasts.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -114,6 +141,9 @@
             controller: 'ProgressController',
             controllerAs: 'vm',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -131,6 +161,9 @@
             },
             controllerAs: 'vm',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -142,6 +175,9 @@
             controller: 'DialogsController',
             controllerAs: 'vm',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -151,6 +187,9 @@
             url: '/elements/menus',
             templateUrl: 'app/examples/elements/menus.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -160,6 +199,9 @@
             url: '/elements/tabs',
             templateUrl: 'app/examples/elements/tabs.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -175,6 +217,9 @@
             },
             controllerAs: 'vm',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -184,6 +229,9 @@
             url: '/elements/grids',
             templateUrl: 'app/examples/elements/grids.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -193,6 +241,9 @@
             url: '/elements/fab-speed',
             templateUrl: 'app/examples/elements/fab-speed.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -202,6 +253,9 @@
             url: '/elements/fab-toolbar',
             templateUrl: 'app/examples/elements/fab-toolbar.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -211,6 +265,9 @@
             url: '/elements/selects',
             templateUrl: 'app/examples/elements/selects.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -220,6 +277,9 @@
             url: '/elements/tables',
             templateUrl: 'app/examples/elements/tables.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -229,6 +289,9 @@
             url: '/elements/textangular',
             templateUrl: 'app/examples/elements/textangular.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -250,6 +313,9 @@
                 }
             },
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -269,6 +335,9 @@
                 }
             },
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -278,6 +347,9 @@
             url: '/elements/cards',
             templateUrl: 'app/examples/elements/cards.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -287,6 +359,9 @@
             url: '/elements/upload',
             templateUrl: 'app/examples/elements/upload.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -296,6 +371,9 @@
             url: '/elements/loader',
             templateUrl: 'app/examples/elements/loader.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -305,6 +383,9 @@
             url: '/elements/datepicker',
             templateUrl: 'app/examples/elements/datepicker.tmpl.html',
             data: {
+                permission: {
+                    only: ['viewElements']
+                },
                 layout: {
                     contentClass: 'layout-column'
                 }
@@ -316,6 +397,7 @@
             icon: 'zmdi zmdi-graduation-cap',
             type: 'dropdown',
             priority: 3.1,
+            permission: 'viewElements',
             children: [{
                 name: 'Buttons',
                 type: 'link',

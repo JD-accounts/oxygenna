@@ -15,6 +15,9 @@
             data: {
                 layout: {
                     contentClass: 'layout-column'
+                },
+                permissions: {
+                    only: ['viewLayouts']
                 }
             }
         })
@@ -24,6 +27,9 @@
             data: {
                 layout: {
                     contentClass: 'triangular-non-scrolling'
+                },
+                permissions: {
+                    only: ['viewLayouts']
                 }
             }
         })
@@ -31,37 +37,51 @@
             url: '/layouts/composer',
             templateUrl: 'app/examples/layouts/composer.tmpl.html',
             controller: 'LayoutsComposerController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            data: {
+                permissions: {
+                    only: ['viewLayouts']
+                }
+            }
         })
         .state('triangular.layouts-example-full-width', {
+            url: '/layouts/full-width',
+            templateUrl: 'app/examples/dashboards/general/dashboard-general.tmpl.html',
             data: {
                 layout: {
                     sideMenuSize: 'hidden'
+                },
+                permissions: {
+                    only: ['viewLayouts']
                 }
-            },
-            url: '/layouts/full-width',
-            templateUrl: 'app/examples/dashboards/general/dashboard-general.tmpl.html'
+            }
         })
         .state('triangular.layouts-example-tall-toolbar', {
+            url: '/layouts/tall-toolbar',
+            templateUrl: 'app/examples/dashboards/server/dashboard-server.tmpl.html',
+            controller: 'DashboardServerController',
+            controllerAs: 'vm',
             data: {
                 layout: {
                     toolbarSize: 'md-tall',
                     toolbarClass: 'md-warn'
+                },
+                permissions: {
+                    only: ['viewLayouts']
                 }
-            },
-            url: '/layouts/tall-toolbar',
-            templateUrl: 'app/examples/dashboards/server/dashboard-server.tmpl.html',
-            controller: 'DashboardServerController',
-            controllerAs: 'vm'
+            }
         })
         .state('triangular.layouts-example-icon-menu', {
+            url: '/layouts/icon-menu',
+            templateUrl: 'app/examples/dashboards/general/dashboard-general.tmpl.html',
             data: {
                 layout: {
                     sideMenuSize: 'icon'
+                },
+                permissions: {
+                    only: ['viewLayouts']
                 }
-            },
-            url: '/layouts/icon-menu',
-            templateUrl: 'app/examples/dashboards/general/dashboard-general.tmpl.html'
+            }
         });
 
         triMenuProvider.addMenu({
@@ -69,6 +89,7 @@
             icon: 'zmdi zmdi-view-module',
             type: 'dropdown',
             priority: 2.4,
+            permission: 'viewLayouts',
             children: [{
                 name: 'Standard Page',
                 type: 'link',
