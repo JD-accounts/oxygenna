@@ -65,7 +65,7 @@
         .accentPalette('amber')
         .warnPalette('deep-orange');
 
-        triThemingProvider.theme('white-cyan')
+        triThemingProvider.theme('default')
         .primaryPalette('white')
         .accentPalette('triCyan', {
             'default': '500'
@@ -74,7 +74,7 @@
 
         triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
         .sidebarTheme('cyan')
-        .toolbarTheme('white-cyan')
+        .toolbarTheme('default')
         .logoTheme('cyan')
         .contentTheme('cyan');
 
@@ -139,7 +139,7 @@
         .accentPalette('amber')
         .warnPalette('orange');
 
-        triThemingProvider.theme('default')
+        triThemingProvider.theme('white-blue-grey')
         .primaryPalette('white')
         .accentPalette('blue-grey', {
             'default': '400'
@@ -148,7 +148,7 @@
 
         triSkinsProvider.skin('battleship-grey', 'Battleship Grey')
         .sidebarTheme('blue-grey')
-        .toolbarTheme('default')
+        .toolbarTheme('white-blue-grey')
         .logoTheme('blue-grey')
         .contentTheme('blue-grey');
 
@@ -220,6 +220,6 @@
         /**
          *  SET DEFAULT SKIN
          */
-        triSkinsProvider.setSkin('battleship-grey');
+        triSkinsProvider.setSkin('cyan-cloud');
     }
 })();
