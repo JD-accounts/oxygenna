@@ -22,13 +22,13 @@
     </md-toolbar>
 
     <md-toolbar class="md-table-toolbar alternate" ng-show="vm.selected.length">
-        <div class="md-toolbar-tools" layout-align="space-between">
+        <div class="md-toolbar-tools" layout-align="start center">
             <div>{{vm.selected.length}} {{vm.selected.length > 1 ? 'users' : 'user'}} selected</div>
         </div>
     </md-toolbar>
 
     <md-table-container>
-        <table md-table class="md-primary md-data-table" md-row-select ng-model="vm.selected">
+        <table md-table class="md-primary md-data-table" md-row-select ng-model="vm.selected" md-progress="vm.promise">
             <thead md-head md-order="vm.query.order" md-on-reorder="vm.getUsers">
                 <tr md-row>
                     <th md-column><span translate>{{vm.columns.avatar}}</span></th>

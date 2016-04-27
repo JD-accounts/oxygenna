@@ -27,15 +27,15 @@
                 vm.emails = emails.data;
 
                 vm.emailGroups = [{
-                    name: $filter('translate')('EMAIL.INBOX.GROUPS.TODAY'),
+                    name: $filter('triTranslate')('Today'),
                     from: moment().startOf('day'),
                     to: moment().endOf('day')
                 },{
-                    name: $filter('translate')('EMAIL.INBOX.GROUPS.YESTERDAY'),
+                    name: $filter('triTranslate')('Yesterday'),
                     from: moment().subtract(1, 'days').startOf('day'),
                     to: moment().subtract(1, 'days').endOf('day')
                 },{
-                    name: $filter('translate')('EMAIL.INBOX.GROUPS.OLDER'),
+                    name: $filter('triTranslate')('Older'),
                     from: moment().subtract(100, 'years').endOf('day'),
                     to: moment().subtract(2, 'days').startOf('day')
                 }];
@@ -71,7 +71,7 @@
                 templateUrl: 'app/examples/email/email-dialog.tmpl.html',
                 targetEvent: $event,
                 locals: {
-                    title: $filter('translate')('EMAIL.NEW'),
+                    title: $filter('triTranslate')('Compose'),
                     email: {
                         to: [],
                         cc: [],
@@ -90,7 +90,7 @@
             function emailCancel() {
                 $mdToast.show(
                     $mdToast.simple()
-                    .content($filter('translate')('EMAIL.CANCELED'))
+                    .content($filter('triTranslate')('Email canceled'))
                     .position('bottom right')
                     .hideDelay(3000)
                 );
@@ -105,7 +105,7 @@
             });
             $mdToast.show(
                 $mdToast.simple()
-                .content($filter('translate')('EMAIL.SENT', {to: sentTo.join(', ')}))
+                .content($filter('triTranslate')('Email to {{to}} sent.', {to: sentTo.join(', ')}))
                 .position('bottom right')
                 .hideDelay(3000)
             );
@@ -139,7 +139,7 @@
                     group.emails.splice(removeEmailIndex, 1);
                     $mdToast.show(
                         $mdToast.simple()
-                        .content($filter('translate')('EMAIL.DELETED'))
+                        .content($filter('triTranslate')('DeleteD'))
                         .position('bottom right')
                         .hideDelay(3000)
                     );

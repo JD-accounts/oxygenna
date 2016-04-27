@@ -20,16 +20,16 @@
         </md-card-content>
         <md-divider></md-divider>
         <md-card-actions layout="row" layout-align="end center">
-            <md-button class="md-icon-button" ng-click="vm.emailAction($event, 'EMAIL.REPLY')">
+            <md-button class="md-icon-button" ng-click="vm.emailAction($event, 'Reply')" aria-label="Reply">
                 <md-icon md-font-icon="zmdi zmdi-mail-reply"></md-icon>
             </md-button>
-            <md-button class="md-icon-button" ng-click="vm.emailAction($event, 'EMAIL.REPLY_ALL')">
+            <md-button class="md-icon-button" ng-click="vm.emailAction($event, 'Reply_ALL')" aria-label="Reply All">
                 <md-icon md-font-icon="zmdi zmdi-mail-reply-all"></md-icon>
             </md-button>
-            <md-button class="md-icon-button" ng-click="vm.emailAction($event, 'EMAIL.FORWARD')">
+            <md-button class="md-icon-button" ng-click="vm.emailAction($event, 'Forward')" aria-label="Forward">
                 <md-icon md-font-icon="zmdi zmdi-forward"></md-icon>
             </md-button>
-            <md-button class="md-icon-button" ng-click="vm.deleteEmail(vm.email)">
+            <md-button class="md-icon-button" ng-click="vm.deleteEmail(vm.email)" aria-label="Delete">
                 <md-icon md-font-icon="zmdi zmdi-delete"></md-icon>
             </md-button>
         </md-card-actions>

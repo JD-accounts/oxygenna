@@ -6,78 +6,134 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/charts');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
-        .state('triangular.admin-default.charts-google-bar', {
+        .state('triangular.charts-google-bar', {
             url: '/charts/google/bar',
-            templateUrl: 'app/examples/charts/google-bar.tmpl.html'
+            templateUrl: 'app/examples/charts/google-bar.tmpl.html',
+            data: {
+                permission: {
+                    only: ['viewCharts']
+                },
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.charts-google-scatter', {
+        .state('triangular.charts-google-scatter', {
             url: '/charts/google/scatter',
-            templateUrl: 'app/examples/charts/google-scatter.tmpl.html'
+            templateUrl: 'app/examples/charts/google-scatter.tmpl.html',
+            data: {
+                permission: {
+                    only: ['viewCharts']
+                },
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.charts-google-line', {
+        .state('triangular.charts-google-line', {
             url: '/charts/google/line',
-            templateUrl: 'app/examples/charts/google-line.tmpl.html'
+            templateUrl: 'app/examples/charts/google-line.tmpl.html',
+            data: {
+                permission: {
+                    only: ['viewCharts']
+                },
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.charts-chartjs-bar', {
+        .state('triangular.charts-chartjs-bar', {
             url: '/charts/chartjs/bar',
-            templateUrl: 'app/examples/charts/chartjs-bar.tmpl.html'
+            templateUrl: 'app/examples/charts/chartjs-bar.tmpl.html',
+            data: {
+                permission: {
+                    only: ['viewCharts']
+                },
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.charts-chartjs-pie', {
+        .state('triangular.charts-chartjs-pie', {
             url: '/charts/chartjs/pie',
-            templateUrl: 'app/examples/charts/chartjs-pie.tmpl.html'
+            templateUrl: 'app/examples/charts/chartjs-pie.tmpl.html',
+            data: {
+                permission: {
+                    only: ['viewCharts']
+                },
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.charts-chartjs-ticker', {
+        .state('triangular.charts-chartjs-ticker', {
             url: '/charts/chartjs/ticker',
-            templateUrl: 'app/examples/charts/chartjs-ticker.tmpl.html'
+            templateUrl: 'app/examples/charts/chartjs-ticker.tmpl.html',
+            data: {
+                permission: {
+                    only: ['viewCharts']
+                },
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.charts-chartjs-line', {
+        .state('triangular.charts-chartjs-line', {
             url: '/charts/chartjs/line',
-            templateUrl: 'app/examples/charts/chartjs-line.tmpl.html'
+            templateUrl: 'app/examples/charts/chartjs-line.tmpl.html',
+            data: {
+                permission: {
+                    only: ['viewCharts']
+                },
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.CHARTS.CHARTS',
+            name: 'Charts',
             icon: 'zmdi zmdi-chart',
             type: 'dropdown',
             priority: 5.1,
+            permission: 'viewCharts',
             children: [{
-                name: 'MENU.CHARTS.GOOGLE',
+                name: 'Google',
                 type: 'dropdown',
                 children: [{
-                    name: 'MENU.CHARTS.BAR',
-                    state: 'triangular.admin-default.charts-google-bar',
+                    name: 'Bar',
+                    state: 'triangular.charts-google-bar',
                     type: 'link'
                 },{
-                    name: 'MENU.CHARTS.SCATTER',
-                    state: 'triangular.admin-default.charts-google-scatter',
+                    name: 'Scatter',
+                    state: 'triangular.charts-google-scatter',
                     type: 'link'
                 },{
-                    name: 'MENU.CHARTS.LINE',
-                    state: 'triangular.admin-default.charts-google-line',
+                    name: 'Line',
+                    state: 'triangular.charts-google-line',
                     type: 'link'
                 }]
             },{
-                name: 'MENU.CHARTS.CHARTJS',
+                name: 'Chart.js',
                 type: 'dropdown',
                 children: [{
-                    name: 'MENU.CHARTS.BAR',
-                    state: 'triangular.admin-default.charts-chartjs-bar',
+                    name: 'Bar',
+                    state: 'triangular.charts-chartjs-bar',
                     type: 'link'
                 },{
-                    name: 'MENU.CHARTS.LINE',
-                    state: 'triangular.admin-default.charts-chartjs-line',
+                    name: 'Line',
+                    state: 'triangular.charts-chartjs-line',
                     type: 'link'
                 },{
-                    name: 'MENU.CHARTS.PIE',
-                    state: 'triangular.admin-default.charts-chartjs-pie',
+                    name: 'Pie',
+                    state: 'triangular.charts-chartjs-pie',
                     type: 'link'
                 },{
-                    name: 'MENU.CHARTS.TICKER',
-                    state: 'triangular.admin-default.charts-chartjs-ticker',
+                    name: 'Ticker',
+                    state: 'triangular.charts-chartjs-ticker',
                     type: 'link'
                 }]
             }]

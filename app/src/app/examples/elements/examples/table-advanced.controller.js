@@ -16,9 +16,9 @@
         };
         vm.selected = [];
         vm.columns = {
-            avatar: 'TABLE.COLUMNS.AVATAR',
-            login: 'TABLE.COLUMNS.LOGIN',
-            id: 'TABLE.COLUMNS.ID'
+            avatar: 'Avatar',
+            login: 'Login',
+            id: 'ID'
         };
         vm.filter = {
             options: {
@@ -52,7 +52,8 @@
         }
 
         function getUsers() {
-            GithubService.getUsers(vm.query).then(function(users){
+            vm.promise = GithubService.getUsers(vm.query);
+            vm.promise.then(function(users){
                 vm.users = users.data;
             });
         }

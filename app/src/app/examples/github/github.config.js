@@ -6,29 +6,31 @@
         .config(config);
 
     /* @ngInject */
-    function config($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/github');
-
+    function config($stateProvider, triMenuProvider) {
         $stateProvider
-        .state('triangular.admin-default.github', {
+        .state('triangular.github', {
             url: '/github',
             templateUrl: 'app/examples/github/github.tmpl.html',
             controller: 'GithubController',
             controllerAs: 'vm',
             data: {
                 layout: {
-                    contentClass: 'full-image-background mb-bg-fb-16 background-overlay-static',
+                    contentClass: 'layout-column full-image-background mb-bg-fb-16 background-overlay-static',
                     innerContentClass: 'overlay-gradient-20'
+                },
+                permissions: {
+                    only: ['viewGitHub']
                 }
             }
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.GITHUB.GITHUB',
-            state: 'triangular.admin-default.github',
+            name: 'GitHub',
+            state: 'triangular.github',
             type: 'link',
             icon: 'fa fa-github',
-            priority: 2.2
+            priority: 2.2,
+            permission: 'viewGitHub'
         });
     }
 })();

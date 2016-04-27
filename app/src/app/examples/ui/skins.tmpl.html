@@ -14,25 +14,25 @@
         <md-content class="md-padding">
 
             <div layout="row" layout-align="space-around center">
-                <md-select placeholder="{{'UI.SKINS.SKIN_CHOOSE' | translate}}" ng-model="vm.selectedSkin" ng-change="vm.updatePreview()">
+                <md-select placeholder="{{'Choose a skin' | triTranslate}}" ng-model="vm.selectedSkin" ng-change="vm.updatePreview()">
                     <md-option ng-repeat="skin in ::vm.skins" ng-value="skin">{{::skin.name}}</md-option>
                 </md-select>
-                <md-button class="md-primary md-raised" ng-click="vm.trySkin()" translate="UI.SKINS.SKIN_TRY"></md-button>
+                <md-button class="md-primary md-raised" ng-click="vm.trySkin()" translate="Try It"></md-button>
             </div>
 
             <div class="full-image-background mb-bg-08 padding-40" layout layout-align="center center">
                 <div class="ui-skin-preview-window md-whiteframe-z5" flex="70" layout="column">
                     <div layout="row">
                         <div flex="30" ng-style="{ 'background-color' : vm.elementColors.logo }" class="padding-20 ui-skin-preview-window-logo">
-                            <span translate>UI.SKINS.ELEMENTS.LOGO</span>
+                            <span translate>Logo</span>
                         </div>
                         <div flex="70" ng-style="{ 'background-color' : vm.elementColors.toolbar }" class="padding-20 ui-skin-preview-window-toolbar">
-                            <span translate>UI.SKINS.ELEMENTS.TOOLBAR</span>
+                            <span translate>Toolbar</span>
                         </div>
                     </div>
                     <div flex layout="row">
                         <div flex="30" ng-style="{ 'background-color' : vm.elementColors.sidebar }" class="padding-20 ui-skin-preview-window-sidebar">
-                            <span translate>UI.SKINS.ELEMENTS.SIDEBAR</span>
+                            <span translate>Sidebar</span>
                         </div>
                         <md-content flex="70" layout="column"  layout-align="space-between start" class="padding-20 ui-skin-preview-window-content" md-content>
 

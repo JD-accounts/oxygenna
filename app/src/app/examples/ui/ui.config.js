@@ -6,23 +6,22 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/ui');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
-        .state('triangular.admin-default.ui-typography', {
+        .state('triangular.ui-typography', {
             url: '/ui/typography',
             controller: 'TypographyController',
             controllerAs: 'vm',
             templateUrl: 'app/examples/ui/typography.tmpl.html'
         })
-        .state('triangular.admin-default.ui-colors', {
+        .state('triangular.ui-colors', {
             url: '/ui/colors',
             controller: 'ColorsController',
             controllerAs: 'vm',
             templateUrl: 'app/examples/ui/colors.tmpl.html'
         })
-        .state('triangular.admin-default.ui-material-icons', {
+        .state('triangular.ui-material-icons', {
             url: '/ui/material-icons',
             controller: 'MaterialIconsController',
             controllerAs: 'vm',
@@ -36,13 +35,13 @@
                 }
             }
         })
-        .state('triangular.admin-default.ui-weather-icons', {
+        .state('triangular.ui-weather-icons', {
             url: '/ui/weather-icons',
             controller: 'WeatherIconsController',
             controllerAs: 'vm',
             templateUrl: 'app/examples/ui/weather-icons.tmpl.html'
         })
-        .state('triangular.admin-default.ui-fa-icons', {
+        .state('triangular.ui-fa-icons', {
             url: '/ui/fa-icons',
             controller: 'FaIconsController',
             controllerAs: 'vm',
@@ -57,14 +56,14 @@
             }
         })
 
-        .state('triangular.admin-default.ui-toolbar', {
+        .state('triangular.ui-toolbar', {
             url: '/ui/toolbars/:extraClass/:background/:shrink',
             controller: 'ToolbarsUIController',
             controllerAs: 'vm',
             templateUrl: 'app/examples/ui/toolbars.tmpl.html'
         })
 
-        .state('triangular.admin-default.ui-skins', {
+        .state('triangular.ui-skins', {
             url: '/ui/skins',
             controller: 'SkinsUIController',
             controllerAs: 'vm',
@@ -72,33 +71,33 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.UI.UI',
+            name: 'UI',
             icon: 'zmdi zmdi-ruler',
             type: 'dropdown',
             priority: 3.2,
             children: [{
-                name: 'MENU.UI.COLORS',
-                state: 'triangular.admin-default.ui-colors',
+                name: 'Colors',
+                state: 'triangular.ui-colors',
                 type: 'link'
             },{
-                name: 'MENU.UI.FONT_AWESOME',
-                state: 'triangular.admin-default.ui-fa-icons',
+                name: 'Font Awesome',
+                state: 'triangular.ui-fa-icons',
                 type: 'link'
             },{
-                name: 'MENU.UI.MATERIAL_ICONS',
-                state: 'triangular.admin-default.ui-material-icons',
+                name: 'Material Icons',
+                state: 'triangular.ui-material-icons',
                 type: 'link'
             },{
-                name: 'MENU.UI.SKINS',
-                state: 'triangular.admin-default.ui-skins',
+                name: 'Skins',
+                state: 'triangular.ui-skins',
                 type: 'link'
             },{
-                name: 'MENU.UI.TYPOGRAPHY',
-                state: 'triangular.admin-default.ui-typography',
+                name: 'Typography',
+                state: 'triangular.ui-typography',
                 type: 'link'
             },{
-                name: 'MENU.UI.WEATHER_ICONS',
-                state: 'triangular.admin-default.ui-weather-icons',
+                name: 'Weather Icons',
+                state: 'triangular.ui-weather-icons',
                 type: 'link'
             }]
         });

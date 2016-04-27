@@ -251,10 +251,10 @@
     - angular-dragula to 1.2.2,
     - angular-google-chart to 0.1.0,
     - angular-google-maps to 2.3.2,
-    - angular-highlightjs to 0.5.1,    
+    - angular-highlightjs to 0.5.1,
     - angular-local-storage to 0.2.5,
     - angular-material to 1.1.0-rc1,
-    - angular-material-data-table to 0.9.12,    
+    - angular-material-data-table to 0.9.12,
     - angular-moment to 1.0.0-beta.4,
     - angular-resource to 1.4.8,
     - angular-sanitize to 1.4.8,
@@ -269,7 +269,7 @@
     - jquery to 2.2.1,
     - material-design-iconic-font to 2.2.0,
     - textAngular to 1.5.0,
-    - ng-file-upload to 12.0.1    
+    - ng-file-upload to 12.0.1
 - Added template override options to triLayoutProvider to allow users to override templates for left sidebar, the right sidebar, the content, the toolbar and the footer.
 - Fixed icon button widths in toolbar
 - Changed email list in secondary sidebar to use new md-dense list
@@ -279,10 +279,38 @@
 - Better display of scrollbars on Windows IE10+ & Chrome
 - Fixed layout of authentication pages in IE11+
 
-# Version ???
-> Release Date : ???
+# Version 2.6.1
+> Release Date : 18th March 2016
 
 - Moved loader watches into triangular run (catches events earlier)
 - Changed services to factories to match John Pappa style
 - Removed calls to API in auth pages
 - Added docs for menus
+- Added loader example to elements
+- Added datepicker example
+
+# Version 2.6.2
+> Release Date : 29th March 2016
+
+- Fixed Side Navigation Toggle
+- Upgraded md-table examples with progress bar functionality
+- Updated Documentation with examples for Template Overriding
+
+# Version 2.6.3
+> Release Date : 7th April 2016
+
+- Fixed unwanted animation on table advanced when select search or check item
+- Updated material to 1.1.0-rc2
+- Fix for flash of default theme until this issue is resolved https://github.com/angular/material/pull/7427
+- Updated Docs with further detail on template customisations
+
+# Version 2.7.0
+> Release Date : 27th April 2016
+
+- Translations are now optional - include app.translation module if you need multi-language
+- Moved translation files out of modules and into one app i18n folder in the app
+- Updated md-data-table
+- Updated Angular Material to 1.1.0-RC4
+- New permissions module adds angular permissions to hide / show menu items and block routes
+- Added animations to page transitions
+- Updated Docs

@@ -14,16 +14,16 @@
         vm.onePageCode = '';
         vm.options = {
             toolbarSizes: {
-                'default': 'EXAMPLES.LAYOUTS.OPTIONS.TOOLBAR-SIZES.DEFAULT',
-                'md-medium-tall': 'EXAMPLES.LAYOUTS.OPTIONS.TOOLBAR-SIZES.MEDIUM',
-                'md-tall': 'EXAMPLES.LAYOUTS.OPTIONS.TOOLBAR-SIZES.TALL'
+                'default': 'Default',
+                'md-medium-tall': 'Medium',
+                'md-tall': 'Tall'
             },
             toolbarBackgrounds: {
             },
             sideMenuSizes: {
-                'hidden': 'EXAMPLES.LAYOUTS.OPTIONS.SIDEMENU-SIZES.HIDDEN',
-                'icon': 'EXAMPLES.LAYOUTS.OPTIONS.SIDEMENU-SIZES.ICONS',
-                'full': 'EXAMPLES.LAYOUTS.OPTIONS.SIDEMENU-SIZES.FULL'
+                'hidden': 'Hidden',
+                'icon': 'Icons',
+                'full': 'Full Size'
             }
         };
 
@@ -39,7 +39,7 @@
                 'triLayoutProvider.setDefaultOption(\'footer\', ' + vm.layout.footer + ');\n';
 
             vm.onePageCode =
-                '.state(\'triangular.admin-default.my-state\', {' + '\n' +
+                '.state(\'triangular.my-state\', {' + '\n' +
                 '    // set the url of this page' + '\n' +
                 '    url: \'/my-route\',' + '\n' +
                 '    // set the html template to show on this page' + '\n' +

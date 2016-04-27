@@ -23,11 +23,11 @@
     }
 
     /* @ngInject */
-    function Controller ($scope, uiCalendarConfig, $rootScope, $translate) {
+    function Controller ($scope, uiCalendarConfig, $rootScope) {
         var vm = this;
         vm.calendarEvents = [];
         vm.calendarOptions = {
-            lang: $translate.use(),
+            lang: 'en',
             header: false,
             height: 'auto',
             viewRender: function(view) {
@@ -44,7 +44,7 @@
         }
 
         function switchLanguage() {
-            vm.calendarOptions.lang = $translate.use();
+            // vm.calendarOptions.lang = $translate.use();
         }
 
         function destroyListener() {

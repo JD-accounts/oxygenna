@@ -30,7 +30,7 @@
                 icon: 'zmdi zmdi-more-vert',
                 items: [{
                     icon: 'zmdi zmdi-refresh',
-                    title: 'DASHBOARDS.WIDGETS.MENU.REFRESH',
+                    title: 'Refresh',
                     click: function() {
                         $interval.cancel($scope.intervalPromise);
                         widgetCtrl.setLoading(true);
@@ -41,10 +41,10 @@
                     }
                 },{
                     icon: 'zmdi zmdi-share',
-                    title: 'DASHBOARDS.WIDGETS.MENU.SHARE'
+                    title: 'Share'
                 },{
                     icon: 'zmdi zmdi-print',
-                    title: 'DASHBOARDS.WIDGETS.MENU.PRINT'
+                    title: 'Print'
                 }]
             });
 

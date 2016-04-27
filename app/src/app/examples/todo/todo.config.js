@@ -6,11 +6,10 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/todo');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
-        .state('triangular.admin-default.todo', {
+        .state('triangular.todo', {
             url: '/todo',
             views: {
                 '': {
@@ -26,17 +25,21 @@
             },
             data: {
                 layout: {
-                    contentClass: 'full-image-background mb-bg-fb-08 background-overlay-static',
+                    contentClass: 'layout-column full-image-background mb-bg-fb-08 background-overlay-static',
                     innerContentClass: 'overlay-gradient-20'
+                },
+                permissions: {
+                    only: ['viewTodo']
                 }
             }
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.TODO.TITLE',
+            name: 'To do',
             icon: 'zmdi zmdi-check',
-            state: 'triangular.admin-default.todo',
+            state: 'triangular.todo',
             type: 'link',
+            permission: 'viewTodo',
             badge: Math.round(Math.random() * (20 - 1) + 1),
             priority: 2.4
         });

@@ -14,15 +14,15 @@
             sortable: false,
             filter: 'tableImage'
         },{
-            title: 'TABLE.COLUMNS.NAME',
+            title: 'Name',
             field: 'name',
             sortable: true
         },{
-            title: 'TABLE.COLUMNS.DESCRIPTION',
+            title: 'Description',
             field: 'description',
             sortable: true
         },{
-            title: 'TABLE.COLUMNS.BIRTH',
+            title: 'Date of Birth',
             field: 'birth',
             sortable: true
         }];

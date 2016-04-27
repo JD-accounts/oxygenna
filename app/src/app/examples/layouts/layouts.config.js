@@ -6,67 +6,114 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/layouts');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
-        .state('triangular.admin-default.layouts-composer', {
+        .state('triangular.standard-page',  {
+            url: '/layouts/standard-page',
+            templateUrl: 'app/examples/layouts/standard-page.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                },
+                permissions: {
+                    only: ['viewLayouts']
+                }
+            }
+        })
+        .state('triangular.no-scroll-page',  {
+            url: '/layouts/no-scroll-page',
+            templateUrl: 'app/examples/layouts/no-scroll-page.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'triangular-non-scrolling'
+                },
+                permissions: {
+                    only: ['viewLayouts']
+                }
+            }
+        })
+        .state('triangular.layouts-composer', {
             url: '/layouts/composer',
             templateUrl: 'app/examples/layouts/composer.tmpl.html',
             controller: 'LayoutsComposerController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            data: {
+                permissions: {
+                    only: ['viewLayouts']
+                }
+            }
         })
-        .state('triangular.admin-default.layouts-example-full-width', {
+        .state('triangular.layouts-example-full-width', {
+            url: '/layouts/full-width',
+            templateUrl: 'app/examples/dashboards/general/dashboard-general.tmpl.html',
             data: {
                 layout: {
                     sideMenuSize: 'hidden'
+                },
+                permissions: {
+                    only: ['viewLayouts']
                 }
-            },
-            url: '/layouts/full-width',
-            templateUrl: 'app/examples/dashboards/general/dashboard-general.tmpl.html'
+            }
         })
-        .state('triangular.admin-default.layouts-example-tall-toolbar', {
-            data: {
-                layout: {
-                    toolbarSize: 'md-tall',
-                    toolbarClass: 'full-image-background mb-bg-fb-14'
-                }
-            },
+        .state('triangular.layouts-example-tall-toolbar', {
             url: '/layouts/tall-toolbar',
             templateUrl: 'app/examples/dashboards/server/dashboard-server.tmpl.html',
             controller: 'DashboardServerController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            data: {
+                layout: {
+                    toolbarSize: 'md-tall',
+                    toolbarClass: 'md-warn'
+                },
+                permissions: {
+                    only: ['viewLayouts']
+                }
+            }
         })
-        .state('triangular.admin-default.layouts-example-icon-menu', {
+        .state('triangular.layouts-example-icon-menu', {
+            url: '/layouts/icon-menu',
+            templateUrl: 'app/examples/dashboards/general/dashboard-general.tmpl.html',
             data: {
                 layout: {
                     sideMenuSize: 'icon'
+                },
+                permissions: {
+                    only: ['viewLayouts']
                 }
-            },
-            url: '/layouts/icon-menu',
-            templateUrl: 'app/examples/dashboards/general/dashboard-general.tmpl.html'
+            }
         });
+
         triMenuProvider.addMenu({
-            name: 'MENU.LAYOUTS.TITLE',
+            name: 'Layouts',
             icon: 'zmdi zmdi-view-module',
             type: 'dropdown',
             priority: 2.4,
+            permission: 'viewLayouts',
             children: [{
-                name: 'MENU.LAYOUTS.FULL-WIDTH',
+                name: 'Standard Page',
                 type: 'link',
-                state: 'triangular.admin-default.layouts-example-full-width'
+                state: 'triangular.standard-page'
             },{
-                name: 'MENU.LAYOUTS.ICON-MENU',
+                name: 'Non Scrolling Page',
                 type: 'link',
-                state: 'triangular.admin-default.layouts-example-icon-menu'
+                state: 'triangular.no-scroll-page'
             },{
-                name: 'MENU.LAYOUTS.TALL-TOOLBAR',
+                name: 'Full Width Layout',
                 type: 'link',
-                state: 'triangular.admin-default.layouts-example-tall-toolbar'
+                state: 'triangular.layouts-example-full-width'
             },{
-                name: 'MENU.LAYOUTS.COMPOSER',
+                name: 'Icon Menu',
                 type: 'link',
-                state: 'triangular.admin-default.layouts-composer'
+                state: 'triangular.layouts-example-icon-menu'
+            },{
+                name: 'Tall Toolbar with background',
+                type: 'link',
+                state: 'triangular.layouts-example-tall-toolbar'
+            },{
+                name: 'Composer',
+                type: 'link',
+                state: 'triangular.layouts-composer'
             }]
         });
     }

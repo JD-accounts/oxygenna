@@ -12,6 +12,11 @@ table.md-table {
         margin-top: 4px;
       }
   }
+  thead {
+    tr {
+      height: 0;
+    }
+  }
 }
 
 .md-table-toolbar {

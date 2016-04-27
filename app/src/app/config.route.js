@@ -13,25 +13,34 @@
         $stateProvider
         .state('404', {
             url: '/404',
-            templateUrl: '404.tmpl.html',
-            controllerAs: 'vm',
-            controller: function($state) {
-                var vm = this;
-                vm.goHome = function() {
-                    $state.go('triangular.admin-default.dashboard-analytics');
-                };
+            views: {
+                'root': {
+                    templateUrl: '404.tmpl.html',
+                    controller: 'ErrorPageController',
+                    controllerAs: 'vm'
+                }
+            }
+        })
+
+        .state('401', {
+            url: '/401',
+            views: {
+                'root': {
+                    templateUrl: '401.tmpl.html',
+                    controller: 'ErrorPageController',
+                    controllerAs: 'vm'
+                }
             }
         })
 
         .state('500', {
             url: '/500',
-            templateUrl: '500.tmpl.html',
-            controllerAs: 'vm',
-            controller: function($state) {
-                var vm = this;
-                vm.goHome = function() {
-                    $state.go('triangular.admin-default.dashboard-analytics');
-                };
+            views: {
+                'root': {
+                    templateUrl: '500.tmpl.html',
+                    controller: 'ErrorPageController',
+                    controllerAs: 'vm'
+                }
             }
         });
 

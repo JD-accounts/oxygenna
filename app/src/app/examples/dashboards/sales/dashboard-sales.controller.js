@@ -61,7 +61,7 @@
                 // pop a toast
                 $mdToast.show(
                     $mdToast.simple()
-                    .content($filter('translate')('DASHBOARDS.SALES.DATE-UPDATED'))
+                    .content($filter('triTranslate')('Date Range Updated'))
                     .position('bottom right')
                     .hideDelay(2000)
                 );

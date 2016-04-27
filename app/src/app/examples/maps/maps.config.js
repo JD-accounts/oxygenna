@@ -6,19 +6,31 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, uiGmapGoogleMapApiProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/maps');
+    function moduleConfig($stateProvider, uiGmapGoogleMapApiProvider, triMenuProvider) {
 
         $stateProvider
-        .state('triangular.admin-default.maps-fullwidth', {
+        .state('triangular.maps-fullwidth', {
             url: '/maps/fullwidth',
             templateUrl: 'app/examples/maps/maps-fullwidth.tmpl.html',
             controller: 'MapController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            data: {
+                permission: {
+                    only: ['viewMaps']
+                },
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.maps-demos', {
+        .state('triangular.maps-demos', {
             url: '/maps/demos',
-            templateUrl: 'app/examples/maps/maps-demo.tmpl.html'
+            templateUrl: 'app/examples/maps/maps-demo.tmpl.html',
+            data: {
+                permission: {
+                    only: ['viewMaps']
+                }
+            }
         });
 
         uiGmapGoogleMapApiProvider.configure({
@@ -27,17 +39,18 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.MAPS.MAPS',
+            name: 'Maps',
             icon: 'zmdi zmdi-pin',
             type: 'dropdown',
             priority: 7.1,
+            permission: 'viewMaps',
             children: [{
-                name: 'MENU.MAPS.FULLWIDTH',
-                state: 'triangular.admin-default.maps-fullwidth',
+                name: 'Fullwidth',
+                state: 'triangular.maps-fullwidth',
                 type: 'link'
             },{
-                name: 'MENU.MAPS.DEMOS',
-                state: 'triangular.admin-default.maps-demos',
+                name: 'Demos',
+                state: 'triangular.maps-demos',
                 type: 'link'
             }]
         });

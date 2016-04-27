@@ -6,64 +6,83 @@
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/forms');
+    function moduleConfig($stateProvider, triMenuProvider) {
 
         $stateProvider
-        .state('triangular.admin-default.forms-inputs', {
+        .state('triangular.forms-inputs', {
             url: '/forms/inputs',
-            templateUrl: 'app/examples/forms/inputs.tmpl.html'
+            templateUrl: 'app/examples/forms/inputs.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.forms-binding', {
+        .state('triangular.forms-binding', {
             url: '/forms/binding',
-            templateUrl: 'app/examples/forms/binding.tmpl.html'
+            templateUrl: 'app/examples/forms/binding.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.forms-autocomplete', {
+        .state('triangular.forms-autocomplete', {
             url: '/forms/autocomplete',
-            templateUrl: 'app/examples/forms/autocomplete.tmpl.html'
+            templateUrl: 'app/examples/forms/autocomplete.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         })
-        .state('triangular.admin-default.forms-wizard', {
+        .state('triangular.forms-wizard', {
             url: '/forms/wizard',
             templateUrl: 'app/examples/forms/wizard.tmpl.html',
             controller: 'FormWizardController',
             controllerAs: 'wizardController',
             data: {
                 layout: {
-                    contentClass: 'full-image-background mb-bg-fb-02 background-overlay-static',
+                    contentClass: 'layout-column full-image-background mb-bg-fb-02 background-overlay-static',
                     innerContentClass: 'overlay-gradient-20'
                 }
             }
         })
-        .state('triangular.admin-default.forms-validation', {
+        .state('triangular.forms-validation', {
             url: '/forms/validation',
-            templateUrl: 'app/examples/forms/validation.tmpl.html'
+            templateUrl: 'app/examples/forms/validation.tmpl.html',
+            data: {
+                layout: {
+                    contentClass: 'layout-column'
+                }
+            }
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.FORMS.FORMS',
+            name: 'Forms',
             icon: 'zmdi zmdi-calendar-check',
             type: 'dropdown',
             priority: 3.3,
             children: [{
-                name: 'MENU.FORMS.AUTOCOMPLETE',
+                name: 'Autocomplete',
                 type: 'link',
-                state: 'triangular.admin-default.forms-autocomplete'
+                state: 'triangular.forms-autocomplete'
             },{
-                name: 'MENU.FORMS.BINDING',
+                name: 'Data Binding',
                 type: 'link',
-                state: 'triangular.admin-default.forms-binding'
+                state: 'triangular.forms-binding'
             },{
-                name: 'MENU.FORMS.INPUTS',
+                name: 'Inputs',
                 type: 'link',
-                state: 'triangular.admin-default.forms-inputs'
+                state: 'triangular.forms-inputs'
             },{
-                name: 'MENU.FORMS.WIZARD',
+                name: 'Wizard',
                 type: 'link',
-                state: 'triangular.admin-default.forms-wizard'
+                state: 'triangular.forms-wizard'
             },{
-                name: 'MENU.FORMS.VALIDATION',
+                name: 'Validation',
                 type: 'link',
-                state: 'triangular.admin-default.forms-validation'
+                state: 'triangular.forms-validation'
             }]
         });
         triMenuProvider.addMenu({

@@ -18,15 +18,15 @@
         function toggleExtraMenu(showMenu) {
             if(showMenu) {
                 triMenu.addMenu({
-                    name: 'MENU.MENU.DYNAMIC-MENU',
+                    name: 'Dynamic Menu-MENU',
                     icon: 'zmdi zmdi-flower-alt',
                     type: 'link',
                     priority: 0.0,
-                    state: 'triangular.admin-default.menu-dynamic-dummy-page'
+                    state: 'triangular.menu-dynamic-dummy-page'
                 });
             }
             else {
-                triMenu.removeMenu('triangular.admin-default.menu-dynamic-dummy-page');
+                triMenu.removeMenu('triangular.menu-dynamic-dummy-page');
             }
         }
     }
