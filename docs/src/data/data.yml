@@ -80,7 +80,7 @@ topmenu:
                 name: Directives
                 slug: directives
             -
-                name: Migration 1.0 -> 2.0
+                name: Migration
                 slug: migration
     -
         name: Rest Server

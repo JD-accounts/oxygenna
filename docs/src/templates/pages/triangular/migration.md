@@ -1,11 +1,64 @@
 ---
-  title: Migration from 1.0 to 2.0
-  subtitle: Guide to migration from version 1.0 to 2.0
+  title: Migration between versions
+  subtitle: Guide to migration from version to version
   layout: docs.hbs
   section: triangular
 ---
 
-# Changes in 2.0
+# Changes in 2.7.0
+
+Version 2.7.0 introduced a few new changes to the app.
+
+## Optional translations
+
+All translation code has been moved into one module so that users can turn off translations if they want to.
+
+If you want to continue to use translations inside your app after you have updated make sure your app includes the app.translate module in your <code>app.module.js</code> file.
+
+        (function() {
+            'use strict';
+
+            angular
+                .module('app', [
+                    'ui.router', 'permission',
+                    'triangular',
+                    'ngAnimate', 'ngCookies', 'ngSanitize', 'ngMessages', 'ngMaterial',
+                    'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'angularMoment', 'textAngular', 'uiGmapgoogle-maps', 'hljs', 'md.data.table', angularDragula(angular), 'ngFileUpload',
+                    // 'seed-module'
+                    // uncomment above to activate the example seed module
+                    'app.translate',
+                    // only need one language?  if you want to turn off translations
+                    // comment out or remove the 'app.translate', line above
+                    'app.permission',
+                    // dont need permissions?  if you want to turn off permissions
+                    // comment out or remove the 'app.permission', line above
+                    // also remove 'permission' from the first line of dependencies
+                    // https://github.com/Narzerus/angular-permission see here for why
+                    'app.examples'
+                ]);
+        })();
+
+## New simpler ui routes
+
+For all versions < 2.7.0 you used the <code>triangular.admin-default</code> abstract routes to create pages in triangular.
+
+        $stateProvider
+        .state('triangular.admin-default.forms-inputs', {
+            url: '/forms/inputs',
+            templateUrl: 'app/examples/forms/inputs.tmpl.html'
+        })
+
+From 2.7.0 onwards this route has been changed to <code>triangular</code>
+
+        $stateProvider
+        .state('triangular.forms-inputs', {
+            url: '/forms/inputs',
+            templateUrl: 'app/examples/forms/inputs.tmpl.html'
+        );
+
+To update do a find and replace for <code>'triangular.admin-default.</code> to <code>'triangular.</code>
+
+# Changes in 2.0.0
 
 The main changes for version 2.0 were as follows
 
