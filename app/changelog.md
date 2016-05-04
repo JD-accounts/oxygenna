@@ -314,3 +314,8 @@
 - New permissions module adds angular permissions to hide / show menu items and block routes
 - Added animations to page transitions
 - Updated Docs
+
+# Version ???
+> Release Date : ???
+
+- Update angular to version 1.5.5
