@@ -45,7 +45,17 @@
         }
 
         function hideMenuButton() {
-            return triLayout.layout.sideMenuSize !== 'hidden' && $mdMedia('gt-sm');
+            switch(triLayout.layout.sideMenuSize) {
+                case 'hidden':
+                    // always show button if menu is hidden
+                    return false;
+                case 'off':
+                    // never show button if menu is turned off
+                    return true;
+                default:
+                    // show the menu button when screen is mobile and menu is hidden
+                    return $mdMedia('gt-sm');
+            }
         }
 
         function toggleNotificationsTab(tab) {

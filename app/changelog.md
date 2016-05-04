@@ -319,3 +319,4 @@
 > Release Date : ???
 
 - Update angular to version 1.5.5
+- Added 'off' option to sideMenuSize layout settings to remove left side menu completely
