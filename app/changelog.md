@@ -315,8 +315,8 @@
 - Added animations to page transitions
 - Updated Docs
 
-# Version ???
-> Release Date : ???
+# Version 2.7.1
+> Release Date : 5th May 2016
 
 - Update angular to version 1.5.5
 - Added 'off' option to sideMenuSize layout settings to remove left side menu completely
