@@ -17,7 +17,7 @@
                 }
             },
             data: {
-                permission: {
+                permissions: {
                     only: ['viewAuthentication']
                 }
             }
