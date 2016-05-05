@@ -53,7 +53,6 @@
                     $timeout(function() {
                         contentView.append(content);
                     });
-                    // console.log('add footer', content);
                 });
             }
         }
