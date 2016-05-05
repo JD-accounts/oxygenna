@@ -322,3 +322,4 @@
 - Added 'off' option to sideMenuSize layout settings to remove left side menu completely
 - Bower seed app updated to work with all examples and latest 2.7+ version of triangular.
 - Animate.css moved from triangular css into app css.
+- Fixed seed-module to work with new 2.7 states.
