@@ -57,7 +57,7 @@
                     }
                 },
                 resolve: {
-                    emails: function($http, API_CONFIG) {
+                    emails: function($http, $q, API_CONFIG) {
                         return $http({
                             method: 'GET',
                             url: API_CONFIG.url + 'email/inbox'
