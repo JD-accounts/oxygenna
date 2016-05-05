@@ -321,7 +321,7 @@
 - Update angular to version 1.5.5
 - Added 'off' option to sideMenuSize layout settings to remove left side menu completely
 - Bower seed app updated to work with all examples and latest 2.7+ version of triangular.
-- Animate.css moved from triangular css into app css.
+- Bower package now includes scss
 - Fixed seed-module to work with new 2.7 states.
 - Added $stateChangeError handler that redirects to 500 page.
 - Tidy up layout of widgets on server dashboard.

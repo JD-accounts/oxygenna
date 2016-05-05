@@ -10,7 +10,7 @@ gulp.task('bower', ['clean'], function () {
   gulp.start('bower:build');
 });
 
-gulp.task('bower:build', ['bower:scripts', 'bower:styles', 'bower:scripts:minify', 'bower:styles:minify']);
+gulp.task('bower:build', ['bower:scripts', 'bower:styles', 'bower:scss', 'bower:scripts:minify', 'bower:styles:minify']);
 
 gulp.task('bower:scripts', ['bower:partials'], function() {
   return gulp.src([
@@ -48,8 +48,13 @@ var sassOptions = {
   ]
 };
 
-gulp.task('bower:styles', function() {
-  return gulp.src(path.join(paths.src, '/app/triangular/triangular.scss'))
+gulp.task('bower:scss', ['triangular.scss'], function() {
+  return gulp.src(paths.tmp + '/serve/app/triangular.scss')
+  .pipe(gulp.dest(paths.dist + '/'));
+});
+
+gulp.task('bower:styles', ['triangular.scss'], function() {
+  return gulp.src(paths.tmp + '/serve/app/triangular.scss')
     .pipe($.sass(sassOptions))
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']}))
       .on('error', function handleError(err) {
