@@ -326,3 +326,4 @@
 - Added $stateChangeError handler that redirects to 500 page.
 - Tidy up layout of widgets on server dashboard.
 - Fixed permissions on some routes.
+- Fixed translations in title & breadcrumbs.
