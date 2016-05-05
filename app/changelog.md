@@ -324,3 +324,4 @@
 - Animate.css moved from triangular css into app css.
 - Fixed seed-module to work with new 2.7 states.
 - Added $stateChangeError handler that redirects to 500 page.
+- Tidy up layout of widgets on server dashboard.
