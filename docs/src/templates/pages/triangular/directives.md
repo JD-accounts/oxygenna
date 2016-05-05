@@ -35,19 +35,9 @@ For example to color a div using the cyan themes accent hue-1 color you would ju
 
 To create a widget to be used in a dashboard we have created a directive.
 
-    <widget title="'Nice Title'" subtitle="'Subtitle'" title-position="top|bottom|left|right" content-padding overlay-title>content here</widget>
+    <tri-widget title="'Nice Title'" subtitle="'Subtitle'" title-position="top|bottom|left|right" content-padding overlay-title>content here</tri-widget>
 
-The following widget options are available.
-
-- title: sets the title of the widget
-- subtitle: sets the subtitle of the widget
-- title-position: top|bottom|left|right
-- content-padding: adds padding to the widget content
-- content-layout: adds layout to the widget content e.g. content-layout="center center"
-- overlay-title: makes the title lie over the widget content
-- background-image: adds a background image to the widget
-
-You can see all the widgets in action and how the code works in the dashboards module.
+See the [demo page](http://triangular.oxygenna.com/#/dashboards/widgets) for all available options
 
 ## countupto
 
