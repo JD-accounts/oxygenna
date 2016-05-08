@@ -38,10 +38,10 @@
                 layout: {
                     footer: false,
                     contentClass: 'triangular-non-scrolling'
+                },
+                permissions: {
+                    only: ['viewEmail']
                 }
-            },
-            permissions: {
-                only: ['viewEmail']
             }
         });
 
