@@ -327,3 +327,8 @@
 - Tidy up layout of widgets on server dashboard.
 - Fixed permissions on some routes.
 - Fixed translations in title & breadcrumbs.
+
+# Version ???
+> Release Date : ???
+
+- update to latest version of angular permissions fixes #123 (back button)
