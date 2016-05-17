@@ -10,7 +10,7 @@
     "angular-digest-hud": "~0.1.13",
     "angular-dragula": "~1.2.2",
     "angular-google-chart": "~0.1.0",
-    "angular-google-maps": "~2.3.2",
+    "angular-google-maps": "2.3.2",
     "angular-highlightjs": "0.5.1",
     "angular-linkify": "~1.2.0",
     "angular-local-storage": "~0.2.5",
