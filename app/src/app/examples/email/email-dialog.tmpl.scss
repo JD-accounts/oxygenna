@@ -1,50 +1,31 @@
-// Email Dialog
-.email-dialog-to {
-  box-shadow: 0 1px rgb(224,224,224);
-  position: relative;
-  .md-icon-button {
-    margin: 0px;
-    position: absolute;
-    right: -16px;
-    top: 4px;
-  }
-  .md-chips {
-    box-shadow: none;
-  }
+.email-dialog {
+  min-width: 800px;
+  max-width: 800px;
 }
+
 .email-dialog-ccs {
-  max-height: 400px;
-  opacity: 1;
-  overflow: hidden;
   transition: all .5s;
-  md-contact-chips:last-child {
-    box-shadow: 0 -1px rgb(224,224,224) inset;
-  }
-  .md-chips {
-    box-shadow: none;
-  }
 }
+
 .email-dialog-ccs.ng-hide {
   display: block !important;
   max-height: 0;
   opacity: 0;
 }
 
-.email-dialog text-angular {
-  border: 1px solid rgba(0,0,0,0.12);
-  &.focused, &:focus {
-    outline: none;
-    box-shadow: none;
-    border: 1px solid rgba(0,0,0,0.12);
-  }
-
-  blockquote {
-    padding: 10px 20px;
-    margin: 0 0 20px;
-    font-style: italic;
-    border-left: 5px solid #eee;
-  }
+.email-subject {
+  margin-bottom: 0px;
 }
+
+.email-content.focussed > .ta-scroll-window.form-control {
+  box-shadow: none;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.email-content .ta-editor {
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
 // - Editor toolbar
 .email-dialog-editor-toolbar {
   button {
@@ -60,13 +41,4 @@
       }
     }
   }
-}
-$i: 1;
-@while $i <= 5 {
-  .transition-in .editor-toolbar {
-    button:nth-child(#{$i}) {
-      @include fadeInUp($delay: #{0.2 * $i}s);
-    }
-  }
-  $i: $i + 1;
 }

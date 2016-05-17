@@ -14,7 +14,7 @@
         vm.email = email;
         vm.title = title;
         vm.send = send;
-        vm.showCCSIcon = 'zmdi zmdi-caret-down';
+        vm.showCCSIcon = 'zmdi zmdi-account-add';
         vm.showCCS = false;
         vm.toggleCCS = toggleCCS;
         vm.triSkin = triSkins.getCurrent();
@@ -28,7 +28,7 @@
 
         function toggleCCS() {
             vm.showCCS = !vm.showCCS;
-            vm.showCCSIcon = vm.showCCS ? 'zmdi zmdi-caret-up' : 'zmdi zmdi-caret-down';
+            vm.showCCSIcon = vm.showCCS ? 'zmdi zmdi-account' : 'zmdi zmdi-account-add';
         }
 
         function send() {

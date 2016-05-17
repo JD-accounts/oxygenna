@@ -331,4 +331,5 @@
 # Version ???
 > Release Date : ???
 
-- update to latest version of angular permissions fixes #123 (back button)
+- Update to latest version of angular permissions fixes #123 (back button)
+- New style for for compose / reply dialog in email (fixes IE 11)
