@@ -193,3 +193,7 @@ Just run the command
     gulp build
 
 This will initiate a build, once it has finished you will find your built files in a folder called dist that will have been created for you.
+
+# Visual Studio
+
+For users that want to use Visual Studio to develop their app [this guide explains how to get Gulp working together with VS](http://www.davepaquette.com/archive/2014/10/08/how-to-use-gulp-in-visual-studio.aspx)
