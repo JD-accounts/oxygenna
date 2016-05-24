@@ -334,3 +334,4 @@
 - Update to latest version of angular permissions fixes #123 (back button)
 - New style for for compose / reply dialog in email (fixes IE 11)
 - Fix menu background color when sideMenuSize is set to hidden
+- Fix footer scrolling in Safari
