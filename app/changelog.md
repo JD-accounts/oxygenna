@@ -328,8 +328,8 @@
 - Fixed permissions on some routes.
 - Fixed translations in title & breadcrumbs.
 
-# Version ???
-> Release Date : ???
+# Version 2.7.2
+> Release Date : 24th May 2016
 
 - Update to latest version of angular permissions fixes #123 (back button)
 - New style for for compose / reply dialog in email (fixes IE 11)
