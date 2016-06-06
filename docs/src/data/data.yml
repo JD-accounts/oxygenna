@@ -89,6 +89,9 @@ topmenu:
         name: Tutorials
         slug: videos
     -
+        name: How-Tos
+        slug: how-tos
+    -
         name: Changelog
         slug: changelog
     -
