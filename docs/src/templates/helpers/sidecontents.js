@@ -4,6 +4,7 @@ module.exports.register = function(Handlebars, options, params)  {
         var text = line.replace(prefix + ' ', '');
         return {
             text: text,
+            prefix: prefix,
             id: text.toLowerCase().replace(/ /g, '-').replace(/'/g, '-').replace(/\./g, '-').replace(/\(/g, '').replace(/\)/g, ''),
             children: []
         };
@@ -23,6 +24,12 @@ module.exports.register = function(Handlebars, options, params)  {
                             }
                             currentHeader = createHeader(lines[i], '#');
                         }
+                        else if(lines[i].indexOf('##### ') === 0) {
+                            if (null !== currentHeader) {
+                                headers.push(currentHeader);
+                            }
+                            currentHeader = createHeader(lines[i], '#####');
+                        }
                         else if(lines[i].indexOf('## ') === 0) {
                             var subHeader = createHeader(lines[i], '##');
                             currentHeader.children.push(subHeader);
@@ -36,15 +43,24 @@ module.exports.register = function(Handlebars, options, params)  {
             }
         }
         // create toc
-        var toc = '<ul class="nav bs-sidenav">';
+        var toc = '<ul class="nav">';
         for (var h in headers) {
-            toc += '<li>';
-            toc += '<a href="#' + headers[h].id + '">' + headers[h].text + '</a>';
+            if (headers[h].prefix === '#####' && headers[h].children.length == 0) {
+                toc += '<li class="oxy-docs-sidebar-subheading nav-subheading-level-one">' + headers[h].text + '</li>'
+                continue;
+            }
+            else if (headers[h].prefix === '#') {
+                toc += '<li class="nav-item">';
+                toc += '<a class="oxy-docs-sidebar-nav-link-js nav-link" href="#' + headers[h].id + '">' + headers[h].text + '</a>';
+            }
             if (headers[h].children.length > 0) {
                 toc += '<ul class="nav">';
                 for (var c in headers[h].children) {
-                    toc += '<li>';
-                    toc += '<a href="#' + headers[h].children[c].id + '">' + headers[h].children[c].text + '</a>';
+                    if (headers[h].prefix === '#####') {
+                        toc += '<li class="nav-subheading-level-two">' + headers[h].text + '</li>'
+                    }
+                    toc += '<li class="nav-item">';
+                    toc += '<a class="oxy-docs-sidebar-nav-link-js nav-link" href="#' + headers[h].children[c].id + '">' + headers[h].children[c].text + '</a>';
                     toc += '</li>';
                 }
                 toc += '</ul>';
