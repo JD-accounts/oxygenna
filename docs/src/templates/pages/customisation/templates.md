@@ -15,7 +15,7 @@ Using the triLayoutProvider you can override the tempates as well as their assoc
 and are the following:
 
     contentTemplateUrl: 'app/triangular/layouts/default/default-content.tmpl.html',
-    sidebarLeftTemplateUrl: 'app/triangular/components/menu/menu.tmpl.html',
+    sidebarLeftTemplateUrl: 'app/layouts/leftsidenav/leftsidenav.tmpl.html',
     sidebarLeftController: 'MenuController',
     sidebarRightTemplateUrl: 'app/triangular/components/notifications-panel/notifications-panel.tmpl.html',
     sidebarRightController: 'NotificationsPanelController',
@@ -37,7 +37,7 @@ An example overriding the template used for the left sidebar can be seen below:
 
 1. Grab the contents of the original sidebar template from the triangular module.
 
-  <code>app/triangular/components/menu/menu.tmpl.html</code>
+  <code>app/layouts/leftsidenav/leftsidenav.tmpl.html</code>
 
 2. Copy the file somewhere into your app, for example:
 
