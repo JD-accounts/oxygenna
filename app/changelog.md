@@ -340,3 +340,4 @@
 > Release Date : ???
 
 - Fixed menu item permission on link type
+- Updated to new material angular RC5
