@@ -1,6 +1,6 @@
 'use strict';
 module.exports.register = function(Handlebars, options, params)  {
-    function createHeader(line, prefix) {
+    function createItem(line, prefix) {
         var text = line.replace(prefix + ' ', '');
         return {
             text: text,
@@ -9,65 +9,64 @@ module.exports.register = function(Handlebars, options, params)  {
             children: []
         };
     }
+
+    function createHeading(heading) {
+        var html = '<li class="nav-item">';
+        html += '<a class="oxy-docs-sidebar-nav__heading oxy-docs-sidebar-nav__heading-js nav-link" href="#' + heading.id + '">' + heading.text + '</a>';
+        if(heading.children.length > 0) {
+            html += '<ul class="nav">';
+            for(var child in heading.children) {
+                html += createHeading(heading.children[child]);
+            }
+            html += '</ul>';
+        }
+        html += '</li>';
+        return html;
+    }
     Handlebars.registerHelper('sidecontents', function(filename) {
-        // create nested header objects
-        var headers = [];
+        var sections = [];
         for (var page in options.pages) {
             if ( filename === options.pages[page].filename) {
                 if (options.pages[page].page) {
                     var lines = options.pages[page].page.split('\n');
+                    var currentSection = null;
                     var currentHeader = null;
                     for (var i in lines) {
                         if(lines[i].indexOf('# ') === 0) {
-                            if (null !== currentHeader) {
-                                headers.push(currentHeader);
-                            }
-                            currentHeader = createHeader(lines[i], '#');
-                        }
-                        else if(lines[i].indexOf('##### ') === 0) {
-                            if (null !== currentHeader) {
-                                headers.push(currentHeader);
-                            }
-                            currentHeader = createHeader(lines[i], '#####');
+                            currentSection = createItem(lines[i], '#');
+                            sections.push(currentSection);
                         }
                         else if(lines[i].indexOf('## ') === 0) {
-                            var subHeader = createHeader(lines[i], '##');
-                            currentHeader.children.push(subHeader);
+                            currentHeader = createItem(lines[i], '##');
+                            if(null != currentSection) {
+                                currentSection.children.push(currentHeader);
+                            }
+                        }
+                        else if(lines[i].indexOf('### ') === 0) {
+                            var subHeader = createItem(lines[i], '###');
+                            if(null != currentHeader) {
+                                currentHeader.children.push(subHeader);
+                            }
                         }
                     }
-                    if (null !== currentHeader) {
-                        headers.push(currentHeader);
-                    }
                 }
-                break;
             }
         }
+
         // create toc
-        var toc = '<ul class="nav">';
-        for (var h in headers) {
-            if (headers[h].prefix === '#####' && headers[h].children.length == 0) {
-                toc += '<li class="oxy-docs-sidebar-subheading nav-subheading-level-one">' + headers[h].text + '</li>'
-                continue;
-            }
-            else if (headers[h].prefix === '#') {
-                toc += '<li class="nav-item">';
-                toc += '<a class="oxy-docs-sidebar-nav-link-js nav-link" href="#' + headers[h].id + '">' + headers[h].text + '</a>';
-            }
-            if (headers[h].children.length > 0) {
+        var toc = '<nav role="navigation" class="oxy-docs-sidebar-nav">';
+        for (var s in sections) {
+            var section = sections[s];
+            toc += '<h5 class="oxy-docs-sidebar-nav__section-heading">' + section.text + '</h5>';
+            if(section.children.length > 0) {
                 toc += '<ul class="nav">';
-                for (var c in headers[h].children) {
-                    if (headers[h].prefix === '#####') {
-                        toc += '<li class="nav-subheading-level-two">' + headers[h].text + '</li>'
-                    }
-                    toc += '<li class="nav-item">';
-                    toc += '<a class="oxy-docs-sidebar-nav-link-js nav-link" href="#' + headers[h].children[c].id + '">' + headers[h].children[c].text + '</a>';
-                    toc += '</li>';
+                for(var h in section.children) {
+                    toc += createHeading(section.children[h]);
                 }
                 toc += '</ul>';
             }
-            toc += '</li>';
         }
-        toc += '</ul>';
+        toc += '</nav>';
         return new Handlebars.SafeString(toc);
     });
 

@@ -1,8 +1,10 @@
 @import "bootstrap/scss/bootstrap.scss";
 @import "fontawesome/scss/font-awesome.scss";
 
-@import "navbar.scss";
-@import "docs.scss";
+@import "layouts/docs";
+@import "navbar";
+@import "sidebar";
+@import "content";
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
