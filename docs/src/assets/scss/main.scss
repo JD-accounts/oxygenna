@@ -5,58 +5,13 @@
 @import "navbar";
 @import "sidebar";
 @import "content";
+@import "homepage";
+
+html,
+body {
+    height: 100%;
+}
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
-
-// .sidebar-fixed{
-//     position: fixed;
-// }
-// .col-md-3.sidebar-fixed {
-//     padding: 0;
-// }
-// h5 {
-//     display: none;
-// }
-// #sidebar {
-//     background: #E8EAEA;
-//     height: 100%;
-//     -webkit-box-shadow: 3px 0px 2px 0px rgba(224,224,224,1);
-//     -moz-box-shadow: 3px 0px 2px 0px rgba(224,224,224,1);
-//     box-shadow: 3px 0px 2px 0px rgba(224,224,224,1);
-//     overflow: auto;
-//     a {
-//         color: #4c555a;
-//     }
-//     .navbar {
-//         padding: 0;
-//     }
-//     .nav{
-//         .nav-subheading-level-one {
-//             padding: 0;
-//             margin: 0;
-//             color: #939da3;
-//             font-size: 14px;
-//             font-weight: 500;
-//             line-height: 18px;
-//             text-transform: uppercase;
-//         }
-//         .nav-subheading-level-two{
-//             padding: 0 20px 4px;
-//             margin: 0;
-//             color: #939da3;
-//             font-size: 14px;
-//             font-weight: 500;
-//             line-height: 18px;
-//             text-transform: uppercase;
-//         }
-//         .nav .nav-item {
-//             padding: 0 20px 4px;
-//         }
-//     }
-// }
-// // @import 'homepage';
-// // @import 'sidebar';
-// // @import 'footer';
-// // @import 'docs';

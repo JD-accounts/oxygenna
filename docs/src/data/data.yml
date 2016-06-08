@@ -21,3 +21,6 @@ topmenu:
     -
         name: Support
         slug: support
+    -
+        name: GitHub
+        slug: github
