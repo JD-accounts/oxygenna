@@ -20,16 +20,20 @@
             event.preventDefault();
         })
 
+        // CONTENT STYLING
+
         // table styles
-        $('table').each(function() {
+        $('.oxy-docs-content table').each(function() {
           $(this).addClass('table table-bordered table-striped');
         });
 
         // code highlight
         hljs.configure({languages: ['css, javascript', 'html', 'scss']});
-        $('pre code').each(function(i, block) {
+        $('.oxy-docs-content pre code').each(function(i, block) {
           hljs.highlightBlock(block);
         });
+
+        $('.oxy-docs-content img').addClass('img-fluid center-block');
 
     });
 }(jQuery)

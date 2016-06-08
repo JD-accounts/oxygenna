@@ -63,7 +63,7 @@ Triangulars code follows the [John Pappa style guide for angular](https://github
 
 ## Prerequisites
 
-Before you get started with triangular you will need to make sure your computer has a few prerequisites installed.
+In this section we will show you how to install all the prerequisites you need on your system to run triangular.
 
 Here is a handy install checklist for you to go through.  Instructions on how to install them are below the table.
 
@@ -115,12 +115,16 @@ This tells node's package manager (npm) to install gulp-cli on your system.  The
 
 ## Downloading
 
-First of all you will need to log in to your themeforest account.
+Now you have all the prerequisites installed on your system the next step is to grab the latest copy of triangular from themeforest.
+
+So first of all you will need to log in to your [themeforest account](http://themeforest.net).
 
 After that goto your downloads page
+
 ![ThemeForest Downloads Page](assets/images/getting-started/tf-download.png)
 
 From there locate the {{theme.name}} template click the **download button** and then select **All files & documentation**
+
 ![ThemeForest Downloads Page](assets/images/getting-started/tf-downloads.png)
 
 <div class="alert alert-info" role="alert">
@@ -139,15 +143,15 @@ In order to get at the goodness inside you will need to [unzip this file](https:
 
 Once you have unzipped the {{theme.name}} zip file you will find the following folders have been created.
 
-| Folder / File | Contents                                      |
-|:--------------|:----------------------------------------------|
-| changelog.md  | lists changes to each version of the template |
-| source/       | contains the templates source files           |
-| demo/         | compiled version of source files              |
-| docs/         | the documentation you are reading now         |
-| extras/       | lots of extra material design goodies         |
+| Folder / File | Contents                                                         |
+|:--------------|:-----------------------------------------------------------------|
+| changelog.md  | lists changes to each version of the template                    |
+| source/       | contains the templates source files                              |
+| demo/         | compiled version of source files (minified version of demo site) |
+| docs/         | the documentation you are reading now                            |
+| extras/       | lots of extra material design & code goodies                     |
 
-The source folder contatins the gulp build system and all the templates source files.  You can read more about how to set this up in the Getting Started -> Source section of the docs.
+The source folder contains all the templates source code files.  
 
 The demo folder contains a built version of the source files, this is an exact copy of the demo site that is running on {{theme.name}}'s ThemeForest demo site.
 
@@ -155,38 +159,17 @@ The docs folder contains a copy of the latest documentation for {{theme.name}}, 
 
 The extras folder contains lots of material design graphics and a copy of the {{theme.name}} PHP API that provides the dummy content for the demo.
 
+# The source code
 
-# The source files
+## Where is the code?
 
-## Introduction
-
-Once you have [downloaded and unzipped](download.html) the main template download zip.
+Once you have [downloaded and unzipped](#downloading) the main template download zip.
 
 You will find several folders have been created, one of which will be a folder called source.
 
-This is where you will find the main [gulp](http://gulpjs.com/) build and angularjs source files.
+This is where you will find all the code for triangular.
 
-## Gulp Angular build system
-
-The gulp build system was generated using the [Yeoman Gulp Angular](https://github.com/Swiip/generator-gulp-angular) generator.
-
-Generator offers a great start to creating any AngularJS app becuas it incudes the following:
-
-- useref : allow configuration of your files in comments of your HTML file
-- ngAnnotate : convert simple injection to complete syntax to be minification proof
-- uglify : optimize all your JavaScript
-- csso : optimize all your CSS
-- rev : add a hash in the file names to prevent browser cache problems
-- watch : watch your source files and recompile them automatically
-- jshint : JavaScript code linter
-- Unit test (karma) : out of the box unit test configuration with karma
-- e2e test (protractor) : out of the box e2e test configuration with protractor
-- browser sync : full-featured development web server with livereload and devices sync
-- angular-templatecache : all HTML partials will be converted to JS to be bundled in the application
-
-The generator was also built using the [Best Practice Recommendations for Angular App Structure](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub)
-
-## Folder and File structure
+## Folder and file structure
 
 Inside the source folder you will see a folder structure like this:
 
@@ -194,7 +177,7 @@ Inside the source folder you will see a folder structure like this:
 |:-------------------|:-----------------------------------------------------------------|
 | .bowerrc           | Sets folder to install bower components                          |
 | .editorconfig      | Sets editor coding standards                                     |
-| .jshintrc          | Sets jshint configuration                                        |
+| .eslintrd          | Sets eslint configuration                                        |
 | .yo-rc.json        | Yeoman config                                                    |
 | bower.json         | Lists all packages to be installed by bower                      |
 | gulpfile.js        | Main gulp file                                                   |
@@ -212,6 +195,7 @@ Inside the source folder you will find the following folders and files
 |:--------------|:----------------------------|
 | app/          | Contains the main app files |
 | assets/       | Contains app image files    |
+| 401.tmpl.html | 401 page html               |
 | 404.tmpl.html | 404 page html               |
 | 500.tmpl.html | 500 page html               |
 | favicon.png   | Favourite icon              |
@@ -219,111 +203,90 @@ Inside the source folder you will find the following folders and files
 
 Inside the app folder you will find the following files and folders
 
-| Folder / File                 | Contents                                             |
-|:------------------------------|:-----------------------------------------------------|
-| examples/                     | Includes all the example pages used in the app       |
-| i18n/                         | Contains app translation files                       |
-| seed-module                   | Contans an example module to use in your own app     |
-| triangular/                   | The main triangular module                           |
-| app.module.js                 | The main app module file                             |
-| app.scss                      | The main app scss file                               |
-| config.chartjs.js             | Config to make chartjs plugin use MD colors          |
-| config.route.js               | Config to set up your app routes                     |
-| config.translate.js           | Config to set your app languages                     |
-| config.triangular.layout.js   | Config to set triangulars default page layouts       |
-| config.triangular.settings.js | Config to set triangulars default settings           |
-| config.triangular.themes.js   | Config to set up triangulars theme colors and themes |
-| value.googlechart.js          | Adds a value used by google charts plugin            |
+| Folder / File                 | Contents                                                       |
+|:------------------------------|:---------------------------------------------------------------|
+| examples/                     | All the example modules used in the app                        |
+| i18n/                         | App translation files                                          |
+| layouts/                      | Templates used for footer, sidenavs, loader & toolbar in app   |
+| permission/                   | Optional module to add permissions to routes and menus         |
+| scss/                         | Style SCSS for the app                                         |
+| seed-module/                  | Example starter module to teach module structure & function    |
+| translate/                    | Optional module to add multi-language translations to template |
+| triangular/                   | The main triangular module                                     |
+| app.module.js                 | The main app module file                                       |
+| app.run.js                    | Handles error redirection on state change error                |
+| app.scss                      | The main app scss file                                         |
+| config.chartjs.js             | Config to make chartjs plugin use MD colors                    |
+| config.route.js               | Config to set up your app routes                               |
+| config.triangular.layout.js   | Config to set triangulars default admin page layout            |
+| config.triangular.settings.js | Config to set triangulars default settings                     |
+| config.triangular.themes.js   | Config to set up triangulars theme colors and themes           |
+| error-page.controller.js      | Controller for 401, 404 & 500 error pages                      |
+| translate.filter.js           | Translation filter used by optional translation module         |
+| value.googlechart.js          | Adds a value used by google charts plugin                      |
 
 ## Module structure
 
 Each module in {{theme.name}} uses John Papa's recommended structure and naming conventions.
 
-To find out how this structure works we will describe one of the more simple modules below, the introduction module.
+To find out how this structure works we will describe the seed-module module's structure below.
 
-This module justs adds one menu item and one page to the site.
+| Folder / File           | Contents                                                |
+|:------------------------|:--------------------------------------------------------|
+| seed-page.controller.js | Example Controller for the seed-page.tmpl.html page     |
+| seed-page.tmpl.html     | Example page HTML                                       |
+| seed-page.tmpl.scss     | Example page SCSS for CSS styling                       |
+| seed.module.js          | Seed module js file                                     |
+| seed.config.js          | Sets up the modules routes and adds menus to triangular |
 
-| Folder / File              | Contents                                                |
-|:---------------------------|:--------------------------------------------------------|
-| i18n/                      | Translation json files                                  |
-| introduction.config.js     | Sets up the modules routes and adds menus to triangular |
-| introduction.controller.js | Controller for the introduction.tmpl.html page          |
-| introduction.module.js     | Module js file                                          |
-| introduction.tmpl.html     | Introduction page HTML                                  |
-| introduction.tmpl.scss     | Introduction page SCSS for CSS styling                  |
+# Developing
 
+## Setup development server
 
-# Setting up Gulp
+Hopefully now you have [Installed the prerequisites](#prerequisites) and have read about [the file and folder structure](#folder-and-file-structure).
 
-In order you run the gulp build system for the template you will need to install node.js on your system.
+So let's start coding.
 
-Follow the instructions below to install node.js on your system.
+There are two command you need to run from inside the triangular source folder (the main root directory of the source folder that contains gulpfile.js).
 
-## Installing Node.js
+These two commands will install the js packages needed to run the development server and create production builds.
 
-
-## Checking node is installed and working
-
-
-
-
-## Getting the build system ready
-
-In order to finish the set up of the build system you just need to run 2 simple commands from the root directory of your unzipped source files.
-
-## Install node modules
+### Install node modules
 
 Run the following command from the root of your source files to install the node modules listed in packages.json
 
     npm install
 
-## Install bower packages
-
-If you do not have bower installed run
-
-    npm -g install bower
-
-<div class="alert alert-info" role="alert">
-  <strong>Note</strong> - You will need git installed for bower to work <a href="https://git-scm.com/">Git website</a>
-</div>
+### Install bower packages
 
 Run the following command from the root of your source files to install the bower packages listed in bower.json
 
     bower install
 
-# Running a development server
+<div class="alert alert-info" role="alert">
+  <strong>Note</strong> - You will need [git installed](#install-git) for bower to work <a href="https://git-scm.com/">Git website</a>
+</div>
 
-Once you have gulp all ready to go you can start developing.
 
-To do this you just need to start a local development server
+## Starting development server
 
-## Start a development server
+Once you have all the [node packages](#install-node-modules) & [bower packages]((#install-node-modules)) installed all ready to go you can start developing.
 
-First make sure you have gulp installed globally
-
-  npm -g install gulp
-
-Once you have bower packages and node modules installed you are ready to code.  To start a development server just type.
+To do this you just need to start a local development server, from the root of the source folder run this command.
 
     gulp serve
 
 This should automatically open up a browser window with the template running.
 
-## Browsersync
+## Seeing your changes
 
-Once the development server is up and running any changes you make to the HTML & JS & SASS files will be auto updated in your browser window.
+Once the development server is up and running any changes you make to the HTML & JS & SASS files will trigger your browser window to auto refresh with your changed code.
 
-# Creating a production build
+# Deploying
 
-## Running a production server
+Once you have used the [development server](#starting-development-server) to modify the app to your needs you will want to get your new app online for everyone to see.
 
-Before you run a production build you can test your production files first by running a local production server.
-
-Just run the command
-
-    gulp serve:dist
-
-The local server that runs will now be running a built version of your site.
+Triangular has a build system that will grab all the JS, HTML & SASS you have created whilst developing and collating it all together into a minimal package of HTML, CSS & JS files that you can the upload and deploy on your web server.
 
 ## Running a production build
 
@@ -333,7 +296,32 @@ Just run the command
 
     gulp build
 
-This will initiate a build, once it has finished you will find your built files in a folder called dist that will have been created for you.
+This will initiate a build, once it has finished you will find a new folder has been created called <code>dist</code>.  This is where the built files have been created, you will find the following files.
+
+| Folder / File     | Contents                                           |
+|:------------------|:---------------------------------------------------|
+| app/              | Example data files and example source code         |
+| assets/images/    | Images used in the app                             |
+| fonts/            | Font icon files                                    |
+| scripts/app.js    | Minified App AngularJS code                        |
+| scripts/vendor.js | Minified JS packages (jquery, angularjs, etc)      |
+| styles/app.css    | Minified app css                                   |
+| styles/vendor.css | Minified packages css (font-awesome, chartjs, etc) |
+| 401.tmpl.html     | 401 page html                                      |
+| 404.tmpl.html     | 404 page html                                      |
+| 500.tmpl.html     | 500 page html                                      |
+| favicon.png       | App FavIcon                                        |
+| index.html        | Main index.html page                               |
+
+## Testing a production build
+
+If you need to troubleshoot the production build process there is also an option to run the production build in the development server.
+
+Just run the command
+
+    gulp serve:dist
+
+The local server that runs will now be running a built version of your site as if you ran <code>gulp build</code>
 
 # Visual Studio
 
@@ -372,3 +360,23 @@ To make sure that {{theme.name}} is API ready we created a test API in PHP to ca
 This is what provides the dummy data that is used on the Email and Example pages.
 
 We have included it here in case anyone wants a start on creating their own API.
+
+## Gulp Angular build system
+
+The gulp build system was generated using the [Yeoman Gulp Angular](https://github.com/Swiip/generator-gulp-angular) generator.
+
+Generator offers a great start to creating any AngularJS app becuas it incudes the following:
+
+- useref : allow configuration of your files in comments of your HTML file
+- ngAnnotate : convert simple injection to complete syntax to be minification proof
+- uglify : optimize all your JavaScript
+- csso : optimize all your CSS
+- rev : add a hash in the file names to prevent browser cache problems
+- watch : watch your source files and recompile them automatically
+- jshint : JavaScript code linter
+- Unit test (karma) : out of the box unit test configuration with karma
+- e2e test (protractor) : out of the box e2e test configuration with protractor
+- browser sync : full-featured development web server with livereload and devices sync
+- angular-templatecache : all HTML partials will be converted to JS to be bundled in the application
+
+The generator was also built using the [Best Practice Recommendations for Angular App Structure](https://docs.google.com/document/d/1XXMvReO8-Awi1EZXAXS4PzDzdNvV6pGcuaF4Q9821Es/pub)
