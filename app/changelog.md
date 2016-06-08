@@ -340,8 +340,9 @@
 - Fix menu background color when sideMenuSize is set to hidden
 - Fix footer scrolling in Safari
 
-## Version ???
-> Release Date : ???
+## Version 2.8.0
+> Release Date : 8th June 2016
 
 - Fixed menu item permission on link type
 - Updated to new material angular RC5
+- New Documentation for all template
