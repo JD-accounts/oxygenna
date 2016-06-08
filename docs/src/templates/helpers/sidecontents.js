@@ -54,7 +54,7 @@ module.exports.register = function(Handlebars, options, params)  {
         }
 
         // create toc
-        var toc = '<nav role="navigation" class="oxy-docs-sidebar-nav">';
+        var toc = '<nav id="sidenav" role="navigation" class="oxy-docs-sidebar-nav">';
         for (var s in sections) {
             var section = sections[s];
             toc += '<h5 class="oxy-docs-sidebar-nav__section-heading">' + section.text + '</h5>';

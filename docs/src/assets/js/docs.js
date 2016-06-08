@@ -9,7 +9,7 @@
             // scroll content to hash of heading
             var hash = $this.prop('hash');
             $.scrollTo(hash, 300, {
-                offset: -$('.oxy-navbar').outerHeight(),
+                offset: -$('.oxy-navbar').outerHeight() + 1,
                 axis: 'y'
             });
 
@@ -45,6 +45,11 @@
         });
 
         $('.oxy-docs-content img').addClass('img-fluid center-block');
+
+        $('body').scrollspy({
+            target: '#sidenav',
+            offset: 54
+        })
 
     });
 }(jQuery)
