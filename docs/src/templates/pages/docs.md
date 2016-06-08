@@ -8,7 +8,7 @@
 
 ## Overview
 
-First of all thank you for purchasing triangular.  
+First of all thank you for purchasing triangular.
 
 {{theme.name}} is a fantastic admin template build with angularjs.  It has been created with merticulous attention to [Google's material design specification](http://www.google.com/design/spec/material-design/introduction.html).
 
@@ -76,7 +76,7 @@ Here is a handy install checklist for you to go through.  Instructions on how to
 
 ### Install Node.js
 
-We recommend installing the latest version of node.  
+We recommend installing the latest version of node.
 
 You can download the latest of node.js [from here](https://nodejs.org/download/) alternatively there are [guides on how to install using a package manager](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
 
@@ -151,7 +151,7 @@ Once you have unzipped the {{theme.name}} zip file you will find the following f
 | docs/         | the documentation you are reading now                            |
 | extras/       | lots of extra material design & code goodies                     |
 
-The source folder contains all the templates source code files.  
+The source folder contains all the templates source code files.
 
 The demo folder contains a built version of the source files, this is an exact copy of the demo site that is running on {{theme.name}}'s ThemeForest demo site.
 
@@ -161,7 +161,7 @@ The extras folder contains lots of material design graphics and a copy of the {{
 
 # The source code
 
-## Where is the code?
+## Where is the code
 
 Once you have [downloaded and unzipped](#downloading) the main template download zip.
 
@@ -203,27 +203,27 @@ Inside the source folder you will find the following folders and files
 
 Inside the app folder you will find the following files and folders
 
-| Folder / File                 | Contents                                                       |
-|:------------------------------|:---------------------------------------------------------------|
-| examples/                     | All the example modules used in the app                        |
-| i18n/                         | App translation files                                          |
-| layouts/                      | Templates used for footer, sidenavs, loader & toolbar in app   |
-| permission/                   | Optional module to add permissions to routes and menus         |
-| scss/                         | Style SCSS for the app                                         |
-| seed-module/                  | Example starter module to teach module structure & function    |
-| translate/                    | Optional module to add multi-language translations to template |
-| triangular/                   | The main triangular module                                     |
-| app.module.js                 | The main app module file                                       |
-| app.run.js                    | Handles error redirection on state change error                |
-| app.scss                      | The main app scss file                                         |
-| config.chartjs.js             | Config to make chartjs plugin use MD colors                    |
-| config.route.js               | Config to set up your app routes                               |
-| config.triangular.layout.js   | Config to set triangulars default admin page layout            |
-| config.triangular.settings.js | Config to set triangulars default settings                     |
-| config.triangular.themes.js   | Config to set up triangulars theme colors and themes           |
-| error-page.controller.js      | Controller for 401, 404 & 500 error pages                      |
-| translate.filter.js           | Translation filter used by optional translation module         |
-| value.googlechart.js          | Adds a value used by google charts plugin                      |
+| Folder / File                 | Contents                                                                        |
+|:------------------------------|:--------------------------------------------------------------------------------|
+| examples/                     | All the example modules used in the app                                         |
+| i18n/                         | App translation files                                                           |
+| layouts/                      | Templates used for footer, sidenavs, loader & toolbar in app                    |
+| permission/                   | Optional module to add permissions to routes and menus                          |
+| scss/                         | Style SCSS for the app                                                          |
+| seed-module/                  | Example starter module to teach module structure & function                     |
+| translate/                    | Optional module to add multi-language translations to template                  |
+| triangular/                   | The main triangular module (we recommend not changing this so updates are easy) |
+| app.module.js                 | The main app module file                                                        |
+| app.run.js                    | Handles error redirection on state change error                                 |
+| app.scss                      | The main app scss file                                                          |
+| config.chartjs.js             | Config to make chartjs plugin use MD colors                                     |
+| config.route.js               | Config to set up your app routes                                                |
+| config.triangular.layout.js   | Config to set triangulars default admin page layout                             |
+| config.triangular.settings.js | Config to set triangulars default settings                                      |
+| config.triangular.themes.js   | Config to set up triangulars theme colors and themes                            |
+| error-page.controller.js      | Controller for 401, 404 & 500 error pages                                       |
+| translate.filter.js           | Translation filter used by optional translation module                          |
+| value.googlechart.js          | Adds a value used by google charts plugin                                       |
 
 ## Module structure
 
@@ -251,6 +251,13 @@ There are two command you need to run from inside the triangular source folder (
 
 These two commands will install the js packages needed to run the development server and create production builds.
 
+### How to video
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe src="https://www.youtube.com/embed/xr5htuXU914?list=PLjEWC37YdOvuqtra-Ayen42ekMLuEELEi" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
 ### Install node modules
 
 Run the following command from the root of your source files to install the node modules listed in packages.json
@@ -264,7 +271,7 @@ Run the following command from the root of your source files to install the bowe
     bower install
 
 <div class="alert alert-info" role="alert">
-  <strong>Note</strong> - You will need [git installed](#install-git) for bower to work <a href="https://git-scm.com/">Git website</a>
+  <strong>Note</strong> - You will need [git installed](#install-git) for bower to work.
 </div>
 
 
@@ -278,9 +285,345 @@ To do this you just need to start a local development server, from the root of t
 
 This should automatically open up a browser window with the template running.
 
-## Seeing your changes
+## Modifying the code
 
 Once the development server is up and running any changes you make to the HTML & JS & SASS files will trigger your browser window to auto refresh with your changed code.
+
+You can read about how the templates modules are structured [here](#folder-and-file-structure)
+
+Take a look at all the example codes included with the template you can find them in the <code>app/examples/</code> folder.
+
+All the code for the triangular module is contained inside the <code>app/triangular/</code> folder.  It is best to not modify this code as this code will be updated over time.
+
+If you need to be able to change anything inside triangular and can not do so programatically from inside your app.  Please create an issue in our GitHub repo.
+
+# Customizing triangular
+
+## General
+
+### Changing the logo
+
+The super easy way to change the template logo is to replace this file.
+
+    src/assets/images/logo.png
+
+With your own logo.  This will replace the logo used througout the theme (Logo above sidebar, loading animations, etc)
+
+<div class="alert alert-info" role="alert">
+    Note - Use the same image size as the template for the best results.
+</div>
+
+If you want to change the image filename used for the template logo edit the following line in <code>config.triangular.settings.js</code>
+
+```javascript
+triSettingsProvider.setLogo('assets/images/logo.png');
+```
+
+### Changing the app name
+
+To change the name that is shown in the logo bar at the top of the sidemenu & loading animation just edit the following line in <code>config.triangular.settings.js</code>
+
+```javascript
+triSettingsProvider.setName('triangular');
+```
+
+### Changing the browser title
+
+Triangular will create the title for each page using site title & the breadcrumbs on the page all separated by a separator character.
+
+Triangular creates the following title
+
+    site title + separator + breadcrumb + separator + breadcrumb
+
+So for example if you have your site title set to <code>My App</code> and your separator set to <code>|</code> and you were in Elements -> Buttons page your title would be.
+
+    My App | Elements | Buttons
+
+To set the title and the separator edit the following code on <code>config.triangular.settings.js</code>
+
+```javascript
+triRouteProvider.setTitle('Triangular');
+triRouteProvider.setSeparator('|');
+```
+
+## Toolbar
+
+### Where is the top toolbar code
+
+You can find the code for the toolbar in the following folder.
+
+    app/layouts/toolbar
+
+You are free to modify this code to suit your needs.
+
+Inside the folder you will find the following files.
+
+| Folder / File         | Contents                                          |
+|:----------------------|:--------------------------------------------------|
+| toolbar.controller.js | Toolbar Controller for the toolbar.tmpl.html page |
+| toolbar.tmpl.html     | Toolbar HTML                                      |
+| toolbar.tmpl.scss     | Toolbar SCSS for CSS styling                      |
+
+### Overiding the toolbar files
+
+If you want triangular to use a different HTML file or controller to the ones in <code>app/layouts/toolbar</code> you can override them in the <code>config.triangular.layout.js</code> file.
+
+You can change both the html file and the controller used in the toolbar by changing the following code.
+
+```javascript
+// top toolbar HTML and controller
+triLayoutProvider.setDefaultOption('toolbarTemplateUrl', 'app/layouts/toolbar/toolbar.tmpl.html');
+triLayoutProvider.setDefaultOption('toolbarController', 'ToolbarController');
+```
+
+### Toolbar Settings
+
+The toolbar has a few built in settings that you can change by editing the <code>config.triangular.layout.js</code> file.
+
+- toolbarSize: can be set to *default | md-medium-tall | md-tall*
+- toolbarShrink: can be set to *true | false*
+- toolbarClass: can be set to any class name you need
+
+You can play around with these settings on the [Layout Composer page](http://triangular.oxygenna.com/#/layouts/composer) of the demo.
+
+
+## Left Side Menu
+
+### Customizing the side menu
+
+Triangular comes with both a service and a provider for setting the items in the sidemenu this allows you to set menus during the config stage or at runtime.
+
+- **triMenuProvider** - Allows you to set your menu items at the config stage of angularjs.
+- **triMenu** - This service allows you to change your sidemenu at runtime in controllers.
+
+### Adding a menu to the sidebar
+
+To add a menu to the sidebar you just need to create a module config and inject the triMenuProvider.
+
+For example create a file like this.
+
+**myapp.config.js**
+```javascript
+(function() {
+    'use strict';
+
+    angular
+        .module('app')
+        .config(routeConfig);
+
+    /* @ngInject */
+    function routeConfig($stateProvider, $urlRouterProvider) {
+
+        // first create a state that your menu will point to .
+        $stateProvider
+        .state('triangular.admin-default.my-page', {
+            url: '/my-page',
+            templateUrl: 'app/my-page.tmpl.html'
+        });
+
+        // next add the menu item that points to the above state.
+        triMenuProvider.addMenu({
+            name: 'Parent Menu',
+            icon: 'zmdi zmdi-calendar-check',
+            type: 'dropdown',
+            priority: 1,
+            children: [{
+                name: 'My Page',
+                type: 'link',
+                state: 'triangular.admin-default.my-page'
+            }]
+        });
+    }
+})();
+```
+
+The code above will make state using UI Router and then add a menu item that will point to that states page.
+
+### Modifying a menu at runtime
+
+In order to modify a menu at runtime you can also inject the triMenu service.
+
+Take the following controller example.
+
+```javascript
+(function() {
+    'use strict';
+
+    angular
+        .module('app')
+        .controller('MenuController', MenuController);
+
+    /* @ngInject */
+    function MenuController(triMenu) {
+        var vm = this;
+
+        ////////////////
+
+        function toggleExtraMenu(showMenu) {
+            // add a menu to the sidebar
+            triMenu.addMenu({
+                name: 'MENU.MENU.DYNAMIC-MENU',
+                icon: 'zmdi zmdi-flower-alt',
+                type: 'link',
+                priority: 0.0,
+                state: 'triangular.admin-default.menu-dynamic-dummy-page'
+            });
+
+            // remove a menu from the sidebar
+            triMenu.removeMenu('triangular.admin-default.menu-dynamic-dummy-page');
+        }
+    }
+})();
+```
+
+The above code will add and remove a menu item from the main menu.
+
+### Side Menu Layout Settings
+
+The side menu has a few built in settings that you can change by editing the <code>config.triangular.layout.js</code> file.
+
+- sideMenuSize: can be set to *off | hidden | icon | full*
+
+You can play around with these settings on the [Layout Composer page](http://triangular.oxygenna.com/#/layouts/composer) of the demo.
+
+### Where is the left sidenav code
+
+You can find the code for the left sidenav in the following folder.
+
+    app/layouts/leftsidenav
+
+You are free to modify this code to suit your needs.
+
+Inside the folder you will find the following files.
+
+| Folder / File         | Contents                                          |
+|:----------------------|:--------------------------------------------------|
+| leftsidenav.controller.js | Controller for the leftsidenav.tmpl.html page |
+| leftsidenav.tmpl.html     | HTML                                      |
+
+
+### Overiding the left side menu files
+
+If you want triangular to use a different HTML file or controller to the ones in <code>app/layouts/leftsidenav</code> you can override them in the <code>config.triangular.layout.js</code> file.
+
+You can change both the html file and the controller used in the toolbar by changing the following code.
+
+```javascript
+// left sidemenu HTML and controller
+triLayoutProvider.setDefaultOption('sidebarLeftTemplateUrl', 'app/layouts/leftsidenav/leftsidenav.tmpl.html');
+triLayoutProvider.setDefaultOption('sidebarLeftController', 'LeftSidenavController');
+```
+
+## Right Side Menu
+
+### Where is the right sidenav code
+
+You can find the code for the right sidenav in the following folder.
+
+    app/layouts/rightsidenav
+
+You are free to modify this code to suit your needs.
+
+Inside the folder you will find the following files.
+
+| Folder / File         | Contents                                          |
+|:----------------------|:--------------------------------------------------|
+| rightsidenav.controller.js | Controller for the rightsidenav.tmpl.html page |
+| rightsidenav.tmpl.html     | HTML                                      |
+
+### Overiding the right side menu files
+
+If you want triangular to use a different HTML file or controller to the ones in <code>app/layouts/rightsidenav</code> you can override them in the <code>config.triangular.layout.js</code> file.
+
+You can change both the html file and the controller used in the toolbar by changing the following code.
+
+```javascript
+// right sidemenu HTML and controller
+triLayoutProvider.setDefaultOption('sidebarRightTemplateUrl', 'app/layouts/rightsidenav/rightsidenav.tmpl.html');
+triLayoutProvider.setDefaultOption('sidebarRightController', 'RightSidenavController');
+```
+
+## Footer
+
+### Changing the app version
+
+To change the version number that is shown in the footer just edit the following line in config.triangular.settings.js
+
+```javascript
+triSettingsProvider.setVersion('2.0');
+```
+
+### Changing the copyright
+
+To change the copyright that is shown in the footer just edit the following line in config.triangular.settings.js
+
+```javascript
+triSettingsProvider.setCopyright('&copy;' + now.getFullYear() + ' oxygenna.com');
+```
+
+### Changing the app name
+
+To change the name that is shown in the footer just edit the following line in config.triangular.settings.js
+
+```javascript
+triSettingsProvider.setName('triangular');
+```
+
+### Where is the footer code
+
+You can find the code for the footer in the following folder.
+
+    app/layouts/footer
+
+You are free to modify this code to suit your needs.
+
+Inside the folder you will find the following files.
+
+| Folder / File         | Contents                                          |
+|:----------------------|:--------------------------------------------------|
+| footer.controller.js | Controller for the footer.tmpl.html page |
+| footer.tmpl.html     | HTML                                      |
+
+### Overiding the footer files
+
+If you want triangular to use a different HTML file or controller to the ones in <code>app/layouts/footer</code> you can override them in the <code>config.triangular.layout.js</code> file.
+
+You can change both the html file and the controller used in the toolbar by changing the following code.
+
+```javascript
+// footer HTML
+triLayoutProvider.setDefaultOption('footerTemplateUrl', 'app/layouts/footer/footer.tmpl.html');
+```
+
+## Loader
+
+### Where is the loader code
+
+You can find the code for the loader in the following folder.
+
+    app/layouts/loader
+
+You are free to modify this code to suit your needs.
+
+Inside the folder you will find the following files.
+
+| Folder / File         | Contents                                          |
+|:----------------------|:--------------------------------------------------|
+| loader.controller.js | Controller for the loader.tmpl.html page |
+| loader.scss     | SCSS files for CSS                                      |
+| loader.tmpl.html     | HTML                                      |
+
+### Overiding the loader files
+
+If you want triangular to use a different HTML file or controller to the ones in <code>app/layouts/loader</code> you can override them in the <code>config.triangular.layout.js</code> file.
+
+You can change both the html file and the controller used in the toolbar by changing the following code.
+
+```javascript
+// loader screen HTML & controller
+triLayoutProvider.setDefaultOption('loaderTemplateUrl', 'app/layouts/loader/loader.tmpl.html');
+triLayoutProvider.setDefaultOption('loaderController', 'LoaderController');
+```
 
 # Deploying
 
@@ -322,6 +665,1214 @@ Just run the command
     gulp serve:dist
 
 The local server that runs will now be running a built version of your site as if you ran <code>gulp build</code>
+
+# Updating
+
+## Updating triangular module
+
+As updates are released to triangular you should follow these steps to update your app when a new version of triangular is released.
+
+1. [Download the new version of triangular](download.html).
+2. Compare the bower.json file in your app with the new version (check to see if angular & angular-material versions have changed)
+3. If any versions have changed update your bower.json file to match
+4. Copy the triangular folder from the new version into your app folder
+5. Run your dev server and test your app
+
+## Updating triangular bower
+
+If you are using the bower version of triangular then updating should be super easy.  Just change the version number in your <code>bower.json</code> file and then run <code>bower install</code>
+
+# Adding triangular to existing app
+
+## Installing triangular via bower
+
+We had lots of requests for this from people who have existing codebases and want to add triangular to their project and also keep it up to date.
+
+The process is quite simple, run the following command in your project folder
+
+```bash
+bower install https://github.com/oxygenna/triangular-bower.git --save-dev
+```
+
+or if you have [SSH Certificates](https://help.github.com/articles/generating-ssh-keys/) set up on GitHub
+
+```bash
+bower install git@github.com:oxygenna/triangular-bower.git --save-dev
+```
+
+<div class="alert alert-danger" role="alert">
+    <i class="fa fa-warning"></i> Note - You will need to have [requested access to our GitHub repos](http://triangular.oxygenna.com/#/github) to do this
+</div>
+
+This will install triangular as a bower package and also all of it's dependencies.
+
+We have created an [example app](#bower-seed-app) that is included in the main download zip that demonstrates how triangular can work using bower.
+
+## Adding triangular to your project
+
+You will have to do 2 things to get triangular runnning in your existing project
+
+1. Load the triangular CSS and the extra packages CSS
+2. Load the triangular Javascript and the extra packages Javascript
+
+The code for these two steps are provided below.
+
+We have created an [example app](#bower-seed-app) that is included in the main download zip that shows contains all the code below.
+
+## Loading the CSS
+
+Add the following inside your app <code>&lt;head&gt;</code> tag
+
+```HTML
+<!-- load external bower css files -->
+<link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
+<link rel="stylesheet" href="bower_components/angular-dragula/dist/dragula.min.css" />
+<link rel="stylesheet" href="bower_components/angular-material-data-table/dist/md-data-table.min.css" />
+<link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+<link rel="stylesheet" href="bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" />
+<link rel="stylesheet" href="bower_components/textAngular/src/textAngular.css" />
+<link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.css" />
+<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css" />
+
+<!-- load triangular css -->
+<link rel="stylesheet" href="bower_components/triangular/triangular.css" />
+```
+
+## Loading the Javascript
+
+Add the following lines just above your <code>&lt;/body&gt;</code> tag.
+
+```HTML
+<!-- load external bower js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/Chart.js/Chart.js"></script>
+<script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-digest-hud/digest-hud.js"></script>
+<script src="bower_components/angular-dragula/dist/angular-dragula.js"></script>
+<script src="bower_components/angular-google-chart/ng-google-chart.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+<script src="bower_components/highlightjs/highlight.pack.js"></script>
+<script src="bower_components/angular-highlightjs/build/angular-highlightjs.js"></script>
+<script src="bower_components/angular-linkify/angular-linkify.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-material-data-table/dist/md-data-table.min.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/angular-moment/angular-moment.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-translate/angular-translate.js"></script>
+<script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+<script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+<script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+<script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
+<script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/countUp.js/countUp.js"></script>
+<script src="bower_components/rangy/rangy-core.js"></script>
+<script src="bower_components/rangy/rangy-classapplier.js"></script>
+<script src="bower_components/rangy/rangy-highlighter.js"></script>
+<script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
+<script src="bower_components/rangy/rangy-serializer.js"></script>
+<script src="bower_components/rangy/rangy-textrange.js"></script>
+<script src="bower_components/textAngular/src/textAngular.js"></script>
+<script src="bower_components/textAngular/src/textAngular-sanitize.js"></script>
+<script src="bower_components/textAngular/src/textAngularSetup.js"></script>
+
+<!-- load triangular js -->
+<script src="bower_components/triangular/triangular.js"></script>
+```
+
+## Bower Seed App
+
+You can find an example of how the bower version of triangular can be set up in the <code>extras/triangular-seed/</code> folder of the main download zip file.
+
+
+
+# Modules Reference
+
+## Modules loaded by triangular
+
+The very first lines of javascript that run in app.module.js create the triangular app and tell angular which modules it will need to load.
+
+    (function() {
+      'use strict';
+
+      angular
+          .module('app', [
+              'triangular',
+              'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngMaterial',
+              'ui.router', 'pascalprecht.translate', 'LocalStorageModule', 'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'angularMoment', 'textAngular', 'uiGmapgoogle-maps', 'hljs', 'md.data.table',
+              // 'seed-module'
+              // uncomment above to activate the example seed module
+              'app.examples'
+          ])
+    })();
+
+## Angular Modules
+
+Triangular loads the following angular modules
+
+- **ngAnimate** - Provides support for CSS-based animations.
+- **ngCookies** - Provides a convenient wrapper for reading and writing browser cookies.
+- **ngSanitize** - Provides functionality to sanitize HTML.
+- **ngMessages** - Provides enhanced support for displaying messages within templates.
+- **ngMaterial** - The [Angular Material project](https://material.angularjs.org/) is an implementation of Material Design in Angular.js
+
+## 3rd Party Modules
+
+Triangular loads the following 3rd party angular modules
+
+- **ui.router** - The de-facto solution to flexible routing with nested views in AngularJS [Site](http://angular-ui.github.io/ui-router/site/)
+- **pascalprecht.translate** - i18n in your Angular apps, made easy [Site](https://angular-translate.github.io/)
+- **LocalStorageModule** - Stores selected language in local storage
+- **googlechart** - Google Chart Tools AngularJS Directive Module [Site](http://angular-google-chart.github.io/angular-google-chart)
+- **chart.js** - Reactive, responsive, beautiful charts for AngularJS using Chart.js [Site](http://jtblin.github.io/angular-chart.js)
+- **linkify** - Angular filter, directive, and service to linkify text. [Site](https://github.com/scottcorgan/angular-linkify)
+- **ui.calendar** - A complete AngularJS directive for the Arshaw FullCalendar. [Site](http://angular-ui.github.io/ui-calendar/)
+- **angularMoment** - Moment.JS directives for Angular.JS (timeago and more). [Site](https://github.com/urish/angular-moment)
+- **textAngular** - A radically powerful Text-Editor/Wysiwyg editor for Angular.js! [Site](https://github.com/fraywing/textAngular)
+- **uiGmapgoogle-maps** - AngularJS directives for the Google Maps Javascript API. [Site](https://github.com/angular-ui/angular-google-maps)
+- **hljs** - AngularJS directive for syntax highlighting with highlight.js. [Site](https://github.com/pc035860/angular-highlightjs)
+
+## App Modules
+
+- **triangular** - The triangular core module located in the triangular/ folder
+- **app.examples** - All the example modules that you see in the demo site
+
+# Module structure
+
+Each module in {{theme.name}} uses John Papa's recommended structure and naming conventions.
+
+To find out how this structure works we will describe one of the more simple modules below, the introduction module.
+
+This module justs adds one menu item and one page to the site.
+
+| Folder / File              | Contents                                                |
+|:---------------------------|:--------------------------------------------------------|
+| i18n/                      | Translation json files                                  |
+| introduction.config.js     | Sets up the modules routes and adds menus to triangular |
+| introduction.controller.js | Controller for the introduction.tmpl.html page          |
+| introduction.module.js     | Module js file                                          |
+| introduction.tmpl.html     | Introduction page HTML                                  |
+| introduction.tmpl.scss     | Introduction page SCSS for CSS styling                  |
+
+# Removing a module
+
+Removing a module is super easy just edit the dependencies loaded in app/examples/examples.module.js
+
+    (function() {
+        'use strict';
+
+        angular
+            .module('app.examples', [
+                'app.examples.authentication',
+                'app.examples.calendar',
+                'app.examples.charts',
+                'app.examples.dashboards',
+                'app.examples.elements',
+                'app.examples.email',
+                'app.examples.extras',
+                'app.examples.forms',
+                'app.examples.github',
+                'app.examples.introduction',
+                'app.examples.layouts',
+                'app.examples.maps',
+                'app.examples.menulevels',
+                'app.examples.todo',
+                'app.examples.ui'
+            ]);
+    })();
+
+
+For example if you wanted to remove the authentication pages (login, forgot password, etc) you would want to remove the triangular authentication package.
+
+So you would remove this nine
+
+    'app.examples.authentication',
+
+This will stop the example authentication module in the authentication folder from being loaded and remove the menu and pages.
+
+
+# Creating a module
+
+In order to make creating a module for your work as easy as possible we have created a simple seed module to get started.
+
+You can find the code in <code>app/seed-module</code>
+
+To create your own module just make a copy of this folder and rename it to your new module name.
+
+After that rename the module to your new module name and then add it to the dependencies in app.module.js
+
+
+# Colors
+
+Angular Material already comes with a system for handling themes and palettes.
+
+You can [read about them here ](https://material.angularjs.org/HEAD/#/Theming/01_introduction)
+
+With triangular we created 2 extra providers for handling themes and skins.
+
+| Provider           | Description                                                                                                                                                                                                                                       |
+|:-------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| triThemingProvider | Copys exactly the functionality provided by the [mdThemingProvider](https://material.angularjs.org/HEAD/#/Theming/03_configuring_a_theme) but allows us to dynamically load themes which saves on the amount of extra CSS created by the template |
+| triSkinsProvider   | Allows you to create skins for triangular and assign themes to various areas of the template (toolbar, logo, content, sidebar)                                                                                                                    |
+
+# Skins
+
+### Set the default skin
+
+{{theme.name}} comes with many beautiful themes.
+
+You can [view and try them all here](http://triangular.oxygenna.com/#/ui/skins).
+
+To change the default skin is super easy.
+
+Just edit config.triangular.themes.js and change this line to a skin you would like to load.
+
+    defaultSkin: 'cyan-cloud'
+
+Change this to any of the provided skin names
+
+- cyan-cloud
+- red-dwarf
+- plumb-purple
+- dark-knight
+- battleship-grey
+- zesty-orange
+- indigo-island
+- kermit-green
+
+For example to change to the Plumb Purple theme you would change to.
+
+    defaultSkin: 'plumb-purple'
+
+### Create your own template skin
+
+To change the colors that are used in triangular edit <code>config.triangular.themes.js</code>
+
+[You can see on the skins page](http://triangular.oxygenna.com/#/ui/skins) how the template can be colored.
+
+There are 4 areas of the template that you can set "themes" for.
+
+- Sidebar - the main left menu sidebar.
+- Toolbar - the top toolbar of the page.
+- Logo - the logo at the top of the Sidebar (top left of the page).
+- Content - the content area where your pages are shown.
+
+## Themes
+
+### Create some themes
+
+First of all you will need to create some themes to use to color the template areas.
+
+You can do this using the <code>triThemingProvider</code> to assign palettes.
+
+Material Angular comes with several material design palettes built in.  You can view the [palettes available here](http://triangular.oxygenna.com/#/ui/colors).
+
+    triThemingProvider.theme('cyan')
+    .primaryPalette('cyan')
+    .accentPalette('amber')
+    .warnPalette('deep-orange');
+
+The line above creates a theme called "cyan" which sets the primary palette to cyan and the accent and warn palettes to amber and deep-orange.
+
+Next we can make a 2nd theme to go with the cyan theme.
+
+    triThemingProvider.theme('white-cyan')
+    .primaryPalette('white')
+    .accentPalette('cyan', {
+      'default': '500'
+    })
+    .warnPalette('deep-orange');
+
+This theme has white as its primary palette and cyan as its accent palette.
+
+### Create a skin
+
+Now that we have some themes to play with we can assign them to the areas of the template.
+
+We can do this using the <code>triSkinsProvider</code>.
+
+    triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
+    .sidebarTheme('cyan')
+    .toolbarTheme('white-cyan')
+    .logoTheme('cyan')
+    .contentTheme('cyan');
+
+![Cyan Skin](assets/images/customisation/skin-preview.png)
+
+So above we have created a theme called Cyan Cloud that uses the two themes we created in the previous steps.
+
+The sidebar and logo are using cyan and the toolbar and content areas are using white-cyan
+
+You will find a config block that handles how the default themes are used for the various themable elements used in the template.
+
+    // set the default themes for each of the themeable elements
+    triThemeProvider.setThemeableElements({
+        mainTheme: 'default',
+        logoTheme: 'default',
+        toolbarTheme: 'default',
+        sidebarTheme: 'default'
+    });
+
+As you can see all the themable elements are set to use the default theme.  If you want to change this just edit the property with the element name you want to change and modify it to use a valid theme name.
+
+For example to change the sidebar to use a theme called "Green" you would do the following.
+
+    // set the default themes for each of the themeable elements
+    triThemeProvider.setThemeableElements({
+        mainTheme: 'default',
+        logoTheme: 'default',
+        toolbarTheme: 'Green',
+        sidebarTheme: 'default'
+    });
+
+From now the template will use the Green theme to color the sidebar.
+
+You can find more information about the themes available on the [themes page of the demo site](http://triangular.oxygenna.com/#/ui/themes).
+
+Or to create your own themes read the next section.
+
+### Disable demo skin selection
+
+By default the template allows users to select a skin that is then stored in a cookie.
+
+If you want to disable this just edit config.triangular.themes.js and remove the following line.
+
+    triSkinsProvider.useSkinCookie(true);
+
+### Creating your own palettes
+
+If you don't want to use the palettes provided by material design, you can also create your own.  Just add a config function that injects the <code>$mdThemeingProvide</code> and define the colors you want to use.
+
+    (function() {
+        'use strict';
+
+        angular
+            .module('app')
+            .config(themesConfig);
+
+        /* @ngInject */
+        function themesConfig ($mdThemingProvider) {
+            $mdThemingProvider.definePalette('amazingPaletteName', {
+                '50': 'ffebee',
+                '100': 'ffcdd2',
+                '200': 'ef9a9a',
+                '300': 'e57373',
+                '400': 'ef5350',
+                '500': 'f44336',
+                '600': 'e53935',
+                '700': 'd32f2f',
+                '800': 'c62828',
+                '900': 'b71c1c',
+                'A100': 'ff8a80',
+                'A200': 'ff5252',
+                'A400': 'ff1744',
+                'A700': 'd50000',
+                'contrastDefaultColor': 'light',    // whether, by default, text (contrast)
+                                                    // on this palette should be dark or light
+                'contrastDarkColors': ['50', '100', //hues which contrast should be 'dark' by default
+                 '200', '300', '400', 'A100'],
+                'contrastLightColors': undefined    // could also specify this if default was 'dark'
+            });
+            $mdThemingProvider.theme('default')
+            .primaryPalette('amazingPaletteName');
+        }
+    });
+
+
+# Typography
+
+## Previewing available fonts
+
+{{theme.name}} comes with some pre defined fonts that you can try out.
+
+Goto the demo site to [take a look](http://triangular.oxygenna.com/#/ui/typography).
+
+## Changing the font
+
+Changing the font that is used by triangular is very easy.
+
+First of all choose a font from [Google Fonts](http://www.google.com/fonts) (we reccommend using a font with 300,400,500 and 700 weights available).
+
+Once you have a font you would like to use edit <code>index.html</code> and edit the contents of the head tag.
+
+You will see a section of code like this.
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+
+Google Fonts wil tell you the correct code to replace this with when you choose to use a font from the [Google Fonts Site](http://www.google.com/fonts).
+
+Once you have replaced this link tag with the one suggested by Google Fonts, edit the <code>/app/src/app.scss</code> file and change the following line to use your new font family.
+
+    button, select, html, textarea, input {
+      font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+
+# CSS
+
+The CSS for {{theme.name}} is generated [using Sass ](http://sass-lang.com/).
+
+You can find the Sass code in the following places
+
+| Folder / File                   | Contents                                              |
+|:--------------------------------|:------------------------------------------------------|
+| src/app.scss                    | The main app sass file                                |
+| src/triangular/_triangular.scss | Contains all the css needed for the triangular module |
+
+<div class="alert alert-info" role="alert">
+    **Note** - The gulp build will automatically compile any scss files added to the src folder or subfolders.  The resulting CSS will be minified and added to the app.css file.
+</div>
+
+Also each module imports its own scss files.
+
+For example the elements module has its own scss file here.
+
+    app/examples/elements/elements.module.scss
+
+## Flexible Box Model
+
+{{theme.name}} & Angular Material use the flexible box model to layout elements on the page.
+
+You can read all about how the flex box model is implemented in the layout section of the [Angular Material Docs](https://material.angularjs.org).
+
+## Helper Classes
+
+We have provided some helper CSS classes to help easily create pages.
+
+## Page helpers
+
+| CSS Class                        | Description                                          |
+|:---------------------------------|:-----------------------------------------------------|
+| <code>full-height</code>         | Makes a container use the full height of its parent. |
+| <code>full-width</code>          | Makes a container use the full width of its parent.  |
+| <code>padded-content-page</code> | Adds default padding to a page                       |
+
+## Margin helpers
+
+| CSS Class                                           | Description                                                                        |
+|:----------------------------------------------------|:-----------------------------------------------------------------------------------|
+| <code>margin-normal</code>                          | Adds the default 16px margin to all sides.                                         |
+| <code>margin-(0-200 in steps of 10)</code>          | Adds a margin all around the element, in steps of 10. e.g. margin-10               |
+| <code>margin-(top/bottom/left/right)-(0-200)</code> | Adds a margin to a specific side of an element, in steps of 10. e.g. margin-top-50 |
+
+## Padding helpers
+
+| CSS Class                                            | Description                                                                        |
+|:-----------------------------------------------------|:-----------------------------------------------------------------------------------|
+| <code>padding-normal</code>                          | Adds the default 16px padding to all sides.                                        |
+| <code>padding-(0-200)</code>                         | Adds padding all around the element, in steps of 10. e.g. padding-100              |
+| <code>padding-(top/bottom/left/right)-(0-200)</code> | Adds padding to a specific side of an element, in steps of 10. e.g. padding-top-70 |
+
+## Display helpers
+
+| CSS Class                    | Description                                      |
+|:-----------------------------|:-------------------------------------------------|
+| <code>opacity-(0-100)</code> | Sets the opacity of the element. e.g. opacity-50 |
+| <code>make-round</code>      | Adds 50% border radius                           |
+| <code>overlay-(0-100)</code> | Adds dark overlay to container                   |
+
+
+## CSS autoprefixer
+
+The gulp automatically adds browser prefixes to your CSS using [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer).
+
+To configure this just edit
+
+    app/gulp/styles.js
+
+You can select which browsers you want to have compatibility with on this line.
+
+    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']}))
+
+By default triangular is compatible with the last 2 versions of evergreen browsers as well as Firefox ESR and Opera 12.1
+
+# Directives
+
+## paletteBackground
+
+This directive sets the background and contrast text color of an element to a [palette hue](http://triangular.oxygenna.com/#/ui/colors).
+
+![Color Hue](assets/images/triangular/color-hue.png)
+
+For example to color a div using the blue 500 hue you would just use the following HTML
+
+    <div palette-background="blue:500">
+        Look ma the divs blue 500!
+    </div>
+
+## themeBackground
+
+This directive sets the background and contrast text color of an element to a [theme hue](http://triangular.oxygenna.com/#/ui/colors).
+
+For example to color a div using the cyan themes accent hue-1 color you would just use the following HTML
+
+    <div md-theme="cyan" theme-background="accent:hue-1">
+        Look ma the divs cyan accent hue-1!
+    </div>
+
+## countupto
+
+This directive is used in the analytics dashboard widgets to trigger a counting animation.
+
+For example to animate a counter from 0 to 101 with no decimals you would use the following.
+
+    <p countupto="101" decimals="0"></p>
+
+Available options can be sent to the directive using an options attribute.
+
+Full list of options are [listed here](http://inorganik.github.io/countUp.js/).
+
+# Examples
+
+## Elements
+
+You can see all the elements available in triangular in the demo site.
+
+Each page not only has a demo example but also the example HTML and JS needed.
+
+- [Buttons](http://triangular.oxygenna.com/#/elements/buttons)
+- [Icons](http://triangular.oxygenna.com/#/elements/icons)
+- [Checkboxes](http://triangular.oxygenna.com/#/elements/checkboxes)
+- [Radios](http://triangular.oxygenna.com/#/elements/radios)
+- [Toolbars](http://triangular.oxygenna.com/#/elements/toolbars)
+- [Tooltips](http://triangular.oxygenna.com/#/elements/tooltips)
+- [Whiteframes](http://triangular.oxygenna.com/#/elements/whiteframes)
+- [Sliders](http://triangular.oxygenna.com/#/elements/sliders)
+- [Toasts](http://triangular.oxygenna.com/#/elements/toasts)
+- [Progress](http://triangular.oxygenna.com/#/elements/progress)
+- [Switches](http://triangular.oxygenna.com/#/elements/switches)
+- [Dialogs](http://triangular.oxygenna.com/#/elements/dialogs)
+- [Tabs](http://triangular.oxygenna.com/#/elements/tabs)
+- [Sidebars](http://triangular.oxygenna.com/#/elements/sidebars)
+- [Grids](http://triangular.oxygenna.com/#/elements/grids)
+- [Selects](http://triangular.oxygenna.com/#/elements/selects)
+- [Tables](http://triangular.oxygenna.com/#/elements/tables)
+- [Lists](http://triangular.oxygenna.com/#/elements/lists)
+- [Chips](http://triangular.oxygenna.com/#/elements/chips)
+- [Cards](http://triangular.oxygenna.com/#/elements/cards)
+
+## Dashboard Widgets
+
+- [Widgets](http://triangular.oxygenna.com/#/dashboards/widgets)
+
+## Charts
+
+You can see all the charts available in triangular in the demo site.
+
+Each page not only has a demo example but also the example HTML and JS needed.
+
+- [Google Bar](http://triangular.oxygenna.com/#/charts/google/bar)
+- [Google Scatter](http://triangular.oxygenna.com/#/charts/google/scatter)
+- [Google Line](http://triangular.oxygenna.com/#/charts/google/line)
+- [Chartjs Bar](http://triangular.oxygenna.com/#/charts/chartjs/bar)
+- [Chartjs Pie](http://triangular.oxygenna.com/#/charts/chartjs/pie)
+- [Chartjs Ticker](http://triangular.oxygenna.com/#/charts/chartjs/ticker)
+- [Chartjs Line](http://triangular.oxygenna.com/#/charts/chartjs/line)
+
+## Maps
+
+You can see all the maps available in triangular in the demo site.
+
+Each page not only has a demo example but also the example HTML and JS needed.
+
+- [Full Width Map](http://triangular.oxygenna.com/#/maps/fullwidth)
+- [Example Maps](http://triangular.oxygenna.com/#/maps/examples)
+
+## Apps
+
+We have creates some demo apps for you to use as well/
+
+- [Email App](http://triangular.oxygenna.com/#/email/inbox)
+- [Todo App](http://triangular.oxygenna.com/#/todo)
+
+## Material Angular
+
+You can also see demos of the elements available from Material Admin on [its demo site](https://material.angularjs.org).
+
+# Migration
+
+
+## Changes in 2.7.0
+
+Version 2.7.0 introduced a few new changes to the app.
+
+### Optional translations
+
+All translation code has been moved into one module so that users can turn off translations if they want to.
+
+If you want to continue to use translations inside your app after you have updated make sure your app includes the app.translate module in your <code>app.module.js</code> file.
+
+        (function() {
+            'use strict';
+
+            angular
+                .module('app', [
+                    'ui.router', 'permission',
+                    'triangular',
+                    'ngAnimate', 'ngCookies', 'ngSanitize', 'ngMessages', 'ngMaterial',
+                    'googlechart', 'chart.js', 'linkify', 'ui.calendar', 'angularMoment', 'textAngular', 'uiGmapgoogle-maps', 'hljs', 'md.data.table', angularDragula(angular), 'ngFileUpload',
+                    // 'seed-module'
+                    // uncomment above to activate the example seed module
+                    'app.translate',
+                    // only need one language?  if you want to turn off translations
+                    // comment out or remove the 'app.translate', line above
+                    'app.permission',
+                    // dont need permissions?  if you want to turn off permissions
+                    // comment out or remove the 'app.permission', line above
+                    // also remove 'permission' from the first line of dependencies
+                    // https://github.com/Narzerus/angular-permission see here for why
+                    'app.examples'
+                ]);
+        })();
+
+### New simpler ui routes
+
+For all versions < 2.7.0 you used the <code>triangular.admin-default</code> abstract routes to create pages in triangular.
+
+        $stateProvider
+        .state('triangular.admin-default.forms-inputs', {
+            url: '/forms/inputs',
+            templateUrl: 'app/examples/forms/inputs.tmpl.html'
+        })
+
+From 2.7.0 onwards this route has been changed to <code>triangular</code>
+
+        $stateProvider
+        .state('triangular.forms-inputs', {
+            url: '/forms/inputs',
+            templateUrl: 'app/examples/forms/inputs.tmpl.html'
+        );
+
+To update do a find and replace for <code>'triangular.admin-default.</code> to <code>'triangular.</code>
+
+## Changes in 2.0.0
+
+The main changes for version 2.0 were as follows
+
+- Code style changes to match [John Papas style guide](https://github.com/johnpapa/angular-styleguide)
+- Move triangular into it's own module to allow better intergration with new & existing apps
+- Moved from jshint to eslint with eslint-angular plugin
+- Changed the names of triangular routes and simplified creating pages
+- Changed menu provider
+- Added profiler to test speed of your AngularJS code
+
+We realise that these changes will involve some refactoring of existing projects, but as this template is relatively new at the moment we felt this was the best time to refactor.
+
+Moving on this will make the triangular template a lot easier to intergrate with apps and provide a more robust coding standard.
+
+### Code style changes
+
+These changes should not effect your app in any way other than to make the code even more readable and easier to debug.  Please read [John Papas style guide](https://github.com/johnpapa/angular-styleguide) to get an idea of the style.
+
+### Module Folder Changes
+
+Triangular's code has now been moved into it's own module called 'triangular'
+
+<div class="row">
+    <div class="col-md-5">
+        <h4>Old folder structure</h4>
+        <img src="assets/images/triangular/migration-old-folders.png" alt="Old Folder Structure">
+    </div>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-5">
+        <h4>New folder structure</h4>
+        <img src="assets/images/triangular/migration-new-folders.png" alt="Old Folder Structure">
+    </div>
+</div>
+
+### Folder changes
+
+| Old Folder / File | New Folder / File                                       |
+|:------------------|:--------------------------------------------------------|
+| authentication/   | examples/authentication/                                |
+| calendar/         | examples/calendar/                                      |
+| charts/           | examples/charts/                                        |
+| dashboards/       | examples/dashboards/                                    |
+| elements/         | examples/elements/                                      |
+| forms/            | examples/forms/                                         |
+| github/           | examples/github/                                        |
+| introduction/     | examples/introduction/                                  |
+| layouts/          | triangular/layouts/                                     |
+| maps/             | examples/maps/                                          |
+| menulevels/       | examples/menulevels/                                    |
+| seed-module/      | seed-module/                                            |
+| themeing/         | triangular/themes/                                      |
+| todo/             | examples/todo/                                          |
+| ui/               | examples/ui/                                            |
+| app.js            | split into config.*.js files                            |
+| app.scss          | app.scss which imports triangular/_triangular.scss file |
+| assets/           | (no change)                                             |
+| 404.tmpl.html     | (no change)                                             |
+| 500.tmpl.html     | (no change)                                             |
+| favicon.png       | (no change)                                             |
+| index.html        | (no change)                                             |
+
+### Module Config Changes
+
+The main changes that will effect your existing modules will be the changes to the module config.  Mainly the renaming of the UI Router abstract states and the refactoring of the menu provider.
+
+To move modules over to Triangular 2.0 you will need to change 2 things
+
+- Route names
+- Side menu setup
+
+The code is very similar to triangular 1.0 so it should be easy to transition modules over see our [Full Example](#full-example) for more detail
+
+### UI Router name changes
+
+We have renamed some of the routes in triangular as follows
+
+| Old Route             | New Route                          |
+|:----------------------|:-----------------------------------|
+| admin-panel.default   | triangular.admin-default           |
+| admin-panel-no-scroll | triangular.admin-default-no-scroll |
+
+
+### Example Route
+
+Old Route Config
+
+```javascript
+.state('admin-panel.default.maps-demos', {
+    url: '/maps/demos',
+    templateUrl: 'app/maps/maps-demo.tmpl.html',
+});
+```
+New Route Config
+
+```javascript
+.state('triangular.admin-default.maps-demos', {
+    url: '/maps/demos',
+    templateUrl: 'app/examples/maps/maps-demo.tmpl.html'
+});
+```
+
+### Menu Provider
+
+Angular 2.0 uses the a new provider to add menu items to your side menu and you no longer have to create your menus in a module .run function.
+
+Previous setup
+
+```javascript
+.run(function(SideMenu) {
+    SideMenu.addMenu({
+        name: 'MENU.MAPS.MAPS',
+        icon: 'icon-place',
+        type: 'dropdown',
+        priority: 7.1,
+        children: [{
+            name: 'MENU.MAPS.FULLWIDTH',
+            state: 'admin-panel.default.maps-fullwidth',
+            type: 'link',
+        },{
+            name: 'MENU.MAPS.DEMOS',
+            state: 'admin-panel.default.maps-demos',
+            type: 'link',
+        }]
+    });
+});
+```
+
+New Setup (in a module .config not .run)
+
+```javascript
+.config(function(triMenuProvider) {
+    triMenuProvider.addMenu({
+        name: 'MENU.MAPS.MAPS',
+        icon: 'icon-place',
+        type: 'dropdown',
+        priority: 7.1,
+        children: [{
+            name: 'MENU.MAPS.FULLWIDTH',
+            state: 'triangular.admin-default.maps-fullwidth',
+            type: 'link'
+        },{
+            name: 'MENU.MAPS.DEMOS',
+            state: 'triangular.admin-default.maps-demos',
+            type: 'link'
+        }]
+    });
+});
+```
+
+### Full Example
+
+Here is an example of how the routing and menus have changed
+
+Old config
+
+```javascript
+'use strict';
+
+/**
+ * @ngdoc module
+ * @name triAngularMaps
+ * @description
+ *
+ * The triAngularMaps module adds some map example pages
+ */
+angular.module('triAngularMaps', [])
+.config(function ($translatePartialLoaderProvider, $stateProvider, uiGmapGoogleMapApiProvider) {
+    $translatePartialLoaderProvider.addPart('app/maps');
+
+    $stateProvider
+    .state('admin-panel.default.maps-fullwidth', {
+        url: '/maps/fullwidth',
+        templateUrl: 'app/maps/maps-fullwidth.tmpl.html',
+        controller: 'MapController'
+    })
+    .state('admin-panel.default.maps-demos', {
+        url: '/maps/demos',
+        templateUrl: 'app/maps/maps-demo.tmpl.html',
+    });
+
+    uiGmapGoogleMapApiProvider.configure({
+        v: '3.17',
+        libraries: 'weather,geometry,visualization'
+    });
+})
+.run(function(SideMenu) {
+    SideMenu.addMenu({
+        name: 'MENU.MAPS.MAPS',
+        icon: 'icon-place',
+        type: 'dropdown',
+        priority: 7.1,
+        children: [{
+            name: 'MENU.MAPS.FULLWIDTH',
+            state: 'admin-panel.default.maps-fullwidth',
+            type: 'link',
+        },{
+            name: 'MENU.MAPS.DEMOS',
+            state: 'admin-panel.default.maps-demos',
+            type: 'link',
+        }]
+    });
+});
+```
+
+New Config
+
+```javascript
+(function() {
+    'use strict';
+
+    angular
+        .module('app.examples.maps')
+        .config(moduleConfig);
+
+    /* @ngInject */
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, uiGmapGoogleMapApiProvider, triMenuProvider) {
+        $translatePartialLoaderProvider.addPart('app/examples/maps');
+
+        $stateProvider
+        .state('triangular.admin-default.maps-fullwidth', {
+            url: '/maps/fullwidth',
+            templateUrl: 'app/examples/maps/maps-fullwidth.tmpl.html',
+            controller: 'MapController',
+            controllerAs: 'vm'
+        })
+        .state('triangular.admin-default.maps-demos', {
+            url: '/maps/demos',
+            templateUrl: 'app/examples/maps/maps-demo.tmpl.html'
+        });
+
+        uiGmapGoogleMapApiProvider.configure({
+            v: '3.17',
+            libraries: 'weather,geometry,visualization'
+        });
+
+        triMenuProvider.addMenu({
+            name: 'MENU.MAPS.MAPS',
+            icon: 'icon-place',
+            type: 'dropdown',
+            priority: 7.1,
+            children: [{
+                name: 'MENU.MAPS.FULLWIDTH',
+                state: 'triangular.admin-default.maps-fullwidth',
+                type: 'link'
+            },{
+                name: 'MENU.MAPS.DEMOS',
+                state: 'triangular.admin-default.maps-demos',
+                type: 'link'
+            }]
+        });
+    }
+})();
+```
+
+# Translations
+
+{{theme.name}} uses [Angular Translate](https://angular-translate.github.io/) to translate strings in the template.
+
+Angular tranlsate has [great documentation](http://angular-translate.github.io/docs/#/guide) as well as an [API guide](http://angular-translate.github.io/docs/#/api).
+
+## Set your application languages
+
+In order to set the languages that your app supports you just need to edit the translate module config file at <code>app/translate/translate.config.js</code>
+
+At the top of the config file is this code.
+
+```javascript
+var appLanguages = [{
+    name: 'Chinese',
+    key: 'zh'
+},{
+    name: 'English',
+    key: 'en'
+},{
+    name: 'French',
+    key: 'fr'
+},{
+    name: 'Portuguese',
+    key: 'pt'
+}];
+```
+
+This sets out the name and keys of the language that your app will support.
+
+<div class="alert alert-info" role="alert">
+    **Note** - The key you set here will determine the names of the translation files that are loaded.  e.g. <code>key: fr</code> will make the app load <code>app/i18n/fr.json</code>
+</div>
+
+
+## How to translate a page
+
+In order to translate some text in a page just use the translate directive in your HTML.
+
+for example
+
+```html
+<h1 translate>Settings</h1>
+```
+
+Then edit or create a json translation file in your app/i18n folder.
+
+So for example to translate to French we would create a new file called <code>fr.json</code> in the <code>app/i18n</code> folder and add the following json.
+
+```javascript
+{
+    "Settings": "Paramètres",
+}
+```
+
+You will then see that your Settings text is translated into Paramètres.
+
+# How to translate a menu item
+
+Each menu item is filtered with the translate filter.  So just make sure that the name you use for your menu is translated in your i18n json files.
+
+For example in <code>app/examples/charts/charts.config.js</code> you will find the following code.
+
+```javascript
+triMenuProvider.addMenu({
+    name: 'Charts',
+    icon: 'zmdi zmdi-chart',
+    type: 'dropdown',
+    priority: 5.1,
+    ...
+});
+```
+
+So for example to translate to French we should have translation in our <code>i18n/fr.json</code> file that looks like this.
+
+```javascript
+{
+    "Charts": "Graphiques",
+}
+```
+
+Then the menu item will use Graphiques for it's name.
+
+## Auto translating all template strings
+
+We have built in an auto translater into triangular that sends all the strings in your i18n folders to Yandex to be translated.
+
+It then writes translation files in your chosen language.
+
+First of all to use this you will need to [get a Yandex API Key](https://tech.yandex.com/translate/).
+
+Once you have a key edit this file
+
+    app/gulp/translate.js
+
+At the top of the file you will see this code
+
+```javascript
+// ADD YOUR YANDEX API KEY HERE
+// go here for more info
+// https://tech.yandex.com/translate/
+var YANDEX_API_KEY = '';
+```
+
+edit the YANDEX_API_KEY and add your api key
+
+```javascript
+var YANDEX_API_KEY = '1234567894621695846516546951651981';
+```
+
+Once this is done, open up a terminal and cd to your app directory.
+
+From there you can run the gulp task that will translate the template translation files.
+
+You need to specify 2 lanuages e.g.
+
+```bash
+    gulp translate --from en --to fr
+```
+
+The command above will grab all en.json files from all your i18n folders send them to Yandex to be translated into French.
+
+Once this is done the resulting translations will be written to fr.json files in each coresponding i18n folder.
+
+## Using modular translations
+
+Out of the box triangular puts all the translations strings of the app into one file in the <code>app/i18n</code> folder.
+
+But it is also possible to separate all the translations into your angularjs modules.
+
+To do this just create a new folder inside your module with the name i18n and add your translation files into there.
+
+So for example to make the examples/chart module take care of its own translations you would create the following folder <code>app/examples/chart/i18n</code> and then add your translation json files inside there.
+
+After that the last thing to do is tell angular translate to look in that folder when it is looking for translations.  Edit <code>app/translate/translate.config.js</code> and add the following code.
+
+```javascript
+$translatePartialLoaderProvider.addPart('app/examples/chart');
+```
+
+Adding this tells angular translate to also look in your newly created folder.
+
+## How to turn off translations
+
+Out of the box triangular is multi-language, but we realise this might not be for everyone.
+So we have made turning off multi-language is very simple.
+
+Edit the app module file <code>app/app.module.js</code> and comment out or remove this line
+
+```javascript
+'app.translate',
+```
+
+This will stop the app translate module from being loaded and therefore stop all translation functionality.
+
+# Enable angular html5 mode
+This can be achieved with connect-modrewrite
+
+
+- First install connect-modrewrite
+        $ npm install --save-dev connect-modrewrite
+
+- Then edit gulp/server.js
+
+        var modRewrite = require('connect-modrewrite');
+
+        function browserSyncInit(baseDir, files, browser) {
+          browser = browser === undefined ? 'default' : browser;
+
+          browserSync.instance = browserSync.init(files, {
+            startPath: '/index.html',
+            server: {
+              baseDir: baseDir,
+              middleware: [
+                proxyMiddleware,
+                modRewrite([
+                  '!\\.\\w+$ /index.html [L]'
+                ])
+              ]
+            },
+            browser: browser
+          });
+
+        }
+
+# Creating the Server
+We will use the popular [Slim](http://www.slimframework.com/) php framework to set up a simple server. The server will allow cross-origin requests, in order to allow our app to contact it even if they reside on different domains.
+
+- Create a folder named api at the root of your web server directory in your localhost.
+- Download the slim framework from [here](https://github.com/slimphp/Slim/releases) in zip format. At the time of writing this guide, the current framework version is 2.6.2.
+- Extract the downloaded archive and copy the folder named Slim that you will find, inside your api folder that you created in step 1.
+- Create two files inside your api folder: index.php and .htaccess
+- Paste the following in the index.php :
+		<?php
+		require 'Slim/Slim.php';
+
+		 \Slim\Slim::registerAutoloader();
+
+		$app = new \Slim\Slim();
+
+		$app->map('/', function() use($app) {
+			$response = $app->response();
+
+		    $response->header('Access-Control-Allow-Origin', '*');
+		    $response->header('Access-Control-Allow-Methods', 'GET, POST , OPTIONS');
+		    $response->header('Access-Control-Allow-Headers', 'Cache-Control, Pragma, accept, x-requested-with, origin, content-type, x-xsrf-token');
+
+		    $data = array('Harris' => 'programmer', 'Chris' => 'CEO');
+		    echo json_encode($data);
+		})->via('GET', 'POST');
+
+		$app->run();
+
+- Paste the following in the .htaccess file :
+		RewriteEngine On
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteRule ^ index.php [QSA,L]
+
+# Testing the Server
+If you did everything right, you should see the following when you visit localhost/api in your browser :
+
+	{"Harris":"programmer","Chris":"CEO"}
+
+This is hardcoded sample data in json format that the endpoint returns once you visit the above url. In a production environment you will ofcourse want this data to be fetched from a database that your server will connect to.
+
+If you have curl installed, you can also try this:
+
+	curl -i http://127.0.0.1/api/
+
+which will render something like the following :
+
+	HTTP/1.1 200 OK
+	Server: nginx/1.6.3
+	Date: Tue, 07 Jul 2015 11:24:41 GMT
+	Content-Type: text/html
+	Transfer-Encoding: chunked
+	Connection: keep-alive
+	X-Powered-By: PHP/5.5.11
+	Access-Control-Allow-Origin: *
+	Access-Control-Allow-Methods: GET, POST
+	Access-Control-Allow-Headers: accept, origin, content-type
+
+	{"Harris":"programmer","Chris":"CEO"}
+
+# Contacting the Server through Angular
+Having confirmed that our simple test server is up and running, and is allowing CORS, all we have to do is use the angular $http service to contact it. In any controller inject the $http service and do the following:
+
+	var req = {
+        method: 'POST',
+        url: 'http://localhost/api/',
+        headers: {
+           'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        data: { test: 'test' }
+    }
+    $http(req).success(function(res){console.log(res)}).error(function(err){console.log(err)});
+
+If you have your browser console open you will see the response data rendered there once the endpoint responds. Changing the method to GET will make the service fire a GET request instead.
+
+# Further information
+For more information regarding slim, and guides on how to set up multiple routes in your server you can read the readme in the Slim github repository [here](https://github.com/codeguy/Slim).
 
 # Visual Studio
 
