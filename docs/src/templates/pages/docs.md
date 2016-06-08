@@ -44,6 +44,10 @@ Before you get started with the template it is recommended that you learn about 
 - [AngularJS Fundementals in 60min](https://www.youtube.com/watch?v=i9MHigUZKEM)
 - [Official Docs Guide](https://docs.angularjs.org/guide)
 
+### Yeoman Gulp Angular Generator
+
+At the start of this project we used the [Yeoman generator for AngularJS with GulpJS](https://github.com/Swiip/generator-gulp-angular) to generate the gulp tasks and structure of the app.  This is a good place to look if you are looking to do extra build processes with the template.
+
 ### Angular Material
 
 For developers using AngularJS, Angular Material is both a UI Component framework and a reference implementation of Google's Material Design Specification. This project provides a set of reusable, well-tested, and accessible UI components based on Material Design.
@@ -55,12 +59,61 @@ For developers using AngularJS, Angular Material is both a UI Component framewor
 
 Triangulars code follows the [John Pappa style guide for angular](https://github.com/johnpapa/angular-styleguide).  This is an opinionated style guide for syntax, conventions and structuring of angular apps that is now endorsed by the Google angular team.
 
-### Yeoman Gulp Angular Generator
+# Getting Started
 
-At the start of this project we used the [Yeoman generator for AngularJS with GulpJS](https://github.com/Swiip/generator-gulp-angular) to generate the gulp tasks and structure of the app.  This is a good place to look if you are looking to do extra build processes with the template.
+## Prerequisites
 
+Before you get started with triangular you will need to make sure your computer has a few prerequisites installed.
 
-# Downloading the template zip
+Here is a handy install checklist for you to go through.  Instructions on how to install them are below the table.
+
+| Prerequisite                      | Description                                                            |
+|:----------------------------------|:-----------------------------------------------------------------------|
+| [Node.js](https://nodejs.org/en/) | Javascript runtime needed to build the app                             |
+| [Git](https://git-scm.com/)       | Source Control for bower installation & access latest code from GitHub |
+| [Bower](http://bower.io/)         | Package Installer used to grab dependencies needed in the app          |
+| [GulpJs](http://gulpjs.com/)      | Automation system for building the app                                 |
+
+### Install Node.js
+
+We recommend installing the latest version of node.  
+
+You can download the latest of node.js [from here](https://nodejs.org/download/) alternatively there are [guides on how to install using a package manager](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
+
+Once you have installed node you can check that it is working correctly by opening a command prompt / terminal and typing
+
+    npm --version
+
+and see something like this
+
+    $ npm --version
+    4.4.5
+
+### Install Git
+
+You will also need to install the Git source control system on your machine.  Check out [this guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on how to install on Windows, Mac and Linux.
+
+### Install Bower
+
+Bower is a package manager built with nodejs so you will need to have installed nodejs before attempting to install bower.
+
+To install bower just type the following command into your terminal.
+
+    npm -g install bower
+
+This tells node's package manager (npm) to install bower on your system.  The <code>-g</code> tells npm to install this package globally, this means that you can use this command in any folder on your system.
+
+### Install GulpJS
+
+GulpJS automates building and testing your app.  It is also built with nodejs so you will need to have installed nodejs before attempting to install.
+
+To install bower just type the following command into your terminal.
+
+    npm -g install gulp-cli
+
+This tells node's package manager (npm) to install gulp-cli on your system.  The <code>-g</code> tells npm to install this package globally, this means that you can use this command in any folder on your system.
+
+## Downloading
 
 First of all you will need to log in to your themeforest account.
 
@@ -74,7 +127,7 @@ From there locate the {{theme.name}} template click the **download button** and 
   Congratulations.  You now have a shiny new copy of {{theme.name}}
 </div>
 
-# Unzipping the download
+### Unzipping the download
 
 You should now have a file that looks something like this.
 
@@ -82,7 +135,7 @@ You should now have a file that looks something like this.
 
 In order to get at the goodness inside you will need to [unzip this file](https://answers.stanford.edu/solution/how-do-i-zip-and-unzip-files-and-folders-do-i-need-winzip-or-stuffit).
 
-# Zip Contents
+### Zip Contents
 
 Once you have unzipped the {{theme.name}} zip file you will find the following folders have been created.
 
@@ -208,20 +261,10 @@ Follow the instructions below to install node.js on your system.
 
 ## Installing Node.js
 
-We recommend installing the latest version of node.  At the time of writing this was (0.12.6).
-
-You can download the latest of node.js [from here](https://nodejs.org/download/) alternatively there are [guides on how to install using a package manager](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
 
 ## Checking node is installed and working
 
-Once you have node.js installed on your system you should be able to go to your command line and type
 
-    npm --version
-
-and see something like this
-
-    $ npm --version
-    2.11.3
 
 
 ## Getting the build system ready

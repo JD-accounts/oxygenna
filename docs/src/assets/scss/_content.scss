@@ -1,7 +1,27 @@
 .oxy-docs-content {
+  background-color: rgba(0, 0, 0, 0);
   padding: 16px;
 }
 
 .oxy-docs-content h1 {
   display: none;
+}
+
+.oxy-docs-content h2 {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 300;
+  padding-top: 16px;
+}
+
+.oxy-docs-content h3 {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  padding-top: 12px;
+}
+
+.hljs {
+  font-family: 'Source Code Pro';
+  border: 1px solid #e5e5e5;
+  border-radius: .25rem;
 }

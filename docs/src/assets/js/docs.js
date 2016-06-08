@@ -19,5 +19,17 @@
             }
             event.preventDefault();
         })
+
+        // table styles
+        $('table').each(function() {
+          $(this).addClass('table table-bordered table-striped');
+        });
+
+        // code highlight
+        hljs.configure({languages: ['css, javascript', 'html', 'scss']});
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+
     });
 }(jQuery)
