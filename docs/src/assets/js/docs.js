@@ -36,7 +36,6 @@
                 classes = classes.split(' ');
                 for (var i = 0; i < classes.length; i++) {
                     if(classes[i].indexOf('language-') !== -1) {
-                        console.log(classes[i]);
                         $this.addClass(classes[i].replace('language-', ''));
                     }
                 }
