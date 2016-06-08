@@ -86,7 +86,7 @@
                 focusOnOpen: false,
                 locals: {
                     dialogData: {
-                        title: 'Add-EVENT',
+                        title: 'Add Event',
                         confirmButtonText: 'Add'
                     },
                     event: {

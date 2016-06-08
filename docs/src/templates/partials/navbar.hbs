@@ -1,19 +1,21 @@
-<header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
-    <div class="container">
-        <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="index.html" class="navbar-brand">{{theme.name}}</a>
-        </div>
-        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-            {{> nav }}
-            <form class="navbar-form navbar-right">
-                <a href="{{links.item}}&ref=oxygenna" target="_blank" class="btn btn-success"><i class="fa fa-shopping-cart"></i> Purchase</a>
-            </form>
-        </nav>
-    </div>
-</header>
+<nav class="oxy-navbar navbar navbar-fixed-top navbar-dark bg-inverse">
+    <a class="navbar-brand" href="#">
+        <img src="assets/images/logo.png" alt="" />
+    </a>
+    <a class="navbar-brand" href="index.html">
+        {{theme.name}}
+    </a>
+
+    <ul class="nav navbar-nav pull-right">
+        <li class="nav-item">
+            <a class="nav-link" target="_blank" href="{{links.demo}}">Demo</a>
+        </li>
+        {{#each topmenu}}
+        <li class="nav-item{{#compare ../basename "==" slug }} active{{/compare}}">
+            <a class="nav-link" href="{{slug}}.html">
+                {{name}}
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</nav>

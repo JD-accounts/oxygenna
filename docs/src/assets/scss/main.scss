@@ -1,6 +1,17 @@
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+@import "bootstrap/scss/bootstrap.scss";
 @import "fontawesome/scss/font-awesome.scss";
-@import 'homepage';
-@import 'sidebar';
-@import 'footer';
-@import 'docs';
+
+@import "layouts/docs";
+@import "navbar";
+@import "sidebar";
+@import "content";
+@import "homepage";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}

@@ -15,7 +15,7 @@
             controller: 'MapController',
             controllerAs: 'vm',
             data: {
-                permission: {
+                permissions: {
                     only: ['viewMaps']
                 },
                 layout: {
@@ -27,7 +27,7 @@
             url: '/maps/demos',
             templateUrl: 'app/examples/maps/maps-demo.tmpl.html',
             data: {
-                permission: {
+                permissions: {
                     only: ['viewMaps']
                 }
             }

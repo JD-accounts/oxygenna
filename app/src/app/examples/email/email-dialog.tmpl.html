@@ -1,4 +1,4 @@
-<md-dialog class="mobile-fullwidth-dialog" flex>
+<md-dialog class="mobile-fullwidth-dialog">
     <md-toolbar class="toolbar-default" md-theme="{{vm.triSkin.elements.toolbar}}">
         <div class="md-toolbar-tools">
             <h2>
@@ -13,52 +13,53 @@
 
     <md-divider></md-divider>
 
-    <md-dialog-content class="md-dialog-content">
+    <md-dialog-content class="email-dialog md-padding">
         <form name="emailForm" novalidate>
-            <div class="email-dialog-to" layout="row">
-                <md-contact-chips
-                    flex
-                    ng-model="vm.email.to"
-                    md-contacts="vm.queryContacts($query)"
-                    md-contact-name="name"
-                    md-contact-image="image"
-                    md-contact-email="email"
-                    md-require-match
-                    filter-selected="true"
-                    placeholder="{{'To' | triTranslate}}"
-                    secondary-placeholder="{{'To' | triTranslate}}">
-                </md-contact-chips>
+            <div layout="row">
+                <div layout="column" flex>
+                    <md-contact-chips
+                        flex
+                        ng-model="vm.email.to"
+                        md-contacts="vm.queryContacts($query)"
+                        md-contact-name="name"
+                        md-contact-image="image"
+                        md-contact-email="email"
+                        md-require-match
+                        filter-selected="true"
+                        placeholder="{{'To' | triTranslate}}"
+                        secondary-placeholder="{{'To' | triTranslate}}">
+                    </md-contact-chips>
+                    <div class="email-dialog-ccs ng-hide" layout="column" ng-show="vm.showCCS" >
+                        <md-contact-chips
+                            ng-model="vm.email.cc"
+                            md-contacts="vm.queryContacts($query)"
+                            md-contact-name="name"
+                            md-contact-image="image"
+                            md-contact-email="email"
+                            md-require-match
+                            filter-selected="true"
+                            placeholder="{{'CC' | triTranslate}}"
+                            secondary-placeholder="{{'CC' | triTranslate}}">
+                        </md-contact-chips>
+                        <md-contact-chips
+                            ng-model="vm.email.bcc"
+                            md-contacts="vm.queryContacts($query)"
+                            md-contact-name="name"
+                            md-contact-image="image"
+                            md-contact-email="email"
+                            md-require-match
+                            filter-selected="true"
+                            placeholder="{{'BCC' | triTranslate}}"
+                            secondary-placeholder="{{'BCC' | triTranslate}}">
+                        </md-contact-chips>
+                    </div>
+                </div>
                 <md-button class="md-icon-button" ng-click="vm.toggleCCS($event)" aria-label="toggle ccs">
                     <md-icon md-font-icon ng-class="vm.showCCSIcon"></md-icon>
                 </md-button>
             </div>
 
-            <div class="email-dialog-ccs ng-hide" layout="column" ng-show="vm.showCCS" >
-                <md-contact-chips
-                    ng-model="vm.email.cc"
-                    md-contacts="vm.queryContacts($query)"
-                    md-contact-name="name"
-                    md-contact-image="image"
-                    md-contact-email="email"
-                    md-require-match
-                    filter-selected="true"
-                    placeholder="{{'CC' | triTranslate}}"
-                    secondary-placeholder="{{'CC' | triTranslate}}">
-                </md-contact-chips>
-                <md-contact-chips
-                    ng-model="vm.email.bcc"
-                    md-contacts="vm.queryContacts($query)"
-                    md-contact-name="name"
-                    md-contact-image="image"
-                    md-contact-email="email"
-                    md-require-match
-                    filter-selected="true"
-                    placeholder="{{'BCC' | triTranslate}}"
-                    secondary-placeholder="{{'BCC' | triTranslate}}">
-                </md-contact-chips>
-            </div>
-
-            <md-input-container class="md-block">
+            <md-input-container class="email-subject md-block">
                 <label for="subject" translate>Subject</label>
                 <input ng-model="vm.email.subject" name="subject" required>
                 <div ng-messages="emailForm.subject.$error">
@@ -68,9 +69,7 @@
                 </div>
             </md-input-container>
 
-            <md-input-container class="md-block">
-                <text-angular name="emailBody" ng-model="vm.email.content" ta-target-toolbars="editor-toolbar"></text-angular>
-            </md-input-container>
+            <text-angular class="email-content" name="emailBody" ng-model="vm.email.content" ta-target-toolbars="editor-toolbar"></text-angular>
         </form>
     </md-dialog-content>
 

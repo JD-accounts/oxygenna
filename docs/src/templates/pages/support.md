@@ -4,37 +4,33 @@
   layout: docs.hbs
 ---
 
-# Our Support Policy
+# Support Policy
+
+## Our Support Policy
+
 We are always happy to help anyone who is experiencing problems with our templates.
 
 We have a dedicated support team ready to help you with any problems you may encounter.
 
-To get in touch with our support team you need to visit our <a href="https://oxygenna.ticksy.com/" target="_blank">support forum</a>.
+Please read the [themeforest support policy](http://themeforest.net/page/item_support_policy) to see what is included in our support service.
 
-Support is limited to questions regarding the template’s features or problems with the template.
+## Support Working Hours
 
-<div class="alert alert-danger" role="alert">
-    <i class="fa fa-warning"></i> Please make sure you have read this documentation before submitting a ticket
-</div>
+We will always attempt to answer your support questions as quickly as possible.
 
-<div class="alert alert-info" role="alert">
-    We will always respond to tickets as soon as we can. <i class="fa fa-smile-o"></i>
-    <br>
-    <br>
-    Our office working hours are <strong>9:00 - 17:00 EET Monday - Friday</strong>
-</div>
+Our office working hours are **9:00 - 17:30** EET Monday - Friday
 
 # Getting Support
 
-<i class="fa fa-support"></i> Before creating a new ticket, please make sure that you have read our <a target="_blank" href="/index.html">Documentation</a> and watched our <a target="_blank" href="videos.html">Video Tutorials</a>.
+## Please read first
 
-Also, search our <a target="_blank" href="https://oxygenna.ticksy.com/">forum</a> for similar topics.
+**Before** submitting a ticket please make sure of the following.
 
-Please always make sure that your topic has not already been answered in these areas.
+- You have read the <a href="docs.html">documentation</a> before submitting a ticket.
+- You have searched our <a target="_blank" href="https://oxygenna.ticksy.com/">forum</a> for similar tickets.
+- Your question is related to the template and not just a general AngularJS problem
 
-If you need to ask for our help, feel free to do so by visiting our <a href="https://oxygenna.ticksy.com/" target="_blank">support forum</a>.
-
-# Create a support account
+## Create a support account
 Creating a support account is an easy process. The first time that you submit a ticket, you get registered automatically.
 
 **Step 1 - ** Go to our<a href="https://oxygenna.ticksy.com/"> support page</a> on Ticksy.
@@ -50,7 +46,7 @@ Creating a support account is an easy process. The first time that you submit a 
 
 **Step 4 - ** Once you have filled in the required info and the content of the ticket, hit the submit button. Your ticksy account is now created and you can login the next time with the email that you have provided in the previous form.
 
-# Create a support ticket
+## Create a support ticket
 After you have registered, you should be able to login from <a href="https://oxygenna.ticksy.com/" target="_blank">Ticksy Homepage</a>, by filling in your <mark>Email Address</mark> and <mark>Password</mark>.
 Once logged in, on the top right side of the screen you should see a ``SIGN IN/REGISTER`` link. Click on that and fill in your <i>Email Address</i> and <i>Password</i> to login.
 <img src="assets/images/support/register_button.png" alt="Register Form" class="img-responsive">
@@ -74,7 +70,7 @@ Now that you are logged in, click on the `Submit a ticket` menu and follow these
 
 **Step 7 - ** Click on <mark>Submit</mark> button.
 
-# Purchase Code
+## Purchase Code
 
 You can find your purchase code from <mark>Themeforest</mark> on the <mark>Downloads Page</mark> by clicking the <mark>"Download"</mark> button next to the item, and then click the <mark>"Licence certificate & purchase code"</mark> link.
 

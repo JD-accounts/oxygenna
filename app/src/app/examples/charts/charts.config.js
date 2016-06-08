@@ -13,7 +13,7 @@
             url: '/charts/google/bar',
             templateUrl: 'app/examples/charts/google-bar.tmpl.html',
             data: {
-                permission: {
+                permissions: {
                     only: ['viewCharts']
                 },
                 layout: {
@@ -25,7 +25,7 @@
             url: '/charts/google/scatter',
             templateUrl: 'app/examples/charts/google-scatter.tmpl.html',
             data: {
-                permission: {
+                permissions: {
                     only: ['viewCharts']
                 },
                 layout: {
@@ -37,7 +37,7 @@
             url: '/charts/google/line',
             templateUrl: 'app/examples/charts/google-line.tmpl.html',
             data: {
-                permission: {
+                permissions: {
                     only: ['viewCharts']
                 },
                 layout: {
@@ -49,7 +49,7 @@
             url: '/charts/chartjs/bar',
             templateUrl: 'app/examples/charts/chartjs-bar.tmpl.html',
             data: {
-                permission: {
+                permissions: {
                     only: ['viewCharts']
                 },
                 layout: {
@@ -61,7 +61,7 @@
             url: '/charts/chartjs/pie',
             templateUrl: 'app/examples/charts/chartjs-pie.tmpl.html',
             data: {
-                permission: {
+                permissions: {
                     only: ['viewCharts']
                 },
                 layout: {
@@ -73,7 +73,7 @@
             url: '/charts/chartjs/ticker',
             templateUrl: 'app/examples/charts/chartjs-ticker.tmpl.html',
             data: {
-                permission: {
+                permissions: {
                     only: ['viewCharts']
                 },
                 layout: {
@@ -85,7 +85,7 @@
             url: '/charts/chartjs/line',
             templateUrl: 'app/examples/charts/chartjs-line.tmpl.html',
             data: {
-                permission: {
+                permissions: {
                     only: ['viewCharts']
                 },
                 layout: {

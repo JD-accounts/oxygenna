@@ -24,10 +24,6 @@ tri-menu {
 // Side menu shrink/grow icon
 .sidebar-left-icon {
   display: none;
-  md-icon {
-    transform: rotate(90deg);
-    transition: all .2s;
-  }
   ._md-locked-open & {
     display: block;
   }
@@ -221,13 +217,10 @@ $submenu-overlay: #999999;
 .sidebar-left-logo {
   flex-shrink: 0;
   img {
+    max-width: 24px;
     max-height: 64px;
     vertical-align: top;
     margin-right: 4px;
     transform: translateX(-4px);
   }
-}
-
-.sidebar-left-icon {
-  margin-right: -16px !important;
 }

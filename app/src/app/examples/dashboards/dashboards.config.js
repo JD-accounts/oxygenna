@@ -13,7 +13,7 @@
             abstract: true,
             views: {
                 sidebarLeft: {
-                    templateUrl: 'app/triangular/components/menu/menu.tmpl.html',
+                    templateUrl: 'app/layouts/leftsidenav/leftsidenav.tmpl.html',
                     controller: 'MenuController',
                     controllerAs: 'vm'
                 },
