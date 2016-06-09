@@ -346,3 +346,8 @@
 - Fixed menu item permission on link type
 - Updated to new material angular RC5
 - New Documentation for all template
+
+## Version ???
+> Release Date : ???
+
+- Fixed height of pie chart in analytics widget
