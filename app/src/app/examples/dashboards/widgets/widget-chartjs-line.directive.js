@@ -70,7 +70,7 @@
             }
 
             // Simulate async data update
-            $scope.intervalPromise = $interval(randomData, 5000);
+            // $scope.intervalPromise = $interval(randomData, 5000);
         }
     }
 })();
