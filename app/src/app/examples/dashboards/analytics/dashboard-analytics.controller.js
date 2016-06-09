@@ -24,12 +24,11 @@
                     .highlightAction(true)
                     .position('bottom right');
                 $mdToast.show(toast).then(function(response) {
-                    console.log(response)
-                    if ( response == 'ok' ) {
-                        $state.go('triangular-no-scroll.email.inbox');
+                    if (response == 'ok') {
+                        $state.go('triangular.email.inbox');
                     }
                 });
-            }, 10000);
+            }, 5000);
         }
 
         // init
