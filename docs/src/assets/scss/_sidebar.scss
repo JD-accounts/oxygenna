@@ -23,9 +23,14 @@
   color: #373a3c;
   font-size: 1rem;
   line-height: 1.6;
+
   &:hover {
     color: #373a3c;
     text-decoration: underline;
+  }
+
+  &.active {
+    color: #0099e5;
   }
 }
 
@@ -41,4 +46,8 @@
 
 .oxy-docs-sidebar-nav .nav .nav .oxy-docs-sidebar-nav__heading {
   font-size: 0.9rem;
+
+  &.active {
+    color: #373a3c;
+  }
 }

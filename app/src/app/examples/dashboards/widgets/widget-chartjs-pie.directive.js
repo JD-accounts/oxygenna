@@ -23,7 +23,7 @@
 
             $timeout(function() {
                 widgetCtrl.setLoading(false);
-            }, 1500);
+            }, 2500);
 
             widgetCtrl.setMenu({
                 icon: 'zmdi zmdi-more-vert',

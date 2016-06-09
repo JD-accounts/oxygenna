@@ -3,10 +3,10 @@
 
     angular
         .module('app.examples.dashboards')
-        .directive('chartjsLineWidget', chartjsLineWidget);
+        .directive('chartjsBarWidget', chartjsBarWidget);
 
     /* @ngInject */
-    function chartjsLineWidget($timeout, $interval) {
+    function chartjsBarWidget($timeout) {
         // Usage:
         //
         // Creates:
@@ -23,8 +23,7 @@
 
             $timeout(function() {
                 widgetCtrl.setLoading(false);
-                randomData();
-            }, 1500);
+            }, 2500);
 
             widgetCtrl.setMenu({
                 icon: 'zmdi zmdi-more-vert',
@@ -32,11 +31,9 @@
                     icon: 'zmdi zmdi-refresh',
                     title: 'Refresh',
                     click: function() {
-                        $interval.cancel($scope.intervalPromise);
                         widgetCtrl.setLoading(true);
                         $timeout(function() {
                             widgetCtrl.setLoading(false);
-                            randomData();
                         }, 1500);
                     }
                 },{
@@ -48,29 +45,13 @@
                 }]
             });
 
-            $scope.lineChart = {
-                labels: ['January', 'February', 'March', 'April', 'May'],
-                series: ['Pageviews', 'Visits', 'Sign ups'],
-                options: {
-                    datasetFill: false,
-                    responsive: true
-                },
-                data: []
-            };
+            $scope.labels = ['Facebook', 'Twitter', 'Google+', 'Others'];
+            $scope.series = ['This Week', 'Last week'];
 
-            function randomData() {
-                $scope.lineChart.data = [];
-                for(var series = 0; series < $scope.lineChart.series.length; series++) {
-                    var row = [];
-                    for(var label = 0; label < $scope.lineChart.labels.length; label++) {
-                        row.push(Math.floor((Math.random() * 100) + 1));
-                    }
-                    $scope.lineChart.data.push(row);
-                }
-            }
-
-            // Simulate async data update
-            // $scope.intervalPromise = $interval(randomData, 5000);
+            $scope.data = [
+                [65, 59, 80, 81],
+                [28, 48, 40, 19]
+            ];
         }
     }
 })();
