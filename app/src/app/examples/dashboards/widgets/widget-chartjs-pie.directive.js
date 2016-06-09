@@ -21,9 +21,9 @@
         function link($scope, $element, attrs, widgetCtrl) {
             widgetCtrl.setLoading(true);
 
-            $timeout(function() {
-                widgetCtrl.setLoading(false);
-            }, 1500);
+            // $timeout(function() {
+            //     widgetCtrl.setLoading(false);
+            // }, 1500);
 
             widgetCtrl.setMenu({
                 icon: 'zmdi zmdi-more-vert',
