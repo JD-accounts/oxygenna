@@ -351,3 +351,4 @@
 > Release Date : ???
 
 - Fixed height of pie chart in analytics widget
+- Fixed form wizard view on mobile.
