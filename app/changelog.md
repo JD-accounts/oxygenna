@@ -352,3 +352,5 @@
 
 - Fixed height of pie chart in analytics widget
 - Fixed form wizard view on mobile.
+- Added getMenu function to triMenu that will grab any menu item using its id attribute
+- Changed Todo example to use new triMenu to change it's badge value based on number of todos

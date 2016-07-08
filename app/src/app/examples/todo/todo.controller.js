@@ -6,8 +6,10 @@
         .controller('TodoController', TodoController);
 
     /* @ngInject */
-    function TodoController($scope, $state, $mdDialog) {
+    function TodoController($scope, $state, $mdDialog, triMenu) {
         var vm = this;
+        var todoMenu;
+
         vm.todos = [
             {description: 'Material Design', priority: 'high', selected: true},
             {description: 'Install espresso machine', priority: 'high', selected: false},
@@ -22,6 +24,11 @@
         vm.removeTodo = removeTodo;
 
         //////////////////////////
+
+        function init() {
+            todoMenu = triMenu.getMenu('todo');
+            todoMenu.badge = vm.todos.length;
+        }
 
         function orderTodos(task) {
             switch(task.priority){
@@ -42,7 +49,12 @@
                     vm.todos.splice(i, 1);
                 }
             }
+            todoMenu.badge = vm.todos.length;
         }
+
+        // init
+
+        init();
 
         // watches
 
@@ -55,6 +67,7 @@
             })
             .then(function(answer) {
                 vm.todos.push(answer);
+                todoMenu.badge = vm.todos.length;
             });
         });
     }
