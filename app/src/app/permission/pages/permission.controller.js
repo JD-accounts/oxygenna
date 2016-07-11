@@ -43,7 +43,7 @@
                 if(-1 !== vm.selectedUser.roles.indexOf(role.roleName)) {
                     // add this users roles to the list
                     vm.roleList.push(role);
-                    angular.forEach(role.permissionNames, function(permission) {
+                    angular.forEach(role.validationFunction, function(permission) {
                         vm.permissionList.push(permission);
                     });
                 }

@@ -42,10 +42,13 @@
                 // check role exists
                 if(RoleStore.hasRoleDefinition(role)) {
                     // get the role
-                    var roleDef = RoleStore.getRoleDefinition(role);
-                    // check if the permission we are validating is in this role's permissions
-                    if(-1 !== roleDef.permissionNames.indexOf(permission)) {
-                        hasPermission = true;
+                    var roles = RoleStore.getStore();
+
+                    if(angular.isDefined(roles[role])) {
+                        // check if the permission we are validating is in this role's permissions
+                        if(-1 !== roles[role].validationFunction.indexOf(permission)) {
+                            hasPermission = true;
+                        }
                     }
                 }
             });

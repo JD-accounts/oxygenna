@@ -62,7 +62,7 @@
                 state: 'triangular.permission',
                 type: 'link'
             },{
-                name: 'Define Roles',
+                name: 'Define Permissions & Roles',
                 state: 'triangular.permission-define',
                 type: 'link'
             },{

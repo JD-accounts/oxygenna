@@ -13,26 +13,27 @@
             </div>
         </md-toolbar>
         <div flex hljs language="js">
-    // create roles for app
-    RoleStore
-    .defineRole('SUPERADMIN', ['viewEmail', 'viewGitHub', 'viewCalendar', 'viewLayouts', 'viewTodo', 'viewElements', 'viewAuthentication', 'viewCharts', 'viewMaps'], checkRole);
-    RoleStore
-    .defineRole('ADMIN', ['viewLayouts', 'viewTodo', 'viewElements', 'viewAuthentication', 'viewCharts', 'viewMaps'], checkRole);
-    RoleStore
-    .defineRole('USER', ['viewAuthentication', 'viewCharts', 'viewMaps'], checkRole);
-    RoleStore
-    .defineRole('ANONYMOUS', [], checkRole);
+    // create permissions and add check function verify all permissions
+    var permissions = ['viewEmail', 'viewGitHub', 'viewCalendar', 'viewLayouts', 'viewTodo', 'viewElements', 'viewAuthentication', 'viewCharts', 'viewMaps'];
+    PermissionStore.defineManyPermissions(permissions, function (permissionName) {
+        return UserService.hasPermission(permissionName);
+    });
 
-    // function that calls user service to check if permission is allowed
-    function checkRole(permission, transitionProperties) {
-        return UserService.hasPermission(permission, transitionProperties);
-    }
+    // create roles for app
+    RoleStore.defineManyRoles({
+        'SUPERADMIN': ['viewEmail', 'viewGitHub', 'viewCalendar', 'viewLayouts', 'viewTodo', 'viewElements', 'viewAuthentication', 'viewCharts', 'viewMaps'],
+        'ADMIN': ['viewLayouts', 'viewTodo', 'viewElements', 'viewAuthentication', 'viewCharts', 'viewMaps'],
+        'USER': ['viewAuthentication', 'viewCharts', 'viewMaps'],
+        'ANONYMOUS': []
+    });
         </div>
     </div>
 
-    <p>In the first lines we define the roles SUPERADMIN, ADMIN, USER, and ANONYMOUS.  These roles each have their own permissions except for ANONYMOUS which doesn't have any permissions set.</p>
+    <p>First of all we create a list of permissions then tell permission store about them and assign a function to verify them.  We use a service called UserService to check if the current user has a permission.</p>
 
-    <p>We also tell angular permission to use a function called checkRole to verify that the current user has a permission.</p>
+    <p>Next we define the roles SUPERADMIN, ADMIN, USER, and ANONYMOUS.  These roles each have their own permissions except for ANONYMOUS which doesn't have any permissions set.</p>
 
-    <p>This function calls the main UserService to check the users permissions.</p>
+    <p>Thats all you need to do to create Roles and Permissions which you can now use to hide / show menu items and page elements.</p>
+
+    <p>For more in depth information see the <a href="https://github.com/Narzerus/angular-permission">Angular Permissions Module</a></p>
 </div>
