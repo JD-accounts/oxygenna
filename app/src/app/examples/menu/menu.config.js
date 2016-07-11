@@ -63,6 +63,11 @@
                     );
                 }]
             },{
+                name: 'Open in new tab',
+                type: 'link',
+                state: 'triangular.dashboard-general',
+                openInNewTab: true
+            },{
                 name: 'Unlimited Levels',
                 type: 'dropdown',
                 children: [{
