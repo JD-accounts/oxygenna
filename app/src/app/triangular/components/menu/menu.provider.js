@@ -43,6 +43,9 @@
                     }
                     else if(angular.isDefined(menu[i].children)) {
                         found = findMenu(menu[i].children, id);
+                        if(angular.isDefined(found)) {
+                            break;
+                        }
                     }
                 }
             }
