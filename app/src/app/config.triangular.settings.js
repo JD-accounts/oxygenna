@@ -13,7 +13,7 @@
         triSettingsProvider.setCopyright('&copy;' + now.getFullYear() + ' oxygenna.com');
         triSettingsProvider.setLogo('assets/images/logo.png');
         // set current version of app (shown in footer)
-        triSettingsProvider.setVersion('2.8.0');
+        triSettingsProvider.setVersion('2.9.0');
         // set the document title that appears on the browser tab
         triRouteProvider.setTitle('Triangular');
         triRouteProvider.setSeparator('|');

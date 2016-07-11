@@ -347,8 +347,8 @@
 - Updated to new material angular RC5
 - New Documentation for all template
 
-## Version ???
-> Release Date : ???
+## Version 2.9.0
+> Release Date : 11th July 2016
 
 - Fixed height of pie chart in analytics widget
 - Fixed form wizard view on mobile.
