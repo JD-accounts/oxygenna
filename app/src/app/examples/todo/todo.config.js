@@ -41,7 +41,7 @@
             state: 'triangular.todo',
             type: 'link',
             permission: 'viewTodo',
-            badge: 0,
+            badge: '',
             priority: 2.4
         });
     }
