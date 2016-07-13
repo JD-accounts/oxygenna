@@ -6,6 +6,9 @@
   &.ng-leave {
     @include fadeOut();
   }
+  > * {
+    overflow: auto;
+  }
 }
 
 md-input-container ng-messages, md-input-container data-ng-messages {
