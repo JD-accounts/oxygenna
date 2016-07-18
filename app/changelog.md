@@ -362,3 +362,4 @@
 > Release Date : ???
 
 - Fixed bug in permissions route handling.
+- Moved permissions module declaration into app.permissions module

@@ -3,5 +3,6 @@
 
     angular
         .module('app.permission', [
+            'permission', 'permission.ui'
         ]);
 })();
