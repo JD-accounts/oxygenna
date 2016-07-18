@@ -363,3 +363,4 @@
 
 - Fixed bug in permissions route handling.
 - Moved permissions module declaration into app.permissions module
+- Updated Angular UI Router to 0.3.1
