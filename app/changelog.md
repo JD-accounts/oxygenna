@@ -357,3 +357,8 @@
 - Added click handler to menus to allow click events as well as state router changes
 - Added openInNewTab option to menu items
 - Updated Angular Permissions to 3.2.1
+
+## Version ???
+> Release Date : ???
+
+- Fixed bug in permissions route handling.
