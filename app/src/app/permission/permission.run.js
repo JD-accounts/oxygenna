@@ -5,7 +5,7 @@
         .module('app.permission')
         .run(permissionRun);
 
-
+    /* @ngInject */
     function permissionRun($rootScope, $cookies, $state, PermissionStore, RoleStore, UserService) {
         // normally this would be done at the login page but to show quick
         // demo we grab username from cookie and login the user
