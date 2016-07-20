@@ -358,8 +358,8 @@
 - Added openInNewTab option to menu items
 - Updated Angular Permissions to 3.2.1
 
-## Version ???
-> Release Date : ???
+## Version 2.9.1
+> Release Date : 20th July 2016
 
 - Fixed bug in permissions route handling.
 - Moved permissions module declaration into app.permissions module
