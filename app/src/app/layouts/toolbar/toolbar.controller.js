@@ -6,7 +6,7 @@
         .controller('ToolbarController', DefaultToolbarController);
 
     /* @ngInject */
-    function DefaultToolbarController($scope, $injector, $rootScope, $mdMedia, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, $document, triBreadcrumbsService, triSettings, triLayout, UserService) {
+    function DefaultToolbarController($scope, $injector, $rootScope, $mdMedia, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, $document, triBreadcrumbsService, triSettings, triLayout) {
         var vm = this;
         vm.breadcrumbs = triBreadcrumbsService.breadcrumbs;
         vm.emailNew = false;
@@ -18,7 +18,21 @@
         vm.isFullScreen = false;
         vm.fullScreenIcon = 'zmdi zmdi-fullscreen';
         vm.toggleFullScreen = toggleFullScreen;
-        vm.currentUser = UserService.getCurrentUser();
+
+        if($injector.has('UserService')) {
+            var UserService = $injector.get('UserService');
+            vm.currentUser = UserService.getCurrentUser();
+        }
+        else {
+            // permissions are turned off so no UserService available
+            // just set default user
+            vm.currentUser = {
+                displayName: 'Christos',
+                username: 'christos',
+                avatar: 'assets/images/avatars/avatar-5.png',
+                roles: []
+            };
+        }
 
         ////////////////
 
