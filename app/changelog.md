@@ -365,3 +365,8 @@
 - Moved permissions module declaration into app.permissions module
 - Updated Angular UI Router to 0.3.1
 - Fix for authentication background image
+
+## Version 2.9.2
+> Release Date : 21th July 2016
+
+- Fixed authentication layout pages
