@@ -11,7 +11,7 @@
             displayName: 'Christos',
             username: 'christos',
             avatar: 'assets/images/avatars/avatar-5.png',
-            roles: ['SUPERADMIN']
+            roles: []
         };
 
         var service = {

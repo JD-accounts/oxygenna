@@ -357,3 +357,11 @@
 - Added click handler to menus to allow click events as well as state router changes
 - Added openInNewTab option to menu items
 - Updated Angular Permissions to 3.2.1
+
+## Version 2.9.1
+> Release Date : 20th July 2016
+
+- Fixed bug in permissions route handling.
+- Moved permissions module declaration into app.permissions module
+- Updated Angular UI Router to 0.3.1
+- Fix for authentication background image
