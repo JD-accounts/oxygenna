@@ -1,13 +1,11 @@
 // Authentication Pages
 #ui-login {
+  overflow: auto;
   &.ng-enter {
     @include fadeIn($delay: 0.5s);
   }
   &.ng-leave {
     @include fadeOut();
-  }
-  > * {
-    overflow: auto;
   }
 }
 
