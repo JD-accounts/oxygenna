@@ -370,3 +370,4 @@
 > Release Date : 21th July 2016
 
 - Fixed authentication layout pages
+- Fixed Dashboard layout bug on ie11
