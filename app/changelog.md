@@ -365,3 +365,10 @@
 - Moved permissions module declaration into app.permissions module
 - Updated Angular UI Router to 0.3.1
 - Fix for authentication background image
+
+## Version 2.9.2
+> Release Date : 25th July 2016
+
+- Fixed background images stretching on authentication layout pages
+- Fixed layout for Dashboards in IE11
+- Added temporary fix for DatePicker background

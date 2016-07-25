@@ -51,3 +51,10 @@ md-datepicker, md-datepicker .md-datepicker-input {
 .md-table-toolbar {
   transition: none;
 }
+
+// Fix for ie11 dashboards table-layout
+@media screen and (max-width: $layout-breakpoint-xs) {
+  .os-windows .layout-column > .flex, .layout-xs-column > .flex {
+      flex-basis: auto;
+  }
+}
