@@ -367,7 +367,8 @@
 - Fix for authentication background image
 
 ## Version 2.9.2
-> Release Date : 21th July 2016
+> Release Date : 25th July 2016
 
-- Fixed authentication layout pages
-- Fixed Dashboard layout bug on ie11
+- Fixed background images stretching on authentication layout pages
+- Fixed layout for Dashboards in IE11
+- Added temporary fix for DatePicker background
